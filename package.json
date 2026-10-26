@@ -1,0 +1,8 @@
+{
+  "name": "unseen-shift-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free interactive teaching experiment on distribution shift and finite-scenario DRO.",
+  "scripts": { "start": "node serve.cjs", "test": "node --test model.test.cjs", "check": "node --check app.js && node --check model.js && node --check worker.js && node --test model.test.cjs" },
+  "engines": { "node": ">=18" }
+}

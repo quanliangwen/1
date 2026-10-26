@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从历史验证到未知环境：通过真实计算的教学模拟，交互理解分布偏移、ERM、有限情景 DRO 与可靠性的边界。">
+  <meta name="theme-color" content="#123e43">
+  <title>未见之变 · 模型上线压力测试</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./model.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#experiment">跳到交互实验</a>
+  <header class="site-header shell">
+    <a href="#" class="brand" aria-label="未见之变 首页"><span class="brand-symbol" aria-hidden="true">∿</span><span>未见之变<small>SHIFT LAB</small></span></a>
+    <nav aria-label="页面导航"><a href="#experiment">交互实验</a><a href="#evidence">论文证据</a><a href="#method">方法与边界</a></nav>
+    <button class="button outline compact" id="presentation-toggle" aria-pressed="false"><span aria-hidden="true">▣</span> 投屏模式</button>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> 一次面向未知环境的模型实验</p>
+        <h1>昨天的好模型，<br>扛得住<span>明天</span>吗？</h1>
+        <p class="hero-description">你是一家电商公司的模型负责人。一次新的促销活动，<br class="desktop-only">会怎样改变客户，也改变模型的判断？</p>
+      </div>
+      <aside class="hero-aside"><span class="issue-no">01 / METHODOLOGY</span><p>从“平均表现很好”<br>到“环境变化后还可靠吗”</p><div class="hero-meta"><span>3–4 分钟开场</span><span>本机计算</span><span>可重复模拟</span></div></aside>
+    </section>
+
+    <section class="experiment shell" id="experiment" aria-labelledby="experiment-title">
+      <div class="section-top"><div><p class="eyebrow">THE EXPERIMENT</p><h2 id="experiment-title">先做决定，再揭晓环境。</h2></div><span class="simulation-tag">教学模拟 · 非论文复现</span></div>
+      <div class="steps" role="group" aria-label="演示阶段">
+        <button class="step active" data-phase="0" aria-current="step"><span>01</span><div>部署之前<small>选择训练防护范围</small></div></button>
+        <button class="step" data-phase="1"><span>02</span><div>做出判断<small>你会允许它上线吗？</small></div></button>
+        <button class="step" data-phase="2"><span>03</span><div>揭晓新环境<small>输入与关系发生变化</small></div></button>
+        <button class="step" data-phase="3"><span>04</span><div>检查边界<small>稳健也有适用范围</small></div></button>
+      </div>
+
+      <div class="lab-layout">
+        <aside class="control-panel" aria-label="实验参数">
+          <div class="panel-label"><span class="eyebrow">实验控制台</span><span class="status-chip" id="model-status" role="status">准备模型</span></div>
+          <div class="radius-control">
+            <div class="control-heading"><label for="radius">训练防护范围</label><output for="radius" id="radius-value">0.65</output></div>
+            <input id="radius" type="range" min="0" max="1" step="0.05" value="0.65" aria-describedby="radius-help">
+            <div class="range-extremes"><span>较窄</span><span>较宽</span></div>
+            <p class="control-help" id="radius-help">范围越宽，训练时考虑的情景越多，也可能牺牲原环境表现。</p>
+            <p class="lock-note" id="lock-note">揭晓测试环境前，可修改并重新训练。</p>
+          </div>
+          <div class="control-divider"></div>
+          <div class="scenario-heading"><h3>新环境会怎样变化？</h3><span id="environment-lock">待揭晓</span></div>
+          <div class="presets" role="group" aria-label="预设测试情景"><button data-preset="covariate" disabled>客户变了</button><button data-preset="concept" disabled>关系变了</button><button data-preset="mixed" disabled>同时变化</button></div>
+          <div class="shift-control"><div class="control-heading"><label for="covariate">客户构成变化 <span>P(X)</span></label><output for="covariate" id="covariate-value">0%</output></div>
+            <input id="covariate" type="range" min="0" max="1" step="0.05" value="0" disabled aria-describedby="covariate-help"><p class="control-help" id="covariate-help">改变活跃度和促销接触度的分布，保持条件关系不变。</p></div>
+          <div class="shift-control"><div class="control-heading"><label for="concept">预测关系变化 <span>P(Y|X)</span></label><output for="concept" id="concept-value">0%</output></div>
+            <input id="concept" type="range" min="0" max="1" step="0.05" value="0" disabled aria-describedby="concept-help"><p class="control-help" id="concept-help">保持输入样本，逐渐反转促销接触度与流失的关联。</p></div>
+          <label class="break-control" id="break-control" hidden><input type="checkbox" id="mechanism-break"><span><strong>边界外冲击</strong><small>连活跃度与流失的关系也反转</small></span></label>
+          <p class="local-note"><span aria-hidden="true">⌁</span> 模型冻结后，测试只评估、不训练。</p>
+        </aside>
+
+        <div class="results-panel" aria-busy="true" id="results-panel">
+          <div class="results-heading"><div><span class="context-indicator" id="context-indicator">SOURCE ENVIRONMENT</span><h3 id="result-heading">原环境里的好成绩</h3></div><span class="sample-note" id="sample-note">2,400 个独立模拟样本</span></div>
+          <div class="metrics" aria-label="模型评价指标">
+            <div class="metric erm"><span class="metric-name"><i></i> ERM <small>平均损失训练</small></span><strong id="erm-auc">—</strong><span class="metric-detail" id="erm-detail">正在训练模型…</span></div>
+            <div class="metric dro"><span class="metric-name"><i></i> 情景 DRO <small>稳健训练</small></span><strong id="dro-auc">—</strong><span class="metric-detail" id="dro-detail">使用相同的逻辑回归模型</span></div>
+            <div class="metric delta"><span class="metric-name" id="delta-label">AUROC 差值</span><strong id="auc-delta">—</strong><span class="metric-detail" id="delta-detail">DRO 减 ERM</span></div>
+          </div>
+          <div class="chart-grid">
+            <figure class="chart-panel scatter-panel"><figcaption><div><h4 id="scatter-heading">同环境留出样本</h4><p>每个点是一位模拟客户</p></div><div class="point-legend"><span><i class="retained"></i>留存</span><span><i class="churn"></i>流失</span></div></figcaption><svg id="scatter-chart" viewBox="0 0 470 300" role="img" aria-label="客户分布与两个模型的分类边界"></svg><div class="chart-foot"><span class="model-line erm-line"></span>ERM 边界<span class="model-line dro-line"></span>DRO 边界<span class="dot-note">显示 360 / 2,400 个样本</span></div></figure>
+            <figure class="chart-panel curve-panel"><figcaption><div><h4>模型能撑到哪里？</h4><p id="curve-caption">揭晓后查看性能随关系偏移的变化</p></div></figcaption><div class="curve-container"><svg id="curve-chart" viewBox="0 0 450 300" role="img" aria-label="概念偏移强度与 AUROC 曲线"></svg><div id="curve-cover" class="curve-cover"><span aria-hidden="true">↗</span><strong>未来尚未揭晓</strong><p>先根据历史验证，做一次部署判断。</p></div></div><div class="chart-foot" id="grid-foot">压力测试：固定客户构成，逐步改变预测关系。</div></figure>
+          </div>
+          <div class="insight" id="insight" role="status" aria-live="polite"><span class="insight-index" id="insight-index">01</span><div><strong id="insight-title">让模型为变化做准备。</strong><p id="insight-text">两种方法使用相同模型架构。差别在于训练时，是否显式考虑不利的新情景。</p></div></div>
+          <div class="vote-panel" id="vote-panel" hidden><p>只看历史验证，你会怎么决定？</p><button class="button outline" data-vote="deploy">允许上线，历史表现足够好</button><button class="button primary" data-vote="test">先做新环境压力测试</button></div>
+        </div>
+      </div>
+      <div class="lab-actions"><div><button class="text-button" id="reset">↻ 新一轮实验</button><button class="text-button" id="export" disabled>↓ 导出本轮结果</button></div><p id="keyboard-help">投屏时可用 ← → 切换阶段</p><button class="button primary" id="next" disabled>准备模型中… <span aria-hidden="true">→</span></button></div>
+      <p class="experiment-note">参数用于构造教学情景，不表示真实促销效果。查看结果后重新调参属于探索，正式验证需另用未见测试环境。</p>
+      <p id="error-message" class="error-message" role="alert" hidden></p>
+    </section>
+
+    <section class="evidence-section" id="evidence"><div class="shell">
+      <div class="section-top"><div><p class="eyebrow">BACK TO THE PAPER</p><h2>演示提出问题，论文提供证据。</h2></div><a class="external-link" href="https://doi.org/10.1287/isre.2022.0537" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a></div>
+      <div class="evidence-layout"><div class="evidence-copy"><span class="paper-type">METHODological COMMENTARY</span><h3>把不确定性<br>纳入预测研究。</h3><p>作者梳理领域泛化方法，并用一个 DRO 实现说明：在训练目标中考虑潜在的不利分布，可以改善未见环境下的表现。</p><p>这些数值直接来自论文表 3、4。上方交互使用合成数据和简化算法，两者不能混作同一项实验。</p><div class="evidence-lifts"><div><strong>+4.55<small>%</small></strong><span>电商平均 AUROC 相对提升</span></div><div><strong>+7.28<small>%</small></strong><span>ICU 平均 AUROC 相对提升</span></div></div></div>
+        <div class="table-wrap"><table><caption>论文实证结果：跨测试月份 / 地区的平均 AUROC</caption><thead><tr><th scope="col">训练方法</th><th scope="col">电商流失</th><th scope="col">ICU 死亡预测</th></tr></thead><tbody>
+          <tr class="baseline-row"><th scope="row">ERM</th><td>0.659</td><td>0.852</td></tr><tr><th scope="row">ADA</th><td>0.667</td><td>0.883</td></tr><tr><th scope="row">Mixup</th><td>0.660</td><td>0.881</td></tr><tr><th scope="row">IRM</th><td>0.662</td><td>0.881</td></tr><tr><th scope="row">MetaReg</th><td>0.663</td><td>0.893</td></tr><tr><th scope="row">MLDG</th><td>0.669</td><td>0.870</td></tr><tr><th scope="row">GroupDRO</th><td>0.670</td><td>0.868</td></tr><tr class="highlight-row"><th scope="row">DRO <small>论文示范实现</small></th><td>0.689</td><td>0.914</td></tr>
+        </tbody></table><p class="table-note">论文各任务内共享模型架构与源域数据，训练时不访问目标域。提升为相对 ERM 的平均 AUROC 相对增益，非百分点。</p></div>
+      </div>
+    </div></section>
+
+    <section class="method-section shell" id="method"><div class="section-top"><div><p class="eyebrow">HOW IT WORKS</p><h2>知道它怎么计算，也知道它不能证明什么。</h2></div></div>
+      <div class="method-intro"><p>训练只使用源域与提前设定的情景。新环境的输入、标签和最终评价，均不进入模型训练或参数选择。</p><span>固定种子 · 逻辑回归 · 真实指标</span></div>
+      <details><summary><span>01</span> 模拟数据与两类偏移</summary><div class="detail-content"><p>x 为标准化活跃度，z 为标准化促销接触度，y=1 表示流失。基础条件概率为：</p><code>P(y=1 | x,z) = sigmoid(−1.5x + bz − 0.2)</code><p>源域的 b 分别为 0.6、1.2、1.8，同环境留出集取 b=1.2。客户构成滑块改变 x、z 的均值和 z 的方差，保持条件规则不变。关系滑块将测试 b 从 1.2 逐渐降至 −2.4，输入保持不变。只有“边界外冲击”会额外将活跃度系数从 −1.5 改为 +1.5。</p><p>相同评估轮次复用潜在随机数以便比较。训练、留出评价使用不同种子。界面只有 360 个点，所有指标使用 2,400 个评价样本。</p></div></details>
+      <details><summary><span>02</span> ERM 与有限情景 DRO 的训练目标</summary><div class="detail-content"><p>两者都是带 L2 正则的逻辑回归。ERM 最小化三个源域的平均对数损失。情景 DRO 在三个源域外，加入 9 个提前定义的变化情景，以平滑最大损失近似有限情景的最差损失。</p><code>min θ : τ log Σs exp(Rs(θ) / τ) + λ‖w‖² / 2</code><p>τ=0.02，λ=0.012，梯度下降迭代 620 次。平滑最大损失介于 max Rs 与 max Rs + τ log(12) 之间。这是数值近似的教学实现，并非论文中基于跨域辅助模型、协变量与概念偏移双约束的算法。</p><p>训练防护范围 r 控制扩展情景：b∈{0.6−2.8r, 1.2, 1.8+0.6r}，客户构成参数∈{−0.75r, 0, 0.75r}，组合为 9 个有限情景。“范围内”标记只判断参数是否落入该矩形包络，不是连续分布的性能保证。</p></div></details>
+      <details><summary><span>03</span> 指标、压力测试与适用边界</summary><div class="detail-content"><p>AUROC 通过秩统计计算并正确处理并列预测。曲线固定当前客户构成，在 17 个关系偏移强度上重新评价。展示的“网格最低 AUROC”来自 4×4 个预设情景，不是对所有未来分布求得的最坏值。</p><p>DRO 训练优化的是对数损失，不直接优化 AUROC。训练目标中的最差损失与测试网格中的最低 AUROC 属于不同概念。演示没有预设 DRO 获胜，它可以牺牲原环境表现，也可能在某些情景下不占优势。</p><p>保护范围来自训练前的假设，可能过窄或过宽。边界外冲击特意破坏此前稳定的机制，以展示稳健方法的局限。正式研究应使用业务合理的情景、多次独立实验与未见测试域。</p></div></details>
+      <details><summary><span>04</span> 课堂开场讲述提示</summary><div class="detail-content"><ol><li>30 秒：只给历史验证结果，请观众判断是否允许上线。</li><li>60 秒：改变客户构成，问“客户变了，原来的规律还成立吗？”</li><li>60 秒：改变促销与流失的关联，比较两种模型的降幅。</li><li>30 秒：打开边界外冲击，追问“如果稳定机制也变了，还能保证吗？”</li><li>回到 PPT：介绍论文的方法论主张与真实实验，明确区分教学演示和论文复现。</li></ol></div></details>
+    </section>
+  </main>
+  <footer class="site-footer shell"><div><strong>未见之变 / SHIFT LAB</strong><p>让模型评估反映未来环境的不确定性。</p></div><p>基于 Duan, Yang, Abbasi & Tam (2026) 的方法论主张设计<br><a href="https://github.com/quanliangwen/1" target="_blank" rel="noopener noreferrer">查看源码 ↗</a> <span>·</span> 无外部请求的教学计算</p></footer>
+  <noscript><p class="error-message">此交互实验需要启用 JavaScript。论文证据和方法说明仍可阅读。</p></noscript>
+</body>
+</html>
