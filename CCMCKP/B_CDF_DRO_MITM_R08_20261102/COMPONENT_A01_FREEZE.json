@@ -1,0 +1,9 @@
+{
+  "schema": "R08_component_scheduling_static_fix_A01",
+  "utc": "2026-11-02T03:20:53Z",
+  "original_component_freeze_sha": "73ec8e2e47bcf80ed128b3ce998a9c8740a43ae3bbb862def8235d4206bad693",
+  "files": {
+    "component_advance_A01.py": "1b6520bf15434452be8f5e8cbc91475797645559c7f0a03955237d4cc2e50b0a"
+  },
+  "why": "Static review before any numeric/execution found inherited fixed_a01 lookup would wrongly reject a legitimate resource-interrupted retry pointer. Newrunner reads actualregisteredpointer+pins priorlaunchidentity andfreeze. Old40files remain byteidentical; no algorithm/scoring/native/budget/seed/testgate change. No tests or formalwaves executed/repeated."
+}
