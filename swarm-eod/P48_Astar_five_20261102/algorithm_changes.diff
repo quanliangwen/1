@@ -1,0 +1,140 @@
+--- P48/astar_grid.py
++++ P48_ASTAR/astar_grid.py
+@@ -0,0 +1,70 @@
++"""Exact A* for the existing directed eight-neighbour navigation graph."""
++import heapq
++import math
++import time
++import numpy as np
++
++
++def astar_grid(walkable, start, goal, penalties=None, diagonal=math.sqrt(2.0)):
++    """Return distance array, parent cells, and search-only diagnostics.
++
++    Destination-dependent nonnegative clearance costs are unchanged. Octile
++    distance ignores these extra penalties and is an admissible consistent h.
++    When goal is unreachable the queue exhausts: the old fallback receives a
++    complete reachable distance field, rather than an invented direct path.
++    """
++    began = time.perf_counter()
++    allowed = np.asarray(walkable, dtype=bool)
++    height, width = allowed.shape
++    sr, sc = (int(v) for v in start)
++    gr, gc = (int(v) for v in goal)
++    if not (0 <= sr < height and 0 <= sc < width and 0 <= gr < height and 0 <= gc < width):
++        raise ValueError('A* endpoints outside graph')
++    if not (1.0 <= diagonal <= 2.0):
++        raise ValueError('octile diagonal outside consistent metric range')
++    weights = np.zeros(allowed.shape, dtype=float) if penalties is None else np.asarray(penalties, dtype=float)
++    if weights.shape != allowed.shape or not np.isfinite(weights).all() or np.any(weights < 0):
++        raise ValueError('A* requires finite nonnegative existing clearance penalties')
++    def heuristic(row, col):
++        dr, dc = abs(row - gr), abs(col - gc)
++        return max(dr, dc) + (diagonal - 1.0) * min(dr, dc)
++    costs = np.full(allowed.shape, np.inf)
++    costs[sr, sc] = 0.0
++    parents = {}
++    queue = [(heuristic(sr, sc), 0.0, sr * width + sc)]
++    expanded = 0
++    while queue:
++        _, distance, node = heapq.heappop(queue)
++        row, col = divmod(node, width)
++        if distance > costs[row, col]:
++            continue
++        expanded += 1
++        if (row, col) == (gr, gc):
++            break
++        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (-1, 1), (1, -1), (1, 1)):
++            nr, nc = row + dr, col + dc
++            if not (0 <= nr < height and 0 <= nc < width) or not allowed[nr, nc]:
++                continue
++            if dr and dc and (not allowed[row + dr, col] or not allowed[row, col + dc]):
++                continue
++            edge = (diagonal if dr and dc else 1.0) * (1.0 + weights[nr, nc])
++            trial = distance + edge
++            if trial < costs[nr, nc]:
++                costs[nr, nc] = trial
++                parents[(nr, nc)] = (row, col)
++                heapq.heappush(queue, (trial + heuristic(nr, nc), trial, nr * width + nc))
++    return costs, parents, dict(expanded=expanded, reached=bool(np.isfinite(costs[gr, gc])), seconds=time.perf_counter() - began)
++
++
++def record_astar(memory, stats, layer):
++    """Own-instance counters only. These never enter a control decision."""
++    root = getattr(memory, '_memory', memory)
++    totals = getattr(root, 'astar_statistics', None)
++    if totals is None:
++        totals = dict(calls=0, expanded=0, seconds=0.0, coordinated_calls=0, geometry_calls=0, unreachable=0)
++        root.astar_statistics = totals
++    totals['calls'] += 1
++    totals['expanded'] += int(stats['expanded'])
++    totals['seconds'] += float(stats['seconds'])
++    totals[layer + '_calls'] += 1
++    totals['unreachable'] += int(not stats['reached'])
+--- P48/fast_exploration.py
++++ P48_ASTAR/fast_exploration.py
+@@ -8,6 +8,7 @@
+ from __future__ import annotations
+ 
+ import heapq
++from swarm_rescue.solutions.astar_grid import astar_grid, record_astar
+ import math
+ 
+ import cv2
+@@ -177,6 +178,14 @@
+             if self.exploration_goal is None or self.world_to_cell(self.exploration_goal) != goal:
+                 self.last_exploration_goal_step = self.step
+             self.exploration_goal = self.cell_to_world(goal)
++        # Endpoint selection above is unchanged. Whole-map distances still
++        # compare every exploration/utility candidate; A* builds the actual
++        # execution route to that already chosen endpoint on the same graph.
++        astar_cost, parent, astar_stats = astar_grid(walkable, start, goal,
++            penalties=np.asarray(penalties).reshape(self.shape))
++        record_astar(self, astar_stats, 'coordinated')
++        if not np.isfinite(astar_cost[goal]):
++            raise RuntimeError('Selected reachable endpoint missing from identical A* graph')
+         cells = [goal]
+         while cells[-1] != start:
+             cells.append(parent[cells[-1]])
+--- P48/fresh_opportunity_audit.py
++++ P48_ASTAR/fresh_opportunity_audit.py
+@@ -29,5 +29,5 @@
+         return result
+     def submit_exploration_map(self,image):
+         a=np.asarray(image)
+-        self._fresh_emit('SUBMIT_IMAGE',sha256=hashlib.sha256(a.tobytes()).hexdigest(),shape=list(a.shape),dtype=str(a.dtype),inventory=int(self.carried_bombs_count()),stats=dict(self._fresh_opportunity_stats))
++        self._fresh_emit('SUBMIT_IMAGE',sha256=hashlib.sha256(a.tobytes()).hexdigest(),shape=list(a.shape),dtype=str(a.dtype),inventory=int(self.carried_bombs_count()),stats=dict(self._fresh_opportunity_stats),astar_stats=dict(getattr(self.memory,'astar_statistics',{})))
+         return super().submit_exploration_map(image)
+--- P48/geometry_route_view.py
++++ P48_ASTAR/geometry_route_view.py
+@@ -5,6 +5,7 @@
+ The old view, live map, and lidar motor controller remain unchanged.
+ """
+ import heapq
++from swarm_rescue.solutions.astar_grid import astar_grid, record_astar
+ import math
+ import cv2
+ import numpy as np
+@@ -51,20 +52,8 @@
+             if solids.shape!=self.shape: raise ValueError('inferred_solids shape differs from map')
+             walkable &= ~solids
+         walkable=walkable.copy();walkable[start]=True
+-        costs=np.full(self.shape,np.inf);costs[start]=0
+-        parents={};queue=[(0.,start)]
+-        while queue:
+-            distance,cell=heapq.heappop(queue)
+-            if distance>costs[cell]: continue
+-            row,col=cell
+-            for dr,dc in ((-1,0),(1,0),(0,-1),(0,1),(-1,-1),(-1,1),(1,-1),(1,1)):
+-                nr,nc=row+dr,col+dc
+-                if not(0<=nr<costs.shape[0] and 0<=nc<costs.shape[1]) or not walkable[nr,nc]: continue
+-                if dr and dc and (not walkable[row+dr,col] or not walkable[row,col+dc]): continue
+-                proposal=distance+(math.sqrt(2) if dr and dc else 1.)
+-                if proposal<costs[nr,nc]:
+-                    costs[nr,nc]=proposal;parents[(nr,nc)]=cell
+-                    heapq.heappush(queue,(proposal,(nr,nc)))
++        costs,parents,astar_stats=astar_grid(walkable,start,wanted)
++        record_astar(self,astar_stats,'geometry')
+         if np.isfinite(costs[wanted]):
+             goal=wanted
+         else:

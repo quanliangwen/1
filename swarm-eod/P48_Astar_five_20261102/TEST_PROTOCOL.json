@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_DIRECT_FIVE_MAP_REQUEST",
+  "utc": "2026-11-02T01:24:44.941114+00:00",
+  "human_request": "如果把当前算法中的算法换成A星算法并作一下适配，看看分数有什么变化？只替换算法。直接测试五图",
+  "maps": [
+    "Map01",
+    "Map02",
+    "Map03",
+    "Map04",
+    "Map05"
+  ],
+  "version": "P48_ASTAR",
+  "native_rounds": 10,
+  "RED_per_map": 1,
+  "BLUE_per_map": 1,
+  "external_seed": null,
+  "baseline_reference_mean": 72.60267605460926,
+  "baseline_reference_source": "P55_P48_five_score_validation_20261101",
+  "pilot_screening": false,
+  "automatic_B": false,
+  "automatic_iteration": false,
+  "official_upload": false,
+  "scope": "Only execution-route search becomes A*. Target-selection full-grid distances and layout supplier stay unchanged, otherwise target rules would also change. Existing geometry, costs, no-corner rules, smoothing and clocks kept. Prior paused goal/automation not resumed.",
+  "checks": {
+    "status": "PASS_ASTAR_SEARCH_AND_UNCHANGED_ENDPOINT_INTERFACES",
+    "bellman_ford_cases": 160,
+    "unreachable_full_field_cases": 56,
+    "actual_coordinated_interface_cases": 108,
+    "geometry_interface_cases": 36,
+    "changed_tie_paths": 1,
+    "checks": {
+      "shortest_weighted_cost": true,
+      "no_corner_cutting": true,
+      "unreachable_full_field_preserved": true,
+      "goal_selection_unchanged": true,
+      "original_free_hits_unchanged": true
+    },
+    "helper_sha256": "ce924aeb37290fcecd07d0252b433df883c811f29f2a037432d2d84a631ba705",
+    "SDK_frames": 0,
+    "native_rounds": 0,
+    "limits": "Actual original classes with authored numeric free/clearance/utility fixtures, not SDK flight or score evidence. Equal-cost path tie choices may change actual motion."
+  },
+  "candidate_manifest_sha256": "c82fc2f6a17a813808485973f22a62ae66b480ae9eb4da31804a863643d46c62",
+  "delivery": "GitHub quanliangwen/1: swarm-eod/P48_Astar_five_20261102; local files are temporary work/check inputs only.",
+  "comparison_limits": "New natural random episodes, not paired seeded evidence. All five legal scores retained, no selection/retry by score; first true native exception stops chain and is preserved."
+}

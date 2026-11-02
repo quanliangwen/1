@@ -1,0 +1,19 @@
+{
+  "status": "PASS_ASTAR_SEARCH_AND_UNCHANGED_ENDPOINT_INTERFACES",
+  "bellman_ford_cases": 160,
+  "unreachable_full_field_cases": 56,
+  "actual_coordinated_interface_cases": 108,
+  "geometry_interface_cases": 36,
+  "changed_tie_paths": 1,
+  "checks": {
+    "shortest_weighted_cost": true,
+    "no_corner_cutting": true,
+    "unreachable_full_field_preserved": true,
+    "goal_selection_unchanged": true,
+    "original_free_hits_unchanged": true
+  },
+  "helper_sha256": "ce924aeb37290fcecd07d0252b433df883c811f29f2a037432d2d84a631ba705",
+  "SDK_frames": 0,
+  "native_rounds": 0,
+  "limits": "Actual original classes with authored numeric free/clearance/utility fixtures, not SDK flight or score evidence. Equal-cost path tie choices may change actual motion."
+}
