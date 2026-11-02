@@ -1,0 +1,73 @@
+{
+  "status": "COMPLETE_SPACING_INTEGER_EXTERNAL_DIAGNOSIS",
+  "rows": [
+    {
+      "index": 7,
+      "anchor": [
+        -72.0,
+        -204.0
+      ],
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "primal": 56.28541641961783,
+      "conservative_upper": 56.28598927378203,
+      "upper_ratio": 0.9084368231952913,
+      "model_rejected": false,
+      "witness": [
+        [
+          184.0,
+          100.0
+        ],
+        [
+          -8.0,
+          84.0
+        ],
+        [
+          120.0,
+          4.0
+        ],
+        [
+          -72.0,
+          -60.0
+        ],
+        [
+          56.0,
+          -156.0
+        ],
+        [
+          200.0,
+          -156.0
+        ],
+        [
+          -72.0,
+          -204.0
+        ],
+        [
+          -200.0,
+          -268.0
+        ],
+        [
+          -88.0,
+          -268.0
+        ],
+        [
+          56.0,
+          -268.0
+        ]
+      ],
+      "warnings": [
+        "Unrecognized options detected: {'threads'}. These will be passed to HiGHS verbatim."
+      ]
+    }
+  ],
+  "fixed_initial": 10,
+  "required_corner": 6,
+  "separation": 51.36,
+  "spacing_constraints": 18884,
+  "seconds": 0.18372954288497567,
+  "all_captured_corners_rejected": false,
+  "scope": "Only this captured observed-grid model/inner-corner domains; ignores actual owner routes and dynamics, no proof for unknown future map/continuous points; not integrated into control.",
+  "new_SDK_frames": 0,
+  "new_native_rounds": 0,
+  "production_dependencies_changed": false
+}
