@@ -1,0 +1,17 @@
+P141：只读复盘当前P48 A*五图，零SDK帧、零新比赛、零控制器改动。
+
+输入：已首审PASS的CAMPAIGN_CLIENT_REVIEW及5份own RED console，分别与原RAW_SHA256绑定；没有再下载/解包/核验整份raw归档，没有读BLUEconsole、NPZ或pickle。
+结果详BASELINE_DIAGNOSIS_FIRST.json。
+
+1. Map01首次release696、首次确认投放721、末投1194、提交1194。其时间80.6不能归因末尾地图交换等待；历史晚释放假设也不能直接套用。release当时局部execution493.83且slots6，不是全队完成时间保证。
+2. Map04首次release1108、首投1138、末投1691、提交1748；10/10。末尾57步存在，但本局时间仍100，删等待不直接提高时间分，还可能损失建图。覆盖65.87166的缺口不能简单归因少投。
+3. 全部五图墙面credit97.79%—99.51%；误绘penalty2.33—3.72个百分点，每图均大于遗漏credit损失。下一地图规则要先区分误绘来源，不盲目加扫或擦图。公开评分统计只作后验诊断，不喂入生产决策。
+4. Map04 farthest候选29次，3次接受；19次无整组严格收益、6次库存不完整、1次起点非known-free。不能说全程优化未执行，更不能直接用P88浮点构造例解释本局。P89历史实际51轮正价值假锚为0，保留否决。
+5. 本图提交者A*153次、搜索0.48094秒；仅1名提交者的计数，不含其他机，也不含全域距离场/几何建模/平滑。源码显式目标仍先算全域Dijkstra，但尚未证明是主要瓶颈，不先盲目优化A*核心。
+
+已有日志不含完整目标版本链和规划时own图；不能由最终图/落点反推出哪次选点收益判断错误。下一用真实SDK作者场景一次只读诊断，同时测完整控制循环耗时与任务接单/推迟/重分配。不是官方Map04复现，不再跑已经结束的native。
+
+工程资料：2026-11-02阅读Nav2 Smac2D官方文档，其cost-aware holonomic A*与当前八邻域风险代价方向一致，但不能照搬容差/搜索迭代上限来改变本算法终点语义。
+https://docs.nav2.org/jazzy/configuration_and_development/configuration_guide/planners_plugins/smac/smac_2d/configuring_smac_2d/
+阅读Nav2 consistent replanning官方文档，只借“目标变化、路径失效和周期触发分开”的工程原则；不直接搬ROS清图/重试/秒数，也不把文献作为本游戏收益证据。
+https://docs.nav2.org/rolling/getting_started/nav2_behavior_trees/trees/nav_to_pose_with_consistent_replanning_and_if_path_becomes_invalid/

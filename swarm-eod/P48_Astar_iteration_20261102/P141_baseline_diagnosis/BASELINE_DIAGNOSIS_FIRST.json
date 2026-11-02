@@ -1,0 +1,3575 @@
+{
+  "status": "PASS_EXISTING_AUDITED_OWN_LOG_DIAGNOSIS",
+  "sdk_frames": 0,
+  "native_runs": 0,
+  "source_campaign_sha256": "f8f70abeb2ce25595ee2d7609674c4dc78991da93bdb2a7b3dd98eb63eb08fc0",
+  "rows": [
+    {
+      "map": "Map01",
+      "full": 77.15153419360432,
+      "score_map": 96.2063286166453,
+      "score_wall": 86.78184942640841,
+      "score_time": 80.60000000000001,
+      "own_console_binding": {
+        "sha256": "953eebdc89e3053470da8de80b7fa4a54c83bf3d66a80500f27722e8bb7e5815",
+        "bytes": 20616
+      },
+      "label_counts": {
+        "[active-coverage]": 3,
+        "[multi-bearing]": 13,
+        "[farthest-wall]": 15,
+        "[joint-pair-exchange]": 1,
+        "[reserved-prefix-budget]": 8,
+        "[FRESH_OPPORTUNITY]": 11,
+        "[placement]": 10
+      },
+      "map_credit_percent": 99.51087118613738,
+      "map_penalty_percentage_points": 3.304542569492082,
+      "missed_surface_total_point_gap": 0.24456440693131354,
+      "false_positive_total_point_gap": 1.652271284746041,
+      "wall_total_point_gap": 2.6436301147183174,
+      "time_total_point_gap": 1.9399999999999993,
+      "releases": [
+        {
+          "owner": 0,
+          "step": 696,
+          "model": {
+            "known_value": 58.50089502334595,
+            "optimistic_value": 58.50089502334595,
+            "layout_gap": 0.0,
+            "map_gap": 1.1645570142134465,
+            "execution_steps": 493.8284104700164,
+            "slots": 6,
+            "unseen_wall_mass": 2.9308319091796875,
+            "sensor_density": 0.031856867116371416
+          }
+        },
+        {
+          "owner": 4,
+          "step": 856,
+          "model": {
+            "known_value": 82.4019947052002,
+            "optimistic_value": 82.4019947052002,
+            "layout_gap": 0.0,
+            "map_gap": 1.223847603723132,
+            "execution_steps": 492.7486035009367,
+            "slots": 9,
+            "unseen_wall_mass": 3.157336711883545,
+            "sensor_density": 0.03469600712088421
+          }
+        },
+        {
+          "owner": 1,
+          "step": 988,
+          "model": {
+            "known_value": 15.130399227142334,
+            "optimistic_value": 15.130399227142334,
+            "layout_gap": 0.0,
+            "map_gap": 2.4733718879425557,
+            "execution_steps": 394.44946689527814,
+            "slots": 2,
+            "unseen_wall_mass": 2.926264524459839,
+            "sensor_density": 0.03215674928940464
+          }
+        }
+      ],
+      "placements": [
+        {
+          "owner": 3,
+          "step": 721,
+          "inventory": 1,
+          "position": [
+            -559.5,
+            41.5
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 752,
+          "inventory": 1,
+          "position": [
+            -160.8,
+            143.1
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 771,
+          "inventory": 1,
+          "position": [
+            -161.2,
+            322.7
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 777,
+          "inventory": 0,
+          "position": [
+            -564.0,
+            -126.6
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 796,
+          "inventory": 0,
+          "position": [
+            -173.1,
+            2.3
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 808,
+          "inventory": 1,
+          "position": [
+            240.5,
+            46.8
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 854,
+          "inventory": 1,
+          "position": [
+            -80.1,
+            -335.4
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 876,
+          "inventory": 0,
+          "position": [
+            246.3,
+            -301.3
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 949,
+          "inventory": 0,
+          "position": [
+            239.0,
+            -127.8
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1194,
+          "inventory": 0,
+          "position": [
+            -250.7,
+            -333.4
+          ]
+        }
+      ],
+      "submission_due": [
+        {
+          "kind": "ACTUAL_SUBMISSION_DUE",
+          "owner": 1,
+          "step": 1194,
+          "wall": 77.62585091590881,
+          "remaining": 97.85884144898695,
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 21,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          }
+        }
+      ],
+      "submissions": [
+        {
+          "kind": "SUBMIT_IMAGE",
+          "owner": 1,
+          "step": 1194,
+          "wall": 77.62585091590881,
+          "sha256": "bcd803f3959707facd4482a3f0a0d4cf4364afe993de076a3a70cec736366c2d",
+          "shape": [
+            800,
+            1250
+          ],
+          "dtype": "uint8",
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 21,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          },
+          "astar_stats": {
+            "calls": 85,
+            "expanded": 5747,
+            "seconds": 0.060371479485183954,
+            "coordinated_calls": 84,
+            "geometry_calls": 1,
+            "unreachable": 0
+          }
+        }
+      ],
+      "first_release": 696,
+      "first_drop": 721,
+      "last_drop": 1194,
+      "submission_step": 1194,
+      "tail_after_last_drop": 0,
+      "farthest": {
+        "calls": 15,
+        "reasons": {
+          "incomplete_inventory_layout": 9,
+          "no_strict_full_union_gain": 5,
+          "farthest_layout_selected": 1
+        },
+        "accepted": 1,
+        "enclosing_seconds_sum": 2.081544924993068,
+        "note": "Enclosing intervals may contain other work. This is not exclusive CPU attribution.",
+        "events": [
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 99.1573486328125,
+            "model_work": {
+              "anchors_examined": 6,
+              "candidates_evaluated": 790,
+              "inaccessible_anchors": 1,
+              "selected": 5
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.18610613560304046
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 45.53529739379883,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 310,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.13131300313398242
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 9.64539909362793,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 57,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.11834614630788565
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 11,
+            "incumbent_union": 53.181697845458984,
+            "model_work": {
+              "anchors_examined": 6,
+              "candidates_evaluated": 584,
+              "inaccessible_anchors": 0,
+              "selected": 6
+            },
+            "proposed_union": 33.92144775390625,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.20133405178785324
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 5,
+            "incumbent_union": 42.24934387207031,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 100,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.12161860801279545
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 7,
+            "incumbent_union": 40.42524719238281,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 321,
+              "inaccessible_anchors": 1,
+              "selected": 3
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.17553926911205053
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 22.193248748779297,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 99,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.11268678912892938
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 21.285799026489258,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 128,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.1427371297031641
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 24.384998321533203,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 53,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.12106855399906635
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 23.693748474121094,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 126,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 13.732449531555176,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.15668123727664351
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 11.634400367736816,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 89,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 16.49304962158203,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.13944716891273856
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 10.403499603271484,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 83,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 1.8540000915527344,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.12286359490826726
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 5.520400047302246,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 66,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 1.7414499521255493,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.11214319989085197
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 4.207900047302246,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 66,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 1.7414499521255493,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.11550549603998661
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 4.125,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.12415454117581248
+          }
+        ]
+      },
+      "prefix_events": [
+        {
+          "owner": 0,
+          "step": 696,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 248.9015869776648,
+                "reachable": true,
+                "before": 2404.4005519664543,
+                "suffix_budget": 2155.4989649887893
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 224.0,
+                "reachable": true,
+                "before": 2404.4005519664543,
+                "suffix_budget": 2180.4005519664543
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 306.2741699796953,
+                "reachable": true,
+                "before": 2404.4005519664543,
+                "suffix_budget": 2098.126381986759
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 54.62741699796952,
+                "reachable": true,
+                "before": 2404.4005519664543,
+                "suffix_budget": 2349.7731349684846
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 160.0,
+                "reachable": true,
+                "before": 2404.4005519664543,
+                "suffix_budget": 2244.4005519664543
+              }
+            ],
+            "fields": 5
+          }
+        },
+        {
+          "owner": 0,
+          "step": 720,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 190.39191898578667,
+                "reachable": true,
+                "before": 2224.869978144063,
+                "suffix_budget": 2034.4780591582767
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 250.50966799187808,
+                "reachable": true,
+                "before": 2224.869978144063,
+                "suffix_budget": 1974.360310152185
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 16.0,
+                "reachable": true,
+                "before": 2224.869978144063,
+                "suffix_budget": 2208.869978144063
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 160.0,
+                "reachable": true,
+                "before": 2224.869978144063,
+                "suffix_budget": 2064.869978144063
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 744,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 22.627416997969522,
+                "reachable": true,
+                "before": 1664.1581607630374,
+                "suffix_budget": 1641.5307437650679
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 177.1370849898476,
+                "reachable": true,
+                "before": 1664.1581607630374,
+                "suffix_budget": 1487.0210757731898
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 709.6854249492378,
+                "reachable": true,
+                "before": 1664.1581607630374,
+                "suffix_budget": 954.4727358137995
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1664.1581607630374,
+                "suffix_budget": 1284.5114077813116
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 752,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 122.50966799187808,
+                "reachable": true,
+                "before": 1623.7549593884705,
+                "suffix_budget": 1501.2452913965924
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 696.4305909532987,
+                "reachable": true,
+                "before": 1623.7549593884705,
+                "suffix_budget": 927.3243684351718
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1623.7549593884705,
+                "suffix_budget": 1244.1082064067448
+              }
+            ],
+            "fields": 3
+          }
+        },
+        {
+          "owner": 0,
+          "step": 776,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 544.6660889654819,
+                "reachable": true,
+                "before": 1478.4640835724213,
+                "suffix_budget": 933.7979946069394
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1478.4640835724213,
+                "suffix_budget": 1098.8173305906955
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 0,
+          "step": 796,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 422.1564209736039,
+                "reachable": true,
+                "before": 1433.9924321610767,
+                "suffix_budget": 1011.8360111874729
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1433.9924321610767,
+                "suffix_budget": 1054.345679179351
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 0,
+          "step": 820,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 245.0193359837562,
+                "reachable": true,
+                "before": 1451.9007834703662,
+                "suffix_budget": 1206.8814474866099
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1451.9007834703662,
+                "suffix_budget": 1072.2540304886404
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 0,
+          "step": 844,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 245.0193359837562,
+                "reachable": true,
+                "before": 1388.7982144533541,
+                "suffix_budget": 1143.7788784695979
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 379.64675298172574,
+                "reachable": true,
+                "before": 1388.7982144533541,
+                "suffix_budget": 1009.1514614716284
+              }
+            ],
+            "fields": 2
+          }
+        }
+      ],
+      "reported_astar_calls": 85,
+      "reported_astar_search_seconds": 0.060371479485183954,
+      "astar_scope_note": "Only submitting owners report counters; other owners are not observed. Search excludes full distance fields/masks/smoothing/control."
+    },
+    {
+      "map": "Map02",
+      "full": 75.81503670653098,
+      "score_map": 95.58098052669712,
+      "score_wall": 90.12273221591204,
+      "score_time": 100.0,
+      "own_console_binding": {
+        "sha256": "530f4b45a2d94090e711bc1bff22499575acd09a6f5a44cafd8bc8e6e9c81f5e",
+        "bytes": 14553
+      },
+      "label_counts": {
+        "[active-coverage]": 1,
+        "[multi-bearing]": 7,
+        "[farthest-wall]": 6,
+        "[reserved-prefix-budget]": 5,
+        "[FRESH_OPPORTUNITY]": 11,
+        "[placement]": 10
+      },
+      "map_credit_percent": 98.89969545141959,
+      "map_penalty_percentage_points": 3.3187149247224683,
+      "missed_surface_total_point_gap": 0.5501522742902054,
+      "false_positive_total_point_gap": 1.6593574623612342,
+      "wall_total_point_gap": 1.9754535568175926,
+      "time_total_point_gap": 0.0,
+      "releases": [
+        {
+          "owner": 0,
+          "step": 912,
+          "model": {
+            "known_value": 138.28791427612305,
+            "optimistic_value": 138.28791427612305,
+            "layout_gap": 0.0,
+            "map_gap": 0.0,
+            "execution_steps": 362.23832720378965,
+            "slots": 8,
+            "unseen_wall_mass": 0.0,
+            "sensor_density": 0.05882885313870614
+          }
+        }
+      ],
+      "placements": [
+        {
+          "owner": 4,
+          "step": 986,
+          "inventory": 1,
+          "position": [
+            149.7,
+            -167.6
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 989,
+          "inventory": 1,
+          "position": [
+            427.2,
+            -302.1
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 994,
+          "inventory": 1,
+          "position": [
+            -97.1,
+            16.2
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1007,
+          "inventory": 1,
+          "position": [
+            -162.7,
+            -177.1
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1023,
+          "inventory": 1,
+          "position": [
+            -444.7,
+            -303.3
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1043,
+          "inventory": 0,
+          "position": [
+            85.6,
+            46.9
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 1054,
+          "inventory": 0,
+          "position": [
+            293.6,
+            88.7
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1135,
+          "inventory": 0,
+          "position": [
+            -10.9,
+            346.1
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 1177,
+          "inventory": 0,
+          "position": [
+            422.0,
+            300.2
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1270,
+          "inventory": 0,
+          "position": [
+            -450.9,
+            293.6
+          ]
+        }
+      ],
+      "submission_due": [
+        {
+          "kind": "ACTUAL_SUBMISSION_DUE",
+          "owner": 1,
+          "step": 1579,
+          "wall": 119.5731565952301,
+          "remaining": 644.8853583694394,
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 7,
+            "expired_calls": 2,
+            "refreshed": 2,
+            "invalid_after": 0
+          }
+        }
+      ],
+      "submissions": [
+        {
+          "kind": "SUBMIT_IMAGE",
+          "owner": 1,
+          "step": 1579,
+          "wall": 119.5731565952301,
+          "sha256": "5466e16132b5e3a7d4061feef64dd52852c7fb578bd105f355f3bd02fee9edbc",
+          "shape": [
+            900,
+            1200
+          ],
+          "dtype": "uint8",
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 7,
+            "expired_calls": 2,
+            "refreshed": 2,
+            "invalid_after": 0
+          },
+          "astar_stats": {
+            "calls": 96,
+            "expanded": 6325,
+            "seconds": 0.06252492219209671,
+            "coordinated_calls": 85,
+            "geometry_calls": 11,
+            "unreachable": 0
+          }
+        }
+      ],
+      "first_release": 912,
+      "first_drop": 986,
+      "last_drop": 1270,
+      "submission_step": 1579,
+      "tail_after_last_drop": 309,
+      "farthest": {
+        "calls": 6,
+        "reasons": {
+          "no_strict_full_union_gain": 5,
+          "farthest_layout_selected": 1
+        },
+        "accepted": 1,
+        "enclosing_seconds_sum": 1.3918797709047794,
+        "note": "Enclosing intervals may contain other work. This is not exclusive CPU attribution.",
+        "events": [
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 15,
+            "incumbent_union": 185.39459228515625,
+            "model_work": {
+              "anchors_examined": 10,
+              "candidates_evaluated": 1831,
+              "inaccessible_anchors": 0,
+              "selected": 10
+            },
+            "proposed_union": 123.32290649414062,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.24071365501731634
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 86.78458404541016,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 754,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 69.92604064941406,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.242306686937809
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 92.65478515625,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 776,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 65.72811889648438,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.23137716995552182
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 94.03687286376953,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 826,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 59.76958084106445,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.23134271707385778
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 8,
+            "incumbent_union": 72.0062484741211,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 481,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 38.583126068115234,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.23432913096621633
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 21.617916107177734,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 69,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 21.7045841217041,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.21181041095405817
+          }
+        ]
+      },
+      "prefix_events": [
+        {
+          "owner": 0,
+          "step": 912,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 371.88225099390854,
+                "reachable": true,
+                "before": 4443.696810175998,
+                "suffix_budget": 4071.814559182089
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 337.13708498984766,
+                "reachable": true,
+                "before": 4443.696810175998,
+                "suffix_budget": 4106.55972518615
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 323.88225099390854,
+                "reachable": true,
+                "before": 4443.696810175998,
+                "suffix_budget": 4119.814559182089
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 190.39191898578667,
+                "reachable": true,
+                "before": 4443.696810175998,
+                "suffix_budget": 4253.304891190211
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 451.88225099390854,
+                "reachable": true,
+                "before": 4443.696810175998,
+                "suffix_budget": 3991.814559182089
+              }
+            ],
+            "fields": 5
+          }
+        },
+        {
+          "owner": 0,
+          "step": 960,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 166.62741699796953,
+                "reachable": true,
+                "before": 3454.52382267349,
+                "suffix_budget": 3287.8964056755203
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 231.76450198781717,
+                "reachable": true,
+                "before": 3454.52382267349,
+                "suffix_budget": 3222.7593206856727
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 304.0,
+                "reachable": true,
+                "before": 3454.52382267349,
+                "suffix_budget": 3150.52382267349
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 160.0,
+                "reachable": true,
+                "before": 3454.52382267349,
+                "suffix_budget": 3294.52382267349
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 294.62741699796953,
+                "reachable": true,
+                "before": 3454.52382267349,
+                "suffix_budget": 3159.8964056755203
+              }
+            ],
+            "fields": 5
+          }
+        },
+        {
+          "owner": 0,
+          "step": 989,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 231.76450198781717,
+                "reachable": true,
+                "before": 3102.2569838412423,
+                "suffix_budget": 2870.492481853425
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 304.0,
+                "reachable": true,
+                "before": 3102.2569838412423,
+                "suffix_budget": 2798.2569838412423
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 160.0,
+                "reachable": true,
+                "before": 3102.2569838412423,
+                "suffix_budget": 2942.2569838412423
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 294.62741699796953,
+                "reachable": true,
+                "before": 3102.2569838412423,
+                "suffix_budget": 2807.6295668432726
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1013,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 231.76450198781717,
+                "reachable": true,
+                "before": 3301.2863951176123,
+                "suffix_budget": 3069.521893129795
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 304.0,
+                "reachable": true,
+                "before": 3301.2863951176123,
+                "suffix_budget": 2997.2863951176123
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 160.0,
+                "reachable": true,
+                "before": 3301.2863951176123,
+                "suffix_budget": 3141.2863951176123
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 294.62741699796953,
+                "reachable": true,
+                "before": 3301.2863951176123,
+                "suffix_budget": 3006.6589781196426
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1061,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 86.62741699796952,
+                "reachable": true,
+                "before": 2942.829679998678,
+                "suffix_budget": 2856.202263000708
+              }
+            ],
+            "fields": 1
+          }
+        }
+      ],
+      "reported_astar_calls": 96,
+      "reported_astar_search_seconds": 0.06252492219209671,
+      "astar_scope_note": "Only submitting owners report counters; other owners are not observed. Search excludes full distance fields/masks/smoothing/control."
+    },
+    {
+      "map": "Map03",
+      "full": 73.86732099758838,
+      "score_map": 94.79140715847379,
+      "score_wall": 82.3580870917574,
+      "score_time": 100.0,
+      "own_console_binding": {
+        "sha256": "4bf779022fde4b8a95bc8ade5a3bda2df88cf55b62de6928d6b2e6be23c28b0b",
+        "bytes": 30407
+      },
+      "label_counts": {
+        "[active-coverage]": 1,
+        "[multi-bearing]": 12,
+        "[farthest-wall]": 32,
+        "[reserved-prefix-budget]": 8,
+        "[FRESH_OPPORTUNITY]": 17,
+        "[placement]": 10
+      },
+      "map_credit_percent": 98.5134746331639,
+      "map_penalty_percentage_points": 3.7220674746901072,
+      "missed_surface_total_point_gap": 0.74326268341805,
+      "false_positive_total_point_gap": 1.8610337373450536,
+      "wall_total_point_gap": 3.5283825816485206,
+      "time_total_point_gap": 0.0,
+      "releases": [
+        {
+          "owner": 0,
+          "step": 624,
+          "model": {
+            "known_value": 98.59920597076416,
+            "optimistic_value": 98.59920597076416,
+            "layout_gap": 0.0,
+            "map_gap": 0.3191489364785824,
+            "execution_steps": 372.0588556908231,
+            "slots": 10,
+            "unseen_wall_mass": 1.050011396408081,
+            "sensor_density": 0.050000540522414635
+          }
+        }
+      ],
+      "placements": [
+        {
+          "owner": 0,
+          "step": 667,
+          "inventory": 1,
+          "position": [
+            289.8,
+            88.3
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 703,
+          "inventory": 0,
+          "position": [
+            300.6,
+            -39.0
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 787,
+          "inventory": 1,
+          "position": [
+            -83.7,
+            -235.6
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1112,
+          "inventory": 1,
+          "position": [
+            -176.8,
+            84.2
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1150,
+          "inventory": 0,
+          "position": [
+            -331.1,
+            105.6
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1196,
+          "inventory": 1,
+          "position": [
+            105.2,
+            307.4
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1233,
+          "inventory": 0,
+          "position": [
+            132.5,
+            198.7
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 1419,
+          "inventory": 0,
+          "position": [
+            -77.6,
+            -154.5
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1518,
+          "inventory": 1,
+          "position": [
+            -345.4,
+            -139.7
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1656,
+          "inventory": 0,
+          "position": [
+            76.6,
+            -188.6
+          ]
+        }
+      ],
+      "submission_due": [
+        {
+          "kind": "ACTUAL_SUBMISSION_DUE",
+          "owner": 1,
+          "step": 1657,
+          "wall": 109.36973738670349,
+          "remaining": 965.5762934875186,
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 6,
+            "expired_calls": 1,
+            "refreshed": 1,
+            "invalid_after": 0
+          }
+        }
+      ],
+      "submissions": [
+        {
+          "kind": "SUBMIT_IMAGE",
+          "owner": 1,
+          "step": 1657,
+          "wall": 109.36973738670349,
+          "sha256": "2f9b3a4b6a6c828c37e628cce181d389198cfa45aaa49228494e72918c0e140c",
+          "shape": [
+            750,
+            1113
+          ],
+          "dtype": "uint8",
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 6,
+            "expired_calls": 1,
+            "refreshed": 1,
+            "invalid_after": 0
+          },
+          "astar_stats": {
+            "calls": 123,
+            "expanded": 14389,
+            "seconds": 0.1300919521600008,
+            "coordinated_calls": 108,
+            "geometry_calls": 15,
+            "unreachable": 0
+          }
+        }
+      ],
+      "first_release": 624,
+      "first_drop": 667,
+      "last_drop": 1656,
+      "submission_step": 1657,
+      "tail_after_last_drop": 1,
+      "farthest": {
+        "calls": 32,
+        "reasons": {
+          "no_strict_full_union_gain": 30,
+          "farthest_layout_selected": 2
+        },
+        "accepted": 2,
+        "enclosing_seconds_sum": 5.400734160095453,
+        "note": "Enclosing intervals may contain other work. This is not exclusive CPU attribution.",
+        "events": [
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 15,
+            "incumbent_union": 110.97377014160156,
+            "model_work": {
+              "anchors_examined": 10,
+              "candidates_evaluated": 1296,
+              "inaccessible_anchors": 0,
+              "selected": 10
+            },
+            "proposed_union": 65.95706939697266,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16336303669959307
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 44.34307861328125,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 814,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 25.720460891723633,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.14639924094080925
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 11,
+            "incumbent_union": 59.915863037109375,
+            "model_work": {
+              "anchors_examined": 6,
+              "candidates_evaluated": 547,
+              "inaccessible_anchors": 0,
+              "selected": 6
+            },
+            "proposed_union": 36.19578552246094,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.14914584485813975
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 57.02336120605469,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 452,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 35.436973571777344,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.14834633516147733
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 36.7003173828125,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 145,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 26.645858764648438,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.13474976271390915
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 34.900089263916016,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 213,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 19.925411224365234,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.14382193516939878
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 9,
+            "incumbent_union": 50.98585891723633,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 306,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 31.89817237854004,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16831261105835438
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 7,
+            "incumbent_union": 42.793540954589844,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 251,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 29.041427612304688,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16324700508266687
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 8,
+            "incumbent_union": 40.57719802856445,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 214,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 27.692947387695312,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1591563429683447
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 7,
+            "incumbent_union": 41.565643310546875,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 318,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 30.22980308532715,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16752650402486324
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 5,
+            "incumbent_union": 36.973270416259766,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 202,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 20.61729621887207,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.15623071789741516
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 29.488807678222656,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 89,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 23.12830924987793,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.15841826889663935
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 9,
+            "incumbent_union": 62.64093780517578,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 381,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 38.409461975097656,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.17859747493639588
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 28.922534942626953,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 142,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 18.62924575805664,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1655069342814386
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 35.512054443359375,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 93,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 20.182777404785156,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16768899792805314
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 7,
+            "incumbent_union": 48.8216438293457,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 279,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 29.272663116455078,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.17191734910011292
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 36.95231628417969,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 197,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 21.898258209228516,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16667258366942406
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 18.142513275146484,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 51,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 10.780994415283203,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.15895465482026339
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 18.814977645874023,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 57,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 18.814977645874023,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.15853667864575982
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 9,
+            "incumbent_union": 53.98280334472656,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 459,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 40.07734680175781,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1871534287929535
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 19.154521942138672,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 108,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 13.746085166931152,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1671165470033884
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 18.91066551208496,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 109,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 14.661163330078125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1700863647274673
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 11.207196235656738,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 47,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 10.95426082611084,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.18341229809448123
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 30.906883239746094,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 40,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 22.478862762451172,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1817261278629303
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 12.272165298461914,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 22,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 12.272165298461914,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16991156712174416
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 21.63982582092285,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 50,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 18.29271697998047,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.21725771995261312
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 31.498926162719727,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 17,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 22.95773696899414,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.17904641525819898
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 5,
+            "incumbent_union": 36.02915573120117,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 61,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 23.161218643188477,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.18789789592847228
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 11.138933181762695,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 46,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 11.964228630065918,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.18108828784897923
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 17.494667053222656,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 8,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 17.494667053222656,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.1829080106690526
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 11.705193519592285,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 8,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 16.911191940307617,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.1841429751366377
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 18.639606475830078,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 8,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 18.639606475830078,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.18239424284547567
+          }
+        ]
+      },
+      "prefix_events": [
+        {
+          "owner": 0,
+          "step": 624,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 238.39191898578667,
+                "reachable": true,
+                "before": 8719.182279350254,
+                "suffix_budget": 8480.790360364468
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 389.0193359837562,
+                "reachable": true,
+                "before": 8719.182279350254,
+                "suffix_budget": 8330.162943366498
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 708.5483399593901,
+                "reachable": true,
+                "before": 8719.182279350254,
+                "suffix_budget": 8010.633939390864
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 234.5096679918781,
+                "reachable": true,
+                "before": 8719.182279350254,
+                "suffix_budget": 8484.672611358375
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 113.13708498984761,
+                "reachable": true,
+                "before": 8719.182279350254,
+                "suffix_budget": 8606.045194360406
+              }
+            ],
+            "fields": 5
+          }
+        },
+        {
+          "owner": 0,
+          "step": 648,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 99.88225099390856,
+                "reachable": true,
+                "before": 7825.581454084718,
+                "suffix_budget": 7725.6992030908095
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 389.0193359837562,
+                "reachable": true,
+                "before": 7825.581454084718,
+                "suffix_budget": 7436.562118100962
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 602.0386719675123,
+                "reachable": true,
+                "before": 7825.581454084718,
+                "suffix_budget": 7223.542782117205
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 113.13708498984761,
+                "reachable": true,
+                "before": 7825.581454084718,
+                "suffix_budget": 7712.44436909487
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 667,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 389.0193359837562,
+                "reachable": true,
+                "before": 7768.442644286499,
+                "suffix_budget": 7379.423308302743
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 796.7838379715729,
+                "reachable": true,
+                "before": 7768.442644286499,
+                "suffix_budget": 6971.658806314926
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 435.8822509939086,
+                "reachable": true,
+                "before": 7768.442644286499,
+                "suffix_budget": 7332.560393292591
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 113.13708498984761,
+                "reachable": true,
+                "before": 7768.442644286499,
+                "suffix_budget": 7655.305559296651
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 691,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 678.1564209736034,
+                "reachable": true,
+                "before": 7442.027103446953,
+                "suffix_budget": 6763.87068247335
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 435.8822509939086,
+                "reachable": true,
+                "before": 7442.027103446953,
+                "suffix_budget": 7006.144852453045
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 113.13708498984761,
+                "reachable": true,
+                "before": 7442.027103446953,
+                "suffix_budget": 7328.890018457106
+              }
+            ],
+            "fields": 3
+          }
+        },
+        {
+          "owner": 0,
+          "step": 703,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 623.529003975634,
+                "reachable": true,
+                "before": 7348.272356078862,
+                "suffix_budget": 6724.743352103228
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 435.8822509939086,
+                "reachable": true,
+                "before": 7348.272356078862,
+                "suffix_budget": 6912.390105084954
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 113.13708498984761,
+                "reachable": true,
+                "before": 7348.272356078862,
+                "suffix_budget": 7235.135271089014
+              }
+            ],
+            "fields": 3
+          }
+        },
+        {
+          "owner": 0,
+          "step": 727,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 491.6467529817258,
+                "reachable": true,
+                "before": 6590.340699340837,
+                "suffix_budget": 6098.693946359112
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 182.62741699796953,
+                "reachable": true,
+                "before": 6590.340699340837,
+                "suffix_budget": 6407.713282342867
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 269.25483399593907,
+                "reachable": true,
+                "before": 6590.340699340837,
+                "suffix_budget": 6321.085865344898
+              }
+            ],
+            "fields": 3
+          }
+        },
+        {
+          "owner": 0,
+          "step": 751,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": null,
+                "reachable": false,
+                "before": 6515.335644105062,
+                "suffix_budget": 0.0
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 510.39191898578673,
+                "reachable": true,
+                "before": 6515.335644105062,
+                "suffix_budget": 6004.943725119275
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 269.25483399593907,
+                "reachable": true,
+                "before": 6515.335644105062,
+                "suffix_budget": 6246.0808101091225
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 0,
+          "step": 775,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 817.8031739553289,
+                "reachable": true,
+                "before": 6137.275764812418,
+                "suffix_budget": 5319.472590857089
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 501.01933598375626,
+                "reachable": true,
+                "before": 6137.275764812418,
+                "suffix_budget": 5636.256428828661
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 586.5096679918781,
+                "reachable": true,
+                "before": 6137.275764812418,
+                "suffix_budget": 5550.76609682054
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 269.25483399593907,
+                "reachable": true,
+                "before": 6137.275764812418,
+                "suffix_budget": 5868.0209308164785
+              }
+            ],
+            "fields": 4
+          }
+        }
+      ],
+      "reported_astar_calls": 123,
+      "reported_astar_search_seconds": 0.1300919521600008,
+      "astar_scope_note": "Only submitting owners report counters; other owners are not observed. Search excludes full distance fields/masks/smoothing/control."
+    },
+    {
+      "map": "Map04",
+      "full": 72.15789980636052,
+      "score_map": 95.54153511104697,
+      "score_wall": 65.87166125418524,
+      "score_time": 100.0,
+      "own_console_binding": {
+        "sha256": "c9323ef761cff9396fbf2202c3159370cbd27cd3524acf884a995556c55ba6bf",
+        "bytes": 30079
+      },
+      "label_counts": {
+        "[active-coverage]": 4,
+        "[multi-bearing]": 26,
+        "[farthest-wall]": 29,
+        "[reserved-prefix-budget]": 12,
+        "[placement]": 10,
+        "[FRESH_OPPORTUNITY]": 16
+      },
+      "map_credit_percent": 97.87315479911712,
+      "map_penalty_percentage_points": 2.3316196880701465,
+      "missed_surface_total_point_gap": 1.0634226004414438,
+      "false_positive_total_point_gap": 1.1658098440350733,
+      "wall_total_point_gap": 6.825667749162952,
+      "time_total_point_gap": 0.0,
+      "releases": [
+        {
+          "owner": 1,
+          "step": 1108,
+          "model": {
+            "known_value": 112.87808990478516,
+            "optimistic_value": 116.39899063110352,
+            "layout_gap": 0.6049710065746091,
+            "map_gap": 6.060400718783251,
+            "execution_steps": 699.6889180926898,
+            "slots": 4,
+            "unseen_wall_mass": 43.67650604248047,
+            "sensor_density": 0.04880056559056673
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1166,
+          "model": {
+            "known_value": 66.23062515258789,
+            "optimistic_value": 66.23062515258789,
+            "layout_gap": 0.0,
+            "map_gap": 8.349133047287959,
+            "execution_steps": 612.56352671617,
+            "slots": 2,
+            "unseen_wall_mass": 57.45227813720703,
+            "sensor_density": 0.04659552427641339
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1185,
+          "model": {
+            "known_value": 162.82104873657227,
+            "optimistic_value": 162.82104873657227,
+            "layout_gap": 0.0,
+            "map_gap": 0.9750812524739396,
+            "execution_steps": 853.1095126528329,
+            "slots": 4,
+            "unseen_wall_mass": 9.377510070800781,
+            "sensor_density": 0.0651215990603958
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1272,
+          "model": {
+            "known_value": 60.64096260070801,
+            "optimistic_value": 60.70601463317871,
+            "layout_gap": 0.021431824462134635,
+            "map_gap": 10.719122803245376,
+            "execution_steps": 483.39382993148575,
+            "slots": 2,
+            "unseen_wall_mass": 57.20466232299805,
+            "sensor_density": 0.03613686590354168
+          }
+        }
+      ],
+      "placements": [
+        {
+          "owner": 1,
+          "step": 1138,
+          "inventory": 1,
+          "position": [
+            -180.8,
+            290.9
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1237,
+          "inventory": 1,
+          "position": [
+            357.6,
+            424.2
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 1317,
+          "inventory": 1,
+          "position": [
+            706.3,
+            -52.7
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1344,
+          "inventory": 0,
+          "position": [
+            132.9,
+            319.6
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1344,
+          "inventory": 1,
+          "position": [
+            -595.8,
+            30.9
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 1506,
+          "inventory": 0,
+          "position": [
+            -180.7,
+            67.3
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 1509,
+          "inventory": 1,
+          "position": [
+            -356.1,
+            270.8
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 1602,
+          "inventory": 0,
+          "position": [
+            -577.2,
+            437.9
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1649,
+          "inventory": 0,
+          "position": [
+            -712.2,
+            -220.2
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1691,
+          "inventory": 0,
+          "position": [
+            260.1,
+            -287.9
+          ]
+        }
+      ],
+      "submission_due": [
+        {
+          "kind": "ACTUAL_SUBMISSION_DUE",
+          "owner": 1,
+          "step": 1748,
+          "wall": 172.33842420578003,
+          "remaining": 21.045522844720328,
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 22,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          }
+        }
+      ],
+      "submissions": [
+        {
+          "kind": "SUBMIT_IMAGE",
+          "owner": 1,
+          "step": 1748,
+          "wall": 172.33842420578003,
+          "sha256": "a65004bf0dd80b9a9b23e6aeb23e695fed3a13fe0072e289cdb2b4e61324fcfe",
+          "shape": [
+            1122,
+            1660
+          ],
+          "dtype": "uint8",
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 22,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          },
+          "astar_stats": {
+            "calls": 153,
+            "expanded": 54505,
+            "seconds": 0.4809417142532766,
+            "coordinated_calls": 138,
+            "geometry_calls": 15,
+            "unreachable": 4
+          }
+        }
+      ],
+      "first_release": 1108,
+      "first_drop": 1138,
+      "last_drop": 1691,
+      "submission_step": 1748,
+      "tail_after_last_drop": 57,
+      "farthest": {
+        "calls": 29,
+        "reasons": {
+          "no_strict_full_union_gain": 19,
+          "farthest_layout_selected": 3,
+          "incomplete_inventory_layout": 6,
+          "start_not_known_free": 1
+        },
+        "accepted": 3,
+        "enclosing_seconds_sum": 7.633984401356429,
+        "note": "Enclosing intervals may contain other work. This is not exclusive CPU attribution.",
+        "events": [
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 113.2421875,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 533,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 80.69667053222656,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.24479291960597038
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 59.75518798828125,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 405,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 51.920310974121094,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2270500147715211
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 93.91088104248047,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 393,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 49.95916748046875,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.23326828656718135
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 3,
+            "incumbent_union": 68.38101196289062,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 187,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 48.921756744384766,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.22132314695045352
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 27.90781021118164,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 146,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 31.901809692382812,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.21294381422922015
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 163.09005737304688,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 433,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 71.79460906982422,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2914235261268914
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 27.837129592895508,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 116,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 16.810577392578125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2376658646389842
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 72.09381103515625,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 289,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 46.4765510559082,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2795830126851797
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 80.50677490234375,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 163,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 41.423858642578125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2822521273046732
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 21.40806770324707,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 116,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 24.142375946044922,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.2563878819346428
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 63.03778839111328,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 107,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.15363019984215498
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 28.805227279663086,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 107,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 28.805227279663086,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.16288595413789153
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": true,
+            "route_fields": 2,
+            "incumbent_union": 28.156497955322266,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 143,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 32.913536071777344,
+            "reason": "farthest_layout_selected",
+            "enclosing_elapsed_seconds": 0.20964179188013077
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 56.36383056640625,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 238,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 43.97784423828125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.2116548209451139
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 43.29220199584961,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 116,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 24.424772262573242,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.277847767341882
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 57.93107604980469,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 149,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.20956918597221375
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 57.93107604980469,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 149,
+              "inaccessible_anchors": 1,
+              "selected": 1
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.20187589060515165
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 57.679771423339844,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 158,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 27.750320434570312,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.22481336677446961
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 28.330612182617188,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 132,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 24.360034942626953,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.20256518106907606
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 4,
+            "incumbent_union": 114.83808135986328,
+            "model_work": {
+              "anchors_examined": 2,
+              "candidates_evaluated": 183,
+              "inaccessible_anchors": 0,
+              "selected": 2
+            },
+            "proposed_union": 36.712432861328125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.3075869809836149
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 52.242462158203125,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 81,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 19.2364501953125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.30857449024915695
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 27.453048706054688,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 87,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 17.376028060913086,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.3024082249030471
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 32.8191032409668,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.31368779577314854
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 33.048309326171875,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.31882915971800685
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 28.90353012084961,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 120,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 25.911582946777344,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.3441624171100557
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 0,
+            "reason": "start_not_known_free",
+            "enclosing_elapsed_seconds": 0.31651240307837725
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 71.12853240966797,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.3675005342811346
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 73.24417114257812,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 45,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 68.51475524902344,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.3442631009966135
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 27.237430572509766,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 34,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 27.237430572509766,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.36928454088047147
+          }
+        ]
+      },
+      "prefix_events": [
+        {
+          "owner": 1,
+          "step": 1108,
+          "context": {
+            "owners": [
+              {
+                "owner": 1,
+                "prefix_distance": 70.62741699796952,
+                "reachable": true,
+                "before": 2992.307729597785,
+                "suffix_budget": 2921.6803125998154
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 689.1370849898476,
+                "reachable": true,
+                "before": 2992.307729597785,
+                "suffix_budget": 2303.1706446079374
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1138,
+          "context": {
+            "owners": [
+              {
+                "owner": 4,
+                "prefix_distance": 698.509667991878,
+                "reachable": true,
+                "before": 2861.5302557016716,
+                "suffix_budget": 2163.0205877097937
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1166,
+          "context": {
+            "owners": [
+              {
+                "owner": 3,
+                "prefix_distance": 989.9209229614205,
+                "reachable": true,
+                "before": 2553.931327768706,
+                "suffix_budget": 1564.0104048072856
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1209,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 166.62741699796953,
+                "reachable": true,
+                "before": 1869.9669829128347,
+                "suffix_budget": 1703.3395659148653
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 581.019335983756,
+                "reachable": true,
+                "before": 1869.9669829128347,
+                "suffix_budget": 1288.9476469290787
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1237,
+          "context": {
+            "owners": [
+              {
+                "owner": 4,
+                "prefix_distance": 462.39191898578673,
+                "reachable": true,
+                "before": 1791.834233839748,
+                "suffix_budget": 1329.4423148539613
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1261,
+          "context": {
+            "owners": [
+              {
+                "owner": 4,
+                "prefix_distance": 398.39191898578673,
+                "reachable": true,
+                "before": 1792.6805315158508,
+                "suffix_budget": 1394.288612530064
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1272,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 709.6854249492379,
+                "reachable": true,
+                "before": 1757.1501170858594,
+                "suffix_budget": 1047.4646921366216
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1286,
+          "context": {
+            "owners": [
+              {
+                "owner": 3,
+                "prefix_distance": 369.1370849898476,
+                "reachable": true,
+                "before": 1709.8686567798873,
+                "suffix_budget": 1340.7315717900397
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1344,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 225.1370849898476,
+                "reachable": true,
+                "before": 1600.7473466047682,
+                "suffix_budget": 1375.6102616149205
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 16.0,
+                "reachable": true,
+                "before": 1600.7473466047682,
+                "suffix_budget": 1584.7473466047682
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1344,
+          "context": {
+            "owners": [
+              {
+                "owner": 4,
+                "prefix_distance": 254.39191898578667,
+                "reachable": true,
+                "before": 1600.7473466047682,
+                "suffix_budget": 1346.3554276189816
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1392,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 547.8822509939087,
+                "reachable": true,
+                "before": 1376.593108403937,
+                "suffix_budget": 828.7108574100284
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1488,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 112.0,
+                "reachable": true,
+                "before": 1021.890750783685,
+                "suffix_budget": 909.890750783685
+              }
+            ],
+            "fields": 1
+          }
+        }
+      ],
+      "reported_astar_calls": 153,
+      "reported_astar_search_seconds": 0.4809417142532766,
+      "astar_scope_note": "Only submitting owners report counters; other owners are not observed. Search excludes full distance fields/masks/smoothing/control."
+    },
+    {
+      "map": "Map05",
+      "full": 72.28762512325306,
+      "score_map": 94.49999379391996,
+      "score_wall": 75.18814113146539,
+      "score_time": 100.0,
+      "own_console_binding": {
+        "sha256": "41eef2fee6cf11f35d18c33a0692cbcbe52dc05877043d806ae36c9680a66dc3",
+        "bytes": 18326
+      },
+      "label_counts": {
+        "[active-coverage]": 3,
+        "[multi-bearing]": 8,
+        "[farthest-wall]": 10,
+        "[reserved-prefix-budget]": 8,
+        "[FRESH_OPPORTUNITY]": 14,
+        "[placement]": 10
+      },
+      "map_credit_percent": 97.79285059578369,
+      "map_penalty_percentage_points": 3.292856801863734,
+      "missed_surface_total_point_gap": 1.1035747021081566,
+      "false_positive_total_point_gap": 1.646428400931867,
+      "wall_total_point_gap": 4.9623717737069235,
+      "time_total_point_gap": 0.0,
+      "releases": [
+        {
+          "owner": 0,
+          "step": 1608,
+          "model": {
+            "known_value": 273.25,
+            "optimistic_value": 273.25,
+            "layout_gap": 0.0,
+            "map_gap": 0.1422222204802603,
+            "execution_steps": 532.3422705249327,
+            "slots": 8,
+            "unseen_wall_mass": 1.4222900867462158,
+            "sensor_density": 0.08889312934569442
+          }
+        },
+        {
+          "owner": 4,
+          "step": 1794,
+          "model": {
+            "known_value": 289.28125,
+            "optimistic_value": 289.28125,
+            "layout_gap": 0.0,
+            "map_gap": 0.15284447034510276,
+            "execution_steps": 595.3323441981266,
+            "slots": 9,
+            "unseen_wall_mass": 1.4804778099060059,
+            "sensor_density": 0.09252986272062756
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1964,
+          "model": {
+            "known_value": 106.9453125,
+            "optimistic_value": 106.9453125,
+            "layout_gap": 0.0,
+            "map_gap": 0.20294996319913694,
+            "execution_steps": 588.1232570847909,
+            "slots": 3,
+            "unseen_wall_mass": 1.5004680156707764,
+            "sensor_density": 0.09377924986628633
+          }
+        }
+      ],
+      "placements": [
+        {
+          "owner": 4,
+          "step": 1674,
+          "inventory": 1,
+          "position": [
+            46.5,
+            -293.9
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1681,
+          "inventory": 1,
+          "position": [
+            -183.6,
+            -184.9
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1720,
+          "inventory": 1,
+          "position": [
+            -23.2,
+            297.4
+          ]
+        },
+        {
+          "owner": 3,
+          "step": 1749,
+          "inventory": 0,
+          "position": [
+            -391.5,
+            -376.2
+          ]
+        },
+        {
+          "owner": 1,
+          "step": 1754,
+          "inventory": 0,
+          "position": [
+            53.7,
+            198.2
+          ]
+        },
+        {
+          "owner": 4,
+          "step": 1794,
+          "inventory": 0,
+          "position": [
+            438.2,
+            -411.9
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1796,
+          "inventory": 1,
+          "position": [
+            -389.8,
+            34.2
+          ]
+        },
+        {
+          "owner": 2,
+          "step": 1940,
+          "inventory": 0,
+          "position": [
+            -389.9,
+            394.7
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 2025,
+          "inventory": 1,
+          "position": [
+            473.8,
+            -149.8
+          ]
+        },
+        {
+          "owner": 0,
+          "step": 2121,
+          "inventory": 0,
+          "position": [
+            337.0,
+            132.3
+          ]
+        }
+      ],
+      "submission_due": [
+        {
+          "kind": "ACTUAL_SUBMISSION_DUE",
+          "owner": 0,
+          "step": 2153,
+          "wall": 219.834242105484,
+          "remaining": 101.49588254312846,
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 21,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          }
+        }
+      ],
+      "submissions": [
+        {
+          "kind": "SUBMIT_IMAGE",
+          "owner": 0,
+          "step": 2153,
+          "wall": 219.834242105484,
+          "sha256": "e8acf788555bb86837164710e73f34e69e63bc086fce4f2a2b5d5372610956ee",
+          "shape": [
+            1200,
+            1200
+          ],
+          "dtype": "uint8",
+          "inventory": 0,
+          "stats": {
+            "commitment_calls": 21,
+            "expired_calls": 4,
+            "refreshed": 4,
+            "invalid_after": 0
+          },
+          "astar_stats": {
+            "calls": 203,
+            "expanded": 32154,
+            "seconds": 0.28125917399302125,
+            "coordinated_calls": 166,
+            "geometry_calls": 37,
+            "unreachable": 0
+          }
+        }
+      ],
+      "first_release": 1608,
+      "first_drop": 1674,
+      "last_drop": 2121,
+      "submission_step": 2153,
+      "tail_after_last_drop": 32,
+      "farthest": {
+        "calls": 10,
+        "reasons": {
+          "no_strict_full_union_gain": 7,
+          "incomplete_inventory_layout": 3
+        },
+        "accepted": 0,
+        "enclosing_seconds_sum": 4.750165254808962,
+        "note": "Enclosing intervals may contain other work. This is not exclusive CPU attribution.",
+        "events": [
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 15,
+            "incumbent_union": 372.4609375,
+            "model_work": {
+              "anchors_examined": 10,
+              "candidates_evaluated": 3542,
+              "inaccessible_anchors": 0,
+              "selected": 10
+            },
+            "proposed_union": 353.39453125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.5091630415990949
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 10,
+            "incumbent_union": 158.5234375,
+            "model_work": {
+              "anchors_examined": 5,
+              "candidates_evaluated": 1650,
+              "inaccessible_anchors": 0,
+              "selected": 5
+            },
+            "proposed_union": 140.74609375,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.4852713253349066
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 8,
+            "incumbent_union": 121.234375,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 703,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 105.44921875,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.4841827149502933
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 7,
+            "incumbent_union": 115.30078125,
+            "model_work": {
+              "anchors_examined": 4,
+              "candidates_evaluated": 794,
+              "inaccessible_anchors": 0,
+              "selected": 4
+            },
+            "proposed_union": 96.58203125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.47411221312358975
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 6,
+            "incumbent_union": 88.2890625,
+            "model_work": {
+              "anchors_examined": 3,
+              "candidates_evaluated": 510,
+              "inaccessible_anchors": 0,
+              "selected": 3
+            },
+            "proposed_union": 81.9453125,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.4677582699805498
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 22.63671875,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.455297932960093
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 12.1171875,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.45841650990769267
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 37.9375,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 78,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 37.9375,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.4660429828800261
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 1,
+            "incumbent_union": 40.31640625,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 0,
+              "inaccessible_anchors": 1,
+              "selected": 0
+            },
+            "reason": "incomplete_inventory_layout",
+            "enclosing_elapsed_seconds": 0.4681110680103302
+          },
+          {
+            "framework": "observed-wall farthest-residual cover",
+            "selected_changed": false,
+            "route_fields": 2,
+            "incumbent_union": 39.88671875,
+            "model_work": {
+              "anchors_examined": 1,
+              "candidates_evaluated": 142,
+              "inaccessible_anchors": 0,
+              "selected": 1
+            },
+            "proposed_union": 27.015625,
+            "reason": "no_strict_full_union_gain",
+            "enclosing_elapsed_seconds": 0.48180919606238604
+          }
+        ]
+      },
+      "prefix_events": [
+        {
+          "owner": 0,
+          "step": 1608,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 610.2741699796951,
+                "reachable": true,
+                "before": 2528.902856375155,
+                "suffix_budget": 1918.6286863954597
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 327.76450198781714,
+                "reachable": true,
+                "before": 2528.902856375155,
+                "suffix_budget": 2201.1383543873376
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 625.1370849898476,
+                "reachable": true,
+                "before": 2528.902856375155,
+                "suffix_budget": 1903.7657713853073
+              },
+              {
+                "owner": 3,
+                "prefix_distance": 360.9015869776648,
+                "reachable": true,
+                "before": 2528.902856375155,
+                "suffix_budget": 2168.00126939749
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 192.0,
+                "reachable": true,
+                "before": 2528.902856375155,
+                "suffix_budget": 2336.902856375155
+              }
+            ],
+            "fields": 5
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1704,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 597.019335983756,
+                "reachable": true,
+                "before": 1745.2010543244598,
+                "suffix_budget": 1148.1817183407038
+              },
+              {
+                "owner": 1,
+                "prefix_distance": 96.0,
+                "reachable": true,
+                "before": 1745.2010543244598,
+                "suffix_budget": 1649.2010543244598
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 381.25483399593907,
+                "reachable": true,
+                "before": 1745.2010543244598,
+                "suffix_budget": 1363.9462203285207
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 16.0,
+                "reachable": true,
+                "before": 1745.2010543244598,
+                "suffix_budget": 1729.2010543244598
+              }
+            ],
+            "fields": 4
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1728,
+          "context": {
+            "owners": [
+              {
+                "owner": 2,
+                "prefix_distance": 339.8822509939086,
+                "reachable": true,
+                "before": 1673.0114508851577,
+                "suffix_budget": 1333.129199891249
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 16.0,
+                "reachable": true,
+                "before": 1673.0114508851577,
+                "suffix_budget": 1657.0114508851577
+              }
+            ],
+            "fields": 2
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1752,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 884.54833995939,
+                "reachable": true,
+                "before": 1379.829903485279,
+                "suffix_budget": 495.28156352588894
+              },
+              {
+                "owner": 2,
+                "prefix_distance": 339.8822509939086,
+                "reachable": true,
+                "before": 1379.829903485279,
+                "suffix_budget": 1039.9476524913703
+              },
+              {
+                "owner": 4,
+                "prefix_distance": 16.0,
+                "reachable": true,
+                "before": 1379.829903485279,
+                "suffix_budget": 1363.829903485279
+              }
+            ],
+            "fields": 3
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1800,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 951.293505963451,
+                "reachable": true,
+                "before": 1171.6587936159567,
+                "suffix_budget": 220.36528765250569
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1854,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 762.0386719675121,
+                "reachable": true,
+                "before": 1144.1988596434742,
+                "suffix_budget": 382.1601876759621
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1950,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 357.0193359837562,
+                "reachable": true,
+                "before": 908.7065389436344,
+                "suffix_budget": 551.6872029598783
+              }
+            ],
+            "fields": 1
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1974,
+          "context": {
+            "owners": [
+              {
+                "owner": 0,
+                "prefix_distance": 263.76450198781714,
+                "reachable": true,
+                "before": 900.6706701339591,
+                "suffix_budget": 636.9061681461419
+              }
+            ],
+            "fields": 1
+          }
+        }
+      ],
+      "reported_astar_calls": 203,
+      "reported_astar_search_seconds": 0.28125917399302125,
+      "astar_scope_note": "Only submitting owners report counters; other owners are not observed. Search excludes full distance fields/masks/smoothing/control."
+    }
+  ],
+  "production_inputs_changed": false,
+  "archive_reaudited": false,
+  "limits": [
+    "No target/version chain in current logs: cannot attribute low coverage to failed task execution.",
+    "Map scoring credit and penalty are finalized public aggregates, not policy inputs.",
+    "Natural episodes are not paired causal comparisons."
+  ]
+}

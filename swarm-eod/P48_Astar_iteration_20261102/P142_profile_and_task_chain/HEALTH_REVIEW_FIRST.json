@@ -1,0 +1,1450 @@
+{
+  "status": "POST_FREEZE_FIRST_HEALTH_CHANGE",
+  "input_sha256": "de619166a355b07d82ed3765b9d1c5771e9bf0ff28da4954d7cd968903f9c48c",
+  "first_step": 344,
+  "owners": [
+    1,
+    4
+  ],
+  "samples": [
+    {
+      "step": 337,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 82.79278022751224,
+      "relative_speed": 9.33088739551931,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 45.506503437359285,
+      "positions": [
+        [
+          -19.998410617692578,
+          121.7330905987006
+        ],
+        [
+          24.438624728003955,
+          51.87613427016838
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -1.436237782018214,
+          -6.924557802137414
+        ],
+        [
+          -6.180853177760259,
+          1.1099978379928288
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": 0.5246367591317551,
+          "lateral": -0.8067240283684046,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": -0.9937029364614693,
+          "lateral": -0.11204674947473037,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 338,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 73.27307748862758,
+      "relative_speed": 9.519945855008297,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 35.195581735685856,
+      "positions": [
+        [
+          -21.388306821805504,
+          114.82855579488222
+        ],
+        [
+          17.993246267040206,
+          53.03828826863785
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -1.389896204112926,
+          -6.904534803818379
+        ],
+        [
+          -6.445378460963749,
+          1.1621539984694707
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.1049527418699304,
+          "lateral": -0.5291925398163919,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": -0.9764792927432391,
+          "lateral": 0.21561120296418712,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 339,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 63.40353597914094,
+      "relative_speed": 9.872495999398698,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 23.949736529579475,
+      "positions": [
+        [
+          -22.769888216075902,
+          107.87409756074344
+        ],
+        [
+          11.496390504204262,
+          54.52777137681307
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -1.3815813942703983,
+          -6.954458234138784
+        ],
+        [
+          -6.496855762835944,
+          1.4894831081752216
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.10426955684154908,
+          "lateral": -0.6895575797696182,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": -0.6006666624089091,
+          "lateral": 0.7051557771157904,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 340,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 53.409722959283144,
+      "relative_speed": 9.994528014442466,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 13.44510464568836,
+      "positions": [
+        [
+          -23.997322342991882,
+          100.90371236974562
+        ],
+        [
+          4.77544731373851,
+          55.906754329583485
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -1.2274341269159805,
+          -6.970385190997817
+        ],
+        [
+          -6.720943190465753,
+          1.3789829527704143
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": 0.17207631720612943,
+          "lateral": -0.6126540469748483,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": -0.9724733748468257,
+          "lateral": -0.14445185311221395,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 341,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 44.47682204883538,
+      "relative_speed": 8.935020109262041,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 8.788410466499581,
+      "positions": [
+        [
+          -24.948305962398134,
+          94.73440357073447
+        ],
+        [
+          -1.1376436256565992,
+          57.16792837476423
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -0.9509836194062515,
+          -6.169308799011148
+        ],
+        [
+          -5.913090939395109,
+          1.261174045180745
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": 0.3878809216371308,
+          "lateral": 0.9217094936203761,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.9970537463232438,
+          "lateral": -0.07670610759766515,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 342,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 36.80202633199844,
+      "relative_speed": 7.682044585958864,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 6.2826023957953065,
+      "positions": [
+        [
+          -25.646937749066037,
+          89.42294633224229
+        ],
+        [
+          -6.201987497850966,
+          58.17741782224782
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -0.698631786667903,
+          -5.311457238492181
+        ],
+        [
+          -5.0643438721943665,
+          1.0094894474835883
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": 0.34508914716663436,
+          "lateral": 0.938569912424112,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.9374163856497901,
+          "lateral": -0.34821045348364216,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 343,
+      "health": [
+        50,
+        50
+      ],
+      "pair_center_distance": 30.551107805643273,
+      "relative_speed": 6.260823207108573,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 5.766499528236046,
+      "positions": [
+        [
+          -26.373036370718754,
+          84.95349579211683
+        ],
+        [
+          -10.504062443082429,
+          58.84706258809533
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -0.7260986216527172,
+          -4.4694505401254645
+        ],
+        [
+          -4.302074945231463,
+          0.6696447658475151
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.15530670187112544,
+          "lateral": 0.9878663008494183,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.8606340815022261,
+          "lateral": -0.5092238974722411,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 344,
+      "health": [
+        49,
+        49
+      ],
+      "pair_center_distance": 29.469877473171117,
+      "relative_speed": 1.142917686440142,
+      "linear_tca_steps": 4.0,
+      "linear_closest_distance": 25.199461414284176,
+      "positions": [
+        [
+          -28.19830111246112,
+          82.86182149360627
+        ],
+        [
+          -13.202972532140777,
+          57.49227677849665
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -1.825264741742366,
+          -2.0916742985105543
+        ],
+        [
+          -2.698910089058348,
+          -1.3547858095986811
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.323404168099617,
+          "lateral": 0.9462609281037629,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.7244393174859506,
+          "lateral": -0.6893385781170893,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 345,
+      "health": [
+        49,
+        49
+      ],
+      "pair_center_distance": 31.084516999303272,
+      "relative_speed": 1.6481698269140597,
+      "linear_tca_steps": 0.0,
+      "linear_closest_distance": 31.084516999303272,
+      "positions": [
+        [
+          -30.442782246648715,
+          82.10419422441944
+        ],
+        [
+          -14.919244062692236,
+          55.17341333467881
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -2.2444811341875948,
+          -0.7576272691868269
+        ],
+        [
+          -1.7162715305514595,
+          -2.3188634438178397
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.20733169875729496,
+          "lateral": 0.9782707021527396,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.7481288417659016,
+          "lateral": -0.663553491527255,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    },
+    {
+      "step": 346,
+      "health": [
+        49,
+        49
+      ],
+      "pair_center_distance": 33.66402050310498,
+      "relative_speed": 2.593747264574522,
+      "linear_tca_steps": 0.0,
+      "linear_closest_distance": 33.66402050310498,
+      "positions": [
+        [
+          -32.6173739285251,
+          81.96894655803635
+        ],
+        [
+          -16.05096999347262,
+          52.66330653611992
+        ]
+      ],
+      "sampled_displacements": [
+        [
+          -2.1745916818763824,
+          -0.13524766638309416
+        ],
+        [
+          -1.1317259307803837,
+          -2.510106798558894
+        ]
+      ],
+      "goals": [
+        [
+          -120.0,
+          -44.0
+        ],
+        [
+          -360.0,
+          196.0
+        ]
+      ],
+      "commands": [
+        {
+          "forward": -0.09335084776909235,
+          "lateral": 0.9956332754688304,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        },
+        {
+          "forward": 0.8421374737322738,
+          "lateral": -0.5392629000180005,
+          "rotation": 0.0,
+          "grasper": 0,
+          "place_bomb": 0
+        }
+      ]
+    }
+  ],
+  "nearby_planning_events": [
+    {
+      "before": {
+        "owner": 4,
+        "step": 307,
+        "inventory": 2,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          120.22879711310118,
+          58.54201759440864
+        ],
+        "goal": [
+          -360.0,
+          196.0
+        ],
+        "placement_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_inventory": 2,
+        "assignment_since": 283,
+        "remaining": 1392.9999999999998,
+        "fleet_epoch": 288,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                328.0,
+                260.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 2,
+            "goals": [
+              [
+                8.0,
+                260.0
+              ],
+              [
+                -136.0,
+                -28.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -328.0,
+                -28.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -264.0,
+                260.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.10059156226410612,
+          "defer": false,
+          "slots": 10,
+          "execution": 313.6439395410687
+        }
+      },
+      "after": {
+        "owner": 4,
+        "step": 307,
+        "inventory": 2,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          120.22879711310118,
+          58.54201759440864
+        ],
+        "goal": [
+          -360.0,
+          196.0
+        ],
+        "placement_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_inventory": 2,
+        "assignment_since": 283,
+        "remaining": 1392.9999999999998,
+        "fleet_epoch": 288,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                328.0,
+                260.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 2,
+            "goals": [
+              [
+                8.0,
+                260.0
+              ],
+              [
+                -136.0,
+                -28.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -328.0,
+                -28.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -264.0,
+                260.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.10059156226410612,
+          "defer": false,
+          "slots": 10,
+          "execution": 310.50471948723725
+        }
+      },
+      "returned_goal": [
+        -360.0,
+        196.0
+      ],
+      "returned_waypoints": [
+        [
+          -360.0,
+          196.0
+        ]
+      ]
+    },
+    {
+      "before": {
+        "owner": 1,
+        "step": 308,
+        "inventory": 1,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          15.8502841298676,
+          256.1100771788108
+        ],
+        "goal": [
+          8.0,
+          260.0
+        ],
+        "placement_goal": null,
+        "assignment_goal": null,
+        "assignment_inventory": null,
+        "assignment_since": 268,
+        "remaining": 1391.9999999999995,
+        "fleet_epoch": 288,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                328.0,
+                260.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 2,
+            "goals": [
+              [
+                8.0,
+                260.0
+              ],
+              [
+                -136.0,
+                -28.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -328.0,
+                -28.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -264.0,
+                260.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.07389663566828045,
+          "defer": false,
+          "slots": 10,
+          "execution": 172.96718316627457
+        }
+      },
+      "after": {
+        "owner": 1,
+        "step": 308,
+        "inventory": 1,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          15.8502841298676,
+          256.1100771788108
+        ],
+        "goal": [
+          8.0,
+          260.0
+        ],
+        "placement_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_inventory": 1,
+        "assignment_since": 308,
+        "remaining": 1391.9999999999995,
+        "fleet_epoch": 288,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                328.0,
+                260.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 2,
+            "goals": [
+              [
+                8.0,
+                260.0
+              ],
+              [
+                -136.0,
+                -28.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -328.0,
+                -28.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -264.0,
+                260.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.3933602926336679,
+          "defer": false,
+          "slots": 9,
+          "execution": 190.11275296412995
+        }
+      },
+      "returned_goal": [
+        -120.0,
+        -44.0
+      ],
+      "returned_waypoints": [
+        [
+          -40.0,
+          -108.0
+        ],
+        [
+          -88.0,
+          -108.0
+        ],
+        [
+          -104.0,
+          -44.0
+        ],
+        [
+          -120.0,
+          -44.0
+        ]
+      ]
+    },
+    {
+      "before": {
+        "owner": 4,
+        "step": 331,
+        "inventory": 2,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          52.92575472867558,
+          53.63344338138904
+        ],
+        "goal": [
+          -360.0,
+          196.0
+        ],
+        "placement_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_inventory": 2,
+        "assignment_since": 283,
+        "remaining": 1368.9999999999998,
+        "fleet_epoch": 312,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                344.0,
+                244.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 1,
+            "goals": [
+              [
+                -120.0,
+                -44.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -344.0,
+                -44.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -232.0,
+                36.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.10059156226410612,
+          "defer": false,
+          "slots": 10,
+          "execution": 310.50471948723725
+        }
+      },
+      "after": {
+        "owner": 4,
+        "step": 331,
+        "inventory": 2,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          52.92575472867558,
+          53.63344338138904
+        ],
+        "goal": [
+          -360.0,
+          196.0
+        ],
+        "placement_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_goal": [
+          -360.0,
+          196.0
+        ],
+        "assignment_inventory": 2,
+        "assignment_since": 283,
+        "remaining": 1368.9999999999998,
+        "fleet_epoch": 312,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                344.0,
+                244.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 1,
+            "goals": [
+              [
+                -120.0,
+                -44.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -344.0,
+                -44.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -232.0,
+                36.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.10715295435617618,
+          "defer": false,
+          "slots": 9,
+          "execution": 289.5930078303085
+        }
+      },
+      "returned_goal": [
+        -360.0,
+        196.0
+      ],
+      "returned_waypoints": [
+        [
+          -360.0,
+          196.0
+        ]
+      ]
+    },
+    {
+      "before": {
+        "owner": 1,
+        "step": 332,
+        "inventory": 1,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          -7.306804084849839,
+          167.3861170916911
+        ],
+        "goal": [
+          -120.0,
+          -44.0
+        ],
+        "placement_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_inventory": 1,
+        "assignment_since": 308,
+        "remaining": 1367.9999999999998,
+        "fleet_epoch": 312,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                344.0,
+                244.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 1,
+            "goals": [
+              [
+                -120.0,
+                -44.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -344.0,
+                -44.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -232.0,
+                36.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.3933602926336679,
+          "defer": false,
+          "slots": 9,
+          "execution": 190.11275296412995
+        }
+      },
+      "after": {
+        "owner": 1,
+        "step": 332,
+        "inventory": 1,
+        "ready": false,
+        "fusion": false,
+        "pose": [
+          -7.306804084849839,
+          167.3861170916911
+        ],
+        "goal": [
+          -120.0,
+          -44.0
+        ],
+        "placement_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_goal": [
+          -120.0,
+          -44.0
+        ],
+        "assignment_inventory": 1,
+        "assignment_since": 308,
+        "remaining": 1367.9999999999998,
+        "fleet_epoch": 312,
+        "plans": {
+          "0": {
+            "inventory": 2,
+            "goals": [
+              [
+                328.0,
+                -44.0
+              ],
+              [
+                344.0,
+                244.0
+              ]
+            ]
+          },
+          "1": {
+            "inventory": 1,
+            "goals": [
+              [
+                -120.0,
+                -44.0
+              ]
+            ]
+          },
+          "2": {
+            "inventory": 2,
+            "goals": [
+              [
+                -168.0,
+                -268.0
+              ],
+              [
+                -344.0,
+                -44.0
+              ]
+            ]
+          },
+          "3": {
+            "inventory": 2,
+            "goals": [
+              [
+                136.0,
+                -44.0
+              ],
+              [
+                -344.0,
+                -252.0
+              ]
+            ]
+          },
+          "4": {
+            "inventory": 2,
+            "goals": [
+              [
+                -360.0,
+                196.0
+              ],
+              [
+                -232.0,
+                36.0
+              ]
+            ]
+          }
+        },
+        "commitment": {
+          "loss": 0.3933602926336679,
+          "defer": false,
+          "slots": 9,
+          "execution": 159.76321566725827
+        }
+      },
+      "returned_goal": [
+        -120.0,
+        -44.0
+      ],
+      "returned_waypoints": [
+        [
+          -40.0,
+          -108.0
+        ],
+        [
+          -88.0,
+          -108.0
+        ],
+        [
+          -104.0,
+          -44.0
+        ],
+        [
+          -120.0,
+          -44.0
+        ]
+      ]
+    }
+  ],
+  "final_health": [
+    50,
+    49,
+    50,
+    50,
+    49
+  ],
+  "actual_completed": 10,
+  "physics_steps": 779,
+  "cprofile_arm_started": false,
+  "native_rounds": 0,
+  "limits": [
+    "Simultaneous health changes and small pair distance support a pair-interaction hypothesis; callback/substep contact identity was not logged.",
+    "Constant-velocity closest approach is an offline diagnostic only, not guaranteed future motion or a deployed rule.",
+    "No direct current lidar/semantic samples were retained at this encounter, so sensor invisibility/repulsion failure is not established.",
+    "No claim that A* caused damage relative to original P48; no paired original P48 rerun."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "STOP_FIRST_ORIGINAL_SDK_CHECK",
+  "mode": "OFF",
+  "checks": {
+    "official7callbacks": true,
+    "finite_commands": true,
+    "health_unchanged": false,
+    "legal_inventory": true,
+    "no_walltime_hit": true,
+    "audit_callback_bound": true,
+    "capture_scopes_closed": true,
+    "all10_completed": true,
+    "submitted_only_after_all10": true
+  },
+  "native_rounds": 0,
+  "automatic_retry": false
+}
