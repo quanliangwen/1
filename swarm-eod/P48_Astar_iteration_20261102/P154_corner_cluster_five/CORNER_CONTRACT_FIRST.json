@@ -1,0 +1,283 @@
+{
+  "status": "PASS_CORNER_NUMERIC_AND_OBJECTIVE_MESSAGE_CONTRACTS",
+  "checks": [
+    {
+      "name": "corner_dense_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "corner_dense_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "corner_dense_coverage_floor",
+      "passed": true
+    },
+    {
+      "name": "corner_dense_majority",
+      "passed": true
+    },
+    {
+      "name": "corner_dense_all_spacing",
+      "passed": true
+    },
+    {
+      "name": "actual_majority_proposal_witness",
+      "passed": true
+    },
+    {
+      "name": "uniform_distributed_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "uniform_distributed_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "uniform_does_not_sacrifice_coverage",
+      "passed": true
+    },
+    {
+      "name": "no_measured_corner_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_measured_corner_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "no_unobserved_corner_fabricated",
+      "passed": true
+    },
+    {
+      "name": "forbidden_corner_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "forbidden_corner_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "forbidden_corner_respected",
+      "passed": true
+    },
+    {
+      "name": "unreachable_corner_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "unreachable_corner_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "no_unknown_or_disconnected_cluster",
+      "passed": true
+    },
+    {
+      "name": "expired_optional_budget_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "expired_optional_budget_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "timeout_keeps_original",
+      "passed": true
+    },
+    {
+      "name": "optional_calls_bounded_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "optional_calls_bounded_map_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "optional_call_limit",
+      "passed": true
+    },
+    {
+      "name": "matching_corner_joint_objective_honoured",
+      "passed": true
+    },
+    {
+      "name": "unrelated_target_original_defer",
+      "passed": true
+    },
+    {
+      "name": "wrong_plan_context_rejected",
+      "passed": true
+    },
+    {
+      "name": "coverage_floor_in_message_required",
+      "passed": true
+    },
+    {
+      "name": "expired_context_rejected",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "corner_dense",
+      "audit": {
+        "status": "ACCEPTED",
+        "call": 1,
+        "reason": "majority_corner_with_predicted_coverage_floor",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 10,
+        "attempts": 1,
+        "accepted": true,
+        "baseline_value": 13.0,
+        "planned": 10,
+        "last_proposal": {
+          "corner": [
+            -1,
+            1
+          ],
+          "anchor": [
+            -360.0,
+            360.0
+          ],
+          "clustered": 6,
+          "wanted": 6,
+          "coverage_ratio": 7.6923076923076925
+        },
+        "anchor": [
+          -360.0,
+          360.0
+        ],
+        "corner": [
+          -1,
+          1
+        ],
+        "radius": 144.0,
+        "coverage_ratio": 7.6923076923076925,
+        "clustered": 6,
+        "baseline_clustered": 1,
+        "step": 100,
+        "elapsed": 0.02740848669782281
+      }
+    },
+    {
+      "name": "uniform_distributed",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 1,
+        "reason": "no_majority_proposal_within_coverage_and_budget",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 9,
+        "attempts": 1,
+        "accepted": false,
+        "baseline_value": 612.0,
+        "planned": 10,
+        "last_proposal": {
+          "corner": [
+            -1,
+            1
+          ],
+          "anchor": [
+            -360.0,
+            360.0
+          ],
+          "clustered": 6,
+          "wanted": 6,
+          "coverage_ratio": 0.7941176470588235
+        },
+        "elapsed": 0.022792998235672712
+      }
+    },
+    {
+      "name": "no_measured_corner",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 1,
+        "reason": "no_two_measured_corner_surfaces",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 0,
+        "attempts": 0,
+        "accepted": false,
+        "baseline_value": 13.0,
+        "planned": 10,
+        "elapsed": 0.0007281303405761719
+      }
+    },
+    {
+      "name": "forbidden_corner",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 1,
+        "reason": "no_two_measured_corner_surfaces",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 0,
+        "attempts": 0,
+        "accepted": false,
+        "baseline_value": 13.0,
+        "planned": 10,
+        "elapsed": 0.0007344800978899002
+      }
+    },
+    {
+      "name": "unreachable_corner",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 1,
+        "reason": "no_two_measured_corner_surfaces",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 0,
+        "attempts": 0,
+        "accepted": false,
+        "baseline_value": 13.0,
+        "planned": 10,
+        "elapsed": 0.0007631508633494377
+      }
+    },
+    {
+      "name": "expired_optional_budget",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 1,
+        "reason": "no_majority_proposal_within_coverage_and_budget",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 0,
+        "attempts": 0,
+        "accepted": false,
+        "baseline_value": 13.0,
+        "planned": 10,
+        "budget_exhausted": true,
+        "elapsed": 0.00088458601385355
+      }
+    },
+    {
+      "name": "optional_calls_bounded",
+      "audit": {
+        "status": "KEEP_BASE",
+        "call": 13,
+        "reason": "optional_call_limit",
+        "coverage_floor": 0.9,
+        "radius_ratio": 2.0,
+        "fields": 0,
+        "attempts": 0,
+        "accepted": false,
+        "elapsed": 1.0709743946790695e-05
+      }
+    }
+  ],
+  "source_sha256": {
+    "corner_cluster.py": "cf0dd30113b3763c940a2848c02fd914ac6a0c0ad577cb488f4b274f2ee02be1",
+    "corner_mission.py": "5a1dcb712b7c5674136cbf5e7c79bdc6af46cbfbf01ee45255c06fb899cc5414"
+  },
+  "SDK_imports": 0,
+  "SDK_frames": 0,
+  "native_rounds": 0,
+  "limitations": [
+    "Authored arrays with explicit geometry/value adapters and actual original Dijkstra; not physical game score or official map evidence."
+  ]
+}

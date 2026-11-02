@@ -1,0 +1,40 @@
+{
+  "status": "FROZEN_EXPLICIT_CORNER_LAYOUT_DIRECT_FIVE",
+  "version": "P154_CORNER_ASTAR",
+  "maps": [
+    "Map01",
+    "Map02",
+    "Map03",
+    "Map04",
+    "Map05"
+  ],
+  "native_rounds": 10,
+  "RED_per_map": 1,
+  "BLUE_per_map": 1,
+  "external_seed": null,
+  "human_request": "弹药主要集中在一个小角落增加蓝队难度，覆盖分不要降低太多；按此设计跑全图",
+  "coverage_floor": 0.9,
+  "coverage_floor_scope": "Conditional current sensor-derived residual wall value vs same-call original layout, NOT guarantee of official actual coverage or global optimality.",
+  "target_cluster_fraction": 0.6,
+  "cluster_radius_in_blast_radii": 2.0,
+  "original_spacing_and_prohibitions": true,
+  "actual_cluster_metrics": [
+    "max actual final bomb count in accepted corner disks",
+    "same count with original12px arrival allowance, separately labelled"
+  ],
+  "baseline_mean": 74.25588336546745,
+  "baseline_source": "E:\\codex\\P48_astar_five_20261102\\FIVE_COMPARISON.json",
+  "baseline_sha256": "4f35c6f003aa121c1e633af93e4053e71249baf9dc9a79a56895f391c5209f3a",
+  "qualification": "32 authored numeric/protocol checks and actual ZIP ABI/SDK/5 constructors/interface before original finite five; explicit direct-five request means no score-screen pilot.",
+  "pilot_screening": false,
+  "automatic_B": false,
+  "automatic_iteration": false,
+  "official_upload": false,
+  "limitations": [
+    "A 90% predicted floor may legitimately reject majority clustering; record acceptance and actual concentration, do not call fallback a successful cluster trial.",
+    "New natural-random episodes; not paired seeded causal evidence. Retain all five legal scores, no score-based retries.",
+    "No P153 phase change or P145/P152 rendering changes stacked; original P48 A-star independent base."
+  ],
+  "corner_contract_sha256": "a6099cf3c9a6173c4653f48ab3ec358b62d4314ed089a837ef87ede08772c23c",
+  "candidate_manifest_sha256": "c9cc58f4354aac89dd479778facad35b07259a1a0f41daea5242b9667c5959b2"
+}
