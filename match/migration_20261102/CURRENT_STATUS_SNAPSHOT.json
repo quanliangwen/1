@@ -1,0 +1,19 @@
+{
+  "snapshot_utc": "2026-11-02T06:16:24.794676+00:00",
+  "source": "E:\\codex\\P48_Astar_iteration_20261102\\P161_multi_corner_pairs\\STATUS.json",
+  "status": {
+    "status": "WAITING_ORIGINAL_CAPACITY",
+    "arm": "P161",
+    "utc": "2026-11-02T06:16:03.695342+00:00",
+    "resource": {
+      "utc": "2026-11-02T06:16:05.474679+00:00",
+      "cpu_count": 256,
+      "cpu_busy_percent": 21.225604996096802,
+      "load_one_min": 55.12,
+      "memory_available_GiB": 78.10771560668945,
+      "disk_free_GiB": 10.565776824951172,
+      "clean": false
+    }
+  },
+  "note": "Migration snapshot only. Existing SDK queue and read-only result watcher retained; no new test started by migration."
+}

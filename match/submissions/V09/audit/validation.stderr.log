@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\codex\P48_team615_red_v09_20261102\run_validation.py", line 44, in <module>
+    try:main()
+        ^^^^^^
+  File "E:\codex\P48_team615_red_v09_20261102\run_validation.py", line 37, in main
+    keep('PROBE_'+label,subprocess.run(ssh+['bash',R+'/run_server.sh',D+'/invoke_probe.py',label,python],capture_output=True))
+  File "E:\codex\P48_team615_red_v09_20261102\run_validation.py", line 7, in keep
+    if p.returncode:raise RuntimeError('Keep first validation error '+label)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Keep first validation error PROBE_numpy1

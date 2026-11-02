@@ -1,0 +1,27 @@
+V06 比赛提交包
+
+上传文件：team615_red_v06.zip
+队伍：615，红队
+算法：PJ01，36个Python源码文件与V05完全一致。
+本次只修改req.txt，采用SDK依赖继承策略：
+numpy>=1.24.4
+opencv-contrib-python>=4.10.0.84
+不额外固定Pandas，尽量减少替换官方预装库。没有在控制器中安装依赖、修改SDK或加入环境修补代码。
+
+已完成的检查
+- 最终ZIP根目录含my_drone_eval.py、team_info.yml、req.txt及辅助源码；无额外目录层级、SDK或二进制库。
+- 从最终ZIP内部读取，team_number为YAML整数615；队名和成员原样保留，image_ref为空。
+- 最终ZIP的文件SHA与实际解包工作区逐一匹配。
+- Linux/Python3.11下，NumPy1.26.4、2.2.6分别搭配Pandas2.2.3、OpenCV contrib4.11.0.86，真实mtrand/RandomState、Pandas/OpenCV运算、更新SDK Launcher/StatsComputation、TeamInfo队号读取、红队工厂入口导入均通过。
+- 两组安装预演均无需替换现有依赖。
+- 官方SDK静态检查通过。该旧检查器要求preliminary文件名，检查时使用与最终ZIP字节和SHA完全相同的team615_preliminary.zip审计副本；最终交付文件名仍按用户要求为team615_red_v06.zip。
+- 发布检查器新增显式sdk-inherit-v06模式，旧锁版本模式保持严格。错队号、旧回执、缺少NumPy2检查等9项发布工具回归检查通过。
+
+边界
+验证部分复用已有独立依赖环境，不是官网容器。尚未经过官网提交验证，不能保证平台忽略req、强制升级、复用损坏环境或混用安装时不再报错。
+没有运行比赛仿真或测定五图分数，没有恢复自动迭代，也没有向官网上传。
+
+SHA256
+01c9b9de5caad8f280695852e8e0461a66d26feb689339d5de8047ed3e72008c
+
+检查证据位于audit/，不需要上传。只上传本目录下team615_red_v06.zip；不要上传audit中的检查用压缩包。

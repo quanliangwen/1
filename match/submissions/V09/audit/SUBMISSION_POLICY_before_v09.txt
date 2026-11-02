@@ -1,0 +1,69 @@
+无人机比赛提交包强制发布规则
+来源：用户于2026-10-26明确要求之后的算法提交文件不能再重复队伍编号和NumPy二进制兼容错误。
+
+1 队伍身份
+team_number必须是YAML整数615，与team615_red_vNN.zip（红队）中的615一致。
+字符串wLoPV5EE不得出现在team_number中，也不得替代数字队伍编号。
+保留队名AAA排雷大队和已知队员信息，除非用户另行修改。
+必须读取最终ZIP内部team_info.yml，不能只检查待打包目录或文件名。
+
+2 依赖
+旧固定组合验证基准（默认pinned检查继续保留）为：
+numpy==1.26.4
+opencv-contrib-python==4.11.0.86
+pandas==2.2.3
+V01与原V04的宽泛依赖声明均在平台出现过ABI错误，不得继续用于新推荐包。
+后续若有明确必要调整基准，须先在独立验证环境验证新的完整依赖组合，保存变更原因、旧失败及新验证证据，不得静默放宽版本。
+2026-10-29用户明确要求交付上述SDK继承候选为V06。本次新增仅适用于team615_red_v06.zip的显式sdk-inherit-v06检查模式，req.txt必须准确为以下两项，不能任意放宽或额外覆盖Pandas：
+numpy>=1.24.4
+opencv-contrib-python>=4.10.0.84
+变更依据：V05锁版本后官网仍失败；完整NumPy2环境中安装预演显示V05要求降级、上述声明不替换依赖；独立子进程已复现NumPy2核心与NumPy1随机扩展混用的相同ABI错误。该机制复现不证明官网安装顺序。
+V06从实际ZIP提取，NumPy1.26.4及2.2.6分别搭配Pandas2.2.3和OpenCV contrib4.11.0.86的真实运算、SDK导入、控制器入口和整数队号读取均通过；两组安装预演均无替换项。回执记录完整组合和环境范围。没有官网基础镜像验证，不能把这两组检查推断为任意版本的兼容保证。
+依赖新模式还必须核对保存的V05参考ZIP哈希，要求除了req.txt之外的全部payload字节不变。将来修改算法或依赖时必须另行制定有依据的检查范围，不能套用V06回执。
+不捆绑NumPy/pandas/cv2二进制库，不在控制器运行时安装依赖，不修改SDK或既有比赛评测环境。
+
+3 真实ABI检查
+从实际待交付ZIP解包到新的源码工作区，校验全部文件SHA。
+在明确记录的验证环境中执行numpy.random.mtrand导入与RandomState计算、pandas DataFrame运算、cv2运算、SDK Launcher与StatsComputation导入和数字队伍配置读取。
+记录Python版本、关键包distribution版本、numpy/cv2/pandas/mtrand实际文件路径。
+检查回执必须记录实际提交ZIP的SHA256，并与配置、依赖及文件哈希清单匹配；改变任何提交字节后旧回执失效。
+可复用已核验的独立依赖环境作只读测试，但必须如实说明不是重新安装，也不等同于官网容器。
+
+4 包装与放行
+最终提交ZIP根目录直接包含my_drone_eval.py、team_info.yml、req.txt及辅助源码；源码交付包可保留solutions目录。
+不包含SDK、地图、历史评测结果、__pycache__、虚拟环境、预编译库或控制器运行态。
+运行check_submission_zip.py核验最终ZIP与ABI回执，失败时禁止标注为已通过或可直接提交。
+保留旧版本，不覆盖；新修正版递增版本号，最终回答明确推荐上传哪个文件。
+SDK自带检查器若使用旧preliminary文件名，可用字节完全一致的审计副本检查内容；最终文件名必须按用户最新team615_red_vNN.zip规范检查，并披露两者区别。
+
+5 结果表述
+本地/服务器检查通过只说明验证环境中通过。官网容器没有实际通过前，不得声称“绝不报错”或“正式平台兼容已验证”。
+若锁定版本后官网仍有同一ABI报错，下一步需要安装日志、sys.executable、包版本和实际模块路径，区分req.txt未生效、依赖被后续覆盖、旧.so残留等情况，不靠重复换算法救结果。
+
+当前供用户上传的新包：E:/10.12-10.26算法对抗赛/提交版本呢/team615_red_v06.zip
+SHA256：01c9b9de5caad8f280695852e8e0461a66d26feb689339d5de8047ed3e72008c
+实际ZIP回执：E:/codex/PJ01_team615_red_v06_20261029/audit/RELEASE_ABI_RECEIPT.json
+最终发布检查：同目录RELEASE_CHECK.json，使用--dependency-profile sdk-inherit-v06。已通过双环境依赖/SDK/入口/队号检查和官方静态内容检查；不代表官网容器已通过。算法仿真及自动迭代保持停止。
+V05于2026-10-27在官网仍有NumPy ABI错误，不再作为已解决兼容问题的推荐包。
+V05只改变V04的req.txt；36个Python源码保持已测试PJ01原样；team_number为整数615。
+
+2026-10-29补充验证：在全新Linux/Python3.11.17虚拟环境中，按官方pyproject.toml执行SDK editable[dev]完整安装，再从实际V06 ZIP执行pip install -r req.txt。实际解析为NumPy2.4.6、Pandas3.1.0、OpenCV contrib5.0.0.93；V06安装没有替换任何依赖，pip check、真实mtrand/随机数/Pandas/OpenCV运算、SDK/控制器入口、整数队号615、launcher --help、隐藏Arcade窗口OpenGL4.5与GLSL4.40着色器编译均通过。46份下载产物已与官方PyPI SHA256核验。全部数值库来自本次新venv，未叠加旧环境。证据：E:/codex/PJ01_team615_red_v06_20261029/clean_env_validation_20261029/SUMMARY.json。仅为源码干净环境启动检查，不是官方镜像或官网在线验证；没有运行比赛、控制循环或评分，没有恢复自动迭代。原V06哈希和发布检查规则保持不变。
+
+2026-10-30新增：J17免许可证提交候选V07（与V06分开，不复用V06算法不变回执）。
+来源：用户明确要求J17比赛提交版，确认“没有或不清楚Gurobi许可，采用免许可证适配”。原J17的Gurobi研究模型超过pip自带2000变量/2000约束；已用公开受限许可实际复现errno10010，不能原封推荐上传。
+新显式检查模式j17-portable-v07仅允许文件名team615_red_v07.zip，req必须准确为numpy>=1.24.4、opencv-contrib-python>=4.10.0.84、scipy==1.17.1；不得额外覆盖Pandas或引入Gurobi。NumPy/OpenCV下界与官方SDK一致，SciPy固定为已实际核验的免许可MILP后端版本；不允许将此模式静默推广到其它算法/版本。默认pinned与sdk-inherit-v06的约束、历史回执保持原样。
+放行需绑定最终ZIP及全部源码SHA，整数615、平铺结构、真实mtrand/RandomState/Pandas/OpenCV/SciPy运算、SDK Launcher/Stats/控制器入口、禁用Gurobi导入仍能实际求解大于2000变量模型；三套完整组合：NumPy1.26.4/Pandas2.2.3/OpenCV4.11.0.86/SciPy1.17.1；NumPy2.2.6/Pandas2.2.3/OpenCV4.11.0.86/SciPy1.17.1；已有干净安装SDK的NumPy2.4.6/Pandas3.1.0/OpenCV5.0.0.93/SciPy1.17.1。每套必须声明环境复用/共享依赖边界，保存真实模块路径和安装预演，不得伪称重新安装或官方容器。
+数学模型需40项独立穷举与原Gurobi同模型对照通过，保存可行性/上界/超时空方案与路线加割检查。免许可适配版不能继承原J17的77.8514成绩，需先通过固定单图运行门槛，再完成一次独立五图及首次Windows原始字节审查，记录其实际成绩和投放数量；缺失或失败不可放行。禁止自动官网上传。源码原版、旧ZIP和所有失败日志保留。
+
+2026-10-30 J17免许可V07实际交付记录：
+正式提交文件E:/codex/J17_team615_red_v07_20261030/team615_red_v07.zip，SHA2561716cecbd00b920ed4f5a4e16c9f00c95e6db82c32b57629c2689ea769b0448a；源码另为同目录J17_portable_v07_source.zip。
+最终回执audit/RELEASE_ABI_RECEIPT.json与audit/RELEASE_CHECK.json（j17-portable-v07）已绑定该实际ZIP并PASS；整数615/平铺格式/三数值组合真实操作/SDK入口/禁止Gurobi导入后实解/40穷举与原模型对照/单图和完整五图/首次Windows原始字节审查均通过。没有官网基础镜像或官网在线验证，不能保证平台损坏环境也通过。不得拿其回执放行其他ZIP或改字节后沿用。
+本次依用户“直接启动测试”授权仅对一次FIVE绕过CPU/负载等待，SDK/BLUE/RED代码/时限/线程不变；该授权已耗尽，后续仍用原门槛。免许可完整五图65.83552708、49/50、双方无wallhit；原J17为77.85136510，负载不匹配且自然随机，不能说纯求解器效应，也不能把原分当作V07成绩。功能和包装放行不等于性能升级，维护池不自动晋级。V06与所有历史包原样保留，不自动上传官网。
+
+2026-10-30新增J17需要Gurobi完整许可的V08（由用户明确选择“用J17的需要gurobi许可证的算法提交版本”）：
+使用仅限team615_red_v08.zip的显式j17-gurobi-v08模式。必须以已审原J17 ZIP652b59edbfba68aa5b163b2cbdc904ebecdbe75927073e3a59168013e725a839为基准，除req.txt外55项payload字节全部一致，保留53项Python源码及整数615；不得混入免许可V07源码。
+req必须准确为numpy>=1.24.4、opencv-contrib-python>=4.10.0.84、gurobipy==13.0.1，不额外覆盖Pandas或加入SciPy固定版本。本次将SDK数值栈继承原则单独核验到V08，不复用V06/V07回执；默认旧profile不变。
+最终ZIP须在NumPy1.26.4/Pandas2.2.3/OpenCV4.11.0.86/Gurobi13.0.1、NumPy2.2.6/Pandas2.2.3/OpenCV4.11.0.86/Gurobi13.0.1及既有干净SDK的NumPy2.4.6/Pandas3.1.0/OpenCV5.0.0.93/Gurobi13.0.1三组合，验证真实数值运算/SDK/入口/队号和大于2000变量的实际Gurobi解题；保留环境复用及服务器许可边界，不能假称官网可用许可。依赖预演无数值包替换，官方静态通过。历史五图仅在确认全部Python字节一致且原证据已审时可引用，必须注明没有为V08新跑比赛。
+本profile的最终状态为PASS_REQUIRES_EXTERNAL_GUROBI_LICENSE：只允许作为“需官网另配适用完整许可”的条件提交包交付，绝不能声称仅pip安装即可跑完整模型、包含可迁移许可证或官网验证通过。用户此次明确索取许可版本覆盖此前免许可选择及“不能无条件推荐原版”限制，但不授权捆绑/转移私有许可证或自动官网上传。此前公开受限许可errno10010证据保留。
+
+2026-10-30 V08许可条件版实际交付：E:/codex/J17_gurobi_team615_red_v08_20261030/team615_red_v08.zip，SHA2561aa4b265025bc283d05be4deebef21a8c3291126c2dd7633de35a0aaa79255f5。最终检查audit/RELEASE_CHECK.json为PASS_REQUIRES_EXTERNAL_GUROBI_LICENSE；三套实际数值/SDK/队号/Gurobi完整许可大模型求解及静态检查通过，53个Python源码与原J17五图测试版完全一致，仅req改变。本次没有新跑比赛，历史77.8514不能称V08官网或新测成绩。此文件只在用户明确要求保留Gurobi、且官网另具适用完整许可的条件下使用，不是无许可证可运行承诺，不含私有license/密钥。旧V07免许可交付保留，不自动上传。

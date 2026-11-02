@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Release-tool regression only; no algorithm or simulation execution. Test ZIPs remain under audit/ and are not submission deliverables.",
+  "cases": [
+    {
+      "case": "legacy_exact_pin_profile_unchanged",
+      "status": "PASS",
+      "scope": "Local ABI validation only; old official V05 failure remains recorded"
+    },
+    {
+      "case": "v06_requires_explicit_new_profile",
+      "status": "PASS",
+      "rejected_because": "all_dependencies_exact_pins"
+    },
+    {
+      "case": "cannot_reuse_v05_abi_receipt",
+      "status": "PASS",
+      "rejected_because": "abi_receipt_bound_to_actual_zip"
+    },
+    {
+      "case": "missing_numpy2_run",
+      "status": "PASS",
+      "rejected_because": "two_numpy_branches_required"
+    },
+    {
+      "case": "incorrect_receipt_team",
+      "status": "PASS",
+      "rejected_because": "sdk_reads_team615"
+    },
+    {
+      "case": "missing_real_random_check",
+      "status": "PASS",
+      "rejected_because": "numpy2_real_numeric_operations"
+    },
+    {
+      "case": "run_bound_to_different_archive",
+      "status": "PASS",
+      "rejected_because": "numpy1_receipt_exact_zip_and_payload"
+    },
+    {
+      "case": "actual_zip_string_team_identifier",
+      "status": "PASS",
+      "rejected_because": "team_number_yaml_integer_615"
+    },
+    {
+      "case": "actual_final_v06_still_passes",
+      "status": "PASS"
+    }
+  ],
+  "guard_sha256": "26fb64ef60e821f859972a96431eddea2195b20b84cf8f5d83b736bfd4982d31"
+}
