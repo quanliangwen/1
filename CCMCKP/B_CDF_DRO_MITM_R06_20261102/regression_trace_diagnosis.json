@@ -1,0 +1,1307 @@
+[
+  {
+    "case": 17,
+    "pairs": [
+      {
+        "rep": 1,
+        "native_prefix_equal": 1,
+        "B_calls": 468,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 217.63431186415255,
+        "C_stage1": 4.66876417491585,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999229,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.655750090721995
+          }
+        ]
+      },
+      {
+        "rep": 2,
+        "native_prefix_equal": 1,
+        "B_calls": 393,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 163.4372600056231,
+        "C_stage1": 6.7146991030313075,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999231,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.703055174089968
+          }
+        ]
+      },
+      {
+        "rep": 3,
+        "native_prefix_equal": 1,
+        "B_calls": 468,
+        "C_calls_excluding_aux": 124,
+        "B_stage1": 145.2748818518594,
+        "C_stage1": 5.020806204993278,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999256,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.015076423995197
+          }
+        ]
+      },
+      {
+        "rep": 4,
+        "native_prefix_equal": 1,
+        "B_calls": 590,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 88.98316317331046,
+        "C_stage1": 4.876409993041307,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.99923,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.8701221300289035
+          }
+        ]
+      },
+      {
+        "rep": 5,
+        "native_prefix_equal": 1,
+        "B_calls": 468,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 89.85861732577905,
+        "C_stage1": 5.009058421943337,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999234,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.003773038741201
+          }
+        ]
+      },
+      {
+        "rep": 6,
+        "native_prefix_equal": 1,
+        "B_calls": 345,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 186.6687498227693,
+        "C_stage1": 7.0228678160347044,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999215,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 7.016132114920765
+          }
+        ]
+      },
+      {
+        "rep": 7,
+        "native_prefix_equal": 1,
+        "B_calls": 468,
+        "C_calls_excluding_aux": 181,
+        "B_stage1": 120.1355139221996,
+        "C_stage1": 6.944219370838255,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999253,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.937504179775715
+          }
+        ]
+      },
+      {
+        "rep": 8,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 192.20495424000546,
+        "C_stage1": 5.844228536821902,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999218,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.8376228008419275
+          }
+        ]
+      },
+      {
+        "rep": 9,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 137,
+        "B_stage1": 194.00780069082975,
+        "C_stage1": 6.86678921431303,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.99925,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.861433008220047
+          }
+        ]
+      },
+      {
+        "rep": 10,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 139,
+        "B_stage1": 147.18217427190393,
+        "C_stage1": 3.2783743706531823,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.99923,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.265389747917652
+          }
+        ]
+      },
+      {
+        "rep": 11,
+        "native_prefix_equal": 1,
+        "B_calls": 608,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 97.21239943196997,
+        "C_stage1": 3.1112665948458016,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999213,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.1012201998382807
+          }
+        ]
+      },
+      {
+        "rep": 12,
+        "native_prefix_equal": 1,
+        "B_calls": 624,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 87.57311186473817,
+        "C_stage1": 5.687373363878578,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999261,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.681194665841758
+          }
+        ]
+      },
+      {
+        "rep": 13,
+        "native_prefix_equal": 1,
+        "B_calls": 527,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 108.49607926420867,
+        "C_stage1": 5.296308944001794,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.99929,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.286749188788235
+          }
+        ]
+      },
+      {
+        "rep": 14,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 203.7366523137316,
+        "C_stage1": 4.951637750025839,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999217,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.9467919850721955
+          }
+        ]
+      },
+      {
+        "rep": 15,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 208.20175394788384,
+        "C_stage1": 6.83348509343341,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999262,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.825139208231121
+          }
+        ]
+      },
+      {
+        "rep": 16,
+        "native_prefix_equal": 1,
+        "B_calls": 658,
+        "C_calls_excluding_aux": 108,
+        "B_stage1": 84.67657147999853,
+        "C_stage1": 4.8516571670770645,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999233,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.846872863825411
+          }
+        ]
+      },
+      {
+        "rep": 17,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 171.7560705509968,
+        "C_stage1": 4.923635883256793,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999247,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.918365651275963
+          }
+        ]
+      },
+      {
+        "rep": 18,
+        "native_prefix_equal": 1,
+        "B_calls": 425,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 211.16206281399354,
+        "C_stage1": 7.125211005099118,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999184,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 7.118889281060547
+          }
+        ]
+      },
+      {
+        "rep": 19,
+        "native_prefix_equal": 1,
+        "B_calls": 682,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 86.71803252212703,
+        "C_stage1": 7.043879092205316,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999263,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 7.037764426320791
+          }
+        ]
+      },
+      {
+        "rep": 20,
+        "native_prefix_equal": 1,
+        "B_calls": 631,
+        "C_calls_excluding_aux": 75,
+        "B_stage1": 91.67749414825812,
+        "C_stage1": 6.154627090319991,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999277,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.148067646194249
+          }
+        ]
+      },
+      {
+        "rep": 21,
+        "native_prefix_equal": 1,
+        "B_calls": 439,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 158.91515897074714,
+        "C_stage1": 4.948418810963631,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999222,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.943693480920047
+          }
+        ]
+      },
+      {
+        "rep": 22,
+        "native_prefix_equal": 1,
+        "B_calls": 500,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 145.0719134369865,
+        "C_stage1": 4.59352339617908,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999239,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.584307454992086
+          }
+        ]
+      },
+      {
+        "rep": 23,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 214.34079689811915,
+        "C_stage1": 4.931428557261825,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999245,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.926822871435434
+          }
+        ]
+      },
+      {
+        "rep": 24,
+        "native_prefix_equal": 1,
+        "B_calls": 524,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 120.18704707967117,
+        "C_stage1": 4.64318663533777,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999224,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.637473015114665
+          }
+        ]
+      },
+      {
+        "rep": 25,
+        "native_prefix_equal": 1,
+        "B_calls": 468,
+        "C_calls_excluding_aux": 144,
+        "B_stage1": 150.80152640817687,
+        "C_stage1": 6.5123306373134255,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999226,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.50540894921869
+          }
+        ]
+      },
+      {
+        "rep": 26,
+        "native_prefix_equal": 1,
+        "B_calls": 576,
+        "C_calls_excluding_aux": 116,
+        "B_stage1": 88.84063219279051,
+        "C_stage1": 2.478013585321605,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999225,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.464267772156745
+          }
+        ]
+      },
+      {
+        "rep": 27,
+        "native_prefix_equal": 1,
+        "B_calls": 175,
+        "C_calls_excluding_aux": 181,
+        "B_stage1": 243.84171913424507,
+        "C_stage1": 6.752791645936668,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999206,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.74537243694067
+          }
+        ]
+      },
+      {
+        "rep": 28,
+        "native_prefix_equal": 1,
+        "B_calls": 665,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 81.19339910708368,
+        "C_stage1": 6.151353438850492,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999224,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.146351616829634
+          }
+        ]
+      },
+      {
+        "rep": 29,
+        "native_prefix_equal": 1,
+        "B_calls": 202,
+        "C_calls_excluding_aux": 199,
+        "B_stage1": 235.9014540007338,
+        "C_stage1": 2.9371564467437565,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999209,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.926353571936488
+          }
+        ]
+      },
+      {
+        "rep": 30,
+        "native_prefix_equal": 1,
+        "B_calls": 603,
+        "C_calls_excluding_aux": 38,
+        "B_stage1": 94.9889748999849,
+        "C_stage1": 3.04606540966779,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 205.20432953640366,
+            "p": 0.999251,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.035906770732254
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case": 38,
+    "pairs": [
+      {
+        "rep": 1,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 254,
+        "B_stage1": 156.47590911062434,
+        "C_stage1": 5.743589820805937,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999161,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 5.721575232222676
+          }
+        ]
+      },
+      {
+        "rep": 2,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 329,
+        "B_stage1": 145.05204254295677,
+        "C_stage1": 2.965462404768914,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999154,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.9589940309524536
+          }
+        ]
+      },
+      {
+        "rep": 3,
+        "native_prefix_equal": 1,
+        "B_calls": 485,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 144.37445796094835,
+        "C_stage1": 4.769179004244506,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999145,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.763014432042837
+          }
+        ]
+      },
+      {
+        "rep": 4,
+        "native_prefix_equal": 1,
+        "B_calls": 449,
+        "C_calls_excluding_aux": 281,
+        "B_stage1": 154.02912736777216,
+        "C_stage1": 4.710484376642853,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999147,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.704084645956755
+          }
+        ]
+      },
+      {
+        "rep": 5,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 137.66318109584972,
+        "C_stage1": 3.258034204132855,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999156,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.252344001084566
+          }
+        ]
+      },
+      {
+        "rep": 6,
+        "native_prefix_equal": 1,
+        "B_calls": 477,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 149.0478668170981,
+        "C_stage1": 3.0473603890277445,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999221,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.0340479160659015
+          }
+        ]
+      },
+      {
+        "rep": 7,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 151.37797542707995,
+        "C_stage1": 2.734011279884726,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999159,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.728517066221684
+          }
+        ]
+      },
+      {
+        "rep": 8,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 334,
+        "B_stage1": 142.80302107380703,
+        "C_stage1": 6.242434894666076,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999197,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.235753141809255
+          }
+        ]
+      },
+      {
+        "rep": 9,
+        "native_prefix_equal": 1,
+        "B_calls": 509,
+        "C_calls_excluding_aux": 163,
+        "B_stage1": 147.00031700218096,
+        "C_stage1": 6.157892842311412,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999077,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.151514401193708
+          }
+        ]
+      },
+      {
+        "rep": 10,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 132.79393181297928,
+        "C_stage1": 2.841901358217001,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999224,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.8368012588471174
+          }
+        ]
+      },
+      {
+        "rep": 11,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 149.53930198494345,
+        "C_stage1": 6.157522687222809,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999113,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.15230856416747
+          }
+        ]
+      },
+      {
+        "rep": 12,
+        "native_prefix_equal": 1,
+        "B_calls": 477,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 154.20187682611868,
+        "C_stage1": 3.319800197146833,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999175,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.313063702080399
+          }
+        ]
+      },
+      {
+        "rep": 13,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 305,
+        "B_stage1": 131.21548306010664,
+        "C_stage1": 3.1134657389484346,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999195,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.1067555248737335
+          }
+        ]
+      },
+      {
+        "rep": 14,
+        "native_prefix_equal": 1,
+        "B_calls": 485,
+        "C_calls_excluding_aux": 219,
+        "B_stage1": 127.67522647837177,
+        "C_stage1": 3.7373103289864957,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999162,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.7297029979526997
+          }
+        ]
+      },
+      {
+        "rep": 15,
+        "native_prefix_equal": 1,
+        "B_calls": 634,
+        "C_calls_excluding_aux": 140,
+        "B_stage1": 131.30172008415684,
+        "C_stage1": 4.658768403809518,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.99919,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.651043109130114
+          }
+        ]
+      },
+      {
+        "rep": 16,
+        "native_prefix_equal": 1,
+        "B_calls": 477,
+        "C_calls_excluding_aux": 219,
+        "B_stage1": 149.3447997639887,
+        "C_stage1": 4.447201022878289,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999132,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.439630473963916
+          }
+        ]
+      },
+      {
+        "rep": 17,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 147.9347634636797,
+        "C_stage1": 3.168148252181709,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999165,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.1628555161878467
+          }
+        ]
+      },
+      {
+        "rep": 18,
+        "native_prefix_equal": 1,
+        "B_calls": 492,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 134.946575100068,
+        "C_stage1": 3.0873332507908344,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999121,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.080732391681522
+          }
+        ]
+      },
+      {
+        "rep": 19,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 142.44703417504206,
+        "C_stage1": 2.519330861978233,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999158,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.5125516350381076
+          }
+        ]
+      },
+      {
+        "rep": 20,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 154.0981214158237,
+        "C_stage1": 6.144907790701836,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999183,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.13853328069672
+          }
+        ]
+      },
+      {
+        "rep": 21,
+        "native_prefix_equal": 1,
+        "B_calls": 406,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 147.78428691625595,
+        "C_stage1": 3.612832544837147,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999136,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.607441185042262
+          }
+        ]
+      },
+      {
+        "rep": 22,
+        "native_prefix_equal": 1,
+        "B_calls": 440,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 144.1957807391882,
+        "C_stage1": 4.4296301561407745,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999134,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.423093788791448
+          }
+        ]
+      },
+      {
+        "rep": 23,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 184,
+        "B_stage1": 134.57079660706222,
+        "C_stage1": 4.872941781766713,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.99918,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.865839512087405
+          }
+        ]
+      },
+      {
+        "rep": 24,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 348,
+        "B_stage1": 153.80969633162022,
+        "C_stage1": 2.8731673136353493,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999189,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 2.867206840775907
+          }
+        ]
+      },
+      {
+        "rep": 25,
+        "native_prefix_equal": 1,
+        "B_calls": 515,
+        "C_calls_excluding_aux": 170,
+        "B_stage1": 136.54361232789233,
+        "C_stage1": 4.653353613335639,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999172,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 4.646996753290296
+          }
+        ]
+      },
+      {
+        "rep": 26,
+        "native_prefix_equal": 1,
+        "B_calls": 610,
+        "C_calls_excluding_aux": 319,
+        "B_stage1": 142.33224362274632,
+        "C_stage1": 3.5633924757130444,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999225,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.556447431910783
+          }
+        ]
+      },
+      {
+        "rep": 27,
+        "native_prefix_equal": 1,
+        "B_calls": 490,
+        "C_calls_excluding_aux": 362,
+        "B_stage1": 138.14052977180108,
+        "C_stage1": 3.1187468338757753,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999214,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.111836113035679
+          }
+        ]
+      },
+      {
+        "rep": 28,
+        "native_prefix_equal": 1,
+        "B_calls": 481,
+        "C_calls_excluding_aux": 160,
+        "B_stage1": 155.137490962632,
+        "C_stage1": 6.014396880753338,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999117,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 6.006167974788696
+          }
+        ]
+      },
+      {
+        "rep": 29,
+        "native_prefix_equal": 1,
+        "B_calls": 475,
+        "C_calls_excluding_aux": 247,
+        "B_stage1": 150.17581006884575,
+        "C_stage1": 3.4655920113436878,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999162,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.4602004503831267
+          }
+        ]
+      },
+      {
+        "rep": 30,
+        "native_prefix_equal": 1,
+        "B_calls": 477,
+        "C_calls_excluding_aux": 150,
+        "B_stage1": 158.73986072000116,
+        "C_stage1": 3.3367709699086845,
+        "C_events": [
+          {
+            "event": "native_incumbent",
+            "cost": 225.97887881502015,
+            "p": 0.999169,
+            "source": "entropic_cost_MILP_delta0.00025",
+            "elapsed": 3.3303836989216506
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case": 39,
+    "pairs": [
+      {
+        "rep": 1,
+        "native_prefix_equal": 114,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 114,
+        "B_stage1": 168.72265215124935,
+        "C_stage1": 3.5281347651034594,
+        "C_events": []
+      },
+      {
+        "rep": 2,
+        "native_prefix_equal": 107,
+        "B_calls": 340,
+        "C_calls_excluding_aux": 107,
+        "B_stage1": 162.44212808879092,
+        "C_stage1": 2.2300292220897973,
+        "C_events": []
+      },
+      {
+        "rep": 3,
+        "native_prefix_equal": 268,
+        "B_calls": 338,
+        "C_calls_excluding_aux": 268,
+        "B_stage1": 164.9335287134163,
+        "C_stage1": 2.4483829559758306,
+        "C_events": []
+      },
+      {
+        "rep": 4,
+        "native_prefix_equal": 103,
+        "B_calls": 379,
+        "C_calls_excluding_aux": 103,
+        "B_stage1": 167.49592852592468,
+        "C_stage1": 3.6715291547589004,
+        "C_events": []
+      },
+      {
+        "rep": 5,
+        "native_prefix_equal": 71,
+        "B_calls": 304,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 162.75599173502997,
+        "C_stage1": 2.9700685716234148,
+        "C_events": []
+      },
+      {
+        "rep": 6,
+        "native_prefix_equal": 94,
+        "B_calls": 324,
+        "C_calls_excluding_aux": 94,
+        "B_stage1": 166.99685105122626,
+        "C_stage1": 2.991087753791362,
+        "C_events": []
+      },
+      {
+        "rep": 7,
+        "native_prefix_equal": 221,
+        "B_calls": 311,
+        "C_calls_excluding_aux": 221,
+        "B_stage1": 181.90172447822988,
+        "C_stage1": 3.0855322279967368,
+        "C_events": []
+      },
+      {
+        "rep": 8,
+        "native_prefix_equal": 101,
+        "B_calls": 411,
+        "C_calls_excluding_aux": 101,
+        "B_stage1": 183.41973885614425,
+        "C_stage1": 3.327841843944043,
+        "C_events": []
+      },
+      {
+        "rep": 9,
+        "native_prefix_equal": 71,
+        "B_calls": 498,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 146.35089542577043,
+        "C_stage1": 3.424746457953006,
+        "C_events": []
+      },
+      {
+        "rep": 10,
+        "native_prefix_equal": 77,
+        "B_calls": 324,
+        "C_calls_excluding_aux": 77,
+        "B_stage1": 191.46208865800872,
+        "C_stage1": 2.2120042401365936,
+        "C_events": []
+      },
+      {
+        "rep": 11,
+        "native_prefix_equal": 306,
+        "B_calls": 310,
+        "C_calls_excluding_aux": 306,
+        "B_stage1": 177.51998174516484,
+        "C_stage1": 3.245511963032186,
+        "C_events": []
+      },
+      {
+        "rep": 12,
+        "native_prefix_equal": 95,
+        "B_calls": 416,
+        "C_calls_excluding_aux": 95,
+        "B_stage1": 167.51911916863173,
+        "C_stage1": 2.6780135561712086,
+        "C_events": []
+      },
+      {
+        "rep": 13,
+        "native_prefix_equal": 99,
+        "B_calls": 276,
+        "C_calls_excluding_aux": 99,
+        "B_stage1": 171.0040929163806,
+        "C_stage1": 2.4622869500890374,
+        "C_events": []
+      },
+      {
+        "rep": 14,
+        "native_prefix_equal": 208,
+        "B_calls": 335,
+        "C_calls_excluding_aux": 208,
+        "B_stage1": 170.76799726998433,
+        "C_stage1": 2.459164912812412,
+        "C_events": []
+      },
+      {
+        "rep": 15,
+        "native_prefix_equal": 100,
+        "B_calls": 364,
+        "C_calls_excluding_aux": 100,
+        "B_stage1": 174.9691328839399,
+        "C_stage1": 3.770128936972469,
+        "C_events": []
+      },
+      {
+        "rep": 16,
+        "native_prefix_equal": 71,
+        "B_calls": 482,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 150.57112526101992,
+        "C_stage1": 3.6719315508380532,
+        "C_events": []
+      },
+      {
+        "rep": 17,
+        "native_prefix_equal": 211,
+        "B_calls": 399,
+        "C_calls_excluding_aux": 211,
+        "B_stage1": 173.3640775149688,
+        "C_stage1": 3.738308916334063,
+        "C_events": []
+      },
+      {
+        "rep": 18,
+        "native_prefix_equal": 83,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 83,
+        "B_stage1": 182.3738076109439,
+        "C_stage1": 2.9662673976272345,
+        "C_events": []
+      },
+      {
+        "rep": 19,
+        "native_prefix_equal": 260,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 260,
+        "B_stage1": 184.16589243896306,
+        "C_stage1": 2.941159867681563,
+        "C_events": []
+      },
+      {
+        "rep": 20,
+        "native_prefix_equal": 239,
+        "B_calls": 464,
+        "C_calls_excluding_aux": 239,
+        "B_stage1": 150.96174725377932,
+        "C_stage1": 2.488414010964334,
+        "C_events": []
+      },
+      {
+        "rep": 21,
+        "native_prefix_equal": 71,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 183.65267176227644,
+        "C_stage1": 3.3431008639745414,
+        "C_events": []
+      },
+      {
+        "rep": 22,
+        "native_prefix_equal": 71,
+        "B_calls": 321,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 175.57836135383695,
+        "C_stage1": 3.4474740610457957,
+        "C_events": []
+      },
+      {
+        "rep": 23,
+        "native_prefix_equal": 118,
+        "B_calls": 484,
+        "C_calls_excluding_aux": 118,
+        "B_stage1": 149.78945809183642,
+        "C_stage1": 3.6791494241915643,
+        "C_events": []
+      },
+      {
+        "rep": 24,
+        "native_prefix_equal": 132,
+        "B_calls": 311,
+        "C_calls_excluding_aux": 132,
+        "B_stage1": 168.23225516593084,
+        "C_stage1": 2.943337347358465,
+        "C_events": []
+      },
+      {
+        "rep": 25,
+        "native_prefix_equal": 168,
+        "B_calls": 374,
+        "C_calls_excluding_aux": 168,
+        "B_stage1": 158.55171132693067,
+        "C_stage1": 2.3760915398597717,
+        "C_events": []
+      },
+      {
+        "rep": 26,
+        "native_prefix_equal": 71,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 71,
+        "B_stage1": 166.99916611704975,
+        "C_stage1": 2.3887845762073994,
+        "C_events": []
+      },
+      {
+        "rep": 27,
+        "native_prefix_equal": 124,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 124,
+        "B_stage1": 152.12259781500325,
+        "C_stage1": 2.2731853839941323,
+        "C_events": []
+      },
+      {
+        "rep": 28,
+        "native_prefix_equal": 316,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 316,
+        "B_stage1": 188.30911199422553,
+        "C_stage1": 2.143569602165371,
+        "C_events": []
+      },
+      {
+        "rep": 29,
+        "native_prefix_equal": 98,
+        "B_calls": 316,
+        "C_calls_excluding_aux": 98,
+        "B_stage1": 164.9615695560351,
+        "C_stage1": 2.803696768824011,
+        "C_events": []
+      },
+      {
+        "rep": 30,
+        "native_prefix_equal": 311,
+        "B_calls": 471,
+        "C_calls_excluding_aux": 311,
+        "B_stage1": 161.18483863770962,
+        "C_stage1": 3.0638995799236,
+        "C_events": []
+      }
+    ]
+  }
+]

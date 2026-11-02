@@ -1,0 +1,8 @@
+Server project: /home/junhao/quan/parallel_test_solver/CCMKCP
+R06 root: /home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R06_20261102
+Authoritative start: /usr/bin/python3.8 -B advance.py (cwd=R06 root; detached process3496937,start_ticks405491798; singleton lock)
+Inspect first: LAUNCH_RECEIPT.json, CURRENT_POINTER.json, STATE.json, advance.log, EVENTS.jsonl and /proc/PID/stat,cwd,cmdline. Never launch a second active controller. Source FREEZE is checked before every run. Worker outputs are never inputs to optimization.
+Logs/results: waves/R06_pilot_cNN_aXX; after gate R06_full_cNN_aXX. WAVE.json/TIMING_JOURNAL.json plus each .json.gz/.worker.json/.terminal.json/.log. Candidate pilot excluded from fresh full1200.
+Reuse all40 B references from REFERENCE_REGISTRY.json; old paths are audit-only. No B optimization launched.
+Resource ceiling30 or24 for high future memory envelope; conservatively reduce if needed, keep >=5GiB future-growth reserve. No valid wave repeated. 600s includes start/load/SHA/init/scoring/native/save,15s reserve.
+Source_frozen.zip contains all136 frozen relative members plus FREEZE.json. Original frozen inputs reuse: ../B_CDF_DRO_MITM_R04_20261102/inputs_frozen.zip SHA256 e5ebd0a26ff4a3d6d8e66cd2c3e0a342d8268dcf831315bb9fe657d9b4fb88b7.
