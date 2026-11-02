@@ -1,5 +1,0 @@
-{
-  "utc": "2026-11-02T05:28:25.566409+00:00",
-  "traceback": "Traceback (most recent call last):\n  File \"E:\\codex\\P48_Astar_iteration_20261102\\P159_cluster_coverage70\\run_small.py\", line 63, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\codex\\P48_Astar_iteration_20261102\\P159_cluster_coverage70\\run_small.py\", line 47, in main\n    keep(arm+'_SDK_FIRST',p)\n  File \"E:\\codex\\P48_Astar_iteration_20261102\\P159_cluster_coverage70\\run_small.py\", line 16, in keep\n    if p.returncode:raise RuntimeError('First error retained '+n)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: First error retained P159_SDK_FIRST\n",
-  "automatic_retry": false
-}

@@ -1,9 +1,0 @@
-{
-  "error": "SyntaxError at paths comprehension: missing space before for",
-  "original_script_sha256": "e3432b9481929c8dcd580835ecfee47ca3361913d92199524e7c354d7736347e",
-  "corrected_script_sha256": "2fbc1cd225892bb5daf31d11ea6840daad079c5cd0908e9da99133cba62212d0",
-  "stage": "Python compilation before imports, numeric operations or SDK construction",
-  "submission_zip_unchanged": true,
-  "algorithm_changed": false,
-  "fix": "One lexical whitespace correction, new V2 probe; preserve original error/log/script"
-}

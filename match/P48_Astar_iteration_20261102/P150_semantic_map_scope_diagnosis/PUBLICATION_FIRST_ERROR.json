@@ -1,8 +1,0 @@
-{
-  "stage": "GitHub post-push byte validation",
-  "commit": "0a8d39057072048719a1b6f09d4c37f03b46eb80",
-  "error": "Checksum mismatch for RECEIVED_FRESHNESS_APPLICABILITY_FIRST.json",
-  "cause": "This one JSON entered publisher as Windows CRLF raw bytes; git normalized LF. Scientific content unchanged; publication manifest needs canonical LF checksum.",
-  "sdk_candidate_changed": false,
-  "correction": "New explicit publication-only revision normalizes this JSON to LF and updates remote checksum manifest; reverify all remote files."
-}

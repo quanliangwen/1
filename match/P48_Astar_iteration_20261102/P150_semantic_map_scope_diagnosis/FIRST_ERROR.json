@@ -1,9 +1,0 @@
-{
-  "stage": "local recorded-input AST fixture",
-  "error": "NameError: name 'math' is not defined",
-  "cause": "The isolated original semantic_mask function uses math.pi; the analysis namespace supplied numpy but omitted math.",
-  "candidate_changed": false,
-  "sdk_frames": 0,
-  "native_rounds": 0,
-  "correction": "Preserve original script; separate V2 analysis adds only the missing math namespace and a new result filename. Same recorded data and mask."
-}

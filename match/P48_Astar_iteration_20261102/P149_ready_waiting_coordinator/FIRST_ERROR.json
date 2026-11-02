@@ -1,5 +1,0 @@
-{
-  "utc": "2026-11-02T02:55:46.486705+00:00",
-  "traceback": "Traceback (most recent call last):\n  File \"E:\\codex\\P48_Astar_iteration_20261102\\P149_ready_waiting_coordinator\\run_diagnostic.py\", line 115, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\codex\\P48_Astar_iteration_20261102\\P149_ready_waiting_coordinator\\run_diagnostic.py\", line 54, in main\n    if(F/'STOP_REQUESTED').exists():raise RuntimeError('Human stop')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Human stop\n",
-  "no_automatic_retry": true
-}
