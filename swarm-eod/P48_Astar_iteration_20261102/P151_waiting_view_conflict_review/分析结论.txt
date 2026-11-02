@@ -1,0 +1,6 @@
+P151真实规则反例与P149取消（2026-11-02）
+
+直接调用冻结P149的实际_waiting_eligible、waiting_leader、propose_waiting_plan和validate_plan。两机均空载、已真实就绪，但双方最近收到对方ready=False：本机资格集合分别{0}/{1}。同一个known-free图上只有一个原规则圆环候选格，每个实例分别通过原联合终点图证书，并接受完全相同的等待坐标，距离0<原44px排斥值。
+这不是物理碰撞或官方地图复现，而是当前信息条件下规则不能保证不同无人机等待点彼此分离的精确反例。P149本来已声明不提供共识，本次进一步给出了可执行的具体后果；不能只因每个局部证书通过就推断联合等候安全。
+不继续层叠协议来强求这条停车线成为有效版：在其仍WAITING且实际Windows进程/start核对后写取消标志，02:55:46原runner退出；未达到两样本资源准入，科学预运行guard/result均未创建，零SDK/零native。原runner把统一STOP_REQUESTED写为Human stop，此字面异常保留，但CANCEL_DECISION/TERMINAL_REJECTION明确是助手根据反例自主拒绝候选，绝不是用户暂停或SDK运行失败。Goal保持ACTIVE。
+P148失败和P149反例不能推断真实Map02尾弹已证拥堵；停车分支目前停止，原P48_ASTAR地图/布点/运动不叠这些模块。
