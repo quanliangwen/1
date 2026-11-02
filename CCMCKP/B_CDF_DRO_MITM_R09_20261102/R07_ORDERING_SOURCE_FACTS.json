@@ -1,0 +1,23 @@
+{
+  "scope": "Static source/prose clarification, no execution/parameter/acceptance/gate change, no trial rerun.",
+  "old_solver_sha256": "692026df0f4d8837eb53500c3b6643d1431a17b55dda866b4ffaca66c787a65e",
+  "old_method": "Solver.joint_cdf_pair_exchange",
+  "old_pool_condition_line429": "(cost<cap-1e-8)&(probability>=.975)",
+  "old_ordering_line441": "return (0,c,-p,g,h,i,j) if p>=root_score else (1,-p,c,g,h,i,j)",
+  "old_native_entry_lines456_458": "if score>=.975 and time.monotonic()<end: ... self.native_check(...)",
+  "verified_CDF_not_lower_role": "Diagnostic logged boolean at line454, not acceptance guard.",
+  "conclusion": "CDF-nondecrease preference/priority, NOT hard exclusion of declining-CDF candidates. R09 replaces this ordering with candidate-specific CF2 eligibility plus cost/lex ordering.",
+  "frozen_primary_note_line12": "机制与验收.txt already says 旧局部排序偏好. Frozen source/protocol/note unchanged.",
+  "source_freeze_checks": {
+    "R08F": {
+      "freeze_sha256": "f7ae776791b0b78b0be37e0f5c55d4c98b3f7613892152365971beff536060c3",
+      "files": 209,
+      "unchanged": true
+    },
+    "R09": {
+      "freeze_sha256": "d43ebf6e43df1ada55cfcbe2465e3975599617b44884c00932514a2acb80cf92",
+      "files": 281,
+      "unchanged": true
+    }
+  }
+}
