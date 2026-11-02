@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "uploadedB14_members_byte_identical": true,
+  "native4dependencies_byte_identical": true,
+  "original_module_functions_unchanged": [
+    "atomic_json",
+    "chernoff_score",
+    "robust_logmgf",
+    "worst_cdf_hist",
+    "truncated_convolution"
+  ],
+  "original_methods_changed": [
+    "build_half",
+    "run"
+  ],
+  "candidate_new_methods": [
+    "entropic_cost_proposal",
+    "cf2_risk_pair_exchange"
+  ],
+  "solver_sha": "07a486edb747cf380120155ae43a9ee6ff4c8e99e746378c8bab13f723a2db0d",
+  "CF2_math_sha": "7a55dbaa56515abf46dde231bbbafc4de96a390b0fce23792d0051d005bdf617",
+  "new_target_or_native_or_formal_runs": 0
+}
