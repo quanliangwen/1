@@ -1,0 +1,54 @@
+{
+  "scope": "All30 records/arm, original saved paths only. No native evaluation or search. Historical Bbest used only for retrospective visitation/Hamming audit, never worker input.",
+  "correction_to_A01": "A01 nonCF2-negative counter was only computed inside CF2-active branch, so its B=0 did not mean zero B negatives. A02 computes all30; no official cost statistics or trials changed.",
+  "common_quality": {
+    "B": {
+      "hits": 15,
+      "conditional_mean_seconds": 379.3348286471019,
+      "restricted_mean_seconds": 489.667414323551,
+      "fixed_B_mean_cost_target": 196.15087914350985
+    },
+    "R09": {
+      "hits": 7,
+      "conditional_mean_seconds": 209.2184736883667,
+      "restricted_mean_seconds": 508.8176438606189,
+      "fixed_B_mean_cost_target": 196.15087914350985
+    }
+  },
+  "paths": {
+    "B": {
+      "Bbest_native_visited_runs": 30,
+      "Bbest_native_calls": 30,
+      "Bbest_nonCF2_negative_observation_runs_all30": 16,
+      "Bbest_observation_source_counts": {
+        "robust_mitm_delta0.00025_left27,17,5,33,38,0,22,19,18,24,34,12,2,39,20,10,36,7,28,31": 30
+      },
+      "after_CF2_root_distance_to_Bbest_counts": {},
+      "after_CF2_cost_counts": {}
+    },
+    "R09": {
+      "Bbest_native_visited_runs": 8,
+      "Bbest_native_calls": 8,
+      "Bbest_nonCF2_negative_observation_runs_all30": 0,
+      "Bbest_observation_source_counts": {
+        "CF2_risk_pair_delta0.00025": 8
+      },
+      "after_CF2_root_distance_to_Bbest_counts": {
+        "3": 18,
+        "5": 4,
+        "0": 3,
+        "2": 5
+      },
+      "after_CF2_cost_counts": {
+        "196.07471563933007": 4,
+        "196.30907012064137": 14,
+        "196.67463231459507": 4,
+        "196.00281922341733": 3,
+        "196.506927183046": 4,
+        "196.78436761726613": 1
+      }
+    }
+  },
+  "Bbest_selection_SHA256": "59841f36403e7c3461e0a27984aaaa3b2317023fedaaa62349a5b9e9457b684d",
+  "interpretation": "Local-CF2 missing visits and slower earlier MITM stage can both limit coverage. Fewer completed original stages is an observation, not proof that memory bandwidth alone caused regression. Prior old-CDF ordering was a preference, never hard exclusion."
+}
