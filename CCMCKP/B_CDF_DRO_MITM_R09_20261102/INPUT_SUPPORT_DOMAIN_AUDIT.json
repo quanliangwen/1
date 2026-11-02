@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "all_registered_input_SHA_checked": 3660,
+  "instances": {
+    "APP_10_10_500_": {
+      "items": 100,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.0001152102901647023,
+      "maximum": 39.93008172984464
+    },
+    "APP_10_20_500_": {
+      "items": 200,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.00014282174938817782,
+      "maximum": 39.90619992292314
+    },
+    "APP_20_10_500_": {
+      "items": 200,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.0013188335378366833,
+      "maximum": 39.989469578354274
+    },
+    "APP_30_10_500_": {
+      "items": 300,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 3.49120982565676e-05,
+      "maximum": 39.93537502361951
+    },
+    "APP_3_5_30_": {
+      "items": 15,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.0027003100301532523,
+      "maximum": 36.195681450303674
+    },
+    "APP_40_10_500_": {
+      "items": 400,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.00015392920220791417,
+      "maximum": 39.95019396060338
+    },
+    "APP_4_5_30_": {
+      "items": 20,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.1308596159907296,
+      "maximum": 35.47715112845344
+    },
+    "APP_50_10_500_": {
+      "items": 500,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 4.869240438332145e-05,
+      "maximum": 39.99172239470377
+    },
+    "APP_5_10_30_": {
+      "items": 50,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.02782543990994868,
+      "maximum": 37.02297520841873
+    },
+    "APP_5_5_30_": {
+      "items": 25,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.06023203467155236,
+      "maximum": 26.261721177394502
+    },
+    "LAB_10_10_500_": {
+      "items": 100,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 7.328506193467389e-05,
+      "maximum": 18.6850562664547
+    },
+    "LAB_10_20_500_": {
+      "items": 200,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 9.434738011737664e-06,
+      "maximum": 19.892387430218726
+    },
+    "LAB_20_10_500_": {
+      "items": 200,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.000825533649491117,
+      "maximum": 19.597385281727842
+    },
+    "LAB_30_10_500_": {
+      "items": 300,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 3.859193234236992e-05,
+      "maximum": 18.09013047117248
+    },
+    "LAB_3_5_30_": {
+      "items": 15,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.022401547894296936,
+      "maximum": 9.160893028233069
+    },
+    "LAB_40_10_500_": {
+      "items": 400,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 0.000132611661694322,
+      "maximum": 18.16122463087958
+    },
+    "LAB_4_5_30_": {
+      "items": 20,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.006341057451266397,
+      "maximum": 13.099282576623233
+    },
+    "LAB_50_10_500_": {
+      "items": 500,
+      "sample_lengths": [
+        500
+      ],
+      "minimum": 2.0846295567089612e-05,
+      "maximum": 21.84968762207448
+    },
+    "LAB_5_10_30_": {
+      "items": 50,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.008749867640549799,
+      "maximum": 12.66015252866405
+    },
+    "LAB_5_5_30_": {
+      "items": 25,
+      "sample_lengths": [
+        30
+      ],
+      "minimum": 0.007825071989469773,
+      "maximum": 15.707198576312011
+    }
+  },
+  "input_zip_sha256": "e5ebd0a26ff4a3d6d8e66cd2c3e0a342d8268dcf831315bb9fe657d9b4fb88b7",
+  "elapsed": 0.7660000000032596,
+  "scope": "Original frozen raw sample finite nonnegative domain and >=2 MC index support only; no native evaluation, no optimization, no solution read, not a formal candidate run."
+}
