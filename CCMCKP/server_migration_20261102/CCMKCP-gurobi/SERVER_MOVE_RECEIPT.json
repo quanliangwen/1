@@ -1,0 +1,72 @@
+{
+  "event": "server_move_complete",
+  "completed_utc": "2026-11-02T06:54:10.179679+00:00",
+  "server": "junhao@10.112.162.60",
+  "parent": "/home/junhao/quan/parallel_test_solver",
+  "removed_names": [
+    "A=problem1",
+    "model_q2_no_solution.mps",
+    "CCMKCP-gurobi",
+    "A=problem3"
+  ],
+  "all_four_source_paths_absent": true,
+  "original_regular_files": 8623,
+  "all_original_files_rehashed_before_removal": true,
+  "github_index_commit_verified_before_removal": "1f276fd2159189652a6d18faa212d9fc91e4ac80",
+  "github_release": "https://github.com/quanliangwen/1/releases/tag/server-migration-20261102",
+  "original_targets_allocated_bytes": 7996063744,
+  "parent_allocated_bytes_before": 16199639040,
+  "parent_allocated_bytes_after": 8203575296,
+  "observed_parent_reduction_bytes": 7996063744,
+  "repository": "quanliangwen/1",
+  "release_url": "https://github.com/quanliangwen/1/releases/tag/server-migration-20261102",
+  "archive_assets": {
+    "model_q2_no_solution.mps.tar.gz": {
+      "id": 700810070,
+      "name": "model_q2_no_solution.mps.tar.gz",
+      "bytes": 292733547,
+      "sha256": "bc9b50db586f1dd9ee271c5d174ee8bb04d0d0d157c5dfabab6ad4c1354d8f91",
+      "github_digest": "sha256:bc9b50db586f1dd9ee271c5d174ee8bb04d0d0d157c5dfabab6ad4c1354d8f91",
+      "download_url": "https://github.com/quanliangwen/1/releases/download/untagged-df360b840757b8303bc9/model_q2_no_solution.mps.tar.gz",
+      "target": "model_q2_no_solution.mps",
+      "source_regular_files_verified": 1,
+      "remote_digest_matches": true
+    },
+    "A_problem1.tar.gz": {
+      "id": 700811571,
+      "name": "A_problem1.tar.gz",
+      "bytes": 1272924501,
+      "sha256": "8cac326ab81ec4c7d1febccc343ee46f02a9d788fe2df55115dbc5884061c279",
+      "github_digest": "sha256:8cac326ab81ec4c7d1febccc343ee46f02a9d788fe2df55115dbc5884061c279",
+      "download_url": "https://github.com/quanliangwen/1/releases/download/untagged-df360b840757b8303bc9/A_problem1.tar.gz",
+      "target": "A=problem1",
+      "source_regular_files_verified": 988,
+      "remote_digest_matches": true
+    },
+    "CCMKCP-gurobi.tar.gz": {
+      "id": 700817996,
+      "name": "CCMKCP-gurobi.tar.gz",
+      "bytes": 134764349,
+      "sha256": "359c36b230514cfa2cf567bb80cb773ed4d028affc67e9fb2a662f8a90d845b5",
+      "github_digest": "sha256:359c36b230514cfa2cf567bb80cb773ed4d028affc67e9fb2a662f8a90d845b5",
+      "download_url": "https://github.com/quanliangwen/1/releases/download/untagged-df360b840757b8303bc9/CCMKCP-gurobi.tar.gz",
+      "target": "CCMKCP-gurobi",
+      "source_regular_files_verified": 7430,
+      "remote_digest_matches": true
+    },
+    "A_problem3.tar.gz": {
+      "id": 700818941,
+      "name": "A_problem3.tar.gz",
+      "bytes": 145107377,
+      "sha256": "690dd4870d4fa97b28935be6342281dc023c2920c12db1f810586f32251dc33e",
+      "github_digest": "sha256:690dd4870d4fa97b28935be6342281dc023c2920c12db1f810586f32251dc33e",
+      "download_url": "https://github.com/quanliangwen/1/releases/download/untagged-df360b840757b8303bc9/A_problem3.tar.gz",
+      "target": "A=problem3",
+      "source_regular_files_verified": 204,
+      "remote_digest_matches": true
+    }
+  },
+  "remote_verification_complete": true,
+  "permanent_local_backup_created": false,
+  "temporary_archive_staging_will_be_removed": true
+}
