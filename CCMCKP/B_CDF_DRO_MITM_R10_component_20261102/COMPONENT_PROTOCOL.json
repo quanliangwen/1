@@ -1,0 +1,82 @@
+{
+  "phase": "COMPONENT ONLY, no optimizer/native or formal auto start",
+  "one_mechanism": "Exact fixed-original-bucket cost/p0/p1 top-k merged PDF residency cache, no retained inverse recomputation. Same block64/CDF/float32/prune/width.",
+  "official_control": "Uploaded B_CDF_DRO_MITM remains sole official cost control. Component base is frozen R09 for isolated storage comparison, not a replacement official baseline.",
+  "cases": [
+    {
+      "index": 17,
+      "instance": "LAB_40_10_500_",
+      "tmax": 55.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 219.25382635604433
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "tmax": 95.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 165.44815735379393
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "tmax": 91.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 232.69447832839046
+    }
+  ],
+  "local_input_zip": "E:\\codex\\CCMCKP_DRO_R04_20261101\\github_staging_20261102\\CCMCKP\\B_CDF_DRO_MITM_R04_20261102\\inputs_frozen.zip",
+  "server_input_zip": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R10_component_20261102/inputs_frozen.zip",
+  "input_zip_sha256": "e5ebd0a26ff4a3d6d8e66cd2c3e0a342d8268dcf831315bb9fe657d9b4fb88b7",
+  "target_environment": {
+    "numpy": "1.24.4",
+    "scipy": "1.10.1"
+  },
+  "kernel_repetitions": 2,
+  "warmup_kernels": 1,
+  "case_kernel": "Six even-prefix groups, all remaining groups as complement, original B4096 histograms, delta=.00025/one own input-derived min(mu+3sd) boundary. No original optimizer/native call; not a feasible initial solution or quality trial.",
+  "math_cases": "18 generic width/tie/block checks; N<=W/A4/deadline edges; 3actual cases x3radii x1/2ownboundaries =18bitwise cost/PDF/selection comparisons. Local np2.2.6/scipy1.15.3 diagnostic only, target exact environment also required.",
+  "ABBA_order": [
+    "base",
+    "cache",
+    "cache",
+    "base"
+  ],
+  "modes": [
+    "serial",
+    "parallel30"
+  ],
+  "mode_workers": {
+    "serial": 1,
+    "parallel30": 30
+  },
+  "valid_wave_policy": "All workers/sourceSHA/digests/journal<=600 required. Resource interrupted attempts retained; only whole incomplete resource wave retried at new attempt, valid waves never rerun or selected. Ordinary failure stops component. Singleton/flock/uniqueclaim; no restore of interrupted prior controllers.",
+  "time_policy": "Component kernel timer includes complete build_half including cache and cost lookahead; per-process external journal includes load/hash/warmup/barrier/timed kernels/save/fsync, max600 with585work deadline. This is not a 600s optimization performance run. Future formal run includes everything under same original600/15.",
+  "resource_guard": "Original R09 future bound, measured peak1.25, foreign growth max(2GiB, foreign/2, increase), no ownRSS credit, floor5GiB; fixed30 comparisons wait rather than exceedingguard. No other optimization or oldexportcontroller overlapping.",
+  "previous_campaign": {
+    "root": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R09_20261102",
+    "pid": 3730240,
+    "ticks": 406999944,
+    "watcher_pid": 3730328,
+    "watcher_ticks": 407000333
+  },
+  "gates": {
+    "all_retained_cost_PDF_selection_bitwise_identical": true,
+    "all_output_digests_identical": true,
+    "no_added_inverse_rows": true,
+    "serial_ratio_each_case_max": 1.1,
+    "serial_ratio_geomean_max": 1.05,
+    "parallel30_ratio_each_case_max": 0.95,
+    "peak_RSS_ratio_each_case_max": 1.0,
+    "peak_RSS_ratio_geomean_max": 0.8
+  },
+  "ratio_definition": "Per case/mode geometric ABBA ratio sqrt(cacheWave1Mean*cacheWave2Mean/(baseWave1Mean*baseWave2Mean)), each worker kernel_total sums2 repetitions. MaxRSS uses max across both modes and blocks perarm. No kernel ratio claimed as whole algorithm cost/time result.",
+  "formal_admission": "Component pass requires manual source/integrity review then separately freeze full formal source and run unchanged7case pilot/independent audit/fresh1200 only if gates pass. ReuseB1200; no R09valid wave rerun. Component queue exhaustion/launch is not goal completion.",
+  "research_limits": "Preprint exact topk/composition identity adapted with own fixed-bucket stable-ID proof; no statisticalDRO coverage/globaloptimum/performance guarantee. R02 rematerialization negative retained. PriorCDFordering was preference, not hard constraint."
+}
