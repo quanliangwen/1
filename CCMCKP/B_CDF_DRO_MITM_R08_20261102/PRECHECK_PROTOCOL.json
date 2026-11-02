@@ -1,0 +1,420 @@
+{
+  "schema": "R08_packed_IRFFT_component_precheck_v1",
+  "not_formal_optimization": true,
+  "official_baseline": "uploadedB only; valid B waves not rerun; kernel_controlR07 is incremental computational comparator only",
+  "component_scope": "Only float64 packed child inverseFFT wrapper, no changed physics/scoring/searchorder/uncertainty/native method; draft includes retainedR07, final formalchoice requires separate frozen full protocol and all synthetic/audits. No formalauto-start.",
+  "previous_R07_root": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R07_20261102",
+  "previous_controller": {
+    "pid": 3550948,
+    "start_ticks": 405860695
+  },
+  "previous_freeze": "4ec0fb3f3405038cde947a3bb43776d2bc6e6af139673ed4bd516dc9b76333b1",
+  "indices": [
+    17,
+    38,
+    39,
+    40,
+    25,
+    18,
+    14
+  ],
+  "kernel_cases": [
+    17,
+    38,
+    39
+  ],
+  "cases": [
+    {
+      "index": 1,
+      "instance": "LAB_3_5_30_",
+      "tmax": 11.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 16.35918529476526
+    },
+    {
+      "index": 2,
+      "instance": "LAB_3_5_30_",
+      "tmax": 14.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 16.35918529476526
+    },
+    {
+      "index": 3,
+      "instance": "LAB_4_5_30_",
+      "tmax": 18.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 22.30258128033877
+    },
+    {
+      "index": 4,
+      "instance": "LAB_4_5_30_",
+      "tmax": 26.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 22.30258128033877
+    },
+    {
+      "index": 5,
+      "instance": "LAB_5_5_30_",
+      "tmax": 11.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 26.75652219162219
+    },
+    {
+      "index": 6,
+      "instance": "LAB_5_5_30_",
+      "tmax": 20.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 26.75652219162219
+    },
+    {
+      "index": 7,
+      "instance": "LAB_5_10_30_",
+      "tmax": 10.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 26.941881145054474
+    },
+    {
+      "index": 8,
+      "instance": "LAB_5_10_30_",
+      "tmax": 16.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 26.941881145054474
+    },
+    {
+      "index": 9,
+      "instance": "LAB_10_10_500_",
+      "tmax": 19.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 55.63791782175482
+    },
+    {
+      "index": 10,
+      "instance": "LAB_10_10_500_",
+      "tmax": 23.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 55.63791782175482
+    },
+    {
+      "index": 11,
+      "instance": "LAB_10_20_500_",
+      "tmax": 12.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 54.326480217230284
+    },
+    {
+      "index": 12,
+      "instance": "LAB_10_20_500_",
+      "tmax": 15.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 54.326480217230284
+    },
+    {
+      "index": 13,
+      "instance": "LAB_20_10_500_",
+      "tmax": 25.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 109.36882100697807
+    },
+    {
+      "index": 14,
+      "instance": "LAB_20_10_500_",
+      "tmax": 32.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 109.36882100697807
+    },
+    {
+      "index": 15,
+      "instance": "LAB_30_10_500_",
+      "tmax": 43.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 161.71958704603549
+    },
+    {
+      "index": 16,
+      "instance": "LAB_30_10_500_",
+      "tmax": 52.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 161.71958704603549
+    },
+    {
+      "index": 17,
+      "instance": "LAB_40_10_500_",
+      "tmax": 55.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 219.25382635604433
+    },
+    {
+      "index": 18,
+      "instance": "LAB_40_10_500_",
+      "tmax": 63.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 219.25382635604433
+    },
+    {
+      "index": 19,
+      "instance": "LAB_50_10_500_",
+      "tmax": 63.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 275.4361054055303
+    },
+    {
+      "index": 20,
+      "instance": "LAB_50_10_500_",
+      "tmax": 75.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 275.4361054055303
+    },
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "tmax": 21.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 13.355118541499069
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "tmax": 27.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 13.355118541499069
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "tmax": 47.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 5.961453029177417
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "tmax": 49.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 5.961453029177417
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "tmax": 27.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 16.454602431295644
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "tmax": 38.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 16.454602431295644
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "tmax": 16.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 23.629735222465964
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "tmax": 27.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 23.629735222465964
+    },
+    {
+      "index": 29,
+      "instance": "APP_10_10_500_",
+      "tmax": 32.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 47.459563656796426
+    },
+    {
+      "index": 30,
+      "instance": "APP_10_10_500_",
+      "tmax": 37.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 47.459563656796426
+    },
+    {
+      "index": 31,
+      "instance": "APP_10_20_500_",
+      "tmax": 13.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 50.15665332268709
+    },
+    {
+      "index": 32,
+      "instance": "APP_10_20_500_",
+      "tmax": 16.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 50.15665332268709
+    },
+    {
+      "index": 33,
+      "instance": "APP_20_10_500_",
+      "tmax": 43.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 94.72999985492753
+    },
+    {
+      "index": 34,
+      "instance": "APP_20_10_500_",
+      "tmax": 48.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 94.72999985492753
+    },
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "tmax": 58.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 138.5898471417616
+    },
+    {
+      "index": 36,
+      "instance": "APP_30_10_500_",
+      "tmax": 70.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 138.5898471417616
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "tmax": 85.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 165.44815735379393
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "tmax": 95.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 165.44815735379393
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "tmax": 91.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 232.69447832839046
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "tmax": 100.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 232.69447832839046
+    }
+  ],
+  "benchmark_root": "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark",
+  "order": [
+    "control",
+    "candidate",
+    "candidate",
+    "control"
+  ],
+  "source_precision": "complex128 input/float64 inverse; original child PDF float32 unchanged; workers1; no singleprecisionFFT or overwrite claim",
+  "serial_gate": {
+    "mean_case_ratio_at_most": 0.95,
+    "every_case_ratio_at_most": 1.02,
+    "candidate_mean_peak_RSS_each_case_not_above_control": true
+  },
+  "concurrent_gate": {
+    "case": 39,
+    "parallel_max": 30,
+    "parallel_min": 8,
+    "chosen_once_by_original_guard_unchanged_across4waves": true,
+    "mean_kernel_ratio_at_most": 0.9,
+    "candidate_mean_peak_RSS_not_above_control": true
+  },
+  "numerical_gate": {
+    "direct_and_numpy_inverse_max_error": 1e-12,
+    "retained_cost_and_selection_100percent_bitwise_equal": true,
+    "matched_PDF_max_row_L1": 1e-06
+  },
+  "resources": "Exact R07 conservative future-envelope, foreigngrowth reserve=max(2GiB,totalforeignRSS), at least5GiB available future margin, 5GiB free disk minimum, no ownRSS admissioncredit. ActualR07controller/workers and its exportwatcher must be dead, all7terminal and expectedpilotfailed, no oldresume. Eachkernelprocess externalwatchdog600seconds includinginputload andarraysave; no algorithm/nativeoracle.",
+  "no_repeats": "ABBA eachregisteredcaseonce only. No rerun ifnumeric/speedgatefailed; resource/errors preserved asprecheckfailure; no formalwave or officialseed statistics incomponenttests.",
+  "fresh_initial_fixture": "Only currentraw samples/cost/group mapping; deterministic mu+3sampleSD pergroup for kernelalone; no previoussolutionfiles. Formalfuturemustuseitsownoriginalinitializer independently for eachrequiredseed.",
+  "full_goal_unchanged": "All40 validcandidatefresh1200 required only afterfixed7pilot cost/stability/commonqualitytime andindependentaudit. Componentcompletion never goalcompletion.",
+  "selection_limitations": "R08 selected after R06failed7 andR07case17terminal; remainingR07pilotwillcompleteunmodified. Samefixedsuite/seeds reused, no unseen-data or selectionadjustedconfirmation claim.",
+  "paper": "Cooley&Tukey1965Eq1–13,14–22 fullyread. Half-Hermitian/cyclicpadding adaptation derived here; backendperformance purely measured, nottheorem. Abadi2007 studied butlate-gather notincluded; Sorensen1987fullunavailable notused."
+}
