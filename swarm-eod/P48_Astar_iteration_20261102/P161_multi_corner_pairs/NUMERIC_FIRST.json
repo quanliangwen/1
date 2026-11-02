@@ -1,0 +1,443 @@
+{
+  "status": "PASS_MULTI_CORNER_NUMERIC_PROTOCOL",
+  "checks": [
+    {
+      "name": "two_opposite_measured_corners_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "two_opposite_measured_corners_atleast2",
+      "passed": true
+    },
+    {
+      "name": "two_opposite_measured_corners_each2or3",
+      "passed": true
+    },
+    {
+      "name": "two_opposite_measured_corners_distinct",
+      "passed": true
+    },
+    {
+      "name": "two_opposite_measured_corners_floor70",
+      "passed": true
+    },
+    {
+      "name": "two_opposite_measured_corners_safe_spacing",
+      "passed": true
+    },
+    {
+      "name": "positive_multi_region_witness",
+      "passed": true
+    },
+    {
+      "name": "all_owner_counts_preserved",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_atleast2",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_each2or3",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_distinct",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_floor70",
+      "passed": true
+    },
+    {
+      "name": "full_suffix_carry_safe_spacing",
+      "passed": true
+    },
+    {
+      "name": "carry_actually_used",
+      "passed": true
+    },
+    {
+      "name": "excluded_anchor_not_placement_legal",
+      "passed": true
+    },
+    {
+      "name": "point_exclusion_does_not_erase_geometric_region",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_atleast2",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_each2or3",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_distinct",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_floor70",
+      "passed": true
+    },
+    {
+      "name": "reserved_prefix_tail_safe_spacing",
+      "passed": true
+    },
+    {
+      "name": "reserved_tail_kept",
+      "passed": true
+    },
+    {
+      "name": "single_measured_corner_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "one_corner_not_multi",
+      "passed": true
+    },
+    {
+      "name": "no_hits_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "no_invented_corners",
+      "passed": true
+    },
+    {
+      "name": "no_known_free_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "unknown_not_walkable",
+      "passed": true
+    },
+    {
+      "name": "all_forbidden_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "forbidden_not_ignored",
+      "passed": true
+    },
+    {
+      "name": "zero_route_budget_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "no_unbudgeted_bundle",
+      "passed": true
+    },
+    {
+      "name": "zero_optional_clock_maps_unchanged",
+      "passed": true
+    },
+    {
+      "name": "bounded_fallback",
+      "passed": true
+    },
+    {
+      "name": "two_corner_context_valid",
+      "passed": true
+    },
+    {
+      "name": "matching_group_target_honoured",
+      "passed": true
+    },
+    {
+      "name": "duplicate_corner_context_rejected",
+      "passed": true
+    },
+    {
+      "name": "four_in_one_rejected",
+      "passed": true
+    },
+    {
+      "name": "below70_context_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_plan_reverts_original",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "two_opposite_measured_corners",
+      "audit": {
+        "status": "ACCEPTED",
+        "accepted": true,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [
+          {
+            "pivot": [
+              -400.0,
+              400.0
+            ],
+            "anchor": [
+              -360.0,
+              360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          },
+          {
+            "pivot": [
+              400.0,
+              -400.0
+            ],
+            "anchor": [
+              360.0,
+              -360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          }
+        ],
+        "attempts": 4,
+        "fields": 10,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 10,
+        "candidates": 2,
+        "reference": 35.0,
+        "coverage_ratio": 5.714285714285714,
+        "grouped": 4,
+        "group_count": 2,
+        "reason": "multiple_small_corners_coverage_guarded",
+        "elapsed": 0.036601792089641094
+      }
+    },
+    {
+      "name": "full_suffix_carry",
+      "audit": {
+        "status": "ACCEPTED",
+        "accepted": true,
+        "call": 2,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [
+          {
+            "pivot": [
+              -400.0,
+              400.0
+            ],
+            "anchor": [
+              -360.0,
+              360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          },
+          {
+            "pivot": [
+              400.0,
+              -400.0
+            ],
+            "anchor": [
+              360.0,
+              -360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          }
+        ],
+        "attempts": 0,
+        "fields": 10,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 10,
+        "candidates": 2,
+        "reference": 35.0,
+        "carried_suffix": true,
+        "coverage_ratio": 5.714285714285714,
+        "grouped": 4,
+        "group_count": 2,
+        "reason": "multiple_small_corners_coverage_guarded",
+        "elapsed": 0.02324892394244671
+      }
+    },
+    {
+      "name": "reserved_prefix_tail",
+      "audit": {
+        "status": "ACCEPTED",
+        "accepted": true,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [
+          {
+            "pivot": [
+              -400.0,
+              400.0
+            ],
+            "anchor": [
+              -360.0,
+              360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          },
+          {
+            "pivot": [
+              400.0,
+              -400.0
+            ],
+            "anchor": [
+              360.0,
+              -360.0
+            ],
+            "radius": 72.0,
+            "kind": "outer",
+            "planned_count": 2
+          }
+        ],
+        "attempts": 0,
+        "fields": 5,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 5,
+        "candidates": 2,
+        "reference": 200.0,
+        "carried_suffix": true,
+        "coverage_ratio": 1.0,
+        "grouped": 4,
+        "group_count": 2,
+        "reason": "multiple_small_corners_coverage_guarded",
+        "elapsed": 0.015099226962774992
+      }
+    },
+    {
+      "name": "single_measured_corner",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 0,
+        "fields": 0,
+        "step": 100,
+        "reason": "fewer_than_two_measured_regions",
+        "elapsed": 0.0018772631883621216
+      }
+    },
+    {
+      "name": "no_hits",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 0,
+        "fields": 0,
+        "step": 100,
+        "reason": "fewer_than_two_measured_regions",
+        "elapsed": 0.0008457927033305168
+      }
+    },
+    {
+      "name": "no_known_free",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 0,
+        "fields": 0,
+        "step": 100,
+        "reason": "fewer_than_two_measured_regions",
+        "elapsed": 0.002641023136675358
+      }
+    },
+    {
+      "name": "all_forbidden",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 4,
+        "fields": 5,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 10,
+        "candidates": 2,
+        "reference": 35.0,
+        "reason": "no_two_small_clusters_with_coverage_and_routes",
+        "elapsed": 0.023043316323310137
+      }
+    },
+    {
+      "name": "zero_route_budget",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 4,
+        "fields": 5,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 10,
+        "candidates": 2,
+        "reference": 35.0,
+        "reason": "no_two_small_clusters_with_coverage_and_routes",
+        "elapsed": 0.01834569312632084
+      }
+    },
+    {
+      "name": "zero_optional_clock",
+      "audit": {
+        "status": "KEEP_BASE",
+        "accepted": false,
+        "call": 1,
+        "coverage_floor": 0.7,
+        "radius_ratio": 1.0,
+        "regions": [],
+        "attempts": 0,
+        "fields": 0,
+        "step": 100,
+        "initial_total": 10,
+        "planned": 10,
+        "candidates": 2,
+        "reference": 35.0,
+        "budget_exhausted": true,
+        "reason": "no_two_small_clusters_with_coverage_and_routes",
+        "elapsed": 0.0028555607423186302
+      }
+    }
+  ],
+  "source_sha256": {
+    "corner_cluster.py": "d87f8058e0b7b49cf629374a71185ec22ddf412f3d8cc6d06f20338a0ab1b2d0",
+    "corner_mission.py": "dc0dc1ec9498c5e8486fc5861627bafb4c75fd5f4c81b2ed329d74ee38c49029"
+  },
+  "SDK_frames": 0,
+  "native_rounds": 0,
+  "limitations": "Authored arrays with explicit geometry/value adapters and original Dijkstra; no physical group placement or official score claim."
+}

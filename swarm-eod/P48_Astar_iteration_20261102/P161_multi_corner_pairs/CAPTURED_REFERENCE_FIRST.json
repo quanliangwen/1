@@ -1,0 +1,114 @@
+{
+  "status": "COMPLETE_CAPTURED_COVERAGE_REFERENCE",
+  "audit": {
+    "status": "ACCEPTED",
+    "accepted": true,
+    "call": 1,
+    "coverage_floor": 0.7,
+    "radius_ratio": 1.0,
+    "regions": [
+      {
+        "pivot": [
+          -24.0,
+          52.0
+        ],
+        "anchor": [
+          -8.0,
+          68.0
+        ],
+        "radius": 72.0,
+        "kind": "inner",
+        "planned_count": 2
+      },
+      {
+        "pivot": [
+          -56.0,
+          -220.0
+        ],
+        "anchor": [
+          -24.0,
+          -204.0
+        ],
+        "radius": 72.0,
+        "kind": "inner",
+        "planned_count": 2
+      }
+    ],
+    "attempts": 4,
+    "fields": 7,
+    "step": 264,
+    "initial_total": 10,
+    "planned": 10,
+    "candidates": 14,
+    "reference": 61.95916748046875,
+    "coverage_ratio": 0.9483531319356265,
+    "grouped": 4,
+    "group_count": 2,
+    "reason": "multiple_small_corners_coverage_guarded",
+    "elapsed": 0.04856649274006486
+  },
+  "nominal_points": {
+    "0": [
+      [
+        168.0,
+        100.0
+      ],
+      [
+        168.0,
+        -92.0
+      ]
+    ],
+    "1": [
+      [
+        -8.0,
+        68.0
+      ],
+      [
+        56.0,
+        68.0
+      ]
+    ],
+    "2": [
+      [
+        -24.0,
+        260.0
+      ],
+      [
+        -168.0,
+        260.0
+      ]
+    ],
+    "3": [
+      [
+        136.0,
+        260.0
+      ],
+      [
+        -360.0,
+        164.0
+      ]
+    ],
+    "4": [
+      [
+        -8.0,
+        -140.0
+      ],
+      [
+        -24.0,
+        -268.0
+      ]
+    ]
+  },
+  "parent_snapshot_owner": 0,
+  "parent_snapshot_step": 264,
+  "parent_snapshot_sha256": "5893d78a29a835d210c475905b127dc811b5de0289996ce9d2cce32630ee3db6",
+  "candidate_source_sha256": "d87f8058e0b7b49cf629374a71185ec22ddf412f3d8cc6d06f20338a0ab1b2d0",
+  "SDK_frames_added": 0,
+  "native_rounds": 0,
+  "limitations": [
+    "Observed wall/allowed/walkable arrays and pivots are actual retained author controller data, never tournament true map.",
+    "Original ownership/poses were not captured; nominal owners start at assigned baseline points, budget10000. This is NOT actual owner route or execution evidence.",
+    "R-sized regions are recomputed on the captured geometric graph, not blindly treated as former2R regions.",
+    "Historical snapshot loaded only by this external diagnostic; production source never reads it."
+  ]
+}
