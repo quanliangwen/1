@@ -1,0 +1,140 @@
+{
+  "status": "PASS_ONEWAY_PHASE_CONTRACT_AND_CURRENT_COMPLETION_GUARDS",
+  "checks": [
+    {
+      "name": "no_plan_original_exploration_forwarded",
+      "passed": true
+    },
+    {
+      "name": "prephase_defer_original",
+      "passed": true
+    },
+    {
+      "name": "prephase_survey_original",
+      "passed": true
+    },
+    {
+      "name": "prephase_sortie_original",
+      "passed": true
+    },
+    {
+      "name": "no_plan_cannot_place",
+      "passed": true
+    },
+    {
+      "name": "future_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "expired_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "wrong_leader_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "empty_goals_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "nan_goal_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "malformed_goal_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "bool_epoch_does_not_start_phase",
+      "passed": true
+    },
+    {
+      "name": "received_valid_plan_latches_phase",
+      "passed": true
+    },
+    {
+      "name": "accepted_plan_forces_current_replan",
+      "passed": true
+    },
+    {
+      "name": "phase_cancel_optional_survey",
+      "passed": true
+    },
+    {
+      "name": "postphase_defer_disabled",
+      "passed": true
+    },
+    {
+      "name": "postphase_survey_not_built",
+      "passed": true
+    },
+    {
+      "name": "postphase_empty_sortie_not_admitted",
+      "passed": true
+    },
+    {
+      "name": "valid_placement_route_unchanged",
+      "passed": true
+    },
+    {
+      "name": "exploratory_fallback_redirects_to_relay",
+      "passed": true
+    },
+    {
+      "name": "no_known_relay_route_holds_without_fake_path",
+      "passed": true
+    },
+    {
+      "name": "holding_brakes_instead_of_laser_fallback",
+      "passed": true
+    },
+    {
+      "name": "existing_emergency_escape_preserved",
+      "passed": true
+    },
+    {
+      "name": "valid_drop_command_not_cancelled",
+      "passed": true
+    },
+    {
+      "name": "phase_never_reverts_when_plan_expires",
+      "passed": true
+    },
+    {
+      "name": "empty_return_original_route_preserved",
+      "passed": true
+    },
+    {
+      "name": "preexisting_optional_sortie_recalled",
+      "passed": true
+    },
+    {
+      "name": "submission_condition_not_overridden",
+      "passed": true
+    },
+    {
+      "name": "last_own_bomb_not_enough_without_all_certificates",
+      "passed": true
+    },
+    {
+      "name": "all_certificates_and_no_better_peer_may_submit",
+      "passed": true
+    },
+    {
+      "name": "positive_budget_with_remaining_bomb_does_not_submit",
+      "passed": true
+    },
+    {
+      "name": "zero_budget_can_submit_with_remaining_bomb",
+      "passed": true
+    }
+  ],
+  "rule_sha256": "d5710177bc7ca8b26fc91dd0224229c504dd3848a18a4a6391031c2b1a1e2772",
+  "sdk_frames": 0,
+  "native_rounds": 0,
+  "limits": [
+    "Explicit protocol/memory fixture, not real SDK or performance.",
+    "Single local phase latch after original accepted fleet plan; no claim of simultaneous global transition or guaranteed completed route."
+  ]
+}

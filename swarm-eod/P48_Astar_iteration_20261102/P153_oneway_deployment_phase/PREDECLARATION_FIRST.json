@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_BEFORE_USER_PHASE_RULE_FIRST_SDK",
+  "parent_result": "E:\\codex\\P48_Astar_iteration_20261102\\P142_profile_and_task_chain\\BASELINE_FIRST.json",
+  "parent_result_sha256": "de619166a355b07d82ed3765b9d1c5771e9bf0ff28da4954d7cd968903f9c48c",
+  "code_sha256": "1fd3729e4627c9c10d4328a6fedd239a6551ff18cc8c04a394ba24dfe2f91ae4",
+  "manifest_sha256": "68c346e18406db06e432ba97a1c87972af10c6e1770ea779d58a5c7b335db6de",
+  "user_interpretation": "Explore first, then execute all inventory; one-way per actual fleet-plan receipt, not same-pixel or instant simultaneous deployment, not waiting until clock expiration.",
+  "case": "cross_sdk",
+  "horizon": 1000,
+  "wall_rate": 0.05,
+  "authored_seed": 615,
+  "maximum_cases": 1,
+  "gates": [
+    "All original finite/callback/inventory/loop checks except known parent health flag; per-owner minimum health no worse.",
+    "All five actually latch phase; all actual requests after phase, no executed final exploratory route after phase.",
+    "Full actual pre-first-phase frame rows identical to retained parent, actual post-phase commands/route decisions change.",
+    "All10, actual submitted map and surface credit, mean five raw maps, wall and time nonregress vs retained parent.",
+    "Controllable subtotal >= parent+0.25; first failure retained and no parameter/seed/label rescue."
+  ],
+  "unchanged": [
+    "Original readiness gate/coverage supplier/A-star/placement safety and confirmation/submission-budget guard",
+    "Map/sensing/SDK/threads/dependencies",
+    "No P145/P149 rule stacked"
+  ],
+  "source_reference": "PX4 Mission Mode engineering state/mission distinction only, https://docs.px4.io/main/en/flight_modes_mc/mission; no autopilot or threshold transplantation.",
+  "automatic_native": false,
+  "automatic_five": false,
+  "native_rounds": 0
+}

@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN_ORIGINAL_ASTARA_PLUS_ONEWAY_PHASE",
+  "base_archive_sha256": "7fdac2836596f050353dc6d6e1fff3f084b5f16eb25af7cf0e62c551cfcc810d",
+  "candidate_files": {
+    "req.txt": "b3cca67be315eafd20c437899a4af829b0b60d8cbc7ca8f7a8434c378e1457ba",
+    "src/swarm_rescue/solutions/active_coverage.py": "709380897d06cf9281474418b0d9e4d89d04d8896b21f7ba3c3235b317acb53e",
+    "src/swarm_rescue/solutions/anchor_mapping.py": "ba718902a90a7f89cbfd82f1b045c4cb8ae2491a5801d4caa3e48807cad5a60d",
+    "src/swarm_rescue/solutions/astar_grid.py": "ce924aeb37290fcecd07d0252b433df883c811f29f2a037432d2d84a631ba705",
+    "src/swarm_rescue/solutions/bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+    "src/swarm_rescue/solutions/bearing_memory.py": "044e3485507cad0e28e89f89e4b5db8b6c448afa24d19a6cb015713aaedb0176",
+    "src/swarm_rescue/solutions/boundary_anchor.py": "b04d511be6e728fab77c9413987835db73c5e38ae47c4c010f0faf73287d01b2",
+    "src/swarm_rescue/solutions/centre_geometry.py": "c92cf920fcdcf0f2265efc305ae0a85185fae4d3f5f36cb1eca63614e5848068",
+    "src/swarm_rescue/solutions/centre_geometry_review.py": "b7cd925e92d471fd82a714017748a2bc9cee65ee90fb36b3aed41a4771df4a55",
+    "src/swarm_rescue/solutions/centre_safety.py": "2fa37defe96767956f165460df7333c07d745b4aee3748c40e1002b675fb1509",
+    "src/swarm_rescue/solutions/completion_consensus.py": "cefe3d4bfb5f7ccfbbb3e2eca429b3f136cd986bba7d67e11a00b5a6ca43386d",
+    "src/swarm_rescue/solutions/counterfactual_commitment.py": "0b32d5d1b6aea69b186cb289b069c0c627d45e59885c2467dd0960a3d22c3c76",
+    "src/swarm_rescue/solutions/coverage_geometry.py": "bd7ab9456bf4eba8ea1557b7f4a2720f0bb44c48ba4e752ca59b3b1556fc277f",
+    "src/swarm_rescue/solutions/coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+    "src/swarm_rescue/solutions/deployment_phase.py": "d5710177bc7ca8b26fc91dd0224229c504dd3848a18a4a6391031c2b1a1e2772",
+    "src/swarm_rescue/solutions/exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+    "src/swarm_rescue/solutions/farthest_wall_cover.py": "a22e96ff56994f775aa2cd4acfba08bdc1e6b38467b3d7608a46eec64518ced8",
+    "src/swarm_rescue/solutions/fast_exploration.py": "5a6b87860573f4032ce87c111bc250df2793d64a0e1a6856613088c966d583d3",
+    "src/swarm_rescue/solutions/fast_exploration_edges.py": "e48ef065f3dfb5a143177bebad29b28cf2e03a648fe9dcfbea2b845dc5965ce7",
+    "src/swarm_rescue/solutions/fast_exploration_edges_optimized.py": "a7cabf8a24bca0fbe6b3d16b5cd15e4e44214c9ca497f13ed407b03d26c04796",
+    "src/swarm_rescue/solutions/fleet_endpoint_repair.py": "1ad2eadc1b7dbf2129f66239278a81acb9e6a0d071802b9a3f1887e747625fab",
+    "src/swarm_rescue/solutions/fleet_mission.py": "9ed3fa0abe7af3a4e1e7d9f628899c3a879bf981b24ea868088c606df561c87c",
+    "src/swarm_rescue/solutions/frame_mapping.py": "e384f2cee14db80c8cb8987a1b33d5922db75d4d78d38cbbe41d1f87fb197663",
+    "src/swarm_rescue/solutions/fresh_opportunity_audit.py": "d0f61de4abd1c3a773f622f87dc166c815cccce34917df49c8685365eb541077",
+    "src/swarm_rescue/solutions/geometry_navigation.py": "e17d9680667927a205e44044ab7d1d446f63bf17068baad53d6ebd80575c983a",
+    "src/swarm_rescue/solutions/geometry_route_view.py": "9da8acf065c764d7a5d56adebbd7ec441563c8f4202646ed794055e85fb3030e",
+    "src/swarm_rescue/solutions/greedy_mapping.py": "b1126db23395328c578abc7ac3dc1418c90e1d7f070997af27a6d6d6f26d3788",
+    "src/swarm_rescue/solutions/image_ref.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/swarm_rescue/solutions/joint_survey.py": "e990e73fc97add2bb7ff284fb62102beecd498840a5a17834b55d526322fb05c",
+    "src/swarm_rescue/solutions/line_regularization.py": "98ddd8d43f98e83af8ed8d40c9dcdcb3d5319ee3a96dcf6653e28b87076b437f",
+    "src/swarm_rescue/solutions/my_drone_eval.py": "563652642f95945e4cd43bbebfbed0524c208c0779f654658b24a7560bcb5db0",
+    "src/swarm_rescue/solutions/rectangular_boundary.py": "fc06feba4c540c431eb7b51e7c47d6bc6aa6cd0144cb868de8ca849006df6efe",
+    "src/swarm_rescue/solutions/route_columns.py": "acdf6ac603fbd79eae97b11975acf7a4e82e875f4073ca5815f375185faa3b8e",
+    "src/swarm_rescue/solutions/route_graph_fast.py": "614934c82fdcc5d81f4c25b6c668d2d3e39f99686b54854178fc8e49cb1289cb",
+    "src/swarm_rescue/solutions/scan_geometry.py": "e437c9acb0372a62740c948d74405d00554f1ebe76fed93ed09b864584bc114c",
+    "src/swarm_rescue/solutions/sensor_feedback.py": "24e3aeb647b19d76c5067e990eb30d96e43e119669056fc5cf074e32f3954314",
+    "src/swarm_rescue/solutions/short_wall_support.py": "4ec66cb725dee5147610d717a6f4332db59ab952a657918fe2ff7c1d48b26b0c",
+    "src/swarm_rescue/solutions/team_coverage.py": "28199e184f237acd67d24047b3be410bdd9d29df7ee3daa8acf2be8b7ec64b7f",
+    "src/swarm_rescue/solutions/team_coverage_lns.py": "21015bb198ae14795d0be9518159a59a111f1c64c2b087d422e341497126e6ba",
+    "src/swarm_rescue/solutions/team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+    "src/swarm_rescue/solutions/terminal_value.py": "b516cfd469c3abc6336eedb79834e4f67254b6bc62758b5f7dbd8cffb1db31d6",
+    "src/swarm_rescue/solutions/trust_region_cover.py": "d46865135f1caa5b3f8c83f45b648ef294d63f6c869ebb2a1cf627b7050b9306",
+    "src/swarm_rescue/solutions/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "changed_parent_files": [
+    "my_drone_eval.py"
+  ],
+  "new_modules": [
+    "deployment_phase.py"
+  ],
+  "official_release": false,
+  "concept": "No further voluntary exploratory target/survey/sortie/commitment deferral after receiving an original valid fleet deployment plan; sensing stays active.",
+  "limits": [
+    "Transition is per receiver at actual message time, not simultaneous fleet barrier.",
+    "No mission completion guarantee; unreachable assignments use original replanning and relay return/hold. Original budget exit stays."
+  ]
+}

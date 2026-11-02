@@ -1,0 +1,68 @@
+{
+  "status": "CONFIRMED_BEARING_ADDITION_DOMINATES_THIS_FROZEN_AUTHORED_MAP_LOSS",
+  "source_result_sha256": "28c3be54cf0a8f6ed3249d49761fff627a8088cd86c2c17d2ac2172b2b0dea21",
+  "rows": [
+    {
+      "owner": 0,
+      "frame_map": 99.34904981561334,
+      "full_map": 95.47034291894202,
+      "map_change": -3.878706896671318,
+      "correct_credit_change_pp": 0.008879417510221366,
+      "false_penalty_change_pp": 3.88758631418154,
+      "added_pixels": 8107,
+      "removed_pixels": 0
+    },
+    {
+      "owner": 1,
+      "frame_map": 99.42070677995555,
+      "full_map": 95.55629550701474,
+      "map_change": -3.8644112729408135,
+      "correct_credit_change_pp": 0.0,
+      "false_penalty_change_pp": 3.864411272940808,
+      "added_pixels": 7701,
+      "removed_pixels": 0
+    },
+    {
+      "owner": 2,
+      "frame_map": 99.26522814683435,
+      "full_map": 95.97229621736815,
+      "map_change": -3.2929319294661923,
+      "correct_credit_change_pp": 0.004439708755110683,
+      "false_penalty_change_pp": 3.2973716382213145,
+      "added_pixels": 7305,
+      "removed_pixels": 0
+    },
+    {
+      "owner": 3,
+      "frame_map": 99.40126083392991,
+      "full_map": 95.58106899515518,
+      "map_change": -3.8201918387747327,
+      "correct_credit_change_pp": 0.0,
+      "false_penalty_change_pp": 3.8201918387747518,
+      "added_pixels": 8233,
+      "removed_pixels": 0
+    },
+    {
+      "owner": 4,
+      "frame_map": 99.35952757163193,
+      "full_map": 95.21834478986302,
+      "map_change": -4.141182781768904,
+      "correct_credit_change_pp": 0.004439708755099581,
+      "false_penalty_change_pp": 4.145622490523997,
+      "added_pixels": 8706,
+      "removed_pixels": 0
+    }
+  ],
+  "mean_map_change": -3.799484943924392,
+  "actual_selected_owner": 0,
+  "actual_selected_map": 95.47034291894202,
+  "original_controller_and_health_failure_unchanged": true,
+  "sdk_frames": 779,
+  "native_rounds": 0,
+  "conclusion": "In this exact final own-memory state, most precision loss is caused by the final multi-bearing additions, not lack of wall observations or short-wall/frame additions.",
+  "limits": [
+    "Authored CROSS lacks the varied small-object geometry of all five official maps; do not remove the entire layer and assume a game gain.",
+    "A post-freeze rendering counterfactual does not measure the closed-loop effects of changing the layer also used for coverage values.",
+    "Do not stack this map hypothesis into user-requested P153 phase test."
+  ]
+}
