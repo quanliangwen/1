@@ -1,0 +1,5 @@
+Server root: /home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R07_20261102
+Before launch: inspect actual previous controller3496937,start_ticks405491798, R06CURRENT_POINTER/STATE/logs, actualworkers and memory. R06must have all7terminal and statuspilot_failed_requires_diagnosis, controller/workersdead. Never resume oldcontroller/validwave.
+Only entry: /usr/bin/python3.8 -B advance.py (cwd=R07root), detached withpersistent advance.log and unique advance.lock/controller.lock. This first checks frozenfiles then syntheticpreflight, all40B reuseaudit,7candidatepilot,independentaudit; only registeredgatespass thenfresh1200full.
+Resource guard maylower concurrency; workersalways use600s frombeforePopen,15sreserve,M1m,.99/.975,seeds832273..832302. All source/input/resultsave andfsynccounted. Summaries/independentpostprocessing outside optimizationbudget add no search/evaluation.
+Protocol/source frozenfiles remainunchanged duringrun. Candidate resultsnever workerinputs; researchhistoricalvectors excludedfromexecutionfreeze/inputallowlist. No validwave repeated; anynewmechanism separateversiondirectory.
