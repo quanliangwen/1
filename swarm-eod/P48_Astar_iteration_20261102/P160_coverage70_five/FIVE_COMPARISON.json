@@ -1,0 +1,8025 @@
+{
+  "status": "COMPLETE_REVIEWED_CORNER_FIVE_MAP_OBSERVATION",
+  "baseline_mean": 74.25588336546745,
+  "cluster_mean": 72.71993703138095,
+  "mean_delta": -1.5359463340865063,
+  "placed": 48,
+  "expected": 50,
+  "blue_mean": 96.4928,
+  "baseline_blue_mean": 97.5776,
+  "evaluation_valid": true,
+  "audit_integrity": true,
+  "red_wall_hits": 0,
+  "blue_wall_hits": 0,
+  "maps_with_accepted_proposals": 3,
+  "maps_with_actual_majority": 0,
+  "weighted_mean_changes": {
+    "map_points": -1.409416017595376,
+    "wall_points": -0.7174903164911314,
+    "time_points": 0.15799999999999984,
+    "blue_difficulty_points": 0.43296000000000445
+  },
+  "rows": [
+    {
+      "map": "Map01",
+      "baseline_full": 77.15153419360432,
+      "cluster_full": 75.22946781783159,
+      "delta": -1.9220663757727294,
+      "baseline_map": 96.2063286166453,
+      "map_score": 90.04443914223509,
+      "baseline_wall": 86.78184942640841,
+      "wall_score": 85.02624123357019,
+      "baseline_time": 80.60000000000001,
+      "time_score": 88.5,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 1115,
+      "red_walltime": 56.28912377357483,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 3.631999999999991,
+      "layout_contribution": 4.352000000000004,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 1452,
+      "baseline_blue_score": 90.92000000000002,
+      "blue_steps": 1538,
+      "blue_score": 89.11999999999999,
+      "accepted_proposals": 0,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": null,
+      "actual_cluster_with12": null,
+      "majority_executed": false,
+      "concentration": [],
+      "issued_plan_chain": [
+        {
+          "owner": 0,
+          "step": 744,
+          "signature": "8f634d1ccebf8d24fb8362e662799ec5ef72f538401e936573780e9c7ceeb98b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -153.0,
+                  312.0
+                ],
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -153.0,
+                  8.0
+                ],
+                [
+                  -153.0,
+                  136.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  -152.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  87.0,
+                  -344.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 744,
+          "signature": "4d335fa6a2178ff4ac25eefe199d5dffa7d2ccf1485293f43a02a48485c0cf2b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -153.0,
+                312.0
+              ],
+              "1": [
+                -153.0,
+                8.0
+              ],
+              "2": [
+                -569.0,
+                88.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -153.0,
+                  312.0
+                ],
+                [
+                  -153.0,
+                  152.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -153.0,
+                  8.0
+                ],
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -184.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 816,
+          "signature": "dec5fd84f04c31693a691b3a49108833b12f0c62c0084a922fb94de84f5f83f9",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -153.0,
+                312.0
+              ],
+              "1": [
+                551.0,
+                344.0
+              ],
+              "2": [
+                -569.0,
+                88.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -153.0,
+                  312.0
+                ],
+                [
+                  -153.0,
+                  168.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -184.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 821,
+          "signature": "851824d4540f23d1e4c4622e31d50e7249a963686174e79916f849cbdb90d889",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                551.0,
+                344.0
+              ],
+              "2": [
+                -569.0,
+                88.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  -153.0,
+                  168.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  88.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -200.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 845,
+          "signature": "91cc5b989a11a3512f15e50b445b76a93898f8a44824f2a84be6e0f44b287ff3",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -153.0,
+                168.0
+              ],
+              "1": [
+                551.0,
+                344.0
+              ],
+              "2": [
+                -569.0,
+                88.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  -153.0,
+                  168.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -184.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 858,
+          "signature": "a35fbcf0876155bc0160c1d846aae25eccc6ab0959f4ab1579086cd5c8b6473b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                551.0,
+                344.0
+              ],
+              "2": [
+                -569.0,
+                88.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ],
+              [
+                -156.2210374563179,
+                177.38103535405023
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -569.0,
+                  88.0
+                ],
+                [
+                  -585.0,
+                  -88.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -184.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 906,
+          "signature": "8b0e51abbf995d00593a5216fd6dec9dcdf0cdfa528488882020219cd012c48d",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                551.0,
+                344.0
+              ],
+              "3": [
+                343.0,
+                -24.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ],
+              [
+                -156.2210374563179,
+                177.38103535405023
+              ],
+              [
+                -561.1011955002543,
+                96.0060881514999
+              ],
+              [
+                -582.9083064086844,
+                -77.47883662634078
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  343.0,
+                  -24.0
+                ],
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  247.0,
+                  -184.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 930,
+          "signature": "1027fdf80c00697f3ddfcb14c2372836e70eb634385ec7590dfa754b3158267b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ],
+              [
+                -156.2210374563179,
+                177.38103535405023
+              ],
+              [
+                -561.1011955002543,
+                96.0060881514999
+              ],
+              [
+                -582.9083064086844,
+                -77.47883662634078
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 1,
+          "step": 940,
+          "signature": "96339606459814ec00de49675a88f2e3975c9af8666723221838c4ecee4cc74f",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                551.0,
+                344.0
+              ],
+              "3": [
+                343.0,
+                72.0
+              ],
+              "4": [
+                247.0,
+                -328.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                344.76042618455233,
+                -13.22888506880934
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ],
+            "3": [
+              1,
+              [
+                [
+                  343.0,
+                  72.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  247.0,
+                  -328.0
+                ],
+                [
+                  311.0,
+                  -152.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 4,
+          "step": 952,
+          "signature": "b7608481bca4c2477af8d19c58f352d2810b956cbecc3472a6993409c0c0c0ea",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                236.71050378705507,
+                -329.774785831308
+              ],
+              [
+                233.63421662262027,
+                -193.78576433443618
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 1,
+          "step": 964,
+          "signature": "67ccf5f26385044a412d8697e8b982542dff88df8026fbed9a2a63c06386d7ab",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                551.0,
+                344.0
+              ]
+            },
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                344.76042618455233,
+                -13.22888506880934
+              ],
+              [
+                347.8282957461183,
+                62.571618344746575
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  551.0,
+                  344.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 985,
+          "signature": "78c60571f11a281bfe3c8582abaf7fee5baea6d5ea05abef3654590f88a45cae",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                344.76042618455233,
+                -13.22888506880934
+              ],
+              [
+                347.8282957461183,
+                62.571618344746575
+              ],
+              [
+                543.4094533556118,
+                334.7139858867279
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 0,
+          "step": 1002,
+          "signature": "45f2e5d372f629bb527e37a148a618c476ddf330dcc7202a048f0875a31228ab",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                -158.99735962950552,
+                302.713511495695
+              ],
+              [
+                -156.2210374563179,
+                177.38103535405023
+              ],
+              [
+                -561.1011955002543,
+                96.0060881514999
+              ],
+              [
+                -582.9083064086844,
+                -77.47883662634078
+              ],
+              [
+                236.71050378705507,
+                -329.774785831308
+              ],
+              [
+                233.63421662262027,
+                -193.78576433443618
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 1,
+          "step": 1105,
+          "signature": "526e66db0b10b5ac36cf9a635c18939a139330b20e5582ed2870996993e2def8",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -160.03608306373786,
+                -0.5349738201663994
+              ],
+              [
+                344.76042618455233,
+                -13.22888506880934
+              ],
+              [
+                347.8282957461183,
+                62.571618344746575
+              ],
+              [
+                543.4094533556118,
+                334.7139858867279
+              ]
+            ]
+          },
+          "plans": {}
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 13,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 79.24739837646484,
+          "planned": 10,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "last_proposal": {
+            "corner": [
+              -505.0,
+              72.0
+            ],
+            "anchor": [
+              -521.0,
+              88.0
+            ],
+            "clustered": 6,
+            "wanted": 6,
+            "coverage_ratio": 0.678714975236146
+          },
+          "elapsed": 0.1942307073622942
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 29.485998153686523,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 5,
+          "last_proposal": {
+            "corner": [
+              -537.0,
+              136.0
+            ],
+            "anchor": [
+              -505.0,
+              104.0
+            ],
+            "clustered": 5,
+            "wanted": 5,
+            "coverage_ratio": 0.6758742556669071
+          },
+          "elapsed": 0.04365066485479474
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 23.828197479248047,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 5,
+          "required_suffix": 5,
+          "elapsed": 0.03652939619496465
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 23.331600189208984,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.036211214028298855
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 15.88079833984375,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 5,
+          "required_suffix": 5,
+          "elapsed": 0.03352714190259576
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 15.943998336791992,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 3,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.0330981663428247
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 11.804399490356445,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 5,
+          "reserved_count": 3,
+          "required_suffix": 4,
+          "elapsed": 0.030283148866146803
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.1831132471561432e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.234002411365509e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.711110472679138e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0089948773384094e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1819880455732346e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.6619917005300522e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.89111140370369e-06
+        }
+      ],
+      "note": "No accepted proposal means no tested cluster anchor; null is not zero physical bombs in all possible corners."
+    },
+    {
+      "map": "Map02",
+      "baseline_full": 75.81503670653098,
+      "cluster_full": 74.48412560128449,
+      "delta": -1.3309111052464857,
+      "baseline_map": 95.58098052669712,
+      "map_score": 97.00261318492731,
+      "baseline_wall": 90.12273221591204,
+      "wall_score": 79.67409504410419,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 1477,
+      "red_walltime": 106.29456520080566,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 0.04800000000000182,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 2195,
+      "baseline_blue_score": 100.0,
+      "blue_steps": 2126,
+      "blue_score": 99.88,
+      "accepted_proposals": 1,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": 2,
+      "actual_cluster_with12": 3,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            128.0,
+            90.0
+          ],
+          "anchor": [
+            112.0,
+            58.0
+          ],
+          "radius": 216.0,
+          "actual_strict": 2,
+          "actual_with12": 3
+        }
+      ],
+      "issued_plan_chain": [
+        {
+          "owner": 0,
+          "step": 744,
+          "signature": "7a8342cf0e31a993837059ee364b2608aec8495e7b5e40aa85db25b1d9a70d8d",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  432.0,
+                  -278.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  112.0,
+                  -6.0
+                ],
+                [
+                  0.0,
+                  346.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  -432.0,
+                  282.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -432.0,
+                  -278.0
+                ],
+                [
+                  -176.0,
+                  -198.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -176.0,
+                  186.0
+                ],
+                [
+                  304.0,
+                  90.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 768,
+          "signature": "c08ba25b90a1b76f1e31dc45f9b9ca1eafe04690f6ac2c86f01b400911b03590",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                298.0
+              ],
+              "1": [
+                112.0,
+                -6.0
+              ],
+              "2": [
+                -96.0,
+                -6.0
+              ],
+              "3": [
+                -432.0,
+                -278.0
+              ],
+              "4": [
+                -176.0,
+                186.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  298.0
+                ],
+                [
+                  304.0,
+                  122.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  112.0,
+                  -6.0
+                ],
+                [
+                  48.0,
+                  58.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  208.0,
+                  -134.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -432.0,
+                  -278.0
+                ],
+                [
+                  -48.0,
+                  -70.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -176.0,
+                  186.0
+                ],
+                [
+                  16.0,
+                  250.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 792,
+          "signature": "c99d61ed113450ddb6834dca206bf9d9755ac886e16152271b3151ed448ccae3",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                298.0
+              ],
+              "1": [
+                112.0,
+                -6.0
+              ],
+              "2": [
+                -96.0,
+                -6.0
+              ],
+              "4": [
+                -176.0,
+                186.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  298.0
+                ],
+                [
+                  448.0,
+                  -262.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  112.0,
+                  -6.0
+                ],
+                [
+                  -432.0,
+                  282.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  -432.0,
+                  -278.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -176.0,
+                  186.0
+                ],
+                [
+                  0.0,
+                  346.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 840,
+          "signature": "a60861fc3df958a4e9b1732616b0ad6cd9eebda9869070aa7e80e18c3badddbf",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                298.0
+              ],
+              "1": [
+                112.0,
+                -6.0
+              ],
+              "2": [
+                -96.0,
+                -6.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  298.0
+                ],
+                [
+                  448.0,
+                  -262.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  112.0,
+                  -6.0
+                ],
+                [
+                  -432.0,
+                  282.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  -432.0,
+                  -278.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 948,
+          "signature": "50513dc97fc5d7264d03c293c56b1191d508e55c3c677f38b0e58f7930d224a1",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                298.0
+              ],
+              "1": [
+                112.0,
+                -6.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  298.0
+                ],
+                [
+                  432.0,
+                  -278.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  112.0,
+                  -6.0
+                ],
+                [
+                  -80.0,
+                  42.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 972,
+          "signature": "8e822f5936fa9a7ad649a1b8b06cc96ec9f478f9142668e4e121effebabfeff9",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  112.0,
+                  -6.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 996,
+          "signature": "3ca231ce11d4d2c625ab2284d2f3ab8f552699c94c6bb6b06c12ed21ebdc4f72",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -96.0,
+                -6.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -96.0,
+                  -6.0
+                ],
+                [
+                  112.0,
+                  -6.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1044,
+          "signature": "37f4c92cb5337145b21c51df0dbd7c0ed6fc56d3165d112dc1aa323a14d82738",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -432.0,
+                -294.0
+              ],
+              "4": [
+                -176.0,
+                186.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  -278.0
+                ],
+                [
+                  304.0,
+                  138.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  -432.0,
+                  282.0
+                ]
+              ]
+            ],
+            "2": [
+              1,
+              [
+                [
+                  -432.0,
+                  -294.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -192.0,
+                  -182.0
+                ],
+                [
+                  -544.0,
+                  346.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -176.0,
+                  186.0
+                ],
+                [
+                  16.0,
+                  346.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1068,
+          "signature": "c9f6cd1bf1d7a207abcf9e6641d23ef4dc6b405a79942441bc5ce36f5589ce6b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                282.0
+              ],
+              "1": [
+                -448.0,
+                298.0
+              ],
+              "2": [
+                -432.0,
+                -294.0
+              ],
+              "3": [
+                -192.0,
+                -182.0
+              ],
+              "4": [
+                -176.0,
+                186.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  432.0,
+                  -278.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  -448.0,
+                  298.0
+                ]
+              ]
+            ],
+            "2": [
+              1,
+              [
+                [
+                  -432.0,
+                  -294.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -192.0,
+                  -182.0
+                ],
+                [
+                  -496.0,
+                  -406.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -176.0,
+                  186.0
+                ],
+                [
+                  0.0,
+                  346.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1092,
+          "signature": "de64b76fe9059b16d774ffe043a6bc3dab6700a9d44788d54f0af18dcb812d0e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                282.0
+              ],
+              "1": [
+                -448.0,
+                298.0
+              ],
+              "2": [
+                -432.0,
+                -294.0
+              ],
+              "3": [
+                -192.0,
+                -182.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  448.0,
+                  -262.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  -448.0,
+                  298.0
+                ]
+              ]
+            ],
+            "2": [
+              1,
+              [
+                [
+                  -432.0,
+                  -294.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -192.0,
+                  -182.0
+                ],
+                [
+                  192.0,
+                  -150.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1140,
+          "signature": "893c8ab64364e5d0238a94ac1f80f4a407d213a4a22d1910b7096b098024be41",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                282.0
+              ],
+              "1": [
+                -448.0,
+                298.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  432.0,
+                  -278.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  -448.0,
+                  298.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1164,
+          "signature": "d9ff8f0ede27f428f85385b7129e35fa753fa78f2a82f2ba8990fd646157cfb1",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                282.0
+              ],
+              "1": [
+                -448.0,
+                298.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  176.0,
+                  -150.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  -448.0,
+                  298.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1194,
+          "signature": "5f9a420529ea16415db6ff9f17c5be000d7cb97d4d65f6c1352cacf1d59e958b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                432.0,
+                282.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  432.0,
+                  282.0
+                ],
+                [
+                  432.0,
+                  -278.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1242,
+          "signature": "62ecbb8741a767ef9c5af6ba278bf114d2d5912225feb6009c3fef9c4874f399",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  448.0,
+                  -262.0
+                ],
+                [
+                  160.0,
+                  -166.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1266,
+          "signature": "e31bacab930ab9f22bf62964c650efba47c5d6c0e957b3250e67fc690292ce83",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                448.0,
+                -262.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  448.0,
+                  -262.0
+                ],
+                [
+                  160.0,
+                  -166.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1386,
+          "signature": "e0c3c0ff261cdfc7a4a1daaed2d434135ba3b922e42a751ca5fc286b3132bbc5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                448.0,
+                -262.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  448.0,
+                  -262.0
+                ],
+                [
+                  176.0,
+                  -150.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1387,
+          "signature": "702a1e889ed9f88ad6d229fa45497d1a5f5dcdab58cb74c0b58623936aedc50b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ],
+              [
+                447.7872891511354,
+                -271.6615044195349
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  176.0,
+                  -150.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1411,
+          "signature": "b59a11bb9d63cf22e9417cf55439e093c083ead40c4cced0d11e5c80ce9613d5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                176.0,
+                -150.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ],
+              [
+                447.7872891511354,
+                -271.6615044195349
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  176.0,
+                  -150.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1459,
+          "signature": "932411deef3dad34a5bfee398e3b7da147a29090628f432dff298d22a87d6b59",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                176.0,
+                -150.0
+              ]
+            },
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ],
+              [
+                447.7872891511354,
+                -271.6615044195349
+              ],
+              [
+                -423.5962346607772,
+                -302.2649385718778
+              ],
+              [
+                -189.52327485780955,
+                -191.7783664960159
+              ],
+              [
+                -179.47774367720407,
+                175.3226282412893
+              ],
+              [
+                -10.04503539303631,
+                348.2323704517716
+              ],
+              [
+                -456.538744103211,
+                293.03440492236854
+              ],
+              [
+                -544.7627092120574,
+                319.99289866678913
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  176.0,
+                  -150.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1477,
+          "signature": "7e376cabba83014a13d85f2f247b46383ad1a8bc1bf693338e012126cf276eb4",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -84.58231752344035,
+                -7.288652151244063
+              ],
+              [
+                78.85960329209887,
+                30.183020614845557
+              ],
+              [
+                447.7872891511354,
+                -271.6615044195349
+              ],
+              [
+                -423.5962346607772,
+                -302.2649385718778
+              ],
+              [
+                -189.52327485780955,
+                -191.7783664960159
+              ],
+              [
+                -179.47774367720407,
+                175.3226282412893
+              ],
+              [
+                -10.04503539303631,
+                348.2323704517716
+              ],
+              [
+                -456.538744103211,
+                293.03440492236854
+              ],
+              [
+                -544.7627092120574,
+                319.99289866678913
+              ],
+              [
+                174.20875627050083,
+                -161.2827876486138
+              ]
+            ]
+          },
+          "plans": {}
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 156.9754180908203,
+          "planned": 10,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 0.400560247246176
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 2,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 4,
+          "accepted": true,
+          "baseline_value": 63.888328552246094,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 4,
+          "last_proposal": {
+            "corner": [
+              -112.0,
+              -86.0
+            ],
+            "anchor": [
+              -64.0,
+              -70.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.8599032953098303
+          },
+          "anchor": [
+            112.0,
+            58.0
+          ],
+          "corner": [
+            128.0,
+            90.0
+          ],
+          "radius": 216.0,
+          "coverage_ratio": 0.844298145081899,
+          "clustered": 5,
+          "fixed_target": 6,
+          "baseline_clustered": 1,
+          "step": 768,
+          "elapsed": 0.12836800096556544
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 68.9495849609375,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.06285649491474032
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 55.72666549682617,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 3,
+          "required_suffix": 5,
+          "elapsed": 0.060180345084518194
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 42.92250061035156,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 2,
+          "required_suffix": 5,
+          "elapsed": 0.05668549193069339
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 37.940834045410156,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 2,
+          "elapsed": 0.5250972541980445
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 45.13083267211914,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.3773229727521539
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.673121005296707e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "no_two_measured_corner_surfaces",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 79.18374633789062,
+          "planned": 6,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 2,
+          "elapsed": 0.05156663013622165
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "no_two_measured_corner_surfaces",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 35.85333251953125,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 2,
+          "elapsed": 0.4208698938600719
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "no_two_measured_corner_surfaces",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 39.252498626708984,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 5,
+          "elapsed": 0.051842689979821444
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "no_two_measured_corner_surfaces",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 31.803333282470703,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 4,
+          "elapsed": 0.05483234487473965
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3840850442647934e-05
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    },
+    {
+      "map": "Map03",
+      "baseline_full": 73.86732099758838,
+      "cluster_full": 76.66009990238929,
+      "delta": 2.7927789048009117,
+      "baseline_map": 94.79140715847379,
+      "map_score": 94.7724179488947,
+      "baseline_wall": 82.3580870917574,
+      "wall_score": 83.5374546397097,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 1384,
+      "red_walltime": 93.2937490940094,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 2.566399999999999,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 1620,
+      "baseline_blue_score": 100.0,
+      "blue_steps": 3282,
+      "blue_score": 93.584,
+      "accepted_proposals": 6,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": 3,
+      "actual_cluster_with12": 5,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        },
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        },
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        },
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        },
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        },
+        {
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "radius": 180.0,
+          "actual_strict": 3,
+          "actual_with12": 5
+        }
+      ],
+      "issued_plan_chain": [
+        {
+          "owner": 0,
+          "step": 528,
+          "signature": "5f3d4a519c152fb99e4d25b42cbc165bfdebd6f6b0bd87590496f7293419fb86",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -260.5,
+                -81.0
+              ],
+              "1": [
+                -164.5,
+                175.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "3": [
+                299.5,
+                79.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -260.5,
+                  -81.0
+                ],
+                [
+                  -196.5,
+                  79.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -164.5,
+                  175.0
+                ],
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  11.5,
+                  -209.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  299.5,
+                  79.0
+                ],
+                [
+                  187.5,
+                  207.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -340.5,
+                  31.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 552,
+          "signature": "52c059669e04770c7bbb1cdf53477be6e46e744128b84fcbacb390bac12b9a15",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -260.5,
+                -97.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "3": [
+                299.5,
+                79.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -260.5,
+                  -97.0
+                ],
+                [
+                  187.5,
+                  207.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  299.5,
+                  79.0
+                ],
+                [
+                  -356.5,
+                  111.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  11.5,
+                  -209.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 600,
+          "signature": "383c97d23e5eaa21f1e82df13c219fba31b5d84ae4b96bae4f6d1d9a7c2b532b",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -260.5,
+                -97.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "3": [
+                299.5,
+                79.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -260.5,
+                  -97.0
+                ],
+                [
+                  -356.5,
+                  111.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -164.5,
+                  239.0
+                ],
+                [
+                  -324.5,
+                  191.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -340.5,
+                  -17.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  299.5,
+                  79.0
+                ],
+                [
+                  187.5,
+                  207.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 696,
+          "signature": "f02d00fa595da7aa46b693a06bec21afa5d8db853379d19c8fef80bc2242b134",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -260.5,
+                -97.0
+              ],
+              "1": [
+                -180.5,
+                239.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "3": [
+                299.5,
+                79.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -260.5,
+                  -97.0
+                ],
+                [
+                  -356.5,
+                  31.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -180.5,
+                  239.0
+                ],
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -324.5,
+                  191.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  299.5,
+                  79.0
+                ],
+                [
+                  -4.5,
+                  -193.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 701,
+          "signature": "c73351fb0eb9e0bd99455c0d3237bec1bc9c74a4d2f1003cb49f7db33faf20c6",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -180.5,
+                239.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "3": [
+                299.5,
+                79.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  -356.5,
+                  31.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -180.5,
+                  239.0
+                ],
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -324.5,
+                  191.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  299.5,
+                  79.0
+                ],
+                [
+                  -4.5,
+                  -193.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 725,
+          "signature": "3204c1ef04d26daa2072a966bb1424dfc814270136cf36912cdff7106c3bbd03",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -356.5,
+                31.0
+              ],
+              "1": [
+                -180.5,
+                239.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  -356.5,
+                  31.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  -180.5,
+                  239.0
+                ],
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -324.5,
+                  191.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 758,
+          "signature": "dc28fe8c7bde1325ce341ed3da6a01dd2790007e8284d86f4bb4f4045ddb8da5",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -180.5,
+                239.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              2,
+              [
+                [
+                  -180.5,
+                  239.0
+                ],
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -324.5,
+                  191.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 782,
+          "signature": "55a703f49accab9435efc04a840b63dea3d1c4c86f7094d1a6ad7702ca8bc2a3",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -356.5,
+                143.0
+              ],
+              "2": [
+                -468.5,
+                -177.0
+              ],
+              "4": [
+                -164.5,
+                -97.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -468.5,
+                  -177.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  -164.5,
+                  -97.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 806,
+          "signature": "64d8286261e1dbe1cac27cfb3ca2d108fb72c11e845b429349c7028c421eb98e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -356.5,
+                143.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -356.5,
+                  143.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 878,
+          "signature": "fcff31c1fa797fe18aa770b41b7146389c31096a2efe0ad2af8aa64397878418",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "4": [
+                -84.5,
+                -145.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ]
+            ]
+          },
+          "plans": {
+            "4": [
+              2,
+              [
+                [
+                  -84.5,
+                  -145.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 926,
+          "signature": "81e78be9adab461fb24293a6eb960cbc4869e060fb5c925cbf3961a1ccb2eef6",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "4": [
+                -84.5,
+                -145.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ]
+            ]
+          },
+          "plans": {
+            "4": [
+              2,
+              [
+                [
+                  -84.5,
+                  -145.0
+                ],
+                [
+                  11.5,
+                  -193.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 950,
+          "signature": "978defb22424786a4046b27ee8cddaf7f3a8c7492967fbcc30c1b6ce30b7af4e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "4": [
+                -4.5,
+                -193.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -164.5,
+                  79.0
+                ],
+                [
+                  -500.5,
+                  -177.0
+                ]
+              ]
+            ],
+            "4": [
+              1,
+              [
+                [
+                  -4.5,
+                  -193.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 974,
+          "signature": "761afca1b60230a874fbdfce1ebf8a09bd60b73a239ccf2b991cc153adf8f381",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -164.5,
+                79.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -164.5,
+                  79.0
+                ],
+                [
+                  -500.5,
+                  -177.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 998,
+          "signature": "8cdb49279a8c2e51f69a49c002eccb17f3b3e49744011272f0185f45c04d0eb7",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -500.5,
+                -177.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -500.5,
+                  -177.0
+                ],
+                [
+                  91.5,
+                  335.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1118,
+          "signature": "419233efbb62b7c535d3184695517adf54127f5e99fca6479bdd5507495e3a31",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -500.5,
+                -177.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -500.5,
+                  -177.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1248,
+          "signature": "ae74132dc214685a871fc98b0d0c972b63a3de31e8d69e8ee2131738087727aa",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -500.5,
+                -177.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -500.5,
+                  -177.0
+                ],
+                [
+                  -180.5,
+                  95.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1284,
+          "signature": "08409940b8849f1b347f6fd4313d0acbe75899c2220f725936689c09def06042",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 0,
+          "step": 1344,
+          "signature": "b24a7d333b64b53ce05a6a8a40698cd9413ba9d83454596536b7ed33d409513d",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -196.5,
+                79.0
+              ]
+            },
+            "confirmed": [
+              [
+                -254.02512176511863,
+                -104.33086100948479
+              ],
+              [
+                -347.84574973762426,
+                38.50380219036289
+              ],
+              [
+                -189.84172872206707,
+                238.03359031641205
+              ],
+              [
+                -363.31084017099965,
+                181.43242939096294
+              ],
+              [
+                295.71776307639516,
+                69.91714931948647
+              ],
+              [
+                184.5102190827534,
+                196.84483209716956
+              ],
+              [
+                -75.31083396790007,
+                -151.63203658753687
+              ],
+              [
+                -15.30879171552502,
+                -188.19789543775397
+              ],
+              [
+                -492.9393505249567,
+                -181.74342915613295
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              1,
+              [
+                [
+                  -196.5,
+                  79.0
+                ]
+              ]
+            ]
+          }
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "ACCEPTED",
+          "call": 1,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 17,
+          "attempts": 4,
+          "accepted": true,
+          "baseline_value": 110.45069885253906,
+          "planned": 10,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "last_proposal": {
+            "corner": [
+              27.5,
+              -209.0
+            ],
+            "anchor": [
+              -4.5,
+              -193.0
+            ],
+            "clustered": 6,
+            "wanted": 6,
+            "coverage_ratio": 0.7862054097694591
+          },
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.9140740128786404,
+          "clustered": 6,
+          "fixed_target": 6,
+          "baseline_clustered": 4,
+          "step": 528,
+          "elapsed": 0.26567902229726315
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 44.88218688964844,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.05315490625798702
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 3,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 6,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 59.888893127441406,
+          "planned": 6,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "last_proposal": {
+            "corner": [
+              -164.5,
+              95.0
+            ],
+            "anchor": [
+              -196.5,
+              79.0
+            ],
+            "clustered": 5,
+            "wanted": 5,
+            "coverage_ratio": 0.909476292172784
+          },
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.909476292172784,
+          "clustered": 5,
+          "fixed_target": 6,
+          "baseline_clustered": 2,
+          "step": 600,
+          "elapsed": 0.05899239610880613
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 4,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 55.641151428222656,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 4,
+          "last_proposal": {
+            "corner": [
+              -164.5,
+              95.0
+            ],
+            "anchor": [
+              -196.5,
+              79.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.9250239585175997
+          },
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.9250239585175997,
+          "clustered": 4,
+          "fixed_target": 6,
+          "baseline_clustered": 3,
+          "step": 696,
+          "elapsed": 0.05590312136337161
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 5,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 54.81831359863281,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 4,
+          "required_suffix": 4,
+          "carry_previous_suffix": true,
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.9270775189808746,
+          "clustered": 4,
+          "fixed_target": 6,
+          "baseline_clustered": 3,
+          "step": 701,
+          "elapsed": 0.05470771575346589
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 6,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 42.8375358581543,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 4,
+          "required_suffix": 3,
+          "carry_previous_suffix": true,
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.8220703074757151,
+          "clustered": 3,
+          "fixed_target": 6,
+          "baseline_clustered": 1,
+          "step": 725,
+          "elapsed": 0.05026628728955984
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 31.14881134033203,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.26979086780920625
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 7,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 39.057342529296875,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 3,
+          "required_suffix": 3,
+          "carry_previous_suffix": true,
+          "anchor": [
+            -196.5,
+            79.0
+          ],
+          "corner": [
+            -164.5,
+            95.0
+          ],
+          "radius": 180.0,
+          "coverage_ratio": 0.8398798685692951,
+          "clustered": 3,
+          "fixed_target": 6,
+          "baseline_clustered": 1,
+          "step": 758,
+          "elapsed": 0.05039780167862773
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 23.94405746459961,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.2474572309292853
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 27.487640380859375,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.27390577597543597
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2800097465515137e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 33.99197006225586,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.24245164170861244
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 30.56298828125,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.2634794218465686
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0061077773571014e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 32.755638122558594,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "required_suffix": 6,
+          "elapsed": 0.2756502260453999
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3649929314851761e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2950040400028229e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 30.838951110839844,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 7,
+          "reserved_count": 1,
+          "required_suffix": 4,
+          "elapsed": 0.05405270308256149
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_two_measured_corner_surfaces",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 33.49861145019531,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 8,
+          "reserved_count": 0,
+          "elapsed": 0.32300306111574173
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    },
+    {
+      "map": "Map04",
+      "baseline_full": 72.15789980636052,
+      "cluster_full": 67.00982928370104,
+      "delta": -5.148070522659481,
+      "baseline_map": 95.54153511104697,
+      "map_score": 87.6305131755636,
+      "baseline_wall": 65.87166125418524,
+      "wall_score": 65.90086347959621,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 9,
+      "expected": 10,
+      "red_steps": 1932,
+      "red_walltime": 177.07060074806213,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 1.2127999999999872,
+      "layout_contribution": 0.014399999999997136,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 9,
+      "blue_expected": 9,
+      "baseline_blue_steps": 2874,
+      "baseline_blue_score": 96.96800000000002,
+      "blue_steps": 2224,
+      "blue_score": 99.96000000000001,
+      "accepted_proposals": 0,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": null,
+      "actual_cluster_with12": null,
+      "majority_executed": false,
+      "concentration": [],
+      "issued_plan_chain": [
+        {
+          "owner": 3,
+          "step": 1406,
+          "signature": "bd1c6a48057dcf3c873439efa17cb8ae2d2c8fdca2b17fb5a5039f409f21b327",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "3": [
+              2,
+              [
+                [
+                  -598.0,
+                  41.0
+                ],
+                [
+                  -726.0,
+                  345.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1430,
+          "signature": "337799ff124a82eec52b381e360217cacbdba3d9a309d0dcaac7101e641cc3e5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "3": [
+                -598.0,
+                41.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "3": [
+              2,
+              [
+                [
+                  -598.0,
+                  41.0
+                ],
+                [
+                  -710.0,
+                  345.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1550,
+          "signature": "dac9a1171e681df2757db31ec2827f3dab05c62406c8b40e3a43ab9d6c2d206c",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "3": [
+                -598.0,
+                41.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "3": [
+              2,
+              [
+                [
+                  -598.0,
+                  41.0
+                ],
+                [
+                  234.0,
+                  -279.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1608,
+          "signature": "db79d76520c6539fe99470fa081c5c5b2186b963611a9c0fe19623e866d01eec",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -182.0,
+                  57.0
+                ],
+                [
+                  -342.0,
+                  265.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  186.0,
+                  361.0
+                ],
+                [
+                  298.0,
+                  521.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -566.0,
+                  41.0
+                ],
+                [
+                  -710.0,
+                  345.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ],
+                [
+                  762.0,
+                  201.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1608,
+          "signature": "db79d76520c6539fe99470fa081c5c5b2186b963611a9c0fe19623e866d01eec",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -182.0,
+                57.0
+              ],
+              "1": [
+                186.0,
+                361.0
+              ],
+              "2": [
+                -566.0,
+                41.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -182.0,
+                  57.0
+                ],
+                [
+                  -342.0,
+                  265.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  186.0,
+                  361.0
+                ],
+                [
+                  298.0,
+                  521.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -566.0,
+                  41.0
+                ],
+                [
+                  -710.0,
+                  345.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ],
+                [
+                  762.0,
+                  201.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1670,
+          "signature": "5c728f09f61a222d24fe81c4f1e9d357d000f00591a2c87c9dff251be1a3a6dd",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "3": [
+                -598.0,
+                41.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "3": [
+              2,
+              [
+                [
+                  -598.0,
+                  41.0
+                ],
+                [
+                  -566.0,
+                  425.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1680,
+          "signature": "33d79c7ee38e928a1080d20475741316e237aac300136a95d50f5dd7c84b2f41",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                -182.0,
+                57.0
+              ],
+              "1": [
+                154.0,
+                361.0
+              ],
+              "2": [
+                -582.0,
+                41.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  -182.0,
+                  57.0
+                ],
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  154.0,
+                  361.0
+                ],
+                [
+                  186.0,
+                  457.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -582.0,
+                  41.0
+                ],
+                [
+                  -566.0,
+                  313.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1699,
+          "signature": "15143c0e4a8444fc0e2f8b9fc911effc51cda2697584dc0650d2fcce07c84e3d",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                154.0,
+                361.0
+              ],
+              "2": [
+                -582.0,
+                41.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  154.0,
+                  361.0
+                ],
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -582.0,
+                  41.0
+                ],
+                [
+                  -550.0,
+                  297.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1717,
+          "signature": "4f00345092b89ae261d56e9ca93136ee6a68c303d68c8a84aca0b530fffe9a48",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ]
+            ]
+          },
+          "plans": {
+            "3": [
+              1,
+              [
+                [
+                  -598.0,
+                  441.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1723,
+          "signature": "047f2eca3d4edaad9228bef9445f472fa7fb982d7735ffcc0a9cd931a915a87e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                362.0,
+                281.0
+              ],
+              "1": [
+                154.0,
+                361.0
+              ],
+              "2": [
+                -582.0,
+                41.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  154.0,
+                  361.0
+                ],
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -582.0,
+                  41.0
+                ],
+                [
+                  -774.0,
+                  25.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1741,
+          "signature": "8a915a3f9872c9aaabef0688deb1e506fd63c7ee6dc9cfec36a7a847d9971a55",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "3": [
+                -598.0,
+                441.0
+              ]
+            },
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ]
+            ]
+          },
+          "plans": {
+            "3": [
+              1,
+              [
+                [
+                  -598.0,
+                  441.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1771,
+          "signature": "4039e9ed5d654e690c23900e59a1035da5d4d948e177ac99e2a3b30562a96d5a",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                362.0,
+                281.0
+              ],
+              "1": [
+                250.0,
+                521.0
+              ],
+              "2": [
+                -582.0,
+                41.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -582.0,
+                  41.0
+                ],
+                [
+                  -662.0,
+                  41.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 3,
+          "step": 1790,
+          "signature": "85787f9f93e8ae55b0e566ba5ed1b7b248ce3fafd12e647ed6f14e9846a19fb5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 0,
+          "step": 1795,
+          "signature": "dbfbe397c38a15ae4dac615326ca3c1c9aa5d5a0f027bc568e1282720a755ae2",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                362.0,
+                281.0
+              ],
+              "1": [
+                250.0,
+                521.0
+              ],
+              "4": [
+                714.0,
+                -39.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  714.0,
+                  -39.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1800,
+          "signature": "ba103970f4212f396e5d6b3eeaf3626b43d3366715b931b935d013e6b2b2ce2c",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -582.0,
+                41.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -582.0,
+                  41.0
+                ],
+                [
+                  -678.0,
+                  25.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 4,
+          "step": 1810,
+          "signature": "79bcb5306d08732004b8f8f7ab32e5a1d9f70572c7ed87d692574b07b8f28f91",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                702.9149088098242,
+                -37.18053074954576
+              ]
+            ]
+          },
+          "plans": {
+            "4": [
+              1,
+              [
+                [
+                  346.0,
+                  -135.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1819,
+          "signature": "198c192d77ac3a7b95b666ba5b33fa2833eae1844b299c6ded2964553f5814eb",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                362.0,
+                281.0
+              ],
+              "1": [
+                250.0,
+                521.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  362.0,
+                  281.0
+                ]
+              ]
+            ],
+            "1": [
+              1,
+              [
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1824,
+          "signature": "6fac756a8e3eca83b54c0d7f14c31b9f543882fe3878075a720e65b9ff0ddefe",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -342.0,
+                  265.0
+                ],
+                [
+                  -326.0,
+                  73.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1832,
+          "signature": "a5902f24142e7878edad36f3afc1f58fe7fea71409f368e329865202c62142c5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                250.0,
+                521.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ],
+              [
+                361.04404248783834,
+                270.6093380500854
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  250.0,
+                  521.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 4,
+          "step": 1834,
+          "signature": "ba576ae9d53ce5bc71cb8d02bf765b381822a30784db4dbf321009b487d54892",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "4": [
+                346.0,
+                -135.0
+              ]
+            },
+            "confirmed": [
+              [
+                702.9149088098242,
+                -37.18053074954576
+              ]
+            ]
+          },
+          "plans": {
+            "4": [
+              1,
+              [
+                [
+                  346.0,
+                  -135.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1848,
+          "signature": "16f63d38806041df839a6815dd301050d8998451a16b41d65da46c1c591d7712",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -342.0,
+                265.0
+              ]
+            },
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              2,
+              [
+                [
+                  -342.0,
+                  265.0
+                ],
+                [
+                  -358.0,
+                  185.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1873,
+          "signature": "9a2a7452c4b6df022adcda6e6069216685dd27f978a539fe08c5f8aa349cda0d",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ],
+              [
+                -353.38515083348545,
+                266.9394631131728
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              1,
+              [
+                [
+                  -326.0,
+                  137.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1880,
+          "signature": "86d53be396c78ba7cee49dca074644af456e912f4fcc10683b5644be75de29a2",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                266.0,
+                521.0
+              ],
+              "4": [
+                346.0,
+                -135.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ],
+              [
+                361.04404248783834,
+                270.6093380500854
+              ],
+              [
+                702.9149088098242,
+                -37.18053074954576
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  266.0,
+                  521.0
+                ]
+              ]
+            ],
+            "4": [
+              1,
+              [
+                [
+                  346.0,
+                  -135.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1897,
+          "signature": "dfaad68216a0e34bbbe3a68da2a2c1096dc3100dfa544978dfa652631ea627c8",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "2": [
+                -326.0,
+                137.0
+              ]
+            },
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ],
+              [
+                -353.38515083348545,
+                266.9394631131728
+              ]
+            ]
+          },
+          "plans": {
+            "2": [
+              1,
+              [
+                [
+                  -326.0,
+                  137.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1904,
+          "signature": "7e0bbacc2d2a50a98300d54b5eef3e50e2b6f86b172507a46fff016b426de80e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                266.0,
+                521.0
+              ]
+            },
+            "confirmed": [
+              [
+                -184.6434780857467,
+                46.06623464718107
+              ],
+              [
+                140.8156045440806,
+                350.16759925621875
+              ],
+              [
+                361.04404248783834,
+                270.6093380500854
+              ],
+              [
+                702.9149088098242,
+                -37.18053074954576
+              ],
+              [
+                347.4491436327877,
+                -124.31105016345053
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  266.0,
+                  521.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1907,
+          "signature": "0eb0dd77a0cda01c3769119454de47bb17766f7032598cf09655a5766629bb32",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -590.187912496047,
+                47.63557628724258
+              ],
+              [
+                -596.2268940700499,
+                430.46446449261566
+              ],
+              [
+                -353.38515083348545,
+                266.9394631131728
+              ],
+              [
+                -323.00093334628093,
+                147.42147271449315
+              ]
+            ]
+          },
+          "plans": {}
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 1,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 70.76052856445312,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "elapsed": 0.40262655494734645
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.6191042959690094e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.4111010134220123e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 254.4223175048828,
+          "planned": 8,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 0.5474798246286809
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 86.91221618652344,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.16130065685138106
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3739801943302155e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 73.14414978027344,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 4,
+          "elapsed": 0.15093371598049998
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 73.85447692871094,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 3,
+          "required_suffix": 4,
+          "elapsed": 0.15057762386277318
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.4380086213350296e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 4,
+          "accepted": false,
+          "baseline_value": 43.734737396240234,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 1,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "elapsed": 0.14311298914253712
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.590985089540482e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3299752026796341e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.300172001123428e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.66012817621231e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1641066521406174e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3649929314851761e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.67992639541626e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 50.87886428833008,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 0.6410072892904282
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 50.87886428833008,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 0.6658662920817733
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1270865797996521e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.961426258087158e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.5350058674812317e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.108002081513405e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0230112820863724e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1271331459283829e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0580290108919144e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0281335562467575e-05
+        }
+      ],
+      "note": "No accepted proposal means no tested cluster anchor; null is not zero physical bombs in all possible corners."
+    },
+    {
+      "map": "Map05",
+      "baseline_full": 72.28762512325306,
+      "cluster_full": 70.21616255169832,
+      "delta": -2.071462571554747,
+      "baseline_map": 94.49999379391996,
+      "map_score": 93.07610157920868,
+      "baseline_wall": 75.18814113146539,
+      "wall_score": 68.24655881046986,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 9,
+      "expected": 10,
+      "red_steps": 2138,
+      "red_walltime": 237.3547966480255,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 0.02879999999999939,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 9,
+      "blue_expected": 9,
+      "baseline_blue_steps": 3272,
+      "baseline_blue_score": 100.0,
+      "blue_steps": 2417,
+      "blue_score": 99.92,
+      "accepted_proposals": 4,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": 3,
+      "actual_cluster_with12": 3,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "radius": 288.0,
+          "actual_strict": 3,
+          "actual_with12": 3
+        },
+        {
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "radius": 288.0,
+          "actual_strict": 3,
+          "actual_with12": 3
+        },
+        {
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "radius": 288.0,
+          "actual_strict": 3,
+          "actual_with12": 3
+        },
+        {
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "radius": 288.0,
+          "actual_strict": 3,
+          "actual_with12": 3
+        }
+      ],
+      "issued_plan_chain": [
+        {
+          "owner": 0,
+          "step": 1392,
+          "signature": "75dfd285781fbcbd09eba5b5a81a584f53179b49514fecdf1c55e97a8bdebca5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  352.0,
+                  -80.0
+                ],
+                [
+                  464.0,
+                  192.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  176.0,
+                  432.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -64.0,
+                  384.0
+                ],
+                [
+                  -288.0,
+                  512.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -352.0,
+                  -144.0
+                ],
+                [
+                  -352.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  64.0,
+                  -400.0
+                ],
+                [
+                  464.0,
+                  -416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1392,
+          "signature": "7238d5de3cb2ae45eb59c06901181d9b2fee17ba208aa864da45ee959bcf5a10",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                352.0,
+                -80.0
+              ],
+              "1": [
+                192.0,
+                208.0
+              ],
+              "2": [
+                -64.0,
+                384.0
+              ],
+              "3": [
+                -352.0,
+                -144.0
+              ],
+              "4": [
+                64.0,
+                -400.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  352.0,
+                  -80.0
+                ],
+                [
+                  272.0,
+                  -496.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -64.0,
+                  384.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -352.0,
+                  -144.0
+                ],
+                [
+                  -80.0,
+                  -208.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  64.0,
+                  -400.0
+                ],
+                [
+                  400.0,
+                  -400.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1416,
+          "signature": "e7e220761a3ebc2fd307e7581a8e1e7c37f94520edb3b5e6b8dd71c1743db2ef",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                336.0,
+                -80.0
+              ],
+              "1": [
+                192.0,
+                208.0
+              ],
+              "2": [
+                -64.0,
+                384.0
+              ],
+              "3": [
+                -352.0,
+                -144.0
+              ],
+              "4": [
+                80.0,
+                -400.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  336.0,
+                  -80.0
+                ],
+                [
+                  288.0,
+                  -512.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -64.0,
+                  384.0
+                ],
+                [
+                  -288.0,
+                  512.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -352.0,
+                  -144.0
+                ],
+                [
+                  -96.0,
+                  -224.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  80.0,
+                  -400.0
+                ],
+                [
+                  400.0,
+                  -400.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1464,
+          "signature": "947b2d0184beb50eef1fedae1cdea44d48e17a590395960eb49579f20dffd483",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                336.0,
+                -80.0
+              ],
+              "1": [
+                192.0,
+                208.0
+              ],
+              "2": [
+                -80.0,
+                384.0
+              ],
+              "3": [
+                -352.0,
+                -144.0
+              ],
+              "4": [
+                80.0,
+                -400.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  336.0,
+                  -80.0
+                ],
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  288.0,
+                  -512.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -80.0,
+                  384.0
+                ],
+                [
+                  -304.0,
+                  512.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -352.0,
+                  -144.0
+                ],
+                [
+                  0.0,
+                  -192.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  80.0,
+                  -400.0
+                ],
+                [
+                  400.0,
+                  -400.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1536,
+          "signature": "8dc490d9a8fb97dbbc94cf25c901be16a4f4b322ca5828a5618feeb70bc7b275",
+          "accepted": true,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                192.0,
+                208.0
+              ],
+              "2": [
+                -80.0,
+                384.0
+              ],
+              "3": [
+                -352.0,
+                -144.0
+              ],
+              "4": [
+                80.0,
+                -400.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  240.0,
+                  -224.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -80.0,
+                  384.0
+                ],
+                [
+                  160.0,
+                  432.0
+                ]
+              ]
+            ],
+            "3": [
+              2,
+              [
+                [
+                  -352.0,
+                  -144.0
+                ],
+                [
+                  -96.0,
+                  -224.0
+                ]
+              ]
+            ],
+            "4": [
+              2,
+              [
+                [
+                  80.0,
+                  -400.0
+                ],
+                [
+                  400.0,
+                  -400.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1560,
+          "signature": "9774140e92a36976941a23ad62c7b22ddd77b3e3b6667b80b5cb6dfadafdc073",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                288.0,
+                -496.0
+              ],
+              "1": [
+                192.0,
+                208.0
+              ],
+              "2": [
+                -80.0,
+                384.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  32.0,
+                  -304.0
+                ]
+              ]
+            ],
+            "1": [
+              2,
+              [
+                [
+                  192.0,
+                  208.0
+                ],
+                [
+                  176.0,
+                  416.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -80.0,
+                  384.0
+                ],
+                [
+                  -352.0,
+                  -144.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1579,
+          "signature": "25e3e1ced912b43dc34139866642de3dd7b0a2019a232238dd8ad8c6218a4dcf",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -32.0,
+                -464.0
+              ],
+              "2": [
+                -80.0,
+                384.0
+              ],
+              "3": [
+                -96.0,
+                -224.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ],
+            "2": [
+              2,
+              [
+                [
+                  -80.0,
+                  384.0
+                ],
+                [
+                  -288.0,
+                  512.0
+                ]
+              ]
+            ],
+            "3": [
+              1,
+              [
+                [
+                  -96.0,
+                  -224.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1584,
+          "signature": "1b3fb76dc6f2c2a056df6e052e17ff49e063ba0c3ab5253808eabb9b81985e8c",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                288.0,
+                -496.0
+              ]
+            },
+            "confirmed": []
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  224.0,
+                  224.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 4,
+          "step": 1590,
+          "signature": "3793d6c5914480f44e6f2fc6907a2c25b1d68b314cdf7d102753a0e322db8e29",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "4": [
+                400.0,
+                -400.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ]
+            ]
+          },
+          "plans": {
+            "4": [
+              1,
+              [
+                [
+                  400.0,
+                  -400.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1598,
+          "signature": "030e115c9280448fb2f6a48690ee3f727e474de7930d3eea0eedd53aa4ea38af",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 1,
+          "step": 1603,
+          "signature": "51708fbaa0d27496b0ac28bd6f91949857a654a1af6d25b0bb8475bdc61ed417",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -32.0,
+                -464.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -32.0,
+                  -464.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1608,
+          "signature": "e9cfefd43b0bc01d3f4da190cfdd1f3ea44d48bdce72942f2b29e15d0f530c25",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                288.0,
+                -496.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  288.0,
+                  176.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 2,
+          "step": 1718,
+          "signature": "4847d36299f067a8fd7c902d2c78b5c605a500a3e05330960e80576e020ce63c",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {}
+        },
+        {
+          "owner": 0,
+          "step": 1728,
+          "signature": "bf769ee237ff9c20b129016722e3e519f457f03645bee13ff0452268908a20bd",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                288.0,
+                -496.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  224.0,
+                  224.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1747,
+          "signature": "076fbce780fe751acc1edd8d40f3f29f97eed1faef22b45d1853b39b920ea69e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -128.0,
+                416.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -128.0,
+                  416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1752,
+          "signature": "d71591592b27fb59a0ea2b044363b50fefbdbc7a29c9cb083cbc8cf9e5e5f759",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                288.0,
+                -496.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  288.0,
+                  -496.0
+                ],
+                [
+                  208.0,
+                  224.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1771,
+          "signature": "f5b868f768fa334a60b3a77deb06059a53642d2ab68eddabff0022fd162bd6ac",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -128.0,
+                416.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -128.0,
+                  416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1795,
+          "signature": "bade0dbec25c9fa06ac3051432acc13b73c56646ac103d01a9750932cb543723",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -128.0,
+                416.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -128.0,
+                  416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1824,
+          "signature": "cce2b3deb2229a528595b0646539dc457cb95e77124a100d750f1ec71bdd261a",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  400.0,
+                  -32.0
+                ],
+                [
+                  416.0,
+                  208.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1848,
+          "signature": "6c0dbb96931f243929f85bb094dee4e65eb73880307cb34a9c5903a7bbf22199",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                400.0,
+                -32.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  400.0,
+                  -32.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1915,
+          "signature": "149d068a459445a9b5e49dea8b91637375ad8ba040548670e4620dbeeca18eb5",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -128.0,
+                416.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -128.0,
+                  416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 1963,
+          "signature": "2a534e7ae83754d255f5d4912c191e66619aa377ddf554b58e2988fe8e532d3f",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                -128.0,
+                416.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  -128.0,
+                  416.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1968,
+          "signature": "37d84f06d9485ed82aa71905d2cb1b4ceaf8b93b62062cc1f14366ee61281168",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                400.0,
+                -32.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              2,
+              [
+                [
+                  400.0,
+                  -32.0
+                ],
+                [
+                  288.0,
+                  176.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 1982,
+          "signature": "f639c5add47bf312f70d46c19100418105e1b819cb9187b3df5f9a16c839313b",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                410.37860369358316,
+                -37.5267352993973
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  416.0,
+                  208.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 2006,
+          "signature": "b02fef81bc7a9d26c79e1d5644dfbe19f360a6406aad38f1cba365f441d0167e",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "0": [
+                416.0,
+                208.0
+              ]
+            },
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                410.37860369358316,
+                -37.5267352993973
+              ]
+            ]
+          },
+          "plans": {
+            "0": [
+              1,
+              [
+                [
+                  416.0,
+                  208.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 2028,
+          "signature": "a5d5f306358812d30f427afa484ad3b5319ba66c09cef9e6ebaf22c052e07d46",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  256.0,
+                  -48.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 1,
+          "step": 2052,
+          "signature": "a503bb4c88d0847c0a74e39ec2b1f725c15eb0f1117e066ff0e7db2701bb9d83",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {
+              "1": [
+                256.0,
+                -48.0
+              ]
+            },
+            "confirmed": [
+              [
+                178.0574994039263,
+                177.61781489385407
+              ],
+              [
+                -342.19038723410495,
+                -138.79584689471858
+              ],
+              [
+                -80.04065445327636,
+                -214.2669420161229
+              ],
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                -82.73723324796919,
+                373.46406676199166
+              ],
+              [
+                -290.44886219159673,
+                500.7250945695682
+              ]
+            ]
+          },
+          "plans": {
+            "1": [
+              1,
+              [
+                [
+                  256.0,
+                  -48.0
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "owner": 0,
+          "step": 2053,
+          "signature": "032511d863c25ca8ce61ad19b19e92f45bfb255d5d2511656742b0b4a84409c9",
+          "accepted": false,
+          "state": {
+            "initial_total": 10,
+            "reserved": {},
+            "confirmed": [
+              [
+                87.29765806667437,
+                -391.9833997647815
+              ],
+              [
+                390.20419632108,
+                -399.5201136334876
+              ],
+              [
+                410.37860369358316,
+                -37.5267352993973
+              ],
+              [
+                427.3185158498284,
+                206.92159516539772
+              ]
+            ]
+          },
+          "plans": {}
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 309.4921875,
+          "planned": 10,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 1.032127173151821
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 2,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 4,
+          "accepted": true,
+          "baseline_value": 112.4140625,
+          "planned": 4,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 4,
+          "last_proposal": {
+            "corner": [
+              160.0,
+              -256.0
+            ],
+            "anchor": [
+              176.0,
+              -272.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.8721686779514592
+          },
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "radius": 288.0,
+          "coverage_ratio": 0.8721686779514592,
+          "clustered": 4,
+          "fixed_target": 6,
+          "baseline_clustered": 0,
+          "step": 1392,
+          "elapsed": 0.36530919279903173
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 3,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 132.8046875,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 4,
+          "last_proposal": {
+            "corner": [
+              160.0,
+              -256.0
+            ],
+            "anchor": [
+              176.0,
+              -272.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.92673946485764
+          },
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "radius": 288.0,
+          "coverage_ratio": 0.92673946485764,
+          "clustered": 4,
+          "fixed_target": 6,
+          "baseline_clustered": 0,
+          "step": 1416,
+          "elapsed": 0.11335988994687796
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 4,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 132.5,
+          "planned": 5,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 5,
+          "required_suffix": 4,
+          "last_proposal": {
+            "corner": [
+              160.0,
+              -256.0
+            ],
+            "anchor": [
+              176.0,
+              -272.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.8840227295996723
+          },
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "radius": 288.0,
+          "coverage_ratio": 0.8840227295996723,
+          "clustered": 4,
+          "fixed_target": 6,
+          "baseline_clustered": 0,
+          "step": 1464,
+          "elapsed": 0.11392392171546817
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 5,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 6,
+          "attempts": 1,
+          "accepted": true,
+          "baseline_value": 152.9296875,
+          "planned": 6,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 4,
+          "required_suffix": 5,
+          "last_proposal": {
+            "corner": [
+              160.0,
+              -256.0
+            ],
+            "anchor": [
+              176.0,
+              -272.0
+            ],
+            "clustered": 5,
+            "wanted": 5,
+            "coverage_ratio": 0.8945815949616008
+          },
+          "anchor": [
+            176.0,
+            -272.0
+          ],
+          "corner": [
+            160.0,
+            -256.0
+          ],
+          "radius": 288.0,
+          "coverage_ratio": 0.8945815949616008,
+          "clustered": 5,
+          "fixed_target": 6,
+          "baseline_clustered": 0,
+          "step": 1536,
+          "elapsed": 0.1160293142311275
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 99.84375,
+          "planned": 3,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 0,
+          "reserved_count": 3,
+          "required_suffix": 5,
+          "elapsed": 0.10457747802138329
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2740027159452438e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.5689991414546967e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2759584933519363e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.010065019130707e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.619856089353561e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.134125679731369e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3210810720920563e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2369826436042786e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.25212424993515e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.8999911844730377e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.266971230506897e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.770970791578293e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 64.171875,
+          "planned": 2,
+          "initial_total": 10,
+          "target_total": 6,
+          "confirmed_count": 2,
+          "reserved_count": 0,
+          "budget_exhausted": true,
+          "elapsed": 0.9672038769349456
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.155957579612732e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.821262210607529e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.339768439531326e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.81710347533226e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.7,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.4250166714191437e-05
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    }
+  ],
+  "comparison_scope": "One explicit Map01-05 RED+original team006 BLUE group versus retained P48 A-star; same SDK/resources/limits, naturally different episodes, not paired causal proof.",
+  "goal_scope": "Fixed initial10 quota6; current observed joint confirmed+reserved+suffix coverage >=70% same-call reference. Not a guarantee on actual official coverage or across replans.",
+  "official_submission_ready": false,
+  "automatic_B": false,
+  "ranking_promoted": false,
+  "game_rounds_added": 10
+}
