@@ -1,0 +1,96 @@
+{
+  "user_zip": "E:\\CCMCKP\\10.28\\B_CDF_DRO_MITM_冻结源码包.zip",
+  "user_zip_sha256": "a9a2ed74625b13e6055340810ee306e2a63954e7b7627cd2ec28b8ad09aa2017",
+  "all_original_zip_members_byte_identical_to_B_copy": true,
+  "members": [
+    {
+      "path": "solver.py",
+      "original_sha256": "0faf3339b7f899f8a3c235b09017af18e3cfa489859d7da6281ccf15c8cc0a73",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "instance.py",
+      "original_sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "native_evaluator.py",
+      "original_sha256": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "native_support.py",
+      "original_sha256": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "lss_vendor.py",
+      "original_sha256": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "original_experiment/worker.py",
+      "original_sha256": "6196422e3c5ff7fc35f29cb6ee302062774e4ce45e095eef0111d0431cf258db",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "original_experiment/cases.json",
+      "original_sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "original_experiment/PROTOCOL.json",
+      "original_sha256": "8ab6899440368b739937b8ef5d30381b6cbfc6b57b9de8a83fcff14e1d4da435",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "original_experiment/source_inputs.json",
+      "original_sha256": "475bb44e3b628467901fafa49db31e58af2c82de8ce7a45e9190449f568f22e7",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "run_b_cdf_dro_mitm.py",
+      "original_sha256": "0d0bb0bd3f83eab23dba62fb24f52dc233e9595b63fc679e5b34897fa0987808",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "README_中文.txt",
+      "original_sha256": "d71951fcfe3bb166dcfdaa66868deb9eebe671b88561794ac92754fcb47fa1cf",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "requirements.txt",
+      "original_sha256": "5f6d1913ee82a6654b27cd7b5d82a0d1f102d7440797eada1ee2a8c90d6152fd",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "original_sha256": "94a65c366014b406cd369372f57b2488e0a0c0e344409d849ada25492e12c9b1",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    },
+    {
+      "path": "PSEUDOCODE_20_LINES.txt",
+      "original_sha256": "f9a0c2d89309b45c2035d79d0b16cd74d99186762bc0c77a357007bc43c680b3",
+      "candidate_task_B_copy_exists": true,
+      "byte_identical": true
+    }
+  ],
+  "extra_two_manifest_matches": {
+    "original_registry_sha256": "source_inputs.json",
+    "original_worker_sha256": "worker.py"
+  },
+  "scope": "Read-only provenance audit of actual uploaded package; unique originalB remains unchanged. No search, evaluation, or new control runs."
+}
