@@ -1,0 +1,12 @@
+{
+  "src/swarm_rescue/simulation/ray_sensors/distance_sensor.py": {
+    "sha256": "f35863b9d4588a110bd6ea2503065bb276706a6e0bfc0de22f9542e58a966570",
+    "snippets": [
+      "def compute_ray_angles(fov_rad: float, nb_rays: int) -> np.ndarray:\n    \"\"\"\n    Calculates the angles of the laser rays of a sensor based on the field of view and the number of rays.\n    Example Usage:\n        fov_rad = math.pi / 2\n        nb_rays = 5\n        ray_angles = compute_ray_angles(fov_rad, nb_rays)\n        print(ray_angles)\n\n        Output:\n        [-0.78539816, -0.39269908, 0.0, 0.39269908, 0.78539816]\n\n    Args:\n        fov_rad (float): The field of view in radians.\n        nb_rays (int): The number of rays of the sensor.\n\n    Returns:\n        np.ndarray: Array of angles in radians.\n    \"\"\"\n\n    if not isinstance(fov_rad, float) or fov_rad <= 0:\n        raise ValueError(\"fov_rad must be a positive float.\")\n\n    if nb_rays == 1:\n        ray_angles = [0.]\n    else:\n        ray_angles = np.linspace(-fov_rad / 2, fov_rad / 2, nb_rays)\n\n    # 'ray_angles' is an array which contains the angles of the laser rays of\n    # the sensor\n    return np.array(ray_angles)"
+    ]
+  },
+  "src/swarm_rescue/simulation/utils/constants.py": {
+    "sha256": "3a0ef59f4703e8116371c19d1904984e8919a9f640725ee594451f630be342c4",
+    "snippets": []
+  }
+}
