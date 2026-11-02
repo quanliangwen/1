@@ -1,0 +1,26 @@
+本次实际执行与只读复核命令（不是要求重跑有效阶段）
+
+环境：服务器Python3.8.10、NumPy1.24.4、SciPy1.10.1、Gurobi11.0.3；OpenBLAS/MKL/OMP/NUMEXPR线程均1。需有效Gurobi许可。原运行环境和已登记路径在协议/worker中严格核对。
+算法冻结：2fb919ae87d332bf6bfbe8dc11c14b3c00a83bdd804a8e74edb7986598d92aa4。
+调度冻结：96b28599b2facac514e30aac25382114b818e4a24810fb8e7428f3bde2b46a04。
+
+历史命令：
+cd /home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R04_20261101
+/usr/bin/python3 -B scheduling_amendments/A01_20261101T1136Z/continuation_controller.py --preflight
+# A01合成预检30次通过；日志错误在任何worker启动前发生，完整保留。
+# A02仅修复日志元数据合并，其他方法AST相同；复用有效预检并通过4项日志回归。
+/usr/bin/python3 -B scheduling_amendments/A02_20261101T1144Z/launch.py
+# 实际启动2651271，现已正常结束。单次保护文件保留，不要再次执行本行。
+
+完整离线校验（仅读取归档，不调用求解器或原生概率评价器）：
+python tools/verify_delivery.py --directory .
+# Python3.8或更新版及NumPy；从本GitHub任务目录运行。校验SHA256SUMS、ZIP CRC、
+# 原始输入/冻结文件、2400条成本、恰好每组一项、种子、原生返回来源及完整保存时钟。
+
+只读重统计（原服务器归档路径仍在时；不产生新解）：
+OPENBLAS_NUM_THREADS=1 python3 -B reporting/snapshot_readonly.py --which full
+# 新JSON是既有终末记录的统计快照，不能计作新的独立重复。
+
+本包源文件保留当时注册的绝对项目路径和单次启动保护，供复核及溯源，不是任意路径可直接重启的模板。
+当前任务已完整终末。未来若另做新实验，须先另立目录、登记新输入/调度/源码清单与验收；
+不能修改本次冻结文件来冒充同一试验，也不能重跑已有有效波挑优。

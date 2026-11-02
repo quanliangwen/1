@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "summary_rows": 80,
+  "time_rows": 80,
+  "raw_rows": 2400,
+  "paired_rows": 40,
+  "checks": "XLSX underlying numeric cells independently matched to audited snapshot; nulls remain blank.",
+  "visual_review": [
+    "完整验收 A1:D20",
+    "全量分组门槛 A1:K9",
+    "成本与有效率末段",
+    "时间与目标末段"
+  ],
+  "formula_error_scan": "0 matches",
+  "xlsx_sha256": "861ba5787a0813004c398d288cb95cff02489f65545374a143d580f315499818"
+}

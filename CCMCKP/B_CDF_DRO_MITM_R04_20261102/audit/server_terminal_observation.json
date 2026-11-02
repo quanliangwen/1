@@ -1,0 +1,46 @@
+{
+  "observed_utc": "2026-11-02T01:26:15.902543",
+  "state": {
+    "schema": "R04_scheduling_amendment_A01",
+    "status": "performance_gates_passed_delivery_pending",
+    "controller_pid": 2651271,
+    "controller_start_ticks": 400387265,
+    "freeze_sha": "2fb919ae87d332bf6bfbe8dc11c14b3c00a83bdd804a8e74edb7986598d92aa4",
+    "scheduling_freeze_sha": "96b28599b2facac514e30aac25382114b818e4a24810fb8e7428f3bde2b46a04",
+    "updated_utc": "2026-11-01T19:59:39Z",
+    "registered_repetitions": 30,
+    "parallel_ceiling": 30,
+    "high_memory_ceiling": 24,
+    "active": [],
+    "goal_achieved": false,
+    "final_gate": {
+      "performance_gates_passed": true,
+      "all_valid": true,
+      "overall_mean_relative": -0.0018541261814538023,
+      "overall_mean_cost_difference": -0.23992213643804425,
+      "improved_cases": 7,
+      "degraded_cases": 6,
+      "size_groups_mean_relative": {
+        "small": 0.0,
+        "medium": -0.005255286688547735,
+        "large": -0.0009251339162982727
+      },
+      "size_groups_mean_cost_difference": {
+        "small": 0.0,
+        "medium": -0.34230365080404757,
+        "large": -0.45743680398943337
+      },
+      "independent_audit_returncode": 0,
+      "all_runtime_and_SHA_checked": true,
+      "scheduling_freeze_sha": "96b28599b2facac514e30aac25382114b818e4a24810fb8e7428f3bde2b46a04",
+      "concurrency_limitation": "Previously completed B14 cases used30; subsequent B and fresh R04 use the same memory-adaptive30/24 ceilings. No valid control repeated. Wall-clock and load confounding disclosed."
+    }
+  },
+  "actual_registered_controller_live": false,
+  "actual_worker_pids": [],
+  "original_freeze_sha": "2fb919ae87d332bf6bfbe8dc11c14b3c00a83bdd804a8e74edb7986598d92aa4",
+  "scheduling_freeze_sha": "96b28599b2facac514e30aac25382114b818e4a24810fb8e7428f3bde2b46a04",
+  "all137_original_files_readonly": true,
+  "all_scheduling_frozen_files_readonly": true,
+  "action": "Read-only terminal verification; no experiment started or repeated."
+}

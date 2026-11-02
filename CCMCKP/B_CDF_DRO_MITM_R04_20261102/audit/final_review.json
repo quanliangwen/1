@@ -1,0 +1,272 @@
+{
+  "status": "passed",
+  "scope": "2400 stored full-stage comparisons, all40 cases. No optimization, native re-evaluation or resampling.",
+  "source_snapshot": "full_20261102T010934Z_A02.json",
+  "source_snapshot_sha": "096d6ab06aae670d5c9bb7884d8e7cb5f8ce1bfbf97ee57cfc40b812386d07d2",
+  "records": {
+    "B": 1200,
+    "R04": 1200
+  },
+  "independent_initializations": 2400,
+  "new_amended_dispatch_records": 1980,
+  "candidate_fresh_after_entire_fixed_control": true,
+  "all_original_native_returns_at_least": 0.99,
+  "all_saved_runtime_at_most_seconds": 585.1716292928904,
+  "all_percase_summary_time_best_hits_and_cost_moments_checked": true,
+  "all40_paired_bootstrap_effect_and_Holm_outputs_reproduced": true,
+  "aggregate": {
+    "B": {
+      "registered": 1200,
+      "valid": 1200,
+      "failures": 0,
+      "case_mean_cost_mean": 81.61189056408855,
+      "mean_case_CV": 0.00377062668051843,
+      "mean_final_best_first_seconds": 168.0182105756299,
+      "actual_mean_seconds": 327.1239490275089,
+      "actual_min_seconds": 1.3322287360206246,
+      "actual_max_seconds": 583.2983696353622,
+      "native_mean_seconds": 83.99676108610389,
+      "native_mean_calls": 300.81333333333333,
+      "same_quality_hits": 994,
+      "same_quality_restricted_mean_seconds": 224.13993115022467
+    },
+    "R04": {
+      "registered": 1200,
+      "valid": 1200,
+      "failures": 0,
+      "case_mean_cost_mean": 81.3719684276505,
+      "mean_case_CV": 0.002656796240990135,
+      "mean_final_best_first_seconds": 139.15612979032295,
+      "actual_mean_seconds": 329.54362460493576,
+      "actual_min_seconds": 0.7455029049888253,
+      "actual_max_seconds": 585.1716292928904,
+      "native_mean_seconds": 89.13191539757302,
+      "native_mean_calls": 239.66666666666666,
+      "same_quality_hits": 1011,
+      "same_quality_restricted_mean_seconds": 179.97999172854549
+    }
+  },
+  "normalized_mean_difference": -0.0018541261814538023,
+  "raw_mean_cost_difference": -0.2399221364380443,
+  "relative_raw_mean_cost_difference": -0.002939793880275876,
+  "improved_cases": [
+    11,
+    14,
+    18,
+    19,
+    20,
+    36,
+    40
+  ],
+  "degraded_cases": [
+    17,
+    31,
+    32,
+    37,
+    38,
+    39
+  ],
+  "ties": 27,
+  "size_groups": {
+    "small": {
+      "cases": 16,
+      "mean_absolute_cost_difference": 0.0,
+      "mean_normalized_cost_difference": 0.0
+    },
+    "medium": {
+      "cases": 12,
+      "mean_absolute_cost_difference": -0.34230365080404757,
+      "mean_normalized_cost_difference": -0.005255286688547735
+    },
+    "large": {
+      "cases": 12,
+      "mean_absolute_cost_difference": -0.45743680398943337,
+      "mean_normalized_cost_difference": -0.0009251339162982727
+    }
+  },
+  "variance_diagnostics": {
+    "std_lower": 7,
+    "std_higher": 6,
+    "CV_lower": 7,
+    "CV_higher": 6,
+    "note": "Descriptive only; numeric tolerances do not change acceptance criteria."
+  },
+  "Holm_significant_improvements": [
+    14,
+    36,
+    40
+  ],
+  "Holm_significant_degradations": [
+    17,
+    38,
+    39
+  ],
+  "concurrency_B_R04": {
+    "1": [
+      30,
+      30
+    ],
+    "2": [
+      30,
+      30
+    ],
+    "3": [
+      30,
+      30
+    ],
+    "4": [
+      30,
+      30
+    ],
+    "5": [
+      30,
+      30
+    ],
+    "6": [
+      30,
+      30
+    ],
+    "7": [
+      30,
+      30
+    ],
+    "8": [
+      30,
+      30
+    ],
+    "9": [
+      30,
+      30
+    ],
+    "10": [
+      30,
+      30
+    ],
+    "11": [
+      24,
+      21
+    ],
+    "12": [
+      21,
+      21
+    ],
+    "13": [
+      30,
+      30
+    ],
+    "14": [
+      30,
+      30
+    ],
+    "15": [
+      30,
+      30
+    ],
+    "16": [
+      30,
+      30
+    ],
+    "17": [
+      30,
+      30
+    ],
+    "18": [
+      30,
+      30
+    ],
+    "19": [
+      30,
+      30
+    ],
+    "20": [
+      30,
+      30
+    ],
+    "21": [
+      30,
+      30
+    ],
+    "22": [
+      30,
+      30
+    ],
+    "23": [
+      30,
+      30
+    ],
+    "24": [
+      30,
+      30
+    ],
+    "25": [
+      30,
+      30
+    ],
+    "26": [
+      30,
+      30
+    ],
+    "27": [
+      30,
+      30
+    ],
+    "28": [
+      30,
+      30
+    ],
+    "29": [
+      30,
+      30
+    ],
+    "30": [
+      30,
+      13
+    ],
+    "31": [
+      24,
+      24
+    ],
+    "32": [
+      24,
+      24
+    ],
+    "33": [
+      30,
+      30
+    ],
+    "34": [
+      30,
+      30
+    ],
+    "35": [
+      30,
+      30
+    ],
+    "36": [
+      30,
+      30
+    ],
+    "37": [
+      30,
+      30
+    ],
+    "38": [
+      30,
+      30
+    ],
+    "39": [
+      30,
+      30
+    ],
+    "40": [
+      30,
+      30
+    ]
+  },
+  "cases_with_different_concurrency": [
+    11,
+    30
+  ],
+  "sampled_new_scheduler_min_available_GiB": 41.27817153930664,
+  "causal_limitations": "Shared server load, adaptive concurrency and algorithm selection limit pure-operator causal attribution and generalization. Per-case intervals are descriptive non-simultaneous and not selection-adjusted. No unknown-distribution coverage/global optimum claim."
+}

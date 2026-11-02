@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "archive": "E:\\codex\\CCMCKP_DRO_R04_20261101\\deliverable_snapshots\\R04_frozen_source_2fb919ae87d332bf.zip",
+  "archive_sha256": "3a49ef410ece32d0233a0f8985d0afe13135edf80997409bc8379ce71b0969c4",
+  "freeze_sha256": "2fb919ae87d332bf6bfbe8dc11c14b3c00a83bdd804a8e74edb7986598d92aa4",
+  "frozen_files_checked": 137,
+  "archive_manifest_files_checked": 145,
+  "uploaded_original_registered_hashes_checked": 7,
+  "original_solver_sha256": "0faf3339b7f899f8a3c235b09017af18e3cfa489859d7da6281ccf15c8cc0a73",
+  "candidate_solver_sha256": "94ada0a7b6e02066e5848ab2bc9d34c5430ef3ce52aa2f21afaced4d3070b938",
+  "unchanged_dependency_bytes": [
+    "instance.py",
+    "native_evaluator.py",
+    "native_support.py",
+    "lss_vendor.py"
+  ],
+  "original_solver_methods": [
+    "__init__",
+    "cost_of",
+    "screen",
+    "propose",
+    "native_check",
+    "histograms",
+    "diverse_half_prune",
+    "build_half",
+    "cdf_matching",
+    "remaining",
+    "half_prune",
+    "matching",
+    "sequential_matching",
+    "chernoff_build_half",
+    "chernoff_matching",
+    "run",
+    "save"
+  ],
+  "only_new_method": "entropic_cost_proposal",
+  "only_changed_original_method": "run: one conditional call inserted",
+  "whole_module_ast_matches_after_removing_only_these_additions": true,
+  "scope": "Source identity and isolation proof; no performance claim, no oracle evaluation, no unknown-distribution coverage or global-optimality claim."
+}
