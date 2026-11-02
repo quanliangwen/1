@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-02T05:08:05.085870+00:00",
+  "initial_inventory": 10,
+  "fixed_cluster_quota": 6,
+  "cluster_radius_ratio": 2.0,
+  "coverage_model_floor": 0.9,
+  "SDK_arms": [
+    "P48_ASTAR",
+    "P156"
+  ],
+  "SDK_horizon": 1600,
+  "author_seed": 615,
+  "author_wall_rate": 0.05,
+  "arena_size": [
+    800,
+    600
+  ],
+  "native_rounds": 0,
+  "automatic_five": false,
+  "automatic_native": false,
+  "pass_checks": [
+    "actual_strict_cluster>=6",
+    "all10",
+    "map_raw_loss<=.5pp",
+    "wall_raw>=.9*baseline",
+    "time_nonregress",
+    "controllable_subtotal_loss<=.5",
+    "no_added_total_damage",
+    "original_callbacks_and_finite",
+    "both_loopwall<90s"
+  ],
+  "layout_and_full_red_score": "unevaluated_without_BLUE",
+  "SDK_script_sha256": "d40444e5dd62d7f89e971b17b9ecc3f2a27f4d1b386c52cc3587eadd62e2b2b0",
+  "candidate_manifest_sha256": "56c0f2ac36b5ae1ef51a8366d98df16509afe74e6cf3e554b3d6d58530957f86"
+}
