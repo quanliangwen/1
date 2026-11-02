@@ -1,0 +1,22 @@
+{
+  "main_component_freeze_sha256": "44f8c95ee1cee82b526ec49d6e09ad3c2d4f6518aa85bf80ccab6cef69f32897",
+  "authority": "User authorized reducing parallelism and waiting under original guard. Target performance has not begun.",
+  "pre_target_evidence": {
+    "utc": "2026-11-02T07:05:05Z",
+    "target_performance_runs": 0,
+    "component_processes": [],
+    "source_or_parameter_change": false
+  },
+  "reason": "R09 case14 original ticket chose6: workerfuture2.2008GB/floor5GiB/foreigngrowth43.1169GB; another summarize.py actual49.06GiB and recent growth. No interference with external task.",
+  "change": "Only unlaunched component dispatcher: at first parallel block of each case choose largest2..30 passing unchanged original future-memory/disk guard, then keep that count fixed for all4ABBA blocks of that case. If later blocks cannot fit, wait; do not change count or rerun valid blocks.",
+  "unchanged": "10 frozen files including candidate/baseline kernels and original protocol preserved. Six-group inputs/cases17,38,39/radii/math/2timed+1warmup/ABBA/all exact-byte checks unchanged; all numeric admission gates unchanged.",
+  "gates": {
+    "serial_each_max": 1.1,
+    "serial_geo_max": 1.05,
+    "matched_parallel_each_max": 0.95,
+    "peak_each_max": 1.0,
+    "peak_geo_max": 0.8
+  },
+  "interpretation": "Matched guarded cohorts are not a fixed30 benchmark when N<30. Report actualN and resource/load for each case. No extrapolation to allconcurrency or wholeoptimization.",
+  "formal_auto_start": false
+}
