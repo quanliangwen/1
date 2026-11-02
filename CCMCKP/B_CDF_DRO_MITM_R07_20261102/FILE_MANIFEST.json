@@ -1,34 +1,58 @@
 {
   ".gitattributes": {
-    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
-    "bytes": 9
+    "bytes": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
   },
   "FREEZE.json": {
-    "sha256": "4ec0fb3f3405038cde947a3bb43776d2bc6e6af139673ed4bd516dc9b76333b1",
-    "bytes": 23688
+    "bytes": 23688,
+    "sha256": "4ec0fb3f3405038cde947a3bb43776d2bc6e6af139673ed4bd516dc9b76333b1"
+  },
+  "FUNCTIONAL_PREFLIGHT.json": {
+    "bytes": 10090,
+    "sha256": "a73c0fb66bdd8d212097366780c7f2c70ce273527274ddd17677e9b6d5e3b0a0"
+  },
+  "GOAL_AND_TASK_STATUS.json": {
+    "bytes": 1841,
+    "sha256": "dd864d8ffa8d3b8acaecb61e671f65020a9e69446e9fe2ac7de929c636e10b8a"
+  },
+  "LAUNCH_RECEIPT.json": {
+    "bytes": 562,
+    "sha256": "03dd9775c7375b3b479bf17f7ad26a19e1c76ee62adcb3889f9ec11930167885"
+  },
+  "MATH_PREFLIGHT.json": {
+    "bytes": 2681,
+    "sha256": "a7144feae1341211eb613eecf10ac0ab508a63e6df3230da91b0e439411bc90a"
+  },
+  "PAIR_COMPONENT_PREFLIGHT.json": {
+    "bytes": 1908,
+    "sha256": "b4c44753e6bd05b773735ff31033a60caee4cc5f4e96f45625bd1d65b220fa86"
   },
   "PROTOCOL.json": {
-    "sha256": "d1a4cbcd4ad1b6b36a49993b8b9e82f845501fc57ad830cdf70e005ab88a5600",
-    "bytes": 23545
+    "bytes": 23545,
+    "sha256": "d1a4cbcd4ad1b6b36a49993b8b9e82f845501fc57ad830cdf70e005ab88a5600"
+  },
+  "R06_FAILED_PILOT_REMOTE_VERIFICATION.json": {
+    "bytes": 3956,
+    "sha256": "9b1c2284dd0fc8252689a37a4a47be5e0c23d71d9a6c75c069f07f3637e52115"
   },
   "retrospective_geometry_not_worker_input.zip": {
-    "sha256": "e6a7045b4bb451d8c83c0d5f165790a63fbb2218e96790220b8ad1981012c897",
-    "bytes": 17435
+    "bytes": 17435,
+    "sha256": "e6a7045b4bb451d8c83c0d5f165790a63fbb2218e96790220b8ad1981012c897"
   },
   "RUN_COMMANDS.txt": {
-    "sha256": "07200993bbf402861482852cd02dfb0ba637fc1df32aa4555eb286b51e029423",
-    "bytes": 1130
+    "bytes": 1130,
+    "sha256": "07200993bbf402861482852cd02dfb0ba637fc1df32aa4555eb286b51e029423"
   },
   "source_frozen.zip": {
-    "sha256": "e62fdacd21e1aacb5c414181ba054293cb88afb79d4a30ff9de3877332536f7d",
-    "bytes": 744417
+    "bytes": 744417,
+    "sha256": "e62fdacd21e1aacb5c414181ba054293cb88afb79d4a30ff9de3877332536f7d"
   },
   "当前状态.txt": {
-    "sha256": "925632f7438b3e87be1353401052bf4f820d2bbbe207a34480145044515162f1",
-    "bytes": 1154
+    "bytes": 890,
+    "sha256": "270a479e46eb88f6d8d1e3d218cdf541a9dbbaf68145d774ebf24a387d8cc001"
   },
   "机制与验收.txt": {
-    "sha256": "fc839c08ac36f1bc62f0f20d135a251f3c693d70b2b1be55726ecb9ca7fa50ac",
-    "bytes": 7350
+    "bytes": 7350,
+    "sha256": "fc839c08ac36f1bc62f0f20d135a251f3c693d70b2b1be55726ecb9ca7fa50ac"
   }
 }

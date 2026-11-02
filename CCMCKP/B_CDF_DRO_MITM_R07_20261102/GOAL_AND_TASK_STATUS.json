@@ -1,0 +1,42 @@
+{
+  "goal_complete": false,
+  "official_baseline": "uploaded B only; all40 valid B reference waves audited/reused; no new B runs",
+  "R06_terminal": "7pilot210 candidate valid; failures in cost gate cases38/39; no R06full; report commit4c03a73547537df33f720e6d7e457275fc98584d verified23remote files",
+  "R07_freeze": "4ec0fb3f3405038cde947a3bb43776d2bc6e6af139673ed4bd516dc9b76333b1",
+  "preflight": {
+    "math_matrix_entries": 138,
+    "numeric_pass": true,
+    "full_synthetic_runs": 30,
+    "native_RNG_replay": true,
+    "joint_synthetic_cost": [
+      30,
+      26
+    ],
+    "joint_native_probability": 0.998015
+  },
+  "actual_last_verified_utc": "2026-11-02T03:04:00Z",
+  "controller_pid": 3550948,
+  "controller_start_ticks": 405860695,
+  "phase": "R07_pilot",
+  "current_case": 17,
+  "active_workers": 30,
+  "next_cases": [
+    38,
+    39,
+    40,
+    25,
+    18,
+    14
+  ],
+  "not_started": "fresh candidate40case1200full; requires all7pilot cost/stability/time and independent audit pass",
+  "remaining_tasks": [
+    "complete preregistered7pilot without changing frozen source or rerunning valid waves",
+    "independently audit all registered quality/time/validity criteria",
+    "only if pass execute fresh40case1200candidate excludingpilot",
+    "deep timing/cost/native/source/input audit plus paired CI/Holm/effects/full groups",
+    "GitHub source/dataZIP/statisticsExcel/SHA remote verification"
+  ],
+  "iteration_rule": "Objective-driven: failed pilot retains all evidence and no expansion; new mechanism requires separate literature/data-backed isolation/freeze/preflight. Queue exhaustion or successful start never equals completed objective.",
+  "deadline": "12hours aspirational from2026-11-02T01:42:38Z; cannot promise improvement",
+  "read_only_export_watcher": 3554184
+}
