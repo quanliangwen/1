@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-02T05:26:49.278363+00:00",
+  "human_request": "fixed6 / retain70% predicted coverage",
+  "initial_total": 10,
+  "cluster_quota": 6,
+  "model_coverage_floor": 0.7,
+  "actual_wall_score_retained_gate": 0.7,
+  "map_loss_limit_pp": 0.5,
+  "time_nonregress": true,
+  "health_nonregress": true,
+  "all10": true,
+  "controllable_loss_allowance": ".2*.3*baseline_wall_raw+.25",
+  "SDK_arms": [
+    "P159"
+  ],
+  "baseline_not_repeated": true,
+  "baseline_path": "E:\\codex\\P48_Astar_iteration_20261102\\P156_fixed_quota_inner_corner\\P48_ASTAR_SDK_FIRST.json",
+  "baseline_sha256": "676d318a1510840e9d89c235d7d51e7a16b7243c092195cd4bb44d9486a90698",
+  "SDK_script_sha256": "d40444e5dd62d7f89e971b17b9ecc3f2a27f4d1b386c52cc3587eadd62e2b2b0",
+  "candidate_manifest_sha256": "be356d915977b340e2642336b789c9c4ebacdacab48606bdf812a6e707327ac4",
+  "SDK_horizon": 1600,
+  "author_seed": 615,
+  "author_wall_rate": 0.05,
+  "automatic_five": false,
+  "automatic_native": false,
+  "native_rounds": 0,
+  "not_full_red_score_without_BLUE": true
+}
