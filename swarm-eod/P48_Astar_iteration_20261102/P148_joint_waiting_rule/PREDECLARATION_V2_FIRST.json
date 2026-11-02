@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_BEFORE_FIRST_JOINT_WAITING_SDK_FRAME",
+  "parent_result": "E:\\codex\\P48_Astar_iteration_20261102\\P142_profile_and_task_chain\\BASELINE_FIRST.json",
+  "parent_result_sha256": "de619166a355b07d82ed3765b9d1c5771e9bf0ff28da4954d7cd968903f9c48c",
+  "code_sha256": "a4ed921e7537c4f8d3b7efffd41252cf754423465b4d009547ac9fa44a2e1fd9",
+  "manifest_sha256": "66c27b1bbc5fb009be15d12f746114af282f475240e5f8303380982edc64de8a",
+  "scope_revision": "Before any SDK: preserve live wall survey and require actual docking/map exchange; empty waiting coordinator independent of main carrying leader.",
+  "case": "cross_sdk",
+  "horizon": 1000,
+  "wall_rate": 0.05,
+  "authored_seed": 615,
+  "maximum_cases": 1,
+  "gates": [
+    "All original finite/callback/inventory/loop checks except the known parent health flag; minimum health per owner cannot worsen",
+    "Prefix frame rows identical before first accepted waiting route",
+    "At least two empty owners actually accept distinct waiting goals and arrive within the rule tolerance",
+    "All10 and actual time score >= parent; actual submitted map and true-wall credit >= retained parent",
+    "Mean five raw map scores >= parent; controllable subtotal >= parent+0.25 point",
+    "No P145 output filter/no map, SDK, clocks, threads, dependency or external-seed change",
+    "All evaluated outputs freeze before author truth; first failure stops without parameter/seed/label rescue"
+  ],
+  "health_limit": "Parent two owners health49 is not repaired or reclassified as safe. Novel rule starts after inventory empties; require no added damage.",
+  "automatic_native": false,
+  "automatic_five": false,
+  "native_rounds": 0
+}

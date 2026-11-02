@@ -1,0 +1,215 @@
+{
+  "status": "PASS_V2_WAITING_SCOPE_PROTOCOL_AND_FORWARDING",
+  "checks": [
+    {
+      "name": "joint_proposal_uses_known_cells",
+      "passed": true,
+      "audit": {
+        "status": "JOINT_TERMINAL_PROPOSAL",
+        "tested_sets": 1,
+        "candidate_count": 12,
+        "proof": {
+          "status": "CERTIFIED_TERMINAL_GRAPH_ONLY",
+          "expanded": 4958,
+          "removed_cells": 42,
+          "protected_endpoints": 2,
+          "parking_sites": 2,
+          "limitation": "Only final parked occupancy on current known grid. No simultaneous travel, deadlock, stale-message, pose/noise or game-score guarantee."
+        }
+      }
+    },
+    {
+      "name": "input_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "fresh_coordinator_plan_accepted",
+      "passed": true
+    },
+    {
+      "name": "future_epoch",
+      "passed": true
+    },
+    {
+      "name": "bad_duration",
+      "passed": true
+    },
+    {
+      "name": "wrong_leader",
+      "passed": true
+    },
+    {
+      "name": "bool_epoch",
+      "passed": true
+    },
+    {
+      "name": "bool_version",
+      "passed": true
+    },
+    {
+      "name": "nonfinite_goal",
+      "passed": true
+    },
+    {
+      "name": "duplicate_goals",
+      "passed": true
+    },
+    {
+      "name": "unknown_owner",
+      "passed": true
+    },
+    {
+      "name": "goal_beyond_communication_area",
+      "passed": true
+    },
+    {
+      "name": "forged_sender_rejected",
+      "passed": true
+    },
+    {
+      "name": "future_envelope_rejected",
+      "passed": true
+    },
+    {
+      "name": "relayed_proposal_not_mistaken_for_direct_leader",
+      "passed": true
+    },
+    {
+      "name": "missing_received_state_abstains",
+      "passed": true
+    },
+    {
+      "name": "owner_inventory_change_rejects",
+      "passed": true
+    },
+    {
+      "name": "all_completed_does_not_create_waiting_delay",
+      "passed": true
+    },
+    {
+      "name": "lease_last_frame_valid",
+      "passed": true
+    },
+    {
+      "name": "lease_expiry_rejects",
+      "passed": true
+    },
+    {
+      "name": "anchor_drift_rejects",
+      "passed": true
+    },
+    {
+      "name": "carrying_robot_has_no_waiting_goal",
+      "passed": true
+    },
+    {
+      "name": "malformed_state_abstains",
+      "passed": true
+    },
+    {
+      "name": "uncertain_task_endpoint_does_not_get_cleared",
+      "passed": true
+    },
+    {
+      "name": "expired_compute_budget_does_not_emit_plan",
+      "passed": true
+    },
+    {
+      "name": "carrying_route_forwarded_exactly_once",
+      "passed": true
+    },
+    {
+      "name": "existing_mapping_sortie_kept",
+      "passed": true
+    },
+    {
+      "name": "no_complete_state_keeps_parent_route",
+      "passed": true
+    },
+    {
+      "name": "original_message_fields_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_docking_keeps_original_mapping_route",
+      "passed": true
+    },
+    {
+      "name": "no_actual_map_message_keeps_original",
+      "passed": true
+    },
+    {
+      "name": "dock_exchange_window_not_shortened",
+      "passed": true
+    },
+    {
+      "name": "active_five_field_wall_survey_is_preserved",
+      "passed": true
+    },
+    {
+      "name": "post_exchange_optional_wait_route_can_apply",
+      "passed": true
+    },
+    {
+      "name": "completed_exchange_evidence_survives_leaving_dock",
+      "passed": true
+    },
+    {
+      "name": "readiness_report_carries_actual_step_and_flag",
+      "passed": true
+    },
+    {
+      "name": "empty_coordinator_available_while_main_leader_carries",
+      "passed": true
+    },
+    {
+      "name": "unready_idle_peer_not_assigned",
+      "passed": true
+    },
+    {
+      "name": "no_empty_peer_no_waiting_coordinator",
+      "passed": true
+    }
+  ],
+  "plan": {
+    "version": 1,
+    "epoch": 100,
+    "leader": 0,
+    "expires": 172,
+    "rally": [
+      0.0,
+      0.0
+    ],
+    "inventories": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "goals": {
+      "0": [
+        88.0,
+        -8.0
+      ],
+      "1": [
+        -40.0,
+        72.0
+      ]
+    }
+  },
+  "source_sha256": {
+    "waiting_core_v2.py": "f47a136a7caa2a54692427ba1521d326017bf5c92267f424a9901cde26bbcde8",
+    "joint_waiting_v2.py": "42bae42ab3d15f177954a9ae404df28255b069c256802a5a8ece34014865a3ea"
+  },
+  "scope": "Authored helper arrays and explicit parent fixture; no real SDK or flight qualification.",
+  "sdk_frames": 0,
+  "native_rounds": 0
+}

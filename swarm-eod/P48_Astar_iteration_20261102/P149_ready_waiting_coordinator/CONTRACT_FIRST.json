@@ -1,0 +1,246 @@
+{
+  "status": "PASS_READY_ELECTION_AND_ORIGINAL_WAITING_SCOPE",
+  "checks": [
+    {
+      "name": "joint_proposal_uses_known_cells",
+      "passed": true,
+      "audit": {
+        "status": "JOINT_TERMINAL_PROPOSAL",
+        "tested_sets": 1,
+        "candidate_count": 12,
+        "proof": {
+          "status": "CERTIFIED_TERMINAL_GRAPH_ONLY",
+          "expanded": 4958,
+          "removed_cells": 42,
+          "protected_endpoints": 2,
+          "parking_sites": 2,
+          "limitation": "Only final parked occupancy on current known grid. No simultaneous travel, deadlock, stale-message, pose/noise or game-score guarantee."
+        }
+      }
+    },
+    {
+      "name": "input_arrays_unchanged",
+      "passed": true
+    },
+    {
+      "name": "fresh_coordinator_plan_accepted",
+      "passed": true
+    },
+    {
+      "name": "future_epoch",
+      "passed": true
+    },
+    {
+      "name": "bad_duration",
+      "passed": true
+    },
+    {
+      "name": "wrong_leader",
+      "passed": true
+    },
+    {
+      "name": "bool_epoch",
+      "passed": true
+    },
+    {
+      "name": "bool_version",
+      "passed": true
+    },
+    {
+      "name": "nonfinite_goal",
+      "passed": true
+    },
+    {
+      "name": "duplicate_goals",
+      "passed": true
+    },
+    {
+      "name": "unknown_owner",
+      "passed": true
+    },
+    {
+      "name": "goal_beyond_communication_area",
+      "passed": true
+    },
+    {
+      "name": "forged_sender_rejected",
+      "passed": true
+    },
+    {
+      "name": "future_envelope_rejected",
+      "passed": true
+    },
+    {
+      "name": "relayed_proposal_not_mistaken_for_direct_leader",
+      "passed": true
+    },
+    {
+      "name": "missing_received_state_abstains",
+      "passed": true
+    },
+    {
+      "name": "owner_inventory_change_rejects",
+      "passed": true
+    },
+    {
+      "name": "all_completed_does_not_create_waiting_delay",
+      "passed": true
+    },
+    {
+      "name": "lease_last_frame_valid",
+      "passed": true
+    },
+    {
+      "name": "lease_expiry_rejects",
+      "passed": true
+    },
+    {
+      "name": "anchor_drift_rejects",
+      "passed": true
+    },
+    {
+      "name": "carrying_robot_has_no_waiting_goal",
+      "passed": true
+    },
+    {
+      "name": "malformed_state_abstains",
+      "passed": true
+    },
+    {
+      "name": "uncertain_task_endpoint_does_not_get_cleared",
+      "passed": true
+    },
+    {
+      "name": "expired_compute_budget_does_not_emit_plan",
+      "passed": true
+    },
+    {
+      "name": "carrying_route_forwarded_exactly_once",
+      "passed": true
+    },
+    {
+      "name": "existing_mapping_sortie_kept",
+      "passed": true
+    },
+    {
+      "name": "no_complete_state_keeps_parent_route",
+      "passed": true
+    },
+    {
+      "name": "original_message_fields_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_docking_keeps_original_mapping_route",
+      "passed": true
+    },
+    {
+      "name": "no_actual_map_message_keeps_original",
+      "passed": true
+    },
+    {
+      "name": "dock_exchange_window_not_shortened",
+      "passed": true
+    },
+    {
+      "name": "active_five_field_wall_survey_is_preserved",
+      "passed": true
+    },
+    {
+      "name": "post_exchange_optional_wait_route_can_apply",
+      "passed": true
+    },
+    {
+      "name": "completed_exchange_evidence_survives_leaving_dock",
+      "passed": true
+    },
+    {
+      "name": "readiness_report_carries_actual_step_and_flag",
+      "passed": true
+    },
+    {
+      "name": "empty_coordinator_available_while_main_leader_carries",
+      "passed": true
+    },
+    {
+      "name": "unready_idle_peer_not_assigned",
+      "passed": true
+    },
+    {
+      "name": "no_empty_peer_no_waiting_coordinator",
+      "passed": true
+    },
+    {
+      "name": "old_min_empty_is_not_automatically_eligible",
+      "passed": true
+    },
+    {
+      "name": "lowest_actually_ready_empty_is_elected",
+      "passed": true
+    },
+    {
+      "name": "carrying_peer_cannot_be_elected_even_if_bad_readiness",
+      "passed": true
+    },
+    {
+      "name": "empty_readiness_set_abstains",
+      "passed": true
+    },
+    {
+      "name": "ready_peer_can_build_when_lower_empty_unready",
+      "passed": true,
+      "audit": {
+        "status": "JOINT_TERMINAL_PROPOSAL",
+        "tested_sets": 1,
+        "candidate_count": 12,
+        "proof": {
+          "status": "CERTIFIED_TERMINAL_GRAPH_ONLY",
+          "expanded": 4979,
+          "removed_cells": 21,
+          "protected_endpoints": 2,
+          "parking_sites": 1,
+          "limitation": "Only final parked occupancy on current known grid. No simultaneous travel, deadlock, stale-message, pose/noise or game-score guarantee."
+        }
+      }
+    },
+    {
+      "name": "same_readiness_domain_accepts_plan",
+      "passed": true
+    },
+    {
+      "name": "new_lower_ready_leader_invalidates_old_proposal",
+      "passed": true
+    },
+    {
+      "name": "expired_readiness_does_not_validate_leader",
+      "passed": true
+    },
+    {
+      "name": "stale_report_and_loaded_report_not_eligible",
+      "passed": true
+    },
+    {
+      "name": "future_readiness_not_eligible",
+      "passed": true
+    },
+    {
+      "name": "explicit_not_ready_excludes_lower_empty",
+      "passed": true
+    },
+    {
+      "name": "fresh_ready_report_and_self_both_eligible",
+      "passed": true
+    },
+    {
+      "name": "live_survey_self_excluded_from_new_election",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "waiting_core.py": "95fd71fe4a5387a25e71b8d2a3d39f1e9238ae140639c654b307e97b9a1a439a",
+    "joint_waiting.py": "bdfd0a29f95efdbe858a8fc4c49f7764a1b11203d3c817695ecba9626d933401"
+  },
+  "scope": "Explicit helper/protocol fixtures only, no SDK or physics qualification.",
+  "sdk_frames": 0,
+  "native_rounds": 0
+}

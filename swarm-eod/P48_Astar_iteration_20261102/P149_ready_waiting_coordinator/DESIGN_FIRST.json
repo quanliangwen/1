@@ -1,0 +1,20 @@
+{
+  "status": "SOURCE_READY_BEFORE_NEW_FIXTURE_OR_SDK",
+  "functional_change": "Elect among fresh actually-ready empty peers; same domain used for build/message/route validation.",
+  "predecessor": "P148 V2 failed actual activation gate; preserved without native or rescue.",
+  "unchanged": [
+    "Original P48 A* mapping/layout/motion",
+    "P148 scope/proposal geometry/budgets/lease/state ages",
+    "Original benchmark seed/case/gates"
+  ],
+  "limits": [
+    "Readiness views can differ; no leader consensus or simultaneous collision safety guarantee. Uncertain proposals abstain.",
+    "A later coordinator change can invalidate an old proposal; original route fallback remains."
+  ],
+  "sources": {
+    "waiting_core.py": "95fd71fe4a5387a25e71b8d2a3d39f1e9238ae140639c654b307e97b9a1a439a",
+    "joint_waiting.py": "bdfd0a29f95efdbe858a8fc4c49f7764a1b11203d3c817695ecba9626d933401",
+    "wait_connectivity.py": "dabd90d464a332bc3120b993a23cbbdabe574be16a0b84a1eecc780411a3c947"
+  },
+  "native_rounds": 0
+}
