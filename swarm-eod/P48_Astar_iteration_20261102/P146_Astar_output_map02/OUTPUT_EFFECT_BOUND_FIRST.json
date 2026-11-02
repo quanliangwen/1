@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED_FIXED_ITEM_SCORE_BOUNDS",
+  "selected_owner": 0,
+  "surface_pixels": 50895,
+  "current_surface_hits": 49933,
+  "current_missing_surface": 962,
+  "erased_pixels": 1314,
+  "filtered_map_score": 93.53343203531782,
+  "max_map_gain_from_this_erasure": 0.5163572060123784,
+  "max_map_loss_from_this_erasure": 1.8901660280970627,
+  "possible_unfiltered_map_interval": [
+    93.01707482930544,
+    95.42359806341487
+  ],
+  "possible_unfiltered_full_interval_holding_other_public_items_fixed": [
+    71.79741556279448,
+    73.00067717984919
+  ],
+  "unfiltered_cannot_reach_map96": true,
+  "unfiltered_cannot_reach_full75": true,
+  "formulas": [
+    "S=100*(C-P), P=.2*sum(charge)/N, charge in [0,1].",
+    "For m erased pixels, delta=S_after-S_before in [-100*min(m,missing_after)/N,20*m/N].",
+    "P_before>=P_after and C_before<=1 imply S_before<=100*(1-P_after)."
+  ],
+  "source_map_scoring_sha256": "68e44a3edcc04f7632584a7e9f726a003228aa50271eea2b90d73d669fd3ba56",
+  "mechanism_receipt_sha256": "9a05319f36e5558edb56929ea949e01bf2cfcebacad7fb429921eddfaa9497af",
+  "source_constraint": "Frozen helper only zeros selected pixels; no new occupied pixels. Numeric bound assumes unchanged map dimensions and the frozen SDK score.",
+  "limitations": [
+    "Bounds do not determine whether this native filter helped or hurt the map.",
+    "Fixed-item full bounds are score arithmetic, not a simulated matched-seed counterfactual.",
+    "Not comparison with the earlier naturally randomized A-star episode."
+  ],
+  "sdk_frames": 0,
+  "native_rounds": 0,
+  "original_map_or_truth_grid_loaded": false
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "campaign_status": "COMPLETE_FINITE_STAGED_CAMPAIGN",
+  "utc": "2026-11-02T02:08:22.043477+00:00",
+  "native_failure": false,
+  "rows": [
+    {
+      "version": "P145",
+      "group": "P145_A",
+      "maps": 1,
+      "native_rounds": 2,
+      "map": "Map02",
+      "score": 72.05559416580067,
+      "map_score": 93.53343203531782,
+      "wall_score": 76.44439074070878,
+      "time_score": 100.0,
+      "placed": 9,
+      "expected": 10,
+      "red_wall_seconds": 177.96208596229553,
+      "red_wall_hit": false,
+      "blue_wall_hit": false,
+      "actual_free_support_count": 1,
+      "pass_gate": false,
+      "diagnostic_checks": {
+        "actual_active_completion_on_submitted_image": true,
+        "submitted_image_bound": true,
+        "all10": false,
+        "no_RED_hit": true,
+        "no_BLUE_hit": true,
+        "map_at_least96": false,
+        "wall_at_least80": false,
+        "time100": true,
+        "full_at_least75": false
+      }
+    }
+  ],
+  "scope": "One P145 A-star originalMap02 RED+BLUE pilot only. Independent unseeded observation, never five-map ranking or causal improvement proof. No automatic retry/promotion/five."
+}
