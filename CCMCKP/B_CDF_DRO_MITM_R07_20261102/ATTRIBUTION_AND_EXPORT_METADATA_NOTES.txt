@@ -1,0 +1,4 @@
+正式对照仅为上传B，R04/R06均只用于事后诊断，未取代B。R07候选实际包含保留的R04 entropic_cost_proposal、R06支撑感知FFT长度，以及本轮新增联合两组CDF消息提案。正式B成本比较是这个完整候选的效果，不能全归因于单个组件。
+运行前已冻结的reporting/export_terminal.py在snapshot.attribution_limit中遗留“retainedR04 auxiliary plusR07 convolution / freshrawABBA isolatesFFT”文字。这是复制R06离线导出器后未完全更新的说明字段：本轮新增机制是R07联合消息交换，FFT优化属于R06；本轮没有新的FFT ABBA，相关ABBA来自已披露R06计算预检。该字段不影响统计数字、源码路径、参数、随机流或执行。为保留已运行的冻结后处理工具字节，此处以独立勘误说明，原始ZIP/JSON不静默改写。权威来源为运行前PROTOCOL.new_mechanism、FREEZE197项与源码实际差异；Excel及中文终末报告须正确写明完整候选组成。
+R07数学原始文献为Aji&McEliece2000 DOI10.1109/18.825794（II/III式3.1/3.2和AppendixA完整证明）以及Kschischang/Frey/Loeliger2001 DOI10.1109/18.910572（IIA–C式5/6、IVA及AppendixA）。本题两组矩阵和非负截断多项式适配为自有推导。实数精确代数的分配律不等同于浮点严格半环；所有候选重新经过原完整float64 CDF及原生评价。仅在一个容量阈值下CDF不降不代表FOSD、原生返回概率不降或未知分布覆盖保证。
+时间核查区分源代码585秒工作截止与实际各类记录。新增纯离线time_reserve_review.py不重抽原生样本，逐条核对最后原生调用结束时间与600秒总时钟；不从结束时间虚构调用开始时间，不事后更改统计有效门槛。
