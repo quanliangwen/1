@@ -1,0 +1,92 @@
+最新终态P154（2026-11-02）：原五图10native全部结束，71raw首次Windows SHA与CAMPAIGN审核PASS，双方无墙钟超时。完整均76.256069819/49枚，对留存P48 A*74.255883365观察+2.000186454；没有一张图实际6枚集中，3图接受但圈内仅1/2/2枚，其他2图未接受。Map05 BLUE清9/10、7200步，不能证明漏排的是角落点或因集中导致。先读终态分析与下一步边界.txt、FIVE_COMPARISON.json、RESULT_PUBLICATION.json。不恢复3641030/116660/108464或资格调度，不重跑已结束组、改seed/标签救分。本阶段没有活动队列；新动作先核真实全局锁/进程，后续优先分析固定总库存配额与执行链、实测内角覆盖，不盲目放宽保护或新开五图。正式V09与维护池不变，没有新参赛包。工具goal若仍BLOCKED不伪造ACTIVE，原广泛目标未完成也非用户暂停；后续授权与状态按真实用户/系统处理。
+
+以下为运行前历史，活动措辞已被上面终态覆盖，不可据旧PID重启：
+最新P154_corner_cluster_five（2026-11-02）。用户已明确纠正：要空间上主要集中弹药到小角落，使蓝队困难且覆盖不降太多，并要求跑完整五图。此有限直接五图已授权；不是P153时间两阶段。先读分析TXT/TEST_PROTOCOL/CANDIDATE_MANIFEST/CORNER_CONTRACT_V2_FIRST/ENTRY_ACTUAL_ZIP_FIRST/PREDECLARATION及实时STATUS/RESULT/CAMPAIGN_CLIENT_REVIEW/LOCAL_COLLECTOR_RESULT/RESULT_PUBLICATION。
+
+唯一服务器coordinator3641030/start406505465/UTC04:45:00.746297，H/P154_corner_cluster_five_20261102/run_offline.py，已核/proc同命令/start为RUNNING_FIVE_MAPS。Windowscollector116660/UTC04:44:58.645438，P154 collect_offline.py；完成发布器108464/startUTC04:46:15.752011/watch_completion.py。资格启动器113224/04:43:44.375752已完成，不重复运行run_and_launch。PID须实际核command/start，不能凭数字kill/restart；等待也占单一调度，registry空不能另开SDK/native。当前新组P154_CORNER_ASTAR_A，原Map01–05一红一蓝共10native，单组A，无B/控制重跑/自动追加。首真实native错误保留停链不重试/换label/seed；正常低分仍跑完原请求五图，绝不挑图。14h有限collector/publisher。
+
+规则：原P48_ASTAR42payload独立底本，改入口+team_coverage_lns，新增corner_cluster/corner_mission共44；原A*移动、地图/感知/投放安全/结束/依赖不改，没有P153时间阶段、P145输出擦图、P149等候或P152替代渲染。先原布局作baseline，再尝试至少ceil(.6*可重排槽数)在同一角落半径2R内，满库存6/10。角落由public尺寸和实际hits双墙跨度、已知free/净空构造，不读真图或坐标硬码。保持原目标间距51.36（CELL16）、禁区/库存/原最短路预算；每次条件剩余已观测墙覆盖>=同次原方案90%才应用，原无法满足则fallback。90%不是官方实际分或多次重规划全局保证；不能把未触发当成功集中。2R范围比同点放弹大，官方24px物理间距保留。
+最多12可选增强调用/.40秒合作预算、两候选角落、同次Dijkstra缓存；超时/原已无价值/无法6集中保覆盖返回原。布局距离仍Dijkstra，移动A*。corner_cluster_v1元数据复用原fleet_plan协议，绑epoch/leader/完整计划SHA/anchor/半径/coverage比；仅本机当前匹配圈内任务不被原纯覆盖机会成本推迟。其他任务、失效/投放/预算仍原判断，没有新协调机或共识保证。严禁把corner_context当错误点可投的通行证。
+
+32项数值/消息契约PASS，生产helper源码和第一29项相同；V2仅加真实已知断连负例。真原Dijkstra+作者数组，geometry/value明确适配假具、零SDK；dense角落正例6集中，uniform反例只有79.41%覆盖被拒绝。实际SDK entry绑定ZIP f73e5be22ad11caf74dc8609da4690190c20137a3ea4f8f752005a84914e13dc，整数615/NumPy1.26.4-Pandas3.0.6-CVcontrib4.11.0.86真实mtrand/随机/SDK Launcher Stats/5机独立构造/禁止Gurobi通过；实际BearingMemory/Geometry接口探针仅估值0 fallback，不说SDK验证了集中接受。是server研究资格，非官网包放行，无依赖覆盖。
+
+比较固定：总分/地图/墙/时间/布局难度加权项，投放50、RED/BLUE hardwallhit、BLUE清除数量/步数，逐图候选接受及圈内实际RED公开bomb坐标计数。严格2R和+原12到达容差分开；若无接受anchor，最终报告null而非声称物理0枚在所有角落。留存P48A*均74.255883/50，原SDK/BLUE同但自然随机不同，不能称配对稳定因果。完整组首次Windows opaque rawSHA后才final_report，NPZ/pickle不反序列化/BLUE私console不读；只公开red_bombs/score/trajectories可分析。finalize_and_publish只比较/发布，不启动新游戏。当前输入冻结，运行中不得改code/门槛。
+
+当前有限直接五图无score pilot，来自最新人工请求，覆盖旧“有希望才五图”的一般节奏；普通深入分析仍先小检查。原goal工具若blocked是此前资源历史，不能create_goal或改数据库伪造active；这个新的明确五图请求不需要重复许可。user停止立即暂停后续，本次仍明确在执行。
+科学环境R=/home/junhao/quan/parallel_test_solver/match，H=R/solver_study/framework_screen_20261016/best87_independent_20261025；sshjunhao@10.112.162.60，Python仅R/.venv/bin/python。SDK e2f022b124SHA/team006 LBBDRescue/原每图线程时限，无外seed；CPU<=60/loadcore<=.4/RAM8GiB/盘12GiB两60秒，旧高负载权限耗尽。外CCMCKP U18不动、旧match7不恢复，不删旧证据或源码/ZIP来腾空间。只有自身必要新临时工作可E:/codex，交付直接GitHub quanliangwen/1 swarm-eod/P48_Astar_iteration_20261102/P154_corner_cluster_five并核远端sha/commit。
+
+P153已失败终态：作者10/10、map93.803676<95.470343、wall76.725714>74.658009、872>779步、可控小计−.41979，无BLUE不称完整分，不重启108680。P152已终态全身份PASS：这个作者图多方向补图造成约3.8map pp损失，但缺小物体正例，不能直接关层或叠本次。正式V09/维护池不变，不发布新比赛包，J17/Gurobi排除。研究ZIP是测试输入，不推荐官网上传。
+
+每次依据/实改/首错/小测/分数/拒绝原因记录TXT/交接。状态无变安静，完整结果/失败/实质机制/需决策才通知。五图结束要先实质分析：若大部分角落计划被90%保护拒绝，结论是“约束下集中未实现”，不是有效高分；若实际6+集中而BLUE仍全清，则记录对手能处理的大簇反例，不刷seed重试。得分受hardwallhit时明确不用于稳定排名，不动SDK延长蓝队。后续动作须据实际结果，不盲目新增一轮。
+
+【以下旧接续，不得恢复旧队列】
+最新P153_oneway_deployment_phase（2026-11-02），最新人工问P48 A*如何布点、提议停止探索再投所有弹药，并问最后一弹是否结束；已按明确新授权实施并完成一次真实SDK小试，旧资源阻塞已解除。goal工具状态仍可能blocked，不能create_goal伪造active；状态恢复由用户/系统控制，但不得否定本轮明确新指令已授权工作。先读分析TXT、POSTMORTEM_FIRST、RESULT_FIRST、REQUEST_GUARD_REVIEW_FIRST、TASK_TRACE_REVIEW_V2_FIRST与发布回执。
+
+P153已终态STOP_FIRST_ONEWAY_PHASE_MECHANISM_GATE，不可重启108680/startUTC04:18:24.430626/run_diagnostic.py或换seed/label救分。43payload只原42A*入口+deployment_phase helper；没有叠P145/P149或P152替代渲染。32纯契约后最多一次CROSS/lab615/.05step作者SDK，零native；所有源码与gates冻结未改。
+实际五机264..266步单向切换，首切换前全部行一致、决策确变；131切换后最终路由均投放/回联络或hold，10次实际请求和库存下降均在phase后。父本779→新872步，实际10→10，map95.470343→93.803676，wall74.658009→76.725714，time100→100，可控小计72.666773→72.246981（−.419792）；无BLUE，不是完整红分/五图。新误绘penalty+1.61339pp、credit−.05328pp，5raw均分也退。逐机健康父[50,49,50,50,49]新[49,50,50,49,50]，总损伤仍2不可说增加，但逐机不退门槛未过。两版loop均90内。
+原因证据：父本69次承诺检查实际defer0，不能说此场景消除很多推迟。3号首任务278提前266，却首投445延840，458/708已释放任务返回联络，734重接首目标；新363/364分别3/0掉血先于任务释放。具体释放分支/接触对象没记录，不硬归因A*或纯拥堵。首次只读汇总误用assignment字段而非assignment_goal已保存ANALYSIS_FIRST_ERROR，V2只修诊断键，同数据零SDK重跑。
+不扩正式单图/五图、不晋级。本例不能普遍否定二阶段框架，但这个具体早接有效计划就不可逆禁止探索的改法没有优于底本。原P48 A*74.255883/50保持。结束答复依实际最高CompletionConsensus：remaining<=0可带余弹提交；正常本机空+全队证书+无更优新鲜peer才提交。原baseline末弹777/提交779，本次末弹871/提交872，故不是最后请求投放瞬间自动结束。
+
+P152旧114360已正常结束、资源门槛两样本04:10/04:11通过，PASS_FROZEN_RENDERER_LAYER_IDENTITY八项全true：779行、提交、图分、健康、任务/gate链均同父，memory ndarray未变、full图匹配。LAYER_DIAGNOSIS_FIRST证实此同冻结作者图0号frame99.34905→full bearing95.47034，+8107px仅多2真墙像素，penalty增加3.88759pp；五机均退，均值−3.79948pp。无小物体作者CROSS，不直接关整层，更不能据此给官方五图增益；此主线只作下一单项规则依据，不叠当前P153。
+
+当前无本聊天SDK/native活动队列。下次必须先核actualCIM/远端proc cmd+start、scoped guard/global lock/registry，不恢复P152/P153。原R=/home/junhao/quan/parallel_test_solver/match，H=R/solver_study/framework_screen_20261016/best87_independent_20261025，sshjunhao@10.112.162.60，科学Python仅R/.venv/bin/python。SDK e2f022b124SHA/team006/原限时线程无外seed；CPU<=60/loadcore<=.4/RAM8GiB/盘12GiB两60秒，旧高负载授权耗尽；NumPy1.26.4/Pandas3.0.6/CV4.11/41pins不安装覆盖，外CCMCKP不动/旧match7不恢复。
+生产own公共观测/实收消息，禁竞赛真图/BLUE私态console/peer对象/历史输入坐标硬码，作者truth只输出冻结后。NPZ/pickle只首次opaqueSHA不反序列化/重复已审raw。无Gurobi/无新提交包，正式V09不变；新正式包须SUBMISSION_POLICY实ZIP615/ABI/SDK/平铺，不自动官网上传。
+后续不只轮询终态或生成无限纯夹具：根据真实证据一次一条规则；P153失败已留，不继续调进入时刻强求翻盘。P152误绘层有新实际证据，可在原A*独立底本先复核短墙/角落真支持正例与幽灵反例，候选必须仍保留这些反例，不能删除整层来赚单作者图。状态未变安静，实质机制/完整分数/异常/需决策通知。交付直接GitHub quanliangwen/1 swarm-eod目录核远端SHA，E:/codex仅必要临时。无代理；用户停止立即停后续。
+
+P153与P152完成记录已GitHub27文件核验PASS，提交906f2f04ceee175aa583085dae0f521fed3b502d，见P153/PUBLICATION_FIRST.json。
+
+【以下旧接续】
+资源阻塞审计（2026-11-02UTC03:01）
+连续三个goalturn同一CPU/负载准入阻塞。前两轮仍取得真实代码/机制证据，本轮为VERIFIED_WAIT：Windows114360/start02:56:49.377766同命令实际存活，原SDK观察仍未启动；当前CPU99.9922%、load309.92/256，RAM82.96GiB/盘20.24GiB正常。
+下一有决定价值的证据是冻结P152绘图层真实输出；重复纯夹具不能代替实际地图精度归因。本轮按系统规则将完整目标标记资源BLOCKED，未完成，也不是人类暂停。唯一P152离线排队、原条件/14小时有限窗口和automation90监控都保留；不kill/restart/并开，不降低准入，不动外部任务或源码/依赖。
+资源恢复时现有runner会自动依原两样本gate继续；到期或失败保留真实原错，不自动换标签重启。自动化只监控此已活队列和实质外部变化，不无限造人工小测试，也不调用create_goal伪造active。新的目标状态恢复由用户或系统控制。
+原目标所有范围/数据/发布约束保留，正式V09不变，无新SDK/native分数或参赛发布。
+
+【以下阶段历史，最新资源状态以上文为准】
+最新P152_frozen_renderer_layer_diagnosis（2026-11-02），优先于P149活动调度历史。Goal ACTIVE/原P48_ASTAR独立底本/地图精度优先/一次一条规则，不spawn代理、不自行暂停complete、不发布比赛包。
+先读分析TXT、PREDECLARATION_FIRST/STATIC_CONTRACT_FIRST/LAUNCH_BINDING_FIRST和最新STATUS/RESULT_FIRST/FIRST_ERROR。唯一Windows离线SDK调度114360/startUTC02:56:49.377766/run_diagnostic.py，14h有限；服务器H/P152_Astar_frozen_renderer_layers_20261102。先核实际CIM command/start/STATUS、scoped/global lock/registry，不重复启动；等待也占唯一调度。初样CPU94/load240/256超原门槛，尚未SDK。
+当前最多一次原作者CROSS800帧/lab615/.05*step，原42payload不改，零native/no automatic five。仅在所有动作/提交冻结后评估原渲染各层；全部图先固定才作者truth，禁止将诊断分数反馈控制。9静态契约PASS不是SDK结果；实际必须全部779行/提交/图分/健康/任务/gate链与留存P142同，memory所有ndarray不改/full图匹配。父本健康49失败仍保留，不救资格；只是分层出处，不是完整分或官方因果改善。
+P149115628已经退出，P151实际helper反例证实不同ready视图可各自通过局部联合证书、接受同一个等待点，0距离<44。02:54:54在其实际WAITING核验后自主取消，02:55:46旧runner记录Human stop原错保留；CANCEL_DECISION/TERMINAL_REJECTION明确非人类暂停、非SDK失败，零SDK/零native，不能恢复P149或P148。停止停车分支，不继续为触发/收益堆协议。
+P150零SDK否决盲扩大角宽/中心圆擦图；P145实际输出规则不叠。P03旧滤波正式图退步不重试。A*完整五图仍74.255883/50，正式V09不变，J17 Gurobi排除。
+原服务器/资源/环境/数据边界全部保持：R=/home/junhao/quan/parallel_test_solver/match；H=R/solver_study/framework_screen_20261016/best87_independent_20261025；sshjunhao@10.112.162.60；科学Python只R/.venv/bin/python；SDK e2f022b124SHA/team006/原时限线程/无外seed；CPU<=60/loadcore<=.4/RAM8GiB/盘12GiB两60秒，旧高负载授权耗尽。NumPy1.26.4/Pandas3.0.6/CV4.11/41pins不安装覆盖，不碰外CCMCKP/旧match7。
+生产只own公共观测和实际收到消息，禁竞赛真图/BLUE私态console/peer对象/历史输入硬码，作者truth只输出冻结后。竞赛NPZ/pickle只首次opaqueSHA不反序列化或重复已审raw。每次依据/实改/首错/小测/淘汰写TXT交接；仅实质机制/分数/失败/决策通知，状态无变化安静。新交付GitHub quanliangwen/1 swarm-eod任务目录并核远端SHA，E:/codex必要临时非永久备份。用户停止立即停后续，普通分析测试自主持续。
+本goalturn PROGRESS（反例→实际取消→新观察诊断），不是只轮询；资源门槛未恢复不可强开或无限造夹具。后续真实外部阻塞重复三goalturn且无意义进展时再按goal blocked审计。
+
+【以下历史接续】
+最新P149_ready_waiting_coordinator，Goal ACTIVE/原P48_ASTAR底本，一次一条规则，不叠P145。先读分析TXT/DESIGN_FIRST/CONTRACT_FIRST52项/PREDECLARATION_FIRST/CANDIDATE_MANIFEST_FIRST/LAUNCH_BINDING_FIRST与实时STATUS/RESULT_FIRST/FIRST_ERROR。
+Windows唯一SDK调度115628/startUTC2026-11-02T02:45:24.768105/run_diagnostic.py，14h有限；远端H/P149_Astar_ready_waiting_20261102。先核CIM实际cmd/start与scoped/global lock/registry；等待也占唯一队列，不能并开/重复启动。资源初样CPU63.64/load160.89/256超原门槛，在WAITING_ORIGINAL_CAPACITY非已开跑。原CPU<=60/loadcore<=.4/RAM8GiB/盘12GiB两60秒、原SDK/BLUE/线程/时限/依赖保持，旧高负载授权耗尽。
+最多一个作者CROSS/1000frame/lab615/.05*step，zero native/no automatic five。P14895580已结束，779/10投，map95.47034/wall74.65801/time100，所有动作/地图/健康与父完全相同，零BUILD/接单，实际门槛FAIL保留不恢复。NOOP_DIAGNOSIS_FIRST以12条本机received fleet快照定位min空载不ready，却阻止ready成员。P148旧V1/V2均不可再启动。
+P149相对P148只两helper新功能：等待选举资格为实际fresh ready空载成员，接收先收readiness再验证计划，build/消息/控制统一域；保持原survey/SORTIE/首次实际交换保护，携弹布点主协调不变。无共识/动态安全/已提分保证。52纯fixture及历史查重PASS不是SDK资格。真正至少2空载到达/健康不恶化/all10/map+credit及5raw均值/time不退/小计+.25，首失败止；若无收益停止停车分支回地图误绘和尾任务链，不调参数种子标签救分。不为等待无限造fixture。
+ssh junhao@10.112.162.60；R=/home/junhao/quan/parallel_test_solver/match；H=R/solver_study/framework_screen_20261016/best87_independent_20261025；远端Python仅R/.venv/bin/python，124SDK SHA e2f022b/NumPy1.26.4/Pandas3.0.6/CV4.11/41pins不安装覆盖。生产own公共观测/实收消息，禁竞赛真图/BLUE私态/peer对象/历史输入硬码。作者truth仅输出冻结后，NPZ/pickle仅首次opaqueSHA不反序列化，不重复已审raw。外CCMCKP不动/旧match7不恢复，无Gurobi，正式V09不改不自动发布。
+目标和automation90 ACTIVE，不spawn代理/不自行pause complete；用户停止立即停后续。新交付GitHub quanliangwen/1的swarm-eod任务目录，核远端SHA，E:/codex必要临时非永久下载。每次记录依据/实改/首错/实际结果/淘汰，状态无变安静，实质机制/失败/分数/决策通知。
+
+【以下历史接续】
+最新覆盖：当前P148_joint_waiting_rule，先读其WORKING_HANDOFF与STATUS/RESULT_V2_FIRST/V2_FIRST_ERROR。唯一Windows SDK调度95580/start02:39:11.919735/run_diagnostic_v2.py，远端H/P148_Astar_joint_waiting_v2_20261102，最多1作者CROSS/1000frame，零native/不自动五图。V1仅纯夹具未SDK，审查后V2才首次真实SDK；不能运行旧V1脚本或重复启动。Scope保护原补扫/SORTIE与首次真实地图交换，最小空载ID仅协调等待位，有限联合终点检查，不是全局保证。原A*独立底本，不叠P145输出规则，Goal ACTIVE。下文P147无队列是上轮历史。
+
+上一轮（2026-11-02）：P147_nonblocking_wait_reference。P146正式Map02已经完整结束并首15raw Windows SHA/CAMPAIGN PASS，无native错误：总72.055594/map93.533432/wall76.444391/time100，9/10、双方无wallhit，未过固定门槛，不五图、不重跑、不晋级。原资格105916、collector111848、coordinator3504417/start405534405全部结束，UTC02:18:50真实scopedguard确认全局锁可用/无own进程，不能重启旧链。Goal与automation90仍ACTIVE。
+
+已验证退出：1884步remaining=0、wall175.01525，1号仍1枚，CompletionConsensus预算优先分支提交；不是全证书结束或SDK硬超时。624已release10槽，961投完前9枚；1号837首投后直到1884未完成第二枚，末300公开轨迹点局部31×5px范围路长152.14、净移1px。不能凭这个确认具体挡路者/目标版本/传感虚障。实际末图选0号擦1314px/.31573s，保护审计和PNG SHA吻合。P145作者+1.9881pp仍只是作者因果输出增益，不继承为native改善。OUTPUT_EFFECT_BOUND_FIRST给严格算术：只替换本局地图、其他公开分项不动，未处理map必在93.0171..95.4236/full71.7974..73.0007，所以单撤处理不足过map96/full75；不确定处理本身正负。
+
+当前P147实质新参考：读Ma等AAMAS2017 3.2非阻塞等待端点原则，已复核旧P18(同目标让点失败)/P122(名义通信区)/R05(单门holding)，不把旧机制改名当新方法。wait_connectivity.py与12作者图反例通过（零SDK），关键否决“每机独立安全等候位即可”：两路上的两个位各自不堵、同时却堵死两路。只证当前known图最终联合停车拓扑，非SDK尺寸/动态避碰/通信保证，不能直接独立固定环形停车。
+下一应继续实质改进：从原P48_ASTAR独立底本研究空载机的联合非阻塞等候位，保护携弹任务通路、保留现有地图/布点和A*；先有限候选联合检查及实际消息/租约/失联/无可行位回退，再做小真实SDK物理/框架验证，有希望才另行候选单图。避免无限纯构造PASS，尽快用真实接口验证动作和地图后果；若等待位假设被否定及时回地图误绘/最后任务版本链。不能强行清导航墙、缩5秒预留或原地扔完来假装修复。P145失败输出规则不默认叠入新功能，正式V09不变，不发布提交包。
+
+以下为历史接续（服从上述终态）：
+上轮P146_Astar_output_map02资格与单图接续，先读其WORKING_HANDOFF.txt。P145在当前A*底本单独适配历史末图规则，实际地图95.47034→97.45844，原控制及五机credit不变；没有新完整五图。
+
+2026-11-02上一轮P144_momentum_tube_countercheck完成；Goal和automation90 ACTIVE，最新用户目标已为P48_ASTAR独立底本。先读P141目标与任务/分析结论，P142首失败，P143分析结论及MOTOR_REVIEW_FIRST，P144 RESULT_FIRST。上一轮没有新候选修改/新ZIP/正式native；底本仍冻结P140 A*74.255883/50，无正式双wallhit。不要把作者数据当五图成绩。
+
+P141零SDK日志诊断：Map01末投=提交1194，无末尾等待；五图误绘惩罚均大于漏墙项，Map04满投覆盖65.87、farthest29次3接受，不能归因全未优化/少投/浮点假锚。
+P142首作者A*779帧10投但344步1/4号50→49，OFF健康FAIL，ON/cProfile未启动。首失败保留、不恢复、不重跑争通过。
+P143只读补证779帧/任务链/地图/健康/提交SHA全同原失败PASS，30个实际motor return：339步1号见DRONE60.91但不在23px目标管道，corridor219.98/speed8；341步降目标speed1.40却实测7.38且饱和；343目标0仍实测约5.4。匿名最近目标不等于已确认peerID，无contact子步，不能夸大安全或因果。
+P144只用已有输入的零SDK反例：同宽管道加自身速度方向仍漏339步1号，不集成、不为此跑比赛。P143旧Windows104600、P14295924已正常结束；先核实时进程，不能凭旧PID重启。当前无本聊天活动SDK/native调度；外部CCMCKP不动。
+
+下一轮必须实质分析而非只轮询COMPLETE：地图精度主线继续追误绘来源/墙面补扫的真实证据；局部交会线先检查匿名语义的相对运动可观测性和刹停界，建立静止墙、背离队友、横穿、语义跳变/漏检反例，仅证据足够才一条独立规则。ORCA只借相对速度思路，惯性/噪声/互惠假设不自动成立。不能凭作者一次掉血把整个迭代变成永久避让/编队；不盲叠P18/P103/P110/P112/P125等失败规则。优先读历史MECHANISM_PREFLIGHT防重复，真实小闭环后才原条件单图，有希望才同期五图。
+
+固定原条件、依赖、唯一调度、生产公共观测/实收消息和不读竞赛真图/BLUE私态约束见automation90及P141目标。未来SDK前重新scopedguard+proc/start/global lock/registry和两样本资源门槛，首错误保留停链。无新Gurobi、无提交包发布、正式V09不变。源代码运行中冻结。用户停止立即停后续，不自行pause/complete，不spawn代理。
+新交付GitHub quanliangwen/1的swarm-eod/P48_Astar_iteration_20261102，按PUBLICATION_FIRST校验远端字节/commit，E:/codex为必要临时工作区，不建本地永久交付副本。状态无变化安静，有机制/分数/失败/决策通知。
+
+资源等待期间已完成P150_semantic_map_scope_diagnosis，零SDK/无新候选：原SDK35语义/181激光、表面射线非对象中心、.10已经大于语义半间距。30帧既有公共motor输入宽到.20会多屏蔽94个候选射线，但不知实体真值、不等mapper写图，不能当94个幽灵点或收益；因此不直接扩角/中心圆形擦图。AST首缺math错误保存，V2只夹具补math，原数据/函数不改。P149仍唯一SDK等待，不能并开P150。
+
+已完成GitHub第二次发布复核：P148/P149 39文件提交6219ccdb446f00cd5b4c0aaabf67d791d6ce2520；P150及freshness补证最新提交8add78064b265e077e277cf5d8dff9f745da6b1d，所有选定远端字节SHA PASS。首次P150提交0a8d3905的一个Windows CRLF JSON校验不符，PUBLICATION_FIRST_ERROR保留；第二次仅发布换行规范化与checksum更正，科学源码/数据/SDK调度未改。最新入口https://github.com/quanliangwen/1/blob/8add78064b265e077e277cf5d8dff9f745da6b1d/swarm-eod/P48_Astar_iteration_20261102/LATEST.md 。P149最新resource UTC02:51:42 CPU68.04/load164.79/256/RAM82.53/盘20.34仍WAITING，历史pid115628/start02:45:24.768105活着，先核CIM再接，不重复启动。P150零SDK/无候选，仅轻量否决盲扩角。
+
+本轮P151/P152已上传GitHub并核19份远端字节SHA PASS，提交2e766612b856d1bc1f891a8316521fa30ddcddd5；入口https://github.com/quanliangwen/1/blob/2e766612b856d1bc1f891a8316521fa30ddcddd5/swarm-eod/P48_Astar_iteration_20261102/LATEST.md ，见P152/PUBLICATION_FIRST.json。P149不是用户暂停：P151反例后在SDK前自主取消，原Human stop仅统一停止机制字面错误，所有记录保留。P152当前仍唯一离线SDK观察队列，114360/startUTC02:56:49.377766，请核最新实际handle/status后接续，不恢复P149或重启P152。最近resource CPU约100/load283/256，未达到原准入，不宣称已经跑小闭环或已有新图分；goal ACTIVE，本轮PROGRESS，不标complete/pause。
