@@ -1,0 +1,2334 @@
+{
+  "status": "COMPLETE_REVIEWED_CORNER_FIVE_MAP_OBSERVATION",
+  "baseline_mean": 74.25588336546745,
+  "cluster_mean": 76.25606981897968,
+  "mean_delta": 2.0001864535122196,
+  "placed": 49,
+  "expected": 50,
+  "evaluation_valid": true,
+  "audit_integrity": true,
+  "red_wall_hits": 0,
+  "blue_wall_hits": 0,
+  "maps_with_accepted_proposals": 3,
+  "maps_with_actual_majority": 0,
+  "weighted_mean_changes": {
+    "map_points": 0.14876686932117877,
+    "wall_points": 0.17325958419103815,
+    "time_points": -0.029999999999999718,
+    "blue_difficulty_points": 1.708160000000003
+  },
+  "rows": [
+    {
+      "map": "Map01",
+      "baseline_full": 77.15153419360432,
+      "cluster_full": 75.16150743305617,
+      "delta": -1.9900267605481474,
+      "baseline_map": 96.2063286166453,
+      "map_score": 97.06546565799383,
+      "baseline_wall": 86.78184942640841,
+      "wall_score": 82.3138730202963,
+      "baseline_time": 80.60000000000001,
+      "time_score": 79.10000000000001,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 1209,
+      "red_walltime": 67.59965801239014,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 3.631999999999991,
+      "layout_contribution": 2.2560000000000002,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 1452,
+      "blue_steps": 1268,
+      "blue_score": 94.36,
+      "accepted_proposals": 2,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": 1,
+      "actual_cluster_with12": 1,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            1,
+            1
+          ],
+          "anchor": [
+            583.0,
+            360.0
+          ],
+          "radius": 192.0,
+          "actual_strict": 0,
+          "actual_with12": 0
+        },
+        {
+          "corner": [
+            -1,
+            -1
+          ],
+          "anchor": [
+            -601.0,
+            -360.0
+          ],
+          "radius": 192.0,
+          "actual_strict": 1,
+          "actual_with12": 1
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 13,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 76.67050170898438,
+          "planned": 10,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 6,
+            "wanted": 6,
+            "coverage_ratio": 0.6762117890937489
+          },
+          "elapsed": 0.1689144056290388
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 2,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": true,
+          "baseline_value": 33.17060089111328,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.928358189559304
+          },
+          "anchor": [
+            583.0,
+            360.0
+          ],
+          "corner": [
+            1,
+            1
+          ],
+          "radius": 192.0,
+          "coverage_ratio": 0.928358189559304,
+          "clustered": 3,
+          "baseline_clustered": 0,
+          "step": 744,
+          "elapsed": 0.01939024915918708
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 32.5531005859375,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.8439072607106028
+          },
+          "elapsed": 0.01735765626654029
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2901145964860916e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 26.813800811767578,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7215351318530157
+          },
+          "elapsed": 0.014220194891095161
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 19.43400001525879,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4277863321992032
+          },
+          "elapsed": 0.007679635658860207
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 14.166199684143066,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.5612090596840505
+          },
+          "elapsed": 0.007745048962533474
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 13.87239933013916,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.6027075678877017
+          },
+          "elapsed": 0.007853384129703045
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 14.33289909362793,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              583.0,
+              360.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.6022508016762642
+          },
+          "elapsed": 0.00782729173079133
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.686112955212593e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2659933418035507e-05
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 1,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": true,
+          "baseline_value": 11.730998992919922,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -601.0,
+              -360.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.9516154338677899
+          },
+          "anchor": [
+            -601.0,
+            -360.0
+          ],
+          "corner": [
+            -1,
+            -1
+          ],
+          "radius": 192.0,
+          "coverage_ratio": 0.9516154338677899,
+          "clustered": 2,
+          "baseline_clustered": 1,
+          "step": 969,
+          "elapsed": 0.14409896405413747
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.670147508382797e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.970273822546005e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.029863238334656e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1770054697990417e-05
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    },
+    {
+      "map": "Map02",
+      "baseline_full": 75.81503670653098,
+      "cluster_full": 72.85517224146042,
+      "delta": -2.9598644650705523,
+      "baseline_map": 95.58098052669712,
+      "map_score": 94.09042091868062,
+      "baseline_wall": 90.12273221591204,
+      "wall_score": 78.96980891060055,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 2107,
+      "red_walltime": 151.62243819236755,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 0.01599999999999682,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 2195,
+      "blue_steps": 2109,
+      "blue_score": 99.96000000000001,
+      "accepted_proposals": 1,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": 2,
+      "actual_cluster_with12": 2,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            -1,
+            1
+          ],
+          "anchor": [
+            -560.0,
+            410.0
+          ],
+          "radius": 216.0,
+          "actual_strict": 2,
+          "actual_with12": 2
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 13,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 166.038330078125,
+          "planned": 10,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -592.0,
+              -406.0
+            ],
+            "clustered": 6,
+            "wanted": 6,
+            "coverage_ratio": 0.6800512944553171
+          },
+          "elapsed": 0.3919691410847008
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 73.77667236328125,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -560.0,
+              426.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.8044774508027668
+          },
+          "elapsed": 0.018961500842124224
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 72.31291198730469,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              560.0,
+              442.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7024967193131015
+          },
+          "elapsed": 0.016386964824050665
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 74.86416625976562,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              560.0,
+              -422.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.5159010418853481
+          },
+          "elapsed": 0.015537939965724945
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 5,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": true,
+          "baseline_value": 54.5020866394043,
+          "planned": 3,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -560.0,
+              -406.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.5869194489268338
+          },
+          "anchor": [
+            -560.0,
+            410.0
+          ],
+          "corner": [
+            -1,
+            1
+          ],
+          "radius": 216.0,
+          "coverage_ratio": 0.9784028509045911,
+          "clustered": 2,
+          "baseline_clustered": 1,
+          "step": 1183,
+          "elapsed": 0.012225134298205376
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 42.3650016784668,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -560.0,
+              410.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.618021902385354
+          },
+          "elapsed": 0.007479747757315636
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3130251318216324e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 36.6058349609375,
+          "planned": 2,
+          "budget_exhausted": true,
+          "elapsed": 0.4074490601196885
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.470619261264801e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.740928024053574e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.320420652627945e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3721175491809845e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.940681487321854e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.9451137632131577e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.609851986169815e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0040588676929474e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.050352334976196e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.359776645898819e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.940215826034546e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 5.539972335100174e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 5.530659109354019e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.070135325193405e-06
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    },
+    {
+      "map": "Map03",
+      "baseline_full": 73.86732099758838,
+      "cluster_full": 77.02049452056357,
+      "delta": 3.1531735229751945,
+      "baseline_map": 94.79140715847379,
+      "map_score": 96.43013326093015,
+      "baseline_wall": 82.3580870917574,
+      "wall_score": 90.53913945049248,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 2355,
+      "red_walltime": 159.8211214542389,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 0.6976,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 10,
+      "blue_expected": 10,
+      "baseline_blue_steps": 1620,
+      "blue_steps": 2688,
+      "blue_score": 98.256,
+      "accepted_proposals": 0,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": null,
+      "actual_cluster_with12": null,
+      "majority_executed": false,
+      "concentration": [],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 14,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 97.48707580566406,
+          "planned": 10,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -548.5,
+              -369.0
+            ],
+            "clustered": 6,
+            "wanted": 6,
+            "coverage_ratio": 0.627237998075729
+          },
+          "elapsed": 0.22173256194218993
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 30.47799301147461,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              507.5,
+              335.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6464606652904649
+          },
+          "elapsed": 0.01309247873723507
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 48.9740104675293,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7847913456693412
+          },
+          "elapsed": 0.014897143002599478
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 24.376880645751953,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4310599283001784
+          },
+          "elapsed": 0.21086335368454456
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 7,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 69.24043273925781,
+          "planned": 6,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -548.5,
+              -369.0
+            ],
+            "clustered": 4,
+            "wanted": 4,
+            "coverage_ratio": 0.6342551282675675
+          },
+          "elapsed": 0.019319416023790836
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 18.138763427734375,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              367.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.5658423989393829
+          },
+          "elapsed": 0.2230221051722765
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 32.962318420410156,
+          "planned": 3,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.8158241863033763
+          },
+          "elapsed": 0.009604265913367271
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 46.222312927246094,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6448938020626064
+          },
+          "elapsed": 0.012298655696213245
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 21.531972885131836,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.48728212664502607
+          },
+          "elapsed": 0.23164244974032044
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 44.70486068725586,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -548.5,
+              -369.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6707091519143389
+          },
+          "elapsed": 0.01409070985391736
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 46.210350036621094,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6656947145916472
+          },
+          "elapsed": 0.012192832306027412
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 6,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 53.670074462890625,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7358850710853314
+          },
+          "elapsed": 0.017062183003872633
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 46.14274597167969,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              523.5,
+              -337.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7348524856556408
+          },
+          "elapsed": 0.012205912731587887
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 24.644643783569336,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4372355203677517
+          },
+          "elapsed": 0.24686264665797353
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 43.196990966796875,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              507.5,
+              -337.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7332686496938492
+          },
+          "elapsed": 0.012488404288887978
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 42.514991760253906,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -548.5,
+              -369.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.43854365839543114
+          },
+          "elapsed": 0.012080268003046513
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 23.046737670898438,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4801894426674947
+          },
+          "elapsed": 0.2671738639473915
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 24.710281372070312,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.46213909762364513
+          },
+          "elapsed": 0.2697008680552244
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 24.760494232177734,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4417724122471523
+          },
+          "elapsed": 0.27105577290058136
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 26.263334274291992,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.4164869282956285
+          },
+          "elapsed": 0.28309903014451265
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0789837688207626e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.48015770316124e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 19.656333923339844,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -516.5,
+              335.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.565310831607731
+          },
+          "elapsed": 0.27820879872888327
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.140931069850922e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.122988760471344e-05
+        }
+      ],
+      "note": "No accepted proposal means no tested cluster anchor; null is not zero physical bombs in all possible corners."
+    },
+    {
+      "map": "Map04",
+      "baseline_full": 72.15789980636052,
+      "cluster_full": 72.45070940788105,
+      "delta": 0.29280960152053126,
+      "baseline_map": 95.54153511104697,
+      "map_score": 96.29250206727886,
+      "baseline_wall": 65.87166125418524,
+      "wall_score": 71.52229187120813,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 9,
+      "expected": 10,
+      "red_steps": 1975,
+      "red_walltime": 176.9827070236206,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 1.2127999999999872,
+      "layout_contribution": 0.0,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 9,
+      "blue_expected": 9,
+      "baseline_blue_steps": 2874,
+      "blue_steps": 2130,
+      "blue_score": 100.0,
+      "accepted_proposals": 0,
+      "objective_commit_checks": 0,
+      "actual_cluster_strict": null,
+      "actual_cluster_with12": null,
+      "majority_executed": false,
+      "concentration": [],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 387.798095703125,
+          "planned": 10,
+          "budget_exhausted": true,
+          "elapsed": 0.509576837066561
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 154.7602996826172,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              794.0,
+              553.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6539152925878968
+          },
+          "elapsed": 0.032502659130841494
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 165.64871215820312,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              778.0,
+              -519.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6408773931798164
+          },
+          "elapsed": 0.03221899690106511
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 142.50534057617188,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -822.0,
+              -567.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.6525358621642255
+          },
+          "elapsed": 0.032271768897771835
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 141.15823364257812,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -822.0,
+              553.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7199028077777126
+          },
+          "elapsed": 0.026037681847810745
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 46.809059143066406,
+          "planned": 2,
+          "budget_exhausted": true,
+          "elapsed": 0.534604127984494
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 118.36859130859375,
+          "planned": 3,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -822.0,
+              553.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.7077361189387584
+          },
+          "elapsed": 0.019863877911120653
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 100.55253601074219,
+          "planned": 2,
+          "budget_exhausted": true,
+          "elapsed": 0.5198053186759353
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.8712979555130005e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.530914783477783e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 57.25080108642578,
+          "planned": 2,
+          "elapsed": 0.014261388219892979
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.410083293914795e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0481104254722595e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.360948413610458e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0190065950155258e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 5.79003244638443e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.2579839676618576e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.081085979938507e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.600989192724228e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 2.684071660041809e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 9.810086339712143e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.861293852329254e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 5.859881639480591e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.829854100942612e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.3461336493492126e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.630325853824615e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.5211206674575806e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 5.8300793170928955e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.120101660490036e-05
+        }
+      ],
+      "note": "No accepted proposal means no tested cluster anchor; null is not zero physical bombs in all possible corners."
+    },
+    {
+      "map": "Map05",
+      "baseline_full": 72.28762512325306,
+      "cluster_full": 83.79246549193714,
+      "delta": 11.504840368684071,
+      "baseline_map": 94.49999379391996,
+      "map_score": 94.22939199511151,
+      "baseline_wall": 75.18814113146539,
+      "wall_score": 81.30884747190692,
+      "baseline_time": 100.0,
+      "time_score": 100.0,
+      "placed": 10,
+      "expected": 10,
+      "red_steps": 1934,
+      "red_walltime": 214.96802711486816,
+      "red_wallhit": false,
+      "blue_wallhit": false,
+      "baseline_layout_contribution": 0.0,
+      "layout_contribution": 10.415999999999997,
+      "baseline_blue_disposed": 10,
+      "blue_disposed": 9,
+      "blue_expected": 10,
+      "baseline_blue_steps": 3272,
+      "blue_steps": 7200,
+      "blue_score": 73.96000000000001,
+      "accepted_proposals": 1,
+      "objective_commit_checks": 1,
+      "actual_cluster_strict": 2,
+      "actual_cluster_with12": 2,
+      "majority_executed": false,
+      "concentration": [
+        {
+          "corner": [
+            1,
+            1
+          ],
+          "anchor": [
+            560.0,
+            544.0
+          ],
+          "radius": 288.0,
+          "actual_strict": 2,
+          "actual_with12": 2
+        }
+      ],
+      "model_audits": [
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 313.8828125,
+          "planned": 10,
+          "budget_exhausted": true,
+          "elapsed": 0.7523358128964901
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 142.484375,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              560.0,
+              544.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7854479657857221
+          },
+          "elapsed": 0.02173421625047922
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 3,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 111.71875,
+          "planned": 3,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -560.0,
+              -560.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.7950349650349651
+          },
+          "elapsed": 0.014026388060301542
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 4,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 8,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 222.0078125,
+          "planned": 7,
+          "last_proposal": {
+            "corner": [
+              1,
+              -1
+            ],
+            "anchor": [
+              592.0,
+              -560.0
+            ],
+            "clustered": 5,
+            "wanted": 5,
+            "coverage_ratio": 0.43203012281380865
+          },
+          "elapsed": 0.03147770604118705
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 158.578125,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -560.0,
+              -560.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.8766873583604295
+          },
+          "elapsed": 0.02134997909888625
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 5,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 153.765625,
+          "planned": 5,
+          "last_proposal": {
+            "corner": [
+              -1,
+              -1
+            ],
+            "anchor": [
+              -560.0,
+              -560.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.8485418148562138
+          },
+          "elapsed": 0.02151329629123211
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 4,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 131.859375,
+          "planned": 4,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -560.0,
+              560.0
+            ],
+            "clustered": 3,
+            "wanted": 3,
+            "coverage_ratio": 0.7295888138405024
+          },
+          "elapsed": 0.01782801514491439
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 8,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 2,
+          "accepted": false,
+          "baseline_value": 68.6875,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              560.0,
+              544.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.5553912647861693
+          },
+          "elapsed": 0.010387479327619076
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 9,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1110212653875351e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "baseline_value": 63.328125,
+          "planned": 2,
+          "budget_exhausted": true,
+          "elapsed": 0.8100144388154149
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 10,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.990041583776474e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 11,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 8.500181138515472e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 12,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.7302025854587555e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.1660158634185791e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 3,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.078099012374878e-05
+        },
+        {
+          "status": "ACCEPTED",
+          "call": 4,
+          "reason": "majority_corner_with_predicted_coverage_floor",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 2,
+          "accepted": true,
+          "baseline_value": 47.21875,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              -1,
+              1
+            ],
+            "anchor": [
+              -592.0,
+              560.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.7966578424884183
+          },
+          "anchor": [
+            560.0,
+            544.0
+          ],
+          "corner": [
+            1,
+            1
+          ],
+          "radius": 288.0,
+          "coverage_ratio": 0.914295168762409,
+          "clustered": 2,
+          "baseline_clustered": 1,
+          "step": 1540,
+          "elapsed": 0.010772854089736938
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 5,
+          "reason": "no_majority_proposal_within_coverage_and_budget",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 2,
+          "attempts": 1,
+          "accepted": false,
+          "baseline_value": 52.3046875,
+          "planned": 2,
+          "last_proposal": {
+            "corner": [
+              1,
+              1
+            ],
+            "anchor": [
+              560.0,
+              544.0
+            ],
+            "clustered": 2,
+            "wanted": 2,
+            "coverage_ratio": 0.541747572815534
+          },
+          "elapsed": 0.008840663824230433
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 6,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.0449904948472977e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 7.500872015953064e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 2,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 6.9998204708099365e-06
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 7,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.4830846339464188e-05
+        },
+        {
+          "status": "KEEP_BASE",
+          "call": 1,
+          "reason": "too_few_unreserved_slots",
+          "coverage_floor": 0.9,
+          "radius_ratio": 2.0,
+          "fields": 0,
+          "attempts": 0,
+          "accepted": false,
+          "elapsed": 1.066131517291069e-05
+        }
+      ],
+      "note": "Physical exported RED bombs compared to proposed corner disks."
+    }
+  ],
+  "comparison_scope": "One explicit Map01-05 RED+original team006 BLUE group versus retained P48 A-star; same SDK/resources/limits, naturally different episodes, not paired causal proof.",
+  "goal_scope": "Majority corner if predicted residual coverage >=90% same-call baseline. This local model guard is not a guarantee on actual official coverage or across repeated replans.",
+  "official_submission_ready": false,
+  "automatic_B": false,
+  "ranking_promoted": false,
+  "game_rounds_added": 10
+}
