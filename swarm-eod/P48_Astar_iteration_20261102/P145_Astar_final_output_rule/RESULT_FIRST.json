@@ -1,0 +1,241 @@
+{
+  "status": "PASS_ASTARA_FINAL_OUTPUT_MECHANISM",
+  "checks": {
+    "frame_rows_identical": true,
+    "original_checks_identical": true,
+    "all10": true,
+    "no_added_health_damage": true,
+    "finite_sdk_callback_loop": true,
+    "raw_maps_identical": true,
+    "original_submission_inputs_identical": true,
+    "task_chain_identical": true,
+    "gate_chain_identical": true,
+    "actual_map_gain": true,
+    "all_five_maps_nonregress": true,
+    "all_five_surface_credit_nonregress": true,
+    "actual_complete": true,
+    "actual_erase": true,
+    "actual_protected": true,
+    "bounded_output": true,
+    "physical_placement_unchanged": true,
+    "wall_time_unchanged": true
+  },
+  "physics_steps": 779,
+  "parent_health_failure_preserved": true,
+  "baseline": {
+    "final_bomb_positions": [
+      [
+        14.388477931661262,
+        253.9196610552944
+      ],
+      [
+        313.7092564119321,
+        -53.80163314398961
+      ],
+      [
+        -159.41759994406559,
+        -257.11615779839855
+      ],
+      [
+        -336.392780939079,
+        -50.048772732877
+      ],
+      [
+        121.55330732369494,
+        -41.60993816865794
+      ],
+      [
+        -102.92142589451585,
+        -44.944549151251124
+      ],
+      [
+        358.941303772777,
+        -95.20191768135113
+      ],
+      [
+        191.05336926789934,
+        -50.95453604701572
+      ],
+      [
+        -206.60723674242362,
+        49.39962888077636
+      ],
+      [
+        -345.47677626549387,
+        -238.73609969785903
+      ]
+    ],
+    "actual_bomb_count": 10,
+    "score_wall": 74.65800920380761,
+    "wall_breakdown": {
+      "score_fraction": 0.7465800920380761,
+      "coverage_fraction": 0.4383211813908731,
+      "blast_radius": 72,
+      "blast_radius_ratio": 0.12,
+      "boundary_wall_weight": 0.5,
+      "n_bombs": 10,
+      "reference_n_bombs": 10,
+      "blast_pixels": 138010,
+      "destroyed_wall_pixels": 7925,
+      "destroyed_boundary_pixels": 4007,
+      "destroyed_interior_pixels": 3918,
+      "total_boundary_pixels": 18031,
+      "total_interior_pixels": 4494,
+      "total_wall_pixels": 22525,
+      "covered_wall_pixels": 7925,
+      "weighted_destroyed": 5921.5,
+      "weighted_total": 13509.5,
+      "theoretical_optimum": 7931.5,
+      "theoretical_optimum_fraction": 0.5871053702949776
+    },
+    "score_time": 100.0,
+    "actual_submitted_map": 95.47034291894202,
+    "controllable_subtotal": 72.66677330023253,
+    "truth_used_only_after_output_freeze": true,
+    "expected_reference_bombs": 10,
+    "score_eval_seconds": 0.32351930579170585,
+    "not_full_red_score": true,
+    "blue_difficulty_evaluated": false
+  },
+  "candidate": {
+    "final_bomb_positions": [
+      [
+        14.388477931661262,
+        253.9196610552944
+      ],
+      [
+        313.7092564119321,
+        -53.80163314398961
+      ],
+      [
+        -159.41759994406559,
+        -257.11615779839855
+      ],
+      [
+        -336.392780939079,
+        -50.048772732877
+      ],
+      [
+        121.55330732369494,
+        -41.60993816865794
+      ],
+      [
+        -102.92142589451585,
+        -44.944549151251124
+      ],
+      [
+        358.941303772777,
+        -95.20191768135113
+      ],
+      [
+        191.05336926789934,
+        -50.95453604701572
+      ],
+      [
+        -206.60723674242362,
+        49.39962888077636
+      ],
+      [
+        -345.47677626549387,
+        -238.73609969785903
+      ]
+    ],
+    "actual_bomb_count": 10,
+    "score_wall": 74.65800920380761,
+    "wall_breakdown": {
+      "score_fraction": 0.7465800920380761,
+      "coverage_fraction": 0.4383211813908731,
+      "blast_radius": 72,
+      "blast_radius_ratio": 0.12,
+      "boundary_wall_weight": 0.5,
+      "n_bombs": 10,
+      "reference_n_bombs": 10,
+      "blast_pixels": 138010,
+      "destroyed_wall_pixels": 7925,
+      "destroyed_boundary_pixels": 4007,
+      "destroyed_interior_pixels": 3918,
+      "total_boundary_pixels": 18031,
+      "total_interior_pixels": 4494,
+      "total_wall_pixels": 22525,
+      "covered_wall_pixels": 7925,
+      "weighted_destroyed": 5921.5,
+      "weighted_total": 13509.5,
+      "theoretical_optimum": 7931.5,
+      "theoretical_optimum_fraction": 0.5871053702949776
+    },
+    "score_time": 100.0,
+    "actual_submitted_map": 97.4584442826957,
+    "controllable_subtotal": 73.66082398210938,
+    "truth_used_only_after_output_freeze": true,
+    "expected_reference_bombs": 10,
+    "score_eval_seconds": 0.9720413843169808,
+    "not_full_red_score": true,
+    "blue_difficulty_evaluated": false
+  },
+  "actual_audit": {
+    "status": "COMPLETE_FREE_DIRECTION_REFERENCE",
+    "frames": 321,
+    "rays": 6300,
+    "invalid_records": 0,
+    "erased_pixels": 2630,
+    "raw_positive_pixels_protected": 39476,
+    "parent_preserved": true,
+    "raw_positive_preserved": true,
+    "negative_cells": 10628,
+    "seconds": 0.1826500939205289,
+    "original_sha256": "c11245620a46e5ade77cffd61f524f26ac816701987c96a9eb0e4c94713f237e",
+    "output_sha256": "17ec630738bbd24f859a20a4715abdf72926709456ff7790d9bc754876e7775d"
+  },
+  "five_map_comparison": [
+    {
+      "owner": 0,
+      "parent_map": 95.47034291894202,
+      "filtered_map": 97.4584442826957,
+      "parent_credit": 0.9995560291244895,
+      "filtered_credit": 0.9995560291244895,
+      "erased": 2630,
+      "status": "COMPLETE_FREE_DIRECTION_REFERENCE"
+    },
+    {
+      "owner": 1,
+      "parent_map": 95.55629550701474,
+      "filtered_map": 97.67909780782443,
+      "parent_credit": 1.0,
+      "filtered_credit": 1.0,
+      "erased": 2762,
+      "status": "COMPLETE_FREE_DIRECTION_REFERENCE"
+    },
+    {
+      "owner": 2,
+      "parent_map": 95.97229621736815,
+      "filtered_map": 97.75155394142082,
+      "parent_credit": 0.99915645533653,
+      "filtered_credit": 0.99915645533653,
+      "erased": 2339,
+      "status": "COMPLETE_FREE_DIRECTION_REFERENCE"
+    },
+    {
+      "owner": 3,
+      "parent_map": 95.58106899515518,
+      "filtered_map": 97.49467234949387,
+      "parent_credit": 1.0,
+      "filtered_credit": 1.0,
+      "erased": 2532,
+      "status": "COMPLETE_FREE_DIRECTION_REFERENCE"
+    },
+    {
+      "owner": 4,
+      "parent_map": 95.21834478986302,
+      "filtered_map": 97.41839780622891,
+      "parent_credit": 0.9989788669863257,
+      "filtered_credit": 0.9989788669863257,
+      "erased": 2825,
+      "status": "COMPLETE_FREE_DIRECTION_REFERENCE"
+    }
+  ],
+  "native_rounds": 0,
+  "automatic_native": false,
+  "automatic_five": false,
+  "loop_wall_seconds": 39.46776026720181,
+  "qualification": "Output mechanism only: preserved parent collision is not repaired or reclassified as safe. No full-red performance claim."
+}
