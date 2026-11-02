@@ -1,0 +1,47 @@
+{
+  "prior_emv": 175000.0,
+  "ratings": [
+    {
+      "rating": "A",
+      "probability": "13/50",
+      "posterior": [
+        "1/26",
+        "5/26",
+        "10/13"
+      ],
+      "sale_emv_exact": "3275000/13",
+      "sale_emv": 251923.07692307694,
+      "decision": "赊销"
+    },
+    {
+      "rating": "B",
+      "probability": "9/20",
+      "posterior": [
+        "4/45",
+        "5/9",
+        "16/45"
+      ],
+      "sale_emv_exact": "1550000/9",
+      "sale_emv": 172222.22222222222,
+      "decision": "赊销"
+    },
+    {
+      "rating": "C",
+      "probability": "29/100",
+      "posterior": [
+        "5/29",
+        "20/29",
+        "4/29"
+      ],
+      "sale_emv_exact": "3200000/29",
+      "sale_emv": 110344.8275862069,
+      "decision": "赊销"
+    }
+  ],
+  "sample_value_before_cost": 175000.0,
+  "EVSI": 0.0,
+  "net_after_cost": 145000.0,
+  "net_gain": -30000.0,
+  "EVPI": 20000.0,
+  "cost": 30000
+}
