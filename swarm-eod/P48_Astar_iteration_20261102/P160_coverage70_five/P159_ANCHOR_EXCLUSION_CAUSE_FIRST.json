@@ -1,0 +1,33 @@
+{
+  "status": "SUFFICIENT_CODE_CAUSE_WITH_DELIVERY_OBSERVATION_GAP",
+  "scope": "Already reviewed author P159 only; not explanation of current five before raw audit",
+  "accepted_step": 264,
+  "planned_in_circle": 7,
+  "owner4_rejected_step": 283,
+  "rejected_target": [
+    -8.0,
+    4.0
+  ],
+  "same_as_anchor": true,
+  "rejection_expiry_from_actual_method": 403,
+  "next_plan_step": 288,
+  "next_planned_in_circle": 4,
+  "actual_physical_strict": 3,
+  "mechanism": [
+    "_reject_assignment stores same point until step+120",
+    "Fleet _build adds still-active rejection to virtual_drops",
+    "corner helper excludes every virtual_drop within51.36 from allowed placement cells",
+    "locked _corners samples component label at fixed anchor using placement-allowed region",
+    "anchor equals rejected point, so it must be background label0, forcing rejection of this whole locked region regardless of other valid cells"
+  ],
+  "source_sha256": {
+    "fleet_mission.py": "9ed3fa0abe7af3a4e1e7d9f628899c3a879bf981b24ea868088c606df561c87c",
+    "corner_cluster.py": "7be145f620c923011fdcb616191281dd0e581b6268104701222cb5d7003d5da5",
+    "corner_mission.py": "da7e861225a3eec7df53b8f26fe10993689ad9a08892f6e66a3987b281784b0f"
+  },
+  "secondary_issue": "A failed point in virtual_drops also zeroes its modeled coverage despite no confirmed drop. This inherited semantic coupling is a separate hypothesis and has not been repaired.",
+  "no_current_native_inputs_changed": true,
+  "new_SDK_frames": 0,
+  "new_native_rounds": 0,
+  "limitation": "Coordinator rejection-receipt dictionary was not separately logged. If the step283 rejection arrived, anchor exclusion is unavoidable; source and observed plan loss support it, but do not uniquely prove the received state or the initial path failure."
+}
