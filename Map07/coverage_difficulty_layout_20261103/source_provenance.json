@@ -1,0 +1,19 @@
+{
+  "original_image_sha256": "1c689c00bc75a4fbd1dbf819aecbe66c18c0ec58ada8a49da0d90c00823df02f",
+  "source_sdk_read_only": true,
+  "source_sdk_path": "/home/junhao/quan/parallel_test_solver/match/swarm-eod/src/swarm_rescue",
+  "sdk_files_sha256": {
+    "maps/map_07.py": "5291084d99632b67bcb323097d22c93d8def884aed3e9f871ed0d69b8822afe5",
+    "maps/walls_07.py": "da55268200d93abc6d7c56ee93262ff2af3634aff0bf03881b6151d3e2f4dca4",
+    "simulation/gui_map/closed_playground.py": "d700472d65c80da05b5da5533f4854e3a171724f0b6aa3745fddb988cd81484b",
+    "simulation/elements/normal_wall.py": "cace2dd7dfe07e7046d726d04a20e666bd2a3d6ff6bba7df449416e77f89b24f",
+    "simulation/drone/bomb_deployer.py": "88228ba25e8ebec54746ca9353f5913be89fbff8958124d3a539cd7524e8fac6",
+    "simulation/reporting/place_score_manager.py": "2cc80c3d6c3eb2af86f6437a9da32ef437e84ad62157b4e8804cf5549bf578e4"
+  },
+  "pdf_assumptions": {
+    "blast_radius_fraction": 0.12,
+    "boundary_wall_weight": 0.5
+  },
+  "no_official_rounds_launched": true,
+  "no_runtime_source_modified": true
+}

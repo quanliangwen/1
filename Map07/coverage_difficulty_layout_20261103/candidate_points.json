@@ -1,0 +1,131 @@
+{
+  "status": "ILLUSTRATION_ONLY_NOT_A_QUALIFIED_SUBMISSION",
+  "map": "Map07",
+  "assumed_count": 10,
+  "blast_radius_world_px": 135,
+  "blast_ratio_assumed": 0.12,
+  "coordinate_system": "map center origin; +x right; +y up",
+  "bombs": [
+    {
+      "id": 1,
+      "x": -770,
+      "y": 379,
+      "group": "maze",
+      "incremental_weighted_wall_area_estimate": 4540.0,
+      "wall_clearance_world_px": 37.0,
+      "static_path_from_disposal_world_px": 3749.9,
+      "static_detour_ratio": 4.64,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "左上隔间：圆覆盖相邻横墙及部分边框；房间入口造成绕行。"
+    },
+    {
+      "id": 2,
+      "x": -250,
+      "y": -241,
+      "group": "maze",
+      "incremental_weighted_wall_area_estimate": 4672.0,
+      "wall_clearance_world_px": 49.0,
+      "static_path_from_disposal_world_px": 3565.1,
+      "static_detour_ratio": 7.05,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "底部长横墙上侧的隔间：同时罩住横墙、竖隔墙；距处置区看似近，但路径被隔墙分割。"
+    },
+    {
+      "id": 3,
+      "x": -490,
+      "y": 119,
+      "group": "maze",
+      "incremental_weighted_wall_area_estimate": 4408.0,
+      "wall_clearance_world_px": 35.0,
+      "static_path_from_disposal_world_px": 3529.9,
+      "static_detour_ratio": 5.95,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "中央小隔间：覆盖多段短墙；蓝队需要正确进出隔间并完成抓取运输。"
+    },
+    {
+      "id": 4,
+      "x": -690,
+      "y": -241,
+      "group": "maze",
+      "incremental_weighted_wall_area_estimate": 3894.0,
+      "wall_clearance_world_px": 41.0,
+      "static_path_from_disposal_world_px": 3461.7,
+      "static_detour_ratio": 18.28,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "左下隔间、处置区上侧：覆盖长横墙和短隔墙；图中的紫虚线展示明显绕行，不能按直线距离判断容易。"
+    },
+    {
+      "id": 5,
+      "x": -730,
+      "y": 139,
+      "group": "maze",
+      "incremental_weighted_wall_area_estimate": 3220.0,
+      "wall_clearance_world_px": 61.0,
+      "static_path_from_disposal_world_px": 3613.4,
+      "static_detour_ratio": 6.37,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "左侧中间隔间：覆盖上下相邻墙段；和1号点分担不同墙段，避免只堆一处。"
+    },
+    {
+      "id": 6,
+      "x": 350,
+      "y": 379,
+      "group": "coverage",
+      "incremental_weighted_wall_area_estimate": 18912.0,
+      "wall_clearance_world_px": 36.0,
+      "static_path_from_disposal_world_px": 2172.5,
+      "static_detour_ratio": 1.62,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "右上大矩形右侧：主要补足较大面积的内部墙覆盖，不把所有炸弹都挤进迷宫。"
+    },
+    {
+      "id": 7,
+      "x": 350,
+      "y": -141,
+      "group": "coverage",
+      "incremental_weighted_wall_area_estimate": 18156.0,
+      "wall_clearance_world_px": 38.0,
+      "static_path_from_disposal_world_px": 1722.8,
+      "static_detour_ratio": 1.56,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "右下大矩形右侧：承担覆盖补足，与9号点从两侧覆盖不同的墙体像素。"
+    },
+    {
+      "id": 8,
+      "x": 130,
+      "y": 239,
+      "group": "coverage",
+      "incremental_weighted_wall_area_estimate": 15908.0,
+      "wall_clearance_world_px": 36.1,
+      "static_path_from_disposal_world_px": 2135.4,
+      "static_detour_ratio": 1.98,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "上方两个大矩形之间偏下：爆炸圆同时覆盖两块墙体的下部及侧面，优先看新增覆盖量。"
+    },
+    {
+      "id": 9,
+      "x": 110,
+      "y": -141,
+      "group": "coverage",
+      "incremental_weighted_wall_area_estimate": 15624.0,
+      "wall_clearance_world_px": 38.0,
+      "static_path_from_disposal_world_px": 2212.5,
+      "static_detour_ratio": 2.52,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "右下大矩形左侧：补上7号点尚未覆盖的左半部分；圆重叠可以接受，重复墙像素不再得分。"
+    },
+    {
+      "id": 10,
+      "x": -90,
+      "y": 319,
+      "group": "coverage",
+      "incremental_weighted_wall_area_estimate": 12444.0,
+      "wall_clearance_world_px": 35.8,
+      "static_path_from_disposal_world_px": 2447.1,
+      "static_detour_ratio": 2.5,
+      "placement_order_is_not_drone_execution_order": true,
+      "reason_zh": "左上大矩形左侧：补足上方大块墙体，同时保留静态通行净空。"
+    }
+  ],
+  "no_actual_blue_scores_predicted": true
+}

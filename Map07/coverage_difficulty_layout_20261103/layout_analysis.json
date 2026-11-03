@@ -1,0 +1,396 @@
+{
+  "map": "Map07",
+  "width": 1660,
+  "height": 1122,
+  "blast_radius_ratio_assumed_from_pdf_default": 0.12,
+  "blast_radius_world_px": 135,
+  "boundary_weight": 0.5,
+  "number_of_points": 10,
+  "minimum_bomb_separation_sdk": 24,
+  "chosen_clearance_heuristic": 35,
+  "navigation_grid_world_px": 20,
+  "wall_coverage_sampling_world_px": 2,
+  "geometry_candidate_greedy_reference": {
+    "maze_quota": 0,
+    "weighted_wall_coverage_estimate": 103552.0,
+    "points": [
+      {
+        "id": 1,
+        "x": 350,
+        "y": 379,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 18912.0,
+        "wall_clearance_world_px": 36.0,
+        "static_path_from_disposal_world_px": 2172.5,
+        "static_detour_ratio": 1.62,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 2,
+        "x": 350,
+        "y": -141,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 18156.0,
+        "wall_clearance_world_px": 38.0,
+        "static_path_from_disposal_world_px": 1722.8,
+        "static_detour_ratio": 1.56,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 3,
+        "x": 130,
+        "y": 239,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 15908.0,
+        "wall_clearance_world_px": 36.1,
+        "static_path_from_disposal_world_px": 2135.4,
+        "static_detour_ratio": 1.98,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 4,
+        "x": 110,
+        "y": -141,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 15624.0,
+        "wall_clearance_world_px": 38.0,
+        "static_path_from_disposal_world_px": 2212.5,
+        "static_detour_ratio": 2.52,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 5,
+        "x": -90,
+        "y": 319,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 12444.0,
+        "wall_clearance_world_px": 35.8,
+        "static_path_from_disposal_world_px": 2447.1,
+        "static_detour_ratio": 2.5,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 6,
+        "x": -290,
+        "y": -221,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 4736.0,
+        "wall_clearance_world_px": 67.0,
+        "static_path_from_disposal_world_px": 3516.8,
+        "static_detour_ratio": 7.37,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 7,
+        "x": -570,
+        "y": 59,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 4692.0,
+        "wall_clearance_world_px": 35.0,
+        "static_path_from_disposal_world_px": 3300.2,
+        "static_detour_ratio": 6.48,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 8,
+        "x": -750,
+        "y": 379,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 4688.0,
+        "wall_clearance_world_px": 37.0,
+        "static_path_from_disposal_world_px": 3729.9,
+        "static_detour_ratio": 4.62,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 9,
+        "x": -730,
+        "y": -241,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 4536.0,
+        "wall_clearance_world_px": 53.0,
+        "static_path_from_disposal_world_px": 3445.1,
+        "static_detour_ratio": 18.4,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 10,
+        "x": -350,
+        "y": 259,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 3856.0,
+        "wall_clearance_world_px": 39.8,
+        "static_path_from_disposal_world_px": 3245.1,
+        "static_detour_ratio": 4.16,
+        "placement_order_is_not_drone_execution_order": true
+      }
+    ],
+    "mean_static_path_world_px": 2792.8
+  },
+  "recommended_trial_layout": {
+    "maze_quota": 5,
+    "weighted_wall_coverage_estimate": 101778.0,
+    "points": [
+      {
+        "id": 1,
+        "x": -770,
+        "y": 379,
+        "group": "maze",
+        "incremental_weighted_wall_area_estimate": 4540.0,
+        "wall_clearance_world_px": 37.0,
+        "static_path_from_disposal_world_px": 3749.9,
+        "static_detour_ratio": 4.64,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 2,
+        "x": -250,
+        "y": -241,
+        "group": "maze",
+        "incremental_weighted_wall_area_estimate": 4672.0,
+        "wall_clearance_world_px": 49.0,
+        "static_path_from_disposal_world_px": 3565.1,
+        "static_detour_ratio": 7.05,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 3,
+        "x": -490,
+        "y": 119,
+        "group": "maze",
+        "incremental_weighted_wall_area_estimate": 4408.0,
+        "wall_clearance_world_px": 35.0,
+        "static_path_from_disposal_world_px": 3529.9,
+        "static_detour_ratio": 5.95,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 4,
+        "x": -690,
+        "y": -241,
+        "group": "maze",
+        "incremental_weighted_wall_area_estimate": 3894.0,
+        "wall_clearance_world_px": 41.0,
+        "static_path_from_disposal_world_px": 3461.7,
+        "static_detour_ratio": 18.28,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 5,
+        "x": -730,
+        "y": 139,
+        "group": "maze",
+        "incremental_weighted_wall_area_estimate": 3220.0,
+        "wall_clearance_world_px": 61.0,
+        "static_path_from_disposal_world_px": 3613.4,
+        "static_detour_ratio": 6.37,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 6,
+        "x": 350,
+        "y": 379,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 18912.0,
+        "wall_clearance_world_px": 36.0,
+        "static_path_from_disposal_world_px": 2172.5,
+        "static_detour_ratio": 1.62,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 7,
+        "x": 350,
+        "y": -141,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 18156.0,
+        "wall_clearance_world_px": 38.0,
+        "static_path_from_disposal_world_px": 1722.8,
+        "static_detour_ratio": 1.56,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 8,
+        "x": 130,
+        "y": 239,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 15908.0,
+        "wall_clearance_world_px": 36.1,
+        "static_path_from_disposal_world_px": 2135.4,
+        "static_detour_ratio": 1.98,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 9,
+        "x": 110,
+        "y": -141,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 15624.0,
+        "wall_clearance_world_px": 38.0,
+        "static_path_from_disposal_world_px": 2212.5,
+        "static_detour_ratio": 2.52,
+        "placement_order_is_not_drone_execution_order": true
+      },
+      {
+        "id": 10,
+        "x": -90,
+        "y": 319,
+        "group": "coverage",
+        "incremental_weighted_wall_area_estimate": 12444.0,
+        "wall_clearance_world_px": 35.8,
+        "static_path_from_disposal_world_px": 2447.1,
+        "static_detour_ratio": 2.5,
+        "placement_order_is_not_drone_execution_order": true
+      }
+    ],
+    "mean_static_path_world_px": 2861.0,
+    "relative_to_same_candidate_geometric_greedy": 0.9828685105067985,
+    "selected_threshold_is_heuristic_not_official": 0.85,
+    "example_static_route": {
+      "point_id": 4,
+      "path_world": [
+        [
+          -730,
+          -421
+        ],
+        [
+          510,
+          -421
+        ],
+        [
+          590,
+          -341
+        ],
+        [
+          590,
+          -221
+        ],
+        [
+          350,
+          19
+        ],
+        [
+          270,
+          19
+        ],
+        [
+          150,
+          139
+        ],
+        [
+          -10,
+          139
+        ],
+        [
+          -70,
+          199
+        ],
+        [
+          -70,
+          219
+        ],
+        [
+          -90,
+          219
+        ],
+        [
+          -90,
+          239
+        ],
+        [
+          -170,
+          239
+        ],
+        [
+          -170,
+          -41
+        ],
+        [
+          -230,
+          -101
+        ],
+        [
+          -590,
+          -101
+        ],
+        [
+          -610,
+          -81
+        ],
+        [
+          -670,
+          -81
+        ],
+        [
+          -730,
+          -141
+        ],
+        [
+          -730,
+          -201
+        ],
+        [
+          -690,
+          -241
+        ]
+      ],
+      "not_actual_drone_trajectory": true
+    }
+  },
+  "quota_comparison": [
+    {
+      "maze_quota": 0,
+      "weighted_wall_coverage_estimate": 103552.0,
+      "relative_to_same_candidate_geometric_greedy": 1.0,
+      "mean_static_path_world_px": 2792.8
+    },
+    {
+      "maze_quota": 1,
+      "weighted_wall_coverage_estimate": 103404.0,
+      "relative_to_same_candidate_geometric_greedy": 0.9985707663782447,
+      "mean_static_path_world_px": 2794.8
+    },
+    {
+      "maze_quota": 2,
+      "weighted_wall_coverage_estimate": 103340.0,
+      "relative_to_same_candidate_geometric_greedy": 0.997952719406675,
+      "mean_static_path_world_px": 2799.6
+    },
+    {
+      "maze_quota": 3,
+      "weighted_wall_coverage_estimate": 102992.0,
+      "relative_to_same_candidate_geometric_greedy": 0.994592088998764,
+      "mean_static_path_world_px": 2760.8
+    },
+    {
+      "maze_quota": 4,
+      "weighted_wall_coverage_estimate": 102350.0,
+      "relative_to_same_candidate_geometric_greedy": 0.988392305315204,
+      "mean_static_path_world_px": 2762.4
+    },
+    {
+      "maze_quota": 5,
+      "weighted_wall_coverage_estimate": 101778.0,
+      "relative_to_same_candidate_geometric_greedy": 0.9828685105067985,
+      "mean_static_path_world_px": 2861.0
+    }
+  ],
+  "world_coordinates": "map center origin; +x right; +y up",
+  "status": "STATIC_GEOMETRIC_TRIAL_ONLY_NOT_GAME_VALIDATED",
+  "limitations": [
+    "Not an official wall score; geometric masks and candidate restrictions approximate SDK rasterization.",
+    "No BLUE matches, no simulation, no actual deployment/transport qualification performed.",
+    "Path length/maze membership are difficulty proxies, not a predicted BLUE score.",
+    "The illustration assumes ten bombs; use the actual expected_count for each round.",
+    "The PDF default radius/weight are assumed; uploaded round configuration may differ.",
+    "The original image SDK version was not verified; read-only current retained public SDK geometry matches the visible schematic.",
+    "The 35px clearance, 85% retained coverage threshold and maze quota are trial heuristics, not competition rules."
+  ],
+  "source_sha256": {
+    "maps/map_07.py": "5291084d99632b67bcb323097d22c93d8def884aed3e9f871ed0d69b8822afe5",
+    "maps/walls_07.py": "da55268200d93abc6d7c56ee93262ff2af3634aff0bf03881b6151d3e2f4dca4",
+    "simulation/gui_map/closed_playground.py": "d700472d65c80da05b5da5533f4854e3a171724f0b6aa3745fddb988cd81484b",
+    "simulation/elements/normal_wall.py": "cace2dd7dfe07e7046d726d04a20e666bd2a3d6ff6bba7df449416e77f89b24f",
+    "simulation/drone/bomb_deployer.py": "88228ba25e8ebec54746ca9353f5913be89fbff8958124d3a539cd7524e8fac6",
+    "simulation/reporting/place_score_manager.py": "2cc80c3d6c3eb2af86f6437a9da32ef437e84ad62157b4e8804cf5549bf578e4"
+  }
+}
