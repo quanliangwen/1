@@ -1,0 +1,43 @@
+{
+  "mode": "内置 image_gen，原始图片在临时演示文稿中嵌入",
+  "pages": [
+    {
+      "page": 29,
+      "title": "大模型为什么会出错",
+      "name": "第29页_大模型为什么会出错.png",
+      "refs": [
+        "E:/codex/big-data-genai-pages25-28-preview-20261104/output/第27页_模型使用形态.png"
+      ],
+      "prompt": "One Chinese university course slide, landscape 4:3, 1448×1086. Reference image 1 is the established template. Keep its exact light blue gradient masthead with 大数据与生成式AI and original Beijing University of Posts and Telecommunications logo and bilingual wordmark at top. Replace the content below. Use white, rich navy #07365D and azure #168CCE, flat editorial diagrams, fine rules, precise typography, tasteful blue line icons, high contrast and strong hierarchy. Clean modern university teaching design with whitespace but enough substance. Reserve 20px edges. Use all supplied Chinese text accurately. Page number only in bottom right. No general sources footer, URL, ornamental 3D or extra invented claims.\nTitle 大模型为什么会出错. Subtitle 表达流畅的回答，也需要核对事实、数字和判断依据. Upper slim overview with four distinct causes and short text: 幻觉｜生成了无法核实的事实或出处; 信息过时｜沿用旧版本; 上下文缺失｜漏掉日期或适用范围; 工具失败｜查询或计算未成功. Main two generous side-by-side teaching examples, each clearly mark original claim 错误示例 in amber, and verification in blue. Left title 虚构引用. Wrong sample “《差旅白皮书》第12页规定，返程后30天内报销。” Explicit label 该引用为教学虚构. Check: 查找原件，逐条核对页码、条款与生效日期。 Right title 计算错误. Wrong: 320元 × 3晚 = 860元. Check: 用计算器或代码复算，320 × 3 = 960元。 Lower band with three parallel cells 事实｜核对原始资料；计算｜复算并检查单位；判断｜核对适用条件与证据，必要时请人复核. Page29."
+    },
+    {
+      "page": 30,
+      "title": "模型为什么需要外部数据",
+      "name": "第30页_模型为什么需要外部数据.png",
+      "refs": [
+        "E:/codex/big-data-genai-pages25-28-preview-20261104/output/第27页_模型使用形态.png",
+        "E:/codex/big-data-genai-pages29-32-preview-20261104/reference/office.jpg"
+      ],
+      "prompt": "One Chinese university course slide, landscape 4:3, 1448×1086. Reference image 1 is the established template. Keep its exact light blue gradient masthead with 大数据与生成式AI and original Beijing University of Posts and Telecommunications logo and bilingual wordmark at top. Replace the content below. Use white, rich navy #07365D and azure #168CCE, flat editorial diagrams, fine rules, precise typography, tasteful blue line icons, high contrast and strong hierarchy. Clean modern university teaching design with whitespace but enough substance. Reserve 20px edges. Use all supplied Chinese text accurately. Page number only in bottom right. No general sources footer, URL, ornamental 3D or extra invented claims.\nTitle 模型为什么需要外部数据. Subtitle 业务状态会变化，回答需要匹配查询当日的资料与权限. Upper question strip “2026年11月4日返程，最迟应在多少个工作日内提交报销？” with 教学构造 badge. Main left two clean document comparison columns: 差旅报销办法 v1｜2025年1月1日生效｜返程后5个工作日内提交｜已被替代; 差旅报销办法 v2｜2026年9月1日生效｜返程后10个工作日内提交｜查询当日适用. Use clean arrow indicating revision. Right use actual photo from input2 as rectangular documentary image, preserve woman, laptop and papers. Caption 资料核对场景配图. Below two short lines 参数中学到的信息可能停留在旧版本。 财务库或业务系统可提供当前制度、订单状态与库存。 Footer as neat three checks 时间｜看生效日与查询日; 权限｜仅用已授权资料; 可信度｜优先正式发布与业务原始记录. Bold conclusion 本例依据现行 v2 第4条回答：返程后10个工作日内提交。 Page30. No suggestion the woman belongs to a real organization in the fictitious case."
+    },
+    {
+      "page": 31,
+      "title": "Embedding与向量检索",
+      "name": "第31页_Embedding与向量检索.png",
+      "refs": [
+        "E:/codex/big-data-genai-pages25-28-preview-20261104/output/第27页_模型使用形态.png"
+      ],
+      "prompt": "One Chinese university course slide, landscape 4:3, 1448×1086. Reference image 1 is the established template. Keep its exact light blue gradient masthead with 大数据与生成式AI and original Beijing University of Posts and Telecommunications logo and bilingual wordmark at top. Replace the content below. Use white, rich navy #07365D and azure #168CCE, flat editorial diagrams, fine rules, precise typography, tasteful blue line icons, high contrast and strong hierarchy. Clean modern university teaching design with whitespace but enough substance. Reserve 20px edges. Use all supplied Chinese text accurately. Page number only in bottom right. No general sources footer, URL, ornamental 3D or extra invented claims.\nTitle Embedding与向量检索. Subtitle 将问题与文档转换为数字向量，寻找语义相关的候选内容. Main left about54% clean schematic 2D semantic scatter with no numeric ticks. Header 语义空间示意（教学构造）. A navy star called 问题：出差回来多久能报销？. Two blue candidate points cluster near the star, individually labeled 差旅报销办法 v2 and 差旅报销办法 v1. Two far grey points labeled 出差订票指南 and 设备采购目录. No lines that imply exact distances. Caption 二维位置仅作概念示意，未经模型计算。 Right four sequential blocks 文本编码 → 比较向量 → 召回候选 → 筛选排序. Explain “报销期限”与“多久能报销”措辞不同，含义接近。 Under this show a small example filter table “候选｜筛选” with v2｜现行且有权访问，保留; v1｜已被替代，排除. Lower slim strip 关键词匹配用于精确术语，日期与权限用于筛选，必要时重排。 Bold takeaway 相似度衡量相关性，事实仍要回到原文核对。 Page31."
+    },
+    {
+      "page": 32,
+      "title": "RAG如何工作",
+      "name": "第32页_RAG如何工作.png",
+      "refs": [
+        "E:/codex/big-data-genai-pages25-28-preview-20261104/output/第27页_模型使用形态.png",
+        "E:/codex/big-data-genai-pages29-32-preview-20261104/reference/rag_p2.png"
+      ],
+      "prompt": "One Chinese university course slide, landscape 4:3, 1448×1086. Reference image 1 is the established template. Keep its exact light blue gradient masthead with 大数据与生成式AI and original Beijing University of Posts and Telecommunications logo and bilingual wordmark at top. Replace the content below. Use white, rich navy #07365D and azure #168CCE, flat editorial diagrams, fine rules, precise typography, tasteful blue line icons, high contrast and strong hierarchy. Clean modern university teaching design with whitespace but enough substance. Reserve 20px edges. Use all supplied Chinese text accurately. Page number only in bottom right. No general sources footer, URL, ornamental 3D or extra invented claims.\nTitle RAG如何工作. Subtitle 检索增强生成将相关资料带入回答，并保留可核对的出处. Two clear full-width horizontal process lanes. First heading 离线建索引 and boxes 资料收集 → 清洗与分段 → 建立索引 → 保存来源字段. Supporting line 记录文档名、版本、生效日期、条款和访问权限。 Second heading 在线回答 and boxes 用户问题 → 检索候选 → 权限与版本筛选 → 结合证据生成. Add upward/downward link between index and retrieval only if clear. Lower left white rectangular inset original research Figure1 from upper part of input2, preserve exact figure from x225–1050 y148–389, not article prose. Caption RAG论文原图｜Lewis等，2020，图1. Lower right compact 教学回答示例. Show “返程后10个工作日内提交。” followed by “依据《差旅报销办法》v2，第4条，2026年9月1日生效。” Bottom line 核对引文是否支持结论。证据不足时说明缺口。 Page32. Separate modern two-lane teaching workflow from historical paper figure. No invented benchmark metrics."
+    }
+  ]
+}
