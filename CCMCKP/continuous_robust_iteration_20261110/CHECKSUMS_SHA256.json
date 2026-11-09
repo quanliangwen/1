@@ -23,6 +23,11 @@
       "sha256": "1d6ee4b598370fa13a03ab9ecf1ebb5b6176ab3a63910c4d43a4ae33f61cedd4"
     },
     {
+      "path": "check_cdf_neighborhood_math.py",
+      "bytes": 1145,
+      "sha256": "889303171cd1e0e6f8b5bef5918436a6c65040aba7a4fcd5332f8695a6d84bfa"
+    },
+    {
       "path": "check_risk_math.py",
       "bytes": 1388,
       "sha256": "60063061bdab660a6c2432d853b953d63517bc1f11ca5f93e6c0d79bfcef382c"
@@ -44,8 +49,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 5119,
-      "sha256": "de5c44149f73f6d7f93b7c7ae2a98ddcac41768fbc88d527810a7ae662c3671d"
+      "bytes": 5973,
+      "sha256": "becd56aa1eee96cc6610b2e7ae97f918acc97c96a0d236f5b09d2a167cde8c7a"
     },
     {
       "path": "iterations/I001_risk_portfolio/candidate/engine.py",
@@ -134,8 +139,8 @@
     },
     {
       "path": "iterations/I001_risk_portfolio/PROGRESS.json",
-      "bytes": 12661,
-      "sha256": "bb140292be5a5332aee2449c2847edaa1054f2834ba38a97b1c8c34ea03769dc"
+      "bytes": 18517,
+      "sha256": "18bbaf26f5bf81c25b6807c4bb13bdf8f81469d71e962b83ae24543e5bca3171"
     },
     {
       "path": "iterations/I001_risk_portfolio/REGISTRATION.json",
@@ -151,6 +156,106 @@
       "path": "iterations/I001_risk_portfolio/smoke.json.gz.run.json",
       "bytes": 25574,
       "sha256": "5141e7d1cce92fe2d3bb5bfdeb32ea5ce33c4c3dc82d93a04f01341d0ad56232"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/engine.py",
+      "bytes": 21011,
+      "sha256": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/exact_oracle.py",
+      "bytes": 3081,
+      "sha256": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/instance.py",
+      "bytes": 3883,
+      "sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/lss_vendor.py",
+      "bytes": 23448,
+      "sha256": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/mip_backend.py",
+      "bytes": 1201,
+      "sha256": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/native_evaluator.py",
+      "bytes": 4251,
+      "sha256": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/native_support.py",
+      "bytes": 876,
+      "sha256": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/portfolio_lns.py",
+      "bytes": 2861,
+      "sha256": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/requirements.txt",
+      "bytes": 47,
+      "sha256": "1ddae601d25efb14960a6ac9cb1d469ad0a07aeb8852a7611c141dd27c8e08dc"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/risk_models.py",
+      "bytes": 4367,
+      "sha256": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/risk_solver.py",
+      "bytes": 2130,
+      "sha256": "a98cf76db399382088a301c464165bdfdb5c893c81a0f6805b15c345946a5754"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/run.py",
+      "bytes": 3305,
+      "sha256": "faaed365957c3e6a1553aeed1bccf8cc6a35ad88ec837cdb2d10ad7e604dae75"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/s10_kernel.py",
+      "bytes": 10072,
+      "sha256": "10971a18b640731bfe482f4e726d6cc828b3c440d56cc3c6f8c876d350ce2611"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/small_counts.py",
+      "bytes": 1701,
+      "sha256": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/small_guidance.py",
+      "bytes": 1437,
+      "sha256": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/stable_solver.py",
+      "bytes": 9198,
+      "sha256": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/candidate/strict_solver.py",
+      "bytes": 9952,
+      "sha256": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/REGISTRATION.json",
+      "bytes": 3159,
+      "sha256": "021d8bce082aa7b04a8fd9ecce5020c5b36a42ac3bf1178468b235879c2273e3"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/smoke.json.gz",
+      "bytes": 21789,
+      "sha256": "1f4eac834d52f4be66894745c34a1e957b6403743a10ca83fc82956013b70639"
+    },
+    {
+      "path": "iterations/I002_cdf_neighborhood/smoke.json.gz.run.json",
+      "bytes": 26164,
+      "sha256": "e8efd641f5b65a50da266f8cc23c0f69ad9a21292e5cf2901190502768b76d5b"
     },
     {
       "path": "LSS_DATA_REFERENCE.json",
@@ -174,8 +279,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 644,
-      "sha256": "c23e711ae8d0234e56ed5a95b2c6676e8b5ec5a17dc8cad3c2e31b619a6954f7"
+      "bytes": 441,
+      "sha256": "5ab9b9825b1591335429cbb108dddbc64a2131506f51535acd178099831fb78a"
     },
     {
       "path": "reference_loader.py",
@@ -198,6 +303,11 @@
       "sha256": "6f0eaf89b193a43defabb3514b93c009ea73e143026339d11c9333c8f275c125"
     },
     {
+      "path": "run_i002_pilot.py",
+      "bytes": 1971,
+      "sha256": "3e6b4d8ee33886ba3a07ea1237760e33c6da6d9ff2f2ee42f3e01ea5083442fa"
+    },
+    {
       "path": "summarize_i001_progress.py",
       "bytes": 2786,
       "sha256": "58dfb0ca6f718220475682815d99429afd0249c306003a433dda97a1c87490c3"
@@ -206,6 +316,11 @@
       "path": "validate_i001_pilot.py",
       "bytes": 3388,
       "sha256": "9d00cdb5109f4b3ad724f6e4353d42a8e554736e19187fb517d632adebc555a7"
+    },
+    {
+      "path": "validate_i002_pilot.py",
+      "bytes": 3424,
+      "sha256": "0ec2fb0903e946ada11a92d05447fc9ba4148f42734bb49fb55e5870d5ea8832"
     }
   ]
 }
