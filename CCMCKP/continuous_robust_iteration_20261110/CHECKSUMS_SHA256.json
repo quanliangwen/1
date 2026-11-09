@@ -1,0 +1,181 @@
+{
+  "algorithm": "SHA256",
+  "excludes_self": true,
+  "files": [
+    {
+      "path": "BASELINE_METRICS.json",
+      "bytes": 42884,
+      "sha256": "9f0ae0148908d981dd57c943f3e1b8af905fa6395198ccf2cea1d6fce3f7bde5"
+    },
+    {
+      "path": "CACHE_BOOTSTRAP_MANIFEST.json",
+      "bytes": 112812,
+      "sha256": "12d3cdd6d20af5fe8a68dfddeaff99b5524ba5dd850ba902b009e569f9293dcf"
+    },
+    {
+      "path": "CASES.json",
+      "bytes": 3231,
+      "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a"
+    },
+    {
+      "path": "check_risk_math.py",
+      "bytes": 1388,
+      "sha256": "60063061bdab660a6c2432d853b953d63517bc1f11ca5f93e6c0d79bfcef382c"
+    },
+    {
+      "path": "GOAL_AND_PROTOCOL.json",
+      "bytes": 964,
+      "sha256": "6e969109a2e43bed55881e157084d51827ed6c34b398db7a939fa40eac7e3e46"
+    },
+    {
+      "path": "ITERATION_LOG.md",
+      "bytes": 2605,
+      "sha256": "9c62d3a0791970fe8a3170c8060d5b9dbf3c1cbed92f35b7ed22253e858d6c18"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/engine.py",
+      "bytes": 21011,
+      "sha256": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/exact_oracle.py",
+      "bytes": 3081,
+      "sha256": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/instance.py",
+      "bytes": 3883,
+      "sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/lss_vendor.py",
+      "bytes": 23448,
+      "sha256": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/mip_backend.py",
+      "bytes": 1201,
+      "sha256": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/native_evaluator.py",
+      "bytes": 4251,
+      "sha256": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/native_support.py",
+      "bytes": 876,
+      "sha256": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/requirements.txt",
+      "bytes": 47,
+      "sha256": "1ddae601d25efb14960a6ac9cb1d469ad0a07aeb8852a7611c141dd27c8e08dc"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/risk_models.py",
+      "bytes": 4367,
+      "sha256": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/risk_solver.py",
+      "bytes": 1901,
+      "sha256": "0e74e2cc52014f6329b3994a85ff867ffe05c7d29f5784b8b792ccf588ae30ef"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/run.py",
+      "bytes": 3291,
+      "sha256": "27a6298f80ae88a71cea9f107a75cf632ee3ff421323615b0e16fb3e8468c39e"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/s10_kernel.py",
+      "bytes": 10060,
+      "sha256": "bebb7459bc49b692fafc3ceb6f025fad6d579b3efa77be800d1d105bf2b31e0b"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/small_counts.py",
+      "bytes": 1701,
+      "sha256": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/small_guidance.py",
+      "bytes": 1437,
+      "sha256": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/stable_solver.py",
+      "bytes": 9198,
+      "sha256": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/candidate/strict_solver.py",
+      "bytes": 9952,
+      "sha256": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/REGISTRATION.json",
+      "bytes": 3718,
+      "sha256": "7112961542da65929edb8aa95264b808a21e5e0d58c8c367b63b3f9c22dedc6b"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/smoke.json.gz",
+      "bytes": 40310,
+      "sha256": "b7efe03c5a2d39b1e4c506d0eefbc9055f589fa083495d268df7be4994788fc9"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/smoke.json.gz.run.json",
+      "bytes": 25574,
+      "sha256": "5141e7d1cce92fe2d3bb5bfdeb32ea5ce33c4c3dc82d93a04f01341d0ad56232"
+    },
+    {
+      "path": "LSS_DATA_REFERENCE.json",
+      "bytes": 760712,
+      "sha256": "baf97005886d754712671409c1e565099e536f4a8183a994f9d01336c58e9abd"
+    },
+    {
+      "path": "METHODS.md",
+      "bytes": 1878,
+      "sha256": "70d9ea61d3ef1b12da665c655618ba4d8b0c345a1ef08564054038290b16ace4"
+    },
+    {
+      "path": "native_lss_eval.py",
+      "bytes": 1829,
+      "sha256": "1fd7e2b6ea99b3da62c76e7b05c9e02f2e51b8ece257867d55bf57980d6af8c0"
+    },
+    {
+      "path": "RAW_REFERENCE.json",
+      "bytes": 583339,
+      "sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 376,
+      "sha256": "8ee197ae06a0de9811b64e0478409b6e76be90840cf24beac9ee7bdaa630aab2"
+    },
+    {
+      "path": "reference_loader.py",
+      "bytes": 822,
+      "sha256": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c"
+    },
+    {
+      "path": "REFERENCE_SHA256.json",
+      "bytes": 3203,
+      "sha256": "725f0c39f9b71e84aa387d98d607196cbb5859532020ca80c9dc5e352de8c63b"
+    },
+    {
+      "path": "RISK_MATH_CHECK.json",
+      "bytes": 86,
+      "sha256": "fcf36dd93da111351dbd3aa5c479983f7dd069be0bf96dcc804cb6de79ff353f"
+    },
+    {
+      "path": "run_i001_pilot.py",
+      "bytes": 1951,
+      "sha256": "6f0eaf89b193a43defabb3514b93c009ea73e143026339d11c9333c8f275c125"
+    },
+    {
+      "path": "validate_i001_pilot.py",
+      "bytes": 3388,
+      "sha256": "9d00cdb5109f4b3ad724f6e4353d42a8e554736e19187fb517d632adebc555a7"
+    }
+  ]
+}

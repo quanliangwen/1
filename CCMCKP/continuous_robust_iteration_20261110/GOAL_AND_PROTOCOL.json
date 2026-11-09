@@ -1,0 +1,11 @@
+{
+  "goal_status": "active",
+  "user_request": "持续迭代并给出思考尝试过程",
+  "baseline_commit": "4bb06daf08e86a03d08aeeb5d26e9de77d35b02e",
+  "primary_objective": "minimize max(0,Avg/oldBest-1) while keeping all attempts qualified; second objective lower feasible cost and keep Avg close to current Best",
+  "hard_acceptance": "original all-sample exact raw >=.99, original LSS real_P_test point>=.985,10m draws,seed832273,sum<=T",
+  "reporting": "every iteration logs hypotheses,method sources,code hashes,seeds,all failures,unresolved cases,negative results,real validation cost and decisions",
+  "publication": "GitHub quanliangwen/1 CCMCKP/continuous_robust_iteration_20261110; verify remote bytes/SHA",
+  "continuation": "keep goal active across checkpoints; do not mark complete merely because one experiment ends",
+  "formal_checkpoint": "all40x30 after substantive development improvement; no replacement of failed ordinary runs"
+}

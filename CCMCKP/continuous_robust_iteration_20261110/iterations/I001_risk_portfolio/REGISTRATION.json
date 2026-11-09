@@ -1,0 +1,95 @@
+{
+  "iteration": "I001",
+  "purpose": "development pilot, not40x30 final evidence",
+  "created_utc": "2026-11-09T16:46:17.121683+00:00",
+  "pilot_cases": [
+    30,
+    32,
+    35,
+    37,
+    38,
+    39,
+    40
+  ],
+  "methods": [
+    "none",
+    "cvar",
+    "gamma",
+    "mix"
+  ],
+  "seed": 970101,
+  "repetitions_per_case_per_method": 1,
+  "search_seconds": 600,
+  "watchdog_seconds": 640,
+  "risk_extension_seconds": 180,
+  "search_workers": 16,
+  "validation_workers": 16,
+  "source_sha256": {
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "0e74e2cc52014f6329b3994a85ff867ffe05c7d29f5784b8b792ccf588ae30ef",
+    "run.py": "27a6298f80ae88a71cea9f107a75cf632ee3ff421323615b0e16fb3e8468c39e",
+    "s10_kernel.py": "bebb7459bc49b692fafc3ceb6f025fad6d579b3efa77be800d1d105bf2b31e0b",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "raw_registry_sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7",
+  "acceptance": "original all-sample exact raw >=.99, original LSS real_P_test point>=.985,10m draws,seed832273,sum<=T",
+  "controls": "none runs fresh S10 search and retains every certified pool member; cvar/gamma/mix add input-only robust subproblems; identical seed,threshold,budget",
+  "CVaR": {
+    "scenarios": 2048,
+    "epsilon": [
+      0.02,
+      0.05,
+      0.01,
+      0.1
+    ],
+    "capacity_factors": [
+      1.0,
+      1.005,
+      1.01
+    ],
+    "max_cuts": 8,
+    "role": "candidate proposals only; no extra acceptance gate"
+  },
+  "Gamma": {
+    "quantiles": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "budgets": [
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      8.0
+    ],
+    "pivot_quantiles": [
+      0.0,
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      1.0
+    ],
+    "role": "budgeted box-uncertainty subproblem proposals, not Gamma distribution, no population-tail prior"
+  },
+  "baseline_source_commit": "4bb06daf08e86a03d08aeeb5d26e9de77d35b02e",
+  "optimizer_no_historical_solutions": true,
+  "optimizer_no_true_distribution_metadata": true,
+  "cache_policy": "validation only; S10 original identical data/function/seed calls reused by explicit SHA keys; historical call durations are logical estimates, not new measured CPU time",
+  "source_frozen_before_pilot": true,
+  "success_rule": "qualified cost improvement versus S10 and versus none control; a single development run cannot establish30-run Avg; preserve all negative attempts",
+  "next": "promising method receives multiple fresh development seeds, then frozen40x30 full verification; otherwise analyze misses and implement next robust neighborhood method"
+}
