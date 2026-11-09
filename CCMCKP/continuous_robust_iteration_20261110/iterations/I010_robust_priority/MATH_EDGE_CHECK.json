@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "models": 5,
+  "source_sha256": {
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "budget_cdf.py": "5a235d6c6df67ead2fb677275f3b1fd7a3b7d5e67ac18309c5cb93b9a3b6cdde",
+    "run_priority.py": "babcb8001f95de042ac6414ec796a7a690a19dc769145d9e48e869bac5e977b5",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "priority_search.py": "2c3ab1771926957387a2916ec000e12e4ab0183434bd8069a56c23d63ba6ebb9"
+  },
+  "scope": "zero costs, cost-empty, zero excess, timeout, and early multiple-candidate limit with retained complete frontier; guide shift1/3 never used as feasibility gate",
+  "rows": [
+    {
+      "name": "zero_cost",
+      "status": "exhausted",
+      "raw_candidates": 4,
+      "excluded": false,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 0,
+        "raw_refuted": 0,
+        "raw_accepted": 4,
+        "unresolved": 0
+      }
+    },
+    {
+      "name": "cost_empty",
+      "status": "exhausted",
+      "raw_candidates": 0,
+      "excluded": true,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 0,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "name": "zero_excess",
+      "status": "exhausted",
+      "raw_candidates": 0,
+      "excluded": true,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 1,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "name": "timeout",
+      "status": "budget_exhausted",
+      "raw_candidates": 0,
+      "excluded": false,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 0,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "name": "candidate_limit",
+      "status": "candidate_limit",
+      "raw_candidates": 2,
+      "excluded": false,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 0,
+        "raw_refuted": 0,
+        "raw_accepted": 2,
+        "unresolved": 0
+      }
+    }
+  ]
+}
