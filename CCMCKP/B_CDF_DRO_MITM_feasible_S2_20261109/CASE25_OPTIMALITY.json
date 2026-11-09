@@ -1,0 +1,37 @@
+{
+  "total_selections": 3125,
+  "all_cheaper_selections_proved_infeasible": 2403,
+  "independent_integer_backend": true,
+  "answer": {
+    "selection": [
+      5,
+      1,
+      22,
+      18,
+      19
+    ],
+    "cost": 16.961858369665308,
+    "certificate": {
+      "selection": [
+        5,
+        1,
+        22,
+        18,
+        19
+      ],
+      "bins": 256,
+      "lower_numerator": "24078651",
+      "denominator": "24300000",
+      "lower": 0.990890987654321,
+      "accepted": true,
+      "method": "exact_integer_upward_grid_count",
+      "all_original_samples": true,
+      "strict_event": "sum<T",
+      "upper_numerator": "24097030",
+      "upper": 0.9916473251028807,
+      "infeasible": false,
+      "certificate_seconds": 0.00019878894090652466
+    }
+  },
+  "refutations_sha256": "6b2e98ec6531d3b36908a56068b080b0638bb967dce7858e514f22b6e6be3267"
+}

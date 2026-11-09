@@ -1,0 +1,42 @@
+[
+  {
+    "test": 0,
+    "exact_true_count": 8,
+    "denominator": 12,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": 1,
+    "exact_true_count": 1,
+    "denominator": 4,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": 2,
+    "exact_true_count": 99,
+    "denominator": 100,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": 3,
+    "exact_true_count": 2,
+    "denominator": 4,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": 4,
+    "exact_true_count": 1,
+    "denominator": 1,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": 5,
+    "exact_true_count": 0,
+    "denominator": 1,
+    "all_grids_and_independent_integer_backend_match": true
+  },
+  {
+    "test": "50 marginals and 449-bit denominator",
+    "passed": true
+  }
+]
