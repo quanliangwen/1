@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "error": null,
+  "steps": [
+    {
+      "driver": "assess_i015_engineering39.py",
+      "exit": 0,
+      "wall": 0.46683958545327187
+    },
+    {
+      "driver": "audit_i015_engineering39_raw.py",
+      "exit": 0,
+      "wall": 103.91138862911612
+    }
+  ],
+  "wall_including_wait": 424.72195123974234,
+  "registration_sha256": "865a84bee4ca91638102690da939e770ba0f399a9fd867214ad7f3b35284a8ad",
+  "scope": "actual frozen engineering structural/budget/source/input and full independent raw recount only; no new original-LSS MC or30-run statistics"
+}

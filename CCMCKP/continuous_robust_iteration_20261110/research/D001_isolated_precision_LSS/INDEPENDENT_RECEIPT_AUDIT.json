@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "scope": "independent identity/threshold/receipt/accounting/isolation replay of six actual extra private original-LSS calls; no new MC, no cost-prefix/cold-best/30-run Avg claim",
+  "rows": [
+    {
+      "index": 40,
+      "cost": 291.83462261856806,
+      "key": "36ab9ebc00d274fc3ca7a790f3c1b9181bacac4f2666b898172430fa73e70d3d",
+      "raw_lower": 0.9900018682416857,
+      "original_native_point": 0.9837101,
+      "qualified": false,
+      "original_native_seconds": 39.95903162192553,
+      "receipt_sha256": "f34238ae686570fbd878c69af99f02f13207e7bda3755fb9f43b977e69d78f89",
+      "present_in_frozen_I015_pool": false
+    },
+    {
+      "index": 39,
+      "cost": 323.70997396673073,
+      "key": "b5259d7a542e99d82e10b6a82e718f8879f351e398d01dd1fb62cb804234af31",
+      "raw_lower": 0.9900006487653362,
+      "original_native_point": 0.9814822,
+      "qualified": false,
+      "original_native_seconds": 40.473431861028075,
+      "receipt_sha256": "f555d0b9c2084fa2955c2c9b5529d34a0609199dbc0964a0175124633e60ded4",
+      "present_in_frozen_I015_pool": false
+    },
+    {
+      "index": 39,
+      "cost": 324.95268853763866,
+      "key": "6a2ca2c10a2d0b580a865bc9ef11f33a847ac786c2d4b5c1bd570404a10a8017",
+      "raw_lower": 0.9900204861419586,
+      "original_native_point": 0.9813428,
+      "qualified": false,
+      "original_native_seconds": 40.56174270622432,
+      "receipt_sha256": "5773b6a6e6dfb9a2c6195640e29353501c33ca78255a803976df9c60e763b990",
+      "present_in_frozen_I015_pool": false
+    },
+    {
+      "index": 39,
+      "cost": 325.0586513609766,
+      "key": "8762b00acfdc45f1a774cc6ea710dc1b4248946dd9e747a6da8f72749e575a99",
+      "raw_lower": 0.9900518595349689,
+      "original_native_point": 0.9815443,
+      "qualified": false,
+      "original_native_seconds": 40.0169724188745,
+      "receipt_sha256": "66516c18243d5974f071d930b65637d4afad7ab7904c6a09095bf1ff4aaed0c3",
+      "present_in_frozen_I015_pool": false
+    },
+    {
+      "index": 39,
+      "cost": 325.4242366093754,
+      "key": "55e91b2564046c02c18564a0ade7d32c38bce986040cd878654491b85d36ff6a",
+      "raw_lower": 0.9900381943966324,
+      "original_native_point": 0.981394,
+      "qualified": false,
+      "original_native_seconds": 40.108382198028266,
+      "receipt_sha256": "dcdaef5e4826c93f40d36d123f08ccd52dc27ee2121097b019027b4e14b68a14",
+      "present_in_frozen_I015_pool": true
+    },
+    {
+      "index": 39,
+      "cost": 327.82899138387575,
+      "key": "4450a9d58a32231819900802390ec79de3f2855e5f8d7d79d446588c9e6b7eb9",
+      "raw_lower": 0.9900450558400145,
+      "original_native_point": 0.9814626,
+      "qualified": false,
+      "original_native_seconds": 40.75897673331201,
+      "receipt_sha256": "688042654e8b8059eee87775fa94d563044aa8f5c55b2c2f0941567f5d574a1d",
+      "present_in_frozen_I015_pool": false
+    }
+  ],
+  "actual_private_MC_attempts": 6,
+  "qualified": 0,
+  "original_MC_seconds": 241.8785375393927,
+  "shared448_receipts_and68_log_names_unchanged": true,
+  "formal_cache_access_only_readonly_isolation_auditor": true,
+  "I015_members_tested": 1,
+  "all_errors_retained_in_original_result": true,
+  "result_sha256": "52d26306c9f2836905cfd6afb3714e21124ffe2dc1fd40eff480ebbdce428527",
+  "registration_sha256": "f4b843a4835123d4e9983f82a1c7c92800148e2c4e9343417a05b0e732f3688d"
+}

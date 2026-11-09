@@ -1,0 +1,12 @@
+{
+  "time": 1794263977.1769006,
+  "pid": 1030430,
+  "job": "iterations/I015_precision_closure/engineering39/native",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I014_hybrid_cdf_blocks/engineering39/native/FINISHED",
+    "research/raw_precision/i014_own_native/FINISHED"
+  ],
+  "registration_sha256": "0d5ed60416a312d696fdefe84f3bd91d841f7eb82a82bd4526041c81a42af277",
+  "no_native_calls_before_all_dependencies": true
+}

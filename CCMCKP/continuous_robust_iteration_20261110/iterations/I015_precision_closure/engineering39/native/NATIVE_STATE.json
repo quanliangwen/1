@@ -1,0 +1,10 @@
+{
+  "stage": "waiting",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I014_hybrid_cdf_blocks/engineering39/native/FINISHED",
+    "research/raw_precision/i014_own_native/FINISHED"
+  ],
+  "time": 1794263977.2151146,
+  "new_MC_calls": 0
+}
