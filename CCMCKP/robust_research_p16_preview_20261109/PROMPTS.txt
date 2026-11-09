@@ -1,0 +1,73 @@
+Use case: productivity-visual.
+Create ONE finished Chinese academic PowerPoint slide SAMPLE, a crisp landscape raster image, 16:9 approximately 1920×1080 or 1672×941, matching the supplied P15 template closely.
+Input image is a STYLE reference only. Preserve cream background, dark navy text, gold fine rules, BUPT seal and 北京邮电大学 wordmark at top-left, top navigation: 研究背景 / 研究意义 / 研究脉络 / 创新方向 / 总结展望. Active 研究脉络 navy with gold text/underline; other tabs muted blue and white. Replace content completely.
+
+Title: “理论保证与适用条件”
+Subtitle: “同时说明理论结论、成立假设与约束代价”
+Thin gold divider below title area.
+
+MAIN TABLE: full-width three columns and five data rows, navy header white text, thin gold grid lines, subtle cream/gray alternating rows. Highlight P2 whole row in pale gold with a stronger gold border and small gold 主线 marker. Columns about 16% / 35% / 49%. Header exact:
+“文献” / “能够说明什么” / “成立条件和边界”
+Use readable Chinese, accurate line wrapping, roughly 26–29px body at 1672px width. Fit table in middle upper area, about y=225–675 at 1672×941. Do not put additional icons or extra columns.
+
+Exact table text (line breaks may be adjusted for fit, but retain all content):
+P1 资源缓冲
+  能够说明什么:
+  “最坏冲突与最坏交叉等价”
+  “分布鲁棒情形有期望等价”
+  条件:
+  “相应延误集合或分布族满足下单调性”
+  “不代表任意单一情景中冲突等于交叉”
+
+P2 Γ鲁棒双层
+  能够说明什么:
+  “有效上下界、最优性间隙”
+  “特定条件下可证明全局最优”
+  条件:
+  “二元下层及相应可行性等假设”
+  “子问题需正确求解，充分条件须事后核验”
+
+P3 两阶段鲁棒
+  能够说明什么:
+  “LRC保守，与AARC有等价关系”
+  “强化模型可收紧界”
+  条件:
+  “有界集合、相对完全补救、有界最优值”
+  “强化还需有效对偶变量界等条件”
+
+P4 自适应子模
+  能够说明什么:
+  “相应约束下的近似比”
+  “兼顾平均与最坏表现的保证”
+  条件:
+  “最坏单调性、子模性、最小依赖性等”
+  “混合策略另需自适应子模性”
+
+P5 结构化子模
+  能够说明什么:
+  “离线双准则近似”
+  “在线次线性近似遗憾界”
+  条件:
+  “单调子模性及相应信息假设”
+  “输出可能是多个可行集合的并，须报告约束放宽”
+Emphasize “须报告约束放宽” in gold or bold navy, keeping it clearly legible.
+
+BOTTOM P2 BOUND EXPLANATION AREA, separated from table by breathing space or thin gold rule:
+A left-aligned navy label “P2：两种下界逻辑不可混用”
+Under it, three horizontally aligned groups (avoid too many boxes; use clean flat layout with gold separators):
+Group 1 label “min-max情形”
+ large formula “L = max_{ℓ∈L} v_ℓ”
+ caption “对全体标称子问题最优值取最大”
+Group 2 label “一般双层情形”
+ large formula “L = min_{ℓ∈L} v_ℓ”
+ caption “对全体标称双层最优值取最小”
+Group 3 label “有效上界U”
+ text “来自经鲁棒校正的可行候选”
+ smaller line “vℓ：相应标称子问题的最优值”
+For formulas use conventional math typesetting; lower-bound Latin L must be distinguishable from index-set calligraphic L (use ℒ for the index set). The max/min choices MUST remain different exactly as above. Both formulas apply to their labeled model classes, not to the same problem.
+At very bottom, two readable navy lines:
+“有效界成立时：L ≤ v* ≤ U，U−L为绝对间隙，U=L可证明全局最优”
+“上述保证均不自动等于0.99机会约束保证”
+Make first line bold but not oversized. Keep all content within margins and above bottom edge.
+
+Accuracy: do not claim all methods return an originally feasible solution, P5 allows constraint relaxation. Do not claim scenario-wise conflicts equal crossings. Do not make a universal AARC=LRC equality without conditions (conditions are in adjacent column). No global certificate from mere timed candidate. This slide compares equivalence, conservative approximation, approximation ratios and regret guarantees with their conditions. No sixth paper, no invented probabilities or empirical results. Do not print instructions, “本页用途”, “口头讲解”, “建议图示” or reference image filename. No text overlap/clipping, no microscopic footnotes. Dense but balanced academic comparison slide.
