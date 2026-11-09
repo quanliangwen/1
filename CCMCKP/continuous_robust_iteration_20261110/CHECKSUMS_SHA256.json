@@ -179,8 +179,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 17002,
-      "sha256": "70971d37e7581cba44d47174037b1d7e63026850e2ebb3e7cb8f5189f6fc2474"
+      "bytes": 17414,
+      "sha256": "2dbb9712397be828dac55e38c261b5fe7b3b62aefceb5f971fe09acb756c665f"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -663,6 +663,11 @@
       "sha256": "3148eb9ad5206c382c393e55068c1722859b91e3faf2e6869630ae07a26c14b4"
     },
     {
+      "path": "iterations/I004_robust_pair_exchange/REGISTRATION.json",
+      "bytes": 3500,
+      "sha256": "9d999f1398457c0848e35d5f9c37549bca591aa7f6019497dc124a658bcad05c"
+    },
+    {
       "path": "iterations/I004_robust_pair_exchange/smoke.json.gz",
       "bytes": 6993,
       "sha256": "25a9f81a1ae7526e66d5a71fd50a69604ca6bad314f4bc5dcd5451f99b6d75c9"
@@ -918,6 +923,11 @@
       "sha256": "97682406893ae1692eaaa4060c531b4502619bad23af2741e2de047658ce50e7"
     },
     {
+      "path": "run_i004_pilot.py",
+      "bytes": 1974,
+      "sha256": "c24669feb93adb7011e3066909dd7a10f7f0e6086143d344e92beba7ece7910a"
+    },
+    {
       "path": "run_i005_case_probe.py",
       "bytes": 2168,
       "sha256": "78d395a964822df02a2b81d5a41ef9ddc5e168e04dc255099cc365a14563f40b"
@@ -1016,6 +1026,11 @@
       "path": "validate_i003_pilot.py",
       "bytes": 3426,
       "sha256": "7fd54da9fb8169cc9dea7320157ab940faf03d5a062acd97a674810adf2fd17a"
+    },
+    {
+      "path": "validate_i004_pilot.py",
+      "bytes": 3574,
+      "sha256": "5aa2a77c37cf69d3fffe31cb2f123973c2b358f71f2b045ac38910399637830c"
     }
   ]
 }
