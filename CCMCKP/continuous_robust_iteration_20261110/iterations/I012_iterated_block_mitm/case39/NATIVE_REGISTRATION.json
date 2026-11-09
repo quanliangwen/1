@@ -1,0 +1,48 @@
+{
+  "time": 1794259667.7836978,
+  "scope": "post-search registration for already frozen single engineering run; not a pre-search performance registration",
+  "source_sha256": {
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "bfbd7a05981010582d2a83129d767b30ff4a291db70e4f80360aa7f437551553",
+    "block_exchange.py": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "s10_kernel.py": "510afa87622dc621340b3d8c5623c9e0c74e74b1c9e54f3ddde9fb0623ea9035",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "run.py": "410d577275fd609002ae9a3b3ae98b4d98791ca5b292164aa68e50dcb321c4e2",
+    "ellipsoid_frontier.py": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "pair_exchange.py": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+  },
+  "frozen_search_sha256": "d683308b61b026841f8497b1db3547d21d7833a57f1e4f57679e34a71dacbc09",
+  "raw_audit_sha256": "15ab88622bf9911070ab41759a819bb9ae8cd0c2a4572746687bb360fef4b409",
+  "instance": "APP_50_10_500_",
+  "capacity": 91.0,
+  "index": 39,
+  "seed": 9712039,
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I004_robust_pair_exchange/pilot_validation/FINISHED",
+    "iterations/I012_iterated_block_mitm/engineering40/result.json.gz.post.json"
+  ],
+  "cost_order": "unchanged frozen complete pool; stop first original-LSS pass",
+  "LSS_seed": 832273,
+  "LSS_draws": 10000000,
+  "LSS_event": "sum<=T",
+  "LSS_threshold": 0.985,
+  "driver_sha256": {
+    "validate_i012_engineering39.py": "63c5861738f6451f5f1162cfed49d5fcec3a429a458708bf4c3c04968e87693e",
+    "native_lss_eval.py": "1fd7e2b6ea99b3da62c76e7b05c9e02f2e51b8ece257867d55bf57980d6af8c0",
+    "reference_loader.py": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c"
+  },
+  "no_search_feedback": true,
+  "no_30run_claim": true
+}

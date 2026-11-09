@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "models": 61,
+  "checks": 1448,
+  "seed": 9715001,
+  "source_sha256": "be0a57ea65532056c9fb79a7304f0d173b13174aaeea57b96d891ce49b8cf501",
+  "codec_sha256": "8a87c79236dc20060f7b052c4901e591c24443f77a61c955caaf91f4f1b2d2b6",
+  "binary_sha256": "87d590ad07b7268e7702cf5e44c3471bafb9ec6eb5ffb6002662dc2fb0ce5269",
+  "input_sha256": "2793e591dc043e7cb532828e7f984382da1fccd41a179ef8b1c9570796beeacf",
+  "compiler": "g++9.4.0 -O2 -std=c++17",
+  "stdout": "MODEL_OK 0 24\nMODEL_OK 1 24\nMODEL_OK 2 24\nMODEL_OK 3 24\nMODEL_OK 4 24\nMODEL_OK 5 24\nMODEL_OK 6 24\nMODEL_OK 7 24\nMODEL_OK 8 24\nMODEL_OK 9 24\nMODEL_OK 10 24\nMODEL_OK 11 24\nMODEL_OK 12 24\nMODEL_OK 13 24\nMODEL_OK 14 24\nMODEL_OK 15 24\nMODEL_OK 16 24\nMODEL_OK 17 24\nMODEL_OK 18 24\nMODEL_OK 19 24\nMODEL_OK 20 24\nMODEL_OK 21 24\nMODEL_OK 22 24\nMODEL_OK 23 24\nMODEL_OK 24 24\nMODEL_OK 25 24\nMODEL_OK 26 24\nMODEL_OK 27 24\nMODEL_OK 28 24\nMODEL_OK 29 24\nMODEL_OK 30 24\nMODEL_OK 31 24\nMODEL_OK 32 24\nMODEL_OK 33 24\nMODEL_OK 34 24\nMODEL_OK 35 24\nMODEL_OK 36 24\nMODEL_OK 37 24\nMODEL_OK 38 24\nMODEL_OK 39 24\nMODEL_OK 40 24\nMODEL_OK 41 24\nMODEL_OK 42 24\nMODEL_OK 43 24\nMODEL_OK 44 24\nMODEL_OK 45 24\nMODEL_OK 46 24\nMODEL_OK 47 24\nMODEL_OK 48 24\nMODEL_OK 49 24\nMODEL_OK 50 24\nMODEL_OK 51 24\nMODEL_OK 52 24\nMODEL_OK 53 24\nMODEL_OK 54 24\nMODEL_OK 55 24\nMODEL_OK 56 24\nMODEL_OK 57 24\nMODEL_OK 58 24\nMODEL_OK 59 24\nMODEL_OK 60 5\nALL_OK 61 1445\n",
+  "invalid_inputs": {
+    "parse_overflow": {
+      "exit": 1,
+      "stderr": "128-bit input overflow"
+    },
+    "sum_overflow": {
+      "exit": 1,
+      "stderr": "sum may overflow"
+    },
+    "trailing_input": {
+      "exit": 1,
+      "stderr": "trailing input"
+    }
+  },
+  "method": "C++ exact128 sort/lower_bound vs Fraction full outcomes; strict boundaries, finer decimal capacities, >64bit sample values and overflow guards",
+  "seconds": 0.3988291844725609
+}

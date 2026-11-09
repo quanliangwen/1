@@ -44,6 +44,11 @@ files+=[H/n for n in ['audit_first3_small_global.py','check_first3_small_integer
 keys={c['witness_LSS_key'] for c in proof['cases']}
 keys.update(r['LSS_key'] for c in proof['cases'] for r in c['cheaper_choice_records'] if 'LSS_key' in r)
 files+=[H/'lss_cache'/(k+'.json') for k in sorted(keys)]
+P16=H/'research/small16_joint_global';p16=json.load(open(P16/'RESULT.json'));c16=json.load(open(P16/'INDEPENDENT_CPP_RECHECK.json'))
+if not c16['passed'] or not c16['all16_global_fixed_joint_optimal'] or c16['result_sha256']!=sha(P16/'RESULT.json'):raise RuntimeError('Complete small16 proof identity differs')
+files+=[P16/n for n in ['RESULT.json','INDEPENDENT_CPP_RECHECK.json','REGISTRATION.json','CPP_MATH_CHECK.json','cpp_full.log','cpp_full.in','cpp_math.in','choices.jsonl.gz','README.md']]
+files+=[H/n for n in ['small_exact_integer_core.py','SMALL_EXACT_INTEGER_CORE_MATH_CHECK.json','audit_small16_global.py','small_exact_checker.cpp','cpp_audit_codec.py','recheck_small16_cpp.py']]
+files+=[H/'lss_cache'/(k+'.json') for k in sorted(p16['native_receipt_sha256'])]
 package('F001_SOURCE_AND_AUDIT.zip',files,'actual frozen formal source16+original LSS21, registered protocol, independent verifier and actual final audit')
 for i in range(1,41):
  rows=[r for r in d['details'] if r['index']==i]

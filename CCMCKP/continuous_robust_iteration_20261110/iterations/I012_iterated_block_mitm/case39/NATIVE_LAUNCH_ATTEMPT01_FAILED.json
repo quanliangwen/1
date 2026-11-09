@@ -1,0 +1,12 @@
+{
+  "scope": "native launch integration failure, not optimizer/benchmark failure",
+  "observed_error": "Native launch already registered; inspect PID instead",
+  "cause": "first launcher retained engineering40 directory; duplicate-launch guard stopped before opening log or Popen",
+  "old_J": "iterations/I012_iterated_block_mitm/engineering40",
+  "corrected_J": "iterations/I012_iterated_block_mitm/engineering39",
+  "first_attempt_started_no_process": true,
+  "registered_native_driver_unchanged": true,
+  "corrected_launch_pid": 1005760,
+  "corrected_launch_sha256": "220e7e61b53aa4f8984573300dff09ca96118b8337dee7a57c9abe6e7b21d4d7",
+  "precise_first_attempt_timestamp_not_recorded": true
+}

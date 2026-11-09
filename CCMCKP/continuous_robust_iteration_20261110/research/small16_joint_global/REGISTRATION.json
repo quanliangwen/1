@@ -1,0 +1,33 @@
+{
+  "time": 1794258538.201584,
+  "scope": "all16small original benchmark cost-frontier exact audit, not solver performance experiment or new MC",
+  "cases": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "seconds": 900,
+  "source_sha256": {
+    "audit_small16_global.py": "6ae7b6b4758d059ba01b376e62a2f7d7c22d570967db01752dffa7b56197b4da",
+    "small_exact_integer_core.py": "6b1111287259cd334e40f7b2a2cf7771f039ee9e69ffdee6a2b2626746718369",
+    "audit_f001_final.py": "e51e145f5a5b478b12fe3abf7a099e669ab72d849d27631b256f105adc6d37bb"
+  },
+  "math_check_sha256": "6d244fb724225778fba2f63598697c3cbd4926dc1eee7cd3d1bb45dcc432867c",
+  "diagnostic_sha256": "ff4958ec1bfb2fec90fc6b81c43353c6b3fe3eb1ba73bda0138941036f81d15c",
+  "native_inventory_count": 448,
+  "no_new_MC": true,
+  "no_optimizer_feedback": true
+}

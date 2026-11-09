@@ -139,8 +139,8 @@
     },
     {
       "path": "formal/F001_I002_40x30/AUDIT_PROGRESS.json",
-      "bytes": 322376,
-      "sha256": "75c1d492c258181cc0c65ff84e1475e33d16cd62f468f7fb765ce0a572771678"
+      "bytes": 331511,
+      "sha256": "44ce01d43666f8d6f7be7c0df39d10a3de6ad2d26ce94c0b949cd0c32aa8474b"
     },
     {
       "path": "formal/F001_I002_40x30/BUDGET_DIAGNOSTIC.json",
@@ -180,7 +180,7 @@
     {
       "path": "formal/F001_I002_40x30/SEARCH_PROGRESS.json",
       "bytes": 100,
-      "sha256": "f8f47bb0d0899ed2a2758e596d0474f7a7d85c913ed0750b8f88917f95f42994"
+      "sha256": "3abbe29b029f966c6f005bfcf143c493ae4c54c8ec1d786827be66b81a17c2de"
     },
     {
       "path": "formal/F001_I002_40x30/STAGE.json",
@@ -199,8 +199,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 31825,
-      "sha256": "e85b76f308f1cdc1b2ffd9595e2490a86faa172685670ca44afb4d69130dd430"
+      "bytes": 35261,
+      "sha256": "3f4c6723ee3aa37cecfae51dd42a5723e2272c35f48c1bfa7e81ecdfe0c9c3fb"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -1073,6 +1073,51 @@
       "sha256": "9613303f7534cfc8ee287a5a8aaa3715da012c6b35189442c5db92398a006f87"
     },
     {
+      "path": "iterations/I012_iterated_block_mitm/case39/ASSESSMENT.json",
+      "bytes": 2855,
+      "sha256": "20ded5ac4693e13826982f985550af8d45c24d100b532a95cd219960fe49bf64"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/CASE39_ENGINEERING_NOTES.md",
+      "bytes": 1852,
+      "sha256": "0ff00e0160cd5ad07cb7d3078b6ffa21344a60a04df700df8e0842f41cb4b9fd"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/I012_CASE39_ENGINEERING_EVIDENCE.zip",
+      "bytes": 1783015,
+      "sha256": "15cfb523ef73635e504a9eb23dbadcebd87c899bdf1518c6f5f6ff52579c61a5"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/I012_CASE39_ENGINEERING_EVIDENCE_MANIFEST.json",
+      "bytes": 23866,
+      "sha256": "7987c1d21102dcddfb5d97a75b3ceb4a8b5f92e2d6366c60ea8f31b7852e7e20"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/INDEPENDENT_RAW_AUDIT.json",
+      "bytes": 1243786,
+      "sha256": "15ab88622bf9911070ab41759a819bb9ae8cd0c2a4572746687bb360fef4b409"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/NATIVE_LAUNCH.json",
+      "bytes": 504,
+      "sha256": "220e7e61b53aa4f8984573300dff09ca96118b8337dee7a57c9abe6e7b21d4d7"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/NATIVE_LAUNCH_ATTEMPT01_FAILED.json",
+      "bytes": 705,
+      "sha256": "8c4838a9db35bb8072701d32948b07471236420f90231b79cf6597dba6d18ace"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/NATIVE_REGISTRATION.json",
+      "bytes": 2950,
+      "sha256": "721e78eb42e62e93a7592aeef0c31f1c3188a0811e1b6a644f9ebb780f72e973"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/case39/NATIVE_STATE.json",
+      "bytes": 107,
+      "sha256": "0ea1eb2026727473dbf34bc6ff9c8b5b9256352e2832fb9e77bea329302393ae"
+    },
+    {
       "path": "iterations/I012_iterated_block_mitm/I012_ITERATED_BLOCK_ENGINEERING_EVIDENCE.zip",
       "bytes": 2834565,
       "sha256": "92c9dcb1428305a5e0f5f432815af835940aceb001efe31d0b8af1d8ef959781"
@@ -1189,8 +1234,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2106,
-      "sha256": "7b28c850a9fcdfa21092e3d854f6123ebccb070064e746f5eb3c265a0e33a54a"
+      "bytes": 2859,
+      "sha256": "5f7ebee683351852934f96a1a2a68d59776802ceadd22191abcb89a772e0cf90"
     },
     {
       "path": "reference_loader.py",
@@ -1329,13 +1374,13 @@
     },
     {
       "path": "research/final_audit_preparation/build_f001_workbook.mjs",
-      "bytes": 11866,
-      "sha256": "14262a1cde24535eefaebf6ad99b45b22a21bc508ad2b6c27972a3fecbd9774d"
+      "bytes": 13332,
+      "sha256": "f3df31b1b7912049359ebb85e8a0ae008848a40935ee4190c99756eb26e13949"
     },
     {
       "path": "research/final_audit_preparation/check_f001_xlsx.py",
-      "bytes": 3738,
-      "sha256": "ba131bf2171f7f4a6d3b7c178c19aac10294bef58fac0bded4b1729d8e054065"
+      "bytes": 4110,
+      "sha256": "f09099e7dc82383bea962c93e07fff3d0c0e8d7eb4b6d086968e203a4db50e41"
     },
     {
       "path": "research/final_audit_preparation/create_f001_excel.ps1",
@@ -1354,8 +1399,8 @@
     },
     {
       "path": "research/final_audit_preparation/package_f001_final.py",
-      "bytes": 7537,
-      "sha256": "786a5a665fdf8d112488040966b41d2e7ada85145704b072ee9d684958db0ee8"
+      "bytes": 8311,
+      "sha256": "02c1476f1199168de546590e1a9788f6fc9b8435a6cbbcad2369378865435b23"
     },
     {
       "path": "research/final_audit_preparation/README.md",
@@ -1371,6 +1416,11 @@
       "path": "research/NEXT_RESEARCH_I012.md",
       "bytes": 2447,
       "sha256": "c0632afc2e73c8fba80428d99d6fd8d26eb0a067fc9aee67f56266b4bff41af2"
+    },
+    {
+      "path": "research/NEXT_RESEARCH_I014.md",
+      "bytes": 2441,
+      "sha256": "3263e8a29847b00698de2863e6ad1f13e288e013a10295708d2e32e33ab55361"
     },
     {
       "path": "research/pending_cost_cdf/cdf_cost_bound.py",
@@ -1401,6 +1451,76 @@
       "path": "research/raw_certificate_recount/INDEPENDENT_RAW_RECOUNT_MATH_CHECK.json",
       "bytes": 7172,
       "sha256": "29d2d071cb438e201ca37630daadf7d7277fce53741e19d45860317ddc52b114"
+    },
+    {
+      "path": "research/small16_joint_global/audit_small16_global.py",
+      "bytes": 7453,
+      "sha256": "6ae7b6b4758d059ba01b376e62a2f7d7c22d570967db01752dffa7b56197b4da"
+    },
+    {
+      "path": "research/small16_joint_global/cpp_audit_codec.py",
+      "bytes": 1304,
+      "sha256": "8a87c79236dc20060f7b052c4901e591c24443f77a61c955caaf91f4f1b2d2b6"
+    },
+    {
+      "path": "research/small16_joint_global/CPP_MATH_CHECK.json",
+      "bytes": 1925,
+      "sha256": "756693646956db0441ba66492396f3648f5150f405255de327ee119d63923c34"
+    },
+    {
+      "path": "research/small16_joint_global/INDEPENDENT_CPP_RECHECK.json",
+      "bytes": 12125,
+      "sha256": "9d707737191020f307548631b7d7858dd67dce5f4d324307fd352d22ef395916"
+    },
+    {
+      "path": "research/small16_joint_global/OPTIMIZATION_FRONTIER.json",
+      "bytes": 2580,
+      "sha256": "c9c9e945f7feb34db8a3bac97e435b6a0d2a1e3753e5d84ea5ab9895682b2db7"
+    },
+    {
+      "path": "research/small16_joint_global/README.md",
+      "bytes": 4154,
+      "sha256": "bcf86e15d364840b65a715cdbdc0a38109b7f05500eae1771b4da3ef6f007b16"
+    },
+    {
+      "path": "research/small16_joint_global/recheck_small16_cpp.py",
+      "bytes": 8920,
+      "sha256": "ab7828611c8d2db0f2677715ef76a5214e564dcaf122bfd4d5416ff34760b075"
+    },
+    {
+      "path": "research/small16_joint_global/REGISTRATION.json",
+      "bytes": 892,
+      "sha256": "3d04e3b67f6fab1faafbeb7802be54b1f8ef08418a1c4bccf46155c0c4b3b462"
+    },
+    {
+      "path": "research/small16_joint_global/RESULT.json",
+      "bytes": 143144,
+      "sha256": "f75f44f74f74ce5ccbb630d7c092e8190744af57a4ecfc10d21da8e8e9b95d7a"
+    },
+    {
+      "path": "research/small16_joint_global/SMALL16_FIXED_JOINT_OPTIMALITY.zip",
+      "bytes": 7388731,
+      "sha256": "d2024488c5b1989c19789b2cf715c283b8e748fb03af63a4bf749bf7afd4f732"
+    },
+    {
+      "path": "research/small16_joint_global/SMALL16_FIXED_JOINT_OPTIMALITY_MANIFEST.json",
+      "bytes": 81920,
+      "sha256": "d0434246621dfb145215303edea11baa29357027a49a0b570d088588a296b30f"
+    },
+    {
+      "path": "research/small16_joint_global/small_exact_checker.cpp",
+      "bytes": 3627,
+      "sha256": "be0a57ea65532056c9fb79a7304f0d173b13174aaeea57b96d891ce49b8cf501"
+    },
+    {
+      "path": "research/small16_joint_global/small_exact_integer_core.py",
+      "bytes": 2057,
+      "sha256": "6b1111287259cd334e40f7b2a2cf7771f039ee9e69ffdee6a2b2626746718369"
+    },
+    {
+      "path": "research/small16_joint_global/SMALL_EXACT_INTEGER_CORE_MATH_CHECK.json",
+      "bytes": 362,
+      "sha256": "6d244fb724225778fba2f63598697c3cbd4926dc1eee7cd3d1bb45dcc432867c"
     },
     {
       "path": "RISK_MATH_CHECK.json",
