@@ -59,8 +59,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 10238,
-      "sha256": "9be0d154e14435584bf55ef9d9b5bb63337b5746d5e47a81e66f5385ed14619d"
+      "bytes": 10682,
+      "sha256": "2248c536e22b58ceb930b4acfa6ba905859e8436021e61b99389a5f3704d8dff"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -468,9 +468,19 @@
       "sha256": "3e6b4d8ee33886ba3a07ea1237760e33c6da6d9ff2f2ee42f3e01ea5083442fa"
     },
     {
+      "path": "run_i002_stability.py",
+      "bytes": 2002,
+      "sha256": "cb7a0409f2b967a828f247de421548e608944315b65e7239f02bca873deeaf70"
+    },
+    {
       "path": "run_i003_pilot.py",
       "bytes": 1973,
       "sha256": "97682406893ae1692eaaa4060c531b4502619bad23af2741e2de047658ce50e7"
+    },
+    {
+      "path": "stability/I002_case40/REGISTRATION.json",
+      "bytes": 2638,
+      "sha256": "1d15bacf843a5d7db33abcb299a94bab19c7b9fc54614bcd22e24a5f67b00d55"
     },
     {
       "path": "summarize_i001_progress.py",
@@ -486,6 +496,11 @@
       "path": "validate_i002_pilot.py",
       "bytes": 3424,
       "sha256": "0ec2fb0903e946ada11a92d05447fc9ba4148f42734bb49fb55e5870d5ea8832"
+    },
+    {
+      "path": "validate_i002_stability.py",
+      "bytes": 3440,
+      "sha256": "1fa55bfa814625be15a1cd8794c218194724a37f5fb9e9151c383c8ca7a8744d"
     },
     {
       "path": "validate_i003_pilot.py",

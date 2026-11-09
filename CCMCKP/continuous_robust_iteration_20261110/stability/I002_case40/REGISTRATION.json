@@ -1,0 +1,45 @@
+{
+  "stage": "independent development stability check, not formal30-run Avg",
+  "created_utc": "2026-11-09T17:17:00.396731+00:00",
+  "source_iteration": "I002_cdf_neighborhood",
+  "source_sha256": {
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "a98cf76db399382088a301c464165bdfdb5c893c81a0f6805b15c345946a5754",
+    "run.py": "faaed365957c3e6a1553aeed1bccf8cc6a35ad88ec837cdb2d10ad7e604dae75",
+    "s10_kernel.py": "10971a18b640731bfe482f4e726d6cc828b3c440d56cc3c6f8c876d350ce2611",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "cases": [
+    40
+  ],
+  "methods": [
+    "none",
+    "cdf_lns"
+  ],
+  "seeds": [
+    970211,
+    970212,
+    970213
+  ],
+  "runs": 6,
+  "search_seconds": 600,
+  "phase_seconds": 180,
+  "watchdog_seconds": 640,
+  "workers": 6,
+  "reason": "independently generated I002 candidate cost292.9575379601305 vs S10 293.4385702896755; original LSS point .9856625 and raw exact99, preliminary single-seed improvement only",
+  "acceptance": "all original empirical samples integer certificate>=.99, original unchanged LSS point>=.985,10m,832273,sum<=T",
+  "cache_policy": "only external original LSS identity-matched reuse; no search feedback or saved solution starts",
+  "success_rule": "all three cdf_lns runs qualify and improve own matched none control and S10; then frozen full40x30 covering all cases; retain failures",
+  "postselection_cost": "logical per-run primary calls plus global physical new calls, speculative prefetch extra costs disclosed"
+}
