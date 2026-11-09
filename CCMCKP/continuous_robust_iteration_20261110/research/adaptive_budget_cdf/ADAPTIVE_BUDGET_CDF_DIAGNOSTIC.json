@@ -1,0 +1,192 @@
+{
+  "scope": "FLOAT FFT adaptive-policy budget-CDF diagnostic only; no rigorous exclusion, no native LSS calls, no acceptance changes",
+  "seconds": 9.993994884192944,
+  "math_checks": 288,
+  "source_sha256": {
+    "adaptive_budget_cdf.py": "75079e4e591e85615257cac1e677c67979e85b1228750bb1015f7071f85d111c",
+    "cdf_cost_bound.py": "3537dac45c3a40ae0cdfe1b94d2e929c9d33dce472f88039b09874330a1c85f2",
+    "diagnose_adaptive_budget_cdf.py": "b0e0a6cbd9eba73c5a3022081671b30b399848994b0185eb242df2b36de9604a"
+  },
+  "rows": [
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "cost_line": 193.774222960923,
+      "time_bins": 256,
+      "cost_bins": 128,
+      "best": 0.9981808287603724,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9985079354434493
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9981808287603724
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "cost_line": 193.774222960923,
+      "time_bins": 512,
+      "cost_bins": 256,
+      "best": 0.9959213311462833,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9967865893566581
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9959213311462833
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "cost_line": 214.897171849862,
+      "time_bins": 256,
+      "cost_bins": 128,
+      "best": 0.9994121696958784,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9994121696958784
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9996306098089096
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "cost_line": 214.897171849862,
+      "time_bins": 512,
+      "cost_bins": 256,
+      "best": 0.9978473244569868,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9978473244569868
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9983977455024701
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "cost_line": 196.002819223417,
+      "time_bins": 256,
+      "cost_bins": 128,
+      "best": 0.9997789389816492,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9997789389816492
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9998701251633255
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "cost_line": 196.002819223417,
+      "time_bins": 512,
+      "cost_bins": 256,
+      "best": 0.9990258546439862,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9990258546439862
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9992248402736006
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "cost_line": 321.700547006655,
+      "time_bins": 256,
+      "cost_bins": 128,
+      "best": 0.9998569244659241,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9998569244659241
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9998621573462372
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "cost_line": 321.700547006655,
+      "time_bins": 512,
+      "cost_bins": 256,
+      "best": 0.9990273313824699,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9990850091398769
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9990273313824699
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "cost_line": 291.936219482192,
+      "time_bins": 256,
+      "cost_bins": 128,
+      "best": 0.9999774499608713,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9999774499608713
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9999801251337125
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "cost_line": 291.936219482192,
+      "time_bins": 512,
+      "cost_bins": 256,
+      "best": 0.9996509522556692,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9996553533754096
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9996509522556692
+        }
+      ]
+    }
+  ]
+}

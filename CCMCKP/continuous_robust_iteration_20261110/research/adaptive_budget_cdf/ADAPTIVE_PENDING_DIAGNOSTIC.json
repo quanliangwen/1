@@ -1,0 +1,171 @@
+{
+  "scope": "FLOAT FFT restricted-prefix adaptive-policy diagnostics only; no rigorous new pruning, no LSS calls",
+  "frontier_sha256": "5780fcea2de04adb871f4549b7314787f532a622639e3e89a1c9ad0dde01ee83",
+  "source_sha256": {
+    "adaptive_budget_cdf.py": "75079e4e591e85615257cac1e677c67979e85b1228750bb1015f7071f85d111c",
+    "cdf_cost_bound.py": "3537dac45c3a40ae0cdfe1b94d2e929c9d33dce472f88039b09874330a1c85f2",
+    "diagnose_adaptive_pending.py": "f4da60445bde611e281feb16fa1cb1cd2ae48c6b38677b6251538c075e0a76f4"
+  },
+  "rows": [
+    {
+      "prefix": [
+        30,
+        271
+      ],
+      "depth": 2,
+      "best": 0.9958590589780121,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9967002705054407
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9958590589780121
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        121
+      ],
+      "depth": 2,
+      "best": 0.9821522909448395,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9821522909448395
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9834009580234
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        2
+      ],
+      "depth": 3,
+      "best": 0.987231823599658,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.987231823599658
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9880322597015595
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        152
+      ],
+      "depth": 3,
+      "best": 0.9871291308709723,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9871291308709723
+        },
+        {
+          "order": "reverse",
+          "upper": 0.987895281381176
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        32,
+        183
+      ],
+      "depth": 4,
+      "best": 0.9860513136184881,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9860513136184881
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9868595572310671
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        32,
+        33,
+        214
+      ],
+      "depth": 5,
+      "best": 0.9859682781676998,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9859682781676998
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9868188135193195
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        32,
+        33,
+        34
+      ],
+      "depth": 5,
+      "best": 0.9860495726972237,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9860495726972237
+        },
+        {
+          "order": "reverse",
+          "upper": 0.9869300244853919
+        }
+      ]
+    },
+    {
+      "prefix": [
+        30,
+        61,
+        32,
+        33,
+        4,
+        155,
+        246
+      ],
+      "depth": 7,
+      "best": 0.9860724316624073,
+      "curves": [
+        {
+          "order": "natural",
+          "upper": 0.9860724316624073
+        },
+        {
+          "order": "reverse",
+          "upper": 0.986812792876572
+        }
+      ]
+    }
+  ],
+  "seconds": 7.91255584731698
+}

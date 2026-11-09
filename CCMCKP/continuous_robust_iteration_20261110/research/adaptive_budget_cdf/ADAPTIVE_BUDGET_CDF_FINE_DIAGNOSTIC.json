@@ -1,0 +1,47 @@
+{
+  "scope": "fine FLOAT FFT adaptive-policy budget-CDF exploration only, no rigorous exclusion; original criteria unchanged, no LSS call",
+  "source_sha256": {
+    "adaptive_budget_cdf.py": "75079e4e591e85615257cac1e677c67979e85b1228750bb1015f7071f85d111c",
+    "cdf_cost_bound.py": "3537dac45c3a40ae0cdfe1b94d2e929c9d33dce472f88039b09874330a1c85f2",
+    "diagnose_adaptive_budget_cdf_fine.py": "e11065c26d5edbc7e1883d410225d584e49ff0f395770be9a818897a4f92ee32"
+  },
+  "rows": [
+    {
+      "index": 35,
+      "cost_line": 193.774222960923,
+      "time_bins": 1024,
+      "cost_bins": 512,
+      "order": "natural",
+      "upper": 0.9950354380099432,
+      "seconds": 2.6309753144159913
+    },
+    {
+      "index": 35,
+      "cost_line": 193.774222960923,
+      "time_bins": 1024,
+      "cost_bins": 512,
+      "order": "reverse",
+      "upper": 0.993846628155282,
+      "seconds": 2.609701664187014
+    },
+    {
+      "index": 35,
+      "cost_line": 193.774222960923,
+      "time_bins": 2048,
+      "cost_bins": 1024,
+      "order": "natural",
+      "upper": 0.9938025281324199,
+      "seconds": 11.334263132885098
+    },
+    {
+      "index": 35,
+      "cost_line": 193.774222960923,
+      "time_bins": 2048,
+      "cost_bins": 1024,
+      "order": "reverse",
+      "upper": 0.9924392304326455,
+      "seconds": 11.342714199796319
+    }
+  ],
+  "seconds": 27.935825609602034
+}

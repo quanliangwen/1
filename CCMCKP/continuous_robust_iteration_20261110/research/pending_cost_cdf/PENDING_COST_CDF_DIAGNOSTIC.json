@@ -1,0 +1,3313 @@
+{
+  "scope": "floating exploratory diagnostics only; no global exclusion and no new LSS calls",
+  "case": 35,
+  "grid": 512,
+  "frontier_nodes": 16,
+  "elapsed": 1.186312384903431,
+  "source_sha256": {
+    "cdf_cost_bound.py": "3537dac45c3a40ae0cdfe1b94d2e929c9d33dce472f88039b09874330a1c85f2",
+    "diagnose_pending_cost_cdf.py": "362044dc751598e9b9262cb3ad1bd65d893906ad7781144016e219aa2f1a64a6"
+  },
+  "frontier_sha256": "d159c665fea8d52f323bec7ea4f1f866fb7afebf70405c9e64781567d800e4ea",
+  "rows": [
+    {
+      "prefix": [
+        30
+      ],
+      "depth": 1,
+      "remaining_excess": "391948219881443267121/2500000000000000000",
+      "remaining_options_before": 290,
+      "remaining_options_after": 290,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.0008206935838081652,
+            "upper": 0.999179643093062,
+            "envelope_log_mass": -0.0008206935838081652,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.0008206935838081652,
+              "upper": 0.999179643093062,
+              "envelope_log_mass": -0.0008206935838081652,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.12118032122961336,
+              "upper": 1.0,
+              "envelope_log_mass": -0.041360484797371394,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.36402690489268374,
+              "upper": 1.0,
+              "envelope_log_mass": -0.12359551318827056,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.12456986998727,
+              "upper": 1.0,
+              "envelope_log_mass": -0.5008381902825779,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.15921221373834,
+              "upper": 1.0,
+              "envelope_log_mass": -1.7170119670712027,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.297285962754188,
+              "upper": 1.0,
+              "envelope_log_mass": -5.956794639944288,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 31.363407864319534,
+              "upper": 1.0,
+              "envelope_log_mass": -17.398833943775898,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 130.49007097265235,
+              "upper": 1.0,
+              "envelope_log_mass": -32.05073505433243,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 435.738924587047,
+              "upper": 1.0,
+              "envelope_log_mass": -51.88349349390728,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1517.573554930215,
+              "upper": 1.0,
+              "envelope_log_mass": -107.8345053396326,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.0008206935838081652,
+            "upper": 0.999179643093062,
+            "envelope_log_mass": -0.0008206935838081652,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.0008206935838081652,
+              "upper": 0.999179643093062,
+              "envelope_log_mass": -0.0008206935838081652,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.12118032122961345,
+              "upper": 1.0,
+              "envelope_log_mass": -0.03559896672296387,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.3640269048926838,
+              "upper": 1.0,
+              "envelope_log_mass": -0.10631095896504811,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.12456986998727,
+              "upper": 1.0,
+              "envelope_log_mass": -0.44322300953850324,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.15921221373834,
+              "upper": 1.0,
+              "envelope_log_mass": -1.5441664248389786,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.29728596275419,
+              "upper": 1.0,
+              "envelope_log_mass": -5.380642832503542,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 31.363407864319527,
+              "upper": 1.0,
+              "envelope_log_mass": -15.670378521453664,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 130.49007097265235,
+              "upper": 1.0,
+              "envelope_log_mass": -26.289216979924966,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 435.738924587047,
+              "upper": 1.0,
+              "envelope_log_mass": -34.5989392706849,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1517.573554930215,
+              "upper": 1.0,
+              "envelope_log_mass": -50.21932459555797,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        120
+      ],
+      "depth": 1,
+      "remaining_excess": "201484262772834949973/1250000000000000000",
+      "remaining_options_before": 290,
+      "remaining_options_after": 290,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.005805413248284577,
+            "upper": 0.994211405600678,
+            "envelope_log_mass": -0.005805413248284577,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.005805413248284577,
+              "upper": 0.994211405600678,
+              "envelope_log_mass": -0.005805413248284577,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.10812707910273754,
+              "upper": 1.0,
+              "envelope_log_mass": -0.054413726924247216,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.34577889593547434,
+              "upper": 1.0,
+              "envelope_log_mass": -0.14184352214547996,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.1052723285267847,
+              "upper": 1.0,
+              "envelope_log_mass": -0.5201357317430632,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.16744419490607,
+              "upper": 1.0,
+              "envelope_log_mass": -1.708779985903473,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.501652067340203,
+              "upper": 1.0,
+              "envelope_log_mass": -5.752428535358273,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 32.33493932948642,
+              "upper": 1.0,
+              "envelope_log_mass": -16.427302478609015,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 134.51468103075794,
+              "upper": 1.0,
+              "envelope_log_mass": -28.026124996226834,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 448.5590662459035,
+              "upper": 1.0,
+              "envelope_log_mass": -39.06335183505078,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1561.2104930635057,
+              "upper": 1.0,
+              "envelope_log_mass": -64.19756720634193,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.005805413248284577,
+            "upper": 0.994211405600678,
+            "envelope_log_mass": -0.005805413248284577,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.005805413248284577,
+              "upper": 0.994211405600678,
+              "envelope_log_mass": -0.005805413248284577,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.10812707910273758,
+              "upper": 1.0,
+              "envelope_log_mass": -0.053060331115530386,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.3457788959354743,
+              "upper": 1.0,
+              "envelope_log_mass": -0.1377833347193296,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.1052723285267845,
+              "upper": 1.0,
+              "envelope_log_mass": -0.5066017736558952,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.1674441949060697,
+              "upper": 1.0,
+              "envelope_log_mass": -1.6681781116419687,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.501652067340206,
+              "upper": 1.0,
+              "envelope_log_mass": -5.617088954486591,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 32.33493932948642,
+              "upper": 1.0,
+              "envelope_log_mass": -16.021283735993972,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 134.51468103075794,
+              "upper": 1.0,
+              "envelope_log_mass": -26.672729187510022,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 448.5590662459035,
+              "upper": 1.0,
+              "envelope_log_mass": -35.00316440890035,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1561.2104930635057,
+              "upper": 1.0,
+              "envelope_log_mass": -50.66360911917384,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        270
+      ],
+      "depth": 1,
+      "remaining_excess": "403667406886356591111/2500000000000000000",
+      "remaining_options_before": 290,
+      "remaining_options_after": 290,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.008438249348665173,
+            "upper": 0.9915972527486736,
+            "envelope_log_mass": -0.008438249348665173,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.008438249348665173,
+              "upper": 0.9915972527486736,
+              "envelope_log_mass": -0.008438249348665173,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.10269194452313314,
+              "upper": 1.0,
+              "envelope_log_mass": -0.059848861503851616,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.33711412183274625,
+              "upper": 1.0,
+              "envelope_log_mass": -0.15050829624820808,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.0879841957014738,
+              "upper": 1.0,
+              "envelope_log_mass": -0.5374238645683741,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.1356013117403965,
+              "upper": 1.0,
+              "envelope_log_mass": -1.7406228690691465,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.434112682142661,
+              "upper": 1.0,
+              "envelope_log_mass": -5.819967920555816,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 32.21514057113525,
+              "upper": 1.0,
+              "envelope_log_mass": -16.547101236960177,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 134.5401962568445,
+              "upper": 1.0,
+              "envelope_log_mass": -28.00060977014027,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 449.10329010943246,
+              "upper": 1.0,
+              "envelope_log_mass": -38.51912797152181,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1563.5854341347756,
+              "upper": 1.0,
+              "envelope_log_mass": -61.822626135072106,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.008438249348665173,
+            "upper": 0.9915972527486736,
+            "envelope_log_mass": -0.008438249348665173,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.008438249348665173,
+              "upper": 0.9915972527486736,
+              "envelope_log_mass": -0.008438249348665173,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.1026919445231331,
+              "upper": 1.0,
+              "envelope_log_mass": -0.05877501823140955,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.33711412183274614,
+              "upper": 1.0,
+              "envelope_log_mass": -0.14728676643088176,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 1.0879841957014738,
+              "upper": 1.0,
+              "envelope_log_mass": -0.5266854318439528,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 3.135601311740397,
+              "upper": 1.0,
+              "envelope_log_mass": -1.7084075708958824,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 10.434112682142663,
+              "upper": 1.0,
+              "envelope_log_mass": -5.712583593311601,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 32.21514057113525,
+              "upper": 1.0,
+              "envelope_log_mass": -16.224948255227535,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 134.5401962568445,
+              "upper": 1.0,
+              "envelope_log_mass": -26.926766497698143,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 449.10329010943246,
+              "upper": 1.0,
+              "envelope_log_mass": -35.29759815419542,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1563.5854341347756,
+              "upper": 1.0,
+              "envelope_log_mass": -51.08419341065078,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        155
+      ],
+      "depth": 6,
+      "remaining_excess": "233042021404756091563/2000000000000000000",
+      "remaining_options_before": 240,
+      "remaining_options_after": 240,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.008358262282661868,
+            "upper": 0.9916765708757478,
+            "envelope_log_mass": -0.008358262282661868,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.008358262282661868,
+              "upper": 0.9916765708757478,
+              "envelope_log_mass": -0.008358262282661868,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.05792926600105293,
+              "upper": 1.0,
+              "envelope_log_mass": -0.10461154002593183,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.21481505622608577,
+              "upper": 1.0,
+              "envelope_log_mass": -0.27280736185486854,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.743740541484986,
+              "upper": 1.0,
+              "envelope_log_mass": -0.8816675187848617,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 2.1740887371670476,
+              "upper": 1.0,
+              "envelope_log_mass": -2.7021354436424954,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 7.491257912856648,
+              "upper": 1.0,
+              "envelope_log_mass": -8.762822689841828,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 23.12837340557522,
+              "upper": 1.0,
+              "envelope_log_mass": -25.63386840252021,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 96.24588851879477,
+              "upper": 1.0,
+              "envelope_log_mass": -66.29491750819,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 322.93308957531434,
+              "upper": 1.0,
+              "envelope_log_mass": -164.68932850563993,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1127.2473959611787,
+              "upper": 1.0,
+              "envelope_log_mass": -498.160664308669,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.008358262282661868,
+            "upper": 0.9916765708757478,
+            "envelope_log_mass": -0.008358262282661868,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.008358262282661868,
+              "upper": 0.9916765708757478,
+              "envelope_log_mass": -0.008358262282661868,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.05792926600105308,
+              "upper": 1.0,
+              "envelope_log_mass": -0.05859174470132496,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.2148150562260857,
+              "upper": 1.0,
+              "envelope_log_mass": -0.13474797588104842,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.7437405414849858,
+              "upper": 1.0,
+              "envelope_log_mass": -0.4214695655387945,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 2.1740887371670476,
+              "upper": 1.0,
+              "envelope_log_mass": -1.3215415839042934,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 7.491257912856651,
+              "upper": 1.0,
+              "envelope_log_mass": -4.160843157381154,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 23.12837340557521,
+              "upper": 1.0,
+              "envelope_log_mass": -11.827929805138195,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 96.24588851879474,
+              "upper": 1.0,
+              "envelope_log_mass": -20.275122183583292,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 322.9330895753144,
+              "upper": 1.0,
+              "envelope_log_mass": -26.629942531819697,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 1127.2473959611787,
+              "upper": 1.0,
+              "envelope_log_mass": -37.962711062601805,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        70
+      ],
+      "depth": 11,
+      "remaining_excess": "464060446100070492651/5000000000000000000",
+      "remaining_options_before": 190,
+      "remaining_options_after": 190,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.012598642668378148,
+            "upper": 0.9874803879890034,
+            "envelope_log_mass": -0.012598642668378148,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.012598642668378148,
+              "upper": 0.9874803879890034,
+              "envelope_log_mass": -0.012598642668378148,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.03397310328589884,
+              "upper": 1.0,
+              "envelope_log_mass": -0.12856770274108592,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.15313284764330914,
+              "upper": 1.0,
+              "envelope_log_mass": -0.33448957043764516,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.5747429905473727,
+              "upper": 1.0,
+              "envelope_log_mass": -1.050665069722475,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.719067940627474,
+              "upper": 1.0,
+              "envelope_log_mass": -3.157156240182069,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 6.057478539395598,
+              "upper": 1.0,
+              "envelope_log_mass": -10.196602063302878,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 18.77231819596319,
+              "upper": 1.0,
+              "envelope_log_mass": -29.98992361213224,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 77.29893541688095,
+              "upper": 1.0,
+              "envelope_log_mass": -85.24187061010382,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 257.45686475064076,
+              "upper": 1.0,
+              "envelope_log_mass": -230.16555333031351,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 897.3136215017706,
+              "upper": 1.0,
+              "envelope_log_mass": -728.0944387680771,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.012598642668378148,
+            "upper": 0.9874803879890034,
+            "envelope_log_mass": -0.012598642668378148,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.012598642668378148,
+              "upper": 0.9874803879890034,
+              "envelope_log_mass": -0.012598642668378148,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.03397310328589914,
+              "upper": 1.0,
+              "envelope_log_mass": -0.058838985934114976,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.15313284764330937,
+              "upper": 1.0,
+              "envelope_log_mass": -0.125303420016733,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.574742990547373,
+              "upper": 1.0,
+              "envelope_log_mass": -0.35337790165276817,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.7190679406274751,
+              "upper": 1.0,
+              "envelope_log_mass": -1.0652947359729483,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 6.0574785393956,
+              "upper": 1.0,
+              "envelope_log_mass": -3.2237303826058117,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 18.772318195963194,
+              "upper": 1.0,
+              "envelope_log_mass": -9.07130857004104,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 77.29893541688097,
+              "upper": 1.0,
+              "envelope_log_mass": -15.51315380313315,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 257.4568647506408,
+              "upper": 1.0,
+              "envelope_log_mass": -20.979402909401532,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 897.3136215017709,
+              "upper": 1.0,
+              "envelope_log_mass": -30.807270698370314,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        254
+      ],
+      "depth": 15,
+      "remaining_excess": "330713783909362369207/5000000000000000000",
+      "remaining_options_before": 150,
+      "remaining_options_after": 150,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.013673274348801312,
+            "upper": 0.9864197802636737,
+            "envelope_log_mass": -0.013673274348801312,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.013673274348801312,
+              "upper": 0.9864197802636737,
+              "envelope_log_mass": -0.013673274348801312,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.01517888463057443,
+              "upper": 1.0,
+              "envelope_log_mass": -0.14736192139641033,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.09418596656340489,
+              "upper": 1.0,
+              "envelope_log_mass": -0.3934364515175494,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.38362323506831064,
+              "upper": 1.0,
+              "envelope_log_mass": -1.241784825201537,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1943480826018362,
+              "upper": 1.0,
+              "envelope_log_mass": -3.681876098207707,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.371055429841972,
+              "upper": 1.0,
+              "envelope_log_mass": -11.883025172856504,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.772173981293271,
+              "upper": 1.0,
+              "envelope_log_mass": -34.99006782680216,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.450441703399676,
+              "upper": 1.0,
+              "envelope_log_mass": -107.09036432358509,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.0550988947245,
+              "upper": 1.0,
+              "envelope_log_mass": -303.5673191862298,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 640.7733316142709,
+              "upper": 1.0,
+              "envelope_log_mass": -984.6347286555769,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.013673274348801312,
+            "upper": 0.9864197802636737,
+            "envelope_log_mass": -0.013673274348801312,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.013673274348801312,
+              "upper": 0.9864197802636737,
+              "envelope_log_mass": -0.013673274348801312,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.015178884630574721,
+              "upper": 1.0,
+              "envelope_log_mass": -0.05096387215129776,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.09418596656340503,
+              "upper": 1.0,
+              "envelope_log_mass": -0.10424230378221241,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.3836232350683113,
+              "upper": 1.0,
+              "envelope_log_mass": -0.2778043327504135,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1943480826018358,
+              "upper": 1.0,
+              "envelope_log_mass": -0.7899346208543384,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.371055429841974,
+              "upper": 1.0,
+              "envelope_log_mass": -2.2432202483452737,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.772173981293271,
+              "upper": 1.0,
+              "envelope_log_mass": -6.0706530532684715,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.4504417033997,
+              "upper": 1.0,
+              "envelope_log_mass": -10.692315078472783,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.05509889472444,
+              "upper": 1.0,
+              "envelope_log_mass": -14.373171450892972,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 640.7733316142708,
+              "upper": 1.0,
+              "envelope_log_mass": -20.65423620445405,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        195
+      ],
+      "depth": 16,
+      "remaining_excess": "325202156427986140277/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.016206109077681333,
+            "upper": 0.9839245033829241,
+            "envelope_log_mass": -0.016206109077681333,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.016206109077681333,
+              "upper": 0.9839245033829241,
+              "envelope_log_mass": -0.016206109077681333,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.010225014591540293,
+              "upper": 1.0,
+              "envelope_log_mass": -0.15231579143544446,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.08498464743449746,
+              "upper": 1.0,
+              "envelope_log_mass": -0.40263777064645684,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.36273204690879557,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2626760133610522,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1492900779896078,
+              "upper": 1.0,
+              "envelope_log_mass": -3.726934102819935,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.2678051906658325,
+              "upper": 1.0,
+              "envelope_log_mass": -11.986275412032644,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.561462117778433,
+              "upper": 1.0,
+              "envelope_log_mass": -35.200779690317,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 54.73597820249326,
+              "upper": 1.0,
+              "envelope_log_mass": -107.80482782449151,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 181.3149726112607,
+              "upper": 1.0,
+              "envelope_log_mass": -306.30744546969356,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 630.7451827807171,
+              "upper": 1.0,
+              "envelope_log_mass": -994.6628774891307,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.016206109077681333,
+            "upper": 0.9839245033829241,
+            "envelope_log_mass": -0.016206109077681333,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.016206109077681333,
+              "upper": 0.9839245033829241,
+              "envelope_log_mass": -0.016206109077681333,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.010225014591540765,
+              "upper": 1.0,
+              "envelope_log_mass": -0.05481541669405644,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.08498464743449766,
+              "upper": 1.0,
+              "envelope_log_mass": -0.11013664642229398,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.36273204690879596,
+              "upper": 1.0,
+              "envelope_log_mass": -0.28767226594717615,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1492900779896074,
+              "upper": 1.0,
+              "envelope_log_mass": -0.8019228605783089,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.267805190665832,
+              "upper": 1.0,
+              "envelope_log_mass": -2.2362379378938897,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.561462117778415,
+              "upper": 1.0,
+              "envelope_log_mass": -5.950667267900749,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 54.73597820249323,
+              "upper": 1.0,
+              "envelope_log_mass": -10.304453083103976,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 181.31497261126069,
+              "upper": 1.0,
+              "envelope_log_mass": -13.806321245530945,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 630.7451827807168,
+              "upper": 1.0,
+              "envelope_log_mass": -19.659130075255227,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        135
+      ],
+      "depth": 16,
+      "remaining_excess": "327655050773138026147/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.01971981615759271,
+            "upper": 0.9804733476152196,
+            "envelope_log_mass": -0.01971981615759271,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.01971981615759271,
+              "upper": 0.9804733476152196,
+              "envelope_log_mass": -0.01971981615759271,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.007200843397050322,
+              "upper": 1.0,
+              "envelope_log_mass": -0.15533996262993444,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.0831985678867147,
+              "upper": 1.0,
+              "envelope_log_mass": -0.4044238501942396,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.365440851718267,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2599672085515807,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1625060934701459,
+              "upper": 1.0,
+              "envelope_log_mass": -3.713718087339397,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.320532084550706,
+              "upper": 1.0,
+              "envelope_log_mass": -11.93354851814777,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.741867138509619,
+              "upper": 1.0,
+              "envelope_log_mass": -35.02037466958581,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.298164832618454,
+              "upper": 1.0,
+              "envelope_log_mass": -107.24264119436631,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 182.89333816619967,
+              "upper": 1.0,
+              "envelope_log_mass": -304.7290799147546,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 635.8702132665596,
+              "upper": 1.0,
+              "envelope_log_mass": -989.5378470032881,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.01971981615759271,
+            "upper": 0.9804733476152196,
+            "envelope_log_mass": -0.01971981615759271,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.01971981615759271,
+              "upper": 0.9804733476152196,
+              "envelope_log_mass": -0.01971981615759271,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.00720084339705062,
+              "upper": 1.0,
+              "envelope_log_mass": -0.058330166757576955,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.0831985678867148,
+              "upper": 1.0,
+              "envelope_log_mass": -0.11339446257716794,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.36544085171826685,
+              "upper": 1.0,
+              "envelope_log_mass": -0.28986924982800893,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.162506093470144,
+              "upper": 1.0,
+              "envelope_log_mass": -0.803424211168683,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.320532084550708,
+              "upper": 1.0,
+              "envelope_log_mass": -2.2325689309120507,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.741867138509605,
+              "upper": 1.0,
+              "envelope_log_mass": -5.91743590787867,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.29816483261843,
+              "upper": 1.0,
+              "envelope_log_mass": -10.232845322009146,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 182.8933381661996,
+              "upper": 1.0,
+              "envelope_log_mass": -13.69969229768314,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 635.8702132665594,
+              "upper": 1.0,
+              "envelope_log_mass": -19.439888279716378,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        255
+      ],
+      "depth": 16,
+      "remaining_excess": "165219670510855679221/2500000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.02225627909006328,
+            "upper": 0.9779895646560702,
+            "envelope_log_mass": -0.02225627909006328,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.02225627909006328,
+              "upper": 0.9779895646560702,
+              "envelope_log_mass": -0.02225627909006328,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.0013577704191132522,
+              "upper": 0.9986431509340997,
+              "envelope_log_mass": -0.163898576446098,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.06599029650462346,
+              "upper": 1.0,
+              "envelope_log_mass": -0.42163212157633084,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.3334332865523846,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2919747737174632,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0943879048335377,
+              "upper": 1.0,
+              "envelope_log_mass": -3.7818362759760054,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.177180380863405,
+              "upper": 1.0,
+              "envelope_log_mass": -12.076900221835071,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.50357671243168,
+              "upper": 1.0,
+              "envelope_log_mass": -35.25866509566375,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.357618129877125,
+              "upper": 1.0,
+              "envelope_log_mass": -107.18318789710764,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.01086006702138,
+              "upper": 1.0,
+              "envelope_log_mass": -303.6115580139329,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 640.7653933013689,
+              "upper": 1.0,
+              "envelope_log_mass": -984.6426669684788,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.02225627909006328,
+            "upper": 0.9779895646560702,
+            "envelope_log_mass": -0.02225627909006328,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.02225627909006328,
+              "upper": 0.9779895646560702,
+              "envelope_log_mass": -0.02225627909006328,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.0013577704191130996,
+              "upper": 0.9986431509340998,
+              "envelope_log_mass": -0.06744563862345537,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.06599029650462354,
+              "upper": 1.0,
+              "envelope_log_mass": -0.13227330810840326,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.33343328655238486,
+              "upper": 1.0,
+              "envelope_log_mass": -0.32744539549103785,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0943879048335383,
+              "upper": 1.0,
+              "envelope_log_mass": -0.8882481412967298,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.1771803808634065,
+              "upper": 1.0,
+              "envelope_log_mass": -2.4316064395708206,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.503576712431661,
+              "upper": 1.0,
+              "envelope_log_mass": -6.32278374887102,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.357618129877125,
+              "upper": 1.0,
+              "envelope_log_mass": -10.730250074465145,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.01086006702138,
+              "upper": 1.0,
+              "envelope_log_mass": -14.252744546005445,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 640.7653933013688,
+              "upper": 1.0,
+              "envelope_log_mass": -20.11328874205395,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        285
+      ],
+      "depth": 16,
+      "remaining_excess": "41373163639847361419/625000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.020624304129167846,
+            "upper": 0.9795869222068434,
+            "envelope_log_mass": -0.020624304129167846,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.020624304129167846,
+              "upper": 0.9795869222068434,
+              "envelope_log_mass": -0.020624304129167846,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.0011682528104466072,
+              "upper": 1.0,
+              "envelope_log_mass": -0.16137255321653815,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.07020489155444792,
+              "upper": 1.0,
+              "envelope_log_mass": -0.4174175265265064,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.34203047716694157,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2833775831029062,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1119827359921066,
+              "upper": 1.0,
+              "envelope_log_mass": -3.7642414448174364,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.218164482916881,
+              "upper": 1.0,
+              "envelope_log_mass": -12.035916119781595,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.60233699643264,
+              "upper": 1.0,
+              "envelope_log_mass": -35.15990481166279,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.558298834494494,
+              "upper": 1.0,
+              "envelope_log_mass": -106.98250719249027,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.44901915215513,
+              "upper": 1.0,
+              "envelope_log_mass": -303.17339892879914,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 642.0176979999376,
+              "upper": 1.0,
+              "envelope_log_mass": -983.3903622699102,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.020624304129167846,
+            "upper": 0.9795869222068434,
+            "envelope_log_mass": -0.020624304129167846,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.020624304129167846,
+              "upper": 0.9795869222068434,
+              "envelope_log_mass": -0.020624304129167846,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 0.0011682528104469958,
+              "upper": 1.0,
+              "envelope_log_mass": -0.06502880901330878,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.07020489155444787,
+              "upper": 1.0,
+              "envelope_log_mass": -0.12838629391681947,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.34203047716694174,
+              "upper": 1.0,
+              "envelope_log_mass": -0.319940141070616,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1119827359921064,
+              "upper": 1.0,
+              "envelope_log_mass": -0.8739291187205667,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.218164482916884,
+              "upper": 1.0,
+              "envelope_log_mass": -2.4015416994586936,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.602336996432633,
+              "upper": 1.0,
+              "envelope_log_mass": -6.256781550694098,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.55829883449449,
+              "upper": 1.0,
+              "envelope_log_mass": -10.638762989261286,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.4490191521552,
+              "upper": 1.0,
+              "envelope_log_mass": -14.142166319112144,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 642.0176979999376,
+              "upper": 1.0,
+              "envelope_log_mass": -19.95292023762019,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        225
+      ],
+      "depth": 16,
+      "remaining_excess": "10346725259855948111/156250000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.02145873455543157,
+            "upper": 0.9787698660094674,
+            "envelope_log_mass": -0.02145873455543157,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.02145873455543157,
+              "upper": 0.9787698660094674,
+              "envelope_log_mass": -0.02145873455543157,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 8.435152789187939e-05,
+              "upper": 1.0,
+              "envelope_log_mass": -0.16245645449909288,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.07035507226661081,
+              "upper": 1.0,
+              "envelope_log_mass": -0.4172673458143435,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.34308350843765134,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2823245518321964,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1124183438374655,
+              "upper": 1.0,
+              "envelope_log_mass": -3.7638058369720775,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.207247075534509,
+              "upper": 1.0,
+              "envelope_log_mass": -12.046833527163967,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.474989624640934,
+              "upper": 1.0,
+              "envelope_log_mass": -35.2872521834545,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.307124498350646,
+              "upper": 1.0,
+              "envelope_log_mass": -107.23368152863412,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.1242034053406,
+              "upper": 1.0,
+              "envelope_log_mass": -303.49821467561367,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.4946016725653,
+              "upper": 1.0,
+              "envelope_log_mass": -983.9134585972824,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.02145873455543157,
+            "upper": 0.9787698660094674,
+            "envelope_log_mass": -0.02145873455543157,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.02145873455543157,
+              "upper": 0.9787698660094674,
+              "envelope_log_mass": -0.02145873455543157,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": 8.435152789221245e-05,
+              "upper": 1.0,
+              "envelope_log_mass": -0.06613469013518584,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.07035507226661111,
+              "upper": 1.0,
+              "envelope_log_mass": -0.12830205272262307,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.34308350843765184,
+              "upper": 1.0,
+              "envelope_log_mass": -0.31910690819312876,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.1124183438374646,
+              "upper": 1.0,
+              "envelope_log_mass": -0.874152906054877,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.207247075534513,
+              "upper": 1.0,
+              "envelope_log_mass": -2.4146570907732943,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.47498962464092,
+              "upper": 1.0,
+              "envelope_log_mass": -6.390722874282499,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.307124498350646,
+              "upper": 1.0,
+              "envelope_log_mass": -10.91191716472741,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.12420340534055,
+              "upper": 1.0,
+              "envelope_log_mass": -14.532921583893629,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.4946016725655,
+              "upper": 1.0,
+              "envelope_log_mass": -20.69581495821515,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        75
+      ],
+      "depth": 16,
+      "remaining_excess": "331440686440557948227/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.022689482564800828,
+            "upper": 0.9775659879324826,
+            "envelope_log_mass": -0.022689482564800828,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.022689482564800828,
+              "upper": 0.9775659879324826,
+              "envelope_log_mass": -0.022689482564800828,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.0032594039498274607,
+              "upper": 0.9967459021407635,
+              "envelope_log_mass": -0.16580020997681222,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.06402200784456791,
+              "upper": 1.0,
+              "envelope_log_mass": -0.4236004102363864,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.3311215389144466,
+              "upper": 1.0,
+              "envelope_log_mass": -1.2942865213554011,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.085691853606332,
+              "upper": 1.0,
+              "envelope_log_mass": -3.790532327203211,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.141553170777243,
+              "upper": 1.0,
+              "envelope_log_mass": -12.112527431921233,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.310202596144713,
+              "upper": 1.0,
+              "envelope_log_mass": -35.45203921195072,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.1098217808958,
+              "upper": 1.0,
+              "envelope_log_mass": -107.43098424608897,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 183.99960173572714,
+              "upper": 1.0,
+              "envelope_log_mass": -303.62281634522714,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.6389185168407,
+              "upper": 1.0,
+              "envelope_log_mass": -983.769141753007,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.022689482564800828,
+            "upper": 0.9775659879324826,
+            "envelope_log_mass": -0.022689482564800828,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.022689482564800828,
+              "upper": 0.9775659879324826,
+              "envelope_log_mass": -0.022689482564800828,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.0032594039498271554,
+              "upper": 0.9967459021407639,
+              "envelope_log_mass": -0.06954754123793874,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.06402200784456813,
+              "upper": 1.0,
+              "envelope_log_mass": -0.13484240401976663,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.33112153891444673,
+              "upper": 1.0,
+              "envelope_log_mass": -0.3317598339666691,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.085691853606332,
+              "upper": 1.0,
+              "envelope_log_mass": -0.9029522650370153,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.141553170777245,
+              "upper": 1.0,
+              "envelope_log_mass": -2.487260558033914,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.310202596144698,
+              "upper": 1.0,
+              "envelope_log_mass": -6.576238590288778,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.109821780895835,
+              "upper": 1.0,
+              "envelope_log_mass": -11.178315507215752,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 183.9996017357272,
+              "upper": 1.0,
+              "envelope_log_mass": -14.86481012860757,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.6389185168405,
+              "upper": 1.0,
+              "envelope_log_mass": -21.242454364275275,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        165
+      ],
+      "depth": 16,
+      "remaining_excess": "331691923335861546387/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.027786329785364335,
+            "upper": 0.9725961594310478,
+            "envelope_log_mass": -0.027786329785364335,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.027786329785364335,
+              "upper": 0.9725961594310478,
+              "envelope_log_mass": -0.027786329785364335,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.007046800528792169,
+              "upper": 0.9929779699516909,
+              "envelope_log_mass": -0.16958760655577693,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.05937508173623529,
+              "upper": 1.0,
+              "envelope_log_mass": -0.428247336344719,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.3241291139973208,
+              "upper": 1.0,
+              "envelope_log_mass": -1.301278946272527,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0850037350645572,
+              "upper": 1.0,
+              "envelope_log_mass": -3.791220445744986,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.17997899951121,
+              "upper": 1.0,
+              "envelope_log_mass": -12.074101603187266,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.564922738680188,
+              "upper": 1.0,
+              "envelope_log_mass": -35.197319069415244,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.60684359808168,
+              "upper": 1.0,
+              "envelope_log_mass": -106.93396242890309,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.7719960942444,
+              "upper": 1.0,
+              "envelope_log_mass": -302.8504219867099,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 643.3131152161862,
+              "upper": 1.0,
+              "envelope_log_mass": -982.0949450536615,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.027786329785364335,
+            "upper": 0.9725961594310478,
+            "envelope_log_mass": -0.027786329785364335,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.027786329785364335,
+              "upper": 0.9725961594310478,
+              "envelope_log_mass": -0.027786329785364335,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.007046800528791877,
+              "upper": 0.9929779699516911,
+              "envelope_log_mass": -0.07338518519596418,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.05937508173623551,
+              "upper": 1.0,
+              "envelope_log_mass": -0.1396400722652814,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.324129113997321,
+              "upper": 1.0,
+              "envelope_log_mass": -0.33925473267440215,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0850037350645576,
+              "upper": 1.0,
+              "envelope_log_mass": -0.9051478049506115,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.179978999511212,
+              "upper": 1.0,
+              "envelope_log_mass": -2.453859467206019,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.564922738680178,
+              "upper": 1.0,
+              "envelope_log_mass": -6.3365926614715145,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.60684359808169,
+              "upper": 1.0,
+              "envelope_log_mass": -10.73154106909062,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.7719960942444,
+              "upper": 1.0,
+              "envelope_log_mass": -14.24315790727253,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 643.3131152161862,
+              "upper": 1.0,
+              "envelope_log_mass": -20.070731455536855,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        105
+      ],
+      "depth": 16,
+      "remaining_excess": "331745163283475394257/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.03163236489887781,
+            "upper": 0.9688627045519874,
+            "envelope_log_mass": -0.03163236489887781,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.03163236489887781,
+              "upper": 0.9688627045519874,
+              "envelope_log_mass": -0.03163236489887781,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.011061992940150506,
+              "upper": 0.9889989659212031,
+              "envelope_log_mass": -0.17360279896713526,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.055328320301445855,
+              "upper": 1.0,
+              "envelope_log_mass": -0.43229409777950845,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.32016536666399253,
+              "upper": 1.0,
+              "envelope_log_mass": -1.3052426936058552,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0795284183363307,
+              "upper": 1.0,
+              "envelope_log_mass": -3.7966957624732123,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.171445023078569,
+              "upper": 1.0,
+              "envelope_log_mass": -12.082635579619907,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.544459137371838,
+              "upper": 1.0,
+              "envelope_log_mass": -35.217782670723594,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.582517516614914,
+              "upper": 1.0,
+              "envelope_log_mass": -106.95828851036985,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.76042444586977,
+              "upper": 1.0,
+              "envelope_log_mass": -302.8619936350845,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 643.3533119277291,
+              "upper": 1.0,
+              "envelope_log_mass": -982.0547483421186,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.03163236489887781,
+            "upper": 0.9688627045519874,
+            "envelope_log_mass": -0.03163236489887781,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.03163236489887781,
+              "upper": 0.9688627045519874,
+              "envelope_log_mass": -0.03163236489887781,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.011061992940150145,
+              "upper": 0.9889989659212034,
+              "envelope_log_mass": -0.07741102559684522,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.0553283203014463,
+              "upper": 1.0,
+              "envelope_log_mass": -0.14371877766863891,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.32016536666399265,
+              "upper": 1.0,
+              "envelope_log_mass": -0.3433249599029581,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0795284183363305,
+              "upper": 1.0,
+              "envelope_log_mass": -0.9109425613645217,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.171445023078565,
+              "upper": 1.0,
+              "envelope_log_mass": -2.463458242590942,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.544459137371827,
+              "upper": 1.0,
+              "envelope_log_mass": -6.360250659636694,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.58251751661493,
+              "upper": 1.0,
+              "envelope_log_mass": -10.766515140080148,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.76042444586972,
+              "upper": 1.0,
+              "envelope_log_mass": -14.286673524215502,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 643.3533119277289,
+              "upper": 1.0,
+              "envelope_log_mass": -20.137014639221743,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        45
+      ],
+      "depth": 16,
+      "remaining_excess": "332194646512855332047/5000000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.031145485767174907,
+            "upper": 0.9693345384380346,
+            "envelope_log_mass": -0.031145485767174907,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.031145485767174907,
+              "upper": 0.9693345384380346,
+              "envelope_log_mass": -0.031145485767174907,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.01357597212321815,
+              "upper": 0.9865157657733787,
+              "envelope_log_mass": -0.1761167781502029,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.04955881039322124,
+              "upper": 1.0,
+              "envelope_log_mass": -0.43806360768773306,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.3072418548042146,
+              "upper": 1.0,
+              "envelope_log_mass": -1.3181662054656331,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0453616482043593,
+              "upper": 1.0,
+              "envelope_log_mass": -3.8308625326051837,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.071773227890679,
+              "upper": 1.0,
+              "envelope_log_mass": -12.182307374807797,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.21410920758035,
+              "upper": 1.0,
+              "envelope_log_mass": -35.54813260051508,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.10340262441903,
+              "upper": 1.0,
+              "envelope_log_mass": -107.43740340256574,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.28802807850803,
+              "upper": 1.0,
+              "envelope_log_mass": -303.33439000244624,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 642.975450766394,
+              "upper": 1.0,
+              "envelope_log_mass": -982.4326095034537,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.031145485767174907,
+            "upper": 0.9693345384380346,
+            "envelope_log_mass": -0.031145485767174907,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.031145485767174907,
+              "upper": 0.9693345384380346,
+              "envelope_log_mass": -0.031145485767174907,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.013575972123218052,
+              "upper": 0.9865157657733788,
+              "envelope_log_mass": -0.08001490142578911,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.04955881039322141,
+              "upper": 1.0,
+              "envelope_log_mass": -0.14975797751449177,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.30724185480421506,
+              "upper": 1.0,
+              "envelope_log_mass": -0.35714743822149553,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 1.0453616482043584,
+              "upper": 1.0,
+              "envelope_log_mass": -0.9478062308727733,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 4.07177322789068,
+              "upper": 1.0,
+              "envelope_log_mass": -2.572119702366426,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 13.214109207580348,
+              "upper": 1.0,
+              "envelope_log_mass": -6.717569583190967,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 55.103402624419026,
+              "upper": 1.0,
+              "envelope_log_mass": -11.335526678152029,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 184.28802807850798,
+              "upper": 1.0,
+              "envelope_log_mass": -15.028759829205178,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 642.9754507663939,
+              "upper": 1.0,
+              "envelope_log_mass": -21.413842259316674,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "prefix": [
+        150,
+        271,
+        2,
+        183,
+        214,
+        35,
+        246,
+        127,
+        68,
+        9,
+        10,
+        11,
+        162,
+        73,
+        164,
+        15
+      ],
+      "depth": 16,
+      "remaining_excess": "166098671611129413901/2500000000000000000",
+      "remaining_options_before": 140,
+      "remaining_options_after": 140,
+      "curves": {
+        "unconditional": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.041121286486817274,
+            "upper": 0.9597127227041382,
+            "envelope_log_mass": -0.041121286486817274,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.041121286486817274,
+              "upper": 0.9597127227041382,
+              "envelope_log_mass": -0.041121286486817274,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.028516100471503214,
+              "upper": 0.9718866461869159,
+              "envelope_log_mass": -0.19105690649848797,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.02569676006773164,
+              "upper": 1.0,
+              "envelope_log_mass": -0.46192565801322266,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.26499009661974937,
+              "upper": 1.0,
+              "envelope_log_mass": -1.3604179636500984,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 0.9582301982628119,
+              "upper": 1.0,
+              "envelope_log_mass": -3.917993982546731,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 3.861363214765781,
+              "upper": 1.0,
+              "envelope_log_mass": -12.392717387932695,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 12.689875628300058,
+              "upper": 1.0,
+              "envelope_log_mass": -36.072366179795374,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 54.39375365853677,
+              "upper": 1.0,
+              "envelope_log_mass": -108.147052368448,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 183.44904834462227,
+              "upper": 1.0,
+              "envelope_log_mass": -304.173369736332,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.8278113578949,
+              "upper": 1.0,
+              "envelope_log_mass": -983.5802489119528,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        },
+        "individually_affordable": {
+          "best": {
+            "dual_multiplier": 0.0,
+            "log_upper": -0.041121286486817274,
+            "upper": 0.9597127227041382,
+            "envelope_log_mass": -0.041121286486817274,
+            "status": "floating diagnostic only",
+            "proof": false
+          },
+          "curve": [
+            {
+              "dual_multiplier": 0.0,
+              "log_upper": -0.041121286486817274,
+              "upper": 0.9597127227041382,
+              "envelope_log_mass": -0.041121286486817274,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.001,
+              "log_upper": -0.028516100471502964,
+              "upper": 0.9718866461869161,
+              "envelope_log_mass": -0.09495556911595474,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.003,
+              "log_upper": 0.025696760067731944,
+              "upper": 1.0,
+              "envelope_log_mass": -0.17362164586562334,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.01,
+              "log_upper": 0.26499009661975004,
+              "upper": 1.0,
+              "envelope_log_mass": -0.3994045898247677,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.03,
+              "log_upper": 0.9582301982628114,
+              "upper": 1.0,
+              "envelope_log_mass": -1.0349538610707414,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.1,
+              "log_upper": 3.8613632147657846,
+              "upper": 1.0,
+              "envelope_log_mass": -2.782583649679392,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 0.3,
+              "log_upper": 12.689875628300053,
+              "upper": 1.0,
+              "envelope_log_mass": -7.241964965035477,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 1.0,
+              "log_upper": 54.39375365853677,
+              "upper": 1.0,
+              "envelope_log_mass": -12.045714985914996,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 3.0,
+              "log_upper": 183.4490483446221,
+              "upper": 1.0,
+              "envelope_log_mass": -15.869357588733168,
+              "status": "floating diagnostic only",
+              "proof": false
+            },
+            {
+              "dual_multiplier": 10.0,
+              "log_upper": 641.8278113578951,
+              "upper": 1.0,
+              "envelope_log_mass": -22.566875086622588,
+              "status": "floating diagnostic only",
+              "proof": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

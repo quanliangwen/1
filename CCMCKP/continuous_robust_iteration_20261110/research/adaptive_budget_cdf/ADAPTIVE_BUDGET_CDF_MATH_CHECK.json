@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "checks": 288,
+  "input_models": 24,
+  "largest_underestimate": 7.771561172376096e-16,
+  "scope": "independent exhaustive fixed choices and joint outcomes; floating numerical upper relaxation checks only, no rigorous benchmark certificate",
+  "source_sha256": {
+    "check_adaptive_budget_cdf.py": "812055ae09fa15f0bae3173c11981a276e07e4f3f3b6aca2279e527ea2ef9bd3",
+    "adaptive_budget_cdf.py": "75079e4e591e85615257cac1e677c67979e85b1228750bb1015f7071f85d111c"
+  },
+  "models": [
+    {
+      "groups": 2,
+      "trial": 0,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 1,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 2,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 3,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 4,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 5,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 6,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 2,
+      "trial": 7,
+      "choices": 4,
+      "joint_outcomes": 16
+    },
+    {
+      "groups": 3,
+      "trial": 0,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 1,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 2,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 3,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 4,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 5,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 6,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 3,
+      "trial": 7,
+      "choices": 8,
+      "joint_outcomes": 64
+    },
+    {
+      "groups": 4,
+      "trial": 0,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 1,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 2,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 3,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 4,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 5,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 6,
+      "choices": 16,
+      "joint_outcomes": 256
+    },
+    {
+      "groups": 4,
+      "trial": 7,
+      "choices": 16,
+      "joint_outcomes": 256
+    }
+  ]
+}

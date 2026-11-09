@@ -1,0 +1,1016 @@
+{
+  "file": "I006_BRANCH_ORDER_EVIDENCE.zip",
+  "bytes": 7870672,
+  "sha256": "ac97d6c9f13efc24b4ffd0460fee9efe4879f111e48d97e86a1c544f15da80fb",
+  "source_sha256": {
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "prefix_bound.py": "00c69c1ffd5ba4547f7a93eab80b6d46ed108023a441f59c77c6004c157c5e8e",
+    "run_bound.py": "00a3937ba5457f0292fced7021b5ce1c113af0ea0be332e5ead8084d0512655b"
+  },
+  "math_checks": 627,
+  "independent_audit_passed": true,
+  "global_cost_line_excluded": false,
+  "files": [
+    {
+      "path": "audit_i006_proof.py",
+      "sha256": "14d4baf7ee838c283d24a2a1d3693a7031de7f9ca7bdf4211238ee0af7e2e3a1",
+      "bytes": 8090
+    },
+    {
+      "path": "CASES.json",
+      "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a",
+      "bytes": 3231
+    },
+    {
+      "path": "CDF_BRANCH_ORDER_DIAGNOSTIC.json",
+      "sha256": "fd272771b19630cbee4f69a1634c66ace31f63c06784f798b52bc877b20f067b",
+      "bytes": 132970
+    },
+    {
+      "path": "check_i006_math.py",
+      "sha256": "c1648af31a8da2cffb7580feab0e02bb02e0b477aae65a912b1e6ae0ff3c9e74",
+      "bytes": 3727
+    },
+    {
+      "path": "diagnose_cdf_branch_order.py",
+      "sha256": "ec8a92e731b59a0e6535541a622c497d507231c981fc6bf1a93d90a380520ce1",
+      "bytes": 2465
+    },
+    {
+      "path": "I006_EXACT_BOUND_MATH_CHECK.json",
+      "sha256": "97e377b6d24a29e26312ac0c79996d24cbdc59f2bdd1c85a092142701676bd65",
+      "bytes": 9868
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/candidate/exact_oracle.py",
+      "sha256": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+      "bytes": 3081
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/candidate/instance.py",
+      "sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+      "bytes": 3883
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/candidate/prefix_bound.py",
+      "sha256": "00c69c1ffd5ba4547f7a93eab80b6d46ed108023a441f59c77c6004c157c5e8e",
+      "bytes": 7806
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/candidate/run_bound.py",
+      "sha256": "00a3937ba5457f0292fced7021b5ce1c113af0ea0be332e5ead8084d0512655b",
+      "bytes": 2479
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/probe.log",
+      "sha256": "45907db2a506071c3648287d9a390df5c9d35e9c140f67c2793fcabfbc164f9e",
+      "bytes": 8624
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/probe_old_512_120.json",
+      "sha256": "8f2628b2669799705bf631978cd240a85fff4e3dacb8ed2bac1f1bb1c74249b8",
+      "bytes": 17841
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/probe_old_512_120.json.audit.json",
+      "sha256": "4fe427665c62b7f3b7c0792b719dcb36f977f94ab074475908aeb194362c39da",
+      "bytes": 963
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/probe_old_512_120.json.proof.jsonl.gz",
+      "sha256": "e98826732c6ecc38a5eee62482ea9ee6e4767871b87f0c1a1a98f0d84c91d9e6",
+      "bytes": 7574575
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/probe_old_512_120.json.run.json",
+      "sha256": "001e61fdb81406992ce9749b24f1d30d50458d7556cdf2cc9e98da4f9353023c",
+      "bytes": 57165
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/REGISTRATION.json",
+      "sha256": "48397453b92e89d545c6bf37586203991ab66d7de1e0fdd4bdc64eede51e8a71",
+      "bytes": 868
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/case35/TERMINAL.json",
+      "sha256": "c2f81b86e6d3aa736e2f519ceea84b0b6346d01c25d3d70dc2b067d2f5d962ab",
+      "bytes": 427
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/0_sample.txt",
+      "sha256": "0c63b67c5d5d2f6b1d4a7e8c967df38cfc704118da77fc8314eaffb96801416f",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/1_sample.txt",
+      "sha256": "79f806cd2b75984515fbb9e7176c3da8653ec8f4b76bb71d6df27036f9b63c1e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/2_sample.txt",
+      "sha256": "605a24fda3506c2d05bd5c58082c9dee9122a3352b2c92425302a78a2f177849",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/3_sample.txt",
+      "sha256": "3566304f03ee8cb1dc73939d0e85beee4b435b8a9c90daa21259d6489549e912",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/4_sample.txt",
+      "sha256": "ce84c472a371b0b617d02b9cde029955c30f04a7913d4a37767476472fce094f",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/5_sample.txt",
+      "sha256": "687366ff0313d77c3f20751948f3a946fcafce574bb7484e85e94a8fd43bf6d0",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/at.json",
+      "sha256": "76aac3d6be4b7ba23b5227b705586d4916b78532c8134d14b84c0b5af3c0e913",
+      "bytes": 2179
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/at.json.proof.jsonl.gz",
+      "sha256": "1f871953e2495637b22bc2582fec0f1654ac6afd86e70ef88ddb88e1b7133348",
+      "bytes": 350
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/below.json",
+      "sha256": "857864e30da2c5a9167c07f95a6f2e8e686bd5f3c547478bfc097bf4a880c8bc",
+      "bytes": 1388
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/below.json.proof.jsonl.gz",
+      "sha256": "f8f861143a7dcf298476026dc1d15cd4f8d99efe7fff13aa39a4dab508d8f485",
+      "bytes": 193
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/cost.txt",
+      "sha256": "4f1eb02a942d9dd4fc6b6407e98b119869a9ad308e33b01c3597d2b329d950c7",
+      "bytes": 11
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t0/node_to_factor.pkl",
+      "sha256": "11eaee715ceaf472a41c31b121c3b86f4dc1a0287c8fbaea66d5c41b923a9951",
+      "bytes": 36
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/0_sample.txt",
+      "sha256": "c63410ad43c3d8e7b8646a77a971c56e8d97ad6ff95ce0db7628cd8279f52a28",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/1_sample.txt",
+      "sha256": "8b47dc80f61214da78baa4d9b8da804a610ff6ed3231e76922691abf4d771a51",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/2_sample.txt",
+      "sha256": "466f1a074e5c58ebe5a9c818e75d09082b64f25a7ca93607a05556629a003519",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/3_sample.txt",
+      "sha256": "c9faf465d2608a915def177919c7c5b21f792540e875aaec93ef21de8bd533ce",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/4_sample.txt",
+      "sha256": "24ea14ced59657da979c1f72d7c72b6eb2f5a713ae0ed6075b3d8a32bbeaeca3",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/5_sample.txt",
+      "sha256": "3059b2af15559efbde7be263e6b65500d0e4a17d2e4a88d39f83db2e41c94152",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/at.json",
+      "sha256": "ad08755b3fdf7f6a07af0a9a3a5330ef88a9de5ee573bb3b3ec11512e6df4de5",
+      "bytes": 2334
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/at.json.proof.jsonl.gz",
+      "sha256": "6d71ba60669822f09d1a87ab45b29cae45db0ec2ad0c88c2bb5eeb11920a4100",
+      "bytes": 325
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/below.json",
+      "sha256": "2c982f1e2c8ec8c3bf2ba0bbcd7ba402f1060343a7359caed17a2bd78fa66c71",
+      "bytes": 1388
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/below.json.proof.jsonl.gz",
+      "sha256": "b9565b698266edcf0f3be615fd68a2a961a102aa58a278093d8dc9d3bf700b43",
+      "bytes": 113
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/cost.txt",
+      "sha256": "7958cf16de2bcb9fbe20061fe8f41a2aaa56dbda5bec2c1274649ba87c74b3c1",
+      "bytes": 11
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t1/node_to_factor.pkl",
+      "sha256": "11eaee715ceaf472a41c31b121c3b86f4dc1a0287c8fbaea66d5c41b923a9951",
+      "bytes": 36
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/0_sample.txt",
+      "sha256": "ff645c37273315f601b727608afb14767c8e0df28d5ba84b6d563bda53c2085e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/1_sample.txt",
+      "sha256": "ea1022bc7fe8593378a5fb5e7a80ba90aa5ee76fd11bd4144582e50b24bec838",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/2_sample.txt",
+      "sha256": "5fc0be2d2c7687a6a8a261db397a033769f2c49b86b925fc66879aec11bba1ba",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/3_sample.txt",
+      "sha256": "d14c880868f55bdaba8ac6999094e4d9e49473de126cbbe09130d34680c11b5b",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/4_sample.txt",
+      "sha256": "3f27e3c22728226d9192a8ffed420e5c2fdf399a5fdc5cc89b0de2dad8cb85e7",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/5_sample.txt",
+      "sha256": "21a92c63ba68043dff466b5ece374bfecec4075c20e23b8eb0c18e16f6338dca",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/at.json",
+      "sha256": "dddb443f65a4f5e2f0a4c058e38bfb39ad09b618a3e6b4007a06dd75f3906c53",
+      "bytes": 2192
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/at.json.proof.jsonl.gz",
+      "sha256": "9e14737da0e006a74c4c600e6bf0af91cef5d227604cad49368ab79ffcd3f39d",
+      "bytes": 461
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/below.json",
+      "sha256": "bf0efe605573d0be447b934c0057d2003b0d084d06f0bd9b2b3d3930c274078c",
+      "bytes": 1388
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/below.json.proof.jsonl.gz",
+      "sha256": "f2ef62d76e71c87aba1747b3b1b1d9bdf0d5a5b8a75afebce2a79903879a95a2",
+      "bytes": 412
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/cost.txt",
+      "sha256": "db52337ab035c241d1a5be52fbb2da47658cca4462746a6638596796546880a2",
+      "bytes": 11
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t2/node_to_factor.pkl",
+      "sha256": "11eaee715ceaf472a41c31b121c3b86f4dc1a0287c8fbaea66d5c41b923a9951",
+      "bytes": 36
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/0_sample.txt",
+      "sha256": "7db120291036b0582a8b42ee021fe8d20b0d4be33a2160a48cefa724e9429c6c",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/1_sample.txt",
+      "sha256": "4ba8900b39b2bf46173ef88e8dd9d04370829059913584858488fe13bf681cb1",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/2_sample.txt",
+      "sha256": "c832741dace58713da1f779bd8c4eea93bb1d8d6accb4a8aef5b8dee52172fb8",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/3_sample.txt",
+      "sha256": "eba9986b59eb0b3abb8b1372f582917d98cc4991125380dc0ab56bb6b682e961",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/4_sample.txt",
+      "sha256": "3fecdffc5e777a18d54a08760bcb83b70d558f76a3ecf5ffca4d2ba854897e12",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/5_sample.txt",
+      "sha256": "3e3bf0ba00cda6e28ed2b76ea42a71653e63737ed65c2dc1bf90f8bdae66491f",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/at.json",
+      "sha256": "428925f052bf2906549b2a88d83d37333f86a8a7040769e7fad3ee92aa3fbad9",
+      "bytes": 2337
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/at.json.proof.jsonl.gz",
+      "sha256": "f71f39767093f675a08332a3be2cc9da4378813e297dab22eb4141e8160f6599",
+      "bytes": 326
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/below.json",
+      "sha256": "c49363320f02283843ccf5650d53ce72ca78acec5d368e344808ab74add00734",
+      "bytes": 1386
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/below.json.proof.jsonl.gz",
+      "sha256": "0764d7d09d5ccd0cf8659b087d31deb28e916fd7c7d054baaef2285ee06597d9",
+      "bytes": 113
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/cost.txt",
+      "sha256": "3720a0916f0db7053f781b9d22f9700892c4ad7bdfd44359a3bb32e0795e3d04",
+      "bytes": 11
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m2_t3/node_to_factor.pkl",
+      "sha256": "11eaee715ceaf472a41c31b121c3b86f4dc1a0287c8fbaea66d5c41b923a9951",
+      "bytes": 36
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/0_sample.txt",
+      "sha256": "6b2a42ae8ab649399704425a7d431f87795844020782a69d90959852e500b830",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/1_sample.txt",
+      "sha256": "f742ed751979397c77a42b1dbc9bafbd8e0afa0a17cbd33b86567a3282abaa39",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/2_sample.txt",
+      "sha256": "a181f1b54f334315c1ba3156a46828a4751778f3a026d33f248c2a130eb391c6",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/3_sample.txt",
+      "sha256": "1c61e4f73a7c56c58dfae110d3a3f05a57b130c5bc0b2b5ad61e8bd49aba6e90",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/4_sample.txt",
+      "sha256": "ea259d5b58dc3542249d56c53d78fc160fca7f201ed883c771fa88192e33dd5e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/5_sample.txt",
+      "sha256": "bd5ace76d3f42c627f2fffd39e4aabfbbe614a0a534ba0ca0278f63bd731701a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/6_sample.txt",
+      "sha256": "2f5f922591fcb4261cf8dadc3cea6b448ee14bc8a64b251fe48d78b7561eb29e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/7_sample.txt",
+      "sha256": "4ed365c42c7ca53d3286189e6a4e5b72536b0c7f9e042726abef58ed29247871",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/8_sample.txt",
+      "sha256": "21a92c63ba68043dff466b5ece374bfecec4075c20e23b8eb0c18e16f6338dca",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/at.json",
+      "sha256": "bc34d17e2d55f7d12e217f831a380098ca229ae38dfb1028550e51e0396c9a2f",
+      "bytes": 2498
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/at.json.proof.jsonl.gz",
+      "sha256": "49aa5c9253241cd03587f7610a360fb88e1285a97c71e156ac0c67375be88adb",
+      "bytes": 462
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/below.json",
+      "sha256": "7b68cbcdfbeb17c033aea690072f40d7a7b19b910ed8443631aadb0319a35ced",
+      "bytes": 1566
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/below.json.proof.jsonl.gz",
+      "sha256": "3d778f3bb555d1bb502a48680469ecd04fb3a205dae005163bb5c51a0fd88f9d",
+      "bytes": 258
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/cost.txt",
+      "sha256": "e0db7fad991e6841df0b8f822cb4f701fc3ade8a17d2513bfb4b3ec2fed7b55b",
+      "bytes": 17
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t0/node_to_factor.pkl",
+      "sha256": "02bb31ba653fdac886538ce192b57fb2ac15db2a9f803d33b3cce845cbd8def4",
+      "bytes": 46
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/0_sample.txt",
+      "sha256": "27e6e764b50c54134a416e1b33e993f7d41b096ff9de875e9c7011a0d5728eec",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/1_sample.txt",
+      "sha256": "e77bc4fc4c92eb91091f807e41a627faa1a8745eae454f897932028b47759102",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/2_sample.txt",
+      "sha256": "bd5ace76d3f42c627f2fffd39e4aabfbbe614a0a534ba0ca0278f63bd731701a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/3_sample.txt",
+      "sha256": "c7acac9692b76d25d98d390ebda8b4cb0c372b8c1deb570043aa9cece277cfa4",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/4_sample.txt",
+      "sha256": "6129dfe6170130feaf962009bea7ff85d9988e0d763695b498b835477e330b05",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/5_sample.txt",
+      "sha256": "d8860cac78b68b4a724a45bbbde217ef61957d8b8ab7ed0e0eb37c5ec8557026",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/6_sample.txt",
+      "sha256": "ec0bbeba25c0d8cfb9c4a7fa0f6fa79e764b50de38447feb205f89731a21ff56",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/7_sample.txt",
+      "sha256": "045c1b410f09ff7a7e9b5cc779a7fe2127c13334758d56b28f7f9d0929099659",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/8_sample.txt",
+      "sha256": "6d7beedc2afa761c66316fedab2ea25a503004e0780339111d5bb0b09431f999",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/at.json",
+      "sha256": "08dda9b3c5cd7b8d329d97cc415df9291ae2a71cbd771c0b38122bb017cfc1da",
+      "bytes": 2590
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/at.json.proof.jsonl.gz",
+      "sha256": "50800b9cdef27344f9deaad61ddf385bff81cb65874c4ea7911fda64ded586dc",
+      "bytes": 423
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/below.json",
+      "sha256": "1db1d33f4762ce7d4e93db5ac16d0d6fed90742bca6fa07f985cb5ac51c968b9",
+      "bytes": 1565
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/below.json.proof.jsonl.gz",
+      "sha256": "60f9ebf833adea73f285d1820fadcc146e9c2a18bdef30c05ea625280e69bf0b",
+      "bytes": 219
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/cost.txt",
+      "sha256": "8fc89bf168eab9ad4dafbdd8f73abd978c59a7fb9cb0030e89da689d833e0ca5",
+      "bytes": 17
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t1/node_to_factor.pkl",
+      "sha256": "02bb31ba653fdac886538ce192b57fb2ac15db2a9f803d33b3cce845cbd8def4",
+      "bytes": 46
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/0_sample.txt",
+      "sha256": "8238bbca711c7b0fc8cf2116858a2b27ba066b24ef7cc458897229ffed6c01f9",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/1_sample.txt",
+      "sha256": "64529fd174bcbced2cae262ac04d7be91a8f0f5a4fdc6450b40501f6aadfd6cb",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/2_sample.txt",
+      "sha256": "c832741dace58713da1f779bd8c4eea93bb1d8d6accb4a8aef5b8dee52172fb8",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/3_sample.txt",
+      "sha256": "8902d7d4d912453875e44bd550740cd7209a8363ea9d6e1a69573a8a5c90c2cb",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/4_sample.txt",
+      "sha256": "139b25d800182bfa0b4388f5168c813b68f7dda7afffb057a390d29490371e91",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/5_sample.txt",
+      "sha256": "4a985c5fe50f4b6fcee00d8799321a96f31885c3cd94261bc4448019e112707a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/6_sample.txt",
+      "sha256": "7cd2d6be62b4f4b24b2f320219408d456e1f5f3bb7fdeda7cd43385fe4727b53",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/7_sample.txt",
+      "sha256": "6563fbbb4d7ae2bc9a5c88c9b08f1bc660077de47526a00011baefb7ee70c18d",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/8_sample.txt",
+      "sha256": "53b7057dca7f8c84bf4e32d0e3ed6f23d50e6488dfeffedcf09b44190c9583fd",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/at.json",
+      "sha256": "ca227477a3513e57c0fffe82a790148ee27a445b1c4fd3fddbf98483db85648d",
+      "bytes": 2429
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/at.json.proof.jsonl.gz",
+      "sha256": "7f7dc9e02619ca6e530e71fc149c2f2c72e6e8d358eab8e804c911ac5ddc0f45",
+      "bytes": 516
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/below.json",
+      "sha256": "2b697c0f8a16c87adf50fae6ec2d30b41ccd7d54841b57d4901bd05ae5be7a05",
+      "bytes": 1565
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/below.json.proof.jsonl.gz",
+      "sha256": "c5d4c08347e59d8c89ad44850dff5fd27ba5dd3925d01715486913fd0e11ffaf",
+      "bytes": 425
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/cost.txt",
+      "sha256": "c1372715adeeb286a6309ba3ded7232ac506225a30772465512e9cba1ef89839",
+      "bytes": 17
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t2/node_to_factor.pkl",
+      "sha256": "02bb31ba653fdac886538ce192b57fb2ac15db2a9f803d33b3cce845cbd8def4",
+      "bytes": 46
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/0_sample.txt",
+      "sha256": "e98e59611c440552240a8f9cabaf9efffbf762723709b61f1859cb83f8768987",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/1_sample.txt",
+      "sha256": "a05cff38795daa33cf8a2d15fa69c13032e1a73fba8e489e5a9af8ee3e62aa1b",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/2_sample.txt",
+      "sha256": "3e3bf0ba00cda6e28ed2b76ea42a71653e63737ed65c2dc1bf90f8bdae66491f",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/3_sample.txt",
+      "sha256": "66fd127874a5241b83a23a06d23464fbacb06b0b748f887285a1e1ccc84b1014",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/4_sample.txt",
+      "sha256": "fdbe7695bf1479de80216252eb392b14f552d70174da35cc1978731475305e84",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/5_sample.txt",
+      "sha256": "6d7beedc2afa761c66316fedab2ea25a503004e0780339111d5bb0b09431f999",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/6_sample.txt",
+      "sha256": "a063cf379a5e11a935d80272e9130e2b424d0d1067657faa6c1359ace12d9fc3",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/7_sample.txt",
+      "sha256": "14e999084e5ccb7a32596f3fc5c84cdf1487fbd35b392a53f21e0411b4173d93",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/8_sample.txt",
+      "sha256": "10c8c72acc18ca162b92ed130530b5ee29cdfe9c2f04d0833b4d24733cca1fa4",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/at.json",
+      "sha256": "ef8b7f33d10798a295c5a79e751603bf528818984a3bf051736d2590c7672744",
+      "bytes": 2552
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/at.json.proof.jsonl.gz",
+      "sha256": "eeaf16bc1bd3a35dc019726d59c80b5725b7bed2c8244b3bd160b060a231fff7",
+      "bytes": 360
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/below.json",
+      "sha256": "981b24b28c54cc8de96fbe7c2c488bd8b4de68d60c08299345083c942f3fb19a",
+      "bytes": 1566
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/below.json.proof.jsonl.gz",
+      "sha256": "aeb70c0343b5680445daf4cbdd6741fff44a99ba1a85d37799146e1dd8040bd8",
+      "bytes": 402
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/cost.txt",
+      "sha256": "a8259a29cfe372d63328e00c72a7f595963bd8b8f48d4228cb41c39aa763d360",
+      "bytes": 17
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m3_t3/node_to_factor.pkl",
+      "sha256": "02bb31ba653fdac886538ce192b57fb2ac15db2a9f803d33b3cce845cbd8def4",
+      "bytes": 46
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/0_sample.txt",
+      "sha256": "cc181e4c07872a6dee0beddf2d45dc158b25b4ec7f1f1201bde052aeacebce41",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/10_sample.txt",
+      "sha256": "b2ddea56368f59f896216f8d95f1c22afc8dd228f486342a2cbcd8a3b546a524",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/11_sample.txt",
+      "sha256": "c832741dace58713da1f779bd8c4eea93bb1d8d6accb4a8aef5b8dee52172fb8",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/1_sample.txt",
+      "sha256": "de8f5943e63ff7d2eab2dff3ae5d883a270c120f246daef4ed299776edbcccc3",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/2_sample.txt",
+      "sha256": "c832741dace58713da1f779bd8c4eea93bb1d8d6accb4a8aef5b8dee52172fb8",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/3_sample.txt",
+      "sha256": "8ad6854d57bf958947ac86376d439d02d52a2d93ac0e022968b3b0d98a883dc7",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/4_sample.txt",
+      "sha256": "016b2c002333fd3bb4fc496df806cd611854e4f853aa5831e6badce9b179cdd0",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/5_sample.txt",
+      "sha256": "3e3bf0ba00cda6e28ed2b76ea42a71653e63737ed65c2dc1bf90f8bdae66491f",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/6_sample.txt",
+      "sha256": "eb36e92e0392dbca1f4286505058eb131963f0f9d5bd9e131fa0069b87868b09",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/7_sample.txt",
+      "sha256": "e6bf2e1f28d5a1e3e4ee081535de00c485b6c9558507393ad1cd1c3729fc9618",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/8_sample.txt",
+      "sha256": "d8860cac78b68b4a724a45bbbde217ef61957d8b8ab7ed0e0eb37c5ec8557026",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/9_sample.txt",
+      "sha256": "655c748ede61ddb8e6290719fc550cc52fdeec2bcccdfc3d64227e217fb5d964",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/at.json",
+      "sha256": "c8a64c742f632b73916154d89e34139751e60f6e53ec5fbc73be162f20490539",
+      "bytes": 2554
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/at.json.proof.jsonl.gz",
+      "sha256": "794da0d0eb14fe62aff8d241be7d3547d04068e7e8714b62014477e9dd0b4133",
+      "bytes": 596
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/below.json",
+      "sha256": "792fee5b581933de2bf4016bb1b6257132e05854a91b3828be5b57f13500d02d",
+      "bytes": 1736
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/below.json.proof.jsonl.gz",
+      "sha256": "dba085f2ef540bdb14aec2111691f7a791a09ac0628e807566a83bc0af4e7afd",
+      "bytes": 528
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/cost.txt",
+      "sha256": "0e66836b87363a20ad5b65f81f3931a3f583bd3adda1848232814730e974e4ef",
+      "bytes": 23
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t0/node_to_factor.pkl",
+      "sha256": "f127e8056acb0f33723cfccc36a5ac36b771bef900f04f5c965d6d76b83a299c",
+      "bytes": 56
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/0_sample.txt",
+      "sha256": "49a87301397bb8d0d2904de277f4d3a5c277fce2cfd3a59dae54e5a5f4dfafec",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/10_sample.txt",
+      "sha256": "3425c8b1e366a57fe4dee4942163009ca76c79960df5798d0955152131a32e50",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/11_sample.txt",
+      "sha256": "2cfb7535bdc1acc0d8ee0bf727ceec8cf9d4116cbc0a54e58d2ae57781e85cb6",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/1_sample.txt",
+      "sha256": "d6e37127f5ff52aac255b6eb48812bb44ad3ade0623fffca23752ce38eb7663e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/2_sample.txt",
+      "sha256": "65f65f77a4927cfaa323d9159da0f12d67f54ec4d0ebdf408a4649cc042ea8fe",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/3_sample.txt",
+      "sha256": "bddb0dd6af117e1270da1cad2726f9ece6b8338333e30a1b7ad1617b3c6a4269",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/4_sample.txt",
+      "sha256": "26e97bf8e3ce01b71974bf0975d3b398bb5acb604aa6390a10afc6d1dc9059b0",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/5_sample.txt",
+      "sha256": "8ac1d9fb90fb8f491bcb8c964dbaaf7ba108c124ea56d718709de130b7d57b3d",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/6_sample.txt",
+      "sha256": "e08eba3f777c4b220d675f10c1f4e2c8443bf51056c7879a8944d84d312d8b25",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/7_sample.txt",
+      "sha256": "391cdf4256c7b0d2d3a1e5b06b7f81ff8049a743affd12340199fbf2f7eafdc3",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/8_sample.txt",
+      "sha256": "21a92c63ba68043dff466b5ece374bfecec4075c20e23b8eb0c18e16f6338dca",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/9_sample.txt",
+      "sha256": "9c8aefc5d69e3390c781b8cdc301b5ce67ec3a25a079a04ec9a8ccabaa4b72e1",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/at.json",
+      "sha256": "a8ba756be6359e351583875a007b94475fa8e84734dc982df16a039ced04e0ef",
+      "bytes": 2843
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/at.json.proof.jsonl.gz",
+      "sha256": "b3d7818752ca19dc2dc842be762d2be79a81389d261a2eb7c39c1f287dddc1f2",
+      "bytes": 469
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/below.json",
+      "sha256": "3cd81ba6b605b04366c5e0faf22efd340386260847ee3a1204dc560d587c5155",
+      "bytes": 1738
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/below.json.proof.jsonl.gz",
+      "sha256": "d4c312fd11f5ff569ef9ccefe9cfe2ab34a69f0723396b931a5157df3235c70a",
+      "bytes": 577
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/cost.txt",
+      "sha256": "0bf98b4450c3be5adcb58f5b5a93fc5df5106b4c17aaf026b7dfbcc909d0b226",
+      "bytes": 23
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t1/node_to_factor.pkl",
+      "sha256": "f127e8056acb0f33723cfccc36a5ac36b771bef900f04f5c965d6d76b83a299c",
+      "bytes": 56
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/0_sample.txt",
+      "sha256": "fe7adc53b872dfb344e4f8bd63abf7d5dfe6b6b4ea9ff95da7987196085c32aa",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/10_sample.txt",
+      "sha256": "560b85e8608823c1476b016530d1fa08c15f1e9c24ae28e048855f5679aae137",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/11_sample.txt",
+      "sha256": "e1e64d4a1d57a93614eb3ce65788c89c1ed4bf77e5ec77ad51a4f2da411d8a70",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/1_sample.txt",
+      "sha256": "466e8602bc77a7c0ed61ba37f048845032c4d15bedbcdb5f6371b7fd62d16ba4",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/2_sample.txt",
+      "sha256": "6d7beedc2afa761c66316fedab2ea25a503004e0780339111d5bb0b09431f999",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/3_sample.txt",
+      "sha256": "d8cffa2763a5a9dce2fe230edbd729a99f665bb72a9131750bc2bb8de234e5c7",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/4_sample.txt",
+      "sha256": "e139ebcea35a79f5cb8ab1e194bc3bcf58b56ed9507cd834504effed077f8047",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/5_sample.txt",
+      "sha256": "a9a1deb41749cbd2adbf62a0c95c210201af09b4d1bfaa4c886ca572692f3e87",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/6_sample.txt",
+      "sha256": "cc124af2537592ffa3a63c931a4abae3ac8e354d5a36ca825f98721e4028e1ed",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/7_sample.txt",
+      "sha256": "927cabef6252a4512f6f88d0b06a52ca9ff64e97da4eb4d329234e7c788aa6d0",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/8_sample.txt",
+      "sha256": "4a985c5fe50f4b6fcee00d8799321a96f31885c3cd94261bc4448019e112707a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/9_sample.txt",
+      "sha256": "842d29d44fc3ad385de8f08df9c9a76ba10b3a671a86fb346222a098a47cb69a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/at.json",
+      "sha256": "16425f7be0c64669d67b2283d70c000d32962542b7ac14f12beea29ddfb0f37b",
+      "bytes": 2512
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/at.json.proof.jsonl.gz",
+      "sha256": "a21c8a4155f1c6540e4e7adafd8554776e41330e31462029fc019ebeea7730f0",
+      "bytes": 412
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/below.json",
+      "sha256": "2e76ac1202c503c79960d743b3167ec85553da060934040aae501a1dcdffd2f2",
+      "bytes": 1736
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/below.json.proof.jsonl.gz",
+      "sha256": "a4148a73fdfea5c5cdafaa082a17ec5a6bfd7cd5cc7b51a8ea1eadc46e8b46f8",
+      "bytes": 288
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/cost.txt",
+      "sha256": "affcdb6218ad6c650e0f5a578404665849f52a1d92273fdb0055e7b9a45ceeb6",
+      "bytes": 23
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t2/node_to_factor.pkl",
+      "sha256": "f127e8056acb0f33723cfccc36a5ac36b771bef900f04f5c965d6d76b83a299c",
+      "bytes": 56
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/0_sample.txt",
+      "sha256": "babc8047b3134af0e0405793aeb9d7a5693199cfc641abea7733bd46b14eb8b9",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/10_sample.txt",
+      "sha256": "e66a46b68603b4fc108808ab56aa31105f851ebffff2cabe5581b068a4e19286",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/11_sample.txt",
+      "sha256": "bf630e0cd56dcf6bfa2997822be756d1740f39b3556eef289c9807be20043a80",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/1_sample.txt",
+      "sha256": "1330bb7ee1c880fca47bb80731656b0e9604a4b73e6537af15cd549966228b3a",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/2_sample.txt",
+      "sha256": "2cfb7535bdc1acc0d8ee0bf727ceec8cf9d4116cbc0a54e58d2ae57781e85cb6",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/3_sample.txt",
+      "sha256": "5d54b04bd8b0b2919185756d13003709af5a0f2025b0af7117f11339b19bc7db",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/4_sample.txt",
+      "sha256": "cd4e4fb6ff2aae129e5c8a3b53dd944dbd8de5d0cf6a2cea366e6c3275d12e7e",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/5_sample.txt",
+      "sha256": "d7d2f57130daeecdfce3ad00af89f7b8cae7c0841456b3140b0104ade01a4980",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/6_sample.txt",
+      "sha256": "3bb1aa6d31fc393bc7d05d929d88c4a3ba00399bf641d1e76754bac4820262a3",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/7_sample.txt",
+      "sha256": "a51cf71df72ca3679c81259216e5db2384338319d5cd699629247c3a72b6133c",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/8_sample.txt",
+      "sha256": "a181f1b54f334315c1ba3156a46828a4751778f3a026d33f248c2a130eb391c6",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/9_sample.txt",
+      "sha256": "085b9003bedad4c12ed252d9a6cd72109ba5a9cbcfa201560a5bb08a545dbf82",
+      "bytes": 9
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/at.json",
+      "sha256": "799f73705f18af294a6a86853651a45193325fe3f769fa9ca2da6b98d12ac416",
+      "bytes": 2907
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/at.json.proof.jsonl.gz",
+      "sha256": "eb334a90525d61d3ba97bf6da532d5facb7922a1895ea867e0d8793a69eb4c88",
+      "bytes": 558
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/below.json",
+      "sha256": "27078c8c0394c615664003dadf8510b1f56b3857397e18cd620035f606db6098",
+      "bytes": 1738
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/below.json.proof.jsonl.gz",
+      "sha256": "a300129784e12a6031d4750605c0a7a3a5c18068acc631144942f1adbb11cb80",
+      "bytes": 301
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/cost.txt",
+      "sha256": "fa99fb6264247ccae8f802dc3951189a7ee42f5a6f1f54937258d9f805211786",
+      "bytes": 23
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/math01/m4_t3/node_to_factor.pkl",
+      "sha256": "f127e8056acb0f33723cfccc36a5ac36b771bef900f04f5c965d6d76b83a299c",
+      "bytes": 56
+    },
+    {
+      "path": "iterations/I006_cdf_branch_order/README.md",
+      "sha256": "d6ad128f54f579a85eb3e65531b929c8bd1edc9a4e8c2c59a63a57fd063933d4",
+      "bytes": 2703
+    },
+    {
+      "path": "RAW_REFERENCE.json",
+      "sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7",
+      "bytes": 583339
+    },
+    {
+      "path": "run_i006_probe.py",
+      "sha256": "5164d03a9a7560411ab4407d06d16e8d8bf8bb1793a355bea461db481558cd47",
+      "bytes": 2039
+    }
+  ]
+}
