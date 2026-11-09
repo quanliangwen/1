@@ -1,0 +1,9 @@
+{
+  "scope": "registration setup failure before any new native process, not optimizer or formal benchmark failure",
+  "error": "FileNotFoundError: research/D001_isolated_precision_LSS/INDEPENDENT_RECEIPT_AUDIT.json",
+  "cause": "previous independent audit had completed locally and was published, but its copy had not been synchronized to the server",
+  "completed_old_receipt_checks": 454,
+  "new_MC_attempts": 0,
+  "recovery": "transfer exactly the existing audit JSON; retain and byte/structure-verify the already written catalogue/check instead of overwriting; complete one registration",
+  "registered_controller_and_helper_unchanged": true
+}
