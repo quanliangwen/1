@@ -139,8 +139,8 @@
     },
     {
       "path": "formal/F001_I002_40x30/AUDIT_PROGRESS.json",
-      "bytes": 353251,
-      "sha256": "9027663807765c1daa4638c29b2e4893a786291dfd5be96309c721bce8ae2012"
+      "bytes": 363960,
+      "sha256": "c52f08cb99564b5037fcb3397ab285e738e0cf7026843ba135da937b8b3a3498"
     },
     {
       "path": "formal/F001_I002_40x30/BUDGET_DIAGNOSTIC.json",
@@ -180,7 +180,7 @@
     {
       "path": "formal/F001_I002_40x30/SEARCH_PROGRESS.json",
       "bytes": 99,
-      "sha256": "3216ed45c9a1bfd689bb3271206905000d823d6cf081193ad7ed0c8345a004f6"
+      "sha256": "4f914b207946f415aa096ee96dece51882242e981e204d10cf93b494646868a3"
     },
     {
       "path": "formal/F001_I002_40x30/STAGE.json",
@@ -199,8 +199,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 48834,
-      "sha256": "4be4477bbbfa00bd0d476a74b33f92a6d8f5ccf1dd9506ae1c4c6a1eb11d3c1c"
+      "bytes": 51656,
+      "sha256": "5b7eaa52ba6791aca7e1d032adce6044dc7039d90c34033cbad338cd15ad205c"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -1509,8 +1509,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2341,
-      "sha256": "f1d66bfdf839acbcde8037f94d1d156d41db462a6eb7d7390312d785a8cdd552"
+      "bytes": 2045,
+      "sha256": "af083a7361c78a86856f419db13056a5257a0fcb4e69e2df711784d165b05cbf"
     },
     {
       "path": "reference_loader.py",
@@ -1668,9 +1668,19 @@
       "sha256": "269c2206d5ee91e9273b6d3aa76698b54d47311192c381d3d1a37523b27c39ef"
     },
     {
+      "path": "research/D002_isolated_full_prefix/CATALOGUE.json",
+      "bytes": 115080,
+      "sha256": "d3867c326af438555491aae349a866b81efa26df3e7223981a50e82ca183536c"
+    },
+    {
       "path": "research/D002_isolated_full_prefix/CATALOGUE_CHECK.json",
       "bytes": 125015,
       "sha256": "ae3a03e8ac6c277b14a2318e8b5753abec98d32fc24ad4464b6ec53e6a2c0706"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/D002_COMPLETE_PREFIX_EVIDENCE.zip",
+      "bytes": 2785684,
+      "sha256": "4709a4d0f5a31c06305dc481c9d05bfcd04e7d1cc14b7c69cfda574b7a7d2a9f"
     },
     {
       "path": "research/D002_isolated_full_prefix/D002_FROZEN_PREFIX_STUDY_SOURCE.zip",
@@ -1678,9 +1688,49 @@
       "sha256": "a4ef85a5e2c46579f25522408f3fd3d73d9fc52f313b3acd50f02d22ab416a49"
     },
     {
+      "path": "research/D002_isolated_full_prefix/EVIDENCE_MANIFEST.json",
+      "bytes": 45897,
+      "sha256": "55dc1bf6618c4efc4e564798d7dba1c05069a52447fcf171e45b9fba5ecfe507"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/FORMAL_ISOLATION_AFTER.json",
+      "bytes": 70622,
+      "sha256": "793bed2f4945e3db7c5d451356c2de04aa04660064a1e0987a89fc0f3b1eedc1"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/FORMAL_ISOLATION_BEFORE.json",
+      "bytes": 70531,
+      "sha256": "26f8ea8f610bc7200c22d1a141e1344b5011d917b9cfd943eeb7240561083967"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/I014_PREFIX_CHECKPOINT.json",
+      "bytes": 18528,
+      "sha256": "493105ee893bc517224e18470ccff9e9d2b3ac68df96314bb417d49ccd8cf553"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/INDEPENDENT_FINAL_AUDIT.json",
+      "bytes": 50619,
+      "sha256": "33f6b11639ce261ee592c7240dcc4cbe4c1a8318d1f800559c6c63b4b570ebbb"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/LAUNCH.json",
+      "bytes": 390,
+      "sha256": "224bd1ea2fbd622caf899477d76027a6c4f10d23dfb48c40625d53f75a91491b"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/PRE_REG_REMOTE_VERIFIED.json",
+      "bytes": 432,
+      "sha256": "f3c57132fe10f5fe6211204c40332e914f97051f08dd40a62f20775474e4e102"
+    },
+    {
       "path": "research/D002_isolated_full_prefix/PREFIX_ENGINE_CHECK.json",
       "bytes": 1124,
       "sha256": "f7d4cdf2364cb7da2c884734a846eb33f0b11fd8184f61c4a0c6cef8ea287888"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/PROGRESS.json",
+      "bytes": 16624,
+      "sha256": "ef0685b89f410405cab729ed82a37970c75e553206f9d945c5c22f19075e30eb"
     },
     {
       "path": "research/D002_isolated_full_prefix/README.md",
@@ -1698,9 +1748,24 @@
       "sha256": "e2477c77f672f0726df1af28d68d38410aa5c346a8d3c1de2ee19fa399233fe3"
     },
     {
+      "path": "research/D002_isolated_full_prefix/RESULT.json",
+      "bytes": 86712,
+      "sha256": "e3a4dd8514f782d70f2077fbdb0fb51f851a20004ffa838944cd7c17885e9b8b"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/RESULTS_NOTES.md",
+      "bytes": 2487,
+      "sha256": "e867d8edf9acc7279bc5568e19e12be0bb04423040931526137cd4f2fc077caf"
+    },
+    {
       "path": "research/D002_isolated_full_prefix/SOURCE_MANIFEST.json",
       "bytes": 9528,
       "sha256": "93be8da16bae7f45cb3bb30a07cd54a92cc63e8e3ef05795a45e46c700d43243"
+    },
+    {
+      "path": "research/D002_isolated_full_prefix/STATE.json",
+      "bytes": 88,
+      "sha256": "ac48834dc7610ce6a3bd12f0eb998e7374e9bfc84e115bac53958d26f9cc1ceb"
     },
     {
       "path": "research/final_audit_preflight/audit_first3_small_global.py",
@@ -2196,6 +2261,26 @@
       "path": "stability/I002_case40/REGISTRATION.json",
       "bytes": 2638,
       "sha256": "1d15bacf843a5d7db33abcb299a94bab19c7b9fc54614bcd22e24a5f67b00d55"
+    },
+    {
+      "path": "stability/I015_gain_case39/FROZEN_PAIRED_STABILITY_SOURCE.zip",
+      "bytes": 286547,
+      "sha256": "c3654a276125dc6d1da8fce36babffc39090474011546fff3eaeb975ed5ce195"
+    },
+    {
+      "path": "stability/I015_gain_case39/README.md",
+      "bytes": 1890,
+      "sha256": "4dae54ba4c6f25aa94bc38cee6858425d763867382af250af801f016dcd89859"
+    },
+    {
+      "path": "stability/I015_gain_case39/REGISTRATION.json",
+      "bytes": 50483,
+      "sha256": "c0143a2bb6fd430cb21ce205d7043d9acfd1face580c1e15b964361ff1c26981"
+    },
+    {
+      "path": "stability/I015_gain_case39/SOURCE_MANIFEST.json",
+      "bytes": 9233,
+      "sha256": "9927002063b8a85317931d8f666643634de8a96484ef25b567506f9700cce47a"
     },
     {
       "path": "summarize_i001_progress.py",
