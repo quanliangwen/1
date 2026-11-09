@@ -1,0 +1,1639 @@
+{
+  "scope": "Independent diagnostic; candidate enumeration uses original sample empirical>=0.99, original full-module real_P_test>=0.985. Lower candidates are diagnostic references, not new30-run or40x30 results.",
+  "original_LSS_sources_unmodified": true,
+  "import_aliases_only": true,
+  "rows": [
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "old": {
+        "instance": "APP_3_5_30_",
+        "capacity": 21.0,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 26798,
+        "empirical_denominator": 27000,
+        "empirical_probability": 0.9925185185185185,
+        "empirical_strict_count": 26798,
+        "minimum_distance_to_capacity": 0.029946963639940094,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9924814814814815,
+        "original_native_seconds": 0.01029161550104618,
+        "real_probability": 0.9651546,
+        "real_seconds": 8.836189979687333,
+        "LSS_tolerance_passed": false
+      },
+      "S9": {
+        "instance": "APP_3_5_30_",
+        "capacity": 21.0,
+        "selection": [
+          12,
+          10,
+          14
+        ],
+        "cost": 15.741491729826304,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 27000,
+        "empirical_denominator": 27000,
+        "empirical_probability": 1.0,
+        "empirical_strict_count": 27000,
+        "minimum_distance_to_capacity": 3.273724815382508,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9999259259259259,
+        "original_native_seconds": 0.0006218263879418373,
+        "real_probability": 0.989953,
+        "real_seconds": 4.907677313312888,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate": {
+        "instance": "APP_3_5_30_",
+        "capacity": 21.0,
+        "selection": [
+          12,
+          7,
+          14
+        ],
+        "cost": 14.07661610773891,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 26882,
+        "empirical_denominator": 27000,
+        "empirical_probability": 0.9956296296296296,
+        "empirical_strict_count": 26882,
+        "minimum_distance_to_capacity": 0.0017033244345867615,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "real_probability": 0.9874058,
+        "real_seconds": 5.144527845084667,
+        "LSS_tolerance_passed": true
+      },
+      "S9_auxiliary_hard_threshold": 0.9899066666666576,
+      "S9_auxiliary_scores": {
+        "old": 0.9622688999960319,
+        "S9": 0.9899999999800932,
+        "lower_candidate": 0.9853133333333269
+      },
+      "lower_candidate_rejected_by_S9_extra_screen": true,
+      "lower_candidate_exact_empirical_certificate": {
+        "selection": [
+          12,
+          7,
+          14
+        ],
+        "bins": 256,
+        "lower_numerator": "26837",
+        "denominator": "27000",
+        "lower": 0.9939629629629629,
+        "accepted": true,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "26906",
+        "upper": 0.9965185185185185,
+        "infeasible": false,
+        "certificate_seconds": 0.0009283488616347313
+      },
+      "improvement_over_S9_percent": 10.576352296605146,
+      "old_cost_gap_not_a_units_or_dataset_change": true,
+      "lower_candidate_native_followup": {
+        "instance": "APP_3_5_30_",
+        "capacity": 21.0,
+        "selection": [
+          12,
+          7,
+          14
+        ],
+        "cost": 14.07661610773891,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 26882,
+        "empirical_denominator": 27000,
+        "empirical_probability": 0.9956296296296296,
+        "empirical_strict_count": 26882,
+        "minimum_distance_to_capacity": 0.0017033244345867615,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9955925925925926,
+        "original_native_seconds": 0.006102694198489189,
+        "real_probability": 0.9874058,
+        "real_seconds": 5.062119201757014,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate_second_seed": {
+        "instance": "APP_3_5_30_",
+        "capacity": 21.0,
+        "selection": [
+          12,
+          7,
+          14
+        ],
+        "cost": 14.07661610773891,
+        "seed": 832274,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 26882,
+        "empirical_denominator": 27000,
+        "empirical_probability": 0.9956296296296296,
+        "empirical_strict_count": 26882,
+        "minimum_distance_to_capacity": 0.0017033244345867615,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9955925925925926,
+        "original_native_seconds": 0.006217268295586109,
+        "real_probability": 0.9874146,
+        "real_seconds": 5.113593779504299,
+        "LSS_tolerance_passed": true
+      },
+      "original_cost_contributions": [
+        {
+          "item": 12,
+          "cost": 4.5085458179627524
+        },
+        {
+          "item": 10,
+          "cost": 2.79426087569677
+        },
+        {
+          "item": 11,
+          "cost": 1.7319106058617715
+        }
+      ],
+      "S9_cost_contributions": [
+        {
+          "item": 12,
+          "cost": 4.5085458179627524
+        },
+        {
+          "item": 10,
+          "cost": 2.79426087569677
+        },
+        {
+          "item": 14,
+          "cost": 8.438685036166781
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "old": {
+        "instance": "APP_3_5_30_",
+        "capacity": 27.0,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 26880,
+        "empirical_denominator": 27000,
+        "empirical_probability": 0.9955555555555555,
+        "empirical_strict_count": 26880,
+        "minimum_distance_to_capacity": 0.595832013840301,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9955185185185185,
+        "original_native_seconds": 0.0066187139600515366,
+        "real_probability": 0.971381,
+        "real_seconds": 10.542257683351636,
+        "LSS_tolerance_passed": false
+      },
+      "S9": {
+        "instance": "APP_3_5_30_",
+        "capacity": 27.0,
+        "selection": [
+          12,
+          1,
+          14
+        ],
+        "cost": 13.95678760040953,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 27000,
+        "empirical_denominator": 27000,
+        "empirical_probability": 1.0,
+        "empirical_strict_count": 27000,
+        "minimum_distance_to_capacity": 5.393260126162797,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9999259259259259,
+        "original_native_seconds": 0.0006114048883318901,
+        "real_probability": 0.990103,
+        "real_seconds": 6.576306223869324,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate": {
+        "instance": "APP_3_5_30_",
+        "capacity": 27.0,
+        "selection": [
+          9,
+          13,
+          14
+        ],
+        "cost": 13.56485831159556,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 27000,
+        "empirical_denominator": 27000,
+        "empirical_probability": 1.0,
+        "empirical_strict_count": 27000,
+        "minimum_distance_to_capacity": 1.7592641518528147,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "real_probability": 0.988084,
+        "real_seconds": 6.9960889760404825,
+        "LSS_tolerance_passed": true
+      },
+      "S9_auxiliary_hard_threshold": 0.99,
+      "S9_auxiliary_scores": {
+        "old": 0.9711021000001319,
+        "S9": 0.9900066666669642,
+        "lower_candidate": 0.9869144999987005
+      },
+      "lower_candidate_rejected_by_S9_extra_screen": true,
+      "lower_candidate_exact_empirical_certificate": {
+        "selection": [
+          9,
+          13,
+          14
+        ],
+        "bins": 256,
+        "lower_numerator": "27000",
+        "denominator": "27000",
+        "lower": 1.0,
+        "accepted": true,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "27000",
+        "upper": 1.0,
+        "infeasible": false,
+        "certificate_seconds": 0.0006877696141600609
+      },
+      "improvement_over_S9_percent": 2.8081625946823956,
+      "old_cost_gap_not_a_units_or_dataset_change": true,
+      "lower_candidate_native_followup": {
+        "instance": "APP_3_5_30_",
+        "capacity": 27.0,
+        "selection": [
+          9,
+          13,
+          14
+        ],
+        "cost": 13.56485831159556,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 27000,
+        "empirical_denominator": 27000,
+        "empirical_probability": 1.0,
+        "empirical_strict_count": 27000,
+        "minimum_distance_to_capacity": 1.7592641518528147,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9999259259259259,
+        "original_native_seconds": 0.0006181662902235985,
+        "real_probability": 0.988084,
+        "real_seconds": 7.21593861002475,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate_second_seed": {
+        "instance": "APP_3_5_30_",
+        "capacity": 27.0,
+        "selection": [
+          9,
+          13,
+          14
+        ],
+        "cost": 13.56485831159556,
+        "seed": 832274,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 27000,
+        "empirical_denominator": 27000,
+        "empirical_probability": 1.0,
+        "empirical_strict_count": 27000,
+        "minimum_distance_to_capacity": 1.7592641518528147,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9999259259259259,
+        "original_native_seconds": 0.00056473258882761,
+        "real_probability": 0.9881382,
+        "real_seconds": 7.125508557073772,
+        "LSS_tolerance_passed": true
+      },
+      "original_cost_contributions": [
+        {
+          "item": 12,
+          "cost": 4.5085458179627524
+        },
+        {
+          "item": 1,
+          "cost": 1.0095567462799957
+        },
+        {
+          "item": 11,
+          "cost": 1.7319106058617715
+        }
+      ],
+      "S9_cost_contributions": [
+        {
+          "item": 12,
+          "cost": 4.5085458179627524
+        },
+        {
+          "item": 1,
+          "cost": 1.0095567462799957
+        },
+        {
+          "item": 14,
+          "cost": 8.438685036166781
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "old": {
+        "instance": "APP_4_5_30_",
+        "capacity": 47.0,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 803539,
+        "empirical_denominator": 810000,
+        "empirical_probability": 0.9920234567901235,
+        "empirical_strict_count": 803539,
+        "minimum_distance_to_capacity": 2.9318619695573034e-05,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9920222222222222,
+        "original_native_seconds": 1.610731246881187,
+        "real_probability": 0.9731601,
+        "real_seconds": 13.23299924749881,
+        "LSS_tolerance_passed": false
+      },
+      "S9": {
+        "instance": "APP_4_5_30_",
+        "capacity": 47.0,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 6.100159138612268,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 806632,
+        "empirical_denominator": 810000,
+        "empirical_probability": 0.9958419753086419,
+        "empirical_strict_count": 806632,
+        "minimum_distance_to_capacity": 0.0014639316107505351,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9958407407407407,
+        "original_native_seconds": 1.2523791212588549,
+        "real_probability": 0.9910689,
+        "real_seconds": 8.376994638703763,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate": {
+        "instance": "APP_4_5_30_",
+        "capacity": 47.0,
+        "selection": [
+          16,
+          17,
+          10,
+          15
+        ],
+        "cost": 5.7961483421130335,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 804387,
+        "empirical_denominator": 810000,
+        "empirical_probability": 0.9930703703703704,
+        "empirical_strict_count": 804387,
+        "minimum_distance_to_capacity": 6.355480103081845e-05,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "real_probability": 0.9891365,
+        "real_seconds": 10.18032521661371,
+        "LSS_tolerance_passed": true
+      },
+      "S9_auxiliary_hard_threshold": 0.99,
+      "S9_auxiliary_scores": {
+        "old": 0.9708087960899711,
+        "S9": 0.9910664437785662,
+        "lower_candidate": 0.9866026478788779
+      },
+      "lower_candidate_rejected_by_S9_extra_screen": true,
+      "lower_candidate_exact_empirical_certificate": {
+        "selection": [
+          16,
+          17,
+          10,
+          15
+        ],
+        "bins": 256,
+        "lower_numerator": "803740",
+        "denominator": "810000",
+        "lower": 0.9922716049382716,
+        "accepted": true,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "804810",
+        "upper": 0.9935925925925926,
+        "infeasible": false,
+        "certificate_seconds": 0.0011790292337536812
+      },
+      "improvement_over_S9_percent": 4.98365353413377,
+      "old_cost_gap_not_a_units_or_dataset_change": true,
+      "lower_candidate_native_followup": {
+        "instance": "APP_4_5_30_",
+        "capacity": 47.0,
+        "selection": [
+          16,
+          17,
+          10,
+          15
+        ],
+        "cost": 5.7961483421130335,
+        "seed": 832273,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 804387,
+        "empirical_denominator": 810000,
+        "empirical_probability": 0.9930703703703704,
+        "empirical_strict_count": 804387,
+        "minimum_distance_to_capacity": 6.355480103081845e-05,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9930691358024691,
+        "original_native_seconds": 2.031592051498592,
+        "real_probability": 0.9891365,
+        "real_seconds": 9.956123474985361,
+        "LSS_tolerance_passed": true
+      },
+      "lower_candidate_second_seed": {
+        "instance": "APP_4_5_30_",
+        "capacity": 47.0,
+        "selection": [
+          16,
+          17,
+          10,
+          15
+        ],
+        "cost": 5.7961483421130335,
+        "seed": 832274,
+        "draws": 10000000,
+        "event": "sum<=T",
+        "empirical_count": 804387,
+        "empirical_denominator": 810000,
+        "empirical_probability": 0.9930703703703704,
+        "empirical_strict_count": 804387,
+        "minimum_distance_to_capacity": 6.355480103081845e-05,
+        "original_module_file": "/home/quanliangwen/work/S9_small_recheck_20261109/reference/src/functions/func_realP_statistical.py",
+        "original_sources_unmodified": true,
+        "import_aliases_only": true,
+        "reference_zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+        "original_advanced_exact_probability": 0.9930691358024691,
+        "original_native_seconds": 1.2531540589407086,
+        "real_probability": 0.9891038,
+        "real_seconds": 9.969671815633774,
+        "LSS_tolerance_passed": true
+      },
+      "original_cost_contributions": [
+        {
+          "item": 16,
+          "cost": 1.6033734846406882
+        },
+        {
+          "item": 1,
+          "cost": 1.0318486575820927
+        },
+        {
+          "item": 2,
+          "cost": 1.4208809191785547
+        },
+        {
+          "item": 7,
+          "cost": 1.1837806015811898
+        }
+      ],
+      "S9_cost_contributions": [
+        {
+          "item": 0,
+          "cost": 1.7900357896062569
+        },
+        {
+          "item": 9,
+          "cost": 1.0910548077375883
+        },
+        {
+          "item": 2,
+          "cost": 1.4208809191785547
+        },
+        {
+          "item": 15,
+          "cost": 1.798187622089868
+        }
+      ]
+    }
+  ],
+  "ablation90": [
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "n": 30,
+      "best": 9.034717299521294,
+      "avg": 9.034717299521294,
+      "std": 0.0,
+      "all30_same_original_selection": true,
+      "actual_LSS_probability_not_changed": "See direct original-module old-solution results; these runs do not pass real>=0.985"
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "n": 30,
+      "best": 7.25001317010452,
+      "avg": 7.25001317010452,
+      "std": 0.0,
+      "all30_same_original_selection": true,
+      "actual_LSS_probability_not_changed": "See direct original-module old-solution results; these runs do not pass real>=0.985"
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "n": 30,
+      "best": 5.239883662982526,
+      "avg": 5.239883662982526,
+      "std": 0.0,
+      "all30_same_original_selection": true,
+      "actual_LSS_probability_not_changed": "See direct original-module old-solution results; these runs do not pass real>=0.985"
+    }
+  ],
+  "ablation_source_input_seed_checked": true,
+  "ablation_final_real_probability_accepted": 0,
+  "ablation_runs": [
+    {
+      "index": 21,
+      "rep": 1,
+      "seed": 950001,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03329518251121044,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 2,
+      "seed": 950002,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03391696885228157,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 3,
+      "seed": 950003,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.034011912532150745,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 4,
+      "seed": 950004,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03430045396089554,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 5,
+      "seed": 950005,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03371218033134937,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 6,
+      "seed": 950006,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03314109705388546,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 7,
+      "seed": 950007,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03407441545277834,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 8,
+      "seed": 950008,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03412552643567324,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 9,
+      "seed": 950009,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03361283615231514,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 10,
+      "seed": 950010,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03381933365017176,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 11,
+      "seed": 950011,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.032924837432801723,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 12,
+      "seed": 950012,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.033453838899731636,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 13,
+      "seed": 950013,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03426476288586855,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 14,
+      "seed": 950014,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.034120348282158375,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 15,
+      "seed": 950015,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.034313544631004333,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 16,
+      "seed": 950016,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03310522623360157,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 17,
+      "seed": 950017,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.033128914423286915,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 18,
+      "seed": 950018,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.033317613415420055,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 19,
+      "seed": 950019,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.030625472776591778,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 20,
+      "seed": 950020,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03335759602487087,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 21,
+      "seed": 950021,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.032895615324378014,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 22,
+      "seed": 950022,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03393061924725771,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 23,
+      "seed": 950023,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03384786657989025,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 24,
+      "seed": 950024,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.033730060793459415,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 25,
+      "seed": 950025,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03230085223913193,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 26,
+      "seed": 950026,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.030885402113199234,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 27,
+      "seed": 950027,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03084713127464056,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 28,
+      "seed": 950028,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.030805420130491257,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 29,
+      "seed": 950029,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03283320274204016,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 21,
+      "rep": 30,
+      "seed": 950030,
+      "cost": 9.034717299521294,
+      "empirical_lower": 0.9922222222222222,
+      "elapsed": 0.03371832985430956,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9651546,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 1,
+      "seed": 950001,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03134381212294102,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 2,
+      "seed": 950002,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03156135976314545,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 3,
+      "seed": 950003,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03000733722001314,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 4,
+      "seed": 950004,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.029300536960363388,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 5,
+      "seed": 950005,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02985106036067009,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 6,
+      "seed": 950006,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.0282930051907897,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 7,
+      "seed": 950007,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02845363225787878,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 8,
+      "seed": 950008,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030025946907699108,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 9,
+      "seed": 950009,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03223453927785158,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 10,
+      "seed": 950010,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.0315463999286294,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 11,
+      "seed": 950011,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.029717943631112576,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 12,
+      "seed": 950012,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.029466023668646812,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 13,
+      "seed": 950013,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03145474661141634,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 14,
+      "seed": 950014,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.028509514406323433,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 15,
+      "seed": 950015,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02869043219834566,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 16,
+      "seed": 950016,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.03208427131175995,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 17,
+      "seed": 950017,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.029805348254740238,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 18,
+      "seed": 950018,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.032119784504175186,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 19,
+      "seed": 950019,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.031503728590905666,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 20,
+      "seed": 950020,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030447764322161674,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 21,
+      "seed": 950021,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030297258868813515,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 22,
+      "seed": 950022,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030055307783186436,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 23,
+      "seed": 950023,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02851684484630823,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 24,
+      "seed": 950024,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02870177198201418,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 25,
+      "seed": 950025,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.02862284891307354,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 26,
+      "seed": 950026,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.028579597361385822,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 27,
+      "seed": 950027,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.029351809062063694,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 28,
+      "seed": 950028,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.028545726090669632,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 29,
+      "seed": 950029,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030348990112543106,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 22,
+      "rep": 30,
+      "seed": 950030,
+      "cost": 7.25001317010452,
+      "empirical_lower": 0.9955555555555555,
+      "elapsed": 0.030910213477909565,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.971381,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 1,
+      "seed": 950001,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03477922547608614,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 2,
+      "seed": 950002,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03192022442817688,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 3,
+      "seed": 950003,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03168763592839241,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 4,
+      "seed": 950004,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.044734787195920944,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 5,
+      "seed": 950005,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03788499440997839,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 6,
+      "seed": 950006,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.035353489220142365,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 7,
+      "seed": 950007,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.031718446873128414,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 8,
+      "seed": 950008,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.0353371687233448,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 9,
+      "seed": 950009,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03432231489568949,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 10,
+      "seed": 950010,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.032717988826334476,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 11,
+      "seed": 950011,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03203157056123018,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 12,
+      "seed": 950012,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03199492767453194,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 13,
+      "seed": 950013,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03388959635049105,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 14,
+      "seed": 950014,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.032563911750912666,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 15,
+      "seed": 950015,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03208145126700401,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 16,
+      "seed": 950016,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.035262334160506725,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 17,
+      "seed": 950017,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03455774486064911,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 18,
+      "seed": 950018,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03290783707052469,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 19,
+      "seed": 950019,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.05498191434890032,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 20,
+      "seed": 950020,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.04396478645503521,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 21,
+      "seed": 950021,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.036487395875155926,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 22,
+      "seed": 950022,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03672414552420378,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 23,
+      "seed": 950023,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03257041331380606,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 24,
+      "seed": 950024,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.04021294042468071,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 25,
+      "seed": 950025,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.037972697988152504,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 26,
+      "seed": 950026,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.032198826782405376,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 27,
+      "seed": 950027,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03250295948237181,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 28,
+      "seed": 950028,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.031321062706410885,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 29,
+      "seed": 950029,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03284473530948162,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    },
+    {
+      "index": 23,
+      "rep": 30,
+      "seed": 950030,
+      "cost": 5.239883662982526,
+      "empirical_lower": 0.9910407407407408,
+      "elapsed": 0.03173071797937155,
+      "within_budget": true,
+      "original_LSS_real_probability": 0.9731601,
+      "final_real_probability_passed": false
+    }
+  ],
+  "data_identity_files_verified": 74,
+  "direct_original_real_MC_calls": 99,
+  "official_seed": 832273,
+  "supplementary_seed": 832274
+}
