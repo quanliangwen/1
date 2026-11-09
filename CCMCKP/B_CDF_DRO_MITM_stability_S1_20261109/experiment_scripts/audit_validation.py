@@ -1,7 +1,8 @@
 import os
 for k in ['OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS']:os.environ[k]='1'
 import pathlib,json,gzip,numpy as np,time
-H=pathlib.Path(__file__).parent;S=json.load(open(H/'validation/SUMMARY.json'));cache={};out=[]
+H=pathlib.Path(__file__).parent;S=json.load(open(H/'validation/SUMMARY.json'));cachefile=H/'validation/PROBABILITY_CACHE.json';cached=json.load(open(cachefile)) if cachefile.exists() else []
+cache={(r['index'],tuple(r['selection'])):r for r in cached};out=[]
 for row in S['rows']:
  raw=pathlib.Path('/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark')/row['instance']
  for run in row['runs']:
@@ -23,4 +24,5 @@ for row in S['rows']:
    cache[key]=dict(index=row['index'],selection=run['selection'],cost=run['cost'],empirical_rounding_interval=probs,bins=bins,numerical_guard=1e-7,verdict=verdict)
   out.append(dict(index=row['index'],rep=run['rep'],native_probability=run['probability'],audit=cache[key]))
 result=dict(unique_vectors=len(cache),runs=len(out),below=sum(r['audit']['verdict']=='below_0.99' for r in out),above=sum(r['audit']['verdict']=='above_0.99' for r in out),unresolved=sum(r['audit']['verdict']=='boundary_unresolved' for r in out),note='Post-run numerical audit of the native empirical product distribution; excludes last sample only for legacy MC branch; not a population confidence certificate; interval has a numerical guard, not a formal floating-point proof.',rows=out)
+cachefile.write_text(json.dumps(list(cache.values()),indent=2))
 (H/'validation/PROBABILITY_AUDIT.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='rows'}))

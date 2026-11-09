@@ -1,0 +1,7150 @@
+{
+  "unique_vectors": 45,
+  "runs": 200,
+  "below": 31,
+  "above": 164,
+  "unresolved": 5,
+  "note": "Post-run numerical audit of the native empirical product distribution; excludes last sample only for legacy MC branch; not a population confidence certificate; interval has a numerical guard, not a formal floating-point proof.",
+  "rows": [
+    {
+      "index": 1,
+      "rep": 1,
+      "native_probability": 0.9994814814814815,
+      "audit": {
+        "index": 1,
+        "selection": [
+          12,
+          10,
+          5
+        ],
+        "cost": 18.630804987102678,
+        "empirical_rounding_interval": [
+          0.999518518518443,
+          0.9995185185185902
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 1,
+      "rep": 2,
+      "native_probability": 0.9994814814814815,
+      "audit": {
+        "index": 1,
+        "selection": [
+          12,
+          10,
+          5
+        ],
+        "cost": 18.630804987102678,
+        "empirical_rounding_interval": [
+          0.999518518518443,
+          0.9995185185185902
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 1,
+      "rep": 3,
+      "native_probability": 0.9994814814814815,
+      "audit": {
+        "index": 1,
+        "selection": [
+          12,
+          10,
+          5
+        ],
+        "cost": 18.630804987102678,
+        "empirical_rounding_interval": [
+          0.999518518518443,
+          0.9995185185185902
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 1,
+      "rep": 4,
+      "native_probability": 0.9994814814814815,
+      "audit": {
+        "index": 1,
+        "selection": [
+          12,
+          10,
+          5
+        ],
+        "cost": 18.630804987102678,
+        "empirical_rounding_interval": [
+          0.999518518518443,
+          0.9995185185185902
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 1,
+      "rep": 5,
+      "native_probability": 0.9994814814814815,
+      "audit": {
+        "index": 1,
+        "selection": [
+          12,
+          10,
+          5
+        ],
+        "cost": 18.630804987102678,
+        "empirical_rounding_interval": [
+          0.999518518518443,
+          0.9995185185185902
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 2,
+      "rep": 1,
+      "native_probability": 0.9995185185185185,
+      "audit": {
+        "index": 2,
+        "selection": [
+          9,
+          10,
+          5
+        ],
+        "cost": 10.778718192832196,
+        "empirical_rounding_interval": [
+          0.9995555555557394,
+          0.9995555555544161
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 2,
+      "rep": 2,
+      "native_probability": 0.9995185185185185,
+      "audit": {
+        "index": 2,
+        "selection": [
+          9,
+          10,
+          5
+        ],
+        "cost": 10.778718192832196,
+        "empirical_rounding_interval": [
+          0.9995555555557394,
+          0.9995555555544161
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 2,
+      "rep": 3,
+      "native_probability": 0.9995185185185185,
+      "audit": {
+        "index": 2,
+        "selection": [
+          9,
+          10,
+          5
+        ],
+        "cost": 10.778718192832196,
+        "empirical_rounding_interval": [
+          0.9995555555557394,
+          0.9995555555544161
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 2,
+      "rep": 4,
+      "native_probability": 0.9995185185185185,
+      "audit": {
+        "index": 2,
+        "selection": [
+          9,
+          10,
+          5
+        ],
+        "cost": 10.778718192832196,
+        "empirical_rounding_interval": [
+          0.9995555555557394,
+          0.9995555555544161
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 2,
+      "rep": 5,
+      "native_probability": 0.9995185185185185,
+      "audit": {
+        "index": 2,
+        "selection": [
+          9,
+          10,
+          5
+        ],
+        "cost": 10.778718192832196,
+        "empirical_rounding_interval": [
+          0.9995555555557394,
+          0.9995555555544161
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 3,
+      "rep": 1,
+      "native_probability": 0.9999975308641975,
+      "audit": {
+        "index": 3,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 19.414900463526205,
+        "empirical_rounding_interval": [
+          0.9999999999997026,
+          0.9999999999996784
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 3,
+      "rep": 2,
+      "native_probability": 0.9999975308641975,
+      "audit": {
+        "index": 3,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 19.414900463526205,
+        "empirical_rounding_interval": [
+          0.9999999999997026,
+          0.9999999999996784
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 3,
+      "rep": 3,
+      "native_probability": 0.9999975308641975,
+      "audit": {
+        "index": 3,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 19.414900463526205,
+        "empirical_rounding_interval": [
+          0.9999999999997026,
+          0.9999999999996784
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 3,
+      "rep": 4,
+      "native_probability": 0.9999975308641975,
+      "audit": {
+        "index": 3,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 19.414900463526205,
+        "empirical_rounding_interval": [
+          0.9999999999997026,
+          0.9999999999996784
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 3,
+      "rep": 5,
+      "native_probability": 0.9999975308641975,
+      "audit": {
+        "index": 3,
+        "selection": [
+          0,
+          9,
+          2,
+          15
+        ],
+        "cost": 19.414900463526205,
+        "empirical_rounding_interval": [
+          0.9999999999997026,
+          0.9999999999996784
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 4,
+      "rep": 1,
+      "native_probability": 0.9980703703703704,
+      "audit": {
+        "index": 4,
+        "selection": [
+          0,
+          13,
+          2,
+          7
+        ],
+        "cost": 10.355628350838563,
+        "empirical_rounding_interval": [
+          0.9980691358007596,
+          0.9980716049376313
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 4,
+      "rep": 2,
+      "native_probability": 0.9980703703703704,
+      "audit": {
+        "index": 4,
+        "selection": [
+          0,
+          13,
+          2,
+          7
+        ],
+        "cost": 10.355628350838563,
+        "empirical_rounding_interval": [
+          0.9980691358007596,
+          0.9980716049376313
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 4,
+      "rep": 3,
+      "native_probability": 0.9980703703703704,
+      "audit": {
+        "index": 4,
+        "selection": [
+          0,
+          13,
+          2,
+          7
+        ],
+        "cost": 10.355628350838563,
+        "empirical_rounding_interval": [
+          0.9980691358007596,
+          0.9980716049376313
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 4,
+      "rep": 4,
+      "native_probability": 0.9980703703703704,
+      "audit": {
+        "index": 4,
+        "selection": [
+          0,
+          13,
+          2,
+          7
+        ],
+        "cost": 10.355628350838563,
+        "empirical_rounding_interval": [
+          0.9980691358007596,
+          0.9980716049376313
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 4,
+      "rep": 5,
+      "native_probability": 0.9980703703703704,
+      "audit": {
+        "index": 4,
+        "selection": [
+          0,
+          13,
+          2,
+          7
+        ],
+        "cost": 10.355628350838563,
+        "empirical_rounding_interval": [
+          0.9980691358007596,
+          0.9980716049376313
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 5,
+      "rep": 1,
+      "native_probability": 0.999252,
+      "audit": {
+        "index": 5,
+        "selection": [
+          15,
+          16,
+          12,
+          18,
+          4
+        ],
+        "cost": 21.42178243268365,
+        "empirical_rounding_interval": [
+          0.9992470436443895,
+          0.9992489938031053
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 5,
+      "rep": 2,
+      "native_probability": 0.999262,
+      "audit": {
+        "index": 5,
+        "selection": [
+          15,
+          16,
+          12,
+          18,
+          4
+        ],
+        "cost": 21.42178243268365,
+        "empirical_rounding_interval": [
+          0.9992470436443895,
+          0.9992489938031053
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 5,
+      "rep": 3,
+      "native_probability": 0.999221,
+      "audit": {
+        "index": 5,
+        "selection": [
+          15,
+          16,
+          12,
+          18,
+          4
+        ],
+        "cost": 21.42178243268365,
+        "empirical_rounding_interval": [
+          0.9992470436443895,
+          0.9992489938031053
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 5,
+      "rep": 4,
+      "native_probability": 0.999226,
+      "audit": {
+        "index": 5,
+        "selection": [
+          15,
+          16,
+          12,
+          18,
+          4
+        ],
+        "cost": 21.42178243268365,
+        "empirical_rounding_interval": [
+          0.9992470436443895,
+          0.9992489938031053
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 5,
+      "rep": 5,
+      "native_probability": 0.999281,
+      "audit": {
+        "index": 5,
+        "selection": [
+          15,
+          16,
+          12,
+          18,
+          4
+        ],
+        "cost": 21.42178243268365,
+        "empirical_rounding_interval": [
+          0.9992470436443895,
+          0.9992489938031053
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 6,
+      "rep": 1,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 6,
+        "selection": [
+          10,
+          16,
+          2,
+          18,
+          4
+        ],
+        "cost": 12.63237670091476,
+        "empirical_rounding_interval": [
+          1.0000000000004612,
+          0.9999999999999323
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 6,
+      "rep": 2,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 6,
+        "selection": [
+          10,
+          16,
+          2,
+          18,
+          4
+        ],
+        "cost": 12.63237670091476,
+        "empirical_rounding_interval": [
+          1.0000000000004612,
+          0.9999999999999323
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 6,
+      "rep": 3,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 6,
+        "selection": [
+          10,
+          16,
+          2,
+          18,
+          4
+        ],
+        "cost": 12.63237670091476,
+        "empirical_rounding_interval": [
+          1.0000000000004612,
+          0.9999999999999323
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 6,
+      "rep": 4,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 6,
+        "selection": [
+          10,
+          16,
+          2,
+          18,
+          4
+        ],
+        "cost": 12.63237670091476,
+        "empirical_rounding_interval": [
+          1.0000000000004612,
+          0.9999999999999323
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 6,
+      "rep": 5,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 6,
+        "selection": [
+          10,
+          16,
+          2,
+          18,
+          4
+        ],
+        "cost": 12.63237670091476,
+        "empirical_rounding_interval": [
+          1.0000000000004612,
+          0.9999999999999323
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 7,
+      "rep": 1,
+      "native_probability": 0.999904,
+      "audit": {
+        "index": 7,
+        "selection": [
+          5,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 17.367967830657324,
+        "empirical_rounding_interval": [
+          0.9998882558943267,
+          0.9998884509102552
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 7,
+      "rep": 2,
+      "native_probability": 0.999873,
+      "audit": {
+        "index": 7,
+        "selection": [
+          5,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 17.367967830657324,
+        "empirical_rounding_interval": [
+          0.9998882558943267,
+          0.9998884509102552
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 7,
+      "rep": 3,
+      "native_probability": 0.999896,
+      "audit": {
+        "index": 7,
+        "selection": [
+          5,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 17.367967830657324,
+        "empirical_rounding_interval": [
+          0.9998882558943267,
+          0.9998884509102552
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 7,
+      "rep": 4,
+      "native_probability": 0.999872,
+      "audit": {
+        "index": 7,
+        "selection": [
+          5,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 17.367967830657324,
+        "empirical_rounding_interval": [
+          0.9998882558943267,
+          0.9998884509102552
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 7,
+      "rep": 5,
+      "native_probability": 0.999892,
+      "audit": {
+        "index": 7,
+        "selection": [
+          5,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 17.367967830657324,
+        "empirical_rounding_interval": [
+          0.9998882558943267,
+          0.9998884509102552
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 8,
+      "rep": 1,
+      "native_probability": 0.99179,
+      "audit": {
+        "index": 8,
+        "selection": [
+          25,
+          46,
+          17,
+          3,
+          39
+        ],
+        "cost": 11.185084022447434,
+        "empirical_rounding_interval": [
+          0.9917762286256571,
+          0.9917916348811071
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 8,
+      "rep": 2,
+      "native_probability": 0.991607,
+      "audit": {
+        "index": 8,
+        "selection": [
+          25,
+          46,
+          17,
+          3,
+          39
+        ],
+        "cost": 11.185084022447434,
+        "empirical_rounding_interval": [
+          0.9917762286256571,
+          0.9917916348811071
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 8,
+      "rep": 3,
+      "native_probability": 0.991976,
+      "audit": {
+        "index": 8,
+        "selection": [
+          25,
+          46,
+          17,
+          3,
+          39
+        ],
+        "cost": 11.185084022447434,
+        "empirical_rounding_interval": [
+          0.9917762286256571,
+          0.9917916348811071
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 8,
+      "rep": 4,
+      "native_probability": 0.991926,
+      "audit": {
+        "index": 8,
+        "selection": [
+          25,
+          46,
+          17,
+          3,
+          39
+        ],
+        "cost": 11.185084022447434,
+        "empirical_rounding_interval": [
+          0.9917762286256571,
+          0.9917916348811071
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 8,
+      "rep": 5,
+      "native_probability": 0.991989,
+      "audit": {
+        "index": 8,
+        "selection": [
+          25,
+          46,
+          17,
+          3,
+          39
+        ],
+        "cost": 11.185084022447434,
+        "empirical_rounding_interval": [
+          0.9917762286256571,
+          0.9917916348811071
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 9,
+      "rep": 1,
+      "native_probability": 0.993143,
+      "audit": {
+        "index": 9,
+        "selection": [
+          40,
+          71,
+          52,
+          63,
+          34,
+          35,
+          76,
+          97,
+          88,
+          29
+        ],
+        "cost": 49.713091018323844,
+        "empirical_rounding_interval": [
+          0.9930327970124337,
+          0.9930611208496394
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 9,
+      "rep": 2,
+      "native_probability": 0.993024,
+      "audit": {
+        "index": 9,
+        "selection": [
+          40,
+          71,
+          52,
+          63,
+          34,
+          35,
+          76,
+          97,
+          88,
+          29
+        ],
+        "cost": 49.713091018323844,
+        "empirical_rounding_interval": [
+          0.9930327970124337,
+          0.9930611208496394
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 9,
+      "rep": 3,
+      "native_probability": 0.99301,
+      "audit": {
+        "index": 9,
+        "selection": [
+          40,
+          71,
+          52,
+          63,
+          34,
+          35,
+          76,
+          97,
+          88,
+          29
+        ],
+        "cost": 49.713091018323844,
+        "empirical_rounding_interval": [
+          0.9930327970124337,
+          0.9930611208496394
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 9,
+      "rep": 4,
+      "native_probability": 0.993114,
+      "audit": {
+        "index": 9,
+        "selection": [
+          40,
+          71,
+          52,
+          63,
+          34,
+          35,
+          76,
+          97,
+          88,
+          29
+        ],
+        "cost": 49.713091018323844,
+        "empirical_rounding_interval": [
+          0.9930327970124337,
+          0.9930611208496394
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 9,
+      "rep": 5,
+      "native_probability": 0.99305,
+      "audit": {
+        "index": 9,
+        "selection": [
+          40,
+          71,
+          52,
+          63,
+          34,
+          35,
+          76,
+          97,
+          88,
+          29
+        ],
+        "cost": 49.713091018323844,
+        "empirical_rounding_interval": [
+          0.9930327970124337,
+          0.9930611208496394
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 10,
+      "rep": 1,
+      "native_probability": 0.991578,
+      "audit": {
+        "index": 10,
+        "selection": [
+          20,
+          71,
+          52,
+          63,
+          34,
+          75,
+          76,
+          17,
+          88,
+          29
+        ],
+        "cost": 32.02530285608519,
+        "empirical_rounding_interval": [
+          0.9914752622365803,
+          0.9915083760159422
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 10,
+      "rep": 2,
+      "native_probability": 0.99152,
+      "audit": {
+        "index": 10,
+        "selection": [
+          20,
+          71,
+          52,
+          63,
+          34,
+          75,
+          76,
+          17,
+          88,
+          29
+        ],
+        "cost": 32.02530285608519,
+        "empirical_rounding_interval": [
+          0.9914752622365803,
+          0.9915083760159422
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 10,
+      "rep": 3,
+      "native_probability": 0.99139,
+      "audit": {
+        "index": 10,
+        "selection": [
+          20,
+          71,
+          52,
+          63,
+          34,
+          75,
+          76,
+          17,
+          88,
+          29
+        ],
+        "cost": 32.02530285608519,
+        "empirical_rounding_interval": [
+          0.9914752622365803,
+          0.9915083760159422
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 10,
+      "rep": 4,
+      "native_probability": 0.991557,
+      "audit": {
+        "index": 10,
+        "selection": [
+          20,
+          71,
+          52,
+          63,
+          34,
+          75,
+          76,
+          17,
+          88,
+          29
+        ],
+        "cost": 32.02530285608519,
+        "empirical_rounding_interval": [
+          0.9914752622365803,
+          0.9915083760159422
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 10,
+      "rep": 5,
+      "native_probability": 0.991462,
+      "audit": {
+        "index": 10,
+        "selection": [
+          20,
+          71,
+          52,
+          63,
+          34,
+          75,
+          76,
+          17,
+          88,
+          29
+        ],
+        "cost": 32.02530285608519,
+        "empirical_rounding_interval": [
+          0.9914752622365803,
+          0.9915083760159422
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 11,
+      "rep": 1,
+      "native_probability": 0.990009,
+      "audit": {
+        "index": 11,
+        "selection": [
+          170,
+          181,
+          62,
+          163,
+          124,
+          135,
+          136,
+          177,
+          18,
+          39
+        ],
+        "cost": 47.87017455349783,
+        "empirical_rounding_interval": [
+          0.9899974511660643,
+          0.9900067592768592
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "boundary_unresolved"
+      }
+    },
+    {
+      "index": 11,
+      "rep": 2,
+      "native_probability": 0.990069,
+      "audit": {
+        "index": 11,
+        "selection": [
+          170,
+          181,
+          62,
+          163,
+          124,
+          135,
+          136,
+          177,
+          18,
+          39
+        ],
+        "cost": 47.87017455349783,
+        "empirical_rounding_interval": [
+          0.9899974511660643,
+          0.9900067592768592
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "boundary_unresolved"
+      }
+    },
+    {
+      "index": 11,
+      "rep": 3,
+      "native_probability": 0.990235,
+      "audit": {
+        "index": 11,
+        "selection": [
+          170,
+          181,
+          62,
+          163,
+          124,
+          135,
+          136,
+          177,
+          18,
+          39
+        ],
+        "cost": 47.87017455349783,
+        "empirical_rounding_interval": [
+          0.9899974511660643,
+          0.9900067592768592
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "boundary_unresolved"
+      }
+    },
+    {
+      "index": 11,
+      "rep": 4,
+      "native_probability": 0.990051,
+      "audit": {
+        "index": 11,
+        "selection": [
+          170,
+          181,
+          62,
+          163,
+          124,
+          135,
+          136,
+          177,
+          18,
+          39
+        ],
+        "cost": 47.87017455349783,
+        "empirical_rounding_interval": [
+          0.9899974511660643,
+          0.9900067592768592
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "boundary_unresolved"
+      }
+    },
+    {
+      "index": 11,
+      "rep": 5,
+      "native_probability": 0.990104,
+      "audit": {
+        "index": 11,
+        "selection": [
+          170,
+          181,
+          62,
+          163,
+          124,
+          135,
+          136,
+          177,
+          18,
+          39
+        ],
+        "cost": 47.87017455349783,
+        "empirical_rounding_interval": [
+          0.9899974511660643,
+          0.9900067592768592
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "boundary_unresolved"
+      }
+    },
+    {
+      "index": 12,
+      "rep": 1,
+      "native_probability": 0.992887,
+      "audit": {
+        "index": 12,
+        "selection": [
+          170,
+          81,
+          62,
+          143,
+          154,
+          135,
+          86,
+          107,
+          58,
+          39
+        ],
+        "cost": 27.18849846589099,
+        "empirical_rounding_interval": [
+          0.9929474069623554,
+          0.9929748743167471
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 12,
+      "rep": 2,
+      "native_probability": 0.992957,
+      "audit": {
+        "index": 12,
+        "selection": [
+          170,
+          81,
+          62,
+          143,
+          154,
+          135,
+          86,
+          107,
+          58,
+          39
+        ],
+        "cost": 27.18849846589099,
+        "empirical_rounding_interval": [
+          0.9929474069623554,
+          0.9929748743167471
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 12,
+      "rep": 3,
+      "native_probability": 0.99296,
+      "audit": {
+        "index": 12,
+        "selection": [
+          170,
+          81,
+          62,
+          143,
+          154,
+          135,
+          86,
+          107,
+          58,
+          39
+        ],
+        "cost": 27.18849846589099,
+        "empirical_rounding_interval": [
+          0.9929474069623554,
+          0.9929748743167471
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 12,
+      "rep": 4,
+      "native_probability": 0.99297,
+      "audit": {
+        "index": 12,
+        "selection": [
+          170,
+          81,
+          62,
+          143,
+          154,
+          135,
+          86,
+          107,
+          58,
+          39
+        ],
+        "cost": 27.18849846589099,
+        "empirical_rounding_interval": [
+          0.9929474069623554,
+          0.9929748743167471
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 12,
+      "rep": 5,
+      "native_probability": 0.993069,
+      "audit": {
+        "index": 12,
+        "selection": [
+          170,
+          81,
+          62,
+          143,
+          154,
+          135,
+          86,
+          107,
+          58,
+          39
+        ],
+        "cost": 27.18849846589099,
+        "empirical_rounding_interval": [
+          0.9929474069623554,
+          0.9929748743167471
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 13,
+      "rep": 1,
+      "native_probability": 0.990658,
+      "audit": {
+        "index": 13,
+        "selection": [
+          100,
+          181,
+          182,
+          163,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          11,
+          192,
+          133,
+          14,
+          95,
+          116,
+          137,
+          58,
+          199
+        ],
+        "cost": 74.80664486247893,
+        "empirical_rounding_interval": [
+          0.9905993136308098,
+          0.9906951759492507
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 13,
+      "rep": 2,
+      "native_probability": 0.990764,
+      "audit": {
+        "index": 13,
+        "selection": [
+          100,
+          181,
+          182,
+          163,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          11,
+          192,
+          133,
+          14,
+          95,
+          116,
+          137,
+          58,
+          199
+        ],
+        "cost": 74.80664486247893,
+        "empirical_rounding_interval": [
+          0.9905993136308098,
+          0.9906951759492507
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 13,
+      "rep": 3,
+      "native_probability": 0.990619,
+      "audit": {
+        "index": 13,
+        "selection": [
+          100,
+          181,
+          182,
+          163,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          11,
+          192,
+          133,
+          14,
+          95,
+          116,
+          137,
+          58,
+          199
+        ],
+        "cost": 74.80664486247893,
+        "empirical_rounding_interval": [
+          0.9905993136308098,
+          0.9906951759492507
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 13,
+      "rep": 4,
+      "native_probability": 0.990746,
+      "audit": {
+        "index": 13,
+        "selection": [
+          100,
+          181,
+          182,
+          163,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          11,
+          192,
+          133,
+          14,
+          95,
+          116,
+          137,
+          58,
+          199
+        ],
+        "cost": 74.80664486247893,
+        "empirical_rounding_interval": [
+          0.9905993136308098,
+          0.9906951759492507
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 13,
+      "rep": 5,
+      "native_probability": 0.990544,
+      "audit": {
+        "index": 13,
+        "selection": [
+          100,
+          181,
+          182,
+          163,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          11,
+          192,
+          133,
+          14,
+          95,
+          116,
+          137,
+          58,
+          199
+        ],
+        "cost": 74.80664486247893,
+        "empirical_rounding_interval": [
+          0.9905993136308098,
+          0.9906951759492507
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 14,
+      "rep": 1,
+      "native_probability": 0.990721,
+      "audit": {
+        "index": 14,
+        "selection": [
+          100,
+          181,
+          182,
+          143,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          71,
+          192,
+          133,
+          154,
+          95,
+          116,
+          197,
+          58,
+          19
+        ],
+        "cost": 62.13823691160582,
+        "empirical_rounding_interval": [
+          0.9906519983246282,
+          0.9907369669687429
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 14,
+      "rep": 2,
+      "native_probability": 0.990719,
+      "audit": {
+        "index": 14,
+        "selection": [
+          100,
+          181,
+          182,
+          143,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          71,
+          192,
+          133,
+          154,
+          95,
+          116,
+          197,
+          58,
+          19
+        ],
+        "cost": 62.13823691160582,
+        "empirical_rounding_interval": [
+          0.9906519983246282,
+          0.9907369669687429
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 14,
+      "rep": 3,
+      "native_probability": 0.990589,
+      "audit": {
+        "index": 14,
+        "selection": [
+          100,
+          181,
+          182,
+          143,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          71,
+          192,
+          133,
+          154,
+          95,
+          116,
+          197,
+          58,
+          19
+        ],
+        "cost": 62.13823691160582,
+        "empirical_rounding_interval": [
+          0.9906519983246282,
+          0.9907369669687429
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 14,
+      "rep": 4,
+      "native_probability": 0.990544,
+      "audit": {
+        "index": 14,
+        "selection": [
+          100,
+          181,
+          182,
+          143,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          71,
+          192,
+          133,
+          154,
+          95,
+          116,
+          197,
+          58,
+          19
+        ],
+        "cost": 62.13823691160582,
+        "empirical_rounding_interval": [
+          0.9906519983246282,
+          0.9907369669687429
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 14,
+      "rep": 5,
+      "native_probability": 0.990735,
+      "audit": {
+        "index": 14,
+        "selection": [
+          100,
+          181,
+          182,
+          143,
+          104,
+          45,
+          186,
+          7,
+          68,
+          49,
+          130,
+          71,
+          192,
+          133,
+          154,
+          95,
+          116,
+          197,
+          58,
+          19
+        ],
+        "cost": 62.13823691160582,
+        "empirical_rounding_interval": [
+          0.9906519983246282,
+          0.9907369669687429
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 15,
+      "rep": 1,
+      "native_probability": 0.990805,
+      "audit": {
+        "index": 15,
+        "selection": [
+          30,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          68,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          105,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          293,
+          114,
+          145,
+          86,
+          27,
+          208,
+          179
+        ],
+        "cost": 105.73138308571478,
+        "empirical_rounding_interval": [
+          0.9907818642239823,
+          0.9909449362275491
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 15,
+      "rep": 2,
+      "native_probability": 0.990897,
+      "audit": {
+        "index": 15,
+        "selection": [
+          30,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          68,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          105,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          293,
+          114,
+          145,
+          86,
+          27,
+          208,
+          179
+        ],
+        "cost": 105.73138308571478,
+        "empirical_rounding_interval": [
+          0.9907818642239823,
+          0.9909449362275491
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 15,
+      "rep": 3,
+      "native_probability": 0.990831,
+      "audit": {
+        "index": 15,
+        "selection": [
+          30,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          68,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          105,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          293,
+          114,
+          145,
+          86,
+          27,
+          208,
+          179
+        ],
+        "cost": 105.73138308571478,
+        "empirical_rounding_interval": [
+          0.9907818642239823,
+          0.9909449362275491
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 15,
+      "rep": 4,
+      "native_probability": 0.990837,
+      "audit": {
+        "index": 15,
+        "selection": [
+          30,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          68,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          105,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          293,
+          114,
+          145,
+          86,
+          27,
+          208,
+          179
+        ],
+        "cost": 105.73138308571478,
+        "empirical_rounding_interval": [
+          0.9907818642239823,
+          0.9909449362275491
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 15,
+      "rep": 5,
+      "native_probability": 0.990928,
+      "audit": {
+        "index": 15,
+        "selection": [
+          30,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          68,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          105,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          293,
+          114,
+          145,
+          86,
+          27,
+          208,
+          179
+        ],
+        "cost": 105.73138308571478,
+        "empirical_rounding_interval": [
+          0.9907818642239823,
+          0.9909449362275491
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 16,
+      "rep": 1,
+      "native_probability": 0.990681,
+      "audit": {
+        "index": 16,
+        "selection": [
+          150,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          98,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          255,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          83,
+          114,
+          145,
+          86,
+          177,
+          208,
+          179
+        ],
+        "cost": 90.23864274122081,
+        "empirical_rounding_interval": [
+          0.9907692331007778,
+          0.9908923017056583
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 16,
+      "rep": 2,
+      "native_probability": 0.990983,
+      "audit": {
+        "index": 16,
+        "selection": [
+          150,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          98,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          255,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          83,
+          114,
+          145,
+          86,
+          177,
+          208,
+          179
+        ],
+        "cost": 90.23864274122081,
+        "empirical_rounding_interval": [
+          0.9907692331007778,
+          0.9908923017056583
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 16,
+      "rep": 3,
+      "native_probability": 0.9909,
+      "audit": {
+        "index": 16,
+        "selection": [
+          150,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          98,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          255,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          83,
+          114,
+          145,
+          86,
+          177,
+          208,
+          179
+        ],
+        "cost": 90.23864274122081,
+        "empirical_rounding_interval": [
+          0.9907692331007778,
+          0.9908923017056583
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 16,
+      "rep": 4,
+      "native_probability": 0.990877,
+      "audit": {
+        "index": 16,
+        "selection": [
+          150,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          98,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          255,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          83,
+          114,
+          145,
+          86,
+          177,
+          208,
+          179
+        ],
+        "cost": 90.23864274122081,
+        "empirical_rounding_interval": [
+          0.9907692331007778,
+          0.9908923017056583
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 16,
+      "rep": 5,
+      "native_probability": 0.99087,
+      "audit": {
+        "index": 16,
+        "selection": [
+          150,
+          271,
+          92,
+          183,
+          4,
+          125,
+          126,
+          67,
+          98,
+          159,
+          70,
+          11,
+          162,
+          193,
+          254,
+          255,
+          226,
+          287,
+          18,
+          109,
+          110,
+          171,
+          22,
+          83,
+          114,
+          145,
+          86,
+          177,
+          208,
+          179
+        ],
+        "cost": 90.23864274122081,
+        "empirical_rounding_interval": [
+          0.9907692331007778,
+          0.9908923017056583
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 17,
+      "rep": 1,
+      "native_probability": 0.99045,
+      "audit": {
+        "index": 17,
+        "selection": [
+          360,
+          241,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          248,
+          209,
+          290,
+          211,
+          12,
+          53,
+          134,
+          335,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          222,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          30,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          39
+        ],
+        "cost": 172.55211392495028,
+        "empirical_rounding_interval": [
+          0.990312709108383,
+          0.9905138258268734
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 17,
+      "rep": 2,
+      "native_probability": 0.990391,
+      "audit": {
+        "index": 17,
+        "selection": [
+          360,
+          241,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          248,
+          209,
+          290,
+          211,
+          12,
+          53,
+          134,
+          335,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          222,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          30,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          39
+        ],
+        "cost": 172.55211392495028,
+        "empirical_rounding_interval": [
+          0.990312709108383,
+          0.9905138258268734
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 17,
+      "rep": 3,
+      "native_probability": 0.99051,
+      "audit": {
+        "index": 17,
+        "selection": [
+          360,
+          241,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          248,
+          209,
+          290,
+          211,
+          12,
+          53,
+          134,
+          335,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          222,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          30,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          39
+        ],
+        "cost": 172.55211392495028,
+        "empirical_rounding_interval": [
+          0.990312709108383,
+          0.9905138258268734
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 17,
+      "rep": 4,
+      "native_probability": 0.990334,
+      "audit": {
+        "index": 17,
+        "selection": [
+          360,
+          241,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          248,
+          209,
+          290,
+          211,
+          12,
+          53,
+          134,
+          335,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          222,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          30,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          39
+        ],
+        "cost": 172.55211392495028,
+        "empirical_rounding_interval": [
+          0.990312709108383,
+          0.9905138258268734
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 17,
+      "rep": 5,
+      "native_probability": 0.990552,
+      "audit": {
+        "index": 17,
+        "selection": [
+          360,
+          241,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          248,
+          209,
+          290,
+          211,
+          12,
+          53,
+          134,
+          335,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          222,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          30,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          39
+        ],
+        "cost": 172.55211392495028,
+        "empirical_rounding_interval": [
+          0.990312709108383,
+          0.9905138258268734
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 18,
+      "rep": 1,
+      "native_probability": 0.990084,
+      "audit": {
+        "index": 18,
+        "selection": [
+          360,
+          241,
+          282,
+          123,
+          324,
+          285,
+          166,
+          367,
+          248,
+          209,
+          290,
+          211,
+          12,
+          293,
+          134,
+          255,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          62,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          230,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          159
+        ],
+        "cost": 142.27121392085706,
+        "empirical_rounding_interval": [
+          0.9900257882612847,
+          0.99007891986882
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 18,
+      "rep": 2,
+      "native_probability": 0.990125,
+      "audit": {
+        "index": 18,
+        "selection": [
+          360,
+          241,
+          282,
+          123,
+          324,
+          285,
+          166,
+          367,
+          248,
+          209,
+          290,
+          211,
+          12,
+          293,
+          134,
+          255,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          62,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          230,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          159
+        ],
+        "cost": 142.27121392085706,
+        "empirical_rounding_interval": [
+          0.9900257882612847,
+          0.99007891986882
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 18,
+      "rep": 3,
+      "native_probability": 0.990226,
+      "audit": {
+        "index": 18,
+        "selection": [
+          360,
+          241,
+          282,
+          123,
+          324,
+          285,
+          166,
+          367,
+          248,
+          209,
+          290,
+          211,
+          12,
+          293,
+          134,
+          255,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          62,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          230,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          159
+        ],
+        "cost": 142.27121392085706,
+        "empirical_rounding_interval": [
+          0.9900257882612847,
+          0.99007891986882
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 18,
+      "rep": 4,
+      "native_probability": 0.990133,
+      "audit": {
+        "index": 18,
+        "selection": [
+          360,
+          241,
+          282,
+          123,
+          324,
+          285,
+          166,
+          367,
+          248,
+          209,
+          290,
+          211,
+          12,
+          293,
+          134,
+          255,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          62,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          230,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          159
+        ],
+        "cost": 142.27121392085706,
+        "empirical_rounding_interval": [
+          0.9900257882612847,
+          0.99007891986882
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 18,
+      "rep": 5,
+      "native_probability": 0.990067,
+      "audit": {
+        "index": 18,
+        "selection": [
+          360,
+          241,
+          282,
+          123,
+          324,
+          285,
+          166,
+          367,
+          248,
+          209,
+          290,
+          211,
+          12,
+          293,
+          134,
+          255,
+          16,
+          97,
+          338,
+          379,
+          340,
+          141,
+          62,
+          263,
+          64,
+          185,
+          146,
+          347,
+          28,
+          229,
+          230,
+          391,
+          32,
+          73,
+          154,
+          35,
+          36,
+          317,
+          318,
+          159
+        ],
+        "cost": 142.27121392085706,
+        "empirical_rounding_interval": [
+          0.9900257882612847,
+          0.99007891986882
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 19,
+      "rep": 1,
+      "native_probability": 0.990266,
+      "audit": {
+        "index": 19,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          414,
+          365,
+          116,
+          17,
+          368,
+          269,
+          270,
+          171,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          380,
+          81,
+          32,
+          333,
+          334,
+          435,
+          386,
+          287,
+          88,
+          439,
+          40,
+          91,
+          292,
+          343,
+          394,
+          495,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 197.9864543988054,
+        "empirical_rounding_interval": [
+          0.9902105852185132,
+          0.9905681697284012
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 19,
+      "rep": 2,
+      "native_probability": 0.990424,
+      "audit": {
+        "index": 19,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          414,
+          365,
+          116,
+          17,
+          368,
+          269,
+          270,
+          171,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          380,
+          81,
+          32,
+          333,
+          334,
+          435,
+          386,
+          287,
+          88,
+          439,
+          40,
+          91,
+          292,
+          343,
+          394,
+          495,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 197.9864543988054,
+        "empirical_rounding_interval": [
+          0.9902105852185132,
+          0.9905681697284012
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 19,
+      "rep": 3,
+      "native_probability": 0.990535,
+      "audit": {
+        "index": 19,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          414,
+          365,
+          116,
+          17,
+          368,
+          269,
+          270,
+          171,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          380,
+          81,
+          32,
+          333,
+          334,
+          435,
+          386,
+          287,
+          88,
+          439,
+          40,
+          91,
+          292,
+          343,
+          394,
+          495,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 197.9864543988054,
+        "empirical_rounding_interval": [
+          0.9902105852185132,
+          0.9905681697284012
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 19,
+      "rep": 4,
+      "native_probability": 0.990318,
+      "audit": {
+        "index": 19,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          414,
+          365,
+          116,
+          17,
+          368,
+          269,
+          270,
+          171,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          380,
+          81,
+          32,
+          333,
+          334,
+          435,
+          386,
+          287,
+          88,
+          439,
+          40,
+          91,
+          292,
+          343,
+          394,
+          495,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 197.9864543988054,
+        "empirical_rounding_interval": [
+          0.9902105852185132,
+          0.9905681697284012
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 19,
+      "rep": 5,
+      "native_probability": 0.990313,
+      "audit": {
+        "index": 19,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          414,
+          365,
+          116,
+          17,
+          368,
+          269,
+          270,
+          171,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          380,
+          81,
+          32,
+          333,
+          334,
+          435,
+          386,
+          287,
+          88,
+          439,
+          40,
+          91,
+          292,
+          343,
+          394,
+          495,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 197.9864543988054,
+        "empirical_rounding_interval": [
+          0.9902105852185132,
+          0.9905681697284012
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 20,
+      "rep": 1,
+      "native_probability": 0.990178,
+      "audit": {
+        "index": 20,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          214,
+          365,
+          316,
+          17,
+          368,
+          269,
+          270,
+          71,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          30,
+          81,
+          32,
+          133,
+          334,
+          185,
+          236,
+          287,
+          88,
+          439,
+          90,
+          91,
+          292,
+          143,
+          394,
+          45,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 158.94275350728734,
+        "empirical_rounding_interval": [
+          0.9901308704322502,
+          0.990439273218679
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 20,
+      "rep": 2,
+      "native_probability": 0.990174,
+      "audit": {
+        "index": 20,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          214,
+          365,
+          316,
+          17,
+          368,
+          269,
+          270,
+          71,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          30,
+          81,
+          32,
+          133,
+          334,
+          185,
+          236,
+          287,
+          88,
+          439,
+          90,
+          91,
+          292,
+          143,
+          394,
+          45,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 158.94275350728734,
+        "empirical_rounding_interval": [
+          0.9901308704322502,
+          0.990439273218679
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 20,
+      "rep": 3,
+      "native_probability": 0.990424,
+      "audit": {
+        "index": 20,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          214,
+          365,
+          316,
+          17,
+          368,
+          269,
+          270,
+          71,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          30,
+          81,
+          32,
+          133,
+          334,
+          185,
+          236,
+          287,
+          88,
+          439,
+          90,
+          91,
+          292,
+          143,
+          394,
+          45,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 158.94275350728734,
+        "empirical_rounding_interval": [
+          0.9901308704322502,
+          0.990439273218679
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 20,
+      "rep": 4,
+      "native_probability": 0.990292,
+      "audit": {
+        "index": 20,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          214,
+          365,
+          316,
+          17,
+          368,
+          269,
+          270,
+          71,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          30,
+          81,
+          32,
+          133,
+          334,
+          185,
+          236,
+          287,
+          88,
+          439,
+          90,
+          91,
+          292,
+          143,
+          394,
+          45,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 158.94275350728734,
+        "empirical_rounding_interval": [
+          0.9901308704322502,
+          0.990439273218679
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 20,
+      "rep": 5,
+      "native_probability": 0.990348,
+      "audit": {
+        "index": 20,
+        "selection": [
+          150,
+          301,
+          452,
+          453,
+          104,
+          405,
+          206,
+          7,
+          358,
+          59,
+          10,
+          211,
+          112,
+          413,
+          214,
+          365,
+          316,
+          17,
+          368,
+          269,
+          270,
+          71,
+          122,
+          123,
+          424,
+          125,
+          376,
+          177,
+          378,
+          379,
+          30,
+          81,
+          32,
+          133,
+          334,
+          185,
+          236,
+          287,
+          88,
+          439,
+          90,
+          91,
+          292,
+          143,
+          394,
+          45,
+          146,
+          197,
+          98,
+          349
+        ],
+        "cost": 158.94275350728734,
+        "empirical_rounding_interval": [
+          0.9901308704322502,
+          0.990439273218679
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 21,
+      "rep": 1,
+      "native_probability": 0.9924814814814815,
+      "audit": {
+        "index": 21,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "empirical_rounding_interval": [
+          0.9925185185112106,
+          0.9925185185186731
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 21,
+      "rep": 2,
+      "native_probability": 0.9924814814814815,
+      "audit": {
+        "index": 21,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "empirical_rounding_interval": [
+          0.9925185185112106,
+          0.9925185185186731
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 21,
+      "rep": 3,
+      "native_probability": 0.9924814814814815,
+      "audit": {
+        "index": 21,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "empirical_rounding_interval": [
+          0.9925185185112106,
+          0.9925185185186731
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 21,
+      "rep": 4,
+      "native_probability": 0.9924814814814815,
+      "audit": {
+        "index": 21,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "empirical_rounding_interval": [
+          0.9925185185112106,
+          0.9925185185186731
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 21,
+      "rep": 5,
+      "native_probability": 0.9924814814814815,
+      "audit": {
+        "index": 21,
+        "selection": [
+          12,
+          10,
+          11
+        ],
+        "cost": 9.034717299521294,
+        "empirical_rounding_interval": [
+          0.9925185185112106,
+          0.9925185185186731
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 22,
+      "rep": 1,
+      "native_probability": 0.9955185185185185,
+      "audit": {
+        "index": 22,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "empirical_rounding_interval": [
+          0.9955555555550524,
+          0.995555555555738
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 22,
+      "rep": 2,
+      "native_probability": 0.9955185185185185,
+      "audit": {
+        "index": 22,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "empirical_rounding_interval": [
+          0.9955555555550524,
+          0.995555555555738
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 22,
+      "rep": 3,
+      "native_probability": 0.9955185185185185,
+      "audit": {
+        "index": 22,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "empirical_rounding_interval": [
+          0.9955555555550524,
+          0.995555555555738
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 22,
+      "rep": 4,
+      "native_probability": 0.9955185185185185,
+      "audit": {
+        "index": 22,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "empirical_rounding_interval": [
+          0.9955555555550524,
+          0.995555555555738
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 22,
+      "rep": 5,
+      "native_probability": 0.9955185185185185,
+      "audit": {
+        "index": 22,
+        "selection": [
+          12,
+          1,
+          11
+        ],
+        "cost": 7.25001317010452,
+        "empirical_rounding_interval": [
+          0.9955555555550524,
+          0.995555555555738
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 23,
+      "rep": 1,
+      "native_probability": 0.9920222222222222,
+      "audit": {
+        "index": 23,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9920197530864673,
+          0.9920234567902759
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 23,
+      "rep": 2,
+      "native_probability": 0.9920222222222222,
+      "audit": {
+        "index": 23,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9920197530864673,
+          0.9920234567902759
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 23,
+      "rep": 3,
+      "native_probability": 0.9920222222222222,
+      "audit": {
+        "index": 23,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9920197530864673,
+          0.9920234567902759
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 23,
+      "rep": 4,
+      "native_probability": 0.9920222222222222,
+      "audit": {
+        "index": 23,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9920197530864673,
+          0.9920234567902759
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 23,
+      "rep": 5,
+      "native_probability": 0.9920222222222222,
+      "audit": {
+        "index": 23,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9920197530864673,
+          0.9920234567902759
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 24,
+      "rep": 1,
+      "native_probability": 0.9955728395061728,
+      "audit": {
+        "index": 24,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9955728395062292,
+          0.9955753086417588
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 24,
+      "rep": 2,
+      "native_probability": 0.9955728395061728,
+      "audit": {
+        "index": 24,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9955728395062292,
+          0.9955753086417588
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 24,
+      "rep": 3,
+      "native_probability": 0.9955728395061728,
+      "audit": {
+        "index": 24,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9955728395062292,
+          0.9955753086417588
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 24,
+      "rep": 4,
+      "native_probability": 0.9955728395061728,
+      "audit": {
+        "index": 24,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9955728395062292,
+          0.9955753086417588
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 24,
+      "rep": 5,
+      "native_probability": 0.9955728395061728,
+      "audit": {
+        "index": 24,
+        "selection": [
+          16,
+          1,
+          2,
+          7
+        ],
+        "cost": 5.239883662982526,
+        "empirical_rounding_interval": [
+          0.9955728395062292,
+          0.9955753086417588
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 25,
+      "rep": 1,
+      "native_probability": 0.990798,
+      "audit": {
+        "index": 25,
+        "selection": [
+          5,
+          1,
+          22,
+          18,
+          19
+        ],
+        "cost": 16.961858369665308,
+        "empirical_rounding_interval": [
+          0.990741133029566,
+          0.9907444482995494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 25,
+      "rep": 2,
+      "native_probability": 0.990644,
+      "audit": {
+        "index": 25,
+        "selection": [
+          5,
+          1,
+          22,
+          18,
+          19
+        ],
+        "cost": 16.961858369665308,
+        "empirical_rounding_interval": [
+          0.990741133029566,
+          0.9907444482995494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 25,
+      "rep": 3,
+      "native_probability": 0.9908,
+      "audit": {
+        "index": 25,
+        "selection": [
+          5,
+          1,
+          22,
+          18,
+          19
+        ],
+        "cost": 16.961858369665308,
+        "empirical_rounding_interval": [
+          0.990741133029566,
+          0.9907444482995494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 25,
+      "rep": 4,
+      "native_probability": 0.990684,
+      "audit": {
+        "index": 25,
+        "selection": [
+          5,
+          1,
+          22,
+          18,
+          19
+        ],
+        "cost": 16.961858369665308,
+        "empirical_rounding_interval": [
+          0.990741133029566,
+          0.9907444482995494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 25,
+      "rep": 5,
+      "native_probability": 0.990813,
+      "audit": {
+        "index": 25,
+        "selection": [
+          5,
+          1,
+          22,
+          18,
+          19
+        ],
+        "cost": 16.961858369665308,
+        "empirical_rounding_interval": [
+          0.990741133029566,
+          0.9907444482995494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 26,
+      "rep": 1,
+      "native_probability": 0.996574,
+      "audit": {
+        "index": 26,
+        "selection": [
+          5,
+          1,
+          7,
+          23,
+          9
+        ],
+        "cost": 11.026767534116384,
+        "empirical_rounding_interval": [
+          0.9965829803092319,
+          0.9965885870167599
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 26,
+      "rep": 2,
+      "native_probability": 0.996646,
+      "audit": {
+        "index": 26,
+        "selection": [
+          5,
+          1,
+          7,
+          23,
+          9
+        ],
+        "cost": 11.026767534116384,
+        "empirical_rounding_interval": [
+          0.9965829803092319,
+          0.9965885870167599
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 26,
+      "rep": 3,
+      "native_probability": 0.996591,
+      "audit": {
+        "index": 26,
+        "selection": [
+          5,
+          1,
+          7,
+          23,
+          9
+        ],
+        "cost": 11.026767534116384,
+        "empirical_rounding_interval": [
+          0.9965829803092319,
+          0.9965885870167599
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 26,
+      "rep": 4,
+      "native_probability": 0.99665,
+      "audit": {
+        "index": 26,
+        "selection": [
+          5,
+          1,
+          7,
+          23,
+          9
+        ],
+        "cost": 11.026767534116384,
+        "empirical_rounding_interval": [
+          0.9965829803092319,
+          0.9965885870167599
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 26,
+      "rep": 5,
+      "native_probability": 0.996649,
+      "audit": {
+        "index": 26,
+        "selection": [
+          5,
+          1,
+          7,
+          23,
+          9
+        ],
+        "cost": 11.026767534116384,
+        "empirical_rounding_interval": [
+          0.9965829803092319,
+          0.9965885870167599
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 27,
+      "rep": 1,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 27,
+        "selection": [
+          15,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 26.063997501937212,
+        "empirical_rounding_interval": [
+          0.9999999999999754,
+          0.9999999999999641
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 27,
+      "rep": 2,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 27,
+        "selection": [
+          15,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 26.063997501937212,
+        "empirical_rounding_interval": [
+          0.9999999999999754,
+          0.9999999999999641
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 27,
+      "rep": 3,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 27,
+        "selection": [
+          15,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 26.063997501937212,
+        "empirical_rounding_interval": [
+          0.9999999999999754,
+          0.9999999999999641
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 27,
+      "rep": 4,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 27,
+        "selection": [
+          15,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 26.063997501937212,
+        "empirical_rounding_interval": [
+          0.9999999999999754,
+          0.9999999999999641
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 27,
+      "rep": 5,
+      "native_probability": 1.0,
+      "audit": {
+        "index": 27,
+        "selection": [
+          15,
+          46,
+          47,
+          3,
+          39
+        ],
+        "cost": 26.063997501937212,
+        "empirical_rounding_interval": [
+          0.9999999999999754,
+          0.9999999999999641
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 28,
+      "rep": 1,
+      "native_probability": 0.998652,
+      "audit": {
+        "index": 28,
+        "selection": [
+          15,
+          46,
+          42,
+          18,
+          39
+        ],
+        "cost": 16.42362684765965,
+        "empirical_rounding_interval": [
+          0.9986760371152046,
+          0.998680522480737
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 28,
+      "rep": 2,
+      "native_probability": 0.998657,
+      "audit": {
+        "index": 28,
+        "selection": [
+          15,
+          46,
+          42,
+          18,
+          39
+        ],
+        "cost": 16.42362684765965,
+        "empirical_rounding_interval": [
+          0.9986760371152046,
+          0.998680522480737
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 28,
+      "rep": 3,
+      "native_probability": 0.99863,
+      "audit": {
+        "index": 28,
+        "selection": [
+          15,
+          46,
+          42,
+          18,
+          39
+        ],
+        "cost": 16.42362684765965,
+        "empirical_rounding_interval": [
+          0.9986760371152046,
+          0.998680522480737
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 28,
+      "rep": 4,
+      "native_probability": 0.9987,
+      "audit": {
+        "index": 28,
+        "selection": [
+          15,
+          46,
+          42,
+          18,
+          39
+        ],
+        "cost": 16.42362684765965,
+        "empirical_rounding_interval": [
+          0.9986760371152046,
+          0.998680522480737
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 28,
+      "rep": 5,
+      "native_probability": 0.998658,
+      "audit": {
+        "index": 28,
+        "selection": [
+          15,
+          46,
+          42,
+          18,
+          39
+        ],
+        "cost": 16.42362684765965,
+        "empirical_rounding_interval": [
+          0.9986760371152046,
+          0.998680522480737
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 29,
+      "rep": 1,
+      "native_probability": 0.991608,
+      "audit": {
+        "index": 29,
+        "selection": [
+          40,
+          71,
+          32,
+          23,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 61.49415281623659,
+        "empirical_rounding_interval": [
+          0.991643364069007,
+          0.9916649572235093
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 29,
+      "rep": 2,
+      "native_probability": 0.991628,
+      "audit": {
+        "index": 29,
+        "selection": [
+          40,
+          71,
+          32,
+          23,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 61.49415281623659,
+        "empirical_rounding_interval": [
+          0.991643364069007,
+          0.9916649572235093
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 29,
+      "rep": 3,
+      "native_probability": 0.991631,
+      "audit": {
+        "index": 29,
+        "selection": [
+          40,
+          71,
+          32,
+          23,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 61.49415281623659,
+        "empirical_rounding_interval": [
+          0.991643364069007,
+          0.9916649572235093
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 29,
+      "rep": 4,
+      "native_probability": 0.991577,
+      "audit": {
+        "index": 29,
+        "selection": [
+          40,
+          71,
+          32,
+          23,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 61.49415281623659,
+        "empirical_rounding_interval": [
+          0.991643364069007,
+          0.9916649572235093
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 29,
+      "rep": 5,
+      "native_probability": 0.991566,
+      "audit": {
+        "index": 29,
+        "selection": [
+          40,
+          71,
+          32,
+          23,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 61.49415281623659,
+        "empirical_rounding_interval": [
+          0.991643364069007,
+          0.9916649572235093
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 30,
+      "rep": 1,
+      "native_probability": 0.990121,
+      "audit": {
+        "index": 30,
+        "selection": [
+          40,
+          41,
+          32,
+          83,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 52.11434809687559,
+        "empirical_rounding_interval": [
+          0.9899409115655736,
+          0.9899574455156326
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 30,
+      "rep": 2,
+      "native_probability": 0.990044,
+      "audit": {
+        "index": 30,
+        "selection": [
+          40,
+          41,
+          32,
+          83,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 52.11434809687559,
+        "empirical_rounding_interval": [
+          0.9899409115655736,
+          0.9899574455156326
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 30,
+      "rep": 3,
+      "native_probability": 0.990212,
+      "audit": {
+        "index": 30,
+        "selection": [
+          40,
+          41,
+          32,
+          83,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 52.11434809687559,
+        "empirical_rounding_interval": [
+          0.9899409115655736,
+          0.9899574455156326
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 30,
+      "rep": 4,
+      "native_probability": 0.990034,
+      "audit": {
+        "index": 30,
+        "selection": [
+          40,
+          41,
+          32,
+          83,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 52.11434809687559,
+        "empirical_rounding_interval": [
+          0.9899409115655736,
+          0.9899574455156326
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 30,
+      "rep": 5,
+      "native_probability": 0.990027,
+      "audit": {
+        "index": 30,
+        "selection": [
+          40,
+          41,
+          32,
+          83,
+          74,
+          45,
+          76,
+          97,
+          88,
+          9
+        ],
+        "cost": 52.11434809687559,
+        "empirical_rounding_interval": [
+          0.9899409115655736,
+          0.9899574455156326
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 31,
+      "rep": 1,
+      "native_probability": 0.990023,
+      "audit": {
+        "index": 31,
+        "selection": [
+          170,
+          81,
+          162,
+          163,
+          84,
+          155,
+          136,
+          147,
+          58,
+          19
+        ],
+        "cost": 70.90135704791494,
+        "empirical_rounding_interval": [
+          0.9899507612945346,
+          0.9899885591485147
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 31,
+      "rep": 2,
+      "native_probability": 0.990053,
+      "audit": {
+        "index": 31,
+        "selection": [
+          170,
+          81,
+          162,
+          163,
+          84,
+          155,
+          136,
+          147,
+          58,
+          19
+        ],
+        "cost": 70.90135704791494,
+        "empirical_rounding_interval": [
+          0.9899507612945346,
+          0.9899885591485147
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 31,
+      "rep": 3,
+      "native_probability": 0.990034,
+      "audit": {
+        "index": 31,
+        "selection": [
+          170,
+          81,
+          162,
+          163,
+          84,
+          155,
+          136,
+          147,
+          58,
+          19
+        ],
+        "cost": 70.90135704791494,
+        "empirical_rounding_interval": [
+          0.9899507612945346,
+          0.9899885591485147
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 31,
+      "rep": 4,
+      "native_probability": 0.990085,
+      "audit": {
+        "index": 31,
+        "selection": [
+          170,
+          81,
+          162,
+          163,
+          84,
+          155,
+          136,
+          147,
+          58,
+          19
+        ],
+        "cost": 70.90135704791494,
+        "empirical_rounding_interval": [
+          0.9899507612945346,
+          0.9899885591485147
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 31,
+      "rep": 5,
+      "native_probability": 0.990014,
+      "audit": {
+        "index": 31,
+        "selection": [
+          170,
+          81,
+          162,
+          163,
+          84,
+          155,
+          136,
+          147,
+          58,
+          19
+        ],
+        "cost": 70.90135704791494,
+        "empirical_rounding_interval": [
+          0.9899507612945346,
+          0.9899885591485147
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 32,
+      "rep": 1,
+      "native_probability": 0.990433,
+      "audit": {
+        "index": 32,
+        "selection": [
+          170,
+          1,
+          162,
+          3,
+          84,
+          175,
+          136,
+          147,
+          178,
+          9
+        ],
+        "cost": 56.742881637621,
+        "empirical_rounding_interval": [
+          0.9903706128029027,
+          0.9904075019191059
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 32,
+      "rep": 2,
+      "native_probability": 0.99028,
+      "audit": {
+        "index": 32,
+        "selection": [
+          170,
+          1,
+          162,
+          3,
+          84,
+          175,
+          136,
+          147,
+          178,
+          9
+        ],
+        "cost": 56.742881637621,
+        "empirical_rounding_interval": [
+          0.9903706128029027,
+          0.9904075019191059
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 32,
+      "rep": 3,
+      "native_probability": 0.990434,
+      "audit": {
+        "index": 32,
+        "selection": [
+          170,
+          1,
+          162,
+          3,
+          84,
+          175,
+          136,
+          147,
+          178,
+          9
+        ],
+        "cost": 56.742881637621,
+        "empirical_rounding_interval": [
+          0.9903706128029027,
+          0.9904075019191059
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 32,
+      "rep": 4,
+      "native_probability": 0.990423,
+      "audit": {
+        "index": 32,
+        "selection": [
+          170,
+          1,
+          162,
+          3,
+          84,
+          175,
+          136,
+          147,
+          178,
+          9
+        ],
+        "cost": 56.742881637621,
+        "empirical_rounding_interval": [
+          0.9903706128029027,
+          0.9904075019191059
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 32,
+      "rep": 5,
+      "native_probability": 0.990408,
+      "audit": {
+        "index": 32,
+        "selection": [
+          170,
+          1,
+          162,
+          3,
+          84,
+          175,
+          136,
+          147,
+          178,
+          9
+        ],
+        "cost": 56.742881637621,
+        "empirical_rounding_interval": [
+          0.9903706128029027,
+          0.9904075019191059
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 33,
+      "rep": 1,
+      "native_probability": 0.990497,
+      "audit": {
+        "index": 33,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          139
+        ],
+        "cost": 111.55832579278774,
+        "empirical_rounding_interval": [
+          0.9905018105375113,
+          0.9905243591190406
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 33,
+      "rep": 2,
+      "native_probability": 0.990259,
+      "audit": {
+        "index": 33,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          139
+        ],
+        "cost": 111.55832579278774,
+        "empirical_rounding_interval": [
+          0.9905018105375113,
+          0.9905243591190406
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 33,
+      "rep": 3,
+      "native_probability": 0.990452,
+      "audit": {
+        "index": 33,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          139
+        ],
+        "cost": 111.55832579278774,
+        "empirical_rounding_interval": [
+          0.9905018105375113,
+          0.9905243591190406
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 33,
+      "rep": 4,
+      "native_probability": 0.99046,
+      "audit": {
+        "index": 33,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          139
+        ],
+        "cost": 111.55832579278774,
+        "empirical_rounding_interval": [
+          0.9905018105375113,
+          0.9905243591190406
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 33,
+      "rep": 5,
+      "native_probability": 0.990699,
+      "audit": {
+        "index": 33,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          139
+        ],
+        "cost": 111.55832579278774,
+        "empirical_rounding_interval": [
+          0.9905018105375113,
+          0.9905243591190406
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 34,
+      "rep": 1,
+      "native_probability": 0.995726,
+      "audit": {
+        "index": 34,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          59
+        ],
+        "cost": 109.96322526029743,
+        "empirical_rounding_interval": [
+          0.9957206525188763,
+          0.9957393599298092
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 34,
+      "rep": 2,
+      "native_probability": 0.995758,
+      "audit": {
+        "index": 34,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          59
+        ],
+        "cost": 109.96322526029743,
+        "empirical_rounding_interval": [
+          0.9957206525188763,
+          0.9957393599298092
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 34,
+      "rep": 3,
+      "native_probability": 0.995775,
+      "audit": {
+        "index": 34,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          59
+        ],
+        "cost": 109.96322526029743,
+        "empirical_rounding_interval": [
+          0.9957206525188763,
+          0.9957393599298092
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 34,
+      "rep": 4,
+      "native_probability": 0.995686,
+      "audit": {
+        "index": 34,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          59
+        ],
+        "cost": 109.96322526029743,
+        "empirical_rounding_interval": [
+          0.9957206525188763,
+          0.9957393599298092
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 34,
+      "rep": 5,
+      "native_probability": 0.995711,
+      "audit": {
+        "index": 34,
+        "selection": [
+          60,
+          101,
+          102,
+          163,
+          104,
+          125,
+          26,
+          7,
+          68,
+          49,
+          130,
+          11,
+          112,
+          33,
+          14,
+          75,
+          136,
+          37,
+          58,
+          59
+        ],
+        "cost": 109.96322526029743,
+        "empirical_rounding_interval": [
+          0.9957206525188763,
+          0.9957393599298092
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 35,
+      "rep": 1,
+      "native_probability": 0.990054,
+      "audit": {
+        "index": 35,
+        "selection": [
+          30,
+          271,
+          2,
+          33,
+          4,
+          35,
+          126,
+          127,
+          68,
+          9,
+          100,
+          11,
+          162,
+          283,
+          254,
+          195,
+          256,
+          227,
+          18,
+          19,
+          110,
+          171,
+          22,
+          143,
+          54,
+          145,
+          116,
+          27,
+          238,
+          59
+        ],
+        "cost": 193.77422296092274,
+        "empirical_rounding_interval": [
+          0.9899632758777244,
+          0.9899797474966935
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 35,
+      "rep": 2,
+      "native_probability": 0.990052,
+      "audit": {
+        "index": 35,
+        "selection": [
+          30,
+          271,
+          2,
+          33,
+          4,
+          35,
+          126,
+          127,
+          68,
+          9,
+          100,
+          11,
+          162,
+          193,
+          254,
+          195,
+          226,
+          227,
+          18,
+          19,
+          110,
+          171,
+          22,
+          143,
+          54,
+          145,
+          116,
+          27,
+          238,
+          299
+        ],
+        "cost": 193.5450451741106,
+        "empirical_rounding_interval": [
+          0.9898466647440006,
+          0.9899130219588494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 35,
+      "rep": 3,
+      "native_probability": 0.99,
+      "audit": {
+        "index": 35,
+        "selection": [
+          30,
+          271,
+          2,
+          33,
+          4,
+          35,
+          126,
+          127,
+          68,
+          9,
+          100,
+          11,
+          162,
+          193,
+          254,
+          195,
+          226,
+          227,
+          18,
+          19,
+          110,
+          171,
+          22,
+          143,
+          54,
+          145,
+          116,
+          27,
+          238,
+          299
+        ],
+        "cost": 193.5450451741106,
+        "empirical_rounding_interval": [
+          0.9898466647440006,
+          0.9899130219588494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 35,
+      "rep": 4,
+      "native_probability": 0.990048,
+      "audit": {
+        "index": 35,
+        "selection": [
+          30,
+          271,
+          2,
+          33,
+          4,
+          35,
+          126,
+          127,
+          68,
+          9,
+          100,
+          11,
+          162,
+          193,
+          254,
+          195,
+          256,
+          227,
+          288,
+          19,
+          110,
+          171,
+          22,
+          143,
+          54,
+          145,
+          116,
+          27,
+          238,
+          299
+        ],
+        "cost": 193.75694697044798,
+        "empirical_rounding_interval": [
+          0.9898998407288795,
+          0.9899657920696165
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 35,
+      "rep": 5,
+      "native_probability": 0.990081,
+      "audit": {
+        "index": 35,
+        "selection": [
+          30,
+          271,
+          2,
+          33,
+          4,
+          35,
+          126,
+          127,
+          68,
+          9,
+          100,
+          11,
+          162,
+          193,
+          254,
+          195,
+          226,
+          227,
+          18,
+          19,
+          110,
+          171,
+          22,
+          143,
+          54,
+          145,
+          116,
+          27,
+          238,
+          299
+        ],
+        "cost": 193.5450451741106,
+        "empirical_rounding_interval": [
+          0.9898466647440006,
+          0.9899130219588494
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 36,
+      "rep": 1,
+      "native_probability": 0.990294,
+      "audit": {
+        "index": 36,
+        "selection": [
+          30,
+          61,
+          62,
+          33,
+          4,
+          125,
+          126,
+          127,
+          68,
+          159,
+          100,
+          161,
+          162,
+          283,
+          164,
+          195,
+          226,
+          227,
+          168,
+          19,
+          170,
+          171,
+          22,
+          143,
+          54,
+          145,
+          236,
+          237,
+          58,
+          59
+        ],
+        "cost": 159.2809942030811,
+        "empirical_rounding_interval": [
+          0.9900604746829598,
+          0.9901219279343441
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 36,
+      "rep": 2,
+      "native_probability": 0.990206,
+      "audit": {
+        "index": 36,
+        "selection": [
+          30,
+          61,
+          62,
+          33,
+          4,
+          125,
+          126,
+          127,
+          68,
+          159,
+          100,
+          161,
+          162,
+          283,
+          164,
+          195,
+          226,
+          227,
+          168,
+          19,
+          170,
+          171,
+          22,
+          143,
+          54,
+          145,
+          236,
+          237,
+          58,
+          59
+        ],
+        "cost": 159.2809942030811,
+        "empirical_rounding_interval": [
+          0.9900604746829598,
+          0.9901219279343441
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 36,
+      "rep": 3,
+      "native_probability": 0.99025,
+      "audit": {
+        "index": 36,
+        "selection": [
+          30,
+          61,
+          62,
+          33,
+          4,
+          125,
+          126,
+          127,
+          68,
+          159,
+          100,
+          161,
+          162,
+          283,
+          164,
+          195,
+          226,
+          227,
+          168,
+          19,
+          170,
+          171,
+          22,
+          143,
+          54,
+          145,
+          236,
+          237,
+          58,
+          59
+        ],
+        "cost": 159.2809942030811,
+        "empirical_rounding_interval": [
+          0.9900604746829598,
+          0.9901219279343441
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 36,
+      "rep": 4,
+      "native_probability": 0.99015,
+      "audit": {
+        "index": 36,
+        "selection": [
+          30,
+          61,
+          62,
+          33,
+          4,
+          125,
+          126,
+          127,
+          68,
+          159,
+          100,
+          161,
+          162,
+          283,
+          164,
+          195,
+          226,
+          227,
+          168,
+          19,
+          170,
+          171,
+          22,
+          143,
+          54,
+          145,
+          236,
+          237,
+          58,
+          59
+        ],
+        "cost": 159.2809942030811,
+        "empirical_rounding_interval": [
+          0.9900604746829598,
+          0.9901219279343441
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 36,
+      "rep": 5,
+      "native_probability": 0.990011,
+      "audit": {
+        "index": 36,
+        "selection": [
+          30,
+          61,
+          62,
+          33,
+          4,
+          125,
+          126,
+          127,
+          68,
+          159,
+          100,
+          161,
+          162,
+          283,
+          164,
+          195,
+          226,
+          227,
+          168,
+          19,
+          170,
+          171,
+          22,
+          143,
+          54,
+          145,
+          236,
+          237,
+          58,
+          59
+        ],
+        "cost": 159.2809942030811,
+        "empirical_rounding_interval": [
+          0.9900604746829598,
+          0.9901219279343441
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 37,
+      "rep": 1,
+      "native_probability": 0.990055,
+      "audit": {
+        "index": 37,
+        "selection": [
+          360,
+          361,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          137,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          110,
+          351,
+          72,
+          73,
+          34,
+          395,
+          156,
+          397,
+          318,
+          39
+        ],
+        "cost": 214.89717184986242,
+        "empirical_rounding_interval": [
+          0.9898544326863927,
+          0.9899497800747756
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 37,
+      "rep": 2,
+      "native_probability": 0.990133,
+      "audit": {
+        "index": 37,
+        "selection": [
+          360,
+          361,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          137,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          110,
+          351,
+          72,
+          73,
+          34,
+          395,
+          156,
+          397,
+          318,
+          39
+        ],
+        "cost": 214.89717184986242,
+        "empirical_rounding_interval": [
+          0.9898544326863927,
+          0.9899497800747756
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 37,
+      "rep": 3,
+      "native_probability": 0.990005,
+      "audit": {
+        "index": 37,
+        "selection": [
+          360,
+          361,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          137,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          110,
+          351,
+          72,
+          73,
+          34,
+          395,
+          156,
+          397,
+          318,
+          39
+        ],
+        "cost": 214.89717184986242,
+        "empirical_rounding_interval": [
+          0.9898544326863927,
+          0.9899497800747756
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 37,
+      "rep": 4,
+      "native_probability": 0.990115,
+      "audit": {
+        "index": 37,
+        "selection": [
+          360,
+          361,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          137,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          110,
+          351,
+          72,
+          73,
+          34,
+          395,
+          156,
+          397,
+          318,
+          39
+        ],
+        "cost": 214.89717184986242,
+        "empirical_rounding_interval": [
+          0.9898544326863927,
+          0.9899497800747756
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 37,
+      "rep": 5,
+      "native_probability": 0.990019,
+      "audit": {
+        "index": 37,
+        "selection": [
+          360,
+          361,
+          42,
+          123,
+          324,
+          285,
+          166,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          137,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          110,
+          351,
+          72,
+          73,
+          34,
+          395,
+          156,
+          397,
+          318,
+          39
+        ],
+        "cost": 214.89717184986242,
+        "empirical_rounding_interval": [
+          0.9898544326863927,
+          0.9899497800747756
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 38,
+      "rep": 1,
+      "native_probability": 0.99003,
+      "audit": {
+        "index": 38,
+        "selection": [
+          360,
+          241,
+          322,
+          123,
+          324,
+          285,
+          86,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          217,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          230,
+          351,
+          72,
+          73,
+          34,
+          395,
+          236,
+          397,
+          358,
+          39
+        ],
+        "cost": 196.00281922341733,
+        "empirical_rounding_interval": [
+          0.9899646287036263,
+          0.9899902754324751
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 38,
+      "rep": 2,
+      "native_probability": 0.990105,
+      "audit": {
+        "index": 38,
+        "selection": [
+          360,
+          241,
+          322,
+          123,
+          324,
+          285,
+          86,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          217,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          230,
+          351,
+          72,
+          73,
+          34,
+          395,
+          236,
+          397,
+          358,
+          39
+        ],
+        "cost": 196.00281922341733,
+        "empirical_rounding_interval": [
+          0.9899646287036263,
+          0.9899902754324751
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 38,
+      "rep": 3,
+      "native_probability": 0.990084,
+      "audit": {
+        "index": 38,
+        "selection": [
+          360,
+          241,
+          322,
+          123,
+          324,
+          285,
+          86,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          217,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          230,
+          351,
+          72,
+          73,
+          34,
+          395,
+          236,
+          397,
+          358,
+          39
+        ],
+        "cost": 196.00281922341733,
+        "empirical_rounding_interval": [
+          0.9899646287036263,
+          0.9899902754324751
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 38,
+      "rep": 4,
+      "native_probability": 0.990036,
+      "audit": {
+        "index": 38,
+        "selection": [
+          360,
+          241,
+          322,
+          123,
+          324,
+          285,
+          86,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          217,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          230,
+          351,
+          72,
+          73,
+          34,
+          395,
+          236,
+          397,
+          358,
+          39
+        ],
+        "cost": 196.00281922341733,
+        "empirical_rounding_interval": [
+          0.9899646287036263,
+          0.9899902754324751
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 38,
+      "rep": 5,
+      "native_probability": 0.990029,
+      "audit": {
+        "index": 38,
+        "selection": [
+          360,
+          241,
+          322,
+          123,
+          324,
+          285,
+          86,
+          207,
+          48,
+          209,
+          290,
+          331,
+          332,
+          53,
+          134,
+          255,
+          176,
+          217,
+          378,
+          99,
+          340,
+          21,
+          222,
+          223,
+          384,
+          305,
+          146,
+          347,
+          68,
+          309,
+          230,
+          351,
+          72,
+          73,
+          34,
+          395,
+          236,
+          397,
+          358,
+          39
+        ],
+        "cost": 196.00281922341733,
+        "empirical_rounding_interval": [
+          0.9899646287036263,
+          0.9899902754324751
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 39,
+      "rep": 1,
+      "native_probability": 0.990021,
+      "audit": {
+        "index": 39,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          204,
+          405,
+          206,
+          7,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          65,
+          116,
+          467,
+          468,
+          369,
+          270,
+          21,
+          372,
+          123,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          381,
+          182,
+          333,
+          334,
+          35,
+          386,
+          137,
+          88,
+          139,
+          40,
+          241,
+          292,
+          343,
+          144,
+          495,
+          496,
+          197,
+          98,
+          199
+        ],
+        "cost": 321.7005470066546,
+        "empirical_rounding_interval": [
+          0.9898146164437607,
+          0.9899671155742324
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 39,
+      "rep": 2,
+      "native_probability": 0.990046,
+      "audit": {
+        "index": 39,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          204,
+          405,
+          206,
+          7,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          65,
+          116,
+          467,
+          468,
+          369,
+          270,
+          21,
+          372,
+          123,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          381,
+          182,
+          333,
+          334,
+          35,
+          386,
+          137,
+          88,
+          139,
+          40,
+          241,
+          292,
+          343,
+          144,
+          495,
+          496,
+          197,
+          98,
+          199
+        ],
+        "cost": 321.7005470066546,
+        "empirical_rounding_interval": [
+          0.9898146164437607,
+          0.9899671155742324
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 39,
+      "rep": 3,
+      "native_probability": 0.990014,
+      "audit": {
+        "index": 39,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          204,
+          405,
+          206,
+          7,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          65,
+          116,
+          467,
+          468,
+          369,
+          270,
+          21,
+          372,
+          123,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          381,
+          182,
+          333,
+          334,
+          35,
+          386,
+          137,
+          88,
+          139,
+          40,
+          241,
+          292,
+          343,
+          144,
+          495,
+          496,
+          197,
+          98,
+          199
+        ],
+        "cost": 321.7005470066546,
+        "empirical_rounding_interval": [
+          0.9898146164437607,
+          0.9899671155742324
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 39,
+      "rep": 4,
+      "native_probability": 0.990026,
+      "audit": {
+        "index": 39,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          204,
+          405,
+          206,
+          7,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          270,
+          171,
+          372,
+          123,
+          424,
+          425,
+          426,
+          477,
+          378,
+          379,
+          380,
+          381,
+          182,
+          333,
+          334,
+          35,
+          386,
+          137,
+          88,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          98,
+          199
+        ],
+        "cost": 321.87149782122964,
+        "empirical_rounding_interval": [
+          0.9897222363483908,
+          0.989876037385484
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 39,
+      "rep": 5,
+      "native_probability": 0.99,
+      "audit": {
+        "index": 39,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          204,
+          405,
+          206,
+          7,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          65,
+          116,
+          467,
+          468,
+          369,
+          270,
+          171,
+          372,
+          123,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          381,
+          182,
+          333,
+          334,
+          35,
+          386,
+          187,
+          88,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          98,
+          199
+        ],
+        "cost": 322.090332813285,
+        "empirical_rounding_interval": [
+          0.9897517998132666,
+          0.9899051898911513
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 40,
+      "rep": 1,
+      "native_probability": 0.990206,
+      "audit": {
+        "index": 40,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          454,
+          405,
+          206,
+          207,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          70,
+          371,
+          372,
+          473,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          131,
+          432,
+          333,
+          334,
+          185,
+          86,
+          137,
+          388,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          48,
+          349
+        ],
+        "cost": 290.9406141506159,
+        "empirical_rounding_interval": [
+          0.990050826746288,
+          0.9900915880716411
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 40,
+      "rep": 2,
+      "native_probability": 0.99007,
+      "audit": {
+        "index": 40,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          454,
+          405,
+          206,
+          207,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          70,
+          371,
+          122,
+          473,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          131,
+          432,
+          333,
+          334,
+          185,
+          86,
+          137,
+          388,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          48,
+          349
+        ],
+        "cost": 290.72163522016245,
+        "empirical_rounding_interval": [
+          0.9897163061588186,
+          0.9898837055353518
+        ],
+        "bins": 65536,
+        "numerical_guard": 1e-07,
+        "verdict": "below_0.99"
+      }
+    },
+    {
+      "index": 40,
+      "rep": 3,
+      "native_probability": 0.990228,
+      "audit": {
+        "index": 40,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          454,
+          405,
+          206,
+          207,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          70,
+          371,
+          372,
+          473,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          131,
+          432,
+          333,
+          334,
+          185,
+          86,
+          137,
+          388,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          48,
+          349
+        ],
+        "cost": 290.9406141506159,
+        "empirical_rounding_interval": [
+          0.990050826746288,
+          0.9900915880716411
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 40,
+      "rep": 4,
+      "native_probability": 0.990097,
+      "audit": {
+        "index": 40,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          454,
+          405,
+          206,
+          207,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          70,
+          371,
+          372,
+          473,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          131,
+          432,
+          333,
+          334,
+          185,
+          86,
+          137,
+          388,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          48,
+          349
+        ],
+        "cost": 290.9406141506159,
+        "empirical_rounding_interval": [
+          0.990050826746288,
+          0.9900915880716411
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    },
+    {
+      "index": 40,
+      "rep": 5,
+      "native_probability": 0.990084,
+      "audit": {
+        "index": 40,
+        "selection": [
+          50,
+          401,
+          452,
+          403,
+          454,
+          405,
+          206,
+          207,
+          358,
+          59,
+          310,
+          461,
+          362,
+          413,
+          314,
+          365,
+          116,
+          467,
+          468,
+          369,
+          70,
+          371,
+          372,
+          473,
+          424,
+          425,
+          426,
+          177,
+          378,
+          379,
+          380,
+          131,
+          432,
+          333,
+          334,
+          185,
+          86,
+          137,
+          388,
+          139,
+          40,
+          241,
+          292,
+          143,
+          144,
+          495,
+          496,
+          197,
+          48,
+          349
+        ],
+        "cost": 290.9406141506159,
+        "empirical_rounding_interval": [
+          0.990050826746288,
+          0.9900915880716411
+        ],
+        "bins": 262144,
+        "numerical_guard": 1e-07,
+        "verdict": "above_0.99"
+      }
+    }
+  ]
+}

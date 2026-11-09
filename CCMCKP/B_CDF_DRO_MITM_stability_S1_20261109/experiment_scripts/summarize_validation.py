@@ -1,5 +1,6 @@
 import pathlib,json,gzip,hashlib,numpy as np
 H=pathlib.Path(__file__).resolve().parent;D=H/'validation';reg=json.load(open(D/'REGISTRATION.json'));cases=reg['cases'];B=pathlib.Path('/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_ablation_20261016/results');rows=[];problems=[]
+raw_registry=json.load(open(H/'frozen/original_experiment/source_inputs.json'))
 for c in cases:
  i=c['index'];old=[json.load(gzip.open(p,'rt')) for p in B.glob(f'B_CDF_DRO_MITM_{i:02d}_r*.json.gz')];oldcost=[d['selected']['cost'] for d in old if d.get('selected')];records=[];failed=[]
  for rep in range(1,6):
@@ -8,6 +9,10 @@ for c in cases:
   term=json.load(open(terminal))
   if term['exit']!=0 or not side.exists():failed.append(rep);continue
   run=json.load(open(side));d=json.load(gzip.open(D/(stem+'.json.gz'),'rt'));sel=run['selected'];good=sel is not None and run['within_budget'] and sel['probability']>=.99 and run['source_sha256']==reg['source_sha256'] and d['status']=='completed'
+  if good:
+   prefix='/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance']+'/'
+   expected_inputs={pathlib.Path(k).name:v for k,v in raw_registry.items() if k.startswith(prefix)}
+   good=run['input_sha256']==expected_inputs
   if good:
    import pickle
    raw=pathlib.Path('/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark')/c['instance'];cost=np.loadtxt(raw/'cost.txt');groups=pickle.load(open(raw/'node_to_factor.pkl','rb'));groups=list(groups.values()) if isinstance(groups,dict) else groups;chosen=set(sel['selection'])
