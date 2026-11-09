@@ -3,6 +3,11 @@
   "excludes_self": true,
   "files": [
     {
+      "path": "audit_f001_progress.py",
+      "bytes": 2384,
+      "sha256": "c26e082deb94fc088f20dc7bf1ccd233db882a9118fc2d2d396483046459f3f7"
+    },
+    {
       "path": "BASELINE_METRICS.json",
       "bytes": 42884,
       "sha256": "9f0ae0148908d981dd57c943f3e1b8af905fa6395198ccf2cea1d6fce3f7bde5"
@@ -58,9 +63,29 @@
       "sha256": "0c88b48be4e18e4fe643af15e407be68da65225775a0b203b2d3273c9f24573e"
     },
     {
+      "path": "formal/F001_I002_40x30/AUDIT_PROGRESS.json",
+      "bytes": 7821,
+      "sha256": "4d08552347ca3baf2a6b824f7465960db94db969326fabaa612e0afd5e9a9a39"
+    },
+    {
+      "path": "formal/F001_I002_40x30/LAUNCH.json",
+      "bytes": 228,
+      "sha256": "eff590aa920d58ce72e484f84880bcca5998a4c790b6834ac1af61a1d54fd9e9"
+    },
+    {
       "path": "formal/F001_I002_40x30/REGISTRATION.json",
       "bytes": 3804,
       "sha256": "b7a54e4017ecad0be2785bc493657b99df53d53ce097e1427ada37da5d4c26d2"
+    },
+    {
+      "path": "formal/F001_I002_40x30/SEARCH_PROGRESS.json",
+      "bytes": 100,
+      "sha256": "850bb00333d53f81cb0b6ebe57d558f6b17973991ad5c1314665b1a42f881822"
+    },
+    {
+      "path": "formal/F001_I002_40x30/STAGE.json",
+      "bytes": 72,
+      "sha256": "600fed7a6281123229791b0ffc3f246004884903c8726e7beb1e566f86e2608d"
     },
     {
       "path": "GOAL_AND_PROTOCOL.json",
@@ -69,8 +94,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 13749,
-      "sha256": "07cc0e2f231731820c52d97717b08490970a2d762aefcae109049bdd81dda421"
+      "bytes": 13842,
+      "sha256": "ab814c73fa2b9dd1991eb78af9e884c45b0a0d818192fe3a9f7245458ba08382"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -634,8 +659,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 612,
-      "sha256": "c06e901841601fcd61e267917cc69efed60ab6cc2f48f9689cf636fc50b638b5"
+      "bytes": 871,
+      "sha256": "f98dbb2c776fe2e7d2e794921ddd8772394511abe31b1c25d5186ef72d68899e"
     },
     {
       "path": "reference_loader.py",
