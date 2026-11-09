@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "instance": "APP_10_20_500_",
+  "capacity": 16,
+  "selection": [
+    170,
+    1,
+    162,
+    3,
+    84,
+    175,
+    136,
+    147,
+    178,
+    9
+  ],
+  "witness_cost_exact": "11348576327524198071/200000000000000000",
+  "witness_cost_float": 56.74288163762099,
+  "excluded_cost_line_exact": "56742880637621/1000000000000",
+  "joint_optimum_interval": "(excluded cost line, witness exact cost]",
+  "interval_width_exact": "199999998071/200000000000000000",
+  "interval_width": 9.99999990355e-07,
+  "raw_certificate_recounted": true,
+  "raw_lower": 0.9900346109874341,
+  "native_original_LSS_point": 0.9897297,
+  "native_key": "332cfd33dc730566e03077b64f9817a26c29352f27b47c9be3a8787365f29afd",
+  "native_record_sha256": "8a6b1adeec21c3c00ab27dd8cdea98defc8a237d0f9a8e4124bf4a6bdda6b4a3",
+  "native_reused_by_identical_identity": true,
+  "new_MC_calls": 0,
+  "source_of_witness": "existing independent I002 development run; used in this external audit only, never passed to branch search or F001 optimizer",
+  "exclusion_audit_sha256": "1b323453856723ebd3829a58b7da2670dbcdd79b2ef28fc77f6be419b692e444",
+  "cost_note": "proof and witness use exact source decimal costs; printed floating cost agrees up to machine rounding"
+}

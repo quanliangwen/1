@@ -11,6 +11,10 @@ for p in sorted((F/'search').glob('*.terminal.json')):
   for name,sha in m['input_sha256'].items():
    if rawref['/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance']+'/'+name]!=sha:raise RuntimeError('Input drift')
   if any(q.endswith('_dist.txt') or '/lss_cache/' in q or q.endswith('/BASELINE_S10.json') for q in m['opened_task_paths']):raise RuntimeError('Optimizer read validation/history')
+  bench=(Path('/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark')/c['instance']).resolve()
+  for opened in m['opened_task_paths']:
+   q=Path(opened)
+   if bench in q.parents and q.name not in m['input_sha256']:raise RuntimeError('Optimizer read an unregistered benchmark file')
   if d['status']!='completed':raise RuntimeError('Exit0 with unfinished output')
   for q in d['candidate_shortlist']:
    cert=q['certificate']

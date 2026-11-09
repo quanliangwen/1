@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "instance": "APP_10_20_500_",
+  "capacity": "16",
+  "cost_limit": "56742880637621/1000000000000",
+  "total_combinations": "10240000000000",
+  "independent_integer_certificates_recomputed": 349883,
+  "verified_visited_nodes": 512681,
+  "covered_combinations": "10240000000000",
+  "pending_combinations": "0",
+  "raw_cost_line_excluded": true,
+  "scope": "raw empirical predicate at declared exact-decimal cost line only; any joint raw/LSS feasible choice must also satisfy raw, no positive LSS-feasibility claim",
+  "method": "different sorted-threshold CDF construction, shifted balanced integer convolution, exact decimal costs and prefix-free complete-space partition",
+  "result_sha256": "2b33f3a17beb9bac51a23f87ac4bae501d84e6fc2fa9209c2ac985b5fd882187",
+  "proof_sha256": "4041e6c04f4a44fb84d7d581ce14407ea6889570df59b78be404401575916a4d",
+  "seconds": 102.49636059440672
+}

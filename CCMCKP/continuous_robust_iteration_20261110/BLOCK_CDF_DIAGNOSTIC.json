@@ -1,0 +1,1245 @@
+{
+  "rows": [
+    {
+      "index": 30,
+      "T": 37.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 500,
+      "seconds": 0.07891193218529224,
+      "curves": {
+        "old": {
+          "cost_line": 52.1143480968756,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -2.401748512050094e-06,
+            "upper": 0.9999975982543722,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -2.401748512050094e-06,
+              "upper": 0.9999975982543722,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.0008202916136985658,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.0029319818975051554,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.015702854370117057,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.06286037648408829,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 0.25708539319238977,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 0.8378856192371253,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 3.0424440634312058,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 10.111987474995555,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 37.0160867572602,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 118.44328009902205,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 405.4684520675488,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 52.60314146239581,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -2.401748512050094e-06,
+            "upper": 0.9999975982543722,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -2.401748512050094e-06,
+              "upper": 0.9999975982543722,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.0008691709502505864,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.003078619907161217,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.01619164773563727,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.06432675658064892,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 0.2619733268475919,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 0.8525494202027315,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 3.091323399983226,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 10.258625484651619,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 37.504880122780406,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 119.90966019558267,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 410.35638572275093,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 32,
+      "T": 16.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 2000,
+      "seconds": 0.2826696326956153,
+      "curves": {
+        "old": {
+          "cost_line": 56.5585972002819,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -2.8298263772335635e-09,
+            "upper": 0.9999999971701736,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -2.8298263772335635e-09,
+              "upper": 0.9999999971701736,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.0007534171508611518,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.002331703321324449,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.007894505217232256,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.023680659157829964,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 0.07804148982998338,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 0.31072641204787166,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 1.3416129881462582,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 6.116511607559534,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 35.20846351505406,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 126.82748871171658,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 448.88028801531436,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 56.742880637621,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -2.8298263772335635e-09,
+            "upper": 0.9999999971701736,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -2.8298263772335635e-09,
+              "upper": 0.9999999971701736,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.0007718454945950604,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.0023869883525261745,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.008078788654571345,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.02423350946984723,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 0.07988432420337427,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 0.31625491516804427,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 1.3600413318801672,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 6.171796638761261,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 35.39274695239315,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 127.38033902373384,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 450.7231223887053,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 35,
+      "T": 58.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 1500,
+      "seconds": 0.2392491800710559,
+      "curves": {
+        "old": {
+          "cost_line": 193.774222960923,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.0009167614505467307,
+            "upper": 0.9990836586468457,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.0009167614505467307,
+              "upper": 0.9990836586468457,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.0071426520588293695,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.024096097491691986,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.09035479245413362,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.29911153718438077,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.0011972626779724,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 2.836316754594452,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 9.344912482901517,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 30.520896771113346,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 133.7686869635177,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 450.1969302174403,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1571.4176503664019,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 194.09620811316657,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.0009167614505467307,
+            "upper": 0.9990836586468457,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.0009167614505467307,
+              "upper": 0.9990836586468457,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.007174850574053726,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.024192693037365053,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.0906767776063772,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.3000774926411115,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.0044171142004081,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 2.8459763091617587,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 9.377110998125875,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 30.617492316786414,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 134.09067211576127,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 451.16288567417104,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1574.6375018888375,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 37,
+      "T": 85.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 2000,
+      "seconds": 0.3298518881201744,
+      "curves": {
+        "old": {
+          "cost_line": 214.897171849862,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.00023105797187881306,
+            "upper": 0.9997689687199586,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.00023105797187881306,
+              "upper": 0.9997689687199586,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.012322031437393448,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.03939809367160174,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.1371511516569982,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.40697609536922896,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.242576502975981,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 3.3280564065772635,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 10.317394367283534,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 32.8559886331604,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 138.95078890884514,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 469.1333724293677,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1648.0238989553927,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 215.17141357693504,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.00023105797187881306,
+            "upper": 0.9997689687199586,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.00023105797187881306,
+              "upper": 0.9997689687199586,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.012349455610100753,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.039480366189723656,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.13742539338407128,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.40779882055044814,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.2453189202467114,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 3.336283658389455,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 10.34481853999084,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 32.93826115128231,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 139.2250306359182,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 469.9560976105869,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1650.766316226123,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 38,
+      "T": 95.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 2000,
+      "seconds": 0.33172687143087387,
+      "curves": {
+        "old": {
+          "cost_line": 196.002819223417,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -1.250236622561355e-05,
+            "upper": 0.9999874977119286,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -1.250236622561355e-05,
+              "upper": 0.9999874977119286,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.013614442809608204,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.04167440447842443,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.13881549129412624,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.40354196883223714,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.230021842219317,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 3.2458633412439943,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 9.777033219075157,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 30.342217317565687,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 124.49100699574072,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 418.09319613117617,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1468.176446583137,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 196.27706095048995,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -1.250236622561355e-05,
+            "upper": 0.9999874977119286,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -1.250236622561355e-05,
+              "upper": 0.9999874977119286,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.013641866982315502,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.04175667699654633,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.1390897330211992,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.4043646940134561,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.2327642594900468,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 3.2540905930561848,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 9.804457391782456,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 30.424489835687584,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 124.76524872281371,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 418.91592131239514,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 1470.918863853867,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 39,
+      "T": 91.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 2500,
+      "seconds": 0.43918087240308523,
+      "curves": {
+        "old": {
+          "cost_line": 321.700547006655,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.0001490147900297331,
+            "upper": 0.9998509963121226,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.0001490147900297331,
+              "upper": 0.9998509963121226,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.02035721838410178,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.0640185949805276,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.2180012435778556,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.6273899226449382,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.856071462280101,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 4.879067069312824,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 15.055396232296651,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 50.10015729293932,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 221.84521165782252,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 744.4793290874645,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 2598.913114686881,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 330.7476101191465,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -0.0001490147900297331,
+            "upper": 0.9998509963121226,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -0.0001490147900297331,
+              "upper": 0.9998509963121226,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.021261924695350935,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.06673271391427506,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.2270483066903471,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.6545311119824129,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.9465420934050162,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 5.150478962687569,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 15.960102543545801,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 52.814276226686765,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 230.89227477031403,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 771.6205184249391,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 2689.383745811796,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    },
+    {
+      "index": 40,
+      "T": 100.0,
+      "block_groups": 2,
+      "bins": 512,
+      "precomputed_combinations": 2500,
+      "seconds": 0.4156746109947562,
+      "curves": {
+        "old": {
+          "cost_line": 291.936219482192,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -8.133399280561491e-06,
+            "upper": 0.9999918666337955,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -8.133399280561491e-06,
+              "upper": 0.9999918666337955,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.02145659283564329,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.06518268021523432,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.2145606480996877,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.6110399438644871,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.798870080727768,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 4.613926984453639,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 13.821109306816831,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 44.958655060011,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 196.7609997154841,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 660.8452820701576,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 2309.501672544225,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        },
+        "S10_minus_1e6": {
+          "cost_line": 293.4385692896755,
+          "best": {
+            "lam": 0.0,
+            "log_upper": -8.133399280561491e-06,
+            "upper": 0.9999918666337955,
+            "proof": false
+          },
+          "curve": [
+            {
+              "lam": 0.0,
+              "log_upper": -8.133399280561491e-06,
+              "upper": 0.9999918666337955,
+              "proof": false
+            },
+            {
+              "lam": 0.0001,
+              "log_upper": 0.021606827816391647,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.0003,
+              "log_upper": 0.06563338515747938,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.001,
+              "log_upper": 0.21606299790717123,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.003,
+              "log_upper": 0.6155469932869377,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.01,
+              "log_upper": 1.8138935788026034,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.03,
+              "log_upper": 4.6589974786781445,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.1,
+              "log_upper": 13.971344287565186,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 0.3,
+              "log_upper": 45.40936000225605,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 1.0,
+              "log_upper": 198.26334952296764,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 3.0,
+              "log_upper": 665.3523314926083,
+              "upper": 1.0,
+              "proof": false
+            },
+            {
+              "lam": 10.0,
+              "log_upper": 2324.5251706190606,
+              "upper": 1.0,
+              "proof": false
+            }
+          ]
+        }
+      },
+      "scope": "floating paired-group optimistic CDF relaxation; no rigorous exclusion or candidate qualification claim"
+    }
+  ],
+  "seconds": 3.143133318051696,
+  "claim": "diagnostic only"
+}
