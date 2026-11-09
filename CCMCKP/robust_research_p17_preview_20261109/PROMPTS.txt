@@ -1,0 +1,54 @@
+Use case: productivity-visual.
+Generate ONE finished Chinese academic presentation slide SAMPLE as a crisp landscape raster image, 16:9, approximately 1920×1080 or 1672×941. Match the supplied reference P16's cream background, dark navy typography, warm gold lines, university logo and top navigation. Input image is STYLE REFERENCE ONLY, replace its content.
+Top-left BUPT seal and 北京邮电大学 wordmark. Top tabs: 研究背景 / 研究意义 / 研究脉络 / 创新方向 / 总结展望. Active 研究脉络 is dark navy with gold letters/underline, others muted blue with white text.
+Main title: “实验验证与权衡评价”
+Subtitle: “先明确比较标准与覆盖范围，再讨论收益与代价”
+Thin gold horizontal rule below title block.
+
+MAIN CONTENT has TWO SIDE-BY-SIDE AREAS. Left about 38%, right about 59%. Match reference style, keep generous readable Chinese fonts (about 25–30px at 1672px width).
+
+LEFT: header “主线 P2 实验覆盖”
+Show a clean tree with gold connecting lines and clear count labels:
+Root “2240个实例”
+Two children:
+“1120 min-max” and “1120 一般双层”
+Only the “1120 min-max” node divides into two further children:
+“560 整数偏差” and “560 连续偏差”
+Arrange these leaves UNDER the min-max branch, not under general bilevel. Use navy outlines or cream fills; emphasize the integer-deviation 560 leaf pale gold. A small explanatory line under root or tree: “Γ鲁棒背包拦截及其一般双层扩展”
+Do NOT branch all 2240 into two groups of 560; hierarchy must be arithmetically correct.
+Below tree, two readable lines:
+“评价：可行且有限间隙数量、最优性证明比例”
+“运行时间与预处理收益”
+Use legible compact wrapping within left area.
+
+RIGHT: four-row, three-column comparison table of OTHER FOUR PAPERS. Headers navy white text:
+“文献” / “实验或应用对象” / “主要评价内容”
+Thin gold grid lines and subtle cream/gray rows; column widths within this table about 12% / 31% / 57%.
+Exact table content with line breaks as needed:
+P1
+object “旧金山机场” / “登机口分配”
+evaluation “样本外冲突数” / “比较缓冲基准、SAA” / “和特征加权方法”
+P3
+object “选址运输” / “多商品报童”
+evaluation “近似界质量，与AARC等基准比较” / “计算代价与不确定程度敏感性”
+P4
+object “基数约束下” / “主动学习”
+evaluation “比较平均、最坏与混合策略” / “主要比较其平均表现” / “衡量鲁棒性的代价”
+P5
+object “非参数学习” / “代表样本聚类”
+evaluation “最小效用、函数调用与CPU时间” / “同时控制并报告违约比”
+Do not invent numbers in this table or create cross-paper overall performance rankings.
+
+BELOW MAIN AREA, full width pale gold emphasis strip, about y=710–815 at 1672×941:
+line1 bold “P2子集示例：560个整数偏差min-max实例”
+line2 “H-BKP：555例证明最优，另5例为有限非零间隙”
+line3 “这5例的平均间隙为0.12%，不代表全部2240例”
+Important: 0.12% is the CONDITIONAL average of the five OPEN-GAP cases, NOT the average of all 560 or all 2240. Make scope unmistakable.
+
+BOTTOM reporting boundary notes, navy, readable and neatly aligned:
+“时间口径：顺序时间与理想化并行时间分开，后者不是实际并行测量”
+“证据边界：算法自身证明最优，与事后对比精确解发现最优须分开”
+“实验不替代理论；P5实验中的0.99是近似精度，不是机会约束概率门槛”
+Can use three compact lines in bottom area, leaving comfortable bottom margin. Do not shrink to microscopic footnotes.
+
+Accuracy constraints: show five papers overall (P2 left, P1/P3/P4/P5 right). The 2240 instances are 1120 min-max plus 1120 general bilevel; min-max alone includes 560 integer and 560 continuous deviation cases. H-BKP555 proof and5 open gaps are the integer-deviation min-max subset only. Avoid claims about every instance or every method being solved. P4 empirical evidence here mainly average performance, worst-case guarantees are theoretical. P5 violation ratio must be retained. No sixth paper, no invented statistics, no claims of measured parallel time from idealized estimates. No “本页用途”, “建议图示”, “口头讲解” or production instructions on slide. Exact legible Chinese and Roman acronym spelling, no overlaps or clipping.
