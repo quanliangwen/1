@@ -1,0 +1,4514 @@
+{
+  "integrity_passed": true,
+  "scope": "exhaustive exact decimal rational original empirical .99 plus original unchanged fixed10m seed832273 LSS point>=.985; global optimality only for these3cases and fixed acceptance predicate, not population CI or full ambiguity-set DRO",
+  "all3_global_fixed_joint_optimal": true,
+  "fully_enumerated_choices": 875,
+  "raw_exact_counts_for_all_cheaper_choices": 328,
+  "unique_original_LSS_receipts_checked": 42,
+  "new_MC_calls": 0,
+  "optimizer_feedback": false,
+  "final_auditor_sha256": "e51e145f5a5b478b12fe3abf7a099e669ab72d849d27631b256f105adc6d37bb",
+  "independent_raw_verifier_sha256": "6aece721b45de969e19b2df608301a2a93b41c618c6a15f1d7c52f28a3b9e820",
+  "proof_source_sha256": "b326fe9edc92a662a252cccd7fb5f79027a07c119782a7a9d8481bc145cde77a",
+  "source_compatibility_diagnostic_sha256": "ff4958ec1bfb2fec90fc6b81c43353c6b3fe3eb1ba73bda0138941036f81d15c",
+  "cases": [
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "full_choice_count": 125,
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "groups": [
+        [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        [
+          1,
+          4,
+          7,
+          10,
+          13
+        ],
+        [
+          2,
+          5,
+          8,
+          11,
+          14
+        ]
+      ],
+      "counts": {
+        "at_or_above_witness": 30,
+        "raw_refuted": 90,
+        "LSS_refuted": 5,
+        "LSS_unknown": 0,
+        "better_joint": 0
+      },
+      "global_fixed_joint_optimal": true,
+      "witness_selection": [
+        12,
+        7,
+        14
+      ],
+      "witness_cost_exact": "14076616107738910477/1000000000000000000",
+      "witness_cost": 14.07661610773891,
+      "witness_raw_numerator": "26882",
+      "witness_raw_denominator": "27000",
+      "witness_raw_probability": 0.9956296296296296,
+      "witness_LSS_point": 0.9874058,
+      "witness_LSS_key": "d1aa562c77aa6712d7308c6ea41df74daa23e1ae6efd8c81833990a48972587d",
+      "witness_native_receipt_sha256": "732276dea2820f2b2dbbba149f526aad50202ac3e0ee77eea328486ebb9b1967",
+      "historical_best": 9.03471729952129,
+      "historical_cost_matching_records": [
+        {
+          "selection": [
+            12,
+            10,
+            11
+          ],
+          "cost_exact": "9034717299521294097/1000000000000000000",
+          "cost": 9.034717299521294,
+          "raw_numerator": "26798",
+          "raw_denominator": "27000",
+          "LSS_key": "b58ec678b9c3826ef120cb2f55b8024930c321a570044402b95104fa2c33fc36",
+          "LSS_point": 0.9651546,
+          "native_receipt_sha256": "7902e62cc378704b02a9247944b54458be7eaef9d65a987feecb2b5e79e6ae5b",
+          "classification": "LSS_refuted"
+        }
+      ],
+      "input_sha256": {
+        "cost.txt": "e27157bce5f1e9ce58274f8069cf883be6c584ead5c045c097b6590bbdd1dba9",
+        "node_to_factor.pkl": "8f1742589fa300d3c44212b62a04c5b019aaf3c1acc0f5ea8b9ddc5218c146b3",
+        "0_sample.txt": "bbf0378cee554bc48ba413abbc0630adbfb262527668841cc1b4728998d47f2f",
+        "1_sample.txt": "f381e0d14cb283cea32dfb19a890fb679c7e055cd3a3f63447f2c8afdd58b6ac",
+        "2_sample.txt": "2d33837b4020bb50d8a68abe808155799a4a1bd99c54878b8e93be45cad5ebb1",
+        "3_sample.txt": "8c246b831efa39b6128a60815bf5c80c926c1617bacfa00f34a1b843f0b57c92",
+        "4_sample.txt": "df3087ca66df765f3e222934ea0bea2667ebe49fa942f41bedf25b61bc4ad578",
+        "5_sample.txt": "52528f5bf1b28d106336521e75a99011208bd07179d44c3fc97297fb92b5bf03",
+        "6_sample.txt": "f7842bf75de1f13fb9b312d0c921fba9fa7a590195e9eee9b7739305405cc843",
+        "7_sample.txt": "08cc68aa9f2b7cfdff587c5f4617ac2b517683781b0f7b68facb3305639f31be",
+        "8_sample.txt": "7ce92566e2557be7c45dce5ff4ac551f092916c3a8d6b5e1b22259932059dc16",
+        "9_sample.txt": "76649bc0a36cbbc7192f85c180bd4a5ddd8f00044099b38cf3f21d78af04bd09",
+        "10_sample.txt": "396df494a7159ca3a9a7f59f970409288701c07c58bca41d236978491f0056b9",
+        "11_sample.txt": "654349cd0d71a831d64b846d676fc3f7b7286efb87a509c85a97f379ba76cdc3",
+        "12_sample.txt": "10f26749941643437e01f507452afb15025f5633ee8412c985fba540711a18c9",
+        "13_sample.txt": "ed0c4b8f462dbaa4cfe6b97a2fa415a9ecc23d414290e0e34bd6135453d578f3",
+        "14_sample.txt": "41caac86acbaad606c7d6e2093bc3efd65d9f1606146a1c32783467c43f93ff2"
+      },
+      "cheaper_choice_records": [
+        {
+          "selection": [
+            0,
+            1,
+            2
+          ],
+          "cost_exact": "2594772264852901689/500000000000000000",
+          "cost": 5.189544529705803,
+          "raw_numerator": "19884",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            5
+          ],
+          "cost_exact": "6144609176106679669/500000000000000000",
+          "cost": 12.289218352213359,
+          "raw_numerator": "21857",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            8
+          ],
+          "cost_exact": "958423189310304513/250000000000000000",
+          "cost": 3.833692757241218,
+          "raw_numerator": "17386",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            11
+          ],
+          "cost_exact": "3938654007447528027/1000000000000000000",
+          "cost": 3.938654007447528,
+          "raw_numerator": "18601",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            14
+          ],
+          "cost_exact": "2129085687550507533/200000000000000000",
+          "cost": 10.645428437752537,
+          "raw_numerator": "21870",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            2
+          ],
+          "cost_exact": "2681319142128558153/500000000000000000",
+          "cost": 5.362638284257116,
+          "raw_numerator": "18759",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            5
+          ],
+          "cost_exact": "6231156053382336133/500000000000000000",
+          "cost": 12.462312106764672,
+          "raw_numerator": "20571",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            8
+          ],
+          "cost_exact": "200339325589626549/50000000000000000",
+          "cost": 4.006786511792531,
+          "raw_numerator": "16846",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            11
+          ],
+          "cost_exact": "822349552399768191/200000000000000000",
+          "cost": 4.111747761998841,
+          "raw_numerator": "17948",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            14
+          ],
+          "cost_exact": "10818522192303850593/1000000000000000000",
+          "cost": 10.81852219230385,
+          "raw_numerator": "20613",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            2
+          ],
+          "cost_exact": "1327343259258796149/250000000000000000",
+          "cost": 5.309373037035185,
+          "raw_numerator": "16962",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            5
+          ],
+          "cost_exact": "3102261714885685139/250000000000000000",
+          "cost": 12.409046859542741,
+          "raw_numerator": "18392",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            8
+          ],
+          "cost_exact": "395352126457059927/100000000000000000",
+          "cost": 3.9535212645705995,
+          "raw_numerator": "15500",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            11
+          ],
+          "cost_exact": "811696502955381849/200000000000000000",
+          "cost": 4.05848251477691,
+          "raw_numerator": "16495",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            14
+          ],
+          "cost_exact": "10765256945081918883/1000000000000000000",
+          "cost": 10.76525694508192,
+          "raw_numerator": "18476",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            2
+          ],
+          "cost_exact": "3487124329561288927/500000000000000000",
+          "cost": 6.974248659122578,
+          "raw_numerator": "22115",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            5
+          ],
+          "cost_exact": "7036961240815066907/500000000000000000",
+          "cost": 14.073922481630134,
+          "raw_numerator": "24669",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            8
+          ],
+          "cost_exact": "351149805416124533/62500000000000000",
+          "cost": 5.618396886657992,
+          "raw_numerator": "20979",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            11
+          ],
+          "cost_exact": "5723358136864302503/1000000000000000000",
+          "cost": 5.723358136864302,
+          "raw_numerator": "21740",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            14
+          ],
+          "cost_exact": "12430132567169312141/1000000000000000000",
+          "cost": 12.430132567169313,
+          "raw_numerator": "24868",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            2
+          ],
+          "cost_exact": "7121074822985897557/1000000000000000000",
+          "cost": 7.121074822985897,
+          "raw_numerator": "21872",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            8
+          ],
+          "cost_exact": "5765223050521312231/1000000000000000000",
+          "cost": 5.765223050521312,
+          "raw_numerator": "20562",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            11
+          ],
+          "cost_exact": "2935092150363811103/500000000000000000",
+          "cost": 5.870184300727622,
+          "raw_numerator": "21318",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            14
+          ],
+          "cost_exact": "3144239682758157961/250000000000000000",
+          "cost": 12.576958731032631,
+          "raw_numerator": "24871",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            1,
+            2
+          ],
+          "cost_exact": "13845340209969269063/1000000000000000000",
+          "cost": 13.845340209969269,
+          "raw_numerator": "24685",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            1,
+            8
+          ],
+          "cost_exact": "12489488437504683737/1000000000000000000",
+          "cost": 12.489488437504683,
+          "raw_numerator": "24086",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            1,
+            11
+          ],
+          "cost_exact": "787153105481937107/62500000000000000",
+          "cost": 12.594449687710993,
+          "raw_numerator": "24647",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            4,
+            2
+          ],
+          "cost_exact": "14018433964520581991/1000000000000000000",
+          "cost": 14.018433964520582,
+          "raw_numerator": "23877",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            4,
+            8
+          ],
+          "cost_exact": "2532516438411199333/200000000000000000",
+          "cost": 12.662582192055996,
+          "raw_numerator": "23173",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            4,
+            11
+          ],
+          "cost_exact": "159594293028278833/12500000000000000",
+          "cost": 12.767543442262307,
+          "raw_numerator": "23708",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            7,
+            2
+          ],
+          "cost_exact": "13965168717298650281/1000000000000000000",
+          "cost": 13.965168717298651,
+          "raw_numerator": "24227",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            7,
+            8
+          ],
+          "cost_exact": "2521863388966812991/200000000000000000",
+          "cost": 12.609316944834065,
+          "raw_numerator": "22944",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            7,
+            11
+          ],
+          "cost_exact": "1271427819504037493/100000000000000000",
+          "cost": 12.714278195040375,
+          "raw_numerator": "23601",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            2
+          ],
+          "cost_exact": "5433186552259358537/1000000000000000000",
+          "cost": 5.433186552259358,
+          "raw_numerator": "20836",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            5
+          ],
+          "cost_exact": "12532860374766914497/1000000000000000000",
+          "cost": 12.532860374766914,
+          "raw_numerator": "22766",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            8
+          ],
+          "cost_exact": "4077334779794773211/1000000000000000000",
+          "cost": 4.077334779794773,
+          "raw_numerator": "19509",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            11
+          ],
+          "cost_exact": "2091148015000541593/500000000000000000",
+          "cost": 4.182296030001083,
+          "raw_numerator": "20549",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            14
+          ],
+          "cost_exact": "1361133807538261603/125000000000000000",
+          "cost": 10.889070460306092,
+          "raw_numerator": "22906",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            2
+          ],
+          "cost_exact": "1121256061362134293/200000000000000000",
+          "cost": 5.606280306810671,
+          "raw_numerator": "19656",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            5
+          ],
+          "cost_exact": "508238165172729097/40000000000000000",
+          "cost": 12.705954129318227,
+          "raw_numerator": "21580",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            8
+          ],
+          "cost_exact": "4250428534346086139/1000000000000000000",
+          "cost": 4.250428534346086,
+          "raw_numerator": "18560",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            11
+          ],
+          "cost_exact": "2177694892276198057/500000000000000000",
+          "cost": 4.355389784552396,
+          "raw_numerator": "19418",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            14
+          ],
+          "cost_exact": "1382770526857175719/125000000000000000",
+          "cost": 11.062164214857406,
+          "raw_numerator": "21731",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            2
+          ],
+          "cost_exact": "1110603011917747951/200000000000000000",
+          "cost": 5.5530150595887395,
+          "raw_numerator": "18523",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            5
+          ],
+          "cost_exact": "2530537776419259143/200000000000000000",
+          "cost": 12.652688882096296,
+          "raw_numerator": "20962",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            8
+          ],
+          "cost_exact": "4197163287124154429/1000000000000000000",
+          "cost": 4.197163287124154,
+          "raw_numerator": "17319",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            11
+          ],
+          "cost_exact": "1075531134332616101/250000000000000000",
+          "cost": 4.302124537330465,
+          "raw_numerator": "18056",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            14
+          ],
+          "cost_exact": "5504449483817737021/500000000000000000",
+          "cost": 11.008898967635474,
+          "raw_numerator": "21192",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            2
+          ],
+          "cost_exact": "7217890681676133013/1000000000000000000",
+          "cost": 7.217890681676133,
+          "raw_numerator": "23503",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            8
+          ],
+          "cost_exact": "5862038909211547687/1000000000000000000",
+          "cost": 5.862038909211548,
+          "raw_numerator": "22761",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            11
+          ],
+          "cost_exact": "2983500079708928831/500000000000000000",
+          "cost": 5.967000159417857,
+          "raw_numerator": "23579",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            14
+          ],
+          "cost_exact": "126737745897228673/10000000000000000",
+          "cost": 12.673774589722868,
+          "raw_numerator": "25394",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            2
+          ],
+          "cost_exact": "1841179211384863179/250000000000000000",
+          "cost": 7.364716845539452,
+          "raw_numerator": "23399",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            8
+          ],
+          "cost_exact": "600886507307486739/100000000000000000",
+          "cost": 6.008865073074867,
+          "raw_numerator": "22591",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            11
+          ],
+          "cost_exact": "1222765264656235473/200000000000000000",
+          "cost": 6.113826323281177,
+          "raw_numerator": "23451",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            14
+          ],
+          "cost_exact": "12820600753586187003/1000000000000000000",
+          "cost": 12.820600753586186,
+          "raw_numerator": "25484",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            2
+          ],
+          "cost_exact": "96522564222948911/15625000000000000",
+          "cost": 6.1774441102687305,
+          "raw_numerator": "22799",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            5
+          ],
+          "cost_exact": "1659639741597035783/125000000000000000",
+          "cost": 13.277117932776287,
+          "raw_numerator": "25559",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            8
+          ],
+          "cost_exact": "2410796168902072489/500000000000000000",
+          "cost": 4.8215923378041445,
+          "raw_numerator": "21529",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            11
+          ],
+          "cost_exact": "4926553588010454953/1000000000000000000",
+          "cost": 4.926553588010455,
+          "raw_numerator": "22292",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            14
+          ],
+          "cost_exact": "11633328018315464591/1000000000000000000",
+          "cost": 11.633328018315465,
+          "raw_numerator": "25651",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            2
+          ],
+          "cost_exact": "198454308275626351/31250000000000000",
+          "cost": 6.350537864820043,
+          "raw_numerator": "21792",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            5
+          ],
+          "cost_exact": "1681276460915949899/125000000000000000",
+          "cost": 13.450211687327599,
+          "raw_numerator": "24323",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            8
+          ],
+          "cost_exact": "2497343046177728953/500000000000000000",
+          "cost": 4.994686092355458,
+          "raw_numerator": "20636",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            11
+          ],
+          "cost_exact": "5099647342561767881/1000000000000000000",
+          "cost": 5.099647342561767,
+          "raw_numerator": "21381",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            14
+          ],
+          "cost_exact": "11806421772866777519/1000000000000000000",
+          "cost": 11.806421772866777,
+          "raw_numerator": "24418",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            2
+          ],
+          "cost_exact": "3148636308799055761/500000000000000000",
+          "cost": 6.297272617598112,
+          "raw_numerator": "21459",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            5
+          ],
+          "cost_exact": "6698473220052833741/500000000000000000",
+          "cost": 13.396946440105667,
+          "raw_numerator": "24643",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            8
+          ],
+          "cost_exact": "1235355211283381549/250000000000000000",
+          "cost": 4.941420845133526,
+          "raw_numerator": "19680",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            11
+          ],
+          "cost_exact": "5046382095339836171/1000000000000000000",
+          "cost": 5.046382095339836,
+          "raw_numerator": "20544",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            14
+          ],
+          "cost_exact": "11753156525644845809/1000000000000000000",
+          "cost": 11.753156525644846,
+          "raw_numerator": "24672",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            2
+          ],
+          "cost_exact": "398107411984275239/50000000000000000",
+          "cost": 7.962148239685504,
+          "raw_numerator": "25416",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            8
+          ],
+          "cost_exact": "3303148233610459727/500000000000000000",
+          "cost": 6.606296467220919,
+          "raw_numerator": "24955",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            11
+          ],
+          "cost_exact": "6711257717427229429/1000000000000000000",
+          "cost": 6.711257717427229,
+          "raw_numerator": "25834",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            14
+          ],
+          "cost_exact": "13418032147732239067/1000000000000000000",
+          "cost": 13.418032147732239,
+          "raw_numerator": "26730",
+          "raw_denominator": "27000",
+          "LSS_key": "6c200231e822e9d02876a451c433bd423d54f9c0962f416048c7e9ec7b13db52",
+          "LSS_point": 0.9717874,
+          "native_receipt_sha256": "023208fc7db34ac0c194e91e8598ef01542b221e3218aed3cfe3ae703e2675a7",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            2
+          ],
+          "cost_exact": "8108974403548824483/1000000000000000000",
+          "cost": 8.108974403548824,
+          "raw_numerator": "25467",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            8
+          ],
+          "cost_exact": "6753122631084239157/1000000000000000000",
+          "cost": 6.753122631084239,
+          "raw_numerator": "25000",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            11
+          ],
+          "cost_exact": "1714520970322637283/250000000000000000",
+          "cost": 6.858083881290549,
+          "raw_numerator": "25912",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            14
+          ],
+          "cost_exact": "1356485831159555877/100000000000000000",
+          "cost": 13.56485831159556,
+          "raw_numerator": "26730",
+          "raw_denominator": "27000",
+          "LSS_key": "85e2230668615d8c3b70848b9c9e222963d386b4720998c39240df6a29ff59dd",
+          "LSS_point": 0.9713279,
+          "native_receipt_sha256": "ab2f78608a580369d305ea1bc78424d4594cb93014bba46cdeb958178886f653",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            2
+          ],
+          "cost_exact": "2125225923090698743/250000000000000000",
+          "cost": 8.500903692362796,
+          "raw_numerator": "24463",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            8
+          ],
+          "cost_exact": "3572525959949104823/500000000000000000",
+          "cost": 7.14505191989821,
+          "raw_numerator": "23611",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            11
+          ],
+          "cost_exact": "7250013170104519621/1000000000000000000",
+          "cost": 7.25001317010452,
+          "raw_numerator": "24303",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            14
+          ],
+          "cost_exact": "13956787600409529259/1000000000000000000",
+          "cost": 13.956787600409529,
+          "raw_numerator": "26974",
+          "raw_denominator": "27000",
+          "LSS_key": "335e93670330c3b41ba013e612d92edf631b22295f922ad002481ef957e08508",
+          "LSS_point": 0.9720019,
+          "native_receipt_sha256": "06e54eaef232f2da6e2e8505a882d8de185c7df7f05d8d966e56fa261c793991",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            2
+          ],
+          "cost_exact": "86739974469141079/10000000000000000",
+          "cost": 8.673997446914107,
+          "raw_numerator": "23373",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            8
+          ],
+          "cost_exact": "3659072837224761287/500000000000000000",
+          "cost": 7.318145674449522,
+          "raw_numerator": "22574",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            11
+          ],
+          "cost_exact": "7423106924655832549/1000000000000000000",
+          "cost": 7.4231069246558326,
+          "raw_numerator": "23231",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            2
+          ],
+          "cost_exact": "862073219969217619/100000000000000000",
+          "cost": 8.620732199692176,
+          "raw_numerator": "23629",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            8
+          ],
+          "cost_exact": "454055026701724429/62500000000000000",
+          "cost": 7.264880427227591,
+          "raw_numerator": "22109",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            11
+          ],
+          "cost_exact": "7369841677433900839/1000000000000000000",
+          "cost": 7.369841677433901,
+          "raw_numerator": "22958",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            2
+          ],
+          "cost_exact": "1285700977722446181/125000000000000000",
+          "cost": 10.28560782177957,
+          "raw_numerator": "25968",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            8
+          ],
+          "cost_exact": "4464878024657492061/500000000000000000",
+          "cost": 8.929756049314983,
+          "raw_numerator": "25811",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            11
+          ],
+          "cost_exact": "9034717299521294097/1000000000000000000",
+          "cost": 9.034717299521294,
+          "raw_numerator": "26798",
+          "raw_denominator": "27000",
+          "LSS_key": "b58ec678b9c3826ef120cb2f55b8024930c321a570044402b95104fa2c33fc36",
+          "LSS_point": 0.9651546,
+          "native_receipt_sha256": "7902e62cc378704b02a9247944b54458be7eaef9d65a987feecb2b5e79e6ae5b",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            2
+          ],
+          "cost_exact": "10432433985642889151/1000000000000000000",
+          "cost": 10.43243398564289,
+          "raw_numerator": "25979",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            8
+          ],
+          "cost_exact": "363063288527132153/40000000000000000",
+          "cost": 9.076582213178304,
+          "raw_numerator": "25835",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            11
+          ],
+          "cost_exact": "45907717316923069/5000000000000000",
+          "cost": 9.181543463384614,
+          "raw_numerator": "26806",
+          "raw_denominator": "27000",
+          "LSS_key": "45d56f9c40c89b2af5586f13778cfe065ae85e6b91db17e1af2a780f85c41fa5",
+          "LSS_point": 0.9666005,
+          "native_receipt_sha256": "8adcb2ae7aa4fa74ecdfb7c5f1341bf819923658ff8663c9b0db1262817691d0",
+          "classification": "LSS_refuted"
+        }
+      ],
+      "better_joint": []
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "full_choice_count": 125,
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "groups": [
+        [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        [
+          1,
+          4,
+          7,
+          10,
+          13
+        ],
+        [
+          2,
+          5,
+          8,
+          11,
+          14
+        ]
+      ],
+      "counts": {
+        "at_or_above_witness": 36,
+        "raw_refuted": 80,
+        "LSS_refuted": 9,
+        "LSS_unknown": 0,
+        "better_joint": 0
+      },
+      "global_fixed_joint_optimal": true,
+      "witness_selection": [
+        9,
+        13,
+        14
+      ],
+      "witness_cost_exact": "1356485831159555877/100000000000000000",
+      "witness_cost": 13.56485831159556,
+      "witness_raw_numerator": "27000",
+      "witness_raw_denominator": "27000",
+      "witness_raw_probability": 1.0,
+      "witness_LSS_point": 0.988084,
+      "witness_LSS_key": "5f3d7846f06aa5a049c2c1c7932b1889e7f2c53a5c66d454d1148b2e89f6f79a",
+      "witness_native_receipt_sha256": "ddf0f04bd583bd28d714bbf43c0d58fb81ce5672fd2d67df524ab5c0b4d9ffc7",
+      "historical_best": 7.25001317010452,
+      "historical_cost_matching_records": [
+        {
+          "selection": [
+            12,
+            1,
+            11
+          ],
+          "cost_exact": "7250013170104519621/1000000000000000000",
+          "cost": 7.25001317010452,
+          "raw_numerator": "26880",
+          "raw_denominator": "27000",
+          "LSS_key": "a5fe49546438f05d320e80f62e2e94741c5d7976f5d9ddc863fe5eec1d8e7847",
+          "LSS_point": 0.971381,
+          "native_receipt_sha256": "badff6b01d52848b24c8b34817838373020429d23f7be7658eb9747afa7c6919",
+          "classification": "LSS_refuted"
+        }
+      ],
+      "input_sha256": {
+        "cost.txt": "e27157bce5f1e9ce58274f8069cf883be6c584ead5c045c097b6590bbdd1dba9",
+        "node_to_factor.pkl": "8f1742589fa300d3c44212b62a04c5b019aaf3c1acc0f5ea8b9ddc5218c146b3",
+        "0_sample.txt": "bbf0378cee554bc48ba413abbc0630adbfb262527668841cc1b4728998d47f2f",
+        "1_sample.txt": "f381e0d14cb283cea32dfb19a890fb679c7e055cd3a3f63447f2c8afdd58b6ac",
+        "2_sample.txt": "2d33837b4020bb50d8a68abe808155799a4a1bd99c54878b8e93be45cad5ebb1",
+        "3_sample.txt": "8c246b831efa39b6128a60815bf5c80c926c1617bacfa00f34a1b843f0b57c92",
+        "4_sample.txt": "df3087ca66df765f3e222934ea0bea2667ebe49fa942f41bedf25b61bc4ad578",
+        "5_sample.txt": "52528f5bf1b28d106336521e75a99011208bd07179d44c3fc97297fb92b5bf03",
+        "6_sample.txt": "f7842bf75de1f13fb9b312d0c921fba9fa7a590195e9eee9b7739305405cc843",
+        "7_sample.txt": "08cc68aa9f2b7cfdff587c5f4617ac2b517683781b0f7b68facb3305639f31be",
+        "8_sample.txt": "7ce92566e2557be7c45dce5ff4ac551f092916c3a8d6b5e1b22259932059dc16",
+        "9_sample.txt": "76649bc0a36cbbc7192f85c180bd4a5ddd8f00044099b38cf3f21d78af04bd09",
+        "10_sample.txt": "396df494a7159ca3a9a7f59f970409288701c07c58bca41d236978491f0056b9",
+        "11_sample.txt": "654349cd0d71a831d64b846d676fc3f7b7286efb87a509c85a97f379ba76cdc3",
+        "12_sample.txt": "10f26749941643437e01f507452afb15025f5633ee8412c985fba540711a18c9",
+        "13_sample.txt": "ed0c4b8f462dbaa4cfe6b97a2fa415a9ecc23d414290e0e34bd6135453d578f3",
+        "14_sample.txt": "41caac86acbaad606c7d6e2093bc3efd65d9f1606146a1c32783467c43f93ff2"
+      },
+      "cheaper_choice_records": [
+        {
+          "selection": [
+            0,
+            1,
+            2
+          ],
+          "cost_exact": "2594772264852901689/500000000000000000",
+          "cost": 5.189544529705803,
+          "raw_numerator": "23295",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            5
+          ],
+          "cost_exact": "6144609176106679669/500000000000000000",
+          "cost": 12.289218352213359,
+          "raw_numerator": "25927",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            8
+          ],
+          "cost_exact": "958423189310304513/250000000000000000",
+          "cost": 3.833692757241218,
+          "raw_numerator": "22165",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            11
+          ],
+          "cost_exact": "3938654007447528027/1000000000000000000",
+          "cost": 3.938654007447528,
+          "raw_numerator": "22843",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            14
+          ],
+          "cost_exact": "2129085687550507533/200000000000000000",
+          "cost": 10.645428437752537,
+          "raw_numerator": "26035",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            2
+          ],
+          "cost_exact": "2681319142128558153/500000000000000000",
+          "cost": 5.362638284257116,
+          "raw_numerator": "22636",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            5
+          ],
+          "cost_exact": "6231156053382336133/500000000000000000",
+          "cost": 12.462312106764672,
+          "raw_numerator": "25261",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            8
+          ],
+          "cost_exact": "200339325589626549/50000000000000000",
+          "cost": 4.006786511792531,
+          "raw_numerator": "21478",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            11
+          ],
+          "cost_exact": "822349552399768191/200000000000000000",
+          "cost": 4.111747761998841,
+          "raw_numerator": "22224",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            4,
+            14
+          ],
+          "cost_exact": "10818522192303850593/1000000000000000000",
+          "cost": 10.81852219230385,
+          "raw_numerator": "25397",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            2
+          ],
+          "cost_exact": "1327343259258796149/250000000000000000",
+          "cost": 5.309373037035185,
+          "raw_numerator": "22656",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            5
+          ],
+          "cost_exact": "3102261714885685139/250000000000000000",
+          "cost": 12.409046859542741,
+          "raw_numerator": "25419",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            8
+          ],
+          "cost_exact": "395352126457059927/100000000000000000",
+          "cost": 3.9535212645705995,
+          "raw_numerator": "21208",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            11
+          ],
+          "cost_exact": "811696502955381849/200000000000000000",
+          "cost": 4.05848251477691,
+          "raw_numerator": "21943",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            7,
+            14
+          ],
+          "cost_exact": "10765256945081918883/1000000000000000000",
+          "cost": 10.76525694508192,
+          "raw_numerator": "25528",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            2
+          ],
+          "cost_exact": "3487124329561288927/500000000000000000",
+          "cost": 6.974248659122578,
+          "raw_numerator": "25465",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            8
+          ],
+          "cost_exact": "351149805416124533/62500000000000000",
+          "cost": 5.618396886657992,
+          "raw_numerator": "25100",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            11
+          ],
+          "cost_exact": "5723358136864302503/1000000000000000000",
+          "cost": 5.723358136864302,
+          "raw_numerator": "26064",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            10,
+            14
+          ],
+          "cost_exact": "12430132567169312141/1000000000000000000",
+          "cost": 12.430132567169313,
+          "raw_numerator": "26667",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            2
+          ],
+          "cost_exact": "7121074822985897557/1000000000000000000",
+          "cost": 7.121074822985897,
+          "raw_numerator": "25474",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            8
+          ],
+          "cost_exact": "5765223050521312231/1000000000000000000",
+          "cost": 5.765223050521312,
+          "raw_numerator": "25103",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            11
+          ],
+          "cost_exact": "2935092150363811103/500000000000000000",
+          "cost": 5.870184300727622,
+          "raw_numerator": "26066",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            14
+          ],
+          "cost_exact": "3144239682758157961/250000000000000000",
+          "cost": 12.576958731032631,
+          "raw_numerator": "26645",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            1,
+            8
+          ],
+          "cost_exact": "12489488437504683737/1000000000000000000",
+          "cost": 12.489488437504683,
+          "raw_numerator": "25980",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            1,
+            11
+          ],
+          "cost_exact": "787153105481937107/62500000000000000",
+          "cost": 12.594449687710993,
+          "raw_numerator": "26880",
+          "raw_denominator": "27000",
+          "LSS_key": "e992b8586b94c51ecdc0fe84b73f0cd2edc342dfb36943a74d592f1f1a125041",
+          "LSS_point": 0.9722678,
+          "native_receipt_sha256": "6348fb9d02944c6967542fa39d6fe23862e4d9d03f445c0bf838c6a540d917e7",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            3,
+            4,
+            8
+          ],
+          "cost_exact": "2532516438411199333/200000000000000000",
+          "cost": 12.662582192055996,
+          "raw_numerator": "25816",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            4,
+            11
+          ],
+          "cost_exact": "159594293028278833/12500000000000000",
+          "cost": 12.767543442262307,
+          "raw_numerator": "26760",
+          "raw_denominator": "27000",
+          "LSS_key": "bd6789e138c5abf6f77c9a26cc1d1ec258232d86300cc70d5451725c4ed6832b",
+          "LSS_point": 0.9736271,
+          "native_receipt_sha256": "73e4f965bc1b4e2be6a1cfcfa3616fc0b8af96c1c9e3fbcb97c302e440d51f0e",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            3,
+            7,
+            8
+          ],
+          "cost_exact": "2521863388966812991/200000000000000000",
+          "cost": 12.609316944834065,
+          "raw_numerator": "25680",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            3,
+            7,
+            11
+          ],
+          "cost_exact": "1271427819504037493/100000000000000000",
+          "cost": 12.714278195040375,
+          "raw_numerator": "26580",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            2
+          ],
+          "cost_exact": "5433186552259358537/1000000000000000000",
+          "cost": 5.433186552259358,
+          "raw_numerator": "24104",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            5
+          ],
+          "cost_exact": "12532860374766914497/1000000000000000000",
+          "cost": 12.532860374766914,
+          "raw_numerator": "25838",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            8
+          ],
+          "cost_exact": "4077334779794773211/1000000000000000000",
+          "cost": 4.077334779794773,
+          "raw_numerator": "23526",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            11
+          ],
+          "cost_exact": "2091148015000541593/500000000000000000",
+          "cost": 4.182296030001083,
+          "raw_numerator": "24335",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            1,
+            14
+          ],
+          "cost_exact": "1361133807538261603/125000000000000000",
+          "cost": 10.889070460306092,
+          "raw_numerator": "25862",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            2
+          ],
+          "cost_exact": "1121256061362134293/200000000000000000",
+          "cost": 5.606280306810671,
+          "raw_numerator": "23871",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            5
+          ],
+          "cost_exact": "508238165172729097/40000000000000000",
+          "cost": 12.705954129318227,
+          "raw_numerator": "25576",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            8
+          ],
+          "cost_exact": "4250428534346086139/1000000000000000000",
+          "cost": 4.250428534346086,
+          "raw_numerator": "23146",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            11
+          ],
+          "cost_exact": "2177694892276198057/500000000000000000",
+          "cost": 4.355389784552396,
+          "raw_numerator": "23981",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            4,
+            14
+          ],
+          "cost_exact": "1382770526857175719/125000000000000000",
+          "cost": 11.062164214857406,
+          "raw_numerator": "25633",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            2
+          ],
+          "cost_exact": "1110603011917747951/200000000000000000",
+          "cost": 5.5530150595887395,
+          "raw_numerator": "23829",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            5
+          ],
+          "cost_exact": "2530537776419259143/200000000000000000",
+          "cost": 12.652688882096296,
+          "raw_numerator": "25470",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            8
+          ],
+          "cost_exact": "4197163287124154429/1000000000000000000",
+          "cost": 4.197163287124154,
+          "raw_numerator": "23063",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            11
+          ],
+          "cost_exact": "1075531134332616101/250000000000000000",
+          "cost": 4.302124537330465,
+          "raw_numerator": "23961",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            7,
+            14
+          ],
+          "cost_exact": "5504449483817737021/500000000000000000",
+          "cost": 11.008898967635474,
+          "raw_numerator": "25470",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            2
+          ],
+          "cost_exact": "7217890681676133013/1000000000000000000",
+          "cost": 7.217890681676133,
+          "raw_numerator": "25419",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            8
+          ],
+          "cost_exact": "5862038909211547687/1000000000000000000",
+          "cost": 5.862038909211548,
+          "raw_numerator": "24916",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            11
+          ],
+          "cost_exact": "2983500079708928831/500000000000000000",
+          "cost": 5.967000159417857,
+          "raw_numerator": "25821",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            10,
+            14
+          ],
+          "cost_exact": "126737745897228673/10000000000000000",
+          "cost": 12.673774589722868,
+          "raw_numerator": "26479",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            2
+          ],
+          "cost_exact": "1841179211384863179/250000000000000000",
+          "cost": 7.364716845539452,
+          "raw_numerator": "25226",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            8
+          ],
+          "cost_exact": "600886507307486739/100000000000000000",
+          "cost": 6.008865073074867,
+          "raw_numerator": "24824",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            11
+          ],
+          "cost_exact": "1222765264656235473/200000000000000000",
+          "cost": 6.113826323281177,
+          "raw_numerator": "25739",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            6,
+            13,
+            14
+          ],
+          "cost_exact": "12820600753586187003/1000000000000000000",
+          "cost": 12.820600753586186,
+          "raw_numerator": "26497",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            2
+          ],
+          "cost_exact": "96522564222948911/15625000000000000",
+          "cost": 6.1774441102687305,
+          "raw_numerator": "25714",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            5
+          ],
+          "cost_exact": "1659639741597035783/125000000000000000",
+          "cost": 13.277117932776287,
+          "raw_numerator": "26820",
+          "raw_denominator": "27000",
+          "LSS_key": "7cda1b491ced37ff2a69401541f8b9eed39758ad5bebe0e8aa812388d2ad15ce",
+          "LSS_point": 0.9720028,
+          "native_receipt_sha256": "4ba9ed05c67562977273041d3ee35fa5adca7864b210572ef36db5e8d4a5747f",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            8
+          ],
+          "cost_exact": "2410796168902072489/500000000000000000",
+          "cost": 4.8215923378041445,
+          "raw_numerator": "25546",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            11
+          ],
+          "cost_exact": "4926553588010454953/1000000000000000000",
+          "cost": 4.926553588010455,
+          "raw_numerator": "26495",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            1,
+            14
+          ],
+          "cost_exact": "11633328018315464591/1000000000000000000",
+          "cost": 11.633328018315465,
+          "raw_numerator": "26820",
+          "raw_denominator": "27000",
+          "LSS_key": "17556673501531cd8078ff8b1f1750caaed6a00f66488b0b563ee7da50bb7100",
+          "LSS_point": 0.9720434,
+          "native_receipt_sha256": "14e49959c77e357322a7668af7d9410a06af906737dd70b202c5e0c2b9231b65",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            2
+          ],
+          "cost_exact": "198454308275626351/31250000000000000",
+          "cost": 6.350537864820043,
+          "raw_numerator": "25409",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            5
+          ],
+          "cost_exact": "1681276460915949899/125000000000000000",
+          "cost": 13.450211687327599,
+          "raw_numerator": "26640",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            8
+          ],
+          "cost_exact": "2497343046177728953/500000000000000000",
+          "cost": 4.994686092355458,
+          "raw_numerator": "25057",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            11
+          ],
+          "cost_exact": "5099647342561767881/1000000000000000000",
+          "cost": 5.099647342561767,
+          "raw_numerator": "26012",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            4,
+            14
+          ],
+          "cost_exact": "11806421772866777519/1000000000000000000",
+          "cost": 11.806421772866777,
+          "raw_numerator": "26640",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            2
+          ],
+          "cost_exact": "3148636308799055761/500000000000000000",
+          "cost": 6.297272617598112,
+          "raw_numerator": "25290",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            5
+          ],
+          "cost_exact": "6698473220052833741/500000000000000000",
+          "cost": 13.396946440105667,
+          "raw_numerator": "26471",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            8
+          ],
+          "cost_exact": "1235355211283381549/250000000000000000",
+          "cost": 4.941420845133526,
+          "raw_numerator": "24852",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            11
+          ],
+          "cost_exact": "5046382095339836171/1000000000000000000",
+          "cost": 5.046382095339836,
+          "raw_numerator": "25857",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            7,
+            14
+          ],
+          "cost_exact": "11753156525644845809/1000000000000000000",
+          "cost": 11.753156525644846,
+          "raw_numerator": "26505",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            2
+          ],
+          "cost_exact": "398107411984275239/50000000000000000",
+          "cost": 7.962148239685504,
+          "raw_numerator": "26173",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            8
+          ],
+          "cost_exact": "3303148233610459727/500000000000000000",
+          "cost": 6.606296467220919,
+          "raw_numerator": "25785",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            11
+          ],
+          "cost_exact": "6711257717427229429/1000000000000000000",
+          "cost": 6.711257717427229,
+          "raw_numerator": "26647",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            10,
+            14
+          ],
+          "cost_exact": "13418032147732239067/1000000000000000000",
+          "cost": 13.418032147732239,
+          "raw_numerator": "27000",
+          "raw_denominator": "27000",
+          "LSS_key": "1c89da4af87aec273eed145076ab47a011b7f30d4f1d070480723e00f5c1f81f",
+          "LSS_point": 0.9846526,
+          "native_receipt_sha256": "a14cd1771017c1f176d5214c7dc165c6a276bef4f7df6c05d52233e3cc387c0b",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            2
+          ],
+          "cost_exact": "8108974403548824483/1000000000000000000",
+          "cost": 8.108974403548824,
+          "raw_numerator": "26090",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            8
+          ],
+          "cost_exact": "6753122631084239157/1000000000000000000",
+          "cost": 6.753122631084239,
+          "raw_numerator": "25823",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            9,
+            13,
+            11
+          ],
+          "cost_exact": "1714520970322637283/250000000000000000",
+          "cost": 6.858083881290549,
+          "raw_numerator": "26622",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            2
+          ],
+          "cost_exact": "2125225923090698743/250000000000000000",
+          "cost": 8.500903692362796,
+          "raw_numerator": "26039",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            8
+          ],
+          "cost_exact": "3572525959949104823/500000000000000000",
+          "cost": 7.14505191989821,
+          "raw_numerator": "25974",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            11
+          ],
+          "cost_exact": "7250013170104519621/1000000000000000000",
+          "cost": 7.25001317010452,
+          "raw_numerator": "26880",
+          "raw_denominator": "27000",
+          "LSS_key": "a5fe49546438f05d320e80f62e2e94741c5d7976f5d9ddc863fe5eec1d8e7847",
+          "LSS_point": 0.971381,
+          "native_receipt_sha256": "badff6b01d52848b24c8b34817838373020429d23f7be7658eb9747afa7c6919",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            2
+          ],
+          "cost_exact": "86739974469141079/10000000000000000",
+          "cost": 8.673997446914107,
+          "raw_numerator": "25995",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            8
+          ],
+          "cost_exact": "3659072837224761287/500000000000000000",
+          "cost": 7.318145674449522,
+          "raw_numerator": "25770",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            4,
+            11
+          ],
+          "cost_exact": "7423106924655832549/1000000000000000000",
+          "cost": 7.4231069246558326,
+          "raw_numerator": "26735",
+          "raw_denominator": "27000",
+          "LSS_key": "2795b3f35993ca3ac5cbabe4e0fbebf4624be45cc4475d02bca1f7bc05f90982",
+          "LSS_point": 0.9725017,
+          "native_receipt_sha256": "275a6228750d4f4452389f17ba9ff8d1a0f9730d3e3c4a6784f7ccb88c81f51c",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            2
+          ],
+          "cost_exact": "862073219969217619/100000000000000000",
+          "cost": 8.620732199692176,
+          "raw_numerator": "25890",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            8
+          ],
+          "cost_exact": "454055026701724429/62500000000000000",
+          "cost": 7.264880427227591,
+          "raw_numerator": "25654",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            7,
+            11
+          ],
+          "cost_exact": "7369841677433900839/1000000000000000000",
+          "cost": 7.369841677433901,
+          "raw_numerator": "26580",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            2
+          ],
+          "cost_exact": "1285700977722446181/125000000000000000",
+          "cost": 10.28560782177957,
+          "raw_numerator": "26493",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            8
+          ],
+          "cost_exact": "4464878024657492061/500000000000000000",
+          "cost": 8.929756049314983,
+          "raw_numerator": "26020",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            10,
+            11
+          ],
+          "cost_exact": "9034717299521294097/1000000000000000000",
+          "cost": 9.034717299521294,
+          "raw_numerator": "26884",
+          "raw_denominator": "27000",
+          "LSS_key": "14fde4bafb41562c653ea7d51aa2a7fc7e28e995b1470d33868c8728928f7259",
+          "LSS_point": 0.9825868,
+          "native_receipt_sha256": "e97b18905553b60f5cc81565b965cb9cc556c970a5a8335a2726eaa08ba091aa",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            2
+          ],
+          "cost_exact": "10432433985642889151/1000000000000000000",
+          "cost": 10.43243398564289,
+          "raw_numerator": "26427",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            8
+          ],
+          "cost_exact": "363063288527132153/40000000000000000",
+          "cost": 9.076582213178304,
+          "raw_numerator": "26042",
+          "raw_denominator": "27000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            11
+          ],
+          "cost_exact": "45907717316923069/5000000000000000",
+          "cost": 9.181543463384614,
+          "raw_numerator": "26883",
+          "raw_denominator": "27000",
+          "LSS_key": "cc7d2f9b24e045d5d102d6267619c54b90b63e9990fd2c9649710e8feaf8bfce",
+          "LSS_point": 0.9844948,
+          "native_receipt_sha256": "9995816ae11b1bc84d3614f03ef2e6affa90d246a68b910e1050e07f7a22de5e",
+          "classification": "LSS_refuted"
+        }
+      ],
+      "better_joint": []
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "full_choice_count": 625,
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "groups": [
+        [
+          0,
+          4,
+          8,
+          12,
+          16
+        ],
+        [
+          1,
+          5,
+          9,
+          13,
+          17
+        ],
+        [
+          2,
+          6,
+          10,
+          14,
+          18
+        ],
+        [
+          3,
+          7,
+          11,
+          15,
+          19
+        ]
+      ],
+      "counts": {
+        "at_or_above_witness": 481,
+        "raw_refuted": 119,
+        "LSS_refuted": 25,
+        "LSS_unknown": 0,
+        "better_joint": 0
+      },
+      "global_fixed_joint_optimal": true,
+      "witness_selection": [
+        16,
+        17,
+        10,
+        15
+      ],
+      "witness_cost_exact": "2898074171056516657/500000000000000000",
+      "witness_cost": 5.7961483421130335,
+      "witness_raw_numerator": "804387",
+      "witness_raw_denominator": "810000",
+      "witness_raw_probability": 0.9930703703703704,
+      "witness_LSS_point": 0.9891365,
+      "witness_LSS_key": "92514a05dc2a05bb7f8092b110e68567b5b0c2005f2308b3593ba146059967e6",
+      "witness_native_receipt_sha256": "b740940f0040e3a1c5b1d1dff345036943b36b1a3df502188f18a843f866ef57",
+      "historical_best": 5.23988366298253,
+      "historical_cost_matching_records": [
+        {
+          "selection": [
+            16,
+            1,
+            2,
+            7
+          ],
+          "cost_exact": "327492728936407837/62500000000000000",
+          "cost": 5.239883662982526,
+          "raw_numerator": "803539",
+          "raw_denominator": "810000",
+          "LSS_key": "1119de972845b753151ab5c981ffabda8496d5dcf6b3b811ed40c9ac91b87333",
+          "LSS_point": 0.9731601,
+          "native_receipt_sha256": "56bfa8bff58c54c61a114cdae6d31c72b419854d6390d822a1ced0c7edd19a1a",
+          "classification": "LSS_refuted"
+        }
+      ],
+      "input_sha256": {
+        "cost.txt": "68849525f223a12ad7787586dff797e2612a1c62106c07341270f0ee0fb9239d",
+        "node_to_factor.pkl": "4f076161b96deb8bc645629976365ea9d5bc255159d48248a1e1766d5b5525e0",
+        "0_sample.txt": "195d85f0886d7cbb6eda80d833ffcab4fe34ba45029dc829ccf6582ff9856664",
+        "1_sample.txt": "a40ef0dd5ad2d79ea52849a2cc7f65957a3c1b6775975eee4f8a12f88aa14650",
+        "2_sample.txt": "7cde320df352aa9e6f0e46d642331c8a87fe312c3b01f2ad9bbc3965c95da298",
+        "3_sample.txt": "22495df205a5f110853d1ff2468ac48fb2e382745ab7432850843c6162312482",
+        "4_sample.txt": "e99e80cc98d54ce5a01837b3390cfe2fec1d73e112faa0e05403e875757e175f",
+        "5_sample.txt": "c055ab2424773dc31c52e9f717efbeafb184e5c132badf1fff3f975945c85653",
+        "6_sample.txt": "4d9952a190fea9eb64fe5c58f100896be8d21f513bdce0bbc2a7b40f2874c8a3",
+        "7_sample.txt": "52e3e41be95e372b34c876b81c34d2cfb68ea025ca1ad0fb59f67a8e6e15b033",
+        "8_sample.txt": "759dc98f4f55988478c104d5efb782bdd0d9e567c1c126b4839866475c1fada8",
+        "9_sample.txt": "aa8cc792f83a290f4ec693fd3239848fbce37b7edbafe632806e4213525034a9",
+        "10_sample.txt": "70f6b9de6c2f6e5ca2f02782d9a74b42906a8d67d1188558b2db87a738d6db98",
+        "11_sample.txt": "5cf5fa12490cc2465b15d8080b177f86ab37afafe09fe91c30f081c7e10b8899",
+        "12_sample.txt": "32487254e23a15164d87c73512024f5901736287c4d4324e7db77bf42af41e6a",
+        "13_sample.txt": "66618f63895383250128135a7d05cffb01b830a282b79691ee7f9e64ae2b7c2b",
+        "14_sample.txt": "c06e3f7f3401cfd1383cacfc99d92f855925572b8dae778322a82e756db5efc9",
+        "15_sample.txt": "c4a8c7064b7fc92084c32ee093d065ded33c69767bc6fd1f43f3229906877cee",
+        "16_sample.txt": "ec7e3707362c3f389542ec5599acd752dedb7aedee23b60bab957593b9130e44",
+        "17_sample.txt": "6e47860a670c3ca2003ea671084ec04b3c7f67454206e2a0d85892dc11541234",
+        "18_sample.txt": "40ddf78d9e7bd8bc07999df42f16dabb970d47ac9fedfeb858da4b7691e776c7",
+        "19_sample.txt": "23543ece00239c285e1879db48fb4627074c4f5cc14e902200d2c19649493f61"
+      },
+      "cheaper_choice_records": [
+        {
+          "selection": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "cost_exact": "5426545967948094073/1000000000000000000",
+          "cost": 5.426545967948094,
+          "raw_numerator": "808602",
+          "raw_denominator": "810000",
+          "LSS_key": "33d026b13020d04e32c817b4c5679c38e135d36da1ddc74e288ddeced40b6b2c",
+          "LSS_point": 0.9734475,
+          "native_receipt_sha256": "1b9831395bf462e63440278569a9014ceb8473c9cc92df49d58c13f7e329f82a",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "cost_exact": "223331728989124727/40000000000000000",
+          "cost": 5.583293224728118,
+          "raw_numerator": "797866",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            10,
+            7
+          ],
+          "cost_exact": "2645275731116985773/500000000000000000",
+          "cost": 5.290551462233972,
+          "raw_numerator": "802870",
+          "raw_denominator": "810000",
+          "LSS_key": "9d2c9c220602bf1b1fb112bd6180988ad609a48d2c97282829bd9376bc508d46",
+          "LSS_point": 0.9684495,
+          "native_receipt_sha256": "56e49e6f0f5dc35b8b9a37c0afbeff4c76c412c66ab4224c733cb03d4e9f2c17",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            14,
+            7
+          ],
+          "cost_exact": "49924646065376979677/10000000000000000000",
+          "cost": 4.992464606537698,
+          "raw_numerator": "764281",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            14,
+            11
+          ],
+          "cost_exact": "57539922800677808507/10000000000000000000",
+          "cost": 5.753992280067781,
+          "raw_numerator": "780941",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            14,
+            15
+          ],
+          "cost_exact": "56068716270463762047/10000000000000000000",
+          "cost": 5.6068716270463765,
+          "raw_numerator": "781958",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            1,
+            18,
+            7
+          ],
+          "cost_exact": "5441498631846847677/1000000000000000000",
+          "cost": 5.441498631846848,
+          "raw_numerator": "806876",
+          "raw_denominator": "810000",
+          "LSS_key": "ed0b9b052ec6b33b3529a848bee5f3a0cf5ca0717cc6e13db2a37bd0ed3b09ee",
+          "LSS_point": 0.9734475,
+          "native_receipt_sha256": "3b5f6c4d3a838080eb4b60447c85f15b753f27e19165997974710603ac8f259d",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            5,
+            2,
+            7
+          ],
+          "cost_exact": "89734101431013253/15625000000000000",
+          "cost": 5.742982491584848,
+          "raw_numerator": "809612",
+          "raw_denominator": "810000",
+          "LSS_key": "a275fe634485634a984295c9b3b8ae3fe89c642ff61ea78ddb925301731cf7fd",
+          "LSS_point": 0.9788701,
+          "native_receipt_sha256": "766908f97397cf0d2045923230005dfd9daed609c3f9f914a260617f1648fef1",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            5,
+            10,
+            7
+          ],
+          "cost_exact": "1121397597174145133/200000000000000000",
+          "cost": 5.606987985870726,
+          "raw_numerator": "807123",
+          "raw_denominator": "810000",
+          "LSS_key": "038fa29f409a382f7d6a9cc511fd7fec9ee3b320024eca7dbd7e7c42a03b1d66",
+          "LSS_point": 0.9756889,
+          "native_receipt_sha256": "ac0b2abb048781cca2deaf82d5cc724b5899fc2bc45aba3a0ca4a1c943e0d1e1",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            5,
+            14,
+            7
+          ],
+          "cost_exact": "53089011301744520867/10000000000000000000",
+          "cost": 5.308901130174452,
+          "raw_numerator": "772632",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            5,
+            18,
+            7
+          ],
+          "cost_exact": "1439483788870900449/250000000000000000",
+          "cost": 5.757935155483602,
+          "raw_numerator": "808813",
+          "raw_denominator": "810000",
+          "LSS_key": "24dcad45107144fa41ea1dee3e92f34df3d1de8eae4a0c7baec4ba830deb993d",
+          "LSS_point": 0.9788701,
+          "native_receipt_sha256": "03d8d9bb5f6e26a8b350539c0eedff98e4148f65c1a64d995247f2fdbbff4f51",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            2,
+            7
+          ],
+          "cost_exact": "2742876059051794879/500000000000000000",
+          "cost": 5.48575211810359,
+          "raw_numerator": "800073",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            6,
+            7
+          ],
+          "cost_exact": "282124968744180693/50000000000000000",
+          "cost": 5.642499374883614,
+          "raw_numerator": "789538",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            10,
+            7
+          ],
+          "cost_exact": "5349757612389467231/1000000000000000000",
+          "cost": 5.3497576123894675,
+          "raw_numerator": "792224",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            14,
+            7
+          ],
+          "cost_exact": "50516707566931936527/10000000000000000000",
+          "cost": 5.051670756693194,
+          "raw_numerator": "758214",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            14,
+            15
+          ],
+          "cost_exact": "56660777772018718897/10000000000000000000",
+          "cost": 5.666077777201872,
+          "raw_numerator": "781451",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            9,
+            18,
+            7
+          ],
+          "cost_exact": "2750352391001171681/500000000000000000",
+          "cost": 5.500704782002344,
+          "raw_numerator": "796949",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            2,
+            7
+          ],
+          "cost_exact": "5725913649613190381/1000000000000000000",
+          "cost": 5.72591364961319,
+          "raw_numerator": "809806",
+          "raw_denominator": "810000",
+          "LSS_key": "db326d86501f9b28defd4b3af16b46f4028edc121534d80858172343b63a2771",
+          "LSS_point": 0.9812141,
+          "native_receipt_sha256": "5b961d82ca2d46b28aca3e5b58218ddd79219396868bb18202714dc0420b29a3",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            10,
+            7
+          ],
+          "cost_exact": "2794959571949533927/500000000000000000",
+          "cost": 5.589919143899068,
+          "raw_numerator": "807461",
+          "raw_denominator": "810000",
+          "LSS_key": "5cf19f7008b93ed33dd4edeefb166297c86a2e75e4556c3a4a75a1002471afbb",
+          "LSS_point": 0.9776535,
+          "native_receipt_sha256": "6cebe74bf0a531373d100999de19b54a3e59e91d9ba1973a9ac8f30801c54bda",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            14,
+            7
+          ],
+          "cost_exact": "52918322882027942757/10000000000000000000",
+          "cost": 5.291832288202794,
+          "raw_numerator": "775647",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            13,
+            18,
+            7
+          ],
+          "cost_exact": "1148173262702388797/200000000000000000",
+          "cost": 5.740866313511944,
+          "raw_numerator": "809198",
+          "raw_denominator": "810000",
+          "LSS_key": "5a79fe8d8fd6b1c40c4bb332c101d79e2057593a6f768b0efa9d78a4fb65db6f",
+          "LSS_point": 0.9812141,
+          "native_receipt_sha256": "253562b659029ec3c907898d9ca08737e1e450c5552deca6e08afb78336a9894",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            2,
+            7
+          ],
+          "cost_exact": "1100879626456809257/200000000000000000",
+          "cost": 5.504398132284046,
+          "raw_numerator": "808192",
+          "raw_denominator": "810000",
+          "LSS_key": "cef9fd90ec904c59240b3ade7a64f5a70d132addf98b94f66959ddf35d50adb8",
+          "LSS_point": 0.9812141,
+          "native_receipt_sha256": "9d0b10da2159be686893e5902bfa3b644290e45ee47ef91bbf40d9cd94f6e001",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            6,
+            7
+          ],
+          "cost_exact": "5661145389064070387/1000000000000000000",
+          "cost": 5.66114538906407,
+          "raw_numerator": "797490",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            10,
+            7
+          ],
+          "cost_exact": "2684201813284961879/500000000000000000",
+          "cost": 5.368403626569924,
+          "raw_numerator": "802494",
+          "raw_denominator": "810000",
+          "LSS_key": "09c0b6ea7e4adb36323e57d83046212c7ea40f8e0a43516b175a48849f250b06",
+          "LSS_point": 0.9776535,
+          "native_receipt_sha256": "9bc8fc7055a998f7bdd1ba8bac4f7d7e4ac3740d50699d729ee826f98475ca21",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            14,
+            7
+          ],
+          "cost_exact": "50703167708736501797/10000000000000000000",
+          "cost": 5.07031677087365,
+          "raw_numerator": "767528",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            14,
+            15
+          ],
+          "cost_exact": "56847237913823284167/10000000000000000000",
+          "cost": 5.6847237913823285,
+          "raw_numerator": "786439",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            0,
+            17,
+            18,
+            7
+          ],
+          "cost_exact": "5519350796182799889/1000000000000000000",
+          "cost": 5.5193507961828,
+          "raw_numerator": "806185",
+          "raw_denominator": "810000",
+          "LSS_key": "08deb8eccdbbff47f96a4c45bde0077c95477d61033b0379ec234401380a3af3",
+          "LSS_point": 0.9812141,
+          "native_receipt_sha256": "997f97158ad81f877995bc8e1b65366778bb6385a9950fe41ea24fea7685410f",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            4,
+            1,
+            10,
+            7
+          ],
+          "cost_exact": "226558871164818969/40000000000000000",
+          "cost": 5.663971779120474,
+          "raw_numerator": "774956",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            1,
+            14,
+            7
+          ],
+          "cost_exact": "53658849234242006467/10000000000000000000",
+          "cost": 5.3658849234242005,
+          "raw_numerator": "738433",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            5,
+            14,
+            7
+          ],
+          "cost_exact": "56823214470609547657/10000000000000000000",
+          "cost": 5.682321447060954,
+          "raw_numerator": "747514",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            9,
+            10,
+            7
+          ],
+          "cost_exact": "572317792927596991/100000000000000000",
+          "cost": 5.72317792927597,
+          "raw_numerator": "766973",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            9,
+            14,
+            7
+          ],
+          "cost_exact": "54250910735796963317/10000000000000000000",
+          "cost": 5.425091073579696,
+          "raw_numerator": "734716",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            13,
+            14,
+            7
+          ],
+          "cost_exact": "56652526050892969547/10000000000000000000",
+          "cost": 5.665252605089297,
+          "raw_numerator": "750458",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            17,
+            10,
+            7
+          ],
+          "cost_exact": "5741823943456426437/1000000000000000000",
+          "cost": 5.741823943456426,
+          "raw_numerator": "775772",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            4,
+            17,
+            14,
+            7
+          ],
+          "cost_exact": "54437370877601528587/10000000000000000000",
+          "cost": 5.4437370877601525,
+          "raw_numerator": "742242",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            2,
+            7
+          ],
+          "cost_exact": "161900489855439339/31250000000000000",
+          "cost": 5.180815675374059,
+          "raw_numerator": "786214",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            2,
+            15
+          ],
+          "cost_exact": "1159044539176547417/200000000000000000",
+          "cost": 5.795222695882737,
+          "raw_numerator": "801527",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            6,
+            7
+          ],
+          "cost_exact": "106751258643081659/20000000000000000",
+          "cost": 5.337562932154083,
+          "raw_numerator": "756571",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            10,
+            7
+          ],
+          "cost_exact": "5044821169659936321/1000000000000000000",
+          "cost": 5.0448211696599365,
+          "raw_numerator": "764516",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            10,
+            15
+          ],
+          "cost_exact": "2829614095084307279/500000000000000000",
+          "cost": 5.659228190168615,
+          "raw_numerator": "792366",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            14,
+            3
+          ],
+          "cost_exact": "56497559931034594387/10000000000000000000",
+          "cost": 5.64975599310346,
+          "raw_numerator": "762375",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            14,
+            7
+          ],
+          "cost_exact": "47467343139636627427/10000000000000000000",
+          "cost": 4.746734313963663,
+          "raw_numerator": "716074",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            14,
+            11
+          ],
+          "cost_exact": "55082619874937456257/10000000000000000000",
+          "cost": 5.5082619874937455,
+          "raw_numerator": "754662",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            14,
+            15
+          ],
+          "cost_exact": "53611413344723409797/10000000000000000000",
+          "cost": 5.361141334472341,
+          "raw_numerator": "755169",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            14,
+            19
+          ],
+          "cost_exact": "55671376920773193437/10000000000000000000",
+          "cost": 5.56713769207732,
+          "raw_numerator": "746099",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            1,
+            18,
+            7
+          ],
+          "cost_exact": "1298942084818203113/250000000000000000",
+          "cost": 5.195768339272813,
+          "raw_numerator": "777837",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            2,
+            7
+          ],
+          "cost_exact": "5497252199010812967/1000000000000000000",
+          "cost": 5.497252199010813,
+          "raw_numerator": "795480",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            6,
+            7
+          ],
+          "cost_exact": "5653999455790837069/1000000000000000000",
+          "cost": 5.653999455790837,
+          "raw_numerator": "778396",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            10,
+            7
+          ],
+          "cost_exact": "134031442332417261/25000000000000000",
+          "cost": 5.36125769329669,
+          "raw_numerator": "781346",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            14,
+            7
+          ],
+          "cost_exact": "50631708376004168617/10000000000000000000",
+          "cost": 5.063170837600417,
+          "raw_numerator": "738153",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            14,
+            15
+          ],
+          "cost_exact": "56775778581090950987/10000000000000000000",
+          "cost": 5.677577858109095,
+          "raw_numerator": "765109",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            5,
+            18,
+            7
+          ],
+          "cost_exact": "5512204862909566571/1000000000000000000",
+          "cost": 5.512204862909567,
+          "raw_numerator": "789587",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            2,
+            7
+          ],
+          "cost_exact": "5240021825529554533/1000000000000000000",
+          "cost": 5.2400218255295545,
+          "raw_numerator": "778217",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            6,
+            7
+          ],
+          "cost_exact": "1079353816461915727/200000000000000000",
+          "cost": 5.396769082309579,
+          "raw_numerator": "751994",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            10,
+            7
+          ],
+          "cost_exact": "2552013659907716003/500000000000000000",
+          "cost": 5.104027319815432,
+          "raw_numerator": "756840",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            10,
+            15
+          ],
+          "cost_exact": "5718434340324110243/1000000000000000000",
+          "cost": 5.7184343403241105,
+          "raw_numerator": "786615",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            14,
+            3
+          ],
+          "cost_exact": "57089621432589551237/10000000000000000000",
+          "cost": 5.7089621432589555,
+          "raw_numerator": "763560",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            14,
+            7
+          ],
+          "cost_exact": "48059404641191584277/10000000000000000000",
+          "cost": 4.805940464119159,
+          "raw_numerator": "713772",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            14,
+            11
+          ],
+          "cost_exact": "55674681376492413107/10000000000000000000",
+          "cost": 5.567468137649241,
+          "raw_numerator": "753732",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            14,
+            15
+          ],
+          "cost_exact": "54203474846278366647/10000000000000000000",
+          "cost": 5.420347484627837,
+          "raw_numerator": "754873",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            14,
+            19
+          ],
+          "cost_exact": "56263438422328150287/10000000000000000000",
+          "cost": 5.626343842232815,
+          "raw_numerator": "743518",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            9,
+            18,
+            7
+          ],
+          "cost_exact": "5254974489428308137/1000000000000000000",
+          "cost": 5.254974489428308,
+          "raw_numerator": "769525",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            2,
+            7
+          ],
+          "cost_exact": "1370045839259788789/250000000000000000",
+          "cost": 5.480183357039155,
+          "raw_numerator": "796619",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            6,
+            7
+          ],
+          "cost_exact": "2818465306909589629/500000000000000000",
+          "cost": 5.636930613819179,
+          "raw_numerator": "776635",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            10,
+            7
+          ],
+          "cost_exact": "5344188851325032629/1000000000000000000",
+          "cost": 5.344188851325033,
+          "raw_numerator": "782772",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            14,
+            7
+          ],
+          "cost_exact": "50461019956287590507/10000000000000000000",
+          "cost": 5.046101995628759,
+          "raw_numerator": "740378",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            14,
+            15
+          ],
+          "cost_exact": "56605090161374372877/10000000000000000000",
+          "cost": 5.660509016137437,
+          "raw_numerator": "770536",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            13,
+            18,
+            7
+          ],
+          "cost_exact": "137378400523447719/25000000000000000",
+          "cost": 5.495136020937909,
+          "raw_numerator": "790802",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            2,
+            7
+          ],
+          "cost_exact": "262933391985500553/50000000000000000",
+          "cost": 5.258667839710011,
+          "raw_numerator": "788887",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            6,
+            7
+          ],
+          "cost_exact": "2707707548245017581/500000000000000000",
+          "cost": 5.415415096490035,
+          "raw_numerator": "763792",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            10,
+            7
+          ],
+          "cost_exact": "5122673333995888533/1000000000000000000",
+          "cost": 5.1226733339958885,
+          "raw_numerator": "770402",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            10,
+            15
+          ],
+          "cost_exact": "573708035450456677/100000000000000000",
+          "cost": 5.737080354504567,
+          "raw_numerator": "792532",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            14,
+            3
+          ],
+          "cost_exact": "57276081574394116507/10000000000000000000",
+          "cost": 5.727608157439412,
+          "raw_numerator": "767889",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            14,
+            7
+          ],
+          "cost_exact": "48245864782996149547/10000000000000000000",
+          "cost": 4.824586478299615,
+          "raw_numerator": "726801",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            14,
+            11
+          ],
+          "cost_exact": "55861141518296978377/10000000000000000000",
+          "cost": 5.5861141518296975,
+          "raw_numerator": "759274",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            14,
+            15
+          ],
+          "cost_exact": "54389934988082931917/10000000000000000000",
+          "cost": 5.438993498808293,
+          "raw_numerator": "760108",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            14,
+            19
+          ],
+          "cost_exact": "56449898564132715557/10000000000000000000",
+          "cost": 5.644989856413272,
+          "raw_numerator": "750971",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            8,
+            17,
+            18,
+            7
+          ],
+          "cost_exact": "659202562951095583/125000000000000000",
+          "cost": 5.273620503608765,
+          "raw_numerator": "781281",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            2,
+            7
+          ],
+          "cost_exact": "5468768799400449687/1000000000000000000",
+          "cost": 5.46876879940045,
+          "raw_numerator": "804263",
+          "raw_denominator": "810000",
+          "LSS_key": "2ed655d6fdd5e29e3454e9ebad147e0964907735a096ebebd20eb21446c9128f",
+          "LSS_point": 0.9711217,
+          "native_receipt_sha256": "65c701d040aa968497eadcd912cedbdbc695ae30db8a08222ae13ec88199422f",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            6,
+            7
+          ],
+          "cost_exact": "5625516056180473789/1000000000000000000",
+          "cost": 5.625516056180474,
+          "raw_numerator": "785912",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            10,
+            7
+          ],
+          "cost_exact": "133319357342158179/25000000000000000",
+          "cost": 5.332774293686327,
+          "raw_numerator": "792073",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            14,
+            7
+          ],
+          "cost_exact": "50346874379900535817/10000000000000000000",
+          "cost": 5.034687437990054,
+          "raw_numerator": "750801",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            14,
+            15
+          ],
+          "cost_exact": "56490944584987318187/10000000000000000000",
+          "cost": 5.649094458498732,
+          "raw_numerator": "774891",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            1,
+            18,
+            7
+          ],
+          "cost_exact": "5483721463299203291/1000000000000000000",
+          "cost": 5.4837214632992035,
+          "raw_numerator": "800096",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            5,
+            2,
+            7
+          ],
+          "cost_exact": "2892602661518601903/500000000000000000",
+          "cost": 5.785205323037204,
+          "raw_numerator": "807604",
+          "raw_denominator": "810000",
+          "LSS_key": "89d1a318452874921a07d86e52bfd095b958284e14dbebb9dd9d22d995aaa972",
+          "LSS_point": 0.976841,
+          "native_receipt_sha256": "2423018e5c24c9588ac7737d43b69382ade691b92c4d4ba4137c001e039a1d7d",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            5,
+            10,
+            7
+          ],
+          "cost_exact": "5649210817323081279/1000000000000000000",
+          "cost": 5.649210817323081,
+          "raw_numerator": "800816",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            5,
+            14,
+            7
+          ],
+          "cost_exact": "53511239616268077007/10000000000000000000",
+          "cost": 5.351123961626808,
+          "raw_numerator": "763857",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            2,
+            7
+          ],
+          "cost_exact": "1381993737388986343/250000000000000000",
+          "cost": 5.527974949555945,
+          "raw_numerator": "794910",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            6,
+            7
+          ],
+          "cost_exact": "2842361103167984737/500000000000000000",
+          "cost": 5.6847222063359695,
+          "raw_numerator": "778654",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            10,
+            7
+          ],
+          "cost_exact": "1078396088768364569/200000000000000000",
+          "cost": 5.391980443841823,
+          "raw_numerator": "782733",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            14,
+            7
+          ],
+          "cost_exact": "50938935881455492667/10000000000000000000",
+          "cost": 5.09389358814555,
+          "raw_numerator": "745880",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            14,
+            15
+          ],
+          "cost_exact": "57083006086542275037/10000000000000000000",
+          "cost": 5.708300608654228,
+          "raw_numerator": "773145",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            9,
+            18,
+            7
+          ],
+          "cost_exact": "173216487920459343/31250000000000000",
+          "cost": 5.542927613454699,
+          "raw_numerator": "790307",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            2,
+            7
+          ],
+          "cost_exact": "1153627296213109199/200000000000000000",
+          "cost": 5.768136481065546,
+          "raw_numerator": "808216",
+          "raw_denominator": "810000",
+          "LSS_key": "c317d5a19683b483e8316cd399f788647ffcfbda78b70855bbc5586c3bbced41",
+          "LSS_point": 0.9795436,
+          "native_receipt_sha256": "962528c7830c3deea8e38cc1c8275f99b87fbd279fabaf7dce96e1bffcc4a01a",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            10,
+            7
+          ],
+          "cost_exact": "1408035493837855867/250000000000000000",
+          "cost": 5.6321419753514235,
+          "raw_numerator": "801924",
+          "raw_denominator": "810000",
+          "LSS_key": "7b375f06721b7003c1fc551d91081ddf4dccdaeeac560d6362a38184c20a777e",
+          "LSS_point": 0.9755682,
+          "native_receipt_sha256": "25c89563343fc40daee66ccc62422929db82235ef09b5140f57ecf6d681016e3",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            14,
+            7
+          ],
+          "cost_exact": "53340551196551498897/10000000000000000000",
+          "cost": 5.33405511965515,
+          "raw_numerator": "766436",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            13,
+            18,
+            7
+          ],
+          "cost_exact": "5783089144964299599/1000000000000000000",
+          "cost": 5.7830891449643,
+          "raw_numerator": "806084",
+          "raw_denominator": "810000",
+          "LSS_key": "a8c6f5526217163f7114ec38d9a128c474e94f2dc8fdab9f1a7c28938b7a7fd5",
+          "LSS_point": 0.9795436,
+          "native_receipt_sha256": "b0f57305d6725694e41e0d979cce64b982961981e2f08890f7d4cd101de89304",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            2,
+            7
+          ],
+          "cost_exact": "5546620963736401899/1000000000000000000",
+          "cost": 5.546620963736402,
+          "raw_numerator": "804022",
+          "raw_denominator": "810000",
+          "LSS_key": "8552c5c8077c82fa7cbd2d12fdd05ff81f4cea55d2a685a4b8a04a023a753014",
+          "LSS_point": 0.9795436,
+          "native_receipt_sha256": "e851fc6b18ecebdc23192d8e874cbfd6884254672c79f06be1a4028ab53ebb2b",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            6,
+            7
+          ],
+          "cost_exact": "5703368220516426001/1000000000000000000",
+          "cost": 5.703368220516426,
+          "raw_numerator": "787102",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            10,
+            7
+          ],
+          "cost_exact": "1352656614505569843/250000000000000000",
+          "cost": 5.410626458022279,
+          "raw_numerator": "793262",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            14,
+            7
+          ],
+          "cost_exact": "51125396023260057937/10000000000000000000",
+          "cost": 5.112539602326006,
+          "raw_numerator": "755144",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            14,
+            15
+          ],
+          "cost_exact": "57269466228346840307/10000000000000000000",
+          "cost": 5.726946622834684,
+          "raw_numerator": "778997",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            12,
+            17,
+            18,
+            7
+          ],
+          "cost_exact": "5561573627635155503/1000000000000000000",
+          "cost": 5.5615736276351555,
+          "raw_numerator": "799924",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            2,
+            7
+          ],
+          "cost_exact": "327492728936407837/62500000000000000",
+          "cost": 5.239883662982526,
+          "raw_numerator": "803539",
+          "raw_denominator": "810000",
+          "LSS_key": "1119de972845b753151ab5c981ffabda8496d5dcf6b3b811ed40c9ac91b87333",
+          "LSS_point": 0.9731601,
+          "native_receipt_sha256": "56bfa8bff58c54c61a114cdae6d31c72b419854d6390d822a1ced0c7edd19a1a",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            6,
+            7
+          ],
+          "cost_exact": "2698315459881274747/500000000000000000",
+          "cost": 5.39663091976255,
+          "raw_numerator": "784638",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            10,
+            7
+          ],
+          "cost_exact": "1020777831453680573/200000000000000000",
+          "cost": 5.103889157268402,
+          "raw_numerator": "791143",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            10,
+            15
+          ],
+          "cost_exact": "2859148088888540551/500000000000000000",
+          "cost": 5.7182961777770815,
+          "raw_numerator": "804482",
+          "raw_denominator": "810000",
+          "LSS_key": "c50fb369968b6e7e20c8dcfd56cdfcfc61a3efc80b2b5eee8080c4c9164401b5",
+          "LSS_point": 0.9849748,
+          "native_receipt_sha256": "5b7cd937918fcf9866fd52fbee33e051c4c4740aa7761b6eb4be945f16646a03",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            14,
+            3
+          ],
+          "cost_exact": "57088239807119259827/10000000000000000000",
+          "cost": 5.708823980711926,
+          "raw_numerator": "780497",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            14,
+            7
+          ],
+          "cost_exact": "48058023015721292867/10000000000000000000",
+          "cost": 4.805802301572129,
+          "raw_numerator": "749934",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            14,
+            11
+          ],
+          "cost_exact": "55673299751022121697/10000000000000000000",
+          "cost": 5.567329975102212,
+          "raw_numerator": "774389",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            14,
+            15
+          ],
+          "cost_exact": "54202093220808075237/10000000000000000000",
+          "cost": 5.420209322080807,
+          "raw_numerator": "774635",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            14,
+            19
+          ],
+          "cost_exact": "56262056796857858877/10000000000000000000",
+          "cost": 5.6262056796857856,
+          "raw_numerator": "768064",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            1,
+            18,
+            7
+          ],
+          "cost_exact": "1313709081720319749/250000000000000000",
+          "cost": 5.2548363268812786,
+          "raw_numerator": "799092",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            2,
+            7
+          ],
+          "cost_exact": "5556320186619279511/1000000000000000000",
+          "cost": 5.5563201866192795,
+          "raw_numerator": "806959",
+          "raw_denominator": "810000",
+          "LSS_key": "186bd9b3957c03a34633a443de2d279c2c573a3fb1e63aa8e5224cfde427400f",
+          "LSS_point": 0.9786945,
+          "native_receipt_sha256": "5a8a8d864fa6068fc4f7a2bf2dfd2219cd49f0712bd92abff7fa7d7b9cf41c12",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            6,
+            7
+          ],
+          "cost_exact": "5713067443399303613/1000000000000000000",
+          "cost": 5.713067443399304,
+          "raw_numerator": "794302",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            10,
+            7
+          ],
+          "cost_exact": "677540710113144623/125000000000000000",
+          "cost": 5.420325680905157,
+          "raw_numerator": "799275",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            14,
+            7
+          ],
+          "cost_exact": "51222388252088834057/10000000000000000000",
+          "cost": 5.122238825208884,
+          "raw_numerator": "762775",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            14,
+            15
+          ],
+          "cost_exact": "57366458457175616427/10000000000000000000",
+          "cost": 5.736645845717562,
+          "raw_numerator": "782758",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            5,
+            18,
+            7
+          ],
+          "cost_exact": "1114254570103606623/200000000000000000",
+          "cost": 5.571272850518033,
+          "raw_numerator": "804606",
+          "raw_denominator": "810000",
+          "LSS_key": "6709f29db26852e4685e7e2fa2eefd1cca0bc7438ca3f87d888c6109a5fa76e4",
+          "LSS_point": 0.9786945,
+          "native_receipt_sha256": "9d5c013523ef182846632bc627d1771690a4f6fd9f2f5d6e419a6c51f398034b",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            2,
+            7
+          ],
+          "cost_exact": "5299089813138021077/1000000000000000000",
+          "cost": 5.299089813138021,
+          "raw_numerator": "795059",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            6,
+            7
+          ],
+          "cost_exact": "5455837069918045179/1000000000000000000",
+          "cost": 5.455837069918045,
+          "raw_numerator": "779255",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            10,
+            7
+          ],
+          "cost_exact": "103261906148477971/20000000000000000",
+          "cost": 5.163095307423898,
+          "raw_numerator": "782846",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            10,
+            15
+          ],
+          "cost_exact": "5777502327932576787/1000000000000000000",
+          "cost": 5.777502327932577,
+          "raw_numerator": "798188",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            14,
+            3
+          ],
+          "cost_exact": "57680301308674216677/10000000000000000000",
+          "cost": 5.768030130867421,
+          "raw_numerator": "779328",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            14,
+            7
+          ],
+          "cost_exact": "48650084517276249717/10000000000000000000",
+          "cost": 4.865008451727625,
+          "raw_numerator": "746494",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            14,
+            11
+          ],
+          "cost_exact": "56265361252577078547/10000000000000000000",
+          "cost": 5.626536125257708,
+          "raw_numerator": "773169",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            14,
+            15
+          ],
+          "cost_exact": "54794154722363032087/10000000000000000000",
+          "cost": 5.479415472236303,
+          "raw_numerator": "773773",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            14,
+            19
+          ],
+          "cost_exact": "56854118298412815727/10000000000000000000",
+          "cost": 5.685411829841281,
+          "raw_numerator": "766768",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            9,
+            18,
+            7
+          ],
+          "cost_exact": "5314042477036774681/1000000000000000000",
+          "cost": 5.314042477036775,
+          "raw_numerator": "790134",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            2,
+            7
+          ],
+          "cost_exact": "55392513446476217/10000000000000000",
+          "cost": 5.539251344647622,
+          "raw_numerator": "807768",
+          "raw_denominator": "810000",
+          "LSS_key": "a43f4ec30d1b1d1212a9c3499f01e83c90e762ce7dbdbd199ffa76a06da8cd7c",
+          "LSS_point": 0.9810206,
+          "native_receipt_sha256": "4abde8d898d5af66f35afbe8b5e7a3b31024f732fe39af73fa0c0b9ba3761f21",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            6,
+            7
+          ],
+          "cost_exact": "2847999300713822901/500000000000000000",
+          "cost": 5.695998601427646,
+          "raw_numerator": "796116",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            10,
+            7
+          ],
+          "cost_exact": "5403256838933499173/1000000000000000000",
+          "cost": 5.403256838933499,
+          "raw_numerator": "801273",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            14,
+            7
+          ],
+          "cost_exact": "51051699832372255947/10000000000000000000",
+          "cost": 5.105169983237226,
+          "raw_numerator": "766409",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            14,
+            15
+          ],
+          "cost_exact": "57195770037459038317/10000000000000000000",
+          "cost": 5.719577003745904,
+          "raw_numerator": "786064",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            13,
+            18,
+            7
+          ],
+          "cost_exact": "694275501068296913/125000000000000000",
+          "cost": 5.5542040085463755,
+          "raw_numerator": "805461",
+          "raw_denominator": "810000",
+          "LSS_key": "4b6eccf17c0b9b0427fdff7a3f1e444852349c27db57413b3f5687b450cd87d5",
+          "LSS_point": 0.9810206,
+          "native_receipt_sha256": "0c527f9902e6c1f1f97b15e3b7675a18aa369f4419daf71347ac51a5f2368118",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            2,
+            7
+          ],
+          "cost_exact": "1329433956829619401/250000000000000000",
+          "cost": 5.317735827318478,
+          "raw_numerator": "803406",
+          "raw_denominator": "810000",
+          "LSS_key": "f83bd142bd8a155a045f25820758f6c475837a5995399e00814eaee1df50b49a",
+          "LSS_point": 0.9810206,
+          "native_receipt_sha256": "2c45f66d9ffb46d0cd6b431600b879ae398efc2d9f4e659dd7084aad14b8454b",
+          "classification": "LSS_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            6,
+            7
+          ],
+          "cost_exact": "2737241542049250853/500000000000000000",
+          "cost": 5.474483084098502,
+          "raw_numerator": "786518",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            10,
+            7
+          ],
+          "cost_exact": "5181741321604355077/1000000000000000000",
+          "cost": 5.181741321604355,
+          "raw_numerator": "792724",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            14,
+            3
+          ],
+          "cost_exact": "57866761450478781947/10000000000000000000",
+          "cost": 5.7866761450478785,
+          "raw_numerator": "784311",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            14,
+            7
+          ],
+          "cost_exact": "48836544659080814987/10000000000000000000",
+          "cost": 4.883654465908082,
+          "raw_numerator": "755095",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            14,
+            11
+          ],
+          "cost_exact": "56451821394381643817/10000000000000000000",
+          "cost": 5.645182139438164,
+          "raw_numerator": "778560",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            14,
+            15
+          ],
+          "cost_exact": "54980614864167597357/10000000000000000000",
+          "cost": 5.49806148641676,
+          "raw_numerator": "779044",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            14,
+            19
+          ],
+          "cost_exact": "57040578440217380997/10000000000000000000",
+          "cost": 5.704057844021738,
+          "raw_numerator": "772694",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        },
+        {
+          "selection": [
+            16,
+            17,
+            18,
+            7
+          ],
+          "cost_exact": "666586061402153901/125000000000000000",
+          "cost": 5.332688491217231,
+          "raw_numerator": "799363",
+          "raw_denominator": "810000",
+          "classification": "raw_refuted"
+        }
+      ],
+      "better_joint": []
+    }
+  ],
+  "seconds": 2.3718318780884147
+}

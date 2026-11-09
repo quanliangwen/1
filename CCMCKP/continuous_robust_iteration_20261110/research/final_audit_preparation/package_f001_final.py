@@ -37,6 +37,13 @@ guide.write_text('''# F001：实际执行的冻结I002源码与正式证据
 files=list(source.glob('*.py'))+[H/'reference'/r['path'] for r in json.load(open(H/'REFERENCE_SHA256.json'))['files']]
 files+=[H/n for n in ['run_f001_search.py','run_f001_stages.py','validate_f001.py','native_lss_eval.py','reference_loader.py','audit_f001_progress.py','audit_f001_final.py','independent_raw_recount.py','check_independent_raw_recount.py','INDEPENDENT_RAW_RECOUNT_MATH_CHECK.json','CASES.json','BASELINE_S10.json','RAW_REFERENCE.json','REFERENCE_SHA256.json','LSS_DATA_REFERENCE.json']]
 files+=[F/n for n in ['REGISTRATION.json','LAUNCH.json','CACHE_BEFORE_VALIDATION.json','CACHE_LOGS_BEFORE_VALIDATION.json','FINAL_AUDIT_STATS.json','SOURCE_README.md']]
+P=H/'research/final_audit_preflight';proof=json.load(open(P/'FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json'));check=json.load(open(P/'FIRST3_APP_INTEGER_RECHECK.json'))
+if not check['passed'] or check['proof_sha256']!=sha(P/'FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json'):raise RuntimeError('First3 cost-line proof identity differs')
+files+=[P/n for n in ['FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json','FIRST3_APP_INTEGER_RECHECK.json','SMALL_FORMAL_COMPATIBILITY.json','README.md']]
+files+=[H/n for n in ['audit_first3_small_global.py','check_first3_small_integer.py','diagnose_small_formal_compatibility.py']]
+keys={c['witness_LSS_key'] for c in proof['cases']}
+keys.update(r['LSS_key'] for c in proof['cases'] for r in c['cheaper_choice_records'] if 'LSS_key' in r)
+files+=[H/'lss_cache'/(k+'.json') for k in sorted(keys)]
 package('F001_SOURCE_AND_AUDIT.zip',files,'actual frozen formal source16+original LSS21, registered protocol, independent verifier and actual final audit')
 for i in range(1,41):
  rows=[r for r in d['details'] if r['index']==i]

@@ -1,0 +1,2266 @@
+{
+  "integrity_passed": true,
+  "scope": "one frozen actual formal seed on each of16small cases, exact decimal rational empirical recount and pre-existing original LSS receipts only; NO official F001 postselection records, new MC,30-run Avg or Std",
+  "cases": 16,
+  "all16_cached_prefix_resolved": true,
+  "first3_APP_oldBest_compatible": false,
+  "source_sha256": {
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "a98cf76db399382088a301c464165bdfdb5c893c81a0f6805b15c345946a5754",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "s10_kernel.py": "10971a18b640731bfe482f4e726d6cc828b3c440d56cc3c6f8c876d350ce2611",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "run.py": "faaed365957c3e6a1553aeed1bccf8cc6a35ad88ec837cdb2d10ad7e604dae75",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+  },
+  "final_auditor_sha256": "e51e145f5a5b478b12fe3abf7a099e669ab72d849d27631b256f105adc6d37bb",
+  "independent_raw_verifier_sha256": "6aece721b45de969e19b2df608301a2a93b41c618c6a15f1d7c52f28a3b9e820",
+  "diagnostic_sha256": "57ee323e9a691e3e7adbe4d4edf5027069f1baab091e74a6537508afff432148",
+  "new_MC_calls": 0,
+  "optimizer_feedback": false,
+  "rows": [
+    {
+      "index": 1,
+      "instance": "LAB_3_5_30_",
+      "capacity": 11.0,
+      "search_seed": 9707001,
+      "original_best": 18.6308049871027,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "aae7608ac200f817e5c65e189b89fcba9cf02f7fa46472e3635c69cda11dc7f4",
+      "tested": [
+        {
+          "key": "dff164bca3cdf793510b429c246e7d6e0135312d47e0194d08dc498c68c63c87",
+          "passed": true,
+          "point": 0.9997518
+        }
+      ],
+      "known_joint_cost": 18.630804987102678,
+      "selection": [
+        12,
+        10,
+        5
+      ],
+      "LSS_point": 0.9997518,
+      "raw_exact_probability": 0.9995185185185185,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "26987",
+        "denominator": "27000",
+        "lower": 0.9995185185185185,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "26987",
+        "original_denominator": "27000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "dff164bca3cdf793510b429c246e7d6e0135312d47e0194d08dc498c68c63c87",
+      "cost_minus_old_best": -2.1316282072803006e-14
+    },
+    {
+      "index": 2,
+      "instance": "LAB_3_5_30_",
+      "capacity": 14.0,
+      "search_seed": 9707001,
+      "original_best": 10.7787181928322,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "0d9e6619f69ae17fc19e1b25b23c578352cfee9a5fd06df44169390bb1e0f67a",
+      "tested": [
+        {
+          "key": "39846e03bc2714a688a7da14c4bd50f371aa7b18e5ab7e7b9940709b199f0ce9",
+          "passed": true,
+          "point": 0.9995776
+        }
+      ],
+      "known_joint_cost": 10.778718192832196,
+      "selection": [
+        9,
+        10,
+        5
+      ],
+      "LSS_point": 0.9995776,
+      "raw_exact_probability": 0.9995555555555555,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "26988",
+        "denominator": "27000",
+        "lower": 0.9995555555555555,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "26988",
+        "original_denominator": "27000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "39846e03bc2714a688a7da14c4bd50f371aa7b18e5ab7e7b9940709b199f0ce9",
+      "cost_minus_old_best": -3.552713678800501e-15
+    },
+    {
+      "index": 3,
+      "instance": "LAB_4_5_30_",
+      "capacity": 18.0,
+      "search_seed": 9707001,
+      "original_best": 19.4149004635262,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "7a1ce7f596eb190217b374be8c76a3b650397d5dfdb0edb0532d78b866292413",
+      "tested": [
+        {
+          "key": "5cabe25592aa3dce34043ea1f56db21ce58b7ab9c7b89504852dd9c1df41cdc4",
+          "passed": true,
+          "point": 0.9999844
+        }
+      ],
+      "known_joint_cost": 19.414900463526205,
+      "selection": [
+        0,
+        9,
+        2,
+        15
+      ],
+      "LSS_point": 0.9999844,
+      "raw_exact_probability": 1.0,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "810000",
+        "denominator": "810000",
+        "lower": 1.0,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "810000",
+        "original_denominator": "810000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "5cabe25592aa3dce34043ea1f56db21ce58b7ab9c7b89504852dd9c1df41cdc4",
+      "cost_minus_old_best": 3.552713678800501e-15
+    },
+    {
+      "index": 4,
+      "instance": "LAB_4_5_30_",
+      "capacity": 26.0,
+      "search_seed": 9707001,
+      "original_best": 10.3556283508386,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "88e0c40fcc2091fdbf3e605bc4b5abdcb34e9f5cb37fabeecab30b2ff8212c3a",
+      "tested": [
+        {
+          "key": "8bfd0c29dbdb2b4f466752c1b53c4fd1d8329b9b156f4ac196e0a8fb8ad064fe",
+          "passed": true,
+          "point": 0.9991468
+        }
+      ],
+      "known_joint_cost": 10.355628350838563,
+      "selection": [
+        0,
+        13,
+        2,
+        7
+      ],
+      "LSS_point": 0.9991468,
+      "raw_exact_probability": 0.9980716049382716,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "808438",
+        "denominator": "810000",
+        "lower": 0.9980716049382716,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "808438",
+        "original_denominator": "810000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "8bfd0c29dbdb2b4f466752c1b53c4fd1d8329b9b156f4ac196e0a8fb8ad064fe",
+      "cost_minus_old_best": -3.730349362740526e-14
+    },
+    {
+      "index": 5,
+      "instance": "LAB_5_5_30_",
+      "capacity": 11.0,
+      "search_seed": 9707001,
+      "original_best": 21.4217824326836,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "3eeb36ac092c0d0766e0a155dd5c6fe10145244f04a1108e25b8529428546346",
+      "tested": [
+        {
+          "key": "cc8af5b7a755ce5b927524ac3a33259ffcdcb2bfe8afaa9ff0fbfec4ea3b2deb",
+          "passed": true,
+          "point": 0.9949996
+        }
+      ],
+      "known_joint_cost": 21.42178243268365,
+      "selection": [
+        15,
+        16,
+        12,
+        18,
+        4
+      ],
+      "LSS_point": 0.9949996,
+      "raw_exact_probability": 0.9992387654320988,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24281502",
+        "denominator": "24300000",
+        "lower": 0.9992387654320988,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24281502",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "cc8af5b7a755ce5b927524ac3a33259ffcdcb2bfe8afaa9ff0fbfec4ea3b2deb",
+      "cost_minus_old_best": 4.973799150320701e-14
+    },
+    {
+      "index": 6,
+      "instance": "LAB_5_5_30_",
+      "capacity": 20.0,
+      "search_seed": 9707001,
+      "original_best": 12.6323767009148,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "4e7ab86a82c6e9c006887cf9e9fae21bd39decc7885b6a063518880e526e23b1",
+      "tested": [
+        {
+          "key": "5f6e97a08e9ddc39f5fe413aacfdfdb4a90b713065d548b388f7a4761d2a2a92",
+          "passed": true,
+          "point": 0.9999917
+        }
+      ],
+      "known_joint_cost": 12.63237670091476,
+      "selection": [
+        10,
+        16,
+        2,
+        18,
+        4
+      ],
+      "LSS_point": 0.9999917,
+      "raw_exact_probability": 1.0,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24300000",
+        "denominator": "24300000",
+        "lower": 1.0,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24300000",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "5f6e97a08e9ddc39f5fe413aacfdfdb4a90b713065d548b388f7a4761d2a2a92",
+      "cost_minus_old_best": -4.085620730620576e-14
+    },
+    {
+      "index": 7,
+      "instance": "LAB_5_10_30_",
+      "capacity": 10.0,
+      "search_seed": 9707001,
+      "original_best": 17.3679678306573,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "fe9bdd591c3b1b85fe8ce83d3bae3f0b315455dbe519eab4a336dbf30154a426",
+      "tested": [
+        {
+          "key": "11570238eb19d35de31b94c510ff3998bbc28f77a5a7c326110e331ac027cad3",
+          "passed": true,
+          "point": 0.9990123
+        }
+      ],
+      "known_joint_cost": 17.367967830657324,
+      "selection": [
+        5,
+        46,
+        47,
+        3,
+        39
+      ],
+      "LSS_point": 0.9990123,
+      "raw_exact_probability": 0.9998837037037037,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24297174",
+        "denominator": "24300000",
+        "lower": 0.9998837037037037,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24297174",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "11570238eb19d35de31b94c510ff3998bbc28f77a5a7c326110e331ac027cad3",
+      "cost_minus_old_best": 2.4868995751603507e-14
+    },
+    {
+      "index": 8,
+      "instance": "LAB_5_10_30_",
+      "capacity": 16.0,
+      "search_seed": 9707001,
+      "original_best": 11.1850840224474,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 1,
+      "search_sha256": "60a50fc567a78784ef0d2b4d2fe0541412b6b969e64398f1b492b523af29f2af",
+      "tested": [
+        {
+          "key": "5282750503fbb6a6649ab2a7cdd60613dd833f1c07bb08543e62d33ac51bc23e",
+          "passed": true,
+          "point": 0.9896428
+        }
+      ],
+      "known_joint_cost": 11.185084022447434,
+      "selection": [
+        25,
+        46,
+        17,
+        3,
+        39
+      ],
+      "LSS_point": 0.9896428,
+      "raw_exact_probability": 0.9917910288065843,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24100522",
+        "denominator": "24300000",
+        "lower": 0.9917910288065843,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24100522",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "5282750503fbb6a6649ab2a7cdd60613dd833f1c07bb08543e62d33ac51bc23e",
+      "cost_minus_old_best": 3.375077994860476e-14
+    },
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "search_seed": 9707001,
+      "original_best": 9.03471729952129,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 6,
+      "search_sha256": "1fc0406a911b86100d70820ea0c0a2a28831455d9305c03a03f3a897922aadca",
+      "tested": [
+        {
+          "key": "b58ec678b9c3826ef120cb2f55b8024930c321a570044402b95104fa2c33fc36",
+          "passed": false,
+          "point": 0.9651546
+        },
+        {
+          "key": "45d56f9c40c89b2af5586f13778cfe065ae85e6b91db17e1af2a780f85c41fa5",
+          "passed": false,
+          "point": 0.9666005
+        },
+        {
+          "key": "6c200231e822e9d02876a451c433bd423d54f9c0962f416048c7e9ec7b13db52",
+          "passed": false,
+          "point": 0.9717874
+        },
+        {
+          "key": "85e2230668615d8c3b70848b9c9e222963d386b4720998c39240df6a29ff59dd",
+          "passed": false,
+          "point": 0.9713279
+        },
+        {
+          "key": "335e93670330c3b41ba013e612d92edf631b22295f922ad002481ef957e08508",
+          "passed": false,
+          "point": 0.9720019
+        },
+        {
+          "key": "d1aa562c77aa6712d7308c6ea41df74daa23e1ae6efd8c81833990a48972587d",
+          "passed": true,
+          "point": 0.9874058
+        }
+      ],
+      "known_joint_cost": 14.07661610773891,
+      "selection": [
+        12,
+        7,
+        14
+      ],
+      "LSS_point": 0.9874058,
+      "raw_exact_probability": 0.9956296296296296,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "26882",
+        "denominator": "27000",
+        "lower": 0.9956296296296296,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "26882",
+        "original_denominator": "27000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "d1aa562c77aa6712d7308c6ea41df74daa23e1ae6efd8c81833990a48972587d",
+      "cost_minus_old_best": 5.041898808217621
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "search_seed": 9707001,
+      "original_best": 7.25001317010452,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 10,
+      "search_sha256": "7128e0c0d7fcb3a8a8e0ab2cf7b63ee19b7ebbe78ec88ac6e7d69e209fd6e025",
+      "tested": [
+        {
+          "key": "a5fe49546438f05d320e80f62e2e94741c5d7976f5d9ddc863fe5eec1d8e7847",
+          "passed": false,
+          "point": 0.971381
+        },
+        {
+          "key": "2795b3f35993ca3ac5cbabe4e0fbebf4624be45cc4475d02bca1f7bc05f90982",
+          "passed": false,
+          "point": 0.9725017
+        },
+        {
+          "key": "14fde4bafb41562c653ea7d51aa2a7fc7e28e995b1470d33868c8728928f7259",
+          "passed": false,
+          "point": 0.9825868
+        },
+        {
+          "key": "cc7d2f9b24e045d5d102d6267619c54b90b63e9990fd2c9649710e8feaf8bfce",
+          "passed": false,
+          "point": 0.9844948
+        },
+        {
+          "key": "17556673501531cd8078ff8b1f1750caaed6a00f66488b0b563ee7da50bb7100",
+          "passed": false,
+          "point": 0.9720434
+        },
+        {
+          "key": "e992b8586b94c51ecdc0fe84b73f0cd2edc342dfb36943a74d592f1f1a125041",
+          "passed": false,
+          "point": 0.9722678
+        },
+        {
+          "key": "bd6789e138c5abf6f77c9a26cc1d1ec258232d86300cc70d5451725c4ed6832b",
+          "passed": false,
+          "point": 0.9736271
+        },
+        {
+          "key": "7cda1b491ced37ff2a69401541f8b9eed39758ad5bebe0e8aa812388d2ad15ce",
+          "passed": false,
+          "point": 0.9720028
+        },
+        {
+          "key": "1c89da4af87aec273eed145076ab47a011b7f30d4f1d070480723e00f5c1f81f",
+          "passed": false,
+          "point": 0.9846526
+        },
+        {
+          "key": "5f3d7846f06aa5a049c2c1c7932b1889e7f2c53a5c66d454d1148b2e89f6f79a",
+          "passed": true,
+          "point": 0.988084
+        }
+      ],
+      "known_joint_cost": 13.56485831159556,
+      "selection": [
+        9,
+        13,
+        14
+      ],
+      "LSS_point": 0.988084,
+      "raw_exact_probability": 1.0,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "27000",
+        "denominator": "27000",
+        "lower": 1.0,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "27000",
+        "original_denominator": "27000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "5f3d7846f06aa5a049c2c1c7932b1889e7f2c53a5c66d454d1148b2e89f6f79a",
+      "cost_minus_old_best": 6.314845141491039
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "search_seed": 9707001,
+      "original_best": 5.23988366298253,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 26,
+      "search_sha256": "6f9c5728259363b5da1f028c5daa3013000c050f54ecf77cc35b50fca4a8aad5",
+      "tested": [
+        {
+          "key": "1119de972845b753151ab5c981ffabda8496d5dcf6b3b811ed40c9ac91b87333",
+          "passed": false,
+          "point": 0.9731601
+        },
+        {
+          "key": "9d2c9c220602bf1b1fb112bd6180988ad609a48d2c97282829bd9376bc508d46",
+          "passed": false,
+          "point": 0.9684495
+        },
+        {
+          "key": "f83bd142bd8a155a045f25820758f6c475837a5995399e00814eaee1df50b49a",
+          "passed": false,
+          "point": 0.9810206
+        },
+        {
+          "key": "09c0b6ea7e4adb36323e57d83046212c7ea40f8e0a43516b175a48849f250b06",
+          "passed": false,
+          "point": 0.9776535
+        },
+        {
+          "key": "33d026b13020d04e32c817b4c5679c38e135d36da1ddc74e288ddeced40b6b2c",
+          "passed": false,
+          "point": 0.9734475
+        },
+        {
+          "key": "ed0b9b052ec6b33b3529a848bee5f3a0cf5ca0717cc6e13db2a37bd0ed3b09ee",
+          "passed": false,
+          "point": 0.9734475
+        },
+        {
+          "key": "2ed655d6fdd5e29e3454e9ebad147e0964907735a096ebebd20eb21446c9128f",
+          "passed": false,
+          "point": 0.9711217
+        },
+        {
+          "key": "cef9fd90ec904c59240b3ade7a64f5a70d132addf98b94f66959ddf35d50adb8",
+          "passed": false,
+          "point": 0.9812141
+        },
+        {
+          "key": "08deb8eccdbbff47f96a4c45bde0077c95477d61033b0379ec234401380a3af3",
+          "passed": false,
+          "point": 0.9812141
+        },
+        {
+          "key": "a43f4ec30d1b1d1212a9c3499f01e83c90e762ce7dbdbd199ffa76a06da8cd7c",
+          "passed": false,
+          "point": 0.9810206
+        },
+        {
+          "key": "8552c5c8077c82fa7cbd2d12fdd05ff81f4cea55d2a685a4b8a04a023a753014",
+          "passed": false,
+          "point": 0.9795436
+        },
+        {
+          "key": "4b6eccf17c0b9b0427fdff7a3f1e444852349c27db57413b3f5687b450cd87d5",
+          "passed": false,
+          "point": 0.9810206
+        },
+        {
+          "key": "186bd9b3957c03a34633a443de2d279c2c573a3fb1e63aa8e5224cfde427400f",
+          "passed": false,
+          "point": 0.9786945
+        },
+        {
+          "key": "6709f29db26852e4685e7e2fa2eefd1cca0bc7438ca3f87d888c6109a5fa76e4",
+          "passed": false,
+          "point": 0.9786945
+        },
+        {
+          "key": "5cf19f7008b93ed33dd4edeefb166297c86a2e75e4556c3a4a75a1002471afbb",
+          "passed": false,
+          "point": 0.9776535
+        },
+        {
+          "key": "038fa29f409a382f7d6a9cc511fd7fec9ee3b320024eca7dbd7e7c42a03b1d66",
+          "passed": false,
+          "point": 0.9756889
+        },
+        {
+          "key": "7b375f06721b7003c1fc551d91081ddf4dccdaeeac560d6362a38184c20a777e",
+          "passed": false,
+          "point": 0.9755682
+        },
+        {
+          "key": "c50fb369968b6e7e20c8dcfd56cdfcfc61a3efc80b2b5eee8080c4c9164401b5",
+          "passed": false,
+          "point": 0.9849748
+        },
+        {
+          "key": "db326d86501f9b28defd4b3af16b46f4028edc121534d80858172343b63a2771",
+          "passed": false,
+          "point": 0.9812141
+        },
+        {
+          "key": "5a79fe8d8fd6b1c40c4bb332c101d79e2057593a6f768b0efa9d78a4fb65db6f",
+          "passed": false,
+          "point": 0.9812141
+        },
+        {
+          "key": "a275fe634485634a984295c9b3b8ae3fe89c642ff61ea78ddb925301731cf7fd",
+          "passed": false,
+          "point": 0.9788701
+        },
+        {
+          "key": "24dcad45107144fa41ea1dee3e92f34df3d1de8eae4a0c7baec4ba830deb993d",
+          "passed": false,
+          "point": 0.9788701
+        },
+        {
+          "key": "c317d5a19683b483e8316cd399f788647ffcfbda78b70855bbc5586c3bbced41",
+          "passed": false,
+          "point": 0.9795436
+        },
+        {
+          "key": "a8c6f5526217163f7114ec38d9a128c474e94f2dc8fdab9f1a7c28938b7a7fd5",
+          "passed": false,
+          "point": 0.9795436
+        },
+        {
+          "key": "89d1a318452874921a07d86e52bfd095b958284e14dbebb9dd9d22d995aaa972",
+          "passed": false,
+          "point": 0.976841
+        },
+        {
+          "key": "92514a05dc2a05bb7f8092b110e68567b5b0c2005f2308b3593ba146059967e6",
+          "passed": true,
+          "point": 0.9891365
+        }
+      ],
+      "known_joint_cost": 5.7961483421130335,
+      "selection": [
+        16,
+        17,
+        10,
+        15
+      ],
+      "LSS_point": 0.9891365,
+      "raw_exact_probability": 0.9930703703703704,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "804387",
+        "denominator": "810000",
+        "lower": 0.9930703703703704,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "804387",
+        "original_denominator": "810000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "92514a05dc2a05bb7f8092b110e68567b5b0c2005f2308b3593ba146059967e6",
+      "cost_minus_old_best": 0.5562646791305035
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "search_seed": 9707001,
+      "original_best": 5.23988366298253,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 4,
+      "search_sha256": "e3cfe9c0641e45630503c0b61ec4f791abd17ffa91e47ae20511469bc232bca8",
+      "tested": [
+        {
+          "key": "b0ea6d05682ce9700891caf4827461773d40ee9f9746033ee08a833b42744ddd",
+          "passed": false,
+          "point": 0.9812081
+        },
+        {
+          "key": "238e796f44849d53ba7322ad634ff4c5bca2d638c7d4ebbc81f0f3dec1aae501",
+          "passed": false,
+          "point": 0.9812081
+        },
+        {
+          "key": "09aaf8afd8ac8554cf319039f49bb136baa16d63e15b4ece4b1855d91ff1ca31",
+          "passed": false,
+          "point": 0.9783637
+        },
+        {
+          "key": "8c93a13e93912cc7d65c340c19f80840a8b290c82bf9afc5f7527df53a1e801f",
+          "passed": true,
+          "point": 0.9866706
+        }
+      ],
+      "known_joint_cost": 5.317735827318478,
+      "selection": [
+        16,
+        17,
+        2,
+        7
+      ],
+      "LSS_point": 0.9866706,
+      "raw_exact_probability": 0.9954185185185185,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "806289",
+        "denominator": "810000",
+        "lower": 0.9954185185185185,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "806289",
+        "original_denominator": "810000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "8c93a13e93912cc7d65c340c19f80840a8b290c82bf9afc5f7527df53a1e801f",
+      "cost_minus_old_best": 0.07785216433594755
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "capacity": 27.0,
+      "search_seed": 9707001,
+      "original_best": 16.3805563295954,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 40,
+      "search_sha256": "f61969410291179ec2cdbcddc46f9389deb9e4c2f3cab6d6b48a48bbbe63ccf0",
+      "tested": [
+        {
+          "key": "40d08b59b546d19ab781bfab69cfa478506b1b35f83cc51f7154f66a0d1910b2",
+          "passed": false,
+          "point": 0.9356079
+        },
+        {
+          "key": "3407846fdf498a777b9b46d2c596a9f96875af7572b29bd89563ff7edaa4812a",
+          "passed": false,
+          "point": 0.9504771
+        },
+        {
+          "key": "483a639567e54889bd9e62a1fddab439ac760f66d663bc010e30fe097368c50f",
+          "passed": false,
+          "point": 0.9610799
+        },
+        {
+          "key": "479bd413aac4db13865d71730e7a2a1eb75dbc25f354e2120ce60e6b4ed36e5c",
+          "passed": false,
+          "point": 0.9512079
+        },
+        {
+          "key": "3b1452991986809713d1c794ab79316b97aa0eed6877620e799c6800d9ae9ff2",
+          "passed": false,
+          "point": 0.9580317
+        },
+        {
+          "key": "59a797b76e840ed4fa2fa9bbc3598c7b758fd53ccd44e919c40a1175dd3085bf",
+          "passed": false,
+          "point": 0.9678701
+        },
+        {
+          "key": "9b66972ad624eb4ac0e9a24ac8c26000526da96932d4581ceaa49a9e26c50e9e",
+          "passed": false,
+          "point": 0.9725108
+        },
+        {
+          "key": "fb06d259a8f88c36bf9eaf49691120d24c97ad7e7c23984ca16a7f93e37c0f34",
+          "passed": false,
+          "point": 0.9610799
+        },
+        {
+          "key": "60966ef76d50e3ebc56e23934ec79a0068034fba63923d36a5fef79c58a891ac",
+          "passed": false,
+          "point": 0.9736813
+        },
+        {
+          "key": "bde30f453fe249a094ec0d147ac463173ca70081bbaeed62797ffacde419b36e",
+          "passed": false,
+          "point": 0.9726282
+        },
+        {
+          "key": "e0564d50834b8e7b1cb07d4b062ce489e62b8e00fe24e6884abc0051502d85ed",
+          "passed": false,
+          "point": 0.9617823
+        },
+        {
+          "key": "9571684cbef60a06023cd7a4b6f3c3de76884f9939707c4860cf6982078f521f",
+          "passed": false,
+          "point": 0.9696094
+        },
+        {
+          "key": "139015a3924bb932b49493233f8d615750ab1b102ef5f2336c8c995c3732fe9c",
+          "passed": false,
+          "point": 0.9634175
+        },
+        {
+          "key": "1bfbe08b0deb728e373bbc918470bdf61f9644254dfd79ce51dff9b0ad55fba3",
+          "passed": false,
+          "point": 0.9389554
+        },
+        {
+          "key": "6da49681f2e1b51ea7ebcd0155b12877a91c0c314d175eb69733e30eaf3dacf1",
+          "passed": false,
+          "point": 0.9738147
+        },
+        {
+          "key": "a34f723a7582c9d46df4103d0e32bb5b06a68146d97ed6596504174d3ebe1efd",
+          "passed": false,
+          "point": 0.9621968
+        },
+        {
+          "key": "fffa3c4fce9c3a8900be07734d9b7d8b85136f9d883b125eac1a806496a018cf",
+          "passed": false,
+          "point": 0.9638197
+        },
+        {
+          "key": "c961dbc63dd1d0bdecc708eb4ac84176b5518aa75da566c253a3f949c0e3aa00",
+          "passed": false,
+          "point": 0.9563201
+        },
+        {
+          "key": "6cf9e31058f7e25b94852136df5b3a028cda522eb627e86cf35457656b57664d",
+          "passed": false,
+          "point": 0.9647797
+        },
+        {
+          "key": "d753198f8133d621c2e03f19336fee55c43af7576268550c07ae11200dc55549",
+          "passed": false,
+          "point": 0.9568886
+        },
+        {
+          "key": "717a03a69d6eb9f51dc845613bbaf123e980386cd2ec8f79b456facf99ac917d",
+          "passed": false,
+          "point": 0.9615949
+        },
+        {
+          "key": "f1d525b625269e98886444e5bb712e013f29ab69c7585d84db496f4e01bbcad8",
+          "passed": false,
+          "point": 0.9661446
+        },
+        {
+          "key": "c75c3a59ac7666305306b4572f0f54c642b16b70564af5a554fde71fe34f044b",
+          "passed": false,
+          "point": 0.9695475
+        },
+        {
+          "key": "245124739e6bf81c1720ec91d26f0817ef4e784fa0de3d4477a3eeea98031e26",
+          "passed": false,
+          "point": 0.9736258
+        },
+        {
+          "key": "29655e898f0f5df987d9c50d1901ae0c6588fa97153efca64b91a48ae360ffda",
+          "passed": false,
+          "point": 0.9647797
+        },
+        {
+          "key": "03a7e0e46a832c8f7e1449b127ce074c51a657f7f40824b6195ad41a252cb487",
+          "passed": false,
+          "point": 0.9661446
+        },
+        {
+          "key": "11dab89c98a51e8365b1f7509c3ca6347bb6ea686e86b89e40136a4f40d1125f",
+          "passed": false,
+          "point": 0.96653
+        },
+        {
+          "key": "e831f08bfdaed3d8eee55be0ddf4dc4c5c901b785e3e84a381761bc6638b2be3",
+          "passed": false,
+          "point": 0.9747889
+        },
+        {
+          "key": "7ccfc9d6c086868a79be40ffbf473e1eeba4826b235383edc67dcdddd3a79f16",
+          "passed": false,
+          "point": 0.9713886
+        },
+        {
+          "key": "2014f8e3561b4595459f877836bbd1b28d9eb9d5c53b5d9d7cb4e80afca7dd36",
+          "passed": false,
+          "point": 0.9737591
+        },
+        {
+          "key": "02a4f2f19707ea14050fb14f701037becd2e8865be4a12fe147880009429f277",
+          "passed": false,
+          "point": 0.9648393
+        },
+        {
+          "key": "cf868056259d5306f8e4b178daeef5fb06ef6c9200350d65b2e0db844578b928",
+          "passed": false,
+          "point": 0.9709616
+        },
+        {
+          "key": "e504a5b14a3d26ea61346edb981f60d046fd4d10c4e8b1c2214a30a0ec306627",
+          "passed": false,
+          "point": 0.9667722
+        },
+        {
+          "key": "110d90ae743c653f09a37a8c11d7b1c19975f6de8e50fafd6ed221c26e3730f4",
+          "passed": false,
+          "point": 0.96653
+        },
+        {
+          "key": "45b1af6430727a8e98f17b925ef9444e162eb8b8ad30ef4d908e9b74d785db3a",
+          "passed": false,
+          "point": 0.9749067
+        },
+        {
+          "key": "69c27bbcd59c00e596a33c5e881bdde96333c4252fae4f62af077e4f0dbcb908",
+          "passed": false,
+          "point": 0.9714479
+        },
+        {
+          "key": "a941e51a08c8881f1daf49f6ea3675d250df9622f27bc3512003a85f8d42db30",
+          "passed": false,
+          "point": 0.9651834
+        },
+        {
+          "key": "b1c3738898e5c58b7f8ba412796b7e37a9b619097d70efeb82be04a4809630e3",
+          "passed": false,
+          "point": 0.9671106
+        },
+        {
+          "key": "2887629ab548b1c03bd2b3a18246a88a7c155c374bc9e62fe68d4bb758cd9456",
+          "passed": false,
+          "point": 0.9745107
+        },
+        {
+          "key": "e26c8b2a9ac53dfd1ce941a3d3a48403cfa3f5d6cc0a44882b06b605ad49a8a0",
+          "passed": true,
+          "point": 0.9910476
+        }
+      ],
+      "known_joint_cost": 20.400967991274022,
+      "selection": [
+        10,
+        1,
+        12,
+        18,
+        4
+      ],
+      "LSS_point": 0.9910476,
+      "raw_exact_probability": 0.9997764197530864,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24294567",
+        "denominator": "24300000",
+        "lower": 0.9997764197530864,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24294567",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "e26c8b2a9ac53dfd1ce941a3d3a48403cfa3f5d6cc0a44882b06b605ad49a8a0",
+      "cost_minus_old_best": 4.020411661678622
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "capacity": 38.0,
+      "search_seed": 9707001,
+      "original_best": 11.0267675341164,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 87,
+      "search_sha256": "c2d48fcf066733e9d5fc7e5236dc9e5a26bae228c3e7d08b9c125823011911a0",
+      "tested": [
+        {
+          "key": "2f684321463123677d135f71bdb764b4d16b71cbe2e012858257776829069e79",
+          "passed": false,
+          "point": 0.9492235
+        },
+        {
+          "key": "31ac20de00a7116ebff07a610aa3887eb67f1cd1b4de8d2799f9512680d2994a",
+          "passed": false,
+          "point": 0.9249298
+        },
+        {
+          "key": "3fa435547b030aa98631a6124a94924bbce57631a57fbdf0f1dc0e283f48f753",
+          "passed": false,
+          "point": 0.9495098
+        },
+        {
+          "key": "cdac84f45fac2c64743c75a17bc35fdd3e90db24288b78b2004e436fdf70e92f",
+          "passed": false,
+          "point": 0.9492235
+        },
+        {
+          "key": "6fd8a071c6cf7f3123230363978c529d550a8d5c5b512deddfb1cba84a1e5dcd",
+          "passed": false,
+          "point": 0.9568362
+        },
+        {
+          "key": "efed97674f09ac63f7a9744e1cdfdb82da551cd7c7df10846e244536f740f9b9",
+          "passed": false,
+          "point": 0.9495098
+        },
+        {
+          "key": "9855672a7062a4aa44519815b53b660a371f4832bbebfd048564c8ac3284302c",
+          "passed": false,
+          "point": 0.957133
+        },
+        {
+          "key": "b701c00f6e8920c474980191ea34cfec8d98fadea0f601a4b134929c5fa7f991",
+          "passed": false,
+          "point": 0.9402563
+        },
+        {
+          "key": "29cf3bed829c7c56acdadd9658c40b207da78a023ceef27f5542fef898bc1300",
+          "passed": false,
+          "point": 0.9523542
+        },
+        {
+          "key": "76f942545087b773130ffa0adb8ba0240584daf12681d3ffda799f495a2380a7",
+          "passed": false,
+          "point": 0.9292182
+        },
+        {
+          "key": "90b14d12ef0197ee806f0536cc6c9706fc0e63ae50ee3266897a5caa377a1ca2",
+          "passed": false,
+          "point": 0.9526194
+        },
+        {
+          "key": "5ea8c6ee38df9240ff6a86bddac3108f91120791f532373823ab82bb16e322ba",
+          "passed": false,
+          "point": 0.9523542
+        },
+        {
+          "key": "d09ab18a9a085fd499a328ea9c166a0a5d79011c07c9322dd2aafefb071b31d5",
+          "passed": false,
+          "point": 0.966157
+        },
+        {
+          "key": "3e181b1b44640895811da695c24366e0c7d70d2dad0f0e6d06e2c01037bc46fc",
+          "passed": false,
+          "point": 0.9459486
+        },
+        {
+          "key": "da1186060791cf22c6e3948ffa92e8bf249602d63dbeb89b696a9f3c02a5585a",
+          "passed": false,
+          "point": 0.9527538
+        },
+        {
+          "key": "e1f9479a18c1684b900b93ad6a45ef99d60c3a98a68fcf2fd2e9c712f287d28b",
+          "passed": false,
+          "point": 0.9594484
+        },
+        {
+          "key": "79c75430398355d65b102eeb20ee86418b94af28113d5521a51f07bc47fc482d",
+          "passed": false,
+          "point": 0.9526194
+        },
+        {
+          "key": "00ac27ee48fc8ba03e96153a54a0785cad091319bd88f1e62844a593fbcdd565",
+          "passed": false,
+          "point": 0.9579908
+        },
+        {
+          "key": "0d396163893beb76f8d9c68dae5c5b83e4c471131bbc67222c3a01faaef62d21",
+          "passed": false,
+          "point": 0.9560584
+        },
+        {
+          "key": "7fbb6647d60f5ca3cde2ce1d76efc6f1a5e70b5c33a22bbc740104c30a5d36cd",
+          "passed": false,
+          "point": 0.9656401
+        },
+        {
+          "key": "b0504e23d0e96724572238acd113d63508ae3f37cffb3c052552d191948e4ffd",
+          "passed": false,
+          "point": 0.966157
+        },
+        {
+          "key": "2ee1576358211c64a4b5467e45c7e5382d6c8977f7384392f997f6e96cca58fd",
+          "passed": false,
+          "point": 0.9750999
+        },
+        {
+          "key": "1a1100d697982ec62b315984ad6ca9b4fdd7cbf3962436ef49d3c44af3b0908a",
+          "passed": false,
+          "point": 0.9613042
+        },
+        {
+          "key": "d7ce2028975deaaff18a96536fc653ceb92724edd9091ea67f6217a33cc804c4",
+          "passed": false,
+          "point": 0.9597959
+        },
+        {
+          "key": "97c81c3004b064710c0833451862d81f66c559b9d0a02b004b241dd979645e84",
+          "passed": false,
+          "point": 0.9739564
+        },
+        {
+          "key": "31101437217c37f10597de45cda1b75238c7e3c1e2864ca7c2a1d11f62a4fb7f",
+          "passed": false,
+          "point": 0.9656401
+        },
+        {
+          "key": "a981a39f81141766e0f6731d04f15d8438c7c6807630fce08d838ecf5eda18dc",
+          "passed": false,
+          "point": 0.9753608
+        },
+        {
+          "key": "905e04128fb8959ef55b80bf2240f3f0dc0a5faebf86b41dbf92ae2049aaddff",
+          "passed": false,
+          "point": 0.9750999
+        },
+        {
+          "key": "788b88c94c112734efb4114396a3949c6c769e7a9e4ef7c149473abfd41d5fa6",
+          "passed": false,
+          "point": 0.9750999
+        },
+        {
+          "key": "c9be5234f8c2eeae03146458e47913c6470bba4a44f7cb3296a175c5c90c459e",
+          "passed": false,
+          "point": 0.9613042
+        },
+        {
+          "key": "185428a86a3aa64c9ad729279ec3f2f3e8531ed4c7c4ffe642c88b214034c2f2",
+          "passed": false,
+          "point": 0.9547438
+        },
+        {
+          "key": "ca199063a97209a114cc4418be33110841a888704e04aba6df9c44128a64c74a",
+          "passed": false,
+          "point": 0.974797
+        },
+        {
+          "key": "52a023c3c0f1a8a76beb14c3c2c522a166fdb00c9f9f9a1afe3f77f0914a0215",
+          "passed": false,
+          "point": 0.9668571
+        },
+        {
+          "key": "1962270df6f8f3a59e892994422da1d734c56a5c61b1827514cc8ac4e98b5dbe",
+          "passed": false,
+          "point": 0.9683234
+        },
+        {
+          "key": "a34694bd1f35a3a46cc47208d1e30c81191dc6b251da2298aed92e7f6d81a75e",
+          "passed": false,
+          "point": 0.9574075
+        },
+        {
+          "key": "0d50944f2cf0d65ebb4c0fc616ac4e280b4dff4b2870e411f02b2f7087dd3f6d",
+          "passed": false,
+          "point": 0.9575447
+        },
+        {
+          "key": "1bce3c12d826ed8fbf6f9efc91947cd81cf341e5d5bcfffac9af4861b15ca9ca",
+          "passed": false,
+          "point": 0.9820199
+        },
+        {
+          "key": "7a48dc19bff6f374b93048cf48c1b9bccdae0f4c85aa8244779a2439c1c7d308",
+          "passed": false,
+          "point": 0.9719138
+        },
+        {
+          "key": "7d9af5f3015e8b58ff501de4a490f01f86bf23b02527b85ac4877d86a070ca17",
+          "passed": false,
+          "point": 0.9434798
+        },
+        {
+          "key": "73579001ba3925c8a6649f8f4f7c2211352fcc1da6aeba0bb64111bcb8b94668",
+          "passed": false,
+          "point": 0.9775732
+        },
+        {
+          "key": "4057aabdaf31ea98332b75f19ac04806fd439312520cee57fb1e879687bd2b84",
+          "passed": false,
+          "point": 0.9793139
+        },
+        {
+          "key": "60ef1ac1ee77c0cadca134afe0f83ff49f978b1880899284d41c6e36cbd0448c",
+          "passed": false,
+          "point": 0.9760956
+        },
+        {
+          "key": "6b8aa8a0d055d720a17a827512325954c10741344d1827c4285b3de545ae2bd3",
+          "passed": false,
+          "point": 0.9724094
+        },
+        {
+          "key": "3229e1d2c3a5f991a2f8f69800cc3bfc29873197f8cfc287a32f226fdc0ecab6",
+          "passed": false,
+          "point": 0.9753608
+        },
+        {
+          "key": "171ce7e098bf727f8224d985eb1212abf73fad254c51d710c4287886642ef49c",
+          "passed": false,
+          "point": 0.9673428
+        },
+        {
+          "key": "1ebf454954f11143fd6cb7ea67203aa4f89ab2e9b541eda73137c23d63db81b1",
+          "passed": false,
+          "point": 0.9753608
+        },
+        {
+          "key": "340c78662f008393a111bbc1325f3d8ae6244349534b05f3820ba751e4d8c767",
+          "passed": false,
+          "point": 0.9750999
+        },
+        {
+          "key": "91925349a50c23249fc7cdba873b9ea6268988d6361a9b08a16812a0bac347ce",
+          "passed": false,
+          "point": 0.9780184
+        },
+        {
+          "key": "5c7dc4462aea8188e84bec3fbbc1b807e5107014123f94dd46be84899c28dfec",
+          "passed": false,
+          "point": 0.9613923
+        },
+        {
+          "key": "718d64131d88240faa8f7fb39ae85751c4fc1b338e9002aadb6cbd78b7fa2797",
+          "passed": false,
+          "point": 0.9532447
+        },
+        {
+          "key": "3bd00bd24fceb72daab8090ce959e9e0f54b82af08e93de12d379682139b085b",
+          "passed": false,
+          "point": 0.9750171
+        },
+        {
+          "key": "b177e4beff47877d94ed41f18d0d061c87921fe2a8d1117c9a7d96a5154c4703",
+          "passed": false,
+          "point": 0.9668571
+        },
+        {
+          "key": "44608b7dcbbb9348a10b3a4a27fd0cea08eec273e168a29e46c6f33da8c35f71",
+          "passed": false,
+          "point": 0.974797
+        },
+        {
+          "key": "fabad09c9bdf764b162ac8f3b0e15a4d2d22ae7d4e932af3ee6421b75c998c84",
+          "passed": false,
+          "point": 0.9668571
+        },
+        {
+          "key": "877d3a96d384722e75858ac6539eb6476dd23ea20b0cdfac0c1fcf26e6fdc25c",
+          "passed": false,
+          "point": 0.984039
+        },
+        {
+          "key": "06bf3bda9e59ca32b586f997dd416e344ebae45817a3e8bb734ac84a12578a08",
+          "passed": false,
+          "point": 0.9550998
+        },
+        {
+          "key": "547f7b88943eeac838baa3b8a2bf1c85d685a6ee2d78ae24c1f57e757c200608",
+          "passed": false,
+          "point": 0.9683234
+        },
+        {
+          "key": "cc660f7816a8c71b145cb9e8ed855595bb6ce1102f3e4e66f25c07ea964972d4",
+          "passed": false,
+          "point": 0.9624089
+        },
+        {
+          "key": "bbc4178105f28e379983bc28bcf6cc0c123e7b2793d58ac0882e87b9c6609caf",
+          "passed": false,
+          "point": 0.980255
+        },
+        {
+          "key": "1e7e37b03acfa946614f2c6783a823e4c7eda103d87d9614d7f0554fd7c241b4",
+          "passed": false,
+          "point": 0.9820199
+        },
+        {
+          "key": "0f197fa33d32b2dfcae03f09b1efc396310daad2334b0fd535d22a2f1d383961",
+          "passed": false,
+          "point": 0.9684237
+        },
+        {
+          "key": "f90f988e4cfb8f7ed8f6c385a5e0ce9cf8413a952007051b0ffb7b16dac6e44c",
+          "passed": false,
+          "point": 0.9794167
+        },
+        {
+          "key": "82d11ccc370df96dcfe4579d39a3f4e5c749fa51f1fa69467f65ee46c6ee0d3d",
+          "passed": false,
+          "point": 0.9578126
+        },
+        {
+          "key": "941a7adc3e3dec30953685ba511610d3b0c2ee5f40be84499247e637222b6c0a",
+          "passed": false,
+          "point": 0.9793139
+        },
+        {
+          "key": "fee19824def62350006c265a1f1404e4ca21fb4726e5d41c8895f58850ed698b",
+          "passed": false,
+          "point": 0.9763664
+        },
+        {
+          "key": "0ffe91f3500cd37eca82434cdcf18047dac3a3c5e1ec2b30cd5bb4002f978721",
+          "passed": false,
+          "point": 0.9775732
+        },
+        {
+          "key": "67ebc73824ee632a7ea020ab43bab5477c7f9054f9a2ec79d5a0c2be77e8cf8b",
+          "passed": false,
+          "point": 0.9760956
+        },
+        {
+          "key": "79cc932796559adb111ef45fccb51d9b882aa3b608ee9e284f9168b21ab06f33",
+          "passed": false,
+          "point": 0.9753608
+        },
+        {
+          "key": "bba74fbd932c739a0f100f046b0767db78cdde8738bff3765f7f70756c5b41c1",
+          "passed": false,
+          "point": 0.9765429
+        },
+        {
+          "key": "c9d713ded963e927b3df37858492e5f9b5b848c2ec5eb0d5621c847d8c53fd60",
+          "passed": false,
+          "point": 0.9840569
+        },
+        {
+          "key": "9575deee1d2a3b4ec9d2982694e4112c3ef0d078e5b86f88f7a90dd6468d2af0",
+          "passed": false,
+          "point": 0.967426
+        },
+        {
+          "key": "e1e09e4cbb9090883e4e3064b9d3afdaf4913c87012b58c8eeb73db4f8b55d09",
+          "passed": false,
+          "point": 0.9762675
+        },
+        {
+          "key": "23ff1dfda9bcc7f1752801037c5746e6eb33cd36d5f79d5b25b8588f16e9b749",
+          "passed": false,
+          "point": 0.9675461
+        },
+        {
+          "key": "a37506a890243a590e7ad0ba7b853b2c4e14328e63f54c2de4593b76ee0a59c2",
+          "passed": false,
+          "point": 0.9780184
+        },
+        {
+          "key": "bb5ef51d9bb43f0f97fe881d06ba500c492d79aed4ed7f26408a274212728b31",
+          "passed": false,
+          "point": 0.9606226
+        },
+        {
+          "key": "c22c7261730431d722498059473778a887f6b0e2e01aa7615b40de6462131df2",
+          "passed": false,
+          "point": 0.9613923
+        },
+        {
+          "key": "b6c1bd2054da2d6cd6b35653d2a9eedfbc4d26fbbac7c821bdd8aef38ea74909",
+          "passed": false,
+          "point": 0.9608035
+        },
+        {
+          "key": "c5b8248e2b25fef5a8c580d795fbea48fc0911f06a379a8b8fe2c498f90473c1",
+          "passed": false,
+          "point": 0.9812086
+        },
+        {
+          "key": "a648701d9f376c6b35d4972cf3d8663121910253f3a331ed223dce53efeecac9",
+          "passed": false,
+          "point": 0.9730115
+        },
+        {
+          "key": "f85c6eaf34ddfaeb48748794e8729d094eb6ec7ea636bff6381a95a026b927dd",
+          "passed": false,
+          "point": 0.975821
+        },
+        {
+          "key": "f728396a8f6c81a9fee974b6c28f358f97935aaf6ae19c194adbf8782f08a2d8",
+          "passed": false,
+          "point": 0.9737293
+        },
+        {
+          "key": "6e0b6dcf0880938ff0bdb18cdcd1200dfbc0853b89adddbf364f946e214bf1db",
+          "passed": false,
+          "point": 0.9750171
+        },
+        {
+          "key": "326e89430b51f2c2fa5b778f9efde1370c0b92f7c58583438f08589a6316e63e",
+          "passed": false,
+          "point": 0.9693825
+        },
+        {
+          "key": "7f04a42a3b4a334c7903352df9732841843db1c760e23a8b09443f9c35136c5a",
+          "passed": false,
+          "point": 0.9668571
+        },
+        {
+          "key": "ce9ac41aa682a55cc1b973a8258f5b54eccbcd45703273ccfe09766dff0c5581",
+          "passed": false,
+          "point": 0.9839493
+        },
+        {
+          "key": "6b491d8ea372fa6ff6a6bb9c323c32969915e1194c0e7363e12bddc1b13fc058",
+          "passed": false,
+          "point": 0.9685585
+        },
+        {
+          "key": "2db0059e3545ce308e49f7d37d6e0a5d647de11f357b02f1dcb479079cda2384",
+          "passed": true,
+          "point": 0.9868955
+        }
+      ],
+      "known_joint_cost": 14.269091104333414,
+      "selection": [
+        0,
+        1,
+        12,
+        23,
+        19
+      ],
+      "LSS_point": 0.9868955,
+      "raw_exact_probability": 0.9966659670781893,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24218983",
+        "denominator": "24300000",
+        "lower": 0.9966659670781893,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24218983",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "2db0059e3545ce308e49f7d37d6e0a5d647de11f357b02f1dcb479079cda2384",
+      "cost_minus_old_best": 3.242323570217014
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "capacity": 16.0,
+      "search_seed": 9707001,
+      "original_best": 26.0639975019372,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 11,
+      "search_sha256": "b315027ae130ba46ddfdd87a6f0ae45ab8ca395569d11e44563c4ffc1db4f457",
+      "tested": [
+        {
+          "key": "089ced28118b957c9966208874b547c87ad373e9b4b3542ed015caf425ca08e9",
+          "passed": false,
+          "point": 0.9011571
+        },
+        {
+          "key": "8de7381d7abb5cf9cde4fb2ca1ce6a5b40a0944a71731ea7f364aa1304d7c7ea",
+          "passed": false,
+          "point": 0.9024206
+        },
+        {
+          "key": "42a5b2f4d6776623d2a40cd3b85d805fab1249afcfc5742a7266e226a2cc98b5",
+          "passed": false,
+          "point": 0.9012645
+        },
+        {
+          "key": "5edecd8112b6dbe69d1b122a254dbc01a4d974d4536c062e8ed2b3bdf5ef7bff",
+          "passed": false,
+          "point": 0.9104669
+        },
+        {
+          "key": "2268a296a271303ff940575f233a44e1b7a95a9ab35d5fd16fdebe00de4293f1",
+          "passed": false,
+          "point": 0.9025867
+        },
+        {
+          "key": "62cbef763b76a2b5effbe6975f95bce119ce2d83efce86c348b84d25916f5bd2",
+          "passed": false,
+          "point": 0.9160171
+        },
+        {
+          "key": "baef2f29b77522980feaad0f4d1b4a5039b015c65be7c0b16ed295a6f4197d45",
+          "passed": false,
+          "point": 0.8991292
+        },
+        {
+          "key": "ce35ee39959c94ee8c96ce55e0e2d2caa717169777951988a4868395c9727e03",
+          "passed": false,
+          "point": 0.899856
+        },
+        {
+          "key": "70ead8430b32399d53b37990df5786df1e0214271f0deaa94d36090bb08e89a6",
+          "passed": false,
+          "point": 0.8994752
+        },
+        {
+          "key": "70c38c7b4c59240092789394f653a341adacbaeb09d89d770a000b9fafe63e7b",
+          "passed": false,
+          "point": 0.8999322
+        },
+        {
+          "key": "97e707ab6a86870253b1ded0a4888b01e65700e8496b4854dd2b02f7a300928d",
+          "passed": true,
+          "point": 1.0
+        }
+      ],
+      "known_joint_cost": 33.17664391760484,
+      "selection": [
+        5,
+        46,
+        47,
+        3,
+        39
+      ],
+      "LSS_point": 1.0,
+      "raw_exact_probability": 1.0,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24300000",
+        "denominator": "24300000",
+        "lower": 1.0,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24300000",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "97e707ab6a86870253b1ded0a4888b01e65700e8496b4854dd2b02f7a300928d",
+      "cost_minus_old_best": 7.1126464156676406
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "capacity": 27.0,
+      "search_seed": 9707001,
+      "original_best": 16.4236268476597,
+      "cached_prefix_resolved": true,
+      "read_only_known_calls": 125,
+      "search_sha256": "f641583727dc2f2ed3937bca7aa70fd28e9cc1c2a70408c24f2269ca777196b9",
+      "tested": [
+        {
+          "key": "276eb49a335e81d2160ae7a277d31adf69d7763b022401f5546fb4f79448cf45",
+          "passed": false,
+          "point": 0.8031798
+        },
+        {
+          "key": "533116c591bdd705eea61cda1a2c0a57ae2a378880a119adb555090de4abdb05",
+          "passed": false,
+          "point": 0.8132415
+        },
+        {
+          "key": "602fae60323da8e1463d3f78643605e7c54ed26c022307d0bdbd73848abb8d33",
+          "passed": false,
+          "point": 0.8432572
+        },
+        {
+          "key": "ccbb3c48ada56d92c2ef07fd8df8e8797e9b932b39b75e63a7282f5c3f94d486",
+          "passed": false,
+          "point": 0.9500368
+        },
+        {
+          "key": "3f6104faf441f644d194d969593d23d5b20023784c09cb8c36fff149d364e99b",
+          "passed": false,
+          "point": 0.955817
+        },
+        {
+          "key": "2417c239931425c7cf4e26d450eb23dbe85e14f62d0ff943a81c2f60850de4fe",
+          "passed": false,
+          "point": 0.9339278
+        },
+        {
+          "key": "3e7e0fd7b4036031bc40d626f8f98f6692ab187e49cf2afe4df587036007d175",
+          "passed": false,
+          "point": 0.9612085
+        },
+        {
+          "key": "f5c819ae1d80f1a564f9920d72536a80b466e543f0b0bd5322a97eab239ebc53",
+          "passed": false,
+          "point": 0.9232006
+        },
+        {
+          "key": "bea803a8ce3d7934e8c646a387088447356648c7ec1f4d2fc3d520971a39f116",
+          "passed": false,
+          "point": 0.9646338
+        },
+        {
+          "key": "1d2a2e685f7c901a614861c787d1bffe3fb61a1b96327396285077b54d1cf8a4",
+          "passed": false,
+          "point": 0.9585136
+        },
+        {
+          "key": "1d01d0540204c37c8aca4b8731d374ade1d9221bd0cdbf4d94941976809cba06",
+          "passed": false,
+          "point": 0.9541361
+        },
+        {
+          "key": "b623836b6c8928b449f1db4b9ca4e60393246ecd6420b7d44d2eca8d8a285f07",
+          "passed": false,
+          "point": 0.9241661
+        },
+        {
+          "key": "9c59c136e50e9201deef9f2973eca489f10653cec629302055e35bfa5d251e70",
+          "passed": false,
+          "point": 0.9299809
+        },
+        {
+          "key": "e7f801e4de5e38156168c07d0f9a4896afff64ea889b480d355b5924f68babea",
+          "passed": false,
+          "point": 0.9655215
+        },
+        {
+          "key": "53bccb813ab498707e51e2b293cdaa5cd2851f10ae9420e8c17cc0714f9514e0",
+          "passed": false,
+          "point": 0.9697395
+        },
+        {
+          "key": "4cfcf32ddb545693bab0203037ac0976f3d78942e13d9f47154366a82fc66206",
+          "passed": false,
+          "point": 0.9519912
+        },
+        {
+          "key": "753b45c57236d9c0c4fd37746700d32585fcba0599485c4137ad682db211f7b3",
+          "passed": false,
+          "point": 0.9595238
+        },
+        {
+          "key": "31b881e12a9a574334b4df70ae37911c25f43c8a64c7d176365c670b029ce772",
+          "passed": false,
+          "point": 0.9325236
+        },
+        {
+          "key": "71658e773a585ee7a34a4f326d5f2d09c2b78ed8f16dba73e1ee2463267d16ff",
+          "passed": false,
+          "point": 0.9502255
+        },
+        {
+          "key": "d396866af011598e4ba72f79adf9ac004fc6d6813d6f10c24111cf188ff77189",
+          "passed": false,
+          "point": 0.9686048
+        },
+        {
+          "key": "701439694c68a4e4ded62d01bb15a96129fcb8e3d5473aa9288b1c8f2251da4a",
+          "passed": false,
+          "point": 0.9710477
+        },
+        {
+          "key": "6cbead329a8881bb4ebac8351161ca71e04fd3b437e16358e7cf2ef86596b36d",
+          "passed": false,
+          "point": 0.9512001
+        },
+        {
+          "key": "03c067a18e0e9cda4e78abfb76eaff4ecf49f38c0eed21b5ad1f7e38af3cc325",
+          "passed": false,
+          "point": 0.9608575
+        },
+        {
+          "key": "a5862f103fbf7bf6d88db7bf28fd6709401bf42947e20d375d16b4983627f1a6",
+          "passed": false,
+          "point": 0.9721521
+        },
+        {
+          "key": "87dffcc13ceef9f0ab8a4031a0e63f0e2807c462070760ea1553c715e8c49c4a",
+          "passed": false,
+          "point": 0.92493
+        },
+        {
+          "key": "9409787f025d29ea30a73b8af07a38b465b9373e6e38fe00c0311ea560fcac30",
+          "passed": false,
+          "point": 0.972386
+        },
+        {
+          "key": "6c1bbe9e66a1edcc33d56302dad03cf0234b9705dc6c72cc3d4185ed4f2f2fe5",
+          "passed": false,
+          "point": 0.966927
+        },
+        {
+          "key": "023c415cf33e91db0ef425d729a4b52942f4574c3793c5ae1440c2c17f4daed8",
+          "passed": false,
+          "point": 0.9697602
+        },
+        {
+          "key": "dbe454b270d4f51d5de9705ff476754fa75a74fa3c9de5d2e323cdf15db9210f",
+          "passed": false,
+          "point": 0.9568914
+        },
+        {
+          "key": "eb2b165c991e4eeb87cfb6f58ab5d9ba358a3c7de2e95c96f2b83c9cb96124ae",
+          "passed": false,
+          "point": 0.9726369
+        },
+        {
+          "key": "4a92db68a0a6bda05b42bb48f2694cf1556c2a092a92bc146dbc47374f7c7fee",
+          "passed": false,
+          "point": 0.9358833
+        },
+        {
+          "key": "c87402b38e543df7ad6fced8808b2d5f26c441eb3218c78f2ba553957f13b147",
+          "passed": false,
+          "point": 0.9741651
+        },
+        {
+          "key": "a9a338c87f177fa762325f9193631e71aba76e39698117e921f5a75bfebbcad9",
+          "passed": false,
+          "point": 0.9619537
+        },
+        {
+          "key": "08e3b936c87430aaebe1314db1b685474d1ed1f2f74193a5c665fa80cd5cf77e",
+          "passed": false,
+          "point": 0.9652248
+        },
+        {
+          "key": "502f453016c3b4c2b1d701a3949b9b34417a9d1817f8424f71dbdc71e17f337d",
+          "passed": false,
+          "point": 0.9696464
+        },
+        {
+          "key": "972fadcc0019bb3c1103b2533d2ad29a83d911687d4ee61cd0bdd6242c6ee248",
+          "passed": false,
+          "point": 0.9017277
+        },
+        {
+          "key": "88b43b0013f01e1e30892d385108e9bb322f69bce8575ae51f80d2f9d32d478f",
+          "passed": false,
+          "point": 0.9727574
+        },
+        {
+          "key": "45027e4c73b41742995f1635a060f2eabd83eae061e3439394e31e03c1ee08a4",
+          "passed": false,
+          "point": 0.9538288
+        },
+        {
+          "key": "1baaa15a92452b345fc266269361ab8dc18ed52de157baa4d7e7d82eb9a0d2dc",
+          "passed": false,
+          "point": 0.9583097
+        },
+        {
+          "key": "315a0e49bff719fb2438190b2a66bda71d61fd6352866d7982a4e0d9e610ad87",
+          "passed": false,
+          "point": 0.9708761
+        },
+        {
+          "key": "5036695b76c145cdca6a5758bb5347030e89bed52568a9629b75dffaf3d8e987",
+          "passed": false,
+          "point": 0.9583097
+        },
+        {
+          "key": "a302fd027228a52acfecbf7d790e13af8c35c3aad00c8c8de306022d14d23ba4",
+          "passed": false,
+          "point": 0.9125383
+        },
+        {
+          "key": "f62261b663c0b20009a8696515851937ddfc69a69d910f39037b0d8dc905fb79",
+          "passed": false,
+          "point": 0.9158644
+        },
+        {
+          "key": "62e99fa169524c3c00d0134f909b60a6b580c7db7805a62a5440c7500bdcbeaf",
+          "passed": false,
+          "point": 0.973325
+        },
+        {
+          "key": "903d4bf32d97625a529ca8380dfbcf0d443ea53099e90cfea36cc7a08f5f3478",
+          "passed": false,
+          "point": 0.9603012
+        },
+        {
+          "key": "09505e82fc6fc492c0ddefe1bd44a1f154bc980c105becb333f7c6d5c6d881d9",
+          "passed": false,
+          "point": 0.9610389
+        },
+        {
+          "key": "505a826c5b2fb1da30d74d1e909b5f1cd77950688a87d552f3edb293ea36098b",
+          "passed": false,
+          "point": 0.9631895
+        },
+        {
+          "key": "7c88852b07bf9f9b584e857162ff0ec1ccf638034c80330ab92ed94b468c87cd",
+          "passed": false,
+          "point": 0.9669327
+        },
+        {
+          "key": "c00f5a4b2a739d22579be39d7458e2bf0df98454d7b313b0fdf5389aa3a27722",
+          "passed": false,
+          "point": 0.9631895
+        },
+        {
+          "key": "1bd2653255c0e623c71747e53e915f0c16bce872ea4c8be652cccfafd9c566c3",
+          "passed": false,
+          "point": 0.9722275
+        },
+        {
+          "key": "48a69ace7c7740495f5983ddf99e9563a51fb30884cd9d9ece502d16734bf5b6",
+          "passed": false,
+          "point": 0.9616826
+        },
+        {
+          "key": "17a4f3cfc568d4ea521d72760307d835e99e98b93e9955411342e688e4b50b56",
+          "passed": false,
+          "point": 0.9673116
+        },
+        {
+          "key": "b44485873edfea1691ff661d6d198d0f2445cea998c375395185b02c755ba559",
+          "passed": false,
+          "point": 0.9674638
+        },
+        {
+          "key": "73afdcbd4a353971132782d51130344ed9f9ae34ad68a22cd0f2ad73303e0e44",
+          "passed": false,
+          "point": 0.9623338
+        },
+        {
+          "key": "ea3b8a40c86cee3cc684ab9f1daff877e8914a0b58fd23bf362a17717cae5199",
+          "passed": false,
+          "point": 0.9721423
+        },
+        {
+          "key": "7fb670c3bc98d66b13fd34bb40ca32822be87c86a07f7099edd53944d662d18b",
+          "passed": false,
+          "point": 0.9727023
+        },
+        {
+          "key": "1e33a452cd20397a67b4128b31e65f3de61eb9aaf2a1c62c0c85ccb06b4fb53f",
+          "passed": false,
+          "point": 0.965867
+        },
+        {
+          "key": "b17915b8a6b3d09dc2809071143164de632379c060b1e48f7ec39b8cc867cd4a",
+          "passed": false,
+          "point": 0.9631895
+        },
+        {
+          "key": "23e6c1ad85f0cf428b76a75231a758ba3c65e334689fd0ba10b34063835b1859",
+          "passed": false,
+          "point": 0.9708393
+        },
+        {
+          "key": "582d6e09d6a20ab5cc2e1e9effb06dc0585887ad8ce0b82773d9b0e71cb904e7",
+          "passed": false,
+          "point": 0.9703441
+        },
+        {
+          "key": "0bbe61d2627ddf56965b36e1320494e04eb5d36f1d638e93bc5b42da2543baf0",
+          "passed": false,
+          "point": 0.9666644
+        },
+        {
+          "key": "53bbf1bba3db004085c98e63f84bd1b08881785a099a39293bef1203efa97191",
+          "passed": false,
+          "point": 0.9730622
+        },
+        {
+          "key": "28e0d477fdff6a3660b295cca07ef385e4380267a29a9aa92c684ebd55d31703",
+          "passed": false,
+          "point": 0.9635213
+        },
+        {
+          "key": "3df09298859dcf8dccfa51c0680e1fdb20aecaeca6c0ddc0c9e2955589a80c00",
+          "passed": false,
+          "point": 0.9036336
+        },
+        {
+          "key": "5ba2360cb63043bf0843ca8bc2d05426f22a7a3f70db5ba5fb5e749c2c6a7dc9",
+          "passed": false,
+          "point": 0.9710534
+        },
+        {
+          "key": "a72e39ba0c03851820a5844e1f6cb7efa5de8a695213b600e2145191eb9f9c10",
+          "passed": false,
+          "point": 0.9724464
+        },
+        {
+          "key": "525194a54fbdc1997700aa18ac3697660375f7ab0ef61c10f5c4141f22ea0bcf",
+          "passed": false,
+          "point": 0.9717941
+        },
+        {
+          "key": "c1b60a06220bfbcfd97b01fea3e8451c79c7470b3a9cbf8c825d935e6411bc2c",
+          "passed": false,
+          "point": 0.955367
+        },
+        {
+          "key": "8ae9165461449baa1e0d2a2cd79fc74b4850369314747f703243e8948048cc35",
+          "passed": false,
+          "point": 0.9592862
+        },
+        {
+          "key": "e04dc79cac9b2e598a55dd0b0086f8cea2f2b8af7ef8bbcf694dab1bd4216c90",
+          "passed": false,
+          "point": 0.9199501
+        },
+        {
+          "key": "c608abd230a15a30ba1f3209ade1ff272eb0c2f541f5951c24b7126161e2035c",
+          "passed": false,
+          "point": 0.9592862
+        },
+        {
+          "key": "ee29c1fd960ee5ca6aa34fdfe455754b80ba0c732208d788b113fa94bbdd8f69",
+          "passed": false,
+          "point": 0.9144973
+        },
+        {
+          "key": "d4c066f0d2aecd5aae7f3e179c1fe4ac991338dd225bc8f60120770d4990c31d",
+          "passed": false,
+          "point": 0.9719069
+        },
+        {
+          "key": "8f828d2388239830db04e69c812def216ad8bc8530f9ac1ef15e6a2829f6dbe3",
+          "passed": false,
+          "point": 0.8074844
+        },
+        {
+          "key": "97ee0326dcfe08314ee287793c78c7f67657e63f8504474fccc06de2eb2dcab6",
+          "passed": false,
+          "point": 0.9421151
+        },
+        {
+          "key": "2b26f572aceb6e0410f91499291c21100e46ac4b76d0ef4adf59a8cdbc0c114e",
+          "passed": false,
+          "point": 0.936271
+        },
+        {
+          "key": "e13ba17203ff08de6ed17fe8b991e09051eff4f5d830b99582bef63315f9c09f",
+          "passed": false,
+          "point": 0.916959
+        },
+        {
+          "key": "ab42e171484073353924661ef7d4c8c75ba5a615b2f328250c70393f9766d8c9",
+          "passed": false,
+          "point": 0.9567143
+        },
+        {
+          "key": "fb80ff419dd211c853e444cf786b391708afbf61e834bddc55e0907e0f686b90",
+          "passed": false,
+          "point": 0.9407089
+        },
+        {
+          "key": "04e5d59ac7509b8bbf0ee2d594cf1c025b492885ad9a4d470fdf5c7d5f76e71e",
+          "passed": false,
+          "point": 0.9614865
+        },
+        {
+          "key": "69557ce415cd4c8dcfa0929638ce1e77a3dbe0bdb435f2990e134af6ab7252d3",
+          "passed": false,
+          "point": 0.9620252
+        },
+        {
+          "key": "02c45866da6f5c26be5dfdccf6ecf4ffe2d67e080d2c5aac4616b7bc262e9c33",
+          "passed": false,
+          "point": 0.9513794
+        },
+        {
+          "key": "3965e8dd2c1c9118537c83321ae76a0361f3ccd33dd84ddedf7e5936a12eeede",
+          "passed": false,
+          "point": 0.964049
+        },
+        {
+          "key": "afad96e9b7910608bcfa96c4d26b125add2cda37f10daa80fc11e6cb1ea791c2",
+          "passed": false,
+          "point": 0.9424826
+        },
+        {
+          "key": "21b33a7d7d03fe411021549eb9bc560b4756f239165f9041ebeff2ae1b53a60d",
+          "passed": false,
+          "point": 0.9675841
+        },
+        {
+          "key": "189cb209ed44d4ff142e9978180ef72f9c9a45e42a7d6dfb85c8fc6dd5bd0847",
+          "passed": false,
+          "point": 0.9268145
+        },
+        {
+          "key": "1a81b43ecb632f35d81d9ac9306c340572f66d1276ef4006473d4c237f7a2478",
+          "passed": false,
+          "point": 0.964049
+        },
+        {
+          "key": "930967da886909ae4a8bbe94aeb422a1b15feed6d994cf439511f3fa8eb134ca",
+          "passed": false,
+          "point": 0.9420138
+        },
+        {
+          "key": "03a7a9d915e9529d4511de792f9982ec2daec7447d3f11329a9d3a0ed6b89783",
+          "passed": false,
+          "point": 0.8173636
+        },
+        {
+          "key": "8ad20bfd8a73ced42788eb715ddf2bbb5c8e948b62bca0e864802c7b0b875c36",
+          "passed": false,
+          "point": 0.9468283
+        },
+        {
+          "key": "215e6da067a6c68bdc5d459e1b1565b614ff1583aebf7bc80d1b74891e4d5e47",
+          "passed": false,
+          "point": 0.962699
+        },
+        {
+          "key": "93c603e1e241c8c24d295914e01dffdb79dfe1ed0305015d30f4ff41cf62cf98",
+          "passed": false,
+          "point": 0.9199448
+        },
+        {
+          "key": "e8be36d94780de75fd498adfc58ef6d7bfe2fc73edff8b04558fbcbfeaf6be3f",
+          "passed": false,
+          "point": 0.9433732
+        },
+        {
+          "key": "9238760811ec956b22edb6a433660e726c5f8b381e275b6576bb89b225ef2376",
+          "passed": false,
+          "point": 0.8473307
+        },
+        {
+          "key": "b0db7cb02e45f086dc6e1773f9058256a77bf91b3f8f250dba8ce7912345174e",
+          "passed": false,
+          "point": 0.9620252
+        },
+        {
+          "key": "827a9a36f548940404d552bdb348e3626872b0cf1a4ec43e380aa03295a4053c",
+          "passed": false,
+          "point": 0.948898
+        },
+        {
+          "key": "e32ea65f1ac093a5e4094fcb4c72bbc31019b47338624c75233d6a1344955c40",
+          "passed": false,
+          "point": 0.9562472
+        },
+        {
+          "key": "9bd829df61e65401af4cb8532b23ceea70e16b4a37567272d0a30a8de1d10b78",
+          "passed": false,
+          "point": 0.9634276
+        },
+        {
+          "key": "1158927e0e1c9aad4e7ea29d0f7947486234809ccd87ca2a89c92559540a9d32",
+          "passed": false,
+          "point": 0.9654432
+        },
+        {
+          "key": "ac1b231fcff5d5affea8ea5aff2aa9f429690ff2b298955355e5e96c2890b08e",
+          "passed": false,
+          "point": 0.9516174
+        },
+        {
+          "key": "1011e77d2a85757f5b08f974dba3d60fdfbeb49a9d1e676ab497c5720070f8ec",
+          "passed": false,
+          "point": 0.930809
+        },
+        {
+          "key": "d6e8f4b1d52ea49c2129a55a2f65bc0db7075084b821879b84724d54a6db6d6a",
+          "passed": false,
+          "point": 0.9666511
+        },
+        {
+          "key": "c48cd503dccc5de2e657e4f9354f803243042c70b79b5e453506f81e56ac7dae",
+          "passed": false,
+          "point": 0.964049
+        },
+        {
+          "key": "c018fceb07bd6cc47321e8511c7178f7f2722da55b8a18eb1ea344e4a7ca8db7",
+          "passed": false,
+          "point": 0.9716467
+        },
+        {
+          "key": "49df432e1a8af463b72067517e612d92a43d724c7e50ce8e5f67d64532f6d285",
+          "passed": false,
+          "point": 0.9523555
+        },
+        {
+          "key": "2589d3ade870260c1ca25ae27937c01321d0ff6801d690a925d135c2db476196",
+          "passed": false,
+          "point": 0.9679929
+        },
+        {
+          "key": "4738a3f8799b9de68469d8d076b22dbd31fb56250cd39965cd6648debd3115ee",
+          "passed": false,
+          "point": 0.971743
+        },
+        {
+          "key": "0df21a0f9fbf88cb52521b8033c986e76e12f0797d11d048bacf9341fc99c0ba",
+          "passed": false,
+          "point": 0.9641329
+        },
+        {
+          "key": "934f60d2408a2d6fdedc423451d65d295dc34a8f76452f35530b8f2754f326a7",
+          "passed": false,
+          "point": 0.9804592
+        },
+        {
+          "key": "4ecc440aadc1bf27cd1a0d7c8de18f5d8c4e61e7a7e2aff85f3db5fd4aff296d",
+          "passed": false,
+          "point": 0.9712184
+        },
+        {
+          "key": "2c9a7129c2b52da371f701a6d69b8d309c7c7eae517ba2f9239847a1b59165d0",
+          "passed": false,
+          "point": 0.9725976
+        },
+        {
+          "key": "c01e50097d4af573a812541d16694dfe9585a95b1197a1c411c7154e7f1c2e55",
+          "passed": false,
+          "point": 0.9688056
+        },
+        {
+          "key": "423aeabadb0d85df16a19156aebb56923b0c9e059865f39040c016b81281904b",
+          "passed": false,
+          "point": 0.9721062
+        },
+        {
+          "key": "061a35a3cfea72f206de6523649f4458ca8368da8ca53daf3d3476f787d2bb43",
+          "passed": false,
+          "point": 0.9671821
+        },
+        {
+          "key": "94ebd3580a4803c9ea4ed59bb6a1699652133e51e4fbbab54cbdda47c4a6f1c1",
+          "passed": false,
+          "point": 0.9720547
+        },
+        {
+          "key": "ba6fb1f9453b650fcbe0a370e53bdf674c3d1882754fdee1f722b15f1a5c2550",
+          "passed": false,
+          "point": 0.9722363
+        },
+        {
+          "key": "6557aec0c1154498de9c71083b0893323e4d030cb5ac9197eead8af46ca939be",
+          "passed": false,
+          "point": 0.9703121
+        },
+        {
+          "key": "789b8ee7bf080447c991c14a8316f2f2c54fab8d82f5a2c9d5f85ecce72c1a6d",
+          "passed": false,
+          "point": 0.9142135
+        },
+        {
+          "key": "4b82ca86fccf4576a3de0e9619365fbb2dfb020e8b36517aa32db1a03ec4c5cc",
+          "passed": false,
+          "point": 0.9717675
+        },
+        {
+          "key": "c429c8ee5822884d83b8167d7e222b99dd52b467093b4f880d960d6e37b69b9f",
+          "passed": false,
+          "point": 0.9712215
+        },
+        {
+          "key": "dd280fdaca55fa60b1dd8b07857c96c7a469b8af5afa0baaa6863776a96326b2",
+          "passed": false,
+          "point": 0.9761124
+        },
+        {
+          "key": "03304325a2726b2046ee84b180ff03e6812c26977cc454b3eb344107b58daf34",
+          "passed": false,
+          "point": 0.9763228
+        },
+        {
+          "key": "c048b7e1f27762778f45addee1257e69bd0ffb8dce40720367f704e7ce15e406",
+          "passed": false,
+          "point": 0.9740269
+        },
+        {
+          "key": "6bb4b82b48b15c980bc710085a8ec56838924c2b7fa1e7a55adcd0689b908362",
+          "passed": false,
+          "point": 0.9308574
+        },
+        {
+          "key": "4f7a732a6ade37919e0fb184753273c4afea1bd4fd72e3ccfacff80f9b69c809",
+          "passed": true,
+          "point": 0.990003
+        }
+      ],
+      "known_joint_cost": 25.481416375886432,
+      "selection": [
+        25,
+        46,
+        47,
+        3,
+        39
+      ],
+      "LSS_point": 0.990003,
+      "raw_exact_probability": 0.9999995884773663,
+      "raw_recount": {
+        "passed": true,
+        "method": "exact_decimal_rational_joint_MITM",
+        "numerator": "24299990",
+        "denominator": "24300000",
+        "lower": 0.9999995884773663,
+        "original_method": "outward_interval_integer_pair_count",
+        "original_lower_numerator": "24299990",
+        "original_denominator": "24300000",
+        "original_bins": null,
+        "sample_counts": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ]
+      },
+      "LSS_key": "4f7a732a6ade37919e0fb184753273c4afea1bd4fd72e3ccfacff80f9b69c809",
+      "cost_minus_old_best": 9.057789528226731
+    }
+  ],
+  "seconds": 1.8805037178099155
+}

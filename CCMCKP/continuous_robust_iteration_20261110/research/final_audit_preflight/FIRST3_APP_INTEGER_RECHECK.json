@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "method": "independent decimal coefficient/exponent integer scaling and integer MITM, no optimizer/raw verifier modules imported",
+  "all3_global_fixed_joint_optimal": true,
+  "full_choices_covered": 875,
+  "cheaper_probabilities_independently_recounted": 328,
+  "unique_native_receipts_checked": 42,
+  "proof_sha256": "217d7f053749972b62ff58494f21dab2cd059c0366b5077f9dc4b8a169a51135",
+  "checker_sha256": "cdc179c55ba2c68fed1cc4292e3e950557052a63840ec200cc7e003271645a10",
+  "new_MC_calls": 0,
+  "cases": [
+    {
+      "index": 21,
+      "total_choices": 125,
+      "cheaper_choices": 95,
+      "joint_optimal": true,
+      "cost": 14.07661610773891,
+      "raw_numerator": "26882",
+      "raw_denominator": "27000",
+      "LSS_point": 0.9874058
+    },
+    {
+      "index": 22,
+      "total_choices": 125,
+      "cheaper_choices": 89,
+      "joint_optimal": true,
+      "cost": 13.56485831159556,
+      "raw_numerator": "27000",
+      "raw_denominator": "27000",
+      "LSS_point": 0.988084
+    },
+    {
+      "index": 23,
+      "total_choices": 625,
+      "cheaper_choices": 144,
+      "joint_optimal": true,
+      "cost": 5.7961483421130335,
+      "raw_numerator": "804387",
+      "raw_denominator": "810000",
+      "LSS_point": 0.9891365
+    }
+  ],
+  "scope": "only3smallAPP cases and fixed original empirical99/original LSS985 point acceptance, not population CI or fullDRO ambiguity-set claim",
+  "seconds": 0.16129125654697418
+}

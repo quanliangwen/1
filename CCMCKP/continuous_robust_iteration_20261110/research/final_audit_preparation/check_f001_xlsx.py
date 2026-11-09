@@ -31,6 +31,7 @@ with zipfile.ZipFile(file) as z:
   for k,e in enumerate(expected,ord('D')):close(sheets[0].get(f'{chr(k)}{r}',{}).get('value'),e,f'{chr(k)}{r}')
   for col in 'EFGHIJK':
    if not sheets[0][f'{col}{r}']['formula']:raise RuntimeError('Calculated statistic not exported as formula')
+  if s['index'] in [21,22,23] and sheets[0].get(f'N{r}',{}).get('value')!='旧成本线不可达（已全枚举）':raise RuntimeError('Verified historical cost-line exclusion annotation missing')
  ordered=sorted(data['details'],key=lambda r:(r['index'],r['seed']))
  for row,r in enumerate(ordered,5):
   for col,key in [('A','index'),('C','tmax'),('D','seed'),('E','joint_accepted'),('F','protocol_valid')]:close(sheets[1][f'{col}{row}']['value'],r[key],f'detail {col}{row}')

@@ -8,6 +8,9 @@ const H=path.dirname(fileURLToPath(import.meta.url));
 const input=path.join(H,'formal/F001_I002_40x30/FINAL_AUDIT_STATS.json');
 const bytes=await fs.readFile(input), data=JSON.parse(bytes);
 if(!data.integrity_passed || data.registered_attempts!==1200 || data.details.length!==1200 || data.summary.length!==40) throw Error('Real complete audited cohort required');
+const proofBytes=await fs.readFile(path.join(H,'research/final_audit_preflight/FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json'));
+const proof=JSON.parse(proofBytes), proofCheck=JSON.parse(await fs.readFile(path.join(H,'research/final_audit_preflight/FIRST3_APP_INTEGER_RECHECK.json')));
+if(!proof.all3_global_fixed_joint_optimal || !proofCheck.passed || !proofCheck.all3_global_fixed_joint_optimal || proofCheck.proof_sha256!==createHash('sha256').update(proofBytes).digest('hex') || proofCheck.full_choices_covered!==875)throw Error('Verified original small-case cost-line proof required');
 const ordered=[...data.details].sort((a,b)=>a.index-b.index||a.seed-b.seed);
 const ids=new Set(ordered.map(r=>`${r.index}/${r.seed}`));
 if(ids.size!==1200) throw Error('Duplicate registered attempt');
@@ -43,7 +46,7 @@ const detail=table(names[1],'F001 · 全部登记运行（失败保留）',['ID'
 detail.getRange('G5:J1204').setNumberFormat('0.000000');
 detail.getRange('N5:P1204').setNumberFormat('0.00000000');detail.getRange('U5:U1204').setNumberFormat('0.000000');
 const sums=[...data.summary].sort((a,b)=>(a.instance.startsWith('APP')?0:1)-(b.instance.startsWith('APP')?0:1)||a.index-b.index);
-const summary=table(names[0],'F001 · 40 算例 × 30 次',['ID','算例','T','历史Best','本轮Best','本轮Avg','Std(P)','Avg−Best','Avg−原Best','搜索Time(s)','有效/30','原样本下界最小','LSS概率最小'],sums.map(s=>[s.index,s.instance,s.tmax,s.old_best,null,null,null,null,null,null,null,s.minimum_independent_raw_lower,s.minimum_real_probability]),[44,180,60,110,110,110,105,110,120,120,85,135,130]);
+const summary=table(names[0],'F001 · 40 算例 × 30 次',['ID','算例','T','历史Best','本轮Best','本轮Avg','Std(P)','Avg−Best','Avg−原Best','搜索Time(s)','有效/30','原样本下界最小','LSS概率最小','历史目标核查'],sums.map(s=>[s.index,s.instance,s.tmax,s.old_best,null,null,null,null,null,null,null,s.minimum_independent_raw_lower,s.minimum_real_probability,[21,22,23].includes(s.index)?'旧成本线不可达（已全枚举）':s.old_best_known_joint_passed===true?'旧向量联合验收通过':s.old_best_known_joint_passed===false?'旧向量验收未通过':'旧目标尚待核查']),[44,180,60,110,110,110,105,110,120,120,85,135,130,260]);
 summary.tabColor='#23415D';
 for(let j=0;j<sums.length;j++){
  const s=sums[j],r=j+5,start=ordered.findIndex(x=>x.index===s.index)+5,end=start+29;
@@ -68,6 +71,10 @@ const notes=[
  ['Avg与Std','仅全部30次协议有效才给Avg/Std；Std为总体标准差(ddof=0)；所有失败保留。'],
  ['搜索Time','30次搜索秒平均；真实仿真时间另列，逻辑复用时间不等于本次实际新调用时间。'],
  ['历史Best','来自用户原统计表；缺少相应可行向量时，单凭旧成本不能证明联合可行或不可能。'],
+ ['前三例已完成全枚举','APP编号21/22/23全部875组合；328个较便宜组合的精确原样本概率双实现复核，42项原LSS凭证核对。固定联合验收下最优成本分别14.076616、13.564858、5.796148，旧成本线不可达。'],
+ ['前三例旧向量LSS点估计','0.9651546、0.9713810、0.9731601，均低于0.985。其原样本概率达到0.99，不代表原LSS通过。'],
+ ['全枚举结论范围','仅这三例及当前固定联合验收谓词；不是总体概率置信区间或整个DRO歧义集合的证明；其余例的旧向量失败不等于旧成本线不可达。'],
+ ['全枚举证据SHA256',createHash('sha256').update(proofBytes).digest('hex')],
  ['重复调用','完整身份一致的LSS记录在外部复用；固定MC种子，不能称1200次独立MC估计。'],
  ['完整性审计',data.integrity_passed?'通过':'失败'],['1200次全合格',data.all1200_qualified?'是':'否'],
  ['登记次数',data.registered_attempts],['协议有效次数',data.protocol_valid],['双门槛通过次数',data.joint_accepted],
@@ -96,7 +103,7 @@ for(const n of names){
 }
 const inspection=await wb.inspect({kind:'region',sheetId:names[0],range:'A4:M12',maxChars:5000});
 await fs.writeFile(path.join(O,'inspection.json'),JSON.stringify(inspection,null,2));
-const ranges=[['summary_all',names[0],'A1:M44'],['detail_first',names[1],'A1:P16'],['detail_last',names[1],'A1199:P1204'],['native',names[2],`A1:H${Math.min(mc.length+4,16)}`],['raw',names[3],`A1:F${Math.min(raw.length+4,16)}`],['method',names[4],'A1:B24']];
+const ranges=[['summary_all',names[0],'A1:N44'],['detail_first',names[1],'A1:P16'],['detail_last',names[1],'A1199:P1204'],['native',names[2],`A1:H${Math.min(mc.length+4,16)}`],['raw',names[3],`A1:F${Math.min(raw.length+4,16)}`],['method',names[4],'A1:B28']];
 for(const [file,sheetName,range]of ranges){const img=await wb.render({sheetName,range,scale:1,format:'png'});await fs.writeFile(path.join(O,file+'.png'),new Uint8Array(await img.arrayBuffer()));}
 const output=await SpreadsheetFile.exportXlsx(wb);await output.save(path.join(O,'F001_40cases_30runs.xlsx'));
 await fs.writeFile(path.join(O,'AUTHORING_CHECK.json'),JSON.stringify({real_complete_cohort:true,all_formula_statistics_matched:true,formula_errors:0,all_sheets_rendered:true,model_visual_review_pending:true,source_sha256:createHash('sha256').update(bytes).digest('hex'),sheet_names:names},null,2));
