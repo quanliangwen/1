@@ -3,11 +3,33 @@
   "case": 39,
   "search_finished": 6,
   "required": 6,
-  "validation_finished": 3,
-  "qualified": 3,
+  "validation_finished": 6,
+  "qualified": 6,
   "errors": [],
-  "matched": [],
-  "stability_rule_passed": false,
+  "matched": [
+    {
+      "seed": 970211,
+      "none": 330.7476111191465,
+      "cdf_lns": 329.83616418693003,
+      "gain": 0.9114469322164496,
+      "better_than_both": true
+    },
+    {
+      "seed": 970212,
+      "none": 330.7476111191465,
+      "cdf_lns": 329.83616418693003,
+      "gain": 0.9114469322164496,
+      "better_than_both": true
+    },
+    {
+      "seed": 970213,
+      "none": 330.7476111191465,
+      "cdf_lns": 329.83616418693003,
+      "gain": 0.9114469322164496,
+      "better_than_both": true
+    }
+  ],
+  "stability_rule_passed": true,
   "rows": [
     {
       "method": "cdf_lns",
@@ -17,7 +39,16 @@
       "wall_seconds": 530.8183147488162,
       "search_elapsed": 529.7810096563771,
       "within_budget": true,
-      "pool": 201
+      "pool": 201,
+      "validation_finished": true,
+      "qualified": true,
+      "cost": 329.83616418693003,
+      "real_probability": 0.9852767,
+      "raw_lower": 0.9916367919748112,
+      "S10_cost": 330.7476111191465,
+      "gain_vs_S10": 0.9114469322164496,
+      "LSS_candidates": 66,
+      "logical_MC_seconds": 3360.171376893297
     },
     {
       "method": "cdf_lns",
@@ -27,7 +58,16 @@
       "wall_seconds": 503.53418042417616,
       "search_elapsed": 502.6510657146573,
       "within_budget": true,
-      "pool": 201
+      "pool": 201,
+      "validation_finished": true,
+      "qualified": true,
+      "cost": 329.83616418693003,
+      "real_probability": 0.9852767,
+      "raw_lower": 0.9916367919748112,
+      "S10_cost": 330.7476111191465,
+      "gain_vs_S10": 0.9114469322164496,
+      "LSS_candidates": 66,
+      "logical_MC_seconds": 3360.171376893297
     },
     {
       "method": "cdf_lns",
@@ -37,7 +77,16 @@
       "wall_seconds": 534.1890407539904,
       "search_elapsed": 533.2297906996682,
       "within_budget": true,
-      "pool": 201
+      "pool": 201,
+      "validation_finished": true,
+      "qualified": true,
+      "cost": 329.83616418693003,
+      "real_probability": 0.9852767,
+      "raw_lower": 0.9916367919748112,
+      "S10_cost": 330.7476111191465,
+      "gain_vs_S10": 0.9114469322164496,
+      "LSS_candidates": 66,
+      "logical_MC_seconds": 3360.171376893297
     },
     {
       "method": "none",

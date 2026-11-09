@@ -58,14 +58,19 @@
       "sha256": "0c88b48be4e18e4fe643af15e407be68da65225775a0b203b2d3273c9f24573e"
     },
     {
+      "path": "formal/F001_I002_40x30/REGISTRATION.json",
+      "bytes": 3804,
+      "sha256": "b7a54e4017ecad0be2785bc493657b99df53d53ce097e1427ada37da5d4c26d2"
+    },
+    {
       "path": "GOAL_AND_PROTOCOL.json",
       "bytes": 964,
       "sha256": "6e969109a2e43bed55881e157084d51827ed6c34b398db7a939fa40eac7e3e46"
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 13256,
-      "sha256": "e83e1d9cc1db12bca471baefbaff739a96b4966040edeb51f37559475fac9ac2"
+      "bytes": 13749,
+      "sha256": "07cc0e2f231731820c52d97717b08490970a2d762aefcae109049bdd81dda421"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -648,6 +653,16 @@
       "sha256": "fcf36dd93da111351dbd3aa5c479983f7dd069be0bf96dcc804cb6de79ff353f"
     },
     {
+      "path": "run_f001_search.py",
+      "bytes": 3021,
+      "sha256": "40047b2560f509fbc6849c189fcba0f0111959375aa0daa1232d0813c7964e0c"
+    },
+    {
+      "path": "run_f001_stages.py",
+      "bytes": 811,
+      "sha256": "8477a8509cc85851a9c81ef4160cc55f58134f07b0b1038a29bb169bdf2e3367"
+    },
+    {
       "path": "run_i001_pilot.py",
       "bytes": 1951,
       "sha256": "6f0eaf89b193a43defabb3514b93c009ea73e143026339d11c9333c8f275c125"
@@ -673,14 +688,34 @@
       "sha256": "97682406893ae1692eaaa4060c531b4502619bad23af2741e2de047658ce50e7"
     },
     {
+      "path": "stability/I002_case39/ARCHIVE_MANIFEST.json",
+      "bytes": 469,
+      "sha256": "10dfa67811f933fe3b9715b73497d535ad79f6d88e3efbc33620c76ab380773e"
+    },
+    {
+      "path": "stability/I002_case39/I002_case39_RECORDS.zip",
+      "bytes": 1572386,
+      "sha256": "e4c4b0aa13ced2240a3811a8216ecb6e80ef93903be5a5bcbc9837690ebef951"
+    },
+    {
       "path": "stability/I002_case39/LAUNCH.json",
       "bytes": 179,
       "sha256": "ac240a3ab0f5c74a8615eb7ca5633c66dc03b827619a92d873cfed94185099b7"
     },
     {
+      "path": "stability/I002_case39/PREFETCH_LAUNCH.json",
+      "bytes": 17457,
+      "sha256": "89c790e1ed7c06c91647558bd8c936a8849aca5e22783d5302b92a3ef38e54b0"
+    },
+    {
+      "path": "stability/I002_case39/PREFETCH_RESULTS.json",
+      "bytes": 21650,
+      "sha256": "9421b15fdd83300c7df661edfb092fef8f2fcb4db358711a4483f6962e1c5974"
+    },
+    {
       "path": "stability/I002_case39/PROGRESS.json",
-      "bytes": 2584,
-      "sha256": "ae98e47ab6f0b147350e66c92deb786c80cd2320b70704edb5df2906440dda1e"
+      "bytes": 4064,
+      "sha256": "6b9d3c1409693ae2425a9b22a50f94107c8f6456e5389d1ed1ec1f3bdc2b61fb"
     },
     {
       "path": "stability/I002_case39/REGISTRATION.json",
@@ -716,6 +751,11 @@
       "path": "summarize_i001_progress.py",
       "bytes": 2786,
       "sha256": "58dfb0ca6f718220475682815d99429afd0249c306003a433dda97a1c87490c3"
+    },
+    {
+      "path": "validate_f001.py",
+      "bytes": 3472,
+      "sha256": "84868dce4059702ae24ff8dbbafbddceeec96825ac5a11a76543294d07470268"
     },
     {
       "path": "validate_i001_pilot.py",
