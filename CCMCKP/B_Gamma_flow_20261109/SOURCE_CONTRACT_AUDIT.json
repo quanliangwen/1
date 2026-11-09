@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "versions": [
+    {
+      "version": "A01",
+      "passed": true,
+      "freeze_sha256": "d9ff6ddda35719cdf87954840568f1127f1a7fa2addecd0e75267031075f035a",
+      "source_zip_sha256": "8f1eb1f7d20027d3e3f21de223561638db51766703dcf4c5e095e69f30ee358c",
+      "frozen_files": 29,
+      "uploaded_B_members": 14,
+      "sole_solver_change": "one gamma import and call after successful own B initialization",
+      "native_four_byte_identical": true,
+      "inherited_other_candidate_operators": false,
+      "future_8GiB_exceeds_original_envelope_times125pct": true
+    },
+    {
+      "version": "A02",
+      "passed": true,
+      "freeze_sha256": "923b5ce01f9b3a6b5b420c8202a26e2246b20e84266a2f63ce9deb65cdefba81",
+      "source_zip_sha256": "e04d60ee7664601970744b20aa4d8de0b9040303fe374eb7addf074dc5335633",
+      "frozen_files": 33,
+      "uploaded_B_members": 14,
+      "sole_solver_change": "one gamma import and call after successful own B initialization",
+      "native_four_byte_identical": true,
+      "inherited_other_candidate_operators": false,
+      "future_8GiB_exceeds_original_envelope_times125pct": true
+    }
+  ],
+  "official_B_runs_repeated": 0,
+  "full_suite_started": false
+}

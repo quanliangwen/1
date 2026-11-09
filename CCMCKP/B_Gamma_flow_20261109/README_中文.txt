@@ -1,5 +1,7 @@
 本轮研究：从 Γ 鲁棒双层优化论文抽取候选生成流程，适配原 CCMCKP
 
+交付状态附注：首版A01及全部结果保留在根目录；当前可复现候选为A02/source_frozen.zip。A02仅将辅助完整CDF评分统一到原B半区逐层float32和反向CDF矩阵积，未调Γ、时间或门槛。版本修订与复用说明见A02/REVISION_AND_REUSE.json，实际结果与失败见RESULTS_中文.txt。以下正文保留首版研究与预检设计来源，不能把其中的计划当作已通过的性能结论。
+
 一、论文实际用了什么
 用户提供的37页稿件：Yasmine Beck, Ivana Ljubić, Martin Schmidt，Heuristic Methods for Γ-Robust Mixed-Integer Linear Bilevel Problems，稿件日期2025-01-07，DOI 10.1287/ijoc.2023.0239。论文对象为二进制追随者、其目标系数有区间偏差的混合整数线性双层问题，采用乐观双层解释。它不是当前 CCMCKP 的边际分布鲁棒机会约束模型。
 第2节 Assumptions1/2要求共享集合非空紧、每个领导决策下追随集合非空、连接变量有界整数、非负偏差。Lemma1/式(3)把追随者的预算鲁棒目标分解为有限个确定性目标；式(5)给出适用二进制/整数Γ的缩减指标。本文适配未调用该缩减指标，避免把双层目标性质误用到容量约束。

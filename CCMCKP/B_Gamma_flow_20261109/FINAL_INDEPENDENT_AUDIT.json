@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source_freeze": "923b5ce01f9b3a6b5b420c8202a26e2246b20e84266a2f63ce9deb65cdefba81",
+  "export": {
+    "A02": {
+      "sha256": "80c834341f600cc9f0a7826d68347612cf98c22cccca17fed0603cbf9a6392d9",
+      "bytes": 498120,
+      "members": 516
+    },
+    "A01_negative": {
+      "sha256": "e261075a8d9a75559602ec33bba9c5537c3278191d4636beabacc51cd6ebb2a9",
+      "bytes": 12583,
+      "members": 16
+    },
+    "freeze": "923b5ce01f9b3a6b5b420c8202a26e2246b20e84266a2f63ce9deb65cdefba81"
+  },
+  "synthetic_complete": 30,
+  "real_functional_complete": 7,
+  "exact_complete": 15,
+  "MC_complete": 15,
+  "score_alignment_max_abs": 0.0,
+  "new_B_performance_runs": 0,
+  "new_formal_candidate_runs": 0,
+  "official_avg": null,
+  "official_std": null,
+  "official_CV": null,
+  "full_goal_achieved": false
+}
