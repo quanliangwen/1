@@ -1,0 +1,38 @@
+{
+  "finished": 2,
+  "required": 6,
+  "rows": [
+    {
+      "label": "I002_control",
+      "seed": 9715211,
+      "pid": 1035158,
+      "exit": 0,
+      "error": null,
+      "actual_wall": 415.04546899255365,
+      "output": "stability/I015_gain_case39/search/I002_control_seed9715211.json.gz",
+      "registration_sha256": "c0143a2bb6fd430cb21ce205d7043d9acfd1face580c1e15b964361ff1c26981",
+      "elapsed": 414.4123076489195,
+      "within_budget": true,
+      "raw_candidates": 181,
+      "extension_seconds": 38.75925883278251,
+      "phase_within_budget": true
+    },
+    {
+      "label": "I015_hybrid",
+      "seed": 9715211,
+      "pid": 1035159,
+      "exit": 0,
+      "error": null,
+      "actual_wall": 530.8301049908623,
+      "output": "stability/I015_gain_case39/search/I015_hybrid_seed9715211.json.gz",
+      "registration_sha256": "c0143a2bb6fd430cb21ce205d7043d9acfd1face580c1e15b964361ff1c26981",
+      "elapsed": 530.1664121123031,
+      "within_budget": true,
+      "raw_candidates": 624,
+      "extension_seconds": 154.39203715417534,
+      "phase_within_budget": true
+    }
+  ],
+  "actual_wall": 530.8840245576575,
+  "warning": "raw search completion is not original-LSS qualification or30-run Avg"
+}

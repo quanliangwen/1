@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": {
+    "center": 42,
+    "replacement": 252,
+    "joint_mixture": 105,
+    "nominal_counts": 72
+  },
+  "maximum_absolute_CDF_error": 5.551115123125783e-17,
+  "deterministic_resampling": true,
+  "overflow_category_preserved": true,
+  "joint_ambiguity_not_product_of_marginal_mixtures": true,
+  "invalid_models_rejected": 7,
+  "new_MC_calls": 0,
+  "scope": "finite-grid bootstrap JOINT model ambiguity and single-group proposal derivatives versus independent full positive convolution; no raw feasibility/real probability or optimizer performance claim",
+  "source_sha256": {
+    "bootstrap_cdf_models_v1.py": "b8890cdc24b207570a97a0e1378d099b5a885ab079b12cd910ec870e31092c3c",
+    "check_bootstrap_cdf_models.py": "aad575cf722d4674d57aeb4292071642887d8fbd8ac4de5910fb52ec560f0cbc"
+  },
+  "unchanged_base_source_sha256": {
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348"
+  },
+  "numpy": "2.4.0"
+}
