@@ -1,0 +1,12 @@
+{
+  "scope": "new-iteration dependency setup failure, before probability interface imports or cold engineering;21solver source files unchanged",
+  "initial_test": "check_i015_actual_precision.py",
+  "error": "ModuleNotFoundError: No module named 'flint'",
+  "cause": "setup script invoked by relative filename used relative __file__.parent, so symlink target was interpreted relative to link directory",
+  "old_link": "iterations/I002_cdf_neighborhood/vendor313",
+  "absolute_link": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+  "resolved_target_verified": true,
+  "actual_precision_toy_directory_existed_before_repair": false,
+  "solver_sources_changed": false,
+  "repair": "unlink only exactly verified broken symlink, recreate absolute dependency symlink; setup helper now resolves __file__ first"
+}
