@@ -1,0 +1,39 @@
+{
+  "scope": "Delivery manifest correction only; no runtime/source ZIP/result changes",
+  "prior_commit": "0054717d1db0c4e860ec119f7882777f96e398be",
+  "cause": "Initial sparse checkout inherited automatic LF-to-CRLF conversion before repository core.autocrlf=false. New FILE_MANIFEST accidentally hashed those checkout bytes for some unchanged old text files. Remote original blobs remain intact.",
+  "corrected_expectations": [
+    {
+      "file": "PRECHECK_RESULT.json",
+      "checkout_SHA": "0a3b2f24a768ff0bc9c9c709c47330d21d95cca3ffe61223d527af946240a2ef",
+      "committed_original_SHA": "4ddd925418a95f048bf04c802efe0ee8a55c4eef039cdc27341d9e047dc42606",
+      "checkout_bytes": 6533,
+      "committed_bytes": 6337
+    },
+    {
+      "file": "README_中文.txt",
+      "checkout_SHA": "724edc83c9798f2f86f7a793fcb3f809f3a415cd6c1278cc765219f097e6bde9",
+      "committed_original_SHA": "2189c649a7535916a2d0137edc72cf5cdf8f0d84a51a072cbfde46f14d58bddd",
+      "checkout_bytes": 6447,
+      "committed_bytes": 6419
+    },
+    {
+      "file": "SCORE_ALIGNMENT_AUDIT_V2.json",
+      "checkout_SHA": "4df6986fcce03e40434d274dd900e6e5258d1d6e4f89d361120db02d6ef483bb",
+      "committed_original_SHA": "479c33d4967d12d0e437f9d9e17f443d74879b12c38306a097715a953a43b1c1",
+      "checkout_bytes": 47809,
+      "committed_bytes": 46183
+    },
+    {
+      "file": "SYNTHETIC_RESULT.json",
+      "checkout_SHA": "c48eff4a8816cc71780f8bfd6cd0b6134be9b34f44c124fc405c6a2dcc612612",
+      "committed_original_SHA": "097a3f4c0620ff5b41d5c7733986051fde71a28e4d7d4043c21083d77a1582b6",
+      "checkout_bytes": 8069,
+      "committed_bytes": 7819
+    }
+  ],
+  "algorithm_rerun": false,
+  "frozen_runtime_changed": false,
+  "source_archive_SHA": "8c7ca37c45b9b11e8094aa5f929f5e2c97b798e7ce3eaa3fe8495493d0e7d769",
+  "results_archive_SHA": "2e130ba7230ff355f3694033b4adf8672fe057dbbac3ba3b8f4182f841263b1f"
+}
