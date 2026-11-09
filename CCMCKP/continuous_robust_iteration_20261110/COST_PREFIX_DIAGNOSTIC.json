@@ -1,0 +1,32 @@
+[
+  {
+    "index": 30,
+    "instance": "APP_10_10_500_",
+    "minimum_cost_sum": 10.776722020047687,
+    "half_states": [
+      100000,
+      100000
+    ],
+    "cost_prefix_counts_estimated": {
+      "old_best": 9947908347,
+      "S10": 9954164375
+    },
+    "seconds": 0.021441472694277763,
+    "scope": "floating cost-only count estimate with1e-8 tolerance; not a feasibility or optimality certificate"
+  },
+  {
+    "index": 32,
+    "instance": "APP_10_20_500_",
+    "minimum_cost_sum": 9.501545066797018,
+    "half_states": [
+      3200000,
+      3200000
+    ],
+    "cost_prefix_counts_estimated": {
+      "old_best": 10236344337749,
+      "S10": 10236573057985
+    },
+    "seconds": 0.8345148889347911,
+    "scope": "floating cost-only count estimate with1e-8 tolerance; not a feasibility or optimality certificate"
+  }
+]

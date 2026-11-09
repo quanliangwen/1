@@ -18,9 +18,24 @@
       "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a"
     },
     {
+      "path": "CDF_NEIGHBORHOOD_MATH_CHECK.json",
+      "bytes": 139,
+      "sha256": "1d6ee4b598370fa13a03ab9ecf1ebb5b6176ab3a63910c4d43a4ae33f61cedd4"
+    },
+    {
       "path": "check_risk_math.py",
       "bytes": 1388,
       "sha256": "60063061bdab660a6c2432d853b953d63517bc1f11ca5f93e6c0d79bfcef382c"
+    },
+    {
+      "path": "COST_PREFIX_DIAGNOSTIC.json",
+      "bytes": 825,
+      "sha256": "b93410dd52c87b377f6921e44d7a960b4876c0f07c23027ccf01bc82fbd9c2d2"
+    },
+    {
+      "path": "cost_prefix_diagnostic.py",
+      "bytes": 1456,
+      "sha256": "33ff1608c3532d9a802ce67defa4850baf36a643a1f235f68e95941e1629d1eb"
     },
     {
       "path": "GOAL_AND_PROTOCOL.json",
@@ -29,8 +44,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 2605,
-      "sha256": "9c62d3a0791970fe8a3170c8060d5b9dbf3c1cbed92f35b7ed22253e858d6c18"
+      "bytes": 5119,
+      "sha256": "de5c44149f73f6d7f93b7c7ae2a98ddcac41768fbc88d527810a7ae662c3671d"
     },
     {
       "path": "iterations/I001_risk_portfolio/candidate/engine.py",
@@ -113,6 +128,16 @@
       "sha256": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
     },
     {
+      "path": "iterations/I001_risk_portfolio/PILOT_LAUNCH.json",
+      "bytes": 290,
+      "sha256": "359d7225e0354694aa329ec2d3549166485de754bab9b92232024f4cf763af09"
+    },
+    {
+      "path": "iterations/I001_risk_portfolio/PROGRESS.json",
+      "bytes": 12661,
+      "sha256": "bb140292be5a5332aee2449c2847edaa1054f2834ba38a97b1c8c34ea03769dc"
+    },
+    {
       "path": "iterations/I001_risk_portfolio/REGISTRATION.json",
       "bytes": 3718,
       "sha256": "7112961542da65929edb8aa95264b808a21e5e0d58c8c367b63b3f9c22dedc6b"
@@ -149,8 +174,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 376,
-      "sha256": "8ee197ae06a0de9811b64e0478409b6e76be90840cf24beac9ee7bdaa630aab2"
+      "bytes": 644,
+      "sha256": "c23e711ae8d0234e56ed5a95b2c6676e8b5ec5a17dc8cad3c2e31b619a6954f7"
     },
     {
       "path": "reference_loader.py",
@@ -171,6 +196,11 @@
       "path": "run_i001_pilot.py",
       "bytes": 1951,
       "sha256": "6f0eaf89b193a43defabb3514b93c009ea73e143026339d11c9333c8f275c125"
+    },
+    {
+      "path": "summarize_i001_progress.py",
+      "bytes": 2786,
+      "sha256": "58dfb0ca6f718220475682815d99429afd0249c306003a433dda97a1c87490c3"
     },
     {
       "path": "validate_i001_pilot.py",
