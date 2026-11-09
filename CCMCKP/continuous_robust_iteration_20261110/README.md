@@ -2,8 +2,8 @@
 
 目标进行中。S10基线保持不变。
 
-[思路、尝试、负结果与后续方向](ITERATION_LOG.md) · [方法和文献](METHODS.md) · [持续目标与验收](GOAL_AND_PROTOCOL.json)
+[思路、尝试与实测结果](ITERATION_LOG.md) · [方法和文献](METHODS.md) · [持续目标与验收](GOAL_AND_PROTOCOL.json)
 
-I001：28/28开发验收通过，四组均未改善成本，完整保留。I002：已冻结14次多中心鲁棒CDF邻域对照，已启动，正在运行。尚无新的40×30版本，不能把开发单次结果当Avg。
+I001：28/28开发验收通过，四组均未改善成本；完整负结果已归档。I002、I003最新进度见过程记录，不能把单种子开发结果当作30次Avg。I004处于工程验证阶段。
 
-[I001完整原始记录](iterations/I001_risk_portfolio/I001_DEVELOPMENT_RECORDS.zip)已上传，SHA256见同目录ARCHIVE_MANIFEST.json。
+本目录按轮保存冻结源码、预注册、搜索和验收原始记录及SHA256。正式有效交付仍为S10的40×30；后续有实质改善再启动新版本正式验证。
