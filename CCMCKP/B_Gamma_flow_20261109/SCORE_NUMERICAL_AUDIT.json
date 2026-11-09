@@ -1,0 +1,590 @@
+{
+  "source_freeze": "d9ff6ddda35719cdf87954840568f1127f1a7fa2addecd0e75267031075f035a",
+  "rows": [
+    {
+      "case": 17,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.48688839154986524,
+          "B_half_PDF_score": 0.48688839166375886,
+          "absolute_difference": 1.1389361675995247e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.48714527589731144,
+          "B_half_PDF_score": 0.4871452724965279,
+          "absolute_difference": 3.4007835436611344e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.48590179768347075,
+          "B_half_PDF_score": 0.48590179464696287,
+          "absolute_difference": 3.0365078784733157e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.4950570121606832,
+          "B_half_PDF_score": 0.4950570123628005,
+          "absolute_difference": 2.021172673671856e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8430907876449165,
+          "B_half_PDF_score": 0.843090797955753,
+          "absolute_difference": 1.031083651792386e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8417800225460006,
+          "B_half_PDF_score": 0.8417800396063658,
+          "absolute_difference": 1.70603652316359e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8491038513522563,
+          "B_half_PDF_score": 0.849103864125726,
+          "absolute_difference": 1.2773469726390374e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8561277062052145,
+          "B_half_PDF_score": 0.8561277064305968,
+          "absolute_difference": 2.2538226840396192e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.987306266757574,
+          "B_half_PDF_score": 0.9873062671267496,
+          "absolute_difference": 3.6917557899585063e-10,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.70603652316359e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 3,
+        "3": 38
+      },
+      "initial_nominal_load": 44.3181026843405,
+      "initial_Gamma1_load": 48.642382050154,
+      "capacity": 55.0
+    },
+    {
+      "case": 38,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.5286281829695839,
+          "B_half_PDF_score": 0.5286281805736216,
+          "absolute_difference": 2.3959623174363287e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5299256086857752,
+          "B_half_PDF_score": 0.5299256066621694,
+          "absolute_difference": 2.0236058384526245e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5261837158119208,
+          "B_half_PDF_score": 0.5261837148319791,
+          "absolute_difference": 9.799416833544683e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5283001855608308,
+          "B_half_PDF_score": 0.5283001884559294,
+          "absolute_difference": 2.895098605293356e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9598651434394689,
+          "B_half_PDF_score": 0.9598651401566548,
+          "absolute_difference": 3.2828141316443293e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9607586135337836,
+          "B_half_PDF_score": 0.9607586137214325,
+          "absolute_difference": 1.876488964214218e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9598094036307276,
+          "B_half_PDF_score": 0.9598094061063046,
+          "absolute_difference": 2.475576965643711e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9600614071158229,
+          "B_half_PDF_score": 0.9600613977140684,
+          "absolute_difference": 9.401754486049185e-09,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 9.401754486049185e-09,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 2,
+        "3": 39
+      },
+      "initial_nominal_load": 50.98983273287162,
+      "initial_Gamma1_load": 78.87841644612767,
+      "capacity": 95.0
+    },
+    {
+      "case": 39,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.5289484439842038,
+          "B_half_PDF_score": 0.5289484374231644,
+          "absolute_difference": 6.5610393784609755e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5309544025494582,
+          "B_half_PDF_score": 0.5309543969448403,
+          "absolute_difference": 5.604617991927796e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5283307260641575,
+          "B_half_PDF_score": 0.5283307219794208,
+          "absolute_difference": 4.0847367710483695e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.529995677584494,
+          "B_half_PDF_score": 0.5299956742333007,
+          "absolute_difference": 3.3511932118202026e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9724241327472403,
+          "B_half_PDF_score": 0.9724241310213224,
+          "absolute_difference": 1.7259178530792951e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9724429223219015,
+          "B_half_PDF_score": 0.972442922574933,
+          "absolute_difference": 2.5303148465383174e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9726802860825811,
+          "B_half_PDF_score": 0.9726802696484552,
+          "absolute_difference": 1.6434125837960778e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9723025853434217,
+          "B_half_PDF_score": 0.9723025710280971,
+          "absolute_difference": 1.4315324592395484e-08,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.6434125837960778e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 2,
+        "3": 49
+      },
+      "initial_nominal_load": 59.46023237425221,
+      "initial_Gamma1_load": 88.33411270641804,
+      "capacity": 91.0
+    },
+    {
+      "case": 40,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.5291616034748654,
+          "B_half_PDF_score": 0.5291616048260166,
+          "absolute_difference": 1.3511511909314322e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5249113016988783,
+          "B_half_PDF_score": 0.5249113023345403,
+          "absolute_difference": 6.356619675074171e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.531131822574769,
+          "B_half_PDF_score": 0.5311318266894346,
+          "absolute_difference": 4.114665608234702e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5261519195099097,
+          "B_half_PDF_score": 0.5261519270465002,
+          "absolute_difference": 7.536590462819959e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.955983496031392,
+          "B_half_PDF_score": 0.9559835117940179,
+          "absolute_difference": 1.576262587121846e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9583366449606071,
+          "B_half_PDF_score": 0.9583366590410944,
+          "absolute_difference": 1.4080487331646907e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9564274213616154,
+          "B_half_PDF_score": 0.9564274349287464,
+          "absolute_difference": 1.3567130974223574e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9557325007720832,
+          "B_half_PDF_score": 0.9557325202262109,
+          "absolute_difference": 1.9454127753171235e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9995592973690047,
+          "B_half_PDF_score": 0.9995593050159529,
+          "absolute_difference": 7.646948185779934e-09,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.9454127753171235e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 3,
+        "3": 48
+      },
+      "initial_nominal_load": 59.46023237425221,
+      "initial_Gamma1_load": 88.33411270641804,
+      "capacity": 100.0
+    },
+    {
+      "case": 25,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.5684261233225028,
+          "B_half_PDF_score": 0.5684261135282983,
+          "absolute_difference": 9.79420444746637e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5722738628514286,
+          "B_half_PDF_score": 0.5722738533926538,
+          "absolute_difference": 9.458774763437816e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5731465839986569,
+          "B_half_PDF_score": 0.5731465743224217,
+          "absolute_difference": 9.67623525749417e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5765841328380948,
+          "B_half_PDF_score": 0.5765841230095974,
+          "absolute_difference": 9.828497460340202e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9619478298758886,
+          "B_half_PDF_score": 0.9619478137166438,
+          "absolute_difference": 1.6159244720093113e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.967689333865952,
+          "B_half_PDF_score": 0.9676893171980986,
+          "absolute_difference": 1.6667853430796242e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9876983798082426,
+          "B_half_PDF_score": 0.9876983716980933,
+          "absolute_difference": 8.110149329887406e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.9713315468191982,
+          "B_half_PDF_score": 0.9713315306257679,
+          "absolute_difference": 1.619343026337816e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9999053570231542,
+          "B_half_PDF_score": 0.9999053470497798,
+          "absolute_difference": 9.973374348604125e-09,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.6667853430796242e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 4,
+        "3": 2
+      },
+      "initial_nominal_load": 8.069129547330775,
+      "initial_Gamma1_load": 16.70691625651927,
+      "capacity": 27.0
+    },
+    {
+      "case": 18,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.4905360365836971,
+          "B_half_PDF_score": 0.4905360356729105,
+          "absolute_difference": 9.107866127955333e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.48871459313706833,
+          "B_half_PDF_score": 0.48871459436308146,
+          "absolute_difference": 1.2260131243557737e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.48175230418841697,
+          "B_half_PDF_score": 0.48175230032781513,
+          "absolute_difference": 3.860601838212574e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.48953740601761636,
+          "B_half_PDF_score": 0.48953740529193207,
+          "absolute_difference": 7.256842904368455e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.7879838239126088,
+          "B_half_PDF_score": 0.7879838295102578,
+          "absolute_difference": 5.5976490109799215e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.7898474967036649,
+          "B_half_PDF_score": 0.7898474999031898,
+          "absolute_difference": 3.1995248672700427e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.7938475152173438,
+          "B_half_PDF_score": 0.7938475160814792,
+          "absolute_difference": 8.641354298788428e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.7960137794826347,
+          "B_half_PDF_score": 0.7960137918996901,
+          "absolute_difference": 1.2417055383906472e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9596086448955515,
+          "B_half_PDF_score": 0.9596086512649026,
+          "absolute_difference": 6.3693510465867575e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9590240920068738,
+          "B_half_PDF_score": 0.9590241063039531,
+          "absolute_difference": 1.4297079298231097e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9587615493169416,
+          "B_half_PDF_score": 0.958761548539101,
+          "absolute_difference": 7.77840569732291e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9589555245356143,
+          "B_half_PDF_score": 0.9589555313311035,
+          "absolute_difference": 6.7954891713739585e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 3,
+          "A01_score": 0.9942060321915757,
+          "B_half_PDF_score": 0.9942060455481208,
+          "absolute_difference": 1.3356545092158001e-08,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.4297079298231097e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 4,
+        "3": 37
+      },
+      "initial_nominal_load": 44.3181026843405,
+      "initial_Gamma1_load": 48.642382050154,
+      "capacity": 63.0
+    },
+    {
+      "case": 14,
+      "checks": [
+        {
+          "gamma": 0,
+          "A01_score": 0.5251828343938924,
+          "B_half_PDF_score": 0.5251828362243446,
+          "absolute_difference": 1.8304522342305063e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.535804467181001,
+          "B_half_PDF_score": 0.5358044708127362,
+          "absolute_difference": 3.631735134845826e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5159371324516316,
+          "B_half_PDF_score": 0.5159371343446878,
+          "absolute_difference": 1.8930561562768844e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 0,
+          "A01_score": 0.5282727312058634,
+          "B_half_PDF_score": 0.5282727317784663,
+          "absolute_difference": 5.726029650432451e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8771633729795059,
+          "B_half_PDF_score": 0.8771633771716931,
+          "absolute_difference": 4.192187263996061e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8757454661628272,
+          "B_half_PDF_score": 0.875745473921501,
+          "absolute_difference": 7.75867381452855e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8793610684489752,
+          "B_half_PDF_score": 0.8793610710000612,
+          "absolute_difference": 2.5510860091060295e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 1,
+          "A01_score": 0.8829616258235427,
+          "B_half_PDF_score": 0.8829616362623106,
+          "absolute_difference": 1.0438767961140627e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9626295054569391,
+          "B_half_PDF_score": 0.9626295088025683,
+          "absolute_difference": 3.3456291070876887e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9655031060901457,
+          "B_half_PDF_score": 0.9655031171180581,
+          "absolute_difference": 1.102791247209467e-08,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9764009048156749,
+          "B_half_PDF_score": 0.9764009077253933,
+          "absolute_difference": 2.9097184661708297e-09,
+          "same_gate": true
+        },
+        {
+          "gamma": 2,
+          "A01_score": 0.9658723311294688,
+          "B_half_PDF_score": 0.965872331234938,
+          "absolute_difference": 1.0546918893794555e-10,
+          "same_gate": true
+        },
+        {
+          "gamma": 3,
+          "A01_score": 0.9980634375527708,
+          "B_half_PDF_score": 0.9980634439556771,
+          "absolute_difference": 6.402906316260726e-09,
+          "same_gate": true
+        }
+      ],
+      "max_abs_difference": 1.102791247209467e-08,
+      "all_observed_gates_same": true,
+      "all_milp_status_counts": {
+        "2": 4,
+        "3": 17
+      },
+      "initial_nominal_load": 18.52304401990212,
+      "initial_Gamma1_load": 21.061681853560966,
+      "capacity": 32.0
+    }
+  ],
+  "exact_floating_path_equal": false,
+  "scope": "A01 reuses original convolution function but sequential float64 grouping differs from original half-by-half float32 storage; no statistical-model change, yet no bitwise score-equivalence claim.",
+  "formal_admission": false,
+  "required_before_formal": "New isolated revision must use original B half-PDF casting/order for auxiliary full scores, then freeze and precheck before quality trial. Do not edit A01."
+}
