@@ -1,0 +1,328 @@
+{
+  "passed": true,
+  "scope": "actual production closure with original ExactOracle on a six-group toy, checked against full exact Fraction enumeration; actual legacy native_check preserves score0 and last interval; not optimizer performance",
+  "accepted": 1,
+  "refuted": 2,
+  "raw_counts_verified": 3,
+  "records": [
+    {
+      "selection": [
+        0,
+        1,
+        8,
+        3,
+        4,
+        5
+      ],
+      "exact_numerator": "32",
+      "exact_denominator": "64",
+      "status": "integer_raw_refuted",
+      "certificate": {
+        "selection": [
+          0,
+          1,
+          8,
+          3,
+          4,
+          5
+        ],
+        "bins": 262144,
+        "lower_numerator": "32",
+        "denominator": "64",
+        "lower": 0.5,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "32",
+        "upper": 0.5,
+        "infeasible": true,
+        "certificate_seconds": 0.00036401301622390747
+      }
+    },
+    {
+      "selection": [
+        0,
+        7,
+        2,
+        3,
+        4,
+        5
+      ],
+      "exact_numerator": "0",
+      "exact_denominator": "64",
+      "status": "integer_raw_refuted",
+      "certificate": {
+        "selection": [
+          0,
+          7,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bins": 262144,
+        "lower_numerator": "0",
+        "denominator": "64",
+        "lower": 0.0,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "0",
+        "upper": 0.0,
+        "infeasible": true,
+        "certificate_seconds": 0.00010649394243955612
+      }
+    },
+    {
+      "selection": [
+        6,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "exact_numerator": "3168",
+      "exact_denominator": "3200",
+      "status": "raw_certified",
+      "certificate": {
+        "selection": [
+          6,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bins": 262144,
+        "lower_numerator": "3168",
+        "denominator": "3200",
+        "lower": 0.99,
+        "accepted": true,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "3168",
+        "upper": 0.99,
+        "infeasible": false,
+        "certificate_seconds": 0.0004603872075676918
+      }
+    }
+  ],
+  "closure": {
+    "method": "own_unresolved_integer_precision_closure",
+    "phase_budget": 20.0,
+    "phase_started": 4738941.684278953,
+    "shared_deadline": 4738961.683834166,
+    "closure_started": 4738941.684281703,
+    "unresolved_initial": 3,
+    "initial_pool": 1,
+    "levels": [
+      262144,
+      1048576,
+      2097152
+    ],
+    "queue_order": "coarse grid for every own unresolved candidate in cost order, then finer grids in cost order",
+    "records": [
+      {
+        "selection": [
+          0,
+          1,
+          8,
+          3,
+          4,
+          5
+        ],
+        "cost": 21.0,
+        "initial_decision": {
+          "accepted": false,
+          "decision": "unresolved",
+          "lower": 0.0
+        },
+        "attempts": [
+          {
+            "kind": "new_same_run_integer_certificate",
+            "bins": 262144,
+            "seconds": 0.0003697741776704788,
+            "forecast_seconds": 4.5,
+            "accepted": false,
+            "infeasible": true
+          }
+        ],
+        "status": "integer_raw_refuted",
+        "final_certificate": {
+          "selection": [
+            0,
+            1,
+            8,
+            3,
+            4,
+            5
+          ],
+          "bins": 262144,
+          "lower_numerator": "32",
+          "denominator": "64",
+          "lower": 0.5,
+          "accepted": false,
+          "search_threshold": "99/100",
+          "method": "exact_integer_upward_grid_count",
+          "all_original_samples": true,
+          "strict_event": "sum<T",
+          "upper_numerator": "32",
+          "upper": 0.5,
+          "infeasible": true,
+          "certificate_seconds": 0.00036401301622390747
+        },
+        "last_integer_bins": 262144
+      },
+      {
+        "selection": [
+          0,
+          7,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cost": 21.0,
+        "initial_decision": {
+          "accepted": false,
+          "decision": "unresolved",
+          "lower": 0.0
+        },
+        "attempts": [
+          {
+            "kind": "new_same_run_integer_certificate",
+            "bins": 262144,
+            "seconds": 0.00011039525270462036,
+            "forecast_seconds": 4.5,
+            "accepted": false,
+            "infeasible": true
+          }
+        ],
+        "status": "integer_raw_refuted",
+        "final_certificate": {
+          "selection": [
+            0,
+            7,
+            2,
+            3,
+            4,
+            5
+          ],
+          "bins": 262144,
+          "lower_numerator": "0",
+          "denominator": "64",
+          "lower": 0.0,
+          "accepted": false,
+          "search_threshold": "99/100",
+          "method": "exact_integer_upward_grid_count",
+          "all_original_samples": true,
+          "strict_event": "sum<T",
+          "upper_numerator": "0",
+          "upper": 0.0,
+          "infeasible": true,
+          "certificate_seconds": 0.00010649394243955612
+        },
+        "last_integer_bins": 262144
+      },
+      {
+        "selection": [
+          6,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cost": 21.0,
+        "initial_decision": {
+          "accepted": false,
+          "decision": "unresolved",
+          "lower": 0.0
+        },
+        "attempts": [
+          {
+            "kind": "new_same_run_integer_certificate",
+            "bins": 262144,
+            "seconds": 0.000463876873254776,
+            "forecast_seconds": 4.5,
+            "accepted": true,
+            "infeasible": false
+          }
+        ],
+        "status": "raw_certified",
+        "final_certificate": {
+          "selection": [
+            6,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "bins": 262144,
+          "lower_numerator": "3168",
+          "denominator": "3200",
+          "lower": 0.99,
+          "accepted": true,
+          "search_threshold": "99/100",
+          "method": "exact_integer_upward_grid_count",
+          "all_original_samples": true,
+          "strict_event": "sum<T",
+          "upper_numerator": "3168",
+          "upper": 0.99,
+          "infeasible": false,
+          "certificate_seconds": 0.0004603872075676918
+        },
+        "last_integer_bins": 262144
+      }
+    ],
+    "new_integer_calls": 3,
+    "cached_certificates_reused": 0,
+    "accepted": 1,
+    "refuted": 2,
+    "admission_skips": 0,
+    "budget_overrun": false,
+    "no_external_data": true,
+    "no_new_hard_gate": true,
+    "status": "completed",
+    "unresolved_remaining": 0,
+    "final_pool": 2,
+    "all_initial_retained": true,
+    "closure_seconds": 0.0010673999786376953,
+    "phase_seconds_used": 0.0010701501742005348,
+    "phase_within_budget": true
+  },
+  "legacy_score_preserved": true,
+  "legacy_last_integer_bins": 1048576,
+  "source_sha256": {
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "8b325847334f3aba1d10d93d0d2f186e1fa33144f8ca1991c842f55b307ee7f0",
+    "block_exchange.py": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "pair_cover_schedule.py": "3e986eee5d6f55ca8bcc5cdbe7ee7082cb347f528d3e0faaaab6ee8edf76544a",
+    "hybrid_schedule.py": "4e46853128575a33919e0546741100f501a4cf2b9b483175489f2ad343eae7ae",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "s10_kernel.py": "104b6e9bf441966c0d32997e5bdfa1faddd5a2afe7acdf1f9af717d937d987b3",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "run.py": "4ae64000fcc6f38ac47889e6aa863e722df8ad6c4f42ec4d1513091fb0da3c50",
+    "ellipsoid_frontier.py": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "pair_exchange.py": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df",
+    "precision_closure.py": "f9f8eb7aac88309058053081f962a1441142dcd9607f88b0d3bad3998ce66485",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+  }
+}
