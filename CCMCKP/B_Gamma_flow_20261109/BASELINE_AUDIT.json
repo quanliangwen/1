@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "upload_sha256": "a9a2ed74625b13e6055340810ee306e2a63954e7b7627cd2ec28b8ad09aa2017",
+  "baseline_files": {
+    "sources/B/B_CDF_DRO_MITM/instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "sources/B/B_CDF_DRO_MITM/lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "sources/B/B_CDF_DRO_MITM/native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "sources/B/B_CDF_DRO_MITM/native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "sources/B/B_CDF_DRO_MITM/PSEUDOCODE_20_LINES.txt": "f9a0c2d89309b45c2035d79d0b16cd74d99186762bc0c77a357007bc43c680b3",
+    "sources/B/B_CDF_DRO_MITM/README_\u4e2d\u6587.txt": "d71951fcfe3bb166dcfdaa66868deb9eebe671b88561794ac92754fcb47fa1cf",
+    "sources/B/B_CDF_DRO_MITM/requirements.txt": "5f6d1913ee82a6654b27cd7b5d82a0d1f102d7440797eada1ee2a8c90d6152fd",
+    "sources/B/B_CDF_DRO_MITM/run_b_cdf_dro_mitm.py": "0d0bb0bd3f83eab23dba62fb24f52dc233e9595b63fc679e5b34897fa0987808",
+    "sources/B/B_CDF_DRO_MITM/solver.py": "0faf3339b7f899f8a3c235b09017af18e3cfa489859d7da6281ccf15c8cc0a73",
+    "sources/B/B_CDF_DRO_MITM/SOURCE_MANIFEST.json": "94a65c366014b406cd369372f57b2488e0a0c0e344409d849ada25492e12c9b1",
+    "sources/B/B_CDF_DRO_MITM/original_experiment/cases.json": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a",
+    "sources/B/B_CDF_DRO_MITM/original_experiment/PROTOCOL.json": "8ab6899440368b739937b8ef5d30381b6cbfc6b57b9de8a83fcff14e1d4da435",
+    "sources/B/B_CDF_DRO_MITM/original_experiment/source_inputs.json": "475bb44e3b628467901fafa49db31e58af2c82de8ce7a45e9190449f568f22e7",
+    "sources/B/B_CDF_DRO_MITM/original_experiment/worker.py": "6196422e3c5ff7fc35f29cb6ee302062774e4ce45e095eef0111d0431cf258db"
+  },
+  "original_methods_changed": [
+    "run"
+  ],
+  "exact_change": "Import and call gamma_frontier after original successful initialization; all B methods otherwise identical.",
+  "original_native_four": {
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4"
+  }
+}
