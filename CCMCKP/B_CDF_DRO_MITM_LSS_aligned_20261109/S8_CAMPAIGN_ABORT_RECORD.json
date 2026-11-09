@@ -1,0 +1,1228 @@
+{
+  "status": "aborted campaign; do not use as final 40x30 evidence",
+  "reason": "S8 APP5_10 n30 full auxiliary model enumeration consumed entire search budget at case27 rep3, returning no solution; source frozen, failed attempt retained; fix in a separately registered full campaign",
+  "supervisor_pid": 842670,
+  "supervisor_command": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal_campaign.py",
+  "signal": "SIGTERM to this exact supervisor only; active solver children allowed to finish",
+  "active_children": [
+    {
+      "pid": 845344,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "91.0",
+        "--seed",
+        "930004",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r04.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r04.json.gz"
+    },
+    {
+      "pid": 845345,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "100.0",
+        "--seed",
+        "930004",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r04.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r04.json.gz"
+    },
+    {
+      "pid": 845494,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "12.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r05.json.gz"
+    },
+    {
+      "pid": 845505,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "52.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r05.json.gz"
+    },
+    {
+      "pid": 845516,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r05.json.gz"
+    },
+    {
+      "pid": 846049,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_30_10_500_",
+        "--capacity",
+        "70.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r05.json.gz"
+    },
+    {
+      "pid": 846050,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "85.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r05.json.gz"
+    },
+    {
+      "pid": 846186,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "95.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r05.json.gz"
+    },
+    {
+      "pid": 846254,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "91.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r05.json.gz"
+    },
+    {
+      "pid": 846264,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "100.0",
+        "--seed",
+        "930005",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r05.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r05.json.gz"
+    },
+    {
+      "pid": 846406,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "12.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r06.json.gz"
+    },
+    {
+      "pid": 846407,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "15.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r06.json.gz"
+    },
+    {
+      "pid": 846411,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "52.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r06.json.gz"
+    },
+    {
+      "pid": 846551,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "55.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r06.json.gz"
+    },
+    {
+      "pid": 846606,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r06.json.gz"
+    },
+    {
+      "pid": 846629,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_50_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r06.json.gz"
+    },
+    {
+      "pid": 846642,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_50_10_500_",
+        "--capacity",
+        "75.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_20_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_20_r06.json.gz"
+    },
+    {
+      "pid": 846812,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_5_10_30_",
+        "--capacity",
+        "27.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_28_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_28_r06.json.gz"
+    },
+    {
+      "pid": 847079,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_20_500_",
+        "--capacity",
+        "13.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_31_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_31_r06.json.gz"
+    },
+    {
+      "pid": 847100,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_20_500_",
+        "--capacity",
+        "16.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_32_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_32_r06.json.gz"
+    },
+    {
+      "pid": 847104,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_20_10_500_",
+        "--capacity",
+        "43.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_33_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_33_r06.json.gz"
+    },
+    {
+      "pid": 847109,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_20_10_500_",
+        "--capacity",
+        "48.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_34_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_34_r06.json.gz"
+    },
+    {
+      "pid": 847110,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_30_10_500_",
+        "--capacity",
+        "58.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_35_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_35_r06.json.gz"
+    },
+    {
+      "pid": 847111,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_30_10_500_",
+        "--capacity",
+        "70.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r06.json.gz"
+    },
+    {
+      "pid": 847116,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "85.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r06.json.gz"
+    },
+    {
+      "pid": 847277,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "95.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r06.json.gz"
+    },
+    {
+      "pid": 847282,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "91.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r06.json.gz"
+    },
+    {
+      "pid": 847371,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "100.0",
+        "--seed",
+        "930006",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r06.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r06.json.gz"
+    },
+    {
+      "pid": 847597,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_10_500_",
+        "--capacity",
+        "19.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_09_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_09_r07.json.gz"
+    },
+    {
+      "pid": 847604,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "12.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r07.json.gz"
+    },
+    {
+      "pid": 847605,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "15.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r07.json.gz"
+    },
+    {
+      "pid": 847743,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_20_10_500_",
+        "--capacity",
+        "25.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_13_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_13_r07.json.gz"
+    },
+    {
+      "pid": 847748,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_20_10_500_",
+        "--capacity",
+        "32.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_14_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_14_r07.json.gz"
+    },
+    {
+      "pid": 847753,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "43.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_15_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_15_r07.json.gz"
+    },
+    {
+      "pid": 847754,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "52.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r07.json.gz"
+    },
+    {
+      "pid": 847784,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "55.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r07.json.gz"
+    },
+    {
+      "pid": 847860,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r07.json.gz"
+    },
+    {
+      "pid": 848004,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_50_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r07.json.gz"
+    },
+    {
+      "pid": 848085,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_50_10_500_",
+        "--capacity",
+        "75.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_20_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_20_r07.json.gz"
+    },
+    {
+      "pid": 848296,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_5_10_30_",
+        "--capacity",
+        "16.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_27_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_27_r07.json.gz"
+    },
+    {
+      "pid": 848301,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_5_10_30_",
+        "--capacity",
+        "27.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_28_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_28_r07.json.gz"
+    },
+    {
+      "pid": 848304,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_10_500_",
+        "--capacity",
+        "32.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_29_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_29_r07.json.gz"
+    },
+    {
+      "pid": 848372,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_10_500_",
+        "--capacity",
+        "37.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_30_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_30_r07.json.gz"
+    },
+    {
+      "pid": 848377,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_20_500_",
+        "--capacity",
+        "13.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_31_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_31_r07.json.gz"
+    },
+    {
+      "pid": 848378,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_20_500_",
+        "--capacity",
+        "16.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_32_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_32_r07.json.gz"
+    },
+    {
+      "pid": 848379,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_20_10_500_",
+        "--capacity",
+        "43.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_33_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_33_r07.json.gz"
+    },
+    {
+      "pid": 848380,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_20_10_500_",
+        "--capacity",
+        "48.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_34_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_34_r07.json.gz"
+    },
+    {
+      "pid": 848385,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_30_10_500_",
+        "--capacity",
+        "58.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_35_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_35_r07.json.gz"
+    },
+    {
+      "pid": 848386,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_30_10_500_",
+        "--capacity",
+        "70.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_36_r07.json.gz"
+    },
+    {
+      "pid": 848461,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "85.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_37_r07.json.gz"
+    },
+    {
+      "pid": 848466,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_40_10_500_",
+        "--capacity",
+        "95.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_38_r07.json.gz"
+    },
+    {
+      "pid": 848552,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "91.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_39_r07.json.gz"
+    },
+    {
+      "pid": 848553,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_50_10_500_",
+        "--capacity",
+        "100.0",
+        "--seed",
+        "930007",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r07.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_40_r07.json.gz"
+    },
+    {
+      "pid": 848653,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_10_500_",
+        "--capacity",
+        "19.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_09_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_09_r08.json.gz"
+    },
+    {
+      "pid": 848654,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_10_500_",
+        "--capacity",
+        "23.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_10_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_10_r08.json.gz"
+    },
+    {
+      "pid": 848655,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "12.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_11_r08.json.gz"
+    },
+    {
+      "pid": 848656,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_10_20_500_",
+        "--capacity",
+        "15.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_12_r08.json.gz"
+    },
+    {
+      "pid": 848657,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_20_10_500_",
+        "--capacity",
+        "25.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_13_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_13_r08.json.gz"
+    },
+    {
+      "pid": 848658,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_20_10_500_",
+        "--capacity",
+        "32.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_14_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_14_r08.json.gz"
+    },
+    {
+      "pid": 848659,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "43.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_15_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_15_r08.json.gz"
+    },
+    {
+      "pid": 848660,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_30_10_500_",
+        "--capacity",
+        "52.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_16_r08.json.gz"
+    },
+    {
+      "pid": 848666,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "55.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_17_r08.json.gz"
+    },
+    {
+      "pid": 848810,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_40_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_18_r08.json.gz"
+    },
+    {
+      "pid": 848858,
+      "command": [
+        "/home/junhao/miniconda3/bin/python",
+        "-u",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/frozen_candidate/run.py",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/LAB_50_10_500_",
+        "--capacity",
+        "63.0",
+        "--seed",
+        "930008",
+        "--seconds",
+        "600",
+        "--out",
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r08.json.gz"
+      ],
+      "out": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/formal30_lss/LSS_19_r08.json.gz"
+    }
+  ],
+  "unix_time": 1794225387.4941657,
+  "completed_terminal_records": 228,
+  "planned_runs": 1200
+}
