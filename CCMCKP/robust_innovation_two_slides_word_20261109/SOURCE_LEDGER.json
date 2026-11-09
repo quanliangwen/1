@@ -1,0 +1,70 @@
+{
+  "scope": "robust optimization literature only",
+  "ppt_pages": [
+    19,
+    20
+  ],
+  "directions": {
+    "A": [
+      "P1",
+      "P3"
+    ],
+    "B": [
+      "P1",
+      "P3"
+    ],
+    "C": [
+      "P4",
+      "P5"
+    ],
+    "D": [
+      "P2"
+    ],
+    "E": [
+      "P3"
+    ],
+    "F": [
+      "P5"
+    ]
+  },
+  "references": [
+    {
+      "id": "P1",
+      "citation": "Huang, J.; Teo, C.-P.; Wang, F.; Xu, Z. (2023). Buffer Times Between Scheduled Events in Resource Assignment Problem: A Conflict-Robust Perspective. Manufacturing & Service Operations Management, 25(6), 2268–2276.",
+      "url": "https://doi.org/10.1287/msom.2022.0572",
+      "read_locator": "阅读：§3—§4的等价条件、§5的特征加权方法、§6的不同模糊集和联合排程后续问题。所提供PDF页8—16。"
+    },
+    {
+      "id": "P2",
+      "citation": "Beck, Y.; Ljubić, I.; Schmidt, M. Heuristic Methods for Γ-Robust Mixed-Integer Linear Bilevel Problems. INFORMS Journal on Computing, 38(1), 165–188. 2025年在线发表，2026年卷期。",
+      "url": "https://doi.org/10.1287/ijoc.2023.0239",
+      "read_locator": "阅读：Lemma 1，§3.2通用间隙界及讨论，§4校正精化，§5.3—§5.4标称求解瓶颈。所提供PDF页4、8、12—15、25、28—29。"
+    },
+    {
+      "id": "P3",
+      "citation": "Ardestani-Jaafari, A.; Delage, E. Linearized Robust Counterparts of Two-Stage Robust Optimization Problems with Applications in Operations Management. INFORMS Journal on Computing, 33(3), 1138–1161. 2020年在线发表，2021年卷期。",
+      "url": "https://doi.org/10.1287/ijoc.2020.0959",
+      "read_locator": "阅读：§2—§4重构与强化、Propositions 1、2、4、6及Corollary 2，§8及Endnote 4。所提供PDF页4—12、23—24。"
+    },
+    {
+      "id": "P4",
+      "citation": "Tang, S. (2022). Robust Adaptive Submodular Maximization. INFORMS Journal on Computing, 34(6), 3277–3291.",
+      "url": "https://doi.org/10.1287/ijoc.2022.1239",
+      "read_locator": "阅读：§3假设，§4最坏算法，§5混合与加权扩展，§7一般约束未来方向。所提供PDF页4—27、30；公开全文arXiv:2107.11333v4。"
+    },
+    {
+      "id": "P5",
+      "citation": "Torrico, A.; Singh, M.; Pokutta, S.; Haghtalab, N.; Naor, J. (S.); Anari, N. (2021). Structured Robust Submodular Maximization: Offline and Online Algorithms. INFORMS Journal on Computing, 33(4), 1590–1607.",
+      "url": "https://doi.org/10.1287/ijoc.2020.0998",
+      "read_locator": "阅读：§1.1困难性与违约比，§2.1截断代理与扩展框架，§2.2—§2.3困难与实现，§3在线信息，§4扩展。所提供PDF页3—16、17—24；公开全文arXiv:1710.04740v3。"
+    },
+    {
+      "id": "R1 补充核验",
+      "citation": "Beck, Y. (2026). Exact and Heuristic Methods for Γ-Robust Min-Max Problems. 2026年2月9日工作稿，6页，文中声明总结2024年学位论文的部分成果。",
+      "url": "https://optimization-online.org/wp-content/uploads/2026/02/exact-heuristic-gamma-robust-min-max.pdf",
+      "read_locator": "阅读：§2—§3、Theorems 1—2及§5，PDF页2—5。仅用于核验精确方法与启发式均已有研究，不替代五篇主文献，也不作为新方向的优先权证明。"
+    }
+  ],
+  "novelty_status": "candidate research questions; not a systematic novelty clearance",
+  "docx_sha256": "43c78ee3d83d4bf8c09672ec47b577f381d3d4c63c0ceae0d064afe8ee2d3c49"
+}
