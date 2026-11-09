@@ -1,0 +1,23 @@
+{
+  "launched_utc": "2026-11-09T17:12:30.966462+00:00",
+  "pid": 914025,
+  "command": [
+    "/home/junhao/miniconda3/bin/python",
+    "-u",
+    "iterations/I004_robust_pair_exchange/candidate/run.py",
+    "--instance",
+    "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_10_500_",
+    "--capacity",
+    "37",
+    "--seed",
+    "970399",
+    "--seconds",
+    "180",
+    "--risk-method",
+    "pair_exchange",
+    "--phase-seconds",
+    "60",
+    "--out",
+    "iterations/I004_robust_pair_exchange/smoke.json.gz"
+  ]
+}

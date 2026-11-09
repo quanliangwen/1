@@ -1,0 +1,24 @@
+{
+  "launched_utc": "2026-11-09T17:15:51.113978+00:00",
+  "pid": 915267,
+  "command": [
+    "/home/junhao/miniconda3/bin/python",
+    "-u",
+    "iterations/I004_robust_pair_exchange/candidate/run.py",
+    "--instance",
+    "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_10_500_",
+    "--capacity",
+    "37",
+    "--seed",
+    "970398",
+    "--seconds",
+    "300",
+    "--risk-method",
+    "pair_exchange",
+    "--phase-seconds",
+    "60",
+    "--out",
+    "iterations/I004_robust_pair_exchange/smoke_exercised.json.gz"
+  ],
+  "reason": "first engineering trial ran no extension because base phase exhausted short budget; retain first record, require actual exercised extension"
+}

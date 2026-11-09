@@ -3,10 +3,10 @@
   "stage": "development pilot, one run per case/method; not30-run Avg",
   "search_finished": 14,
   "required": 14,
-  "validation_finished": 12,
-  "qualified": 12,
+  "validation_finished": 14,
+  "qualified": 14,
   "errors": [],
-  "actual_global_cache_calls": 391,
+  "actual_global_cache_calls": 427,
   "baseline_calls_reused_by_identity": 380,
   "rows": [
     {
@@ -137,7 +137,15 @@
       "search_elapsed": 412.9351014010608,
       "base_pool": 55,
       "final_pool": 177,
-      "extension_seconds": 37.18506347667426
+      "extension_seconds": 37.18506347667426,
+      "validation_finished": true,
+      "qualified": true,
+      "S10_cost": 330.7476111191465,
+      "qualified_cost": 329.83616418693003,
+      "real_probability": 0.9852767,
+      "gain_vs_S10": 0.9114469322164496,
+      "LSS_candidates": 52,
+      "logical_MC_seconds": 2800.7075754050165
     },
     {
       "method": "cdf_lns",
@@ -152,7 +160,15 @@
       "search_elapsed": 324.5741739971563,
       "base_pool": 62,
       "final_pool": 246,
-      "extension_seconds": 64.44381829258054
+      "extension_seconds": 64.44381829258054,
+      "validation_finished": true,
+      "qualified": true,
+      "S10_cost": 293.4385702896755,
+      "qualified_cost": 292.9575379601305,
+      "real_probability": 0.9856625,
+      "gain_vs_S10": 0.4810323295450303,
+      "LSS_candidates": 22,
+      "logical_MC_seconds": 987.0190346958116
     },
     {
       "method": "none",

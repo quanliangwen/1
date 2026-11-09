@@ -1,0 +1,71 @@
+{
+  "stage": "complete single-seed pilot assessment",
+  "cost_result": "14/14 qualified; all7 paired costs equal S10; no improvement",
+  "extensions": [
+    {
+      "index": 30,
+      "base_seconds": 121.15783679205924,
+      "extension_seconds": 30.057651784271002,
+      "proposals": 236,
+      "new_certified": 9,
+      "ellipsoid_models": 350,
+      "extension_exercised": true
+    },
+    {
+      "index": 32,
+      "base_seconds": 197.49320554547012,
+      "extension_seconds": 13.250233611091971,
+      "proposals": 90,
+      "new_certified": 45,
+      "ellipsoid_models": 180,
+      "extension_exercised": true
+    },
+    {
+      "index": 35,
+      "base_seconds": 291.86061635706574,
+      "extension_seconds": 55.39747367426753,
+      "proposals": 278,
+      "new_certified": 14,
+      "ellipsoid_models": 226,
+      "extension_exercised": true
+    },
+    {
+      "index": 37,
+      "base_seconds": 315.6281519019976,
+      "extension_seconds": 75.55475958343595,
+      "proposals": 241,
+      "new_certified": 20,
+      "ellipsoid_models": 246,
+      "extension_exercised": true
+    },
+    {
+      "index": 38,
+      "base_seconds": 301.03346337843686,
+      "extension_seconds": 133.65341369155794,
+      "proposals": 307,
+      "new_certified": 45,
+      "ellipsoid_models": 292,
+      "extension_exercised": true
+    },
+    {
+      "index": 39,
+      "base_seconds": 542.0600429642946,
+      "extension_seconds": 0.0011852504685521126,
+      "proposals": 0,
+      "new_certified": 0,
+      "ellipsoid_models": 0,
+      "extension_exercised": false
+    },
+    {
+      "index": 40,
+      "base_seconds": 325.0566195147112,
+      "extension_seconds": 112.34981731977314,
+      "proposals": 288,
+      "new_certified": 34,
+      "ellipsoid_models": 274,
+      "extension_exercised": true
+    }
+  ],
+  "limitation": "case39 base consumed reserved search deadline and ellipsoid proposal module did not execute; absence of improvement there is a scheduling observation, not a refutation of the ellipsoid model",
+  "next": "prioritize stability of actual I002 gains; if time budgeting suppresses robust module in fresh repeats, freeze a separate scheduling correction and verify it before full40x30"
+}
