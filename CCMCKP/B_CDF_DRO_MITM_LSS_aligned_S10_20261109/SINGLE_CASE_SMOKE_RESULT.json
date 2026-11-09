@@ -1,0 +1,146 @@
+{
+  "schema": "S10_one_case_search_plus_LSS_postselection",
+  "seed": 966101,
+  "accepted": true,
+  "selected": {
+    "selection": [
+      12,
+      7,
+      14
+    ],
+    "cost": 14.07661610773891,
+    "certificate": {
+      "selection": [
+        12,
+        7,
+        14
+      ],
+      "lower_numerator": "26882",
+      "upper_numerator": "26882",
+      "denominator": "27000",
+      "lower": 0.9956296296296296,
+      "upper": 0.9956296296296296,
+      "accepted": true,
+      "infeasible": false,
+      "search_threshold": "99/100",
+      "method": "outward_interval_integer_pair_count",
+      "all_original_samples": true,
+      "strict_event": "sum<T"
+    },
+    "source": "cost_ordered_raw_enumeration",
+    "found_seconds": 0.020788142457604408,
+    "real_probability": 0.9874058,
+    "LSS_key": "d1aa562c77aa6712d7308c6ea41df74daa23e1ae6efd8c81833990a48972587d"
+  },
+  "tested": [
+    {
+      "key": "b58ec678b9c3826ef120cb2f55b8024930c321a570044402b95104fa2c33fc36",
+      "cost": 9.034717299521294,
+      "selection": [
+        12,
+        10,
+        11
+      ],
+      "real_probability": 0.9651546,
+      "passed": false,
+      "original_call_seconds": 9.103855698369443
+    },
+    {
+      "key": "45d56f9c40c89b2af5586f13778cfe065ae85e6b91db17e1af2a780f85c41fa5",
+      "cost": 9.181543463384614,
+      "selection": [
+        12,
+        13,
+        11
+      ],
+      "real_probability": 0.9666005,
+      "passed": false,
+      "original_call_seconds": 7.408629074692726
+    },
+    {
+      "key": "6c200231e822e9d02876a451c433bd423d54f9c0962f416048c7e9ec7b13db52",
+      "cost": 13.418032147732239,
+      "selection": [
+        9,
+        10,
+        14
+      ],
+      "real_probability": 0.9717874,
+      "passed": false,
+      "original_call_seconds": 8.589743142947555
+    },
+    {
+      "key": "85e2230668615d8c3b70848b9c9e222963d386b4720998c39240df6a29ff59dd",
+      "cost": 13.56485831159556,
+      "selection": [
+        9,
+        13,
+        14
+      ],
+      "real_probability": 0.9713279,
+      "passed": false,
+      "original_call_seconds": 7.401167451404035
+    },
+    {
+      "key": "335e93670330c3b41ba013e612d92edf631b22295f922ad002481ef957e08508",
+      "cost": 13.95678760040953,
+      "selection": [
+        12,
+        1,
+        14
+      ],
+      "real_probability": 0.9720019,
+      "passed": false,
+      "original_call_seconds": 7.653432029299438
+    },
+    {
+      "key": "d1aa562c77aa6712d7308c6ea41df74daa23e1ae6efd8c81833990a48972587d",
+      "cost": 14.07661610773891,
+      "selection": [
+        12,
+        7,
+        14
+      ],
+      "real_probability": 0.9874058,
+      "passed": true,
+      "original_call_seconds": 5.582943547517061
+    }
+  ],
+  "search_seconds": 0.024728303775191307,
+  "logical_MC_seconds": 45.73977094423026,
+  "actual_pipeline_wall_seconds": 50.06825194880366,
+  "raw_best": {
+    "selection": [
+      12,
+      10,
+      11
+    ],
+    "cost": 9.034717299521294,
+    "certificate": {
+      "selection": [
+        12,
+        10,
+        11
+      ],
+      "lower_numerator": "26798",
+      "upper_numerator": "26798",
+      "denominator": "27000",
+      "lower": 0.9925185185185185,
+      "upper": 0.9925185185185185,
+      "accepted": true,
+      "infeasible": false,
+      "search_threshold": "99/100",
+      "method": "outward_interval_integer_pair_count",
+      "all_original_samples": true,
+      "strict_event": "sum<T"
+    },
+    "source": "cost_ordered_raw_enumeration",
+    "found_seconds": 0.015867574140429497,
+    "probability": 0.9925185185185185,
+    "probability_evaluator": "outward_interval_integer_pair_count",
+    "final_exact_recomputed": true
+  },
+  "tail_reconstruction": "removed_entirely",
+  "no_validation_feedback_into_search": true,
+  "formal_campaign": false
+}
