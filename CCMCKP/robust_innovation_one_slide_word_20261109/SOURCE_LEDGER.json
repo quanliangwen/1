@@ -1,0 +1,44 @@
+{
+  "scope": "one PPT slide; robust optimization literature only",
+  "references": [
+    {
+      "id": "R1",
+      "citation": "Yeh, C.; Christianson, N.; Wu, A.; Wierman, A.; Yue, Y. (2025). End-to-End Conformal Calibration for Optimization Under Uncertainty. Transactions on Machine Learning Research, December 2025.",
+      "url": "https://openreview.net/forum?id=yM8qkT0f9H",
+      "fulltext": "https://arxiv.org/pdf/2409.20534",
+      "read": "§3—§4，Algorithm 1，Lemma 3.2，Proposition 3.3，Theorem 4.1；PDF页5—8。",
+      "key": "R1_E2ECP_2025",
+      "pdf_sha256": "4c71398a763e94b75f39d1f99665e57b5a48711b90f3524c20df3735df20a736"
+    },
+    {
+      "id": "R2",
+      "citation": "Yu, X.; Basciftci, B. (2026). Distributionally robust optimization with multimodal decision-dependent ambiguity sets. Mathematical Programming. Published 9 March 2026.",
+      "url": "https://doi.org/10.1007/s10107-026-02337-1",
+      "fulltext": "https://link.springer.com/content/pdf/10.1007/s10107-026-02337-1.pdf",
+      "read": "§2、§3、§6，Theorems 1—3与12；PDF页5—8、10—20、27—29。",
+      "key": "R2_MultiDDDRO_2026",
+      "pdf_sha256": "e30c6f985c36dcba319712df0801965485c71c1035338961065124dd401207df"
+    },
+    {
+      "id": "R3",
+      "citation": "Dumouchelle, J.; Julien, E.; Kurtz, J.; Khalil, E. B. (2024). Neur2RO Neural Two-Stage Robust Optimization. International Conference on Learning Representations.",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/28fdc4c3fa25412b7a1f25e6602217c4-Abstract-Conference.html",
+      "fulltext": "https://optimization-online.org/wp-content/uploads/2023/10/neur2ro_camera_ready.pdf",
+      "read": "§3.1—§3.3及Theorem 1；PDF页4—5。",
+      "key": "R3_Neur2RO_2024",
+      "pdf_sha256": "b5ac4136a155c4ecc1e0e9cd6a27aef33f67be861b8de032750038b7a98d52c2"
+    },
+    {
+      "id": "R4",
+      "citation": "Lefebvre, H.; Schmidt, M.; Thürauf, J. (2026). Column generation in column-and-constraint generation for adjustable robust optimization with Interdiction-type linking Constraints. Mathematical Programming Computation, 18, 259–296.",
+      "url": "https://doi.org/10.1007/s12532-025-00300-3",
+      "fulltext": "https://link.springer.com/content/pdf/10.1007/s12532-025-00300-3.pdf",
+      "read": "Assumptions 1—6，Proposition 2，§4及Theorem 3；PDF页4—5、13—18；§6的局限，PDF页33。",
+      "key": "R4_CGCCG_2026",
+      "pdf_sha256": "b1a8a8c1aaf9eba8e3923fa32cdc336d13069239fdee3c7377e5adfcff419957"
+    }
+  ],
+  "source_type": "four published original papers; methods and assumptions read from full texts",
+  "novelty_status": "published methodological directions plus explicitly labeled candidate research questions",
+  "docx_sha256": "97ff7dacda20379a37a2470b773ac2b56ad107ce5887d22b5079e10f70297979"
+}
