@@ -1,0 +1,45 @@
+Use case: productivity-visual.
+Create ONE Chinese academic PowerPoint slide SAMPLE as a crisp landscape raster image, approximately 1672×941 (16:9).
+Input image 1 is a STYLE/TEMPLATE reference, the existing P12 slide. Preserve its cream/off-white background, dark navy typography, warm gold fine table lines, university branding, top navigation positions and overall visual identity. Do not repeat P12 content. Top branding: 北京邮电大学 with seal at left. Top tabs: 研究背景 / 研究意义 / 研究脉络 / 创新方向 / 总结展望. Active 研究脉络 dark navy with gold letters and gold underline, others muted blue and white text.
+
+Exact main title: “数学工具与求解机制的横向对照”
+Subtitle: “同一研究环节，区分等价变换、保守近似与直接设计算法”
+Thin gold horizontal rule below title block.
+
+Main body is a full-width THREE-COLUMN, FIVE-ROW comparison table, matching reference design. Header row navy with white text, headers exactly:
+“文献” / “数学工具” / “实际求解机制”
+Column widths about 16% / 35% / 49%. All table Chinese should be large and readable, approximately 27–32px at 1672px width. Use precise line breaks, generous cell padding, and thin gold grid lines. P2 entire row is pale gold with stronger gold outline, and a small gold “主线” tag beside P2, as in reference. Other rows subtly alternate cream and very pale gray.
+
+Table content, verbatim apart from line breaks:
+Row 1:
+col1 “P1 资源缓冲”
+col2 two lines “下单调性支持” / “最坏冲突与最坏交叉等价”
+col3 two lines “特定分布族下连接SAA与wSAA-kNN” / “BDRAP可转成最小费用网络流”
+
+Row 2:
+col1 “P2 Γ鲁棒双层” with gold “主线” marker
+col2 two lines “Γ下层有限分解、索引缩减” / “等价子问题去重”
+col3 two lines “标称双层求解器生成候选” / “再作鲁棒校正与精化”
+
+Row 3:
+col1 “P3 两阶段鲁棒”
+col2 two lines “补救问题对偶化、双线性表示” / “RLT线性化”
+col3 THREE lines “LRC保守近似” / “加有效线性或锥不等式” / “形成MLRC和SDP-LRC”
+
+Row 4:
+col1 “P4 自适应子模”
+col2 two lines “最坏情形子模性与单调性” / “自适应子模性”
+col3 two lines “最坏边际效用贪心” / “结合平均情形贪心形成混合策略”
+
+Row 5:
+col1 “P5 结构化子模”
+col2 two lines “截断效用代理、子模性” / “扩展算法框架”
+col3 two lines “离线猜测目标并调用ext-A” / “在线采用SoftMin等工具”
+
+Below table, add concise readable navy takeaway in two lines:
+“数学处理既可改变模型表示，也可揭示支持算法的结构性质”
+“LP、MILP、SDP求解器与组合算法，均可构成完整求解机制”
+Then one slightly smaller but readable term/condition note:
+“LRC＝线性化鲁棒对应模型，属于保守近似；P5的离线扩展允许一定约束放宽”
+If needed use bottom area up to y=915, but never clip or squeeze text.
+Do NOT put any spurious arrow joining all rows, do not claim every paper is converted to MILP, do not call LRC an exact reformulation or a robust dual. Do not add a sixth paper. Preserve roman acronym spelling exactly: SAA, wSAA-kNN, BDRAP, RLT, LRC, MLRC, SDP-LRC, ext-A, SoftMin. Γ is Greek capital Gamma. No model-building instructions or “本页用途”, “建议图示”, “口头讲解” on slide. Flat academic table composition, no unrelated icons, no photographic illustrations, no new decorative elements. All content must be legible, aligned and free of overlapping or clipped characters.
