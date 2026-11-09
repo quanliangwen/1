@@ -139,8 +139,8 @@
     },
     {
       "path": "formal/F001_I002_40x30/AUDIT_PROGRESS.json",
-      "bytes": 305377,
-      "sha256": "58af5989ae7acb06447d15f1a52572da8ace4c0a251988b9ed8581f896e02fd5"
+      "bytes": 313560,
+      "sha256": "f7cb1f0fcf5c9ec0425da2c8cbdea71c9e83fa5eaea14a264d3ed6f164b604e6"
     },
     {
       "path": "formal/F001_I002_40x30/CACHE_BEFORE_VALIDATION.json",
@@ -151,6 +151,11 @@
       "path": "formal/F001_I002_40x30/CACHE_LOGS_BEFORE_VALIDATION.json",
       "bytes": 16444,
       "sha256": "e36fcd653657e0f9d7e2b03962b407ce583a4a410765df02a7a79665d3fa13e8"
+    },
+    {
+      "path": "formal/F001_I002_40x30/FROZEN_PREFIX_DIAGNOSTIC.json",
+      "bytes": 383555,
+      "sha256": "3f54047f2797aacb4103cec058b144f98c671ddd094a0b73717731a5f02b7242"
     },
     {
       "path": "formal/F001_I002_40x30/LAUNCH.json",
@@ -169,8 +174,8 @@
     },
     {
       "path": "formal/F001_I002_40x30/SEARCH_PROGRESS.json",
-      "bytes": 99,
-      "sha256": "8ae0df80172c5d9d70216e737fcff11740cb6adfa59262c4c9716eb96e2fcb7e"
+      "bytes": 100,
+      "sha256": "d6db751de3fbfc2aa75ecf3e9ee877ff8038b00010d0df964b516745ea6963b0"
     },
     {
       "path": "formal/F001_I002_40x30/STAGE.json",
@@ -189,8 +194,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 26680,
-      "sha256": "5fc6ef9052ab64b00e1d8bad2b7e93af42c8403c59a61b923114b19cc0b86c3c"
+      "bytes": 28118,
+      "sha256": "ac5c2bea406b68407387b818ba9c423d17f522b1cff87033e2cfd242ec88c3e7"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -1043,6 +1048,41 @@
       "sha256": "cefda00bf7e6d0b0bae370a3155fd92d5e1cb77116919b5453659ca2ab72c322"
     },
     {
+      "path": "iterations/I012_iterated_block_mitm/ASSESSMENT.json",
+      "bytes": 2892,
+      "sha256": "9613303f7534cfc8ee287a5a8aaa3715da012c6b35189442c5db92398a006f87"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/I012_ITERATED_BLOCK_ENGINEERING_EVIDENCE.zip",
+      "bytes": 2834565,
+      "sha256": "92c9dcb1428305a5e0f5f432815af835940aceb001efe31d0b8af1d8ef959781"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/I012_ITERATED_BLOCK_ENGINEERING_EVIDENCE_MANIFEST.json",
+      "bytes": 18827,
+      "sha256": "624000cba40d90571039e0e273a7d65e70e9ff960ea36978b2022ea6e417d4c1"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/INDEPENDENT_RAW_AUDIT.json",
+      "bytes": 3209118,
+      "sha256": "d6fb496fe8ecc93a602b9df9fffef914069fb4ad603b02ae009637b9e24f3fd1"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/MATH_CHECK.json",
+      "bytes": 7218,
+      "sha256": "969c76dc31b1b937c7a59f4f50162ed579db17ca58f80f4ccffac223b012f8bf"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/README.md",
+      "bytes": 2303,
+      "sha256": "90e914499f57c393a9a6e74fc162ad2c85c462d20b7bbbf796566dce230e6e76"
+    },
+    {
+      "path": "iterations/I012_iterated_block_mitm/SCHEDULE_CHECK.json",
+      "bytes": 2162,
+      "sha256": "79aacdeb1b699308fa29a6fdb766600b5e50be94e215a04af9be28166d325e46"
+    },
+    {
       "path": "LSS_DATA_REFERENCE.json",
       "bytes": 760712,
       "sha256": "baf97005886d754712671409c1e565099e536f4a8183a994f9d01336c58e9abd"
@@ -1099,8 +1139,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1395,
-      "sha256": "c3ec7cd774d63ae07d2f0126a5111332edc9502e7218830da55a130d02ba3038"
+      "bytes": 1694,
+      "sha256": "7e6092c5746f09d4409aa3bdf36c50fcb5055a3b2f5031006db8d79e29515797"
     },
     {
       "path": "reference_loader.py",
@@ -1176,6 +1216,31 @@
       "path": "research/adaptive_budget_cdf/diagnose_adaptive_pending.py",
       "bytes": 1774,
       "sha256": "f4da60445bde611e281feb16fa1cb1cd2ae48c6b38677b6251538c075e0a76f4"
+    },
+    {
+      "path": "research/final_audit_preparation/audit_f001_final.py",
+      "bytes": 13866,
+      "sha256": "e51e145f5a5b478b12fe3abf7a099e669ab72d849d27631b256f105adc6d37bb"
+    },
+    {
+      "path": "research/final_audit_preparation/build_f001_workbook.mjs",
+      "bytes": 10336,
+      "sha256": "9125703d83104b6df9af241697b93e729b3d4012e8014439c3db92522bfe07c9"
+    },
+    {
+      "path": "research/final_audit_preparation/create_f001_excel.ps1",
+      "bytes": 2004,
+      "sha256": "4bf252b99e36463fb4f39dd45f2b6f661d25ad056ab2bd505aa2ae1e9119ea13"
+    },
+    {
+      "path": "research/final_audit_preparation/diagnose_f001_frozen_prefix.py",
+      "bytes": 3244,
+      "sha256": "6013d849828c4a23e3aa8d32744b6b5f6a1b9d10a4f26cd648b03ba030dc39f9"
+    },
+    {
+      "path": "research/final_audit_preparation/README.md",
+      "bytes": 752,
+      "sha256": "c682ea84e709b04830d67e76d121c204fa44a70b5a3cfddd4c04250596ce9943"
     },
     {
       "path": "research/NEXT_RESEARCH_I010.md",
