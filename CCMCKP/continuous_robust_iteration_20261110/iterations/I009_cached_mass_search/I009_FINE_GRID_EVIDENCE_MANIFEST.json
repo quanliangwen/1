@@ -1,0 +1,119 @@
+{
+  "file": "I009_FINE_GRID_EVIDENCE.zip",
+  "bytes": 8295727,
+  "sha256": "4881bce63029749a5dd1e67ddf247ff3881c04ec1cf66788086e284710e49ec1",
+  "source_sha256": {
+    "budget_cdf.py": "fe94cc7f033fee58fe82bf8514629af7157e3d862fb1a5381da56ce1380f2db2",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "run_search_bound.py": "dfef883bd455a2c32a555b7f9c307790e8935335e0870fd38acb73e6eb744ecc",
+    "suffix_search.py": "98a62b307994d0bd68da22d508d805ddbb8f3f301870c80e9de7ac1a8711a4d1"
+  },
+  "independent_audit_passed": true,
+  "global_cost_line_excluded": false,
+  "new_LSS_calls": 0,
+  "zip_CRC_passed": true,
+  "scope": "capacity grid refinement bounded engineering negative; partial integer proof only, not full exclusion or new qualified gain or30-runAvg",
+  "files": [
+    {
+      "path": "audit_i009_search.py",
+      "bytes": 10641,
+      "sha256": "f792f8ed924e402bf36223c2fb5e60e7c54d5a3473b6f7a6b055150b939665cd"
+    },
+    {
+      "path": "CASES.json",
+      "bytes": 3231,
+      "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/candidate/budget_cdf.py",
+      "bytes": 4311,
+      "sha256": "fe94cc7f033fee58fe82bf8514629af7157e3d862fb1a5381da56ce1380f2db2"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/candidate/exact_oracle.py",
+      "bytes": 3081,
+      "sha256": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/candidate/instance.py",
+      "bytes": 3883,
+      "sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/candidate/run_search_bound.py",
+      "bytes": 2632,
+      "sha256": "dfef883bd455a2c32a555b7f9c307790e8935335e0870fd38acb73e6eb744ecc"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/candidate/suffix_search.py",
+      "bytes": 5099,
+      "sha256": "98a62b307994d0bd68da22d508d805ddbb8f3f301870c80e9de7ac1a8711a4d1"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/FINE_GRID_NOTES.md",
+      "bytes": 1332,
+      "sha256": "c67c428831b537cf9a934d5a488480d88dd7c10336b03d61fcfb7efcaf17b854"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/MATH_CHECK.json",
+      "bytes": 9386,
+      "sha256": "11747465437305c9e43568ada09ab362b88460cc8f39e68336bb826cf56d90dd"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/MATH_EDGE_CHECK.json",
+      "bytes": 1683,
+      "sha256": "fff1c0e15f9f5630d52699794ec9a7995659d55ce9be8a54e51a3f1e0c32d7fe"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/INDEPENDENT_AUDIT.json",
+      "bytes": 5291,
+      "sha256": "1bf332f37f14b69cea360abafe7ba82ce1d700362dec6ef8a9e5203949d9197d"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/probe.log",
+      "bytes": 1162,
+      "sha256": "bb9e773382ed925131c7d3ffd0a178cba01f6a48eb4abe8f5cc5ff1c47b5c10d"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/REGISTRATION.json",
+      "bytes": 1137,
+      "sha256": "b85d5fc0e8ee953257f81bd3b7a9f7605f6a9a6c10b6f6961de7ae70647427e8"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/TERMINAL.json",
+      "bytes": 524,
+      "sha256": "40b735c9d4d3bb93c5717e8d1f8a82364b018a63825fee1b35a3097ba3374a83"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/tree.json",
+      "bytes": 14819,
+      "sha256": "2c33eb1af437637d10cece59ab7009b4aede8628fcf727ba85b7be5d65007c3b"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/tree.json.dp.json",
+      "bytes": 7798,
+      "sha256": "20f9ba251005fa10159c5d381f8b8431b185d5edefc073f78adfa0d2e565eae3"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/tree.json.proof.jsonl.gz",
+      "bytes": 8090993,
+      "sha256": "929c1ad4991e19131e46c002f76fce3c872d584a5e8f86a69b52e8b0af4d05ab"
+    },
+    {
+      "path": "iterations/I009_cached_mass_search/probe35_time1024_240/tree.json.run.json",
+      "bytes": 57661,
+      "sha256": "0399775e17087bc7b8a4fb5a6daf58af047dd4fa314dc74e337f61aab6548c0b"
+    },
+    {
+      "path": "RAW_REFERENCE.json",
+      "bytes": 583339,
+      "sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7"
+    },
+    {
+      "path": "run_i009_fine_probe35.py",
+      "bytes": 2274,
+      "sha256": "77ce0f94d6f8fcd3985339949c2b30d247e36d07f0829f57efabc26dce99b15c"
+    }
+  ]
+}
