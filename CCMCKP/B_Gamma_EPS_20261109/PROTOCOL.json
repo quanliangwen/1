@@ -1,0 +1,506 @@
+{
+  "cases": [
+    {
+      "index": 1,
+      "instance": "LAB_3_5_30_",
+      "tmax": 11.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 16.35918529476526
+    },
+    {
+      "index": 2,
+      "instance": "LAB_3_5_30_",
+      "tmax": 14.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 16.35918529476526
+    },
+    {
+      "index": 3,
+      "instance": "LAB_4_5_30_",
+      "tmax": 18.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 22.30258128033877
+    },
+    {
+      "index": 4,
+      "instance": "LAB_4_5_30_",
+      "tmax": 26.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 22.30258128033877
+    },
+    {
+      "index": 5,
+      "instance": "LAB_5_5_30_",
+      "tmax": 11.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 26.75652219162219
+    },
+    {
+      "index": 6,
+      "instance": "LAB_5_5_30_",
+      "tmax": 20.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 26.75652219162219
+    },
+    {
+      "index": 7,
+      "instance": "LAB_5_10_30_",
+      "tmax": 10.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 26.941881145054474
+    },
+    {
+      "index": 8,
+      "instance": "LAB_5_10_30_",
+      "tmax": 16.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 26.941881145054474
+    },
+    {
+      "index": 9,
+      "instance": "LAB_10_10_500_",
+      "tmax": 19.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 55.63791782175482
+    },
+    {
+      "index": 10,
+      "instance": "LAB_10_10_500_",
+      "tmax": 23.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 55.63791782175482
+    },
+    {
+      "index": 11,
+      "instance": "LAB_10_20_500_",
+      "tmax": 12.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 54.326480217230284
+    },
+    {
+      "index": 12,
+      "instance": "LAB_10_20_500_",
+      "tmax": 15.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 54.326480217230284
+    },
+    {
+      "index": 13,
+      "instance": "LAB_20_10_500_",
+      "tmax": 25.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 109.36882100697807
+    },
+    {
+      "index": 14,
+      "instance": "LAB_20_10_500_",
+      "tmax": 32.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 109.36882100697807
+    },
+    {
+      "index": 15,
+      "instance": "LAB_30_10_500_",
+      "tmax": 43.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 161.71958704603549
+    },
+    {
+      "index": 16,
+      "instance": "LAB_30_10_500_",
+      "tmax": 52.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 161.71958704603549
+    },
+    {
+      "index": 17,
+      "instance": "LAB_40_10_500_",
+      "tmax": 55.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 219.25382635604433
+    },
+    {
+      "index": 18,
+      "instance": "LAB_40_10_500_",
+      "tmax": 63.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 219.25382635604433
+    },
+    {
+      "index": 19,
+      "instance": "LAB_50_10_500_",
+      "tmax": 63.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 275.4361054055303
+    },
+    {
+      "index": 20,
+      "instance": "LAB_50_10_500_",
+      "tmax": 75.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 275.4361054055303
+    },
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "tmax": 21.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 13.355118541499069
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "tmax": 27.0,
+      "m": 3,
+      "n": 15,
+      "max_group": 5,
+      "target_cost": 13.355118541499069
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "tmax": 47.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 5.961453029177417
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "tmax": 49.0,
+      "m": 4,
+      "n": 20,
+      "max_group": 5,
+      "target_cost": 5.961453029177417
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "tmax": 27.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 16.454602431295644
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "tmax": 38.0,
+      "m": 5,
+      "n": 25,
+      "max_group": 5,
+      "target_cost": 16.454602431295644
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "tmax": 16.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 23.629735222465964
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "tmax": 27.0,
+      "m": 5,
+      "n": 50,
+      "max_group": 10,
+      "target_cost": 23.629735222465964
+    },
+    {
+      "index": 29,
+      "instance": "APP_10_10_500_",
+      "tmax": 32.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 47.459563656796426
+    },
+    {
+      "index": 30,
+      "instance": "APP_10_10_500_",
+      "tmax": 37.0,
+      "m": 10,
+      "n": 100,
+      "max_group": 10,
+      "target_cost": 47.459563656796426
+    },
+    {
+      "index": 31,
+      "instance": "APP_10_20_500_",
+      "tmax": 13.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 50.15665332268709
+    },
+    {
+      "index": 32,
+      "instance": "APP_10_20_500_",
+      "tmax": 16.0,
+      "m": 10,
+      "n": 200,
+      "max_group": 20,
+      "target_cost": 50.15665332268709
+    },
+    {
+      "index": 33,
+      "instance": "APP_20_10_500_",
+      "tmax": 43.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 94.72999985492753
+    },
+    {
+      "index": 34,
+      "instance": "APP_20_10_500_",
+      "tmax": 48.0,
+      "m": 20,
+      "n": 200,
+      "max_group": 10,
+      "target_cost": 94.72999985492753
+    },
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "tmax": 58.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 138.5898471417616
+    },
+    {
+      "index": 36,
+      "instance": "APP_30_10_500_",
+      "tmax": 70.0,
+      "m": 30,
+      "n": 300,
+      "max_group": 10,
+      "target_cost": 138.5898471417616
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "tmax": 85.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 165.44815735379393
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "tmax": 95.0,
+      "m": 40,
+      "n": 400,
+      "max_group": 10,
+      "target_cost": 165.44815735379393
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "tmax": 91.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 232.69447832839046
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "tmax": 100.0,
+      "m": 50,
+      "n": 500,
+      "max_group": 10,
+      "target_cost": 232.69447832839046
+    }
+  ],
+  "pilot_cases": [
+    17,
+    38,
+    39,
+    40,
+    25,
+    18,
+    14
+  ],
+  "repetitions": 30,
+  "seeds": [
+    832273,
+    832274,
+    832275,
+    832276,
+    832277,
+    832278,
+    832279,
+    832280,
+    832281,
+    832282,
+    832283,
+    832284,
+    832285,
+    832286,
+    832287,
+    832288,
+    832289,
+    832290,
+    832291,
+    832292,
+    832293,
+    832294,
+    832295,
+    832296,
+    832297,
+    832298,
+    832299,
+    832300,
+    832301,
+    832302
+  ],
+  "time_budget": 600,
+  "work_reserve": 15,
+  "MC_draws": 1000000,
+  "P0": 0.99,
+  "screen_gate": 0.975,
+  "parallel": 30,
+  "memory_floor_GiB": 5,
+  "pilot_gate": "Each7 case30 valid independent; each C/B avg<=1+1e-10 and mean7ratios<1-1e-10. Additional preregistered efficiency/stability guards: mean of7 per-case sample std and mean of7 per-case CV no higher than B (+1e-8 std,+1e-10 CV numeric tolerances); mean restricted time to fixed Bmean-cost target (unhit600 seconds) no higher than B (+1e-8 seconds). All7 complete regardless individualfailure; any gatefail forbids full.",
+  "review_gate": "After pilot numericalgates, independent read-only subprocess rechecks SHA/cost/group/native-return/config/time, recomputes cost/std/CV/common-target-time guards fromrawrecords; never resamples native probability. Allrequired.",
+  "full_gate": "Fresh candidate40x30 excluding pilot, reuse all40Bvalidwaves. All2400 comparisonrecords valid; overall mean rawcostdifference and mean relativecostdifference strictlynegative; more improvedcases thanworse; smallm<=5/medium6..20/largem>=21 both rawandnormalized groupmean costnonworse;17/38/39 individually mean costnonworse. Mean of40 percase sample std/CV and mean common-Bmean-target restrictedtime nonworse (+1e-8std/seconds,+1e-10CV numeric tolerance). Full independenttime/provenance audit and GitHubsource/dataZIP/Excel/SHA remoteverification beforegoalcomplete.",
+  "size_groups": {
+    "small": "m<=5",
+    "medium": "6<=m<=20",
+    "large": "m>=21"
+  },
+  "failure_policy": "Ordinary no-solution/native-failure/numeric/time-out observations retained, never cost-imputed or retried. Only entire resource-interrupted or infrastructure-incomplete waves may retry in new attempt directories; no valid complete wave or stage repeated. Every attempt retained. Queue exhaustion never sets success.",
+  "clock_policy": "Controller supplies monotonic start before Popen. Includes interpreter/worker imports, registration/SHA reads, barrier waiting, data loads, all model/native/scoring, all incumbent/result/sidecar saves, stdout fsync and run terminal fsync. Post-save external upper measurement retained in independent timing journal; campaign summaries/audit computations are offline postprocessing, never extra optimization.",
+  "statistics": {
+    "official": "avg/std/CV null unless n_valid=30; sample std ddof=1; failure reasons; valid-only conditional stats separate",
+    "paired": "two-sided paired mean sign-flip exact <=20 nonzero else99999 +observed; Holm family7 pilot/family40 full; seed20261101+case; 19999 paired bootstrap percentile95 non-simultaneous descriptive intervals; absolute/percent/dz effects; validity McNemar exact",
+    "time": "final incumbent first-hit mean; 30-run best hits and conditional mean; actual saved-result time; fixed raw-cost target hit count/conditional time; restricted min(hit,600), failed time600 only, never failure cost",
+    "selection_limit": "Same benchmarks and mandatory seeds repeated for fresh full stage: execution independence, not fresh statistical information conditional on algorithm selection. All explored candidate stages and negative results disclosed; no unseen-data/generalization or selection-adjusted significance claim.",
+    "assumptions": "Sign-flip requires null sign symmetry/exchangeability; paired bootstrap treats30 seed pairs as independent draws. Shared load, adaptive candidate selection, and reuse of same mandated benchmarks/seeds limit inference. Descriptive non-simultaneous intervals; nonsignificance is not equivalence.",
+    "stability_and_time_gates": "Mean of per-case std and mean of per-case CV, NOT std of pooled heterogeneous costs. Commonquality target=previous fixedB30mean percase (offline only, never worker input); restricted hit time unhit600 for time only, never failure costs. Both pilot andfull guards preregistered before any R07outcome."
+  },
+  "environment": {
+    "python": "3.8.10",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "gurobi": [
+      11,
+      0,
+      3
+    ],
+    "executable": "/usr/bin/python3.8"
+  },
+  "schema": "B_Gamma_epsilon_risk_frontier_v1",
+  "arms": [
+    "B",
+    "GEPS"
+  ],
+  "stage": "GEPS",
+  "unique_baseline": "Uploaded B only, all14 original members retained. A02 Gamma operator predecessor is not an official control.",
+  "candidate": "B plus one risk-first epsilon-constraint Gamma operator; no R04/R06/R07/R08/R09/R10 solver mechanisms inherited.",
+  "scope": "Fixed7-case x30 pilot only after frozen prechecks. No automatic full40 or fresh1200 authorization in this launcher.",
+  "mechanism": {
+    "old": "min cost subject to Gamma worst load<=T",
+    "new": "min Gamma worst load subject to cost<=current_best*(1-fraction)-1e-8 and same Gamma worst load<=T",
+    "Gamma": "all integers0..m ascending, unchanged",
+    "fractions": [
+      0.02,
+      0.01,
+      0.03,
+      0.005,
+      0.05,
+      0.08
+    ],
+    "fraction_source": "unchanged six original B FRACTIONS, not selected on candidate outcomes",
+    "phase_seconds": 45.0,
+    "model_seconds": 0.75,
+    "pool": 4,
+    "score": "unchanged A02/original B first-partition half-PDF float32 and reverse-CDF matrix score, delta=.00025 >=.975",
+    "native": "original native_check, no force, all acceptance/rng/cache semantics unchanged",
+    "uncertainty": "same empirical means and observed max deviations; no radius shrink, no calibration, no probability or global-optimality certificate",
+    "limitations": "Risk proxy not monotone in native probability. A rejected candidate never proves its entire cost region infeasible. No AUGMECON efficiency guarantee or complete Pareto frontier is claimed under capped solves/finite fractions."
+  },
+  "literature": {
+    "authors": "George Mavrotas",
+    "year": 2009,
+    "title": "Effective implementation of the epsilon-constraint method in Multi-Objective Mathematical Programming problems",
+    "venue": "Applied Mathematics and Computation213:455-465",
+    "doi": "10.1016/j.amc.2009.03.037",
+    "read": "Section2 Eq1/2, Section3.1 lexicographic counterexample, Section3.2 Eq3-6 proposition and full proof, Section3.3 infeasibility-loop argument; visual pp456,460.",
+    "adaptation": "Conventional epsilon-constraint orientation, not augmented weighted/slack variant. Binary finite domain; exact solves would give weakly efficient proxy points; time caps lose optimality certification. No native chance-feasibility theorem."
+  },
+  "data_basis": "A02 saved38 Gamma1 CDF .9598094-.9607586 and39 .9723026-.9726803, all8 each rejected, Gamma>=2 cost-capped infeasible. Indicates cost-first pool misses risk-cost frontier; new method seeks least-risk within improving cost caps.",
+  "precheck_admission": "Static B14/native4/AST and 600/source/input contracts; exhaustive epsilon-risk MILP comparisons;30 synthetic full9stage exact/MC own-init native-RNG transcript replay; all7 real operator-only own-init checks. Focus38 and39 must each produce at least one strict cost-lower candidate accepted by original native before pilot launch.",
+  "resource_policy": "Original future-envelope/peak1.25/foreign-growth/floor5GiB/disk/no-ownRSS-credit guard retained, plus256MiB Gamma allowance. ceiling30/highfuture>=3GiB ceiling24, reduce or wait. No other experiment process overlap.",
+  "selection_limitations": "Same mandated benchmark suite and seeds previously examined; fixed firstseed operator prechecks support mechanism diagnosis, not confirmation. No chosen favorable cases/seeds, no performance claim before30 valid percase.",
+  "M": 1000000,
+  "native_gate": 0.99,
+  "total_seconds": 600,
+  "reserve": 15,
+  "functional_cases": [
+    17,
+    38,
+    39,
+    40,
+    25,
+    18,
+    14
+  ],
+  "functional_seed": 832273,
+  "source_parent_A02_freeze": "923b5ce01f9b3a6b5b420c8202a26e2246b20e84266a2f63ce9deb65cdefba81",
+  "functional_schedule": {
+    "real_parallel": 2,
+    "synthetic_parallel": 4,
+    "source": "prospectively frozen; no overlapping real/synthetic/formal phases",
+    "future_per_functional_worker_GiB": 8
+  }
+}
