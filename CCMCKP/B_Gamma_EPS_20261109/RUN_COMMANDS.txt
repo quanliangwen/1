@@ -1,0 +1,28 @@
+本轮运行已终末，禁止再次执行任何已有效的预检/先导/旧控制器。
+
+服务器目录：/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_Gamma_EPS_20261109
+历史唯一入口（仅溯源，不要再次启动）：/usr/bin/python3.8 -B complete_prechecks_and_pilot.py
+PID739331/start_ticks467949608；唯一claim/flock；实际已无任务进程。
+运行环境Python3.8.10、NumPy1.24.4、SciPy1.10.1、Gurobi11.0.3（需有效许可）。
+参数见冻结PROTOCOL.json和FREEZE.json：600秒/预留15秒；M1000000、P0.99、screen.975；种子832273—832302；Γ45秒/单模型.75秒/池4；并行30且原资源守卫。
+
+离线复核（不优化、不调用原生评价）：
+1. 下载本目录全部文件到一个临时目录。
+2. 将offline_reporting_reproduction.zip解压到此目录，保留reporting/相对路径。
+3. python reporting/verify_delivery.py .
+   核对交付文件SHA/bytes、源43冻结文件、结果ZIP每个成员、Excel与JSON的成本/时间/CI/检验/逐次/共同目标字段；所有表扫描错误单元格。
+4. 查看statistics_snapshot.json、TASK_OUTCOME.json、终末时间审计和RESULTS_中文.md。
+5. 可选：将diagnostic_evidence.zip解压到diagnostics/，results_complete.zip及statistics_snapshot.json置于同级，python report_results.py。
+   此为只读统计派生，需保留原统计Excel于outputs/GEPS_pilot_20261109/GEPS_pilot_20261109.xlsx才能执行脚本末段的字节复制。不会重新运行候选或评价器。
+
+统计Excel构建：使用Codex bundled workspace runtime的@oai/artifact-tool；node_modules指向load_workspace_dependencies返回的包目录。
+node reporting/build_statistics.mjs statistics_snapshot.json GEPS_pilot_20261109
+输出outputs/GEPS_pilot_20261109/；统计数据来自已经独立重算的终末快照。构建后必须核对全部字段并视觉检查，不能用导出成功代替验证。
+
+原始输入无需重上传：
+https://github.com/quanliangwen/1/blob/5d7319dbb9a08abc7dbdf8cd00a4285ab791d6f1/CCMCKP/B_CDF_DRO_MITM_R04_20261102/inputs_frozen.zip
+SHA256 e5ebd0a26ff4a3d6d8e66cd2c3e0a342d8268dcf831315bb9fe657d9b4fb88b7
+输入文件路径/逐文件SHA见冻结INPUTS.json/INPUT_SHA.json；此输入包不含历史解模板。
+
+数据ZIP包含全部1200次B和本轮210次候选；正式配对统计只含事前指定七例共420记录。
+先导失败，不存在本候选全40例或新1200次结果；不能将B1200误称候选1200。
