@@ -1,0 +1,251 @@
+{
+  "utc": "2026-11-09T07:31:28Z",
+  "processes": [
+    {
+      "pid": 739331,
+      "start_ticks": 467949608,
+      "kind": "driver"
+    },
+    {
+      "pid": 739931,
+      "start_ticks": 467977030,
+      "kind": "worker"
+    },
+    {
+      "pid": 739932,
+      "start_ticks": 467977030,
+      "kind": "worker"
+    },
+    {
+      "pid": 739933,
+      "start_ticks": 467977031,
+      "kind": "worker"
+    },
+    {
+      "pid": 739934,
+      "start_ticks": 467977031,
+      "kind": "worker"
+    },
+    {
+      "pid": 739935,
+      "start_ticks": 467977031,
+      "kind": "worker"
+    },
+    {
+      "pid": 739936,
+      "start_ticks": 467977032,
+      "kind": "worker"
+    },
+    {
+      "pid": 739937,
+      "start_ticks": 467977032,
+      "kind": "worker"
+    },
+    {
+      "pid": 739938,
+      "start_ticks": 467977032,
+      "kind": "worker"
+    },
+    {
+      "pid": 739939,
+      "start_ticks": 467977033,
+      "kind": "worker"
+    },
+    {
+      "pid": 739940,
+      "start_ticks": 467977033,
+      "kind": "worker"
+    },
+    {
+      "pid": 739941,
+      "start_ticks": 467977033,
+      "kind": "worker"
+    },
+    {
+      "pid": 739942,
+      "start_ticks": 467977034,
+      "kind": "worker"
+    },
+    {
+      "pid": 739943,
+      "start_ticks": 467977034,
+      "kind": "worker"
+    },
+    {
+      "pid": 739944,
+      "start_ticks": 467977035,
+      "kind": "worker"
+    },
+    {
+      "pid": 739945,
+      "start_ticks": 467977035,
+      "kind": "worker"
+    },
+    {
+      "pid": 739946,
+      "start_ticks": 467977035,
+      "kind": "worker"
+    },
+    {
+      "pid": 739947,
+      "start_ticks": 467977036,
+      "kind": "worker"
+    },
+    {
+      "pid": 739948,
+      "start_ticks": 467977036,
+      "kind": "worker"
+    },
+    {
+      "pid": 739949,
+      "start_ticks": 467977036,
+      "kind": "worker"
+    },
+    {
+      "pid": 739950,
+      "start_ticks": 467977037,
+      "kind": "worker"
+    },
+    {
+      "pid": 739951,
+      "start_ticks": 467977037,
+      "kind": "worker"
+    },
+    {
+      "pid": 739952,
+      "start_ticks": 467977037,
+      "kind": "worker"
+    },
+    {
+      "pid": 739953,
+      "start_ticks": 467977038,
+      "kind": "worker"
+    },
+    {
+      "pid": 739954,
+      "start_ticks": 467977038,
+      "kind": "worker"
+    },
+    {
+      "pid": 739955,
+      "start_ticks": 467977039,
+      "kind": "worker"
+    },
+    {
+      "pid": 739956,
+      "start_ticks": 467977039,
+      "kind": "worker"
+    },
+    {
+      "pid": 739957,
+      "start_ticks": 467977039,
+      "kind": "worker"
+    },
+    {
+      "pid": 739958,
+      "start_ticks": 467977040,
+      "kind": "worker"
+    },
+    {
+      "pid": 739959,
+      "start_ticks": 467977040,
+      "kind": "worker"
+    },
+    {
+      "pid": 739960,
+      "start_ticks": 467977041,
+      "kind": "worker"
+    }
+  ],
+  "available_GiB": 95.89530944824219,
+  "state": {
+    "schema": "B_DRO_goal_campaign_v1",
+    "status": "running_wave",
+    "controller_pid": 739331,
+    "controller_start_ticks": 467949608,
+    "freeze_sha": "c969e4718976853ee3ffabcff160bb2ab63ceea11208dc6e4c37a002f59cf4dc",
+    "updated_utc": "2026-11-09T07:30:16Z",
+    "registered_parallel": 30,
+    "active": [
+      739931,
+      739932,
+      739933,
+      739934,
+      739935,
+      739936,
+      739937,
+      739938,
+      739939,
+      739940,
+      739941,
+      739942,
+      739943,
+      739944,
+      739945,
+      739946,
+      739947,
+      739948,
+      739949,
+      739950,
+      739951,
+      739952,
+      739953,
+      739954,
+      739955,
+      739956,
+      739957,
+      739958,
+      739959,
+      739960
+    ],
+    "goal_achieved": false,
+    "phase": "GEPS_pilot",
+    "index": 17,
+    "arm": "GEPS",
+    "wave": "GEPS_pilot_c17_a01",
+    "parallel_limit": 30
+  },
+  "functional": {
+    "status": "completed_functional_only",
+    "pid": 739333,
+    "active": [],
+    "terminal": 7
+  },
+  "synthetic": {
+    "completed": 30,
+    "total": 30,
+    "pid": 739606,
+    "parallel": 4
+  },
+  "admission": {
+    "passed": true,
+    "freeze_sha": "c969e4718976853ee3ffabcff160bb2ab63ceea11208dc6e4c37a002f59cf4dc",
+    "focus": [
+      {
+        "index": 38,
+        "initial_cost": 287.2449560091793,
+        "final_cost": 204.55272268229402,
+        "accepted_proposals": 23,
+        "CDF_passed": 23
+      },
+      {
+        "index": 39,
+        "initial_cost": 401.9418935804327,
+        "final_cost": 330.67327092120894,
+        "accepted_proposals": 14,
+        "CDF_passed": 24
+      }
+    ],
+    "note": "Functional admission only; not a cost performance gate. Same firstseed and old suite; exploratory selection disclosed."
+  },
+  "failure": null,
+  "export": null,
+  "pointers": [
+    {
+      "case": 17,
+      "status": "running",
+      "terminal": 0,
+      "parallel": 30
+    }
+  ]
+}

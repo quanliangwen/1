@@ -1,0 +1,19 @@
+{
+  "pid": 739331,
+  "start_ticks": 467949608,
+  "source_freeze": "c969e4718976853ee3ffabcff160bb2ab63ceea11208dc6e4c37a002f59cf4dc",
+  "utc": "2026-11-09T07:25:42Z",
+  "resources": {
+    "available": 120369905664,
+    "required": 46978220032,
+    "foreign_rss": 7249772544,
+    "foreign_growth": 7249772544,
+    "future_per_worker": 8589934592,
+    "peak_factor": 1.25,
+    "floor": 5368709120,
+    "own_RSS_admission_credit": false,
+    "free_disk": 55247511552
+  },
+  "prereg_commit": "9b9ef15f5e31c198cb234674495f47472494dc1c",
+  "scope": "frozen prechecks then gated fixed7x30 pilot only; NO_FULL_AUTO"
+}
