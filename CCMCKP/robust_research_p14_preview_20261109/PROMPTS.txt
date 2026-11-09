@@ -1,0 +1,46 @@
+Use case: productivity-visual.
+Create ONE finished Chinese academic PowerPoint slide sample as a crisp raster image, landscape 16:9, approximately 1672×941 or higher resolution same aspect. It is slide P14 of the same deck as the reference.
+Input image 1 is ONLY a style/template reference (P13), not content to repeat. Preserve its cream background, dark navy Chinese typography, warm gold fine lines, BUPT branding and exact top navigation layout. At top: 北京邮电大学 logo/name at left, then 研究背景 / 研究意义 / 研究脉络 / 创新方向 / 总结展望. 研究脉络 is the navy tab with gold text/underline, others muted blue with white letters.
+Replace all content below navigation. Exact title: “Γ鲁棒双层模型的重构与求解”.
+Subtitle: “固定x的下层分解，与生成上层候选的标称双层求解分属两个层次”.
+Use a clean flat two-tier flowchart, gold connectors and navy text, with generous aligned spacing and very accurate typesetting. Main text should remain large and legible, no decorative photography or clutter.
+
+UPPER TIER, around y=230–470, label at left “数学分解” with small “Lemma 1”. Across upper area show this prominently typeset mathematical equality with correct subscripts and maximization signs:
+Φ_rob(x) = max_{ℓ∈L} Φ_ℓ(x)
+Φ_ℓ(x) = −ΓΔf_ℓ + max_{y∈Y(x)} { f̃^(ℓ)ᵀ y }
+Use conventional mathematical typography, Greek capital Φ and Γ, script ℓ (not digit 1), subscript rob. This is NOT a min over ℓ.
+Underneath formula, a horizontal flow with FOUR connected steps:
+“固定上层决策x” → “标称下层0–1子问题” → “取最大值” → “鲁棒下层值”
+Below second step a small but readable note: “此时为单层优化”
+Below the upper flow, a single concise annotation:
+“计算缩减：偏差排序，Lee–Kwon索引缩减，相同偏差去重”
+Do not imply that the entire robust bilevel problem is equivalent to finitely many nominal bilevel problems.
+
+LOWER TIER, around y=520–770, label “完整算法”. Five horizontal aligned stages with gold arrows, corresponding to this content. Make the first and third stages slightly wider if needed:
+1 title “标称双层子问题”
+   body “让x参与优化”
+2 title “生成候选”
+   body “xℓ及子问题目标值”
+3 title “鲁棒校正”
+   body two lines “固定候选xℓ” / “重求完整Γ鲁棒下层”
+4 title “并列精化”
+   body two lines “在下层最优响应中” / “选择对上层更有利者”
+5 title “择优与界判断”
+   body two lines “更新最好方案与有效界” / “检查间隙及最优性条件”
+Use understated pale backgrounds and thin gold outlines only if needed to make stages clear, matching reference. This is not a dashboard.
+Add a clear thin gold connector FROM lower “生成候选” stage UP TO upper “固定上层决策x” stage, with arrowhead pointing to fixed-x node. Route orthogonally via left margin or available gap without crossing any text, label “固定候选后评价” in small readable type. This cross-link explains that candidate evaluation uses the upper mathematical decomposition. The lower stages still read from left to right.
+Small output label below lower flow: “得到：当前最好方案及质量信息”.
+
+BOTTOM: thin gold divider, followed by two bold readable navy lines:
+“界和最优性结论依赖正确求解子问题及相应结构假设”
+“有限时间得到候选，不自动构成全局最优证书”
+At very bottom small readable source note if space allows:
+“P2：Lemma 1，式(3)–(5)；Algorithms 1–4，Theorem 4，Proposition 8”
+
+Accuracy constraints: Γ and ℓ are different symbols; keep Γ fixed, enumerate ℓ. Upper subproblems are single-level binary when x fixed; lower candidate-generation subproblems are bilevel with x variable. Robust correction must precede optimistic tie refinement. Do not add any claimed global optimality, probabilities, experimental data or other papers. Do not print “本页用途”, “口头讲解”, “建议图示”, or instructions on the slide. Use only the exact meaningful content above, concise but complete. No text clipping, no overlapping connectors, no miniature fonts.
+
+
+Targeted edit prompts (built-in image_gen):
+Edit only the inter-tier gold connector in this slide. The connector must be ONE-WAY from the lower stage “生成候选” to the upper stage “固定上层决策x”. Keep the arrowhead pointing UP into “固定上层决策x”. Remove the small downward-pointing arrowhead touching the top of “生成候选” (near x=593 y=575 in this 1672×941 image) and retain its plain line as the starting end. Preserve the connector's route and the label “固定候选后评价”. Do not alter anything else: all mathematics, Chinese wording, typography, colors, branding, panel shapes, spacing and other arrows must remain identical.
+
+Make one targeted diagram correction. Remove the ENTIRE bent gold connector between the upper and lower flow panels (the current elbow line at approximately x=420–595, y=412–580, including BOTH its arrowheads). Replace it with a SINGLE thin gold diagonal arrow that starts at the upper-left part of the lower “生成候选” stage (near x=510,y=578) and points UP toward the bottom-right part of the upper “固定上层决策x” node (near x=480,y=412). Exactly ONE arrowhead, at the upper fixed-x node. The lower candidate endpoint is just a plain line end, absolutely no downward arrowhead. This is essential. The existing nearby label “固定候选后评价” stays. All remaining content and all other arrows remain pixel-identical as far as possible. Preserve all math, all Chinese text, layout, university logo, colors and typography.
