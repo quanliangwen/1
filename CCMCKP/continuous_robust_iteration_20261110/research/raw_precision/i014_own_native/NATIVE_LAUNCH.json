@@ -1,0 +1,11 @@
+{
+  "time": 1794262533.8370247,
+  "pid": 1023587,
+  "job": "research/raw_precision/i014_own_native",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "research/raw_precision/native/FINISHED"
+  ],
+  "registration_sha256": "47435958b651b1c23ff2c9b6afd169cfe17ec8fbd776f1e309ce7b2a93f82a00",
+  "no_native_calls_before_all_dependencies": true
+}

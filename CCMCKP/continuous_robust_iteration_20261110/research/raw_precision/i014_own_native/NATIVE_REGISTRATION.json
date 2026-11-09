@@ -1,0 +1,31 @@
+{
+  "time": 1794262533.7964747,
+  "mode": "precision_points",
+  "index": null,
+  "candidate_file": "research/raw_precision/I014_REFINED_NATIVE_POINTS.json",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "research/raw_precision/native/FINISHED"
+  ],
+  "scope": "two independently raw-certified own I014 proposals refined after search; not members of frozen1017pool, not cold solver or30-run Avg",
+  "driver_sha256": {
+    "run_native_queue_v2.py": "05867beadb1325a0180f6941152922ac10febd217cfead060d485e15c99617e8",
+    "native_cached_original_v2.py": "74c6d88d79508c6561cb952b43dd699a4c8549b124a1e4751f743c5ff4957a0b",
+    "native_lss_eval.py": "1fd7e2b6ea99b3da62c76e7b05c9e02f2e51b8ece257867d55bf57980d6af8c0",
+    "reference_loader.py": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c"
+  },
+  "input_sha256": {
+    "research/raw_precision/I014_REFINED_NATIVE_POINTS.json": "471add1e1adc64447b67028c2015d2244b91f199b20f7068d41113243cbcfa3c",
+    "research/raw_precision/I014_REFINEMENT_PROBE.json": "338ac7efe81ab06a7fa36d883b24e8be4ce198e7a43f0b7b211654b07ea91224",
+    "research/raw_precision/I014_REFINEMENT_REGISTRATION.json": "6a5181bad058773cc3f28a53290530d6be00169b9a49a3e4ff4d02e11bf5f6cf",
+    "research/raw_precision/INDEPENDENT_I014_REFINED_RAW_RECHECK.json": "95d1ba7f2586a8d70542fe4eb86292072a559d6d8acd1e26b70d9be2718ce324",
+    "research/raw_precision/I014_REFINED_NATIVE_INVENTORY.json": "12564f6770652897a4fa24ad4ab138bd203860a827ce8fddd9ae2abacf832085",
+    "NATIVE_CACHED_V2_REAL_CACHE_CHECK.json": "62d87af5a5e521a98c94dc9ab6bed44991d764bbc0fa856fa6814c79909b09a3"
+  },
+  "point_threshold": 0.985,
+  "seed": 832273,
+  "draws": 10000000,
+  "event": "sum<=T",
+  "no_search_feedback": true,
+  "registration_type": "post-search diagnostic validation registration, not pre-search performance registration"
+}
