@@ -1,0 +1,71 @@
+Use case: productivity-visual.
+Generate ONE finished Chinese academic slide SAMPLE as a crisp raster image, 16:9 landscape, approximately 1920×1080 or 1672×941. This is slide P19 of the same deck as the reference image.
+Input image 1 is STYLE/TEMPLATE REFERENCE ONLY (the previous P18 slide). Preserve its warm cream background, dark navy Chinese type, fine gold rules, BUPT seal and 北京邮电大学 branding, and exact overall navigation layout. Replace all slide body content.
+IMPORTANT NAVIGATION CHANGE: The active chapter is now “创新方向”, the FOURTH tab. Make 创新方向 dark navy with gold letters and gold underline. The other tabs 研究背景 / 研究意义 / 研究脉络 / 总结展望 are muted blue with white letters. Do not keep 研究脉络 highlighted. All five tabs stay in their reference positions.
+
+Exact main title: “鲁棒优化的潜在创新方向”
+Subtitle: “聚焦不确定集学习、决策与分布反馈、学习辅助求解”
+Thin gold divider below title.
+
+MAIN BODY: one full-width THREE-COLUMN TABLE with THREE data rows. Match the prior slides' typography and grid styling, but no old five-row table, no extra flowchart. Table column widths about 22% / 39% / 39%. Navy header with white letters, thin gold borders, alternating cream and very pale gray data-row backgrounds. All three directions have equal visual importance; do not use a 主线 badge or single highlighted row.
+Header text, exact:
+“创新方向” / “关键数学机制” / “值得进一步研究的问题”
+Use readable Chinese body about 28–31px at 1672px width, with ample cell padding and intentional wrapping. Center or left-align the first-column titles consistently, left-align narrative cells. The table should occupy roughly y=245–710 at 1672×941, leaving clear space for evaluation note and references.
+
+ROW 1:
+col1, navy bold, two or three lines:
+“① 决策导向的”
+“不确定集学习”
+col2 three lines:
+“按决策损失学习集合形状”
+“以共形预测校准覆盖”
+“凸神经网络支持可计算重构 [R1]”
+col3 three lines:
+“复杂决策结构或分布漂移下，”
+“如何兼顾统计有效性、决策性能”
+“与求解成本？”
+
+ROW 2:
+col1, navy bold, two lines:
+“② 决策依赖的”
+“多模态DRO”
+col2 three lines:
+“模态概率与模态内分布随决策变化”
+“φ散度＋矩或Wasserstein集合”
+“分层刻画不确定性 [R2]”
+col3 three lines:
+“更复杂的决策反馈怎样识别与建模？”
+“如何获得可计算重构，”
+“并解释保护强度的变化？”
+
+ROW 3:
+col1, navy bold, two lines:
+“③ 学习辅助求解”
+“与质量认证”
+col2 three lines:
+“学习补救价值，加速列与约束生成”
+“研究与列生成、原问题核验”
+“及有效界的协作 [R3、R4]”
+col3 three lines:
+“怎样减少嵌套优化开销，”
+“同时保留可行性核验”
+“与可信的质量证书？”
+
+BELOW TABLE: thin gold rule or generous whitespace, then prominent centered bold navy statement in one or two lines:
+“评价创新时同时核查决策收益、保护强度、计算代价与保证条件”
+Then a smaller but clearly legible navy qualification:
+“学习近似与精确认证须分别论证，相关保证不能直接拼接”
+
+BOTTOM two compact readable reference lines, aligned neatly, approximately 21–23px body size:
+“R1 Yeh等 · TMLR 2025    R2 Yu与Basciftci · Mathematical Programming 2026”
+“R3 Dumouchelle等 · ICLR 2024    R4 Lefebvre等 · Mathematical Programming Computation 2026”
+
+Accuracy and scope constraints:
+- This is a PURE robust optimization literature-sharing slide. No reference to the speaker's own research, CCMCKP, knapsack applications, group selection, CDF perturbations, Beam Search, MITM, chance constraints, or probability thresholds.
+- These are potential innovation directions based on published literature, not claims of innovations already completed by this presenter.
+- The right column contains OPEN RESEARCH QUESTIONS rather than guaranteed outcomes. Do not turn questions into proved claims.
+- Never imply that learning-augmented approximation automatically inherits the exact method's guarantee. Preserve the qualification below the table.
+- Use lowercase Greek φ (phi) in φ散度, Roman DRO, Wasserstein, TMLR, ICLR correctly.
+- Do not include content from the old P18 table or old personal-research section.
+- No production instructions, “本页用途”, “建议图示”, “口头讲解”, Word filename, or screenshot frame in the image.
+- Avoid excessive decoration, tiny text, clipping, overlapping letters, and extra badges. Flat academic comparison slide, matching supplied template closely.
