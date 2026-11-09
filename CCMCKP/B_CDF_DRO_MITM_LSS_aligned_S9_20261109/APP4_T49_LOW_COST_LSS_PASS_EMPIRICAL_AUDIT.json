@@ -1,0 +1,165 @@
+{
+  "scope": "These five choices pass LSS 0.985 but do not meet the current solver raw empirical 0.99 model. This is a model constraint distinction, not a change to the final LSS criterion.",
+  "rows": [
+    {
+      "selection": [
+        0,
+        9,
+        14,
+        7
+      ],
+      "cost": 5.051670756693193,
+      "LSS_real_probability": 0.9854627,
+      "LSS_accepted": true,
+      "raw_empirical_99_certificate": {
+        "selection": [
+          0,
+          9,
+          14,
+          7
+        ],
+        "bins": 256,
+        "lower_numerator": "767095",
+        "denominator": "810000",
+        "lower": 0.9470308641975309,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "770930",
+        "upper": 0.9517654320987654,
+        "infeasible": true,
+        "certificate_seconds": 0.0026013609021902084
+      }
+    },
+    {
+      "selection": [
+        0,
+        17,
+        14,
+        7
+      ],
+      "cost": 5.07031677087365,
+      "LSS_real_probability": 0.9854627,
+      "LSS_accepted": true,
+      "raw_empirical_99_certificate": {
+        "selection": [
+          0,
+          17,
+          14,
+          7
+        ],
+        "bins": 256,
+        "lower_numerator": "773984",
+        "denominator": "810000",
+        "lower": 0.9555358024691358,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "777305",
+        "upper": 0.9596358024691358,
+        "infeasible": true,
+        "certificate_seconds": 0.0010081632062792778
+      }
+    },
+    {
+      "selection": [
+        16,
+        9,
+        14,
+        7
+      ],
+      "cost": 4.8650084517276255,
+      "LSS_real_probability": 0.9853801,
+      "LSS_accepted": true,
+      "raw_empirical_99_certificate": {
+        "selection": [
+          16,
+          9,
+          14,
+          7
+        ],
+        "bins": 256,
+        "lower_numerator": "757011",
+        "denominator": "810000",
+        "lower": 0.9345814814814815,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "761827",
+        "upper": 0.9405271604938271,
+        "infeasible": true,
+        "certificate_seconds": 0.0008164141327142715
+      }
+    },
+    {
+      "selection": [
+        16,
+        13,
+        14,
+        7
+      ],
+      "cost": 5.105169983237225,
+      "LSS_real_probability": 0.9853801,
+      "LSS_accepted": true,
+      "raw_empirical_99_certificate": {
+        "selection": [
+          16,
+          13,
+          14,
+          7
+        ],
+        "bins": 256,
+        "lower_numerator": "773606",
+        "denominator": "810000",
+        "lower": 0.9550691358024691,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "777011",
+        "upper": 0.9592728395061728,
+        "infeasible": true,
+        "certificate_seconds": 0.0006801998242735863
+      }
+    },
+    {
+      "selection": [
+        16,
+        17,
+        14,
+        7
+      ],
+      "cost": 4.883654465908082,
+      "LSS_real_probability": 0.9853801,
+      "LSS_accepted": true,
+      "raw_empirical_99_certificate": {
+        "selection": [
+          16,
+          17,
+          14,
+          7
+        ],
+        "bins": 256,
+        "lower_numerator": "764119",
+        "denominator": "810000",
+        "lower": 0.9433567901234567,
+        "accepted": false,
+        "search_threshold": "99/100",
+        "method": "exact_integer_upward_grid_count",
+        "all_original_samples": true,
+        "strict_event": "sum<T",
+        "upper_numerator": "768069",
+        "upper": 0.9482333333333334,
+        "infeasible": true,
+        "certificate_seconds": 0.0003317035734653473
+      }
+    }
+  ]
+}

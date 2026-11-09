@@ -1,0 +1,22 @@
+{
+  "nominal_CL": 0.99,
+  "final_LSS_probability_threshold": 0.985,
+  "draws": 10000000,
+  "seed": 832273,
+  "event": "sum<=T",
+  "registered_analysis": {
+    "verifier": "summarize_empirical.py + summarize_lss.py",
+    "summary": "FINAL_SUMMARY.json and formal30_lss/SUMMARY.json",
+    "total_time_limit_seconds": 600,
+    "protocol": "Preserved unchanged; timing violations fail this strict analysis."
+  },
+  "all_output_probability_analysis": {
+    "verifier": "summarize_returned_outputs.py + summarize_user_validation.py",
+    "summary": "USER_VALIDATION_SUMMARY.json",
+    "cohort": "All original returned outputs from all40x30 attempted searches; source, input, grouping, cost and empirical integer certificates independently verified; same original LSS probability test.",
+    "time_compliance": "Reported separately with actual elapsed and selected-decision found time; no replacement, deletion or relabelling of timing violations.",
+    "analysis_scope_declared_after_timing_deviation_observed": true
+  },
+  "no_probability_acceptance_threshold_change": true,
+  "no_frozen_solver_change_during_formal_campaign": true
+}

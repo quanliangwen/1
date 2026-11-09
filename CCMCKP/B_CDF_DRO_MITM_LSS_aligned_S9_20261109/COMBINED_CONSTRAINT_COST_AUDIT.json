@@ -1,0 +1,176 @@
+{
+  "scope": "Raw empirical marginal product >=0.99 PLUS original fixed-seed LSS test >=0.985. Not a claim that LSS alone rejects all eight cost targets.",
+  "empirical_proof_source": "S2 exact cost-ordered enumeration; raw data unchanged; every cheaper choice rejected by integer upper count",
+  "rows": [
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "tmax": 21.0,
+      "old_best": 9.034717299521294,
+      "minimum_raw_empirical_99_cost": 9.034717299521294,
+      "all_cheaper_choices_exactly_refuted": 55,
+      "total_choices": 125,
+      "exact_cost_prefix_count": 56,
+      "unique_minimum": true,
+      "minimum_selection": [
+        12,
+        10,
+        11
+      ],
+      "minimum_selection_LSS_real_probability": 0.9651546,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "51bd792b0e6d70fe8c29f0c6579e85088060030d7346a1167836dfbff2cfac5d"
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "tmax": 27.0,
+      "old_best": 7.25001317010452,
+      "minimum_raw_empirical_99_cost": 7.25001317010452,
+      "all_cheaper_choices_exactly_refuted": 43,
+      "total_choices": 125,
+      "exact_cost_prefix_count": 44,
+      "unique_minimum": true,
+      "minimum_selection": [
+        12,
+        1,
+        11
+      ],
+      "minimum_selection_LSS_real_probability": 0.971381,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "47e6430e9d1ec6152da8243d00791109e293c62bfacb99b7bea6a3ddbc9de358"
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "tmax": 47.0,
+      "old_best": 5.239883662982526,
+      "minimum_raw_empirical_99_cost": 5.239883662982526,
+      "all_cheaper_choices_exactly_refuted": 24,
+      "total_choices": 625,
+      "exact_cost_prefix_count": 25,
+      "unique_minimum": true,
+      "minimum_selection": [
+        16,
+        1,
+        2,
+        7
+      ],
+      "minimum_selection_LSS_real_probability": 0.9731601,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "0bb6836da337408bd84f65344cdc2df5fae5c81b665224ffb86e4a74b5b46f0b"
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "tmax": 49.0,
+      "old_best": 5.239883662982526,
+      "minimum_raw_empirical_99_cost": 5.239883662982526,
+      "all_cheaper_choices_exactly_refuted": 24,
+      "total_choices": 625,
+      "exact_cost_prefix_count": 25,
+      "unique_minimum": true,
+      "minimum_selection": [
+        16,
+        1,
+        2,
+        7
+      ],
+      "minimum_selection_LSS_real_probability": 0.9812081,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "64ca36c08319b2c1d6066fe7245b7ff920568ceda7bc0a02b20e466b1a162a64"
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "tmax": 27.0,
+      "old_best": 16.380556329595404,
+      "minimum_raw_empirical_99_cost": 16.961858369665308,
+      "all_cheaper_choices_exactly_refuted": 2403,
+      "total_choices": 3125,
+      "exact_cost_prefix_count": 2404,
+      "unique_minimum": true,
+      "minimum_selection": [
+        5,
+        1,
+        22,
+        18,
+        19
+      ],
+      "minimum_selection_LSS_real_probability": 0.9356079,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "6b2e98ec6531d3b36908a56068b080b0638bb967dce7858e514f22b6e6be3267"
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "tmax": 38.0,
+      "old_best": 11.026767534116384,
+      "minimum_raw_empirical_99_cost": 11.026767534116384,
+      "all_cheaper_choices_exactly_refuted": 1024,
+      "total_choices": 3125,
+      "exact_cost_prefix_count": 1025,
+      "unique_minimum": true,
+      "minimum_selection": [
+        5,
+        1,
+        7,
+        23,
+        9
+      ],
+      "minimum_selection_LSS_real_probability": 0.9492235,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "6a42c25329d69ce746527153174170fec8f870bde9762cd6edb4c52bd4169f00"
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "tmax": 16.0,
+      "old_best": 26.063997501937212,
+      "minimum_raw_empirical_99_cost": 26.063997501937212,
+      "all_cheaper_choices_exactly_refuted": 97059,
+      "total_choices": 100000,
+      "exact_cost_prefix_count": 97060,
+      "unique_minimum": true,
+      "minimum_selection": [
+        15,
+        46,
+        47,
+        3,
+        39
+      ],
+      "minimum_selection_LSS_real_probability": 0.9011571,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "150877522d2b06d95d4d7251c76af8e01a09f8a474d0e9ee8a74f04afe8df9cf"
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "tmax": 27.0,
+      "old_best": 16.42362684765965,
+      "minimum_raw_empirical_99_cost": 16.42362684765965,
+      "all_cheaper_choices_exactly_refuted": 78437,
+      "total_choices": 100000,
+      "exact_cost_prefix_count": 78438,
+      "unique_minimum": true,
+      "minimum_selection": [
+        15,
+        46,
+        42,
+        18,
+        39
+      ],
+      "minimum_selection_LSS_real_probability": 0.8031798,
+      "raw_empirical_optimality_verified_by_prefix_count": true,
+      "old_cost_impossible_under_combined_constraints": true,
+      "refutations_sha256": "e7ba2b87b59802c8ebecb5099a9632995c7bb09f3693bb343987e7f335374300"
+    }
+  ]
+}
