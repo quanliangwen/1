@@ -1,0 +1,50 @@
+[
+  {
+    "test": "HiGHS vs exhaustive enumeration",
+    "passed": true
+  },
+  {
+    "test": "native cache and RNG parity; tilted vs truncated CDF",
+    "case": 11,
+    "passed": true,
+    "native": 0.992077,
+    "guide_truncated": 0.9919867276138633,
+    "guide_tilted": 0.9919867276138591,
+    "tilt_error": 4.218847493575595e-15,
+    "regular_seconds": 0.5240802327170968,
+    "cached_seconds": 0.34871351439505816
+  },
+  {
+    "test": "native cache and RNG parity; tilted vs truncated CDF",
+    "case": 19,
+    "passed": true,
+    "native": 0.990439,
+    "guide_truncated": 0.9903583120253691,
+    "guide_tilted": 0.9903583120253661,
+    "tilt_error": 2.9976021664879227e-15,
+    "regular_seconds": 1.735182155855,
+    "cached_seconds": 1.7050718748942018
+  },
+  {
+    "test": "native cache and RNG parity; tilted vs truncated CDF",
+    "case": 37,
+    "passed": true,
+    "native": 0.98975,
+    "guide_truncated": 0.9898977744853061,
+    "guide_tilted": 0.9898977744852933,
+    "tilt_error": 1.2878587085651816e-14,
+    "regular_seconds": 1.5738532841205597,
+    "cached_seconds": 1.381884883157909
+  },
+  {
+    "test": "native cache and RNG parity; tilted vs truncated CDF",
+    "case": 39,
+    "passed": true,
+    "native": 0.99006,
+    "guide_truncated": 0.9899979672019737,
+    "guide_tilted": 0.9899979672019694,
+    "tilt_error": 4.3298697960381105e-15,
+    "regular_seconds": 1.5356860645115376,
+    "cached_seconds": 1.2026871666312218
+  }
+]

@@ -1,0 +1,230 @@
+{
+  "schema": "S1_fixed_validation",
+  "cases": [
+    {
+      "index": 1,
+      "instance": "LAB_3_5_30_",
+      "tmax": 11.0
+    },
+    {
+      "index": 2,
+      "instance": "LAB_3_5_30_",
+      "tmax": 14.0
+    },
+    {
+      "index": 3,
+      "instance": "LAB_4_5_30_",
+      "tmax": 18.0
+    },
+    {
+      "index": 4,
+      "instance": "LAB_4_5_30_",
+      "tmax": 26.0
+    },
+    {
+      "index": 5,
+      "instance": "LAB_5_5_30_",
+      "tmax": 11.0
+    },
+    {
+      "index": 6,
+      "instance": "LAB_5_5_30_",
+      "tmax": 20.0
+    },
+    {
+      "index": 7,
+      "instance": "LAB_5_10_30_",
+      "tmax": 10.0
+    },
+    {
+      "index": 8,
+      "instance": "LAB_5_10_30_",
+      "tmax": 16.0
+    },
+    {
+      "index": 9,
+      "instance": "LAB_10_10_500_",
+      "tmax": 19.0
+    },
+    {
+      "index": 10,
+      "instance": "LAB_10_10_500_",
+      "tmax": 23.0
+    },
+    {
+      "index": 11,
+      "instance": "LAB_10_20_500_",
+      "tmax": 12.0
+    },
+    {
+      "index": 12,
+      "instance": "LAB_10_20_500_",
+      "tmax": 15.0
+    },
+    {
+      "index": 13,
+      "instance": "LAB_20_10_500_",
+      "tmax": 25.0
+    },
+    {
+      "index": 14,
+      "instance": "LAB_20_10_500_",
+      "tmax": 32.0
+    },
+    {
+      "index": 15,
+      "instance": "LAB_30_10_500_",
+      "tmax": 43.0
+    },
+    {
+      "index": 16,
+      "instance": "LAB_30_10_500_",
+      "tmax": 52.0
+    },
+    {
+      "index": 17,
+      "instance": "LAB_40_10_500_",
+      "tmax": 55.0
+    },
+    {
+      "index": 18,
+      "instance": "LAB_40_10_500_",
+      "tmax": 63.0
+    },
+    {
+      "index": 19,
+      "instance": "LAB_50_10_500_",
+      "tmax": 63.0
+    },
+    {
+      "index": 20,
+      "instance": "LAB_50_10_500_",
+      "tmax": 75.0
+    },
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "tmax": 21.0
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "tmax": 47.0
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "tmax": 49.0
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "tmax": 38.0
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "tmax": 16.0
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 29,
+      "instance": "APP_10_10_500_",
+      "tmax": 32.0
+    },
+    {
+      "index": 30,
+      "instance": "APP_10_10_500_",
+      "tmax": 37.0
+    },
+    {
+      "index": 31,
+      "instance": "APP_10_20_500_",
+      "tmax": 13.0
+    },
+    {
+      "index": 32,
+      "instance": "APP_10_20_500_",
+      "tmax": 16.0
+    },
+    {
+      "index": 33,
+      "instance": "APP_20_10_500_",
+      "tmax": 43.0
+    },
+    {
+      "index": 34,
+      "instance": "APP_20_10_500_",
+      "tmax": 48.0
+    },
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "tmax": 58.0
+    },
+    {
+      "index": 36,
+      "instance": "APP_30_10_500_",
+      "tmax": 70.0
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "tmax": 85.0
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "tmax": 95.0
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "tmax": 91.0
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "tmax": 100.0
+    }
+  ],
+  "repetitions": 5,
+  "seeds": [
+    900001,
+    900002,
+    900003,
+    900004,
+    900005
+  ],
+  "seconds": 600,
+  "max_workers": 12,
+  "source_sha256": {
+    "stable_solver.py": "fdb3c0afb9f44fd319557a21a8c6904b59f5ad4ade4aa26f8485f03da19245e6",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "engine.py": "b943804045f6df91918b0fe43e67348dd47d660a5e942cef37c4a9e3e4d55089",
+    "run.py": "a740fbca1b155c3ff6037d87b01cb8c7140a67323d581763ee8d02d93f20d95b",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "mip_backend.py": "cbd144b35314c0fed973e65afedebc12c6c14925f73ca34dffff8a11798a3dfe",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+  },
+  "development_seeds": [
+    832273
+  ],
+  "no_warm_start": true,
+  "ordinary_failures_not_replaced": true
+}
