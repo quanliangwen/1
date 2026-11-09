@@ -1,0 +1,211 @@
+{
+  "file": "I014_FROZEN_ENGINEERING_SOURCE.zip",
+  "bytes": 224315,
+  "sha256": "1b93b4eed72b3f82c685a606656747e739c4732cead9d0ba4356550e7039327a",
+  "source_sha256": {
+    "block_exchange.py": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5",
+    "ellipsoid_frontier.py": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "hybrid_schedule.py": "4e46853128575a33919e0546741100f501a4cf2b9b483175489f2ad343eae7ae",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "pair_exchange.py": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "286beb62efc0d389638d14d7cc84b0d9ff6323db8830f5909a1102f9573ec861",
+    "run.py": "95ba34a3178ba68f7f084f4c9eb9bd75f6cfa8ee9557f96aaf1d4482f9ec421c",
+    "s10_kernel.py": "79e2b5496c986b3b4fc81c4dfe1e1ab20b461ee3891cafebc99b2d2076dddeba",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "scope": "frozen20source with numeric/schedule/actual-kernel integration checks and single-cold-engineering registration; not a performance result or new qualified gain",
+  "zip_CRC_passed": true,
+  "files": [
+    {
+      "path": "CASES.json",
+      "bytes": 3231,
+      "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a"
+    },
+    {
+      "path": "check_i014_actual_stages.py",
+      "bytes": 2645,
+      "sha256": "578fea297a6af7f2f937aa46fc570efe18f7282f78d2607d5383be4775506554"
+    },
+    {
+      "path": "check_i014_block_math.py",
+      "bytes": 2942,
+      "sha256": "64386a1faf7f9f5dc3e6195a12ad2d39bc754786c454f5011303ef5790f6bcc0"
+    },
+    {
+      "path": "check_i014_cdf_math.py",
+      "bytes": 1307,
+      "sha256": "7b2f6de8b22725c9785717f135ace724be97142b310357420dc6a028011709f3"
+    },
+    {
+      "path": "check_i014_schedule.py",
+      "bytes": 4359,
+      "sha256": "8ca6ccd616a98dfb5d1d2988ad882294faf31172d19efa37825cd6f6562fda4a"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/block_exchange.py",
+      "bytes": 6364,
+      "sha256": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/ellipsoid_frontier.py",
+      "bytes": 2667,
+      "sha256": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/engine.py",
+      "bytes": 21011,
+      "sha256": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/exact_oracle.py",
+      "bytes": 3081,
+      "sha256": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/hybrid_schedule.py",
+      "bytes": 2207,
+      "sha256": "4e46853128575a33919e0546741100f501a4cf2b9b483175489f2ad343eae7ae"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/instance.py",
+      "bytes": 3883,
+      "sha256": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/lss_vendor.py",
+      "bytes": 23448,
+      "sha256": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/mip_backend.py",
+      "bytes": 1201,
+      "sha256": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/native_evaluator.py",
+      "bytes": 4251,
+      "sha256": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/native_support.py",
+      "bytes": 876,
+      "sha256": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/pair_exchange.py",
+      "bytes": 4927,
+      "sha256": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/portfolio_lns.py",
+      "bytes": 2861,
+      "sha256": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/risk_models.py",
+      "bytes": 4367,
+      "sha256": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/risk_solver.py",
+      "bytes": 3059,
+      "sha256": "286beb62efc0d389638d14d7cc84b0d9ff6323db8830f5909a1102f9573ec861"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/run.py",
+      "bytes": 3325,
+      "sha256": "95ba34a3178ba68f7f084f4c9eb9bd75f6cfa8ee9557f96aaf1d4482f9ec421c"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/s10_kernel.py",
+      "bytes": 10063,
+      "sha256": "79e2b5496c986b3b4fc81c4dfe1e1ab20b461ee3891cafebc99b2d2076dddeba"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/small_counts.py",
+      "bytes": 1701,
+      "sha256": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/small_guidance.py",
+      "bytes": 1437,
+      "sha256": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/stable_solver.py",
+      "bytes": 9198,
+      "sha256": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/candidate/strict_solver.py",
+      "bytes": 9952,
+      "sha256": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/CDF_MATH_CHECK.json",
+      "bytes": 1981,
+      "sha256": "221935271478766a9dafd04fc2e9f7e5b48fa0afeaefc624813024a0c1e62b90"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/engineering39/REGISTRATION.json",
+      "bytes": 2586,
+      "sha256": "f1b41cf4a8981dc8b12b93bb86362a871595c4d0ae44392ca639504dedb8dc27"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/HYBRID_INTEGRATION_CHECK.json",
+      "bytes": 2314,
+      "sha256": "19f505d22c58aac4eb6ace25e94fc1025bef68be7d90eee43321b55262d9a6f1"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/MATH_CHECK.json",
+      "bytes": 7312,
+      "sha256": "3ce67ce0f493e1ce8d8f1f937822e7b26be7a94ac5fdbe85656888b9fddad139"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/PARENT_SOURCE.json",
+      "bytes": 4311,
+      "sha256": "1355ccecc3ec68f2a38f8008adb3ebc9c1fe53a21c15e82c4a1ec12a32d039ca"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/README.md",
+      "bytes": 2243,
+      "sha256": "5f69fc13726c238e741538db82cf43094d378faa9843f10053efc498c341c758"
+    },
+    {
+      "path": "iterations/I014_hybrid_cdf_blocks/SCHEDULE_CHECK.json",
+      "bytes": 2675,
+      "sha256": "9c00cedb546f31e24e384722787c776ff47c92db5b1563601c066cba28bed3f5"
+    },
+    {
+      "path": "RAW_REFERENCE.json",
+      "bytes": 583339,
+      "sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7"
+    },
+    {
+      "path": "register_i014_engineering39.py",
+      "bytes": 1478,
+      "sha256": "e57254d1010ead84cb333dd937393a8fd3022181a1d141430a2f945d4f0c7acd"
+    },
+    {
+      "path": "run_i014_engineering39.py",
+      "bytes": 1760,
+      "sha256": "30ae4e1f6c5c6ec054f3fbc879f6d69b232ae95571b13f5fbaf3c830413a5686"
+    },
+    {
+      "path": "setup_i014_vendor.py",
+      "bytes": 417,
+      "sha256": "57babf2414bcaa8d35d57948777fc781c707219f4ccd9a039a31c0791da61761"
+    }
+  ]
+}
