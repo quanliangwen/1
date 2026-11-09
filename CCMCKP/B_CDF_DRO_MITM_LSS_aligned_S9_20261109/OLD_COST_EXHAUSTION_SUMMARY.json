@@ -1,0 +1,2343 @@
+{
+  "scope": "finite original fixed-seed LSS test on all cost-prefix selections; not a population optimality proof",
+  "rows": [
+    {
+      "index": 21,
+      "old_best": 9.034717299521294,
+      "selections_at_or_below_old_best": 56,
+      "complete": true,
+      "max_LSS_real_probability": 0.9651546,
+      "accepted": 0,
+      "all_cost_prefix_selections_rejected": true
+    },
+    {
+      "index": 22,
+      "old_best": 7.25001317010452,
+      "selections_at_or_below_old_best": 44,
+      "complete": true,
+      "max_LSS_real_probability": 0.971381,
+      "accepted": 0,
+      "all_cost_prefix_selections_rejected": true
+    },
+    {
+      "index": 23,
+      "old_best": 5.239883662982526,
+      "selections_at_or_below_old_best": 25,
+      "complete": true,
+      "max_LSS_real_probability": 0.9794174,
+      "accepted": 0,
+      "all_cost_prefix_selections_rejected": true
+    },
+    {
+      "index": 24,
+      "old_best": 5.239883662982526,
+      "selections_at_or_below_old_best": 25,
+      "complete": true,
+      "max_LSS_real_probability": 0.9854627,
+      "accepted": 5,
+      "all_cost_prefix_selections_rejected": false
+    }
+  ],
+  "results": [
+    {
+      "key": "0d9cdf3c1ca8d598fb63c02a08d270b0fe148b7df145630a2029c2550c1e1188",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        1,
+        2
+      ],
+      "cost": 5.189544529705803,
+      "exit": 0,
+      "wall": 81.57365989685059,
+      "real_probability": 0.7123185
+    },
+    {
+      "key": "734d8c3a0ecb2f750e29a7701d11a734738603832d776f8482c904d7cc8c3e58",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        1,
+        8
+      ],
+      "cost": 3.8336927572412183,
+      "exit": 0,
+      "wall": 38.411229610443115,
+      "real_probability": 0.6431722
+    },
+    {
+      "key": "5bcb9c1d04b07eafeba8fa8e19174044f0050229ab160a972055bb7aefb9080d",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        1,
+        11
+      ],
+      "cost": 3.938654007447528,
+      "exit": 0,
+      "wall": 51.39450407028198,
+      "real_probability": 0.6801851
+    },
+    {
+      "key": "93ab260e0a90b2dac035805251714f59f5602403edac7e776824b97c1b781c04",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        4,
+        2
+      ],
+      "cost": 5.362638284257116,
+      "exit": 0,
+      "wall": 38.993366956710815,
+      "real_probability": 0.721243
+    },
+    {
+      "key": "d8cc581d1087d8f1e8edf6202ed2b981fb8744dc170bdd9742bcb7d13748b6c9",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        4,
+        8
+      ],
+      "cost": 4.006786511792531,
+      "exit": 0,
+      "wall": 35.0958948135376,
+      "real_probability": 0.6647821
+    },
+    {
+      "key": "4e0e0262ac55a9b628745c9da20f753d5cc0ac7eae1cde8728d2f2ba68b52188",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        4,
+        11
+      ],
+      "cost": 4.111747761998841,
+      "exit": 0,
+      "wall": 33.91911554336548,
+      "real_probability": 0.6962587
+    },
+    {
+      "key": "7ec0994a708791a59912bbb55abe6370701a6ad2c8de3e7f8ea940dad9395726",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        7,
+        2
+      ],
+      "cost": 5.309373037035185,
+      "exit": 0,
+      "wall": 40.674877643585205,
+      "real_probability": 0.7401655
+    },
+    {
+      "key": "146da8e813187630394e4b7fe80cd5a2653600bb37d30d8ae639e538396c8cd7",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        7,
+        8
+      ],
+      "cost": 3.9535212645705995,
+      "exit": 0,
+      "wall": 39.333558320999146,
+      "real_probability": 0.6962722
+    },
+    {
+      "key": "afea0bd0841e12791cfc442098ba9b2373675823217573640d2e1280f0619d4a",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        7,
+        11
+      ],
+      "cost": 4.058482514776909,
+      "exit": 0,
+      "wall": 40.91300916671753,
+      "real_probability": 0.7166492
+    },
+    {
+      "key": "2492ce190fc68d16dcb350fc31a501f56953b2cc4eaf808b0a05a1e18e42729a",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        10,
+        2
+      ],
+      "cost": 6.974248659122578,
+      "exit": 0,
+      "wall": 71.35204648971558,
+      "real_probability": 0.8224437
+    },
+    {
+      "key": "b7a6f782abc1f236fdb8f581aa66e20212b4f474ce7421d874569f06cd25399e",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        10,
+        8
+      ],
+      "cost": 5.618396886657992,
+      "exit": 0,
+      "wall": 40.89359664916992,
+      "real_probability": 0.7823
+    },
+    {
+      "key": "f1f2d17a6b28dbbe73d36f7006bf995fad75f60786dc7cdb3935ee61a6872280",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        10,
+        11
+      ],
+      "cost": 5.723358136864302,
+      "exit": 0,
+      "wall": 32.62594795227051,
+      "real_probability": 0.8135976
+    },
+    {
+      "key": "f8fe5401d503719efa6dbf4c8bcf6bedb23e9483554ebe9c451075ccaf4f9013",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        13,
+        2
+      ],
+      "cost": 7.121074822985898,
+      "exit": 0,
+      "wall": 36.79735827445984,
+      "real_probability": 0.8185487
+    },
+    {
+      "key": "3ebacb0d335fcfbc22fe05096a0fb911b3b6573dd1e6443df6713cb176d1443f",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        13,
+        8
+      ],
+      "cost": 5.765223050521312,
+      "exit": 0,
+      "wall": 34.574687480926514,
+      "real_probability": 0.776063
+    },
+    {
+      "key": "ab1f4e8f2011d23eff247dfe751f7c42a3b31d0eb4a15d142aea8a7a15a8d9fb",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        0,
+        13,
+        11
+      ],
+      "cost": 5.870184300727622,
+      "exit": 0,
+      "wall": 43.57731890678406,
+      "real_probability": 0.8001311
+    },
+    {
+      "key": "acbd2825384735a333fc012b0a970c3f76982697f3182ae8e53adec33dcf55dd",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        1,
+        2
+      ],
+      "cost": 5.433186552259359,
+      "exit": 0,
+      "wall": 54.08336615562439,
+      "real_probability": 0.7631408
+    },
+    {
+      "key": "f6974f2bfa45da36fdc8ecf20b985a9f3cc8146ca2d9a8ec3ceca52e0096b351",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        1,
+        8
+      ],
+      "cost": 4.077334779794773,
+      "exit": 0,
+      "wall": 41.70464849472046,
+      "real_probability": 0.7149567
+    },
+    {
+      "key": "d7598853211d9abfee27950e1a94971edeb426f4b2b8d95c28c4fd34fd6fd490",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        1,
+        11
+      ],
+      "cost": 4.182296030001083,
+      "exit": 0,
+      "wall": 52.77284598350525,
+      "real_probability": 0.7450153
+    },
+    {
+      "key": "206c9c210a65e716b5fd6d5932ef285af3628ef4fe746a846be73504c0403fd3",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        4,
+        2
+      ],
+      "cost": 5.606280306810671,
+      "exit": 0,
+      "wall": 35.209033489227295,
+      "real_probability": 0.7801585
+    },
+    {
+      "key": "43d4790ec1fedd847e860c664ead4f0dff38280885e1cf162630488a6dd12a3f",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        4,
+        8
+      ],
+      "cost": 4.250428534346086,
+      "exit": 0,
+      "wall": 36.41820693016052,
+      "real_probability": 0.7304426
+    },
+    {
+      "key": "0fbc4b9d8500fc9d1b9f375ef82c436a5f21e28bea22865a988d6a751d325a03",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        4,
+        11
+      ],
+      "cost": 4.355389784552396,
+      "exit": 0,
+      "wall": 47.3009717464447,
+      "real_probability": 0.763786
+    },
+    {
+      "key": "f85cbcae0f20104943502fed87f306c5ec602926764c982dc3434350f2106281",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        7,
+        2
+      ],
+      "cost": 5.5530150595887395,
+      "exit": 0,
+      "wall": 31.873201847076416,
+      "real_probability": 0.8241167
+    },
+    {
+      "key": "c9c4f510b5fc5cf82d25551fcebf7e5876d6fc20f08479b50ef8489a89ce4ce7",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        7,
+        8
+      ],
+      "cost": 4.197163287124154,
+      "exit": 0,
+      "wall": 27.619426012039185,
+      "real_probability": 0.7567196
+    },
+    {
+      "key": "30c7c5ecdc0234f8e5083748a062ebee5e58597a6818995f2120a49e9c126267",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        7,
+        11
+      ],
+      "cost": 4.302124537330465,
+      "exit": 0,
+      "wall": 29.708197832107544,
+      "real_probability": 0.8128965
+    },
+    {
+      "key": "4fc8c867d8ef32d49204913e0fe0ab40ab5506d52cdf1b7716c2ac4e3ee8dab1",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        10,
+        2
+      ],
+      "cost": 7.217890681676133,
+      "exit": 0,
+      "wall": 41.00915336608887,
+      "real_probability": 0.8569365
+    },
+    {
+      "key": "03586af51357c1e60a97aba5b64d6f06aa4792dad03c30d98591dd1fa931b1b8",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        10,
+        8
+      ],
+      "cost": 5.862038909211548,
+      "exit": 0,
+      "wall": 50.62191343307495,
+      "real_probability": 0.8489697
+    },
+    {
+      "key": "da18d1d0f30c67f16c76227c3af105e517bb95f90abf7f9b3dc5325e4b47f109",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        10,
+        11
+      ],
+      "cost": 5.967000159417858,
+      "exit": 0,
+      "wall": 31.525554895401,
+      "real_probability": 0.8427931
+    },
+    {
+      "key": "f4cce48a06a0743d25e10e04bb5a7a0a1b4b2762ef049bf765d9d6b5c3746198",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        13,
+        2
+      ],
+      "cost": 7.364716845539453,
+      "exit": 0,
+      "wall": 31.446681261062622,
+      "real_probability": 0.8752732
+    },
+    {
+      "key": "f0b4b229f6b058cc726ffd5c363d80bb12123ec1e8d4e9ba39093637447fc2fa",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        13,
+        8
+      ],
+      "cost": 6.008865073074867,
+      "exit": 0,
+      "wall": 31.33744764328003,
+      "real_probability": 0.8482414
+    },
+    {
+      "key": "47d59783a71ea76a44be47259b753f2b5d46dd87bed8cb6d6ceab9f6b5a23ef4",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        6,
+        13,
+        11
+      ],
+      "cost": 6.113826323281177,
+      "exit": 0,
+      "wall": 41.40005302429199,
+      "real_probability": 0.8574023
+    },
+    {
+      "key": "ebdc70d2200357bca36a58b72d773ed60144f196bd148815789fb80fab80b366",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        1,
+        2
+      ],
+      "cost": 6.1774441102687305,
+      "exit": 0,
+      "wall": 59.35007405281067,
+      "real_probability": 0.8077098
+    },
+    {
+      "key": "3963ff26c1be0407fff32c994e492ff099b64bee4659780915782f2678ad2520",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        1,
+        8
+      ],
+      "cost": 4.8215923378041445,
+      "exit": 0,
+      "wall": 42.443907260894775,
+      "real_probability": 0.7545794
+    },
+    {
+      "key": "0c807c38b6796d50a9f18d39917ce1205f4a65c81d9960dd59a87b4df04a0e0f",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        1,
+        11
+      ],
+      "cost": 4.926553588010455,
+      "exit": 0,
+      "wall": 38.693944692611694,
+      "real_probability": 0.7996354
+    },
+    {
+      "key": "e4b888009e211ae7f3a83abf56b00543674f25ff0a6f71ade6b02623415dcc90",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        4,
+        2
+      ],
+      "cost": 6.350537864820043,
+      "exit": 0,
+      "wall": 41.58955955505371,
+      "real_probability": 0.8194745
+    },
+    {
+      "key": "8ebc880f746de5c2ec4f93c2e728f28bf1bfeb6e9630c08f6f5c3ea9137bc346",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        4,
+        8
+      ],
+      "cost": 4.994686092355458,
+      "exit": 0,
+      "wall": 28.95136284828186,
+      "real_probability": 0.7718597
+    },
+    {
+      "key": "77034242c1d4ff9885554647dfbb2827eb95265cc6b7ee3200c59c4ae548e6b4",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        4,
+        11
+      ],
+      "cost": 5.099647342561768,
+      "exit": 0,
+      "wall": 35.50858783721924,
+      "real_probability": 0.8094078
+    },
+    {
+      "key": "e8d1cce3e53b52479db93a9da58460b7ae80b75776adf45478846244bd4d1519",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        7,
+        2
+      ],
+      "cost": 6.297272617598111,
+      "exit": 0,
+      "wall": 39.656912326812744,
+      "real_probability": 0.836989
+    },
+    {
+      "key": "8aed350ee91ae8c3dcdaa816d9ae7e28951f6eb72b33251609e7598ea9b57bcb",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        7,
+        8
+      ],
+      "cost": 4.941420845133526,
+      "exit": 0,
+      "wall": 32.368640661239624,
+      "real_probability": 0.8072128
+    },
+    {
+      "key": "1d2c8ebf512081237365bf8a7fbefc860ba54e0af83441d482825b26687d6063",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        7,
+        11
+      ],
+      "cost": 5.046382095339836,
+      "exit": 0,
+      "wall": 55.40506839752197,
+      "real_probability": 0.8313744
+    },
+    {
+      "key": "e3a2cf77490089ee7241431345cb0d2946fd4aa32bac33bfebef3792a405ac99",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        10,
+        2
+      ],
+      "cost": 7.962148239685504,
+      "exit": 0,
+      "wall": 54.08537983894348,
+      "real_probability": 0.9063067
+    },
+    {
+      "key": "c87c4d4cca2aa63958c576b07a0a39b2da492595491cd2a59a30a3dc75c07a47",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        10,
+        8
+      ],
+      "cost": 6.606296467220919,
+      "exit": 0,
+      "wall": 28.190052032470703,
+      "real_probability": 0.8891211
+    },
+    {
+      "key": "f91e9fb495d5f80c20cc56e19afb24a37380753f5bfff69330155dde8c50924c",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        10,
+        11
+      ],
+      "cost": 6.711257717427229,
+      "exit": 0,
+      "wall": 46.19605994224548,
+      "real_probability": 0.8710701
+    },
+    {
+      "key": "8e58370bc0d8fe2e68c0f8f3739a04bb10a8d1bfe89bb814bd6e85967b0afa01",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        13,
+        2
+      ],
+      "cost": 8.108974403548824,
+      "exit": 0,
+      "wall": 47.67661499977112,
+      "real_probability": 0.92315
+    },
+    {
+      "key": "dd8004b22e9d19f131a1d1373533515a75ea65d417acea85ea3e8eed7bdf582f",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        13,
+        8
+      ],
+      "cost": 6.753122631084239,
+      "exit": 0,
+      "wall": 42.301061391830444,
+      "real_probability": 0.9004307
+    },
+    {
+      "key": "cdaffd2b46bb2ccad1848725eb2b5a1fc59c5f579afe12fd74aa515bf03d775b",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        9,
+        13,
+        11
+      ],
+      "cost": 6.85808388129055,
+      "exit": 0,
+      "wall": 30.406535387039185,
+      "real_probability": 0.8992552
+    },
+    {
+      "key": "b8264b836319738ba710b6f36847cc96b3b47ae10699ee89e7b015f6c123f12f",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        1,
+        2
+      ],
+      "cost": 8.500903692362796,
+      "exit": 0,
+      "wall": 26.31374716758728,
+      "real_probability": 0.8850753
+    },
+    {
+      "key": "565212fc518c51c59beb8def5def6dfc2dac603d5b2518a0a9e64d08bb7ad9d6",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        1,
+        8
+      ],
+      "cost": 7.14505191989821,
+      "exit": 0,
+      "wall": 33.665998458862305,
+      "real_probability": 0.8473964
+    },
+    {
+      "key": "ebd3585c4e374512a31b63ac05307667895b965129c99c86979d2f3bafdc9393",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        1,
+        11
+      ],
+      "cost": 7.25001317010452,
+      "exit": 0,
+      "wall": 25.85922884941101,
+      "real_probability": 0.8690267
+    },
+    {
+      "key": "5a5eec9b994ad378309b6a34bd678b7ad93952561d906da9f9426ab2cb59d837",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        4,
+        2
+      ],
+      "cost": 8.673997446914107,
+      "exit": 0,
+      "wall": 29.95331048965454,
+      "real_probability": 0.9029137
+    },
+    {
+      "key": "4691d671a8b5da1e1e266af84633ab7556affdc6ade7f1fa75696363b51ecc90",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        4,
+        8
+      ],
+      "cost": 7.318145674449522,
+      "exit": 0,
+      "wall": 15.191611289978027,
+      "real_probability": 0.8648187
+    },
+    {
+      "key": "df9534ce6568c6589fc3d5ed8fd901b27a513511c28a27e45649df4601e1753c",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        4,
+        11
+      ],
+      "cost": 7.4231069246558326,
+      "exit": 0,
+      "wall": 16.8063907623291,
+      "real_probability": 0.8848272
+    },
+    {
+      "key": "6ff08740df589a467bef0265fbe5ecc07aef668188767505db21138e6d885e11",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        7,
+        2
+      ],
+      "cost": 8.620732199692176,
+      "exit": 0,
+      "wall": 31.25460648536682,
+      "real_probability": 0.9017201
+    },
+    {
+      "key": "8bb8fa7e6628b0061750dcc9652eeb6750a45952bb6e9936c8ad2f1c9a571dfe",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        7,
+        8
+      ],
+      "cost": 7.264880427227591,
+      "exit": 0,
+      "wall": 16.114112854003906,
+      "real_probability": 0.8843405
+    },
+    {
+      "key": "6569f6fde6d776d748b86f2fa247430d5779fa1e4b44539cb0bebfce3db562bc",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        7,
+        11
+      ],
+      "cost": 7.369841677433901,
+      "exit": 0,
+      "wall": 26.011593341827393,
+      "real_probability": 0.8889142
+    },
+    {
+      "key": "26573c7e935d6d8c02b2e8986266e20eb08d2bb15359a9eb4782821072c273a1",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        10,
+        8
+      ],
+      "cost": 8.929756049314985,
+      "exit": 0,
+      "wall": 21.847583770751953,
+      "real_probability": 0.9608361
+    },
+    {
+      "key": "3f989d32a3ca7c545de03bbf89b934d24d828b7f60235b9751692c72338df381",
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "capacity": 21.0,
+      "selection": [
+        12,
+        10,
+        11
+      ],
+      "cost": 9.034717299521294,
+      "exit": 0,
+      "reused_reference": "/home/quanliangwen/work/cdf_feasible_S2_20261109/lss_common/3f989d32a3ca7c545de03bbf89b934d24d828b7f60235b9751692c72338df381.json",
+      "real_probability": 0.9651546
+    },
+    {
+      "key": "4582fae2208f6a4d97304678f5dd48dcf739ea6fc35ff3fd8f8a7b168045aa38",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        1,
+        2
+      ],
+      "cost": 5.189544529705803,
+      "exit": 0,
+      "wall": 55.565041303634644,
+      "real_probability": 0.8555699
+    },
+    {
+      "key": "676636a834606d1a39c2e5a59d98225fc6554170f9b6d3592e2ed625eba86fa5",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        1,
+        8
+      ],
+      "cost": 3.8336927572412183,
+      "exit": 0,
+      "wall": 31.345104217529297,
+      "real_probability": 0.8060925
+    },
+    {
+      "key": "5777fa64ac744dca639cc5ca61b13d0381d78fa116a7cd5ced8fc5fd8e5b2edf",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        1,
+        11
+      ],
+      "cost": 3.938654007447528,
+      "exit": 0,
+      "wall": 45.84189295768738,
+      "real_probability": 0.8313813
+    },
+    {
+      "key": "e03fed0ae866fe3aa1001be77d3fd58f9fc04312471c1eeed87f3790c14ce00a",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        4,
+        2
+      ],
+      "cost": 5.362638284257116,
+      "exit": 0,
+      "wall": 26.370497941970825,
+      "real_probability": 0.8737941
+    },
+    {
+      "key": "ccb71986b16476e69d5a8497fb2754e4f6fb24f8c12fa277c0a3e285ec099a08",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        4,
+        8
+      ],
+      "cost": 4.006786511792531,
+      "exit": 0,
+      "wall": 22.99820065498352,
+      "real_probability": 0.8269934
+    },
+    {
+      "key": "f022817d950b07b276faf4de62649a7f26073e7ddb2b25a7a7fcd290ac16b6d7",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        4,
+        11
+      ],
+      "cost": 4.111747761998841,
+      "exit": 0,
+      "wall": 34.46764063835144,
+      "real_probability": 0.8503003
+    },
+    {
+      "key": "2abe2429a6a8c349ac61ae9546b91a91da10ce26e3f762f014a92f2390a52344",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        7,
+        2
+      ],
+      "cost": 5.309373037035185,
+      "exit": 0,
+      "wall": 36.65080785751343,
+      "real_probability": 0.8802862
+    },
+    {
+      "key": "2c02d427bdd24de0f8883807760b6c1a4bda659c5bbea7535297e7050d554b2f",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        7,
+        8
+      ],
+      "cost": 3.9535212645705995,
+      "exit": 0,
+      "wall": 28.16246747970581,
+      "real_probability": 0.8513543
+    },
+    {
+      "key": "1c53f0a20d1bc4daa27ad81782b053eb6050b8002316229d8d852e6a60b68062",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        7,
+        11
+      ],
+      "cost": 4.058482514776909,
+      "exit": 0,
+      "wall": 28.35875415802002,
+      "real_probability": 0.8561019
+    },
+    {
+      "key": "b700d63d90e41aac63f26e7ba723f93d81a186d6640ecc2552b2657d0e06fee3",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        10,
+        2
+      ],
+      "cost": 6.974248659122578,
+      "exit": 0,
+      "wall": 34.330078125,
+      "real_probability": 0.9485681
+    },
+    {
+      "key": "091656920ab5898c06bbe0ef9dd5df24cc5f3c8bb6b5d371ead11135d375c839",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        10,
+        8
+      ],
+      "cost": 5.618396886657992,
+      "exit": 0,
+      "wall": 27.299206495285034,
+      "real_probability": 0.9349285
+    },
+    {
+      "key": "2e7b1845408c3810924e6329e657068cd3185f4f9ee250efff7883bfa15864ee",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        10,
+        11
+      ],
+      "cost": 5.723358136864302,
+      "exit": 0,
+      "wall": 33.762742042541504,
+      "real_probability": 0.9401128
+    },
+    {
+      "key": "244072f08a68d408aa77c41e9ad87c71ca12de1bba06e467aa241901d7dfe9ba",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        13,
+        2
+      ],
+      "cost": 7.121074822985898,
+      "exit": 0,
+      "wall": 22.817368030548096,
+      "real_probability": 0.9463383
+    },
+    {
+      "key": "17b6a718a75dcfa407e49dc59146ff865140626576652a588495e9adf02dc966",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        13,
+        8
+      ],
+      "cost": 5.765223050521312,
+      "exit": 0,
+      "wall": 22.08829379081726,
+      "real_probability": 0.9335226
+    },
+    {
+      "key": "dcd59a20a4d799d03abecd693a55c3303e4ce9cbd10f99bed48e3b825c8f6062",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        0,
+        13,
+        11
+      ],
+      "cost": 5.870184300727622,
+      "exit": 0,
+      "wall": 32.47985076904297,
+      "real_probability": 0.9411593
+    },
+    {
+      "key": "f641b3f52daa0b2433702bca88002aec33b1c253c6beef9d3c3713f3368f6a7b",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        1,
+        2
+      ],
+      "cost": 5.433186552259359,
+      "exit": 0,
+      "wall": 28.60351848602295,
+      "real_probability": 0.8974934
+    },
+    {
+      "key": "497e9a6d636ef83407259ffcb795a1f5240c962f0e36e80efdf8fdbaa4addab2",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        1,
+        8
+      ],
+      "cost": 4.077334779794773,
+      "exit": 0,
+      "wall": 25.080878973007202,
+      "real_probability": 0.8778476
+    },
+    {
+      "key": "a18d4031007f803360d920320607cc7544154500b34aff7ca17ba3dc8c727cb4",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        1,
+        11
+      ],
+      "cost": 4.182296030001083,
+      "exit": 0,
+      "wall": 25.164801120758057,
+      "real_probability": 0.876949
+    },
+    {
+      "key": "2d9704a3110449264b67e4ea8b86ef7ec02082b2d506ef11a2274b36b3f13c67",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        4,
+        2
+      ],
+      "cost": 5.606280306810671,
+      "exit": 0,
+      "wall": 25.18153190612793,
+      "real_probability": 0.9094592
+    },
+    {
+      "key": "d594d90d59b8f3bcb6858761a3d8e2accf2f1bbb20c25ea5a0d767dc86aef12b",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        4,
+        8
+      ],
+      "cost": 4.250428534346086,
+      "exit": 0,
+      "wall": 21.54892063140869,
+      "real_probability": 0.8907626
+    },
+    {
+      "key": "c45b1cbb6d11eeece5d1884150a945f0173bf0c349c13c0d3923ac3fcb1d50da",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        4,
+        11
+      ],
+      "cost": 4.355389784552396,
+      "exit": 0,
+      "wall": 20.852437496185303,
+      "real_probability": 0.8905124
+    },
+    {
+      "key": "c451142872261e88faa1f346f1385493ca69b6cb1851d2f05808ae078b8d3428",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        7,
+        2
+      ],
+      "cost": 5.5530150595887395,
+      "exit": 0,
+      "wall": 24.46444606781006,
+      "real_probability": 0.9000501
+    },
+    {
+      "key": "c50c03c974341ee5eb9cb8e092a7d697b47b1ef65731d8534ccce006d9b26bfd",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        7,
+        8
+      ],
+      "cost": 4.197163287124154,
+      "exit": 0,
+      "wall": 26.815213203430176,
+      "real_probability": 0.8919256
+    },
+    {
+      "key": "ecd956c523a4357cdbee1d1ec95b92125b2ec8032130a2ab519cdc7030414380",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        7,
+        11
+      ],
+      "cost": 4.302124537330465,
+      "exit": 0,
+      "wall": 22.003441333770752,
+      "real_probability": 0.8772143
+    },
+    {
+      "key": "3627b48960abcc0b3edbc02ebfcfa0ced285a2586b5d641d1f3fc30d584ac589",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        10,
+        2
+      ],
+      "cost": 7.217890681676133,
+      "exit": 0,
+      "wall": 28.132372617721558,
+      "real_probability": 0.9647793
+    },
+    {
+      "key": "7d6c6c0179d8c68365aa3f1ede30c1dcc9f57187a1df1e21bd7f8f664f22339c",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        10,
+        8
+      ],
+      "cost": 5.862038909211548,
+      "exit": 0,
+      "wall": 28.18746304512024,
+      "real_probability": 0.9501526
+    },
+    {
+      "key": "7cd29fb5f5f1a85a52076a1aac1a738387c4048865cba68295bfa069ba19ac2e",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        10,
+        11
+      ],
+      "cost": 5.967000159417858,
+      "exit": 0,
+      "wall": 23.363441705703735,
+      "real_probability": 0.9624382
+    },
+    {
+      "key": "acfc4f16867db5fb7ea683f229197be7aa54af6878a7b081f561cd764cf30bc5",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        13,
+        8
+      ],
+      "cost": 6.008865073074867,
+      "exit": 0,
+      "wall": 20.948639631271362,
+      "real_probability": 0.9482977
+    },
+    {
+      "key": "5a5d6486aa3210b90ef618bed05d642d7bb5d5c6ab31ac2823cf345aca71e777",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        6,
+        13,
+        11
+      ],
+      "cost": 6.113826323281177,
+      "exit": 0,
+      "wall": 20.89467191696167,
+      "real_probability": 0.9564846
+    },
+    {
+      "key": "41d8f94e61d6fae7adb42197e474a7bc85cc765a402914de3fae0aefccece2d1",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        1,
+        2
+      ],
+      "cost": 6.1774441102687305,
+      "exit": 0,
+      "wall": 21.653281211853027,
+      "real_probability": 0.941406
+    },
+    {
+      "key": "e15ba7ed48faa9faf9e2144b7f955299fe663e2c62f536626d93dd539cca4c32",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        1,
+        8
+      ],
+      "cost": 4.8215923378041445,
+      "exit": 0,
+      "wall": 29.331287622451782,
+      "real_probability": 0.9232642
+    },
+    {
+      "key": "a4aa0879fa2681e0e225e67855d48349d72f3ad646fde0a7ef1b01effee83a5b",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        1,
+        11
+      ],
+      "cost": 4.926553588010455,
+      "exit": 0,
+      "wall": 26.411845207214355,
+      "real_probability": 0.9250962
+    },
+    {
+      "key": "033145c7a5975a2c86607baa53349adbb264baee6d8a87b00cf1db8535c84093",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        4,
+        2
+      ],
+      "cost": 6.350537864820043,
+      "exit": 0,
+      "wall": 19.243435382843018,
+      "real_probability": 0.9449807
+    },
+    {
+      "key": "e946789051219041cc4b796ecbf0f394744a7118ce5da26cdf16cac52dd80059",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        4,
+        8
+      ],
+      "cost": 4.994686092355458,
+      "exit": 0,
+      "wall": 26.362287759780884,
+      "real_probability": 0.9294481
+    },
+    {
+      "key": "fba47c9dbcf672a0fa3894e96c778adc9178f4d5f0bd0a0e752332caedc38441",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        4,
+        11
+      ],
+      "cost": 5.099647342561768,
+      "exit": 0,
+      "wall": 24.307018995285034,
+      "real_probability": 0.9327157
+    },
+    {
+      "key": "b36656dcab8054511014f7d2cf5375c97dc65419e2169136c0bcb7e7feabacda",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        7,
+        2
+      ],
+      "cost": 6.297272617598111,
+      "exit": 0,
+      "wall": 26.66569232940674,
+      "real_probability": 0.9560883
+    },
+    {
+      "key": "3245ac6adda598e8abfb8df8e5a52830c6b10fe42172ab21b60d0e3f8c675a0c",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        7,
+        8
+      ],
+      "cost": 4.941420845133526,
+      "exit": 0,
+      "wall": 27.853727102279663,
+      "real_probability": 0.9317036
+    },
+    {
+      "key": "8406f70ad0aca2a2261c4d919733a48243b7606dc4120bc71d7fb8551c6a4a1d",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        7,
+        11
+      ],
+      "cost": 5.046382095339836,
+      "exit": 0,
+      "wall": 22.941391468048096,
+      "real_probability": 0.9438659
+    },
+    {
+      "key": "b2552c54efc03f7edd6a814deea628d3d459146c128c149082b3986fdb9a345a",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        10,
+        8
+      ],
+      "cost": 6.606296467220919,
+      "exit": 0,
+      "wall": 20.792879343032837,
+      "real_probability": 0.9612193
+    },
+    {
+      "key": "260529745b2728db97df1775e8b9cf4e1fd9ac4da1b3cf4a49e7ae652a5381d7",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        10,
+        11
+      ],
+      "cost": 6.711257717427229,
+      "exit": 0,
+      "wall": 24.997859954833984,
+      "real_probability": 0.9654318
+    },
+    {
+      "key": "5c92d7943064ed6a36e0121a1f864dc2b57afd66a9c78682f033faa6143dde5f",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        13,
+        8
+      ],
+      "cost": 6.753122631084239,
+      "exit": 0,
+      "wall": 20.235393285751343,
+      "real_probability": 0.9575006
+    },
+    {
+      "key": "28f1bea68be2caa020135a9f8247995fac83ccf173f37cbe11a5ee107da25825",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        9,
+        13,
+        11
+      ],
+      "cost": 6.85808388129055,
+      "exit": 0,
+      "wall": 20.898234367370605,
+      "real_probability": 0.9648627
+    },
+    {
+      "key": "02111ed0f6c5acc935f45856b59163b5f5aad2243b89308b03c546c0d843d655",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        12,
+        1,
+        8
+      ],
+      "cost": 7.14505191989821,
+      "exit": 0,
+      "wall": 17.18762445449829,
+      "real_probability": 0.9680278
+    },
+    {
+      "key": "b6cd5ac0b9bbe50c2dcc2e97260aafac42c166007d6a226a9873a8ef73896b8d",
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "capacity": 27.0,
+      "selection": [
+        12,
+        1,
+        11
+      ],
+      "cost": 7.25001317010452,
+      "exit": 0,
+      "reused_reference": "development_lss/case_22.json",
+      "real_probability": 0.971381
+    },
+    {
+      "key": "c2958a1f01749b990dab8b5034f0ea27349a3c91aa35b7d78c84fe21da10fd5f",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        0,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.992464606537698,
+      "exit": 0,
+      "wall": 34.35190987586975,
+      "real_probability": 0.9711799
+    },
+    {
+      "key": "54a7e2220e81f9d94ae5a5d027a7adaac5777946489fc290cbafb821d33b87b0",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        0,
+        9,
+        14,
+        7
+      ],
+      "cost": 5.051670756693193,
+      "exit": 0,
+      "wall": 29.324323654174805,
+      "real_probability": 0.9794174
+    },
+    {
+      "key": "e16d1185a1581bf8823dc94959d7ddc0df0a0fc6b37120b6161b49fb659cc5b1",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        0,
+        17,
+        14,
+        7
+      ],
+      "cost": 5.07031677087365,
+      "exit": 0,
+      "wall": 27.016550064086914,
+      "real_probability": 0.9794174
+    },
+    {
+      "key": "658c660690464670934d6fa973797db6d2534bbc9e1faf750d285a62f26e7cde",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        1,
+        2,
+        7
+      ],
+      "cost": 5.180815675374059,
+      "exit": 0,
+      "wall": 29.629311084747314,
+      "real_probability": 0.9611734
+    },
+    {
+      "key": "91230912b284b5048ff222af894f8072453a2611e54327c9193f7013bd7ce5b9",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        1,
+        10,
+        7
+      ],
+      "cost": 5.0448211696599365,
+      "exit": 0,
+      "wall": 29.01776695251465,
+      "real_probability": 0.952896
+    },
+    {
+      "key": "d89b19dbd3308844afed35ab02e4085e4e880de7659d5985e991be4f9168fff1",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.746734313963662,
+      "exit": 0,
+      "wall": 37.65426778793335,
+      "real_probability": 0.9547684
+    },
+    {
+      "key": "83f9d50639448408428fc08e2a2e626fa61df780425216d83f5bc811bce1494d",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        1,
+        18,
+        7
+      ],
+      "cost": 5.195768339272813,
+      "exit": 0,
+      "wall": 29.934581995010376,
+      "real_probability": 0.9611734
+    },
+    {
+      "key": "781536aff38cb55590d554ec76d28d3250afff11ec29f97f84e588865340a3f7",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        5,
+        14,
+        7
+      ],
+      "cost": 5.063170837600417,
+      "exit": 0,
+      "wall": 38.3627405166626,
+      "real_probability": 0.9632465
+    },
+    {
+      "key": "d03a0d22f6360d51afacf285c77cfc174befeb9fb58b28a6f721f5d4ae47c99c",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        9,
+        10,
+        7
+      ],
+      "cost": 5.104027319815431,
+      "exit": 0,
+      "wall": 24.26179313659668,
+      "real_probability": 0.9667478
+    },
+    {
+      "key": "545e0c6e18fb7630e64eeaa99dd45cfca1a3130a44476c37b86405d4e027f140",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        9,
+        14,
+        7
+      ],
+      "cost": 4.805940464119159,
+      "exit": 0,
+      "wall": 30.22536563873291,
+      "real_probability": 0.9693395
+    },
+    {
+      "key": "d63b99285d83e7b306adb3ee686ec7d3d6d68ac7104a21b3499c773afcb1d588",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        13,
+        14,
+        7
+      ],
+      "cost": 5.046101995628759,
+      "exit": 0,
+      "wall": 29.98161029815674,
+      "real_probability": 0.9693395
+    },
+    {
+      "key": "49b7be4f6db2f0182fcf47ba126aab0ac262b2ea189b1d955f32c01e83a8839b",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        17,
+        10,
+        7
+      ],
+      "cost": 5.1226733339958885,
+      "exit": 0,
+      "wall": 24.318028450012207,
+      "real_probability": 0.9667478
+    },
+    {
+      "key": "e32762b8b050742a565c2d77e3de09d1258c9f50b1f5bd6c2362b79a96a24351",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        8,
+        17,
+        14,
+        7
+      ],
+      "cost": 4.824586478299615,
+      "exit": 0,
+      "wall": 30.740097045898438,
+      "real_probability": 0.9693395
+    },
+    {
+      "key": "ee8f3a0e3e78a0cbd0445c781a7e160a25b5cdcd76b99826675f73e6ffa5b85d",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        12,
+        1,
+        14,
+        7
+      ],
+      "cost": 5.034687437990053,
+      "exit": 0,
+      "wall": 34.24653768539429,
+      "real_probability": 0.9682531
+    },
+    {
+      "key": "067735ce57587cbb62edc71bb01698f354c8501e7cc1ae4470291994ecd071ed",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        12,
+        9,
+        14,
+        7
+      ],
+      "cost": 5.09389358814555,
+      "exit": 0,
+      "wall": 26.729769706726074,
+      "real_probability": 0.9774556
+    },
+    {
+      "key": "0b56c0ed63a0adfdafdd8a48dc08e2eb24a3a2f6958193decd5aa74b1ef6ad86",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        12,
+        17,
+        14,
+        7
+      ],
+      "cost": 5.112539602326006,
+      "exit": 0,
+      "wall": 26.82678246498108,
+      "real_probability": 0.9774556
+    },
+    {
+      "key": "cb5a362f7af6ca20d623ce7f43b50d5a2043715c15f3c6da246c4cb2791453de",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        1,
+        2,
+        7
+      ],
+      "cost": 5.239883662982526,
+      "exit": 0,
+      "reused_reference": "/home/quanliangwen/work/cdf_feasible_S2_20261109/lss_common/cb5a362f7af6ca20d623ce7f43b50d5a2043715c15f3c6da246c4cb2791453de.json",
+      "real_probability": 0.9731601
+    },
+    {
+      "key": "cf3affcf5b000834d3c3a6b8ed5f736014cb807b5c8d278574d1e155ee1da983",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        1,
+        10,
+        7
+      ],
+      "cost": 5.103889157268403,
+      "exit": 0,
+      "wall": 25.4213285446167,
+      "real_probability": 0.96808
+    },
+    {
+      "key": "7f54170454b36ba071100b8768c553feebc614d6612627bbfd3ac5fa92d77844",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.805802301572129,
+      "exit": 0,
+      "wall": 32.54066705703735,
+      "real_probability": 0.9709116
+    },
+    {
+      "key": "fe35c0ba89dca5a9471a2d788755a134ea733c61a4f86498d359c5be5aa33de3",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        5,
+        14,
+        7
+      ],
+      "cost": 5.122238825208884,
+      "exit": 0,
+      "wall": 32.19729948043823,
+      "real_probability": 0.9777202
+    },
+    {
+      "key": "d93244bbc6e5371a904ed6f6a33617b27e4abfe65f12e73cdfd15704632e1d61",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        9,
+        10,
+        7
+      ],
+      "cost": 5.163095307423898,
+      "exit": 0,
+      "wall": 19.997591018676758,
+      "real_probability": 0.9774353
+    },
+    {
+      "key": "df52394cc4a8fc80ad81dc8add6e708bf65bcf940badf6314b7fb3606aa53420",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        9,
+        14,
+        7
+      ],
+      "cost": 4.8650084517276255,
+      "exit": 0,
+      "wall": 27.632628679275513,
+      "real_probability": 0.9792476
+    },
+    {
+      "key": "58e295002e06e623cca9359e61971714b577a47574ca00f75fa9f94187506faf",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        13,
+        14,
+        7
+      ],
+      "cost": 5.105169983237225,
+      "exit": 0,
+      "wall": 29.39386773109436,
+      "real_probability": 0.9792476
+    },
+    {
+      "key": "10c07dffb31e9a86af7d1608c7c5740a16ab52eea99230d1896b07468bdf3c67",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        17,
+        10,
+        7
+      ],
+      "cost": 5.181741321604354,
+      "exit": 0,
+      "wall": 22.15010166168213,
+      "real_probability": 0.9774353
+    },
+    {
+      "key": "8040e8ebac4eeef2ac32489de56518ab5fb494c11c16ec61b347eac34803367a",
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "capacity": 47.0,
+      "selection": [
+        16,
+        17,
+        14,
+        7
+      ],
+      "cost": 4.883654465908082,
+      "exit": 0,
+      "wall": 29.680431365966797,
+      "real_probability": 0.9792476
+    },
+    {
+      "key": "8c4fa5143ea6b7472a1426f9e479b34135ebc8a54f4f5976ea45104c7c20eedb",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        0,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.992464606537698,
+      "exit": 0,
+      "wall": 29.04773187637329,
+      "real_probability": 0.9800486
+    },
+    {
+      "key": "9350a48596edd90c64f0f006b223b04c0ae1da346a76787816a7a643677911ef",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        0,
+        9,
+        14,
+        7
+      ],
+      "cost": 5.051670756693193,
+      "exit": 0,
+      "wall": 28.28972578048706,
+      "real_probability": 0.9854627
+    },
+    {
+      "key": "c783d6e0b36c6074c989cf88d599ae9dbee52b5e1779aff34dfe6cfda32d0183",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        0,
+        17,
+        14,
+        7
+      ],
+      "cost": 5.07031677087365,
+      "exit": 0,
+      "wall": 30.338388681411743,
+      "real_probability": 0.9854627
+    },
+    {
+      "key": "ef200c1f9527d337b59300fc9d9867e668b4d516d9f93ccb5ac7c5f704499296",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        1,
+        2,
+        7
+      ],
+      "cost": 5.180815675374059,
+      "exit": 0,
+      "wall": 27.664251565933228,
+      "real_probability": 0.9709885
+    },
+    {
+      "key": "af099817ac115c9b5ed1611ce1033549615c3389e1512d01bf0b826049816bd0",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        1,
+        10,
+        7
+      ],
+      "cost": 5.0448211696599365,
+      "exit": 0,
+      "wall": 27.626431226730347,
+      "real_probability": 0.9634894
+    },
+    {
+      "key": "aad8f2747054de9d90505e415a8c8271a840d262aca388175c543c36bc400f71",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.746734313963662,
+      "exit": 0,
+      "wall": 35.364267110824585,
+      "real_probability": 0.966022
+    },
+    {
+      "key": "867d4aac4f1a0d5c57f1f94e4f97f6a8358242c5c7d73fc5cde0a9c1a5d51b40",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        1,
+        18,
+        7
+      ],
+      "cost": 5.195768339272813,
+      "exit": 0,
+      "wall": 27.579646110534668,
+      "real_probability": 0.9709885
+    },
+    {
+      "key": "b45882f6682086d9f80715f95d79ae269f38e7d3a86f661f77288a16bfb37f5a",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        5,
+        14,
+        7
+      ],
+      "cost": 5.063170837600417,
+      "exit": 0,
+      "wall": 36.91677737236023,
+      "real_probability": 0.9754317
+    },
+    {
+      "key": "229880481e6d3e2118e8d88457016ac7e8a2d8f6103ee640a0011c48f798ebb0",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        9,
+        10,
+        7
+      ],
+      "cost": 5.104027319815431,
+      "exit": 0,
+      "wall": 27.068814516067505,
+      "real_probability": 0.976878
+    },
+    {
+      "key": "464449095d601291b54c518d741bcfb137c7c8de9c537e66d799975fb1b90df2",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        9,
+        14,
+        7
+      ],
+      "cost": 4.805940464119159,
+      "exit": 0,
+      "wall": 29.179686546325684,
+      "real_probability": 0.9788171
+    },
+    {
+      "key": "9a1aa893640cfd10ba31182aed2a52f1e1463c9fc93ef6d791ea508cc78231af",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        13,
+        14,
+        7
+      ],
+      "cost": 5.046101995628759,
+      "exit": 0,
+      "wall": 27.320626258850098,
+      "real_probability": 0.9788171
+    },
+    {
+      "key": "8c07eef2492895b06542482d28fe8d084d32483a766777fd77bc3148fbcb831b",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        17,
+        10,
+        7
+      ],
+      "cost": 5.1226733339958885,
+      "exit": 0,
+      "wall": 22.702298879623413,
+      "real_probability": 0.976878
+    },
+    {
+      "key": "63c689e339ddf8431571aa082b0ceb772c553d40c05c251c45cf5d10273a7d3e",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        8,
+        17,
+        14,
+        7
+      ],
+      "cost": 4.824586478299615,
+      "exit": 0,
+      "wall": 36.360565423965454,
+      "real_probability": 0.9788171
+    },
+    {
+      "key": "dd1ce4cf0a796b2c669e2cae73e5386e442d653ea3dfa1ccd36db474ab6d311b",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        12,
+        1,
+        14,
+        7
+      ],
+      "cost": 5.034687437990053,
+      "exit": 0,
+      "wall": 32.39163279533386,
+      "real_probability": 0.9782515
+    },
+    {
+      "key": "dc759f01f85d10fe84d982eac74f9bb6b56077e590682abae5e65c64335b94ba",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        12,
+        9,
+        14,
+        7
+      ],
+      "cost": 5.09389358814555,
+      "exit": 0,
+      "wall": 28.58170485496521,
+      "real_probability": 0.9842118
+    },
+    {
+      "key": "e9a50d8f451ffac5a8e9e6a8413596b06442f75232ccc1bc2b10d7574e3bf3a9",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        12,
+        17,
+        14,
+        7
+      ],
+      "cost": 5.112539602326006,
+      "exit": 0,
+      "wall": 35.0481379032135,
+      "real_probability": 0.9842118
+    },
+    {
+      "key": "de29557f030a0a9bf4290a1e067065cbf897d445fc5255fafa10b04bba4b73fd",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        1,
+        2,
+        7
+      ],
+      "cost": 5.239883662982526,
+      "exit": 0,
+      "reused_reference": "development_lss/case_24.json",
+      "real_probability": 0.9812081
+    },
+    {
+      "key": "3ed84a58692d5672471f1ad8cc23857cb044b946db7070dae577bbbdefbf773c",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        1,
+        10,
+        7
+      ],
+      "cost": 5.103889157268403,
+      "exit": 0,
+      "wall": 35.154030323028564,
+      "real_probability": 0.9782904
+    },
+    {
+      "key": "2d1978f00c105d39ad2982f781042acbe4812c808e9e861ebfad7acbf9ba7522",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        1,
+        14,
+        7
+      ],
+      "cost": 4.805802301572129,
+      "exit": 0,
+      "wall": 36.40186095237732,
+      "real_probability": 0.9800005
+    },
+    {
+      "key": "4540ab1c6d17359afc35f1ba1473402b910da70bda090de886017b5731afa495",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        5,
+        14,
+        7
+      ],
+      "cost": 5.122238825208884,
+      "exit": 0,
+      "wall": 31.528844356536865,
+      "real_probability": 0.9836632
+    },
+    {
+      "key": "debf2dc53b6ca13fff3b4d8c0b8a8857c78873b1474b38a32e95ff5fc8cb02a2",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        9,
+        10,
+        7
+      ],
+      "cost": 5.163095307423898,
+      "exit": 0,
+      "wall": 22.10709261894226,
+      "real_probability": 0.9842987
+    },
+    {
+      "key": "3538423e6e004297d00a35bd66b72267694292a47fcf5b4b33fbe01608b580b1",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        9,
+        14,
+        7
+      ],
+      "cost": 4.8650084517276255,
+      "exit": 0,
+      "wall": 27.478229999542236,
+      "real_probability": 0.9853801
+    },
+    {
+      "key": "ae31ebc52a4187bbd0f4bfba19d8367e24ea4e3802e46e9f4cb0592b5cf75206",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        13,
+        14,
+        7
+      ],
+      "cost": 5.105169983237225,
+      "exit": 0,
+      "wall": 33.19350981712341,
+      "real_probability": 0.9853801
+    },
+    {
+      "key": "e5baed140186240fa0af43367379004949880fb35c2d4d264144bd4fc7cd1d80",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        17,
+        10,
+        7
+      ],
+      "cost": 5.181741321604354,
+      "exit": 0,
+      "wall": 28.029292106628418,
+      "real_probability": 0.9842987
+    },
+    {
+      "key": "605009f6fb2eeb54676dbd97a979ce6d625f748a5ea88e20110f240c262981a7",
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "capacity": 49.0,
+      "selection": [
+        16,
+        17,
+        14,
+        7
+      ],
+      "cost": 4.883654465908082,
+      "exit": 0,
+      "wall": 29.778400182724,
+      "real_probability": 0.9853801
+    }
+  ]
+}
