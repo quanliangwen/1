@@ -1,0 +1,18 @@
+{
+  "stage": "initial checker expectation failure; optimizer source unchanged",
+  "observed_fixture": "math01/m3_t0/below.json",
+  "capacity": "3",
+  "cost_limit": "11",
+  "observed_status": "exhausted",
+  "raw_accepted": 0,
+  "unresolved": 2,
+  "raw_cost_line_excluded": false,
+  "initial_assertion": "raw_cost_line_excluded must equal (label == below)",
+  "finding": "The assertion incorrectly required conclusive infeasibility despite the algorithm's deliberate unresolved-leaf policy. Boundary atoms at capacity can straddle the target on every power-of-two quantization grid.",
+  "correction": "Checker now independently enumerates upward/downward quantized joint outcomes of every unresolved leaf, confirms that its certificates straddle0.99, and forbids a global exclusion when unresolved leaves exist. It still verifies every cost/probability pruning subtree against full exact outcomes.",
+  "optimizer_changed_to_make_test_pass": false,
+  "failed_partial_fixtures_preserved": "math01",
+  "corrected_full_fixtures": "math02",
+  "corrected_full_tree_runs": 24,
+  "corrected_checks": 41989
+}

@@ -1,0 +1,127 @@
+{
+  "scope": "all10development searches finished; raw pools only, not LSS-qualified costs or30-runAvg; lower-cost comparison tolerance1e-9 is for objective bookkeeping only, never probability acceptance",
+  "no_native_MC_calls": true,
+  "rows": [
+    {
+      "index": 35,
+      "method": "none",
+      "raw_min": 194.09620911316657,
+      "current_I002_qualified_cost": 194.09620911316657,
+      "raw_pool": 37,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 258.1621899260208,
+      "LSS_qualification_pending": true,
+      "source_sha256": "f8712fa08fa5983c64205bda682609519a16956e4a550abb23821686748f92f1"
+    },
+    {
+      "index": 35,
+      "method": "pair_exchange",
+      "raw_min": 194.09620911316657,
+      "current_I002_qualified_cost": 194.09620911316657,
+      "raw_pool": 633,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 331.8919452484697,
+      "LSS_qualification_pending": true,
+      "source_sha256": "59f82813ed2a19f22b5c9ce42d9ecdd0a5d64dd10d35732a89fbd3b7c8fc4689"
+    },
+    {
+      "index": 37,
+      "method": "none",
+      "raw_min": 215.17141457693504,
+      "current_I002_qualified_cost": 215.17141457693504,
+      "raw_pool": 56,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 275.13600505981594,
+      "LSS_qualification_pending": true,
+      "source_sha256": "aea3cb56586a52bd1ca0cc7b5154a5bc4a5e5e098b36f13af0c59305567e9755"
+    },
+    {
+      "index": 37,
+      "method": "pair_exchange",
+      "raw_min": 215.17141457693504,
+      "current_I002_qualified_cost": 215.17141457693504,
+      "raw_pool": 972,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 447.20431082416326,
+      "LSS_qualification_pending": true,
+      "source_sha256": "068f1f4fca0a71321ca7803aa7782d3cbbbd8e2b8f8cddd9c8d35a08656a5952"
+    },
+    {
+      "index": 38,
+      "method": "none",
+      "raw_min": 196.27706195048995,
+      "current_I002_qualified_cost": 196.27706195048995,
+      "raw_pool": 66,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 251.00272487476468,
+      "LSS_qualification_pending": true,
+      "source_sha256": "ae83745b86e6ceacc467eb92972d192ffebd8031b1afb08ac6434417e9490326"
+    },
+    {
+      "index": 38,
+      "method": "pair_exchange",
+      "raw_min": 196.27706195048995,
+      "current_I002_qualified_cost": 196.27706195048995,
+      "raw_pool": 1087,
+      "lower_cost_candidates": 0,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 299.2639441052452,
+      "LSS_qualification_pending": true,
+      "source_sha256": "94109a7673a6f75656f0477e39dcd9fc12fa4aceee0d10e85cbb9bd6b0f11f71"
+    },
+    {
+      "index": 39,
+      "method": "none",
+      "raw_min": 322.0997047676082,
+      "current_I002_qualified_cost": 329.83616418693003,
+      "raw_pool": 55,
+      "lower_cost_candidates": 25,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 377.4374291971326,
+      "LSS_qualification_pending": true,
+      "source_sha256": "8a82181c5689d7b3dca5336200acef2cb06c5233d062aa719240ff04d166e1b3"
+    },
+    {
+      "index": 39,
+      "method": "pair_exchange",
+      "raw_min": 322.0997047676082,
+      "current_I002_qualified_cost": 329.83616418693003,
+      "raw_pool": 749,
+      "lower_cost_candidates": 215,
+      "new_lower_cost_vectors_vs_I002": 178,
+      "search_seconds": 538.8507757857442,
+      "LSS_qualification_pending": true,
+      "source_sha256": "e7316e466851835137389a5f3ad9331ad3248067235144b48392d37ef60dd424"
+    },
+    {
+      "index": 40,
+      "method": "none",
+      "raw_min": 290.9406141506159,
+      "current_I002_qualified_cost": 292.9575379601305,
+      "raw_pool": 62,
+      "lower_cost_candidates": 12,
+      "new_lower_cost_vectors_vs_I002": 0,
+      "search_seconds": 259.7902317820117,
+      "LSS_qualification_pending": true,
+      "source_sha256": "801084dc92db4b25498c73630318cf2660b9a22bdae91ee025d9f16923bc7db9"
+    },
+    {
+      "index": 40,
+      "method": "pair_exchange",
+      "raw_min": 290.9406141506159,
+      "current_I002_qualified_cost": 292.9575379601305,
+      "raw_pool": 1053,
+      "lower_cost_candidates": 116,
+      "new_lower_cost_vectors_vs_I002": 101,
+      "search_seconds": 454.23717617057264,
+      "LSS_qualification_pending": true,
+      "source_sha256": "595bbbb8c53d666f925e651ab7330e5af6c90d5c899a8ba8897d69bc030e0b66"
+    }
+  ],
+  "conclusion": "35/37/38 generated pools contain no cost improvement over current qualified I002.39/40 retain potential cheaper vectors requiring original LSS postselection; no new gain claimed before validation."
+}

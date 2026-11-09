@@ -1,0 +1,424 @@
+{
+  "passed": true,
+  "checks": 41989,
+  "input_models": 12,
+  "tree_runs": 24,
+  "source_sha256": {
+    "run_search_bound.py": "dfef883bd455a2c32a555b7f9c307790e8935335e0870fd38acb73e6eb744ecc",
+    "suffix_search.py": "98a62b307994d0bd68da22d508d805ddbb8f3f301870c80e9de7ac1a8711a4d1",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "budget_cdf.py": "fe94cc7f033fee58fe82bf8514629af7157e3d862fb1a5381da56ce1380f2db2",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+  },
+  "scope": "full item/outcome enumeration verifies every cost or suffix-budget pruning subtree, original raw leaf decisions including unresolved boundary certificates and full prefix partition; independent exact Fraction DP validates every cached suffix cost/time state and rounding error",
+  "records": [
+    {
+      "groups": 2,
+      "trial": 0,
+      "label": "below",
+      "capacity": "3/2",
+      "cost_limit": "15/2",
+      "true_optimum": "8",
+      "status": "exhausted",
+      "visited": 4,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 0,
+      "label": "at",
+      "capacity": "3/2",
+      "cost_limit": "8",
+      "true_optimum": "8",
+      "status": "found_raw_feasible",
+      "visited": 6,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 1,
+      "label": "below",
+      "capacity": "3",
+      "cost_limit": "11/2",
+      "true_optimum": "6",
+      "status": "exhausted",
+      "visited": 1,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 1,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 1,
+      "label": "at",
+      "capacity": "3",
+      "cost_limit": "6",
+      "true_optimum": "6",
+      "status": "found_raw_feasible",
+      "visited": 5,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 2,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 2,
+      "label": "below",
+      "capacity": "3",
+      "cost_limit": "7",
+      "true_optimum": "15/2",
+      "status": "exhausted",
+      "visited": 4,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 2,
+      "label": "at",
+      "capacity": "3",
+      "cost_limit": "15/2",
+      "true_optimum": "15/2",
+      "status": "found_raw_feasible",
+      "visited": 6,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 3,
+      "label": "below",
+      "capacity": "4",
+      "cost_limit": "9/2",
+      "true_optimum": "5",
+      "status": "exhausted",
+      "visited": 1,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 1,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 2,
+      "trial": 3,
+      "label": "at",
+      "capacity": "4",
+      "cost_limit": "5",
+      "true_optimum": "5",
+      "status": "found_raw_feasible",
+      "visited": 5,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 2,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 0,
+      "label": "below",
+      "capacity": "3",
+      "cost_limit": "11",
+      "true_optimum": "23/2",
+      "status": "exhausted",
+      "visited": 16,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 8,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 2
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 0,
+      "label": "at",
+      "capacity": "3",
+      "cost_limit": "23/2",
+      "true_optimum": "23/2",
+      "status": "found_raw_feasible",
+      "visited": 18,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 8,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 2
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 1,
+      "label": "below",
+      "capacity": "7/2",
+      "cost_limit": "15/2",
+      "true_optimum": "8",
+      "status": "exhausted",
+      "visited": 10,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 5,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 1
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 1,
+      "label": "at",
+      "capacity": "7/2",
+      "cost_limit": "8",
+      "true_optimum": "8",
+      "status": "found_raw_feasible",
+      "visited": 8,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 1
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 2,
+      "label": "below",
+      "capacity": "2",
+      "cost_limit": "11",
+      "true_optimum": "23/2",
+      "status": "exhausted",
+      "visited": 4,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 3,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 2,
+      "label": "at",
+      "capacity": "2",
+      "cost_limit": "23/2",
+      "true_optimum": "23/2",
+      "status": "found_raw_feasible",
+      "visited": 8,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 4,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 3,
+      "label": "below",
+      "capacity": "3/2",
+      "cost_limit": "14",
+      "true_optimum": "29/2",
+      "status": "exhausted",
+      "visited": 10,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 5,
+        "raw_refuted": 1,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 3,
+      "trial": 3,
+      "label": "at",
+      "capacity": "3/2",
+      "cost_limit": "29/2",
+      "true_optimum": "29/2",
+      "status": "found_raw_feasible",
+      "visited": 10,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 5,
+        "raw_refuted": 1,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 0,
+      "label": "below",
+      "capacity": "3/2",
+      "cost_limit": "39/2",
+      "true_optimum": "20",
+      "status": "exhausted",
+      "visited": 16,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 9,
+        "raw_refuted": 1,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 0,
+      "label": "at",
+      "capacity": "3/2",
+      "cost_limit": "20",
+      "true_optimum": "20",
+      "status": "found_raw_feasible",
+      "visited": 16,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 9,
+        "raw_refuted": 1,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 1,
+      "label": "below",
+      "capacity": "5/2",
+      "cost_limit": "31/2",
+      "true_optimum": "16",
+      "status": "exhausted",
+      "visited": 13,
+      "terminal": {
+        "cost": 2,
+        "budget_cdf": 7,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 1,
+      "label": "at",
+      "capacity": "5/2",
+      "cost_limit": "16",
+      "true_optimum": "16",
+      "status": "found_raw_feasible",
+      "visited": 15,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 9,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 2,
+      "label": "below",
+      "capacity": "3",
+      "cost_limit": "17",
+      "true_optimum": "35/2",
+      "status": "exhausted",
+      "visited": 28,
+      "terminal": {
+        "cost": 1,
+        "budget_cdf": 14,
+        "raw_refuted": 0,
+        "raw_accepted": 0,
+        "unresolved": 4
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 2,
+      "label": "at",
+      "capacity": "3",
+      "cost_limit": "35/2",
+      "true_optimum": "35/2",
+      "status": "found_raw_feasible",
+      "visited": 41,
+      "terminal": {
+        "cost": 2,
+        "budget_cdf": 19,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 5
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 3,
+      "label": "below",
+      "capacity": "4",
+      "cost_limit": "12",
+      "true_optimum": "25/2",
+      "status": "exhausted",
+      "visited": 16,
+      "terminal": {
+        "cost": 3,
+        "budget_cdf": 7,
+        "raw_refuted": 1,
+        "raw_accepted": 0,
+        "unresolved": 0
+      }
+    },
+    {
+      "groups": 4,
+      "trial": 3,
+      "label": "at",
+      "capacity": "4",
+      "cost_limit": "25/2",
+      "true_optimum": "25/2",
+      "status": "found_raw_feasible",
+      "visited": 11,
+      "terminal": {
+        "cost": 0,
+        "budget_cdf": 6,
+        "raw_refuted": 0,
+        "raw_accepted": 1,
+        "unresolved": 0
+      }
+    }
+  ]
+}

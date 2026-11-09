@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "instance": "APP_30_10_500_",
+  "prefix": [
+    30,
+    121
+  ],
+  "cost_limit": "193774222960923/1000000000000",
+  "capacity": "58",
+  "status": "completed",
+  "upper_numerator": "276451293220031",
+  "denominator": "281474976710656",
+  "upper_float": 0.9821522909448923,
+  "prefix_cost_line_excluded": true,
+  "global_cost_line_excluded": false,
+  "plain_CDF_upper_numerator": "924961531006366017412003078716927147507751170947245433939332662491708827030672102",
+  "plain_CDF_denominator": "931322574615478515625000000000000000000000000000000000000000000000000000000000000",
+  "plain_CDF_upper_float": 0.993169881432608,
+  "newly_excludes_vs_plain_CDF": true,
+  "recomputed_stages": 30,
+  "independent_integer_convolutions": 40153,
+  "stages": [
+    {
+      "group": 0,
+      "matrix_sha256": "1ed4e9392258e7cd4d2ba4323ff0f1165f01e484a5d3dcb9578e213780dbc607",
+      "independent_convolutions": 1
+    },
+    {
+      "group": 1,
+      "matrix_sha256": "4118cee3577bdab52279937f6084793acaee91cd9e0b16531b8b4ddc26400649",
+      "independent_convolutions": 1
+    },
+    {
+      "group": 2,
+      "matrix_sha256": "3684f8628a5f02d6d8f4d79d63b070b754a1e83fdf1188c7ce0d68030d5dbf41",
+      "independent_convolutions": 10
+    },
+    {
+      "group": 3,
+      "matrix_sha256": "b6a4fe8e769c949e2ff73ab97007e13b9910570f06b087dd5c6e2e146f19c9db",
+      "independent_convolutions": 60
+    },
+    {
+      "group": 4,
+      "matrix_sha256": "99381f7458a91a6b1a6f0d8de797f4d8ff49ae9b55e815eec5b5e3b468b6701e",
+      "independent_convolutions": 180
+    },
+    {
+      "group": 5,
+      "matrix_sha256": "fe97fd521be5d9a9d0657609b92ef77634bdda227d1e2f165c355f96c50caeaf",
+      "independent_convolutions": 310
+    },
+    {
+      "group": 6,
+      "matrix_sha256": "fa83c0b206e6bd43793824f07f6a6ed54e0bacf21b3ce12954c79d79873bcb5f",
+      "independent_convolutions": 530
+    },
+    {
+      "group": 7,
+      "matrix_sha256": "c2b4ec87044dde7bb68124131301e1ca7a01f274a08a0fc3302c6b89f169589e",
+      "independent_convolutions": 670
+    },
+    {
+      "group": 8,
+      "matrix_sha256": "a952d3f9b52bde82521c1db159192c4f63320b1562d564a82492aa95abe9af74",
+      "independent_convolutions": 670
+    },
+    {
+      "group": 9,
+      "matrix_sha256": "39f2a4b46ce4bf7fce6e12309e8cac1d76b2debee8fe44881794e647046a93a2",
+      "independent_convolutions": 770
+    },
+    {
+      "group": 10,
+      "matrix_sha256": "6c00dd923b64cf2b2afb211d9ab04b9c134d8bc298b3071c9ba625edf78fdce4",
+      "independent_convolutions": 860
+    },
+    {
+      "group": 11,
+      "matrix_sha256": "6b4555cdd73ebfe6c7e3f33b03593eb579a6a0f19299870fa305cedb1c72f68c",
+      "independent_convolutions": 960
+    },
+    {
+      "group": 12,
+      "matrix_sha256": "8e202094b51ae6d684be1f625625bb249be3b0c0a4c1aa6ef5ed6b03b56c9b40",
+      "independent_convolutions": 1080
+    },
+    {
+      "group": 13,
+      "matrix_sha256": "18806e92e94fa62c5ed68be318181c2379eabd5af33426cb9d4126b87376feb9",
+      "independent_convolutions": 1130
+    },
+    {
+      "group": 14,
+      "matrix_sha256": "b5e25fd71b604a0309601079432abeea0fd812c18dc7da0c40b49c4b68d8c8e2",
+      "independent_convolutions": 1360
+    },
+    {
+      "group": 15,
+      "matrix_sha256": "7a35a132281a886b0587e5f089f350bbca481533adfc4264d9f45ff45b36d363",
+      "independent_convolutions": 1440
+    },
+    {
+      "group": 16,
+      "matrix_sha256": "08e1d54219c151b3fa5341da1ab95ad75b14686bdc5cfa186e311370b46da310",
+      "independent_convolutions": 1470
+    },
+    {
+      "group": 17,
+      "matrix_sha256": "d0d4abc04499d698d6d2b80facfb46856fff401a301423730faeb54c2636911e",
+      "independent_convolutions": 1590
+    },
+    {
+      "group": 18,
+      "matrix_sha256": "04ade048a79a475ef472f955b5cd372dfa34459b7e89f0504a40982c1716f2db",
+      "independent_convolutions": 1710
+    },
+    {
+      "group": 19,
+      "matrix_sha256": "7a07b818b332b5242f0282a62f2310c065e61cb2cb8aa44294b9998954d760f2",
+      "independent_convolutions": 1810
+    },
+    {
+      "group": 20,
+      "matrix_sha256": "6ebe6c1f360a53a25255823bea67ebf4589d3cf6fb2108d56b1cf7cef89363e6",
+      "independent_convolutions": 1890
+    },
+    {
+      "group": 21,
+      "matrix_sha256": "707b7336c1fa9a5cc230fb8b919d6531250b11c63bce6c473a24eecd119ae832",
+      "independent_convolutions": 2040
+    },
+    {
+      "group": 22,
+      "matrix_sha256": "756d7176cb8a4b82146f6fc93f189d7adcc185f5939fc7204e61b0c92100a180",
+      "independent_convolutions": 2230
+    },
+    {
+      "group": 23,
+      "matrix_sha256": "1ddbe84c6b48d8c8b944226885f129a3c9d4a2f1b09445424393241524c529a4",
+      "independent_convolutions": 2290
+    },
+    {
+      "group": 24,
+      "matrix_sha256": "4a59d264788c5975a2011923b1c8a78810810916e1e5b7c99cd65ef5ad041b68",
+      "independent_convolutions": 2410
+    },
+    {
+      "group": 25,
+      "matrix_sha256": "77b8e5588c696b85ea43c7de16a6c1acdfc53b9d8d0f363958f000d611443a33",
+      "independent_convolutions": 2507
+    },
+    {
+      "group": 26,
+      "matrix_sha256": "3198b16864b10d9cc6aec248463be0fcfd6067e80fdb88bcddd2cc773d1aaf0c",
+      "independent_convolutions": 2548
+    },
+    {
+      "group": 27,
+      "matrix_sha256": "58b9414011b11d0e33e38a780c075def0d98dfb17919bf320bec69851e9b0351",
+      "independent_convolutions": 2548
+    },
+    {
+      "group": 28,
+      "matrix_sha256": "072c11648cf11bb5380135e7988f11c7d4dfdc7ff75357b26bf5af229b35042e",
+      "independent_convolutions": 2543
+    },
+    {
+      "group": 29,
+      "matrix_sha256": "c88fadc7be53e124c5a85c091fadd8b3e3785d0d729239e53a1b91d4b12e4fc9",
+      "independent_convolutions": 2535
+    }
+  ],
+  "source_sha256": {
+    "budget_cdf.py": "d0b1a419e04f08a86170dcfe67b659c44bb646c53407fc9062fa85a014d04fb6",
+    "run_budget_bound.py": "524aa516ed95a2786d3cc8835a0a1941f683a850c2c58dea15060e7b9e7cf10d"
+  },
+  "result_sha256": "8085568735a71a5064463d7054c7ed1bbf8d3b6b6a5a42091d6cdbe5c4bdb2d7",
+  "seconds": 22.503440973348916,
+  "scope": "only the registered prefix/cost-line finite empirical set; no positive feasibility claim, no original LSS calls or global exclusion unless prefix empty",
+  "method": "sorted-threshold empirical masses; independent CDF-increment integer DP; every intermediate matrix digest recounted"
+}

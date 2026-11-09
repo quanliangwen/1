@@ -1,7 +1,7 @@
 {
   "iteration": "I004",
   "stage": "development pilot, one run per case/method; not30-run Avg",
-  "search_finished": 6,
+  "search_finished": 10,
   "required": 10,
   "validation_finished": 0,
   "qualified": 0,
@@ -55,6 +55,36 @@
       "extension_seconds": 3.2298266887664795e-06
     },
     {
+      "method": "none",
+      "index": 39,
+      "seed": 970401,
+      "exit": 0,
+      "wall": 378.03885650634766,
+      "pool": 55,
+      "shortlist": 55,
+      "raw_cost": 322.0997047676082,
+      "within_budget": true,
+      "search_elapsed": 377.4374291971326,
+      "base_pool": 55,
+      "final_pool": 55,
+      "extension_seconds": 4.420056939125061e-06
+    },
+    {
+      "method": "none",
+      "index": 40,
+      "seed": 970401,
+      "exit": 0,
+      "wall": 260.36989736557007,
+      "pool": 62,
+      "shortlist": 62,
+      "raw_cost": 290.9406141506159,
+      "within_budget": true,
+      "search_elapsed": 259.7902317820117,
+      "base_pool": 62,
+      "final_pool": 62,
+      "extension_seconds": 3.050081431865692e-06
+    },
+    {
       "method": "pair_exchange",
       "index": 35,
       "seed": 970401,
@@ -98,6 +128,36 @@
       "base_pool": 66,
       "final_pool": 1087,
       "extension_seconds": 48.17283730022609
+    },
+    {
+      "method": "pair_exchange",
+      "index": 39,
+      "seed": 970401,
+      "exit": 0,
+      "wall": 539.4999043941498,
+      "pool": 749,
+      "shortlist": 749,
+      "raw_cost": 322.0997047676082,
+      "within_budget": true,
+      "search_elapsed": 538.8507757857442,
+      "base_pool": 55,
+      "final_pool": 749,
+      "extension_seconds": 163.5241635804996
+    },
+    {
+      "method": "pair_exchange",
+      "index": 40,
+      "seed": 970401,
+      "exit": 0,
+      "wall": 454.9163649082184,
+      "pool": 1053,
+      "shortlist": 1053,
+      "raw_cost": 290.9406141506159,
+      "within_budget": true,
+      "search_elapsed": 454.23717617057264,
+      "base_pool": 62,
+      "final_pool": 1053,
+      "extension_seconds": 194.72337087336928
     }
   ]
 }

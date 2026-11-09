@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "instance": "APP_30_10_500_",
+  "capacity": "58",
+  "cost_limit": "193774222960923/1000000000000",
+  "status": "budget_exhausted",
+  "raw_cost_line_excluded": false,
+  "total_combinations": "1000000000000000000000000000000",
+  "covered_combinations": "995877819979988988983000000000",
+  "pending_combinations": "4122180020011011017000000000",
+  "verified_visited_nodes": 163979,
+  "recomputed_suffix_stages": 30,
+  "independent_DP_integer_convolutions": 44326,
+  "recomputed_tree_certificates": 146350,
+  "stages": [
+    {
+      "group": 29,
+      "matrix_sha256": "4401acc1a55980cdd029a7d9af03c356a88441494b1f94b19ff0266aa8420119"
+    },
+    {
+      "group": 28,
+      "matrix_sha256": "bf7d4520bca01284554411f8dbdeb33b67c6af66436f2c5908b661613b0d4706"
+    },
+    {
+      "group": 27,
+      "matrix_sha256": "16df6898dc3edeac12df033bcde444244a95b94dc176431dac7594a44752cf2b"
+    },
+    {
+      "group": 26,
+      "matrix_sha256": "49257499eb55a63e721e2c9086573faad538c274653f89979300950a2236b66f"
+    },
+    {
+      "group": 25,
+      "matrix_sha256": "be63346a4547cc19bd63aaa26e73ca84d0bed6752b055439ac3a4d792518b987"
+    },
+    {
+      "group": 24,
+      "matrix_sha256": "719ff249d8752f5c9fe34d31966553a1baad1a9d90cd042de664eb732a4a37e6"
+    },
+    {
+      "group": 23,
+      "matrix_sha256": "238bf08801492ae002dc3407b18a592f1c707631d6a4f54d548b0bf623eb99b5"
+    },
+    {
+      "group": 22,
+      "matrix_sha256": "b3b8323a6b3c88328007c1991604d181d4cb0bd1e80c1322bb0fbaf2697d7037"
+    },
+    {
+      "group": 21,
+      "matrix_sha256": "a94e4a081959ea5cdb7c973f2539c7a43db9177ba0a6cbaae320d945c606ee0b"
+    },
+    {
+      "group": 20,
+      "matrix_sha256": "c7e175f029d7153a6e4b0d0286514385257886c530efe1cf5923f54e0efa1f72"
+    },
+    {
+      "group": 19,
+      "matrix_sha256": "06f8d87656af355434370b66e1ccaff88028a24a77bc20c18fba5a94b5b128f5"
+    },
+    {
+      "group": 18,
+      "matrix_sha256": "814e26098e888ace89e8ca6b7217d85c4c2789d65aeb6c77fdfbf9e9154fcd9a"
+    },
+    {
+      "group": 17,
+      "matrix_sha256": "9bfb18e77bde0335d448aa54b655626ff7629ce1102210c077680f7eaeec0020"
+    },
+    {
+      "group": 16,
+      "matrix_sha256": "f0144836dd5794054a7fb147163ec3e90c64d345aaaca7438e62913ca0e6b7b0"
+    },
+    {
+      "group": 15,
+      "matrix_sha256": "3a4635721902e83de119f3225c8824cd39aedbce0d003d8929a7fb367a24946f"
+    },
+    {
+      "group": 14,
+      "matrix_sha256": "18a55f2fca7f533da7d5c1abf8e344db2681c9508c5b9ff2ae8a52cee0b8fa6a"
+    },
+    {
+      "group": 13,
+      "matrix_sha256": "3787d3419f3d9659113d511f79583bd26fb6a1917b64d8df620f3bbfad01a1e4"
+    },
+    {
+      "group": 12,
+      "matrix_sha256": "174543541e5408edcadf37f6c2f596fcefcfc5faba446e499b41d09818cbe5a1"
+    },
+    {
+      "group": 11,
+      "matrix_sha256": "db5ea6a0fa51c9aae0b6da99cfa1038702c3f706e939083cb0014475bbbcf183"
+    },
+    {
+      "group": 10,
+      "matrix_sha256": "b283e5f649cd4574404b5be36090297aa91a6e17257adf04de2851e5c591f6d1"
+    },
+    {
+      "group": 9,
+      "matrix_sha256": "b34f40e9a6edf58d92caf303b57211011746ba7a819f07da3c9a16218d36714c"
+    },
+    {
+      "group": 8,
+      "matrix_sha256": "66504b9293414b138d04f68a71e66be0b44e8466edf7883df51a4df665df1281"
+    },
+    {
+      "group": 7,
+      "matrix_sha256": "a34ad5dbe4c41bd34afab1d0c0f6a67407886478e79281a7beaaa0890077cce7"
+    },
+    {
+      "group": 6,
+      "matrix_sha256": "93ed6aef8bf8943b1e0e67283901d5f809dc27038e1adc3ec116b26e745abdfe"
+    },
+    {
+      "group": 5,
+      "matrix_sha256": "04c25c5a371354a851a8e78a47b1a580d3401c0900d7dfd3896fb03f06cde316"
+    },
+    {
+      "group": 4,
+      "matrix_sha256": "b2f3d46f6b212883045b1184b8b7c9ce080b8ce2324d4d4cfe51860ab8a6d041"
+    },
+    {
+      "group": 3,
+      "matrix_sha256": "5a4081fa3f4cd3906988e05668d0f242d77e53b044abf564fa39ceab30e2c0cf"
+    },
+    {
+      "group": 2,
+      "matrix_sha256": "17da437174c95ea2b25bd76676870e74441c337cc5239181100603ad0f5cf72e"
+    },
+    {
+      "group": 1,
+      "matrix_sha256": "7cb6540fb734cd67a4a503527f163c4016c6ad1bf9eaf17e58fba9ca855b1f26"
+    },
+    {
+      "group": 0,
+      "matrix_sha256": "ef007b9a0d5bab1fdf28c502d01c5dade3f24a36c07f822542324006e8fc8c5f"
+    }
+  ],
+  "source_sha256": {
+    "run_search_bound.py": "dfef883bd455a2c32a555b7f9c307790e8935335e0870fd38acb73e6eb744ecc",
+    "suffix_search.py": "d1397c1fd46ee8fc47bc173e42768295196e5eb6bd9106e2ddada1f9e6fa0669",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "budget_cdf.py": "fe94cc7f033fee58fe82bf8514629af7157e3d862fb1a5381da56ce1380f2db2",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0"
+  },
+  "result_sha256": "2105a9494dbb4410a9351187f109fee28b0d56a6fce33e7432c2ac8b9d52da56",
+  "DP_sha256": "132c906cad054aaae9daa689e6470df1179f91ca42f0b290c2607f81ed8d60b5",
+  "proof_sha256": "2bf1e0244ff9508c1e668c137a856da1ab35f73ff3167264c5608f08bf705322",
+  "seconds": 139.0912827560678,
+  "scope": "declared cost-line independent full-empirical model only; joint raw/LSS exclusion follows only when fully exhausted; no positive LSS feasibility claim",
+  "method": "sorted thresholds, CDF-increment integer DP; prefix mass convolved with suffix-CDF increments, exact costs and prefix-free full choice-space partition"
+}
