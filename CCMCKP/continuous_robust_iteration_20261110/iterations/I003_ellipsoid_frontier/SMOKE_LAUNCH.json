@@ -1,0 +1,23 @@
+{
+  "launched_utc": "2026-11-09T17:08:20.057715+00:00",
+  "pid": 910315,
+  "command": [
+    "/home/junhao/miniconda3/bin/python",
+    "-u",
+    "iterations/I003_ellipsoid_frontier/candidate/run.py",
+    "--instance",
+    "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_10_10_500_",
+    "--capacity",
+    "37",
+    "--seed",
+    "970299",
+    "--seconds",
+    "180",
+    "--risk-method",
+    "ellipsoid",
+    "--phase-seconds",
+    "60",
+    "--out",
+    "iterations/I003_ellipsoid_frontier/smoke.json.gz"
+  ]
+}

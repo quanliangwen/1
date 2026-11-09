@@ -11,3 +11,5 @@ CVaR原始表达式与场景优化参考：[Rockafellar与Uryasev原文](https:/
 本轮为开发试验，基准已用于方法设计；不作为未见实例泛化实验。旧Best不默认可行，Cost低于旧Best但验收失败不能算改善。
 
 I002按有限支持CDF扰动生成多个风险中心的局部线性提案，交换2/4/8组。其单组替换导数已与直接卷积对照54次。邻域的降本上限相对于各中心设置，避免全程受最便宜原样本解的成本上限限制。扰动分数只引导提案，全部输出仍用原样本0.99和原LSS0.985验收。
+
+I003使用椭球不确定集a=mu+diag(sd)u、||u||2<=k，最坏资源为mu*x+k*sqrt(var*x)。参考[Ben-Tal与Nemirovski，Robust Convex Optimization](https://www2.isye.gatech.edu/~nemirovs/MOR_RCO_1998.pdf)。sqrt在给定方差区间内用割线下界生成MILP提案，区间自适应细分；这是本任务的提案实现，不宣称论文给出了本启发式或99%验收保证。求解器限时状态与mip_dual_bound含义按[SciPy milp官方文档](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html)区分，本轮不作全局最优证明。
