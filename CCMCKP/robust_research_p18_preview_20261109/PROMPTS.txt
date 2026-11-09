@@ -1,0 +1,55 @@
+Use case: productivity-visual.
+Create ONE finished Chinese academic slide SAMPLE as a crisp raster image, landscape 16:9, approximately 1920×1080 or 1672×941. Match the supplied P16 reference template exactly in visual identity: warm cream background, dark navy Chinese typography, thin warm gold lines, BUPT university branding and top navigation. This input is STYLE reference ONLY; replace all content.
+Top left BUPT seal and 北京邮电大学 wordmark, then tabs: 研究背景 / 研究意义 / 研究脉络 / 创新方向 / 总结展望. Active 研究脉络 dark navy with gold letters/underline, other tabs muted blue with white letters.
+
+Main title: “通用主线下的工具选择”
+Subtitle: “依据可验证的结构选择工具，并报告保证的适用范围”
+Thin gold rule below title.
+
+UPPER SLIM FLOW, visually simple and flat, in one horizontal line below title, with gold arrows connecting five navy labels:
+“问题与保护目标” → “可验证的结构” → “数学工具与求解机制” → “有条件的保证” → “对应指标验证”
+Keep all five full labels, readable, with enough width for third label. No need for heavy boxes or extra badges. This line summarizes tool selection order.
+
+MAIN THREE-COLUMN FIVE-ROW TABLE below flow. Navy header with white text, thin gold grid lines, alternating cream/very pale gray rows. Second data row (binary lower-level and Gamma budget, corresponding to P2) highlighted in pale gold with a stronger gold border, matching prior slide treatment. No extra literature column or invented sixth row. Column widths about 32% / 31% / 37%. Three headers exactly:
+“已识别的结构” / “对应工具或机制” / “需要先核验什么”
+Chinese body approximately 26–29px at 1672px width, clear legible line breaks. Compact two-line rows where useful.
+
+Exact content:
+Row 1:
+structure “下单调延误集合或分布族”
+tool “冲突与交叉等价重构”
+check “下单调性及冲突定义是否一致”
+
+Row 2:
+structure “二元下层与Γ预算”
+tool “有限阈值分解、候选生成” / “鲁棒校正”
+check “双层结构、子问题精确性” / “及保证条件”
+
+Row 3:
+structure “连续补救形成” / “双线性对抗模型”
+tool “对偶化、RLT” / “及有效不等式强化”
+check “补救可行性、有界性” / “和近似方向”
+
+Row 4:
+structure “最坏情形或自适应子模性”
+tool “贪心和混合策略”
+check “单调性、子模性、最小依赖性” / “与反馈结构”
+
+Row 5:
+structure “多个效用函数及组合约束”
+tool “截断代理与扩展算法”
+check “单调子模性” / “及是否允许约束放宽”
+
+LOWER RESEARCH IMPLICATION SECTION, clear heading in navy:
+“对CCMCKP的研究启示”
+Use four readable short lines (left aligned, no decorative icons), keeping this as PROPOSED RESEARCH QUESTIONS, not completed results:
+“目标与约束：每组恰选一项，最小化总成本，保留原机会约束”
+“需要论证：不确定性刻画是否合理、候选如何通过原评价、求解质量能保证到何种程度”
+“结构边界：每组至多选一项与每组恰选一项有区别，分组约束不足以直接引用鲁棒子模近似比”
+“事件边界：时间区间无冲突与总随机量不超容量，需单独证明模型关系”
+For readability the long third line can wrap once naturally; do not shrink text excessively. Separate lower section from table with whitespace or a thin gold rule, not a large heavy panel.
+
+BOTTOM final small but clearly readable navy disclaimer:
+“以上为本次汇报的研究组织框架；CCMCKP部分是研究启示，并非五篇文献对该模型的既有定理”
+Fit all above with comfortable margins; may adjust heights but do not omit any table row or research implication.
+Accuracy: distinguish structural assumptions from guaranteed applicability. Do not claim any algorithm or theorem is already implemented or proven for CCMCKP. No new results, no probabilities, no claimed convergence or global optimality for the current solver. Do not add a sixth paper. Γ is capital Greek Gamma. Keep Roman RLT and CCMCKP exact. No printed production instructions, “本页用途”, “建议图示” or “口头讲解”. Preserve reference branding/colors/fonts, academic flat composition, no photos or unrelated decoration, no text clipping/overlaps.
