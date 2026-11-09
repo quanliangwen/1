@@ -1,0 +1,14 @@
+{
+  "time": 1794261961.674859,
+  "pid": 1016991,
+  "job": "iterations/I014_hybrid_cdf_blocks/engineering39/native",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I004_robust_pair_exchange/pilot_validation/FINISHED",
+    "iterations/I012_iterated_block_mitm/engineering40/result.json.gz.post.json",
+    "iterations/I012_iterated_block_mitm/engineering39/result.json.gz.post.json",
+    "research/raw_precision/native/FINISHED"
+  ],
+  "registration_sha256": "207e3c436576779fda87843257ddec7b375c18e71b9d0c71d907687f2370d5e9",
+  "no_native_calls_before_all_dependencies": true
+}

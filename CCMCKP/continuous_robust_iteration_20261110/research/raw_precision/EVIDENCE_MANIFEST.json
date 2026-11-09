@@ -1,0 +1,274 @@
+{
+  "file": "RAW_PRECISION_EVIDENCE.zip",
+  "bytes": 563235,
+  "sha256": "f5b2cbd5d451f605244314a410c34abeaf1fea272f93bcfeebb495e8b6ba2659",
+  "scope": "external posthoc original-raw precision diagnosis,4raw-certified/3raw-refuted points; all4LSS-unknown; no cold solver gain or30-run Avg",
+  "zip_CRC_passed": true,
+  "files": [
+    {
+      "path": "CASES.json",
+      "bytes": 3231,
+      "sha256": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a"
+    },
+    {
+      "path": "diagnose_raw_precision.py",
+      "bytes": 3549,
+      "sha256": "e19534bafd5a3908a5a1f091e032aed9a442823eb34410cb835676bde29e7c8d"
+    },
+    {
+      "path": "diagnose_refined_grid_cost.py",
+      "bytes": 2428,
+      "sha256": "762029d368eaf8e00baf508ed09400fb15643c6256d9ea5ee27c07aea04e65c3"
+    },
+    {
+      "path": "independent_raw_recount.py",
+      "bytes": 3388,
+      "sha256": "6aece721b45de969e19b2df608301a2a93b41c618c6a15f1d7c52f28a3b9e820"
+    },
+    {
+      "path": "INDEPENDENT_RAW_RECOUNT_MATH_CHECK.json",
+      "bytes": 7172,
+      "sha256": "29d2d071cb438e201ca37630daadf7d7277fce53741e19d45860317ddc52b114"
+    },
+    {
+      "path": "inventory_refined_native.py",
+      "bytes": 3103,
+      "sha256": "23e702f1a88cbd185b59021e05ddd7d83cd34c1edf7d50597b6da6fc1c6f5a52"
+    },
+    {
+      "path": "launch_native_queue_v2.py",
+      "bytes": 1207,
+      "sha256": "1dc927c7cbcdf71b30de646d6f7c4f93d2ef29d5f2d0fcf9654e89d0f68a42b9"
+    },
+    {
+      "path": "LSS_DATA_REFERENCE.json",
+      "bytes": 760712,
+      "sha256": "baf97005886d754712671409c1e565099e536f4a8183a994f9d01336c58e9abd"
+    },
+    {
+      "path": "native_cached_original_v2.py",
+      "bytes": 2325,
+      "sha256": "74c6d88d79508c6561cb952b43dd699a4c8549b124a1e4751f743c5ff4957a0b"
+    },
+    {
+      "path": "native_lss_eval.py",
+      "bytes": 1829,
+      "sha256": "1fd7e2b6ea99b3da62c76e7b05c9e02f2e51b8ece257867d55bf57980d6af8c0"
+    },
+    {
+      "path": "probe_unresolved_precision.py",
+      "bytes": 3769,
+      "sha256": "ad344537ce03ab1a61437067912e7b64ec88785696045d4b283469a5131ac1a1"
+    },
+    {
+      "path": "raw_grid_bounds.py",
+      "bytes": 1242,
+      "sha256": "3ae3d56611a509bbdc63be94702b8d0fe4c462b0a56ab1daa9b62e0a87a89855"
+    },
+    {
+      "path": "RAW_GRID_BOUNDS_MATH_CHECK.json",
+      "bytes": 312,
+      "sha256": "cb24e67831b36e6bae7191de41309ff26436936ed2b1d9dbf0f708ed90b31b88"
+    },
+    {
+      "path": "RAW_REFERENCE.json",
+      "bytes": 583339,
+      "sha256": "61183124c9a0005c72b1c3021bf0ecc523189c16c37b17a523f4d0f193d4ffa7"
+    },
+    {
+      "path": "recheck_refined_raw.py",
+      "bytes": 2806,
+      "sha256": "ede3e38e92675aea9e00949c3b430bf32c141881775d72c78ca58ebb819cb4e5"
+    },
+    {
+      "path": "reference/src/benchmark/benchmark_APP.py",
+      "bytes": 11758,
+      "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2"
+    },
+    {
+      "path": "reference/src/benchmark/benchmark_LAB.py",
+      "bytes": 10038,
+      "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d"
+    },
+    {
+      "path": "reference/src/benchmark/benchmark_resample.py",
+      "bytes": 10959,
+      "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742"
+    },
+    {
+      "path": "reference/src/exp_Result_EDA.py",
+      "bytes": 6032,
+      "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81"
+    },
+    {
+      "path": "reference/src/exp_Result_GA.py",
+      "bytes": 5992,
+      "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac"
+    },
+    {
+      "path": "reference/src/exp_Result_Greedy.py",
+      "bytes": 5630,
+      "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da"
+    },
+    {
+      "path": "reference/src/exp_Result_Localsearch.py",
+      "bytes": 7847,
+      "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6"
+    },
+    {
+      "path": "reference/src/functions/func_bruct_force.py",
+      "bytes": 3612,
+      "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71"
+    },
+    {
+      "path": "reference/src/functions/func_cl_estimator.py",
+      "bytes": 15322,
+      "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd"
+    },
+    {
+      "path": "reference/src/functions/func_Dyer_Zemel.py",
+      "bytes": 6699,
+      "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e"
+    },
+    {
+      "path": "reference/src/functions/func_EDA.py",
+      "bytes": 8392,
+      "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067"
+    },
+    {
+      "path": "reference/src/functions/func_GA.py",
+      "bytes": 10077,
+      "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878"
+    },
+    {
+      "path": "reference/src/functions/func_greedy.py",
+      "bytes": 5295,
+      "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371"
+    },
+    {
+      "path": "reference/src/functions/func_iterativeCCMCKP.py",
+      "bytes": 6303,
+      "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a"
+    },
+    {
+      "path": "reference/src/functions/func_localsearch.py",
+      "bytes": 16644,
+      "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa"
+    },
+    {
+      "path": "reference/src/functions/func_localsearch_cp.py",
+      "bytes": 3407,
+      "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005"
+    },
+    {
+      "path": "reference/src/functions/func_MILPgurobi.py",
+      "bytes": 10407,
+      "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013"
+    },
+    {
+      "path": "reference/src/functions/func_realP_statistical.py",
+      "bytes": 11575,
+      "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8"
+    },
+    {
+      "path": "reference/src/functions/func_solution_factor.py",
+      "bytes": 6844,
+      "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a"
+    },
+    {
+      "path": "reference/src/utils/factor.py",
+      "bytes": 4693,
+      "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370"
+    },
+    {
+      "path": "reference/src/utils/my_file.py",
+      "bytes": 1562,
+      "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02"
+    },
+    {
+      "path": "reference_loader.py",
+      "bytes": 822,
+      "sha256": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c"
+    },
+    {
+      "path": "REFERENCE_SHA256.json",
+      "bytes": 3203,
+      "sha256": "725f0c39f9b71e84aa387d98d607196cbb5859532020ca80c9dc5e352de8c63b"
+    },
+    {
+      "path": "register_native_queues_v2.py",
+      "bytes": 2879,
+      "sha256": "c549bb780cf54a2dacc3ae0a026d093a1f9ba1771cee5469fb9e3980bd5fe056"
+    },
+    {
+      "path": "research/raw_precision/DIAGNOSTIC.json",
+      "bytes": 39342,
+      "sha256": "d74b357961a2e0f00903562dd508d3ae074482f4b7a2c5c67ced6a5422579838"
+    },
+    {
+      "path": "research/raw_precision/GRID_COST_DIAGNOSTIC.json",
+      "bytes": 9494,
+      "sha256": "992f30b486e3b3451c0030afb0afde9305b7c797c0a992e3771ebd9ee48eefb9"
+    },
+    {
+      "path": "research/raw_precision/GRID_COST_REGISTRATION.json",
+      "bytes": 527,
+      "sha256": "68284357821bca48e97a8b922e2c2390b490d9c4720c5ef286ff546a72ab7552"
+    },
+    {
+      "path": "research/raw_precision/INDEPENDENT_REFINED_RAW_RECHECK.json",
+      "bytes": 24731,
+      "sha256": "3e48b84d7b92b9f713396a854251900d320bed32c2bbe5f80d4c1f10ad4e6ba7"
+    },
+    {
+      "path": "research/raw_precision/native/native.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/raw_precision/native/NATIVE_LAUNCH.json",
+      "bytes": 306,
+      "sha256": "13f07c43036535c1aa49f0a9ee9f826e8614bd05dbe9ca9181949e2e71208421"
+    },
+    {
+      "path": "research/raw_precision/native/NATIVE_REGISTRATION.json",
+      "bytes": 1356,
+      "sha256": "94da5274e5ed09000ccb8583458d03d596ffab69538c5b206a03619fa3120b7c"
+    },
+    {
+      "path": "research/raw_precision/native/NATIVE_STATE.json",
+      "bytes": 144,
+      "sha256": "ac07255f3167be2d3571260d2753de857020bb22a97d81bf78155999b6e324ae"
+    },
+    {
+      "path": "research/raw_precision/README.md",
+      "bytes": 2286,
+      "sha256": "30063bb6c73155be9079b792aa6c64cdb16cbba15861188cf982f4fc11d8fdf8"
+    },
+    {
+      "path": "research/raw_precision/REFINED_NATIVE_INVENTORY.json",
+      "bytes": 3878,
+      "sha256": "8de86687a9485321fd19dc534d0ae5188e4b7d2e1c54e23a206212769be1db5b"
+    },
+    {
+      "path": "research/raw_precision/REFINEMENT_PROBE.json",
+      "bytes": 11811,
+      "sha256": "9d50a2c9e1c36bbc7ef076a7a330fc81f986858d74bbd08d4767b43622d0cc65"
+    },
+    {
+      "path": "research/raw_precision/REFINEMENT_PROGRESS.json",
+      "bytes": 1558,
+      "sha256": "f7910c39297147702006aa1dec079a0798bde66cef29fc779f5dae769219abfa"
+    },
+    {
+      "path": "research/raw_precision/REFINEMENT_REGISTRATION.json",
+      "bytes": 6771,
+      "sha256": "ae0894ec45525a2bbcd7ebf65f2eb9fd223039b54410ca2379f55ea11c4e5040"
+    },
+    {
+      "path": "run_native_queue_v2.py",
+      "bytes": 5095,
+      "sha256": "05867beadb1325a0180f6941152922ac10febd217cfead060d485e15c99617e8"
+    }
+  ]
+}

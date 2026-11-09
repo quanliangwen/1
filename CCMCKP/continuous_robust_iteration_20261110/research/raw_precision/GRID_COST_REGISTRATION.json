@@ -1,0 +1,15 @@
+{
+  "scope": "posthoc raw computation-cost diagnosis on four previously refined points, no solver/native/Avg claim",
+  "time": 1794262178.3780239,
+  "probe_sha256": "9d50a2c9e1c36bbc7ef076a7a330fc81f986858d74bbd08d4767b43622d0cc65",
+  "source_sha256": {
+    "diagnose_refined_grid_cost.py": "762029d368eaf8e00baf508ed09400fb15643c6256d9ea5ee27c07aea04e65c3",
+    "raw_grid_bounds.py": "3ae3d56611a509bbdc63be94702b8d0fe4c462b0a56ab1daa9b62e0a87a89855"
+  },
+  "bins": [
+    65536,
+    262144,
+    1048576
+  ],
+  "seconds": 180
+}

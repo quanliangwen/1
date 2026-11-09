@@ -1,0 +1,12 @@
+{
+  "stage": "waiting",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I004_robust_pair_exchange/pilot_validation/FINISHED",
+    "iterations/I012_iterated_block_mitm/engineering40/result.json.gz.post.json",
+    "iterations/I012_iterated_block_mitm/engineering39/result.json.gz.post.json",
+    "research/raw_precision/native/FINISHED"
+  ],
+  "time": 1794261961.7144237,
+  "new_MC_calls": 0
+}

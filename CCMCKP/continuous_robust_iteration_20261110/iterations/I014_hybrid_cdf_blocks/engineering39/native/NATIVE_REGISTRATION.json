@@ -1,0 +1,31 @@
+{
+  "time": 1794261960.356281,
+  "mode": "engineering_pool",
+  "index": 39,
+  "candidate_file": "iterations/I014_hybrid_cdf_blocks/engineering39/result.json.gz",
+  "wait_for": [
+    "formal/F001_I002_40x30/validation/FINISHED",
+    "iterations/I004_robust_pair_exchange/pilot_validation/FINISHED",
+    "iterations/I012_iterated_block_mitm/engineering40/result.json.gz.post.json",
+    "iterations/I012_iterated_block_mitm/engineering39/result.json.gz.post.json",
+    "research/raw_precision/native/FINISHED"
+  ],
+  "scope": "one frozen I014 engineering39 full cost-order original-LSS postselection, not30-run Avg",
+  "driver_sha256": {
+    "run_native_queue_v2.py": "05867beadb1325a0180f6941152922ac10febd217cfead060d485e15c99617e8",
+    "native_cached_original_v2.py": "74c6d88d79508c6561cb952b43dd699a4c8549b124a1e4751f743c5ff4957a0b",
+    "native_lss_eval.py": "1fd7e2b6ea99b3da62c76e7b05c9e02f2e51b8ece257867d55bf57980d6af8c0",
+    "reference_loader.py": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c"
+  },
+  "input_sha256": {
+    "iterations/I014_hybrid_cdf_blocks/engineering39/result.json.gz": "da6a820d316031e1dcf4fe0ef8a9554f75881c187f1ff2249db5f3ef2ed9c2b1",
+    "iterations/I014_hybrid_cdf_blocks/engineering39/INDEPENDENT_RAW_AUDIT.json": "95d42d10ea27a14a050074476d113cbcbefa5f504e4e40c171d217a855f8fe1a",
+    "iterations/I014_hybrid_cdf_blocks/engineering39/ASSESSMENT.json": "fdc248e077007b05c0257cddcaaf858e823518f162097277765970cad74c0801"
+  },
+  "point_threshold": 0.985,
+  "seed": 832273,
+  "draws": 10000000,
+  "event": "sum<=T",
+  "no_search_feedback": true,
+  "registration_type": "post-search validation registration, not pre-search performance registration"
+}
