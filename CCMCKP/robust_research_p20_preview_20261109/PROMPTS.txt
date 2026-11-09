@@ -1,0 +1,55 @@
+Use case: productivity-visual.
+Generate ONE finished Chinese academic presentation slide SAMPLE, a crisp landscape raster image, 16:9 approximately 1920×1080 or 1672×941.
+Input image 1 is ONLY a STYLE/TEMPLATE REFERENCE: the previous P19. Preserve the cream/off-white background, dark navy Chinese typography, warm gold rules, BUPT seal and 北京邮电大学 name, and precise top navigation proportions and positions. Replace all body content.
+
+IMPORTANT CHAPTER NAVIGATION CHANGE: activate the FIFTH tab “总结展望”, with dark navy fill, gold letters and gold underline. All other tabs “研究背景 / 研究意义 / 研究脉络 / 创新方向” become muted blue with white text. Do not leave 创新方向 active.
+
+Exact title: “总结与展望”
+Subtitle: “共同研究主线、方法差异与未来方向”
+Thin gold rule below title block. A clear concluding slide, with three flat horizontal sections rather than a dashboard, no decorative photos.
+
+SECTION 1 near y=215–325: small navy bold heading “共同研究主线”
+A single full-width horizontal five-step flow, navy text with gold connecting arrows:
+“发现问题” → “设计模型” → “数学重构与求解” → “理论分析” → “实验验证”
+Third step slightly wider. Keep all exact labels and large readable font, around 30px at 1672px width. This is a reading/research framework, not an assertion about every algorithm's execution order.
+
+SECTION 2 near y=340–680: navy bold heading “方法差异与保证边界”
+A THREE-COLUMN TABLE with THREE data rows, dark navy header white text, thin gold lines, cream/very pale gray alternating rows, matching reference style. Columns approximately 24% / 42% / 34%. No row is singled out as the main paper here; all are equally important. Use body 26–29px at 1672px width, clean padding and appropriate wrapping.
+Headers exactly:
+“方法路径” / “代表工具” / “保证边界”
+
+Row 1:
+col1 two lines “等价重构与分解” / “P1、P2”
+col2 two lines “P1 下单调等价” / “P2 固定x的Γ下层分解与鲁棒校正”
+col3 two lines “等价关系依赖结构” / “有效界与最优性条件须核验”
+
+Row 2:
+col1 two lines “保守近似与强化” / “P3”
+col2 two lines “补救对偶化与RLT” / “有效线性或锥不等式强化”
+col3 two lines “LRC属于保守近似” / “强化效果与计算代价一起评估”
+
+Row 3:
+col1 two lines “结构化算法设计” / “P4、P5”
+col2 two lines “P4 自适应贪心与混合策略” / “P5 截断代理与扩展算法”
+col3 two lines “近似比与遗憾界各有假设” / “双准则需报告约束放宽”
+
+SECTION 3 near y=705–805: navy bold heading “未来方向”
+Show three neatly aligned short navy labels across one or two lines, separated with subtle gold vertical rules or gold spacing accents, NOT arrows (these are parallel directions, not stages):
+“决策导向的” / “不确定集学习”
+“决策依赖的” / “多模态DRO”
+“学习辅助求解” / “与质量认证”
+These must match the three directions in the previous P19. They are literature-derived future research directions, not completed contributions.
+
+BOTTOM near y=835–915: thin gold rule, then centered bold navy takeaway, one or two balanced lines:
+“以明确的保护目标组织研究”
+“用理论条件与实验共同评价方法”
+If space allows one smaller readable qualification below or near future section, use:
+“学习近似与精确认证需分别论证”
+Do not shrink any main text into unreadable footnotes.
+
+Scope and accuracy constraints:
+This is the conclusion of a PURE robust optimization literature-sharing section. Do not include the speaker's research, CCMCKP, knapsack applications, group selection, CDF, WCDF, Beam Search, MITM, chance constraints, probability thresholds, code, or experiments from the speaker.
+Do not claim P1/P2's entire bilevel problem is exactly decomposed; fixed x must appear explicitly for the Γ lower-level decomposition. Do not call LRC an exact reformulation, do not claim P5 always obeys the original constraints, and do not turn surrogate-model termination into a global certificate.
+P1 through P5 refer to the five earlier papers. Future directions are from additional literature introduced on P19, so do not falsely attribute all three to these five papers.
+Do not repeat the previous innovation comparison table. This slide summarizes common logic, distinguishes method classes, and closes with future directions.
+No production instructions, “本页用途”, “建议图示”, “口头讲解”, or source filenames on the slide. No invented numbers or performance claims. No farewell slide or thanks-only cover. Maintain exact Chinese wording, accurate Γ and Roman RLT/LRC/DRO, balanced spacing, no overlaps or clipping.
