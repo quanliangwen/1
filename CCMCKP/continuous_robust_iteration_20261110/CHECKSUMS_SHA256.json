@@ -228,6 +228,11 @@
       "sha256": "4e11e0a3a02e842e7d66d545121ddf52bcad6bf47f9786c64db4489a2aa2b6d5"
     },
     {
+      "path": "check_formal_native_catalogue.py",
+      "bytes": 1126,
+      "sha256": "4e98fafdfa8bd810e012eb224d86063d76edfca595c75ae02611c6327123cd7a"
+    },
+    {
       "path": "check_frozen_native_catalogue.py",
       "bytes": 1396,
       "sha256": "1dd4adfed8cd7b2e6da260b44dfdf56d2caf9fe9b05c61d9012091ae27c785ea"
@@ -633,9 +638,24 @@
       "sha256": "9c9adc28954213c956e181acc73939a71ee4bd8d0f75ba95410474f6a765949f"
     },
     {
+      "path": "formal/F002_I016_40x30/RAW_POSTPROCESS_LAUNCH.json",
+      "bytes": 250,
+      "sha256": "bcefe8813e1cf289fd682937f94559c9d05a7fc9c8c3e71dd03ee6d6d1d21aa8"
+    },
+    {
       "path": "formal/F002_I016_40x30/RAW_POSTPROCESS_REGISTRATION.json",
       "bytes": 1406,
       "sha256": "c7cfc1a8b579d5a9c4075dfc60099cda9f7bcada7b93aef41edf36771fdf99ca"
+    },
+    {
+      "path": "formal/F002_I016_40x30/RAW_POSTPROCESS_REMOTE_VERIFIED.json",
+      "bytes": 446,
+      "sha256": "0e045df886d83fc19e531f56092bee5d6c8f501687d15c65d8c5be118a4341b8"
+    },
+    {
+      "path": "formal/F002_I016_40x30/RAW_POSTPROCESS_STATE.json",
+      "bytes": 85,
+      "sha256": "2988db8c7b860caac13318b9692de6638593e904369138d955639ff69ac9a0d5"
     },
     {
       "path": "formal/F002_I016_40x30/README.md",
@@ -650,12 +670,17 @@
     {
       "path": "formal/F002_I016_40x30/SEARCH_PROGRESS.json",
       "bytes": 288,
-      "sha256": "feb62e66dca61cf41c79259f64a9c75f879be548cc6ea430f1c193bcbe835afb"
+      "sha256": "44974c7fcd9517cdf7eef6e3919c01dd28800b1c889732177b3d4443abc654ec"
     },
     {
       "path": "formal/F002_I016_40x30/SOURCE_MANIFEST.json",
       "bytes": 11525,
       "sha256": "95c51afc756167e1bc4cbc443880a16a59a7c6d4b940cb1de1771485bc6f4fc5"
+    },
+    {
+      "path": "formal_native_catalogue.py",
+      "bytes": 3146,
+      "sha256": "05f5bad77ac552705316e0a0189d812377a58f0aa4ca7d296074bec24bd0cd4c"
     },
     {
       "path": "frozen_native_catalogue.py",
@@ -684,8 +709,8 @@
     },
     {
       "path": "ITERATION_LOG.md",
-      "bytes": 77832,
-      "sha256": "7841c5b81f7bd2413d405de4f4d5556db2e280cac83d709520da9c7377265771"
+      "bytes": 78847,
+      "sha256": "13055a6432763039bb20a98807ce0b80903d7314f97fcbf5fc6b6d1a065101dd"
     },
     {
       "path": "iterations/I001_risk_portfolio/ARCHIVE_MANIFEST.json",
@@ -2234,8 +2259,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2379,
-      "sha256": "1bbbbd59d4749916c09c224a3d8a9e95d30c10f7c48a3acfc56effa298a7ce65"
+      "bytes": 2453,
+      "sha256": "90e9f7cbf9fd7d174d306b0afae646308734f12db37e8faf8fa573d634b38552"
     },
     {
       "path": "reference_loader.py",
@@ -3126,6 +3151,11 @@
       "path": "research/F002_lineage_preflight/small_case2_seed9716682.json.gz.terminal.json",
       "bytes": 76,
       "sha256": "f354d50bee7f797569aa203b188ee53da5c3e612504b1952a7cfa529d185ecfe"
+    },
+    {
+      "path": "research/F002_native_catalogue_preflight/ACTUAL_READONLY_CHECK.json",
+      "bytes": 54449,
+      "sha256": "9e08e3d4271dc3af2ab30b3b3d6d011ded268e6d0a48caa3db0d616420612911"
     },
     {
       "path": "research/final_audit_preflight/audit_first3_small_global.py",
