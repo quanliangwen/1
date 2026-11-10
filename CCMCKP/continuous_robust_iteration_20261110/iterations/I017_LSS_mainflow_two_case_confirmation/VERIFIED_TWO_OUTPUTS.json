@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "time": 1794277155.7218947,
+  "scope": "exactly2 requested cases, one NEW actual original-mainflow run percase; original _0 minimumcost output; not40cases or30runAvg",
+  "original_reference_files_unchanged": 21,
+  "original_decision_output_and_recording_reused": true,
+  "only_search_stage_replaced": true,
+  "extra_real_probability_hard_gate": false,
+  "extra_own_integer_hard_gate": false,
+  "new_search_or_MC_calls_by_verifier": 0,
+  "rows": [
+    {
+      "instance": "APP_3_5_30_",
+      "capacity": 21,
+      "requested_cost": "9.034717",
+      "actual_cost": 9.034717299521294,
+      "actual_cost_6dp": "9.034717",
+      "original_confidence_level": 0.9924814814814815,
+      "original_real_confidence_level": 0.9651546,
+      "selection": "[12, 10, 11]",
+      "running_time": 0.6308913230895996,
+      "original_csv": "iterations/I017_LSS_mainflow_two_case_confirmation/case_T21/result/Localsearch/LocalSearch_app_3_5_30_21_0.csv",
+      "original_csv_sha256": "a3fa6190e11242b86a78d2e9df1307891b178cc2691dac842225cd7e04739765",
+      "below_removed985_threshold_but_retained": true,
+      "new_runs": 1,
+      "original_variants0_1_2_recorded": true
+    },
+    {
+      "instance": "APP_3_5_30_",
+      "capacity": 27,
+      "requested_cost": "7.250013",
+      "actual_cost": 7.25001317010452,
+      "actual_cost_6dp": "7.250013",
+      "original_confidence_level": 0.9955185185185185,
+      "original_real_confidence_level": 0.971381,
+      "selection": "[12, 1, 11]",
+      "running_time": 1.2865166664123535,
+      "original_csv": "iterations/I017_LSS_mainflow_two_case_confirmation/case_T27/result/Localsearch/LocalSearch_app_3_5_30_27_0.csv",
+      "original_csv_sha256": "a6faaf3a5afe5f901e1e7fd1dc122b334766e8b8c5f5ab9b74602901b1020295",
+      "below_removed985_threshold_but_retained": true,
+      "new_runs": 1,
+      "original_variants0_1_2_recorded": true
+    }
+  ],
+  "source_zip_sha256": "4005da1a4e92949d494b55133ee50d98621709c01dcaaf731dfe50804ac7023f"
+}

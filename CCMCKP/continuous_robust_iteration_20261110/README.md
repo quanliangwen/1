@@ -1,30 +1,16 @@
-# 当前验收口径已更正为LSS主实验
+# CCMCKP：当前按原LSS主流程对齐
 
-用户要求移除额外真实概率硬筛。当前以原LSS的评估函数、CL=.99、原始输出与CSV记录为准；真实概率只记录，不筛选输出。先验证APP_3_5_30的T21/T27两例，尚未完成新运行。此前双门槛40×30结果是不同口径的历史结果，不代表当前对齐后的统计。持续目标由用户暂停，本次不恢复全量迭代。
+已去掉额外真实概率硬筛。原LSS的评估函数、CL=.99、原始最小成本输出_0和CSV记录流程保持原样，只替换搜索阶段。
 
-[当前要求与口径](CURRENT_ACCEPTANCE_POLICY.json) · [两例确认源码](iterations/I017_LSS_mainflow_two_case_confirmation/I017_LSS_MAINFLOW_TWO_CASE_SOURCE.zip)
+|算例|T|新运行输出|
+|---|---:|---:|
+|APP_3_5_30_|21|9.034717|
+|APP_3_5_30_|27|7.250013|
 
----
+两例各一次新运行，已核对原始CSV、原21份参考源码和输出段AST。真实概率仅作为原CSV列记录，不筛输出。这里还不是新口径的40×30统计。
 
-# CCMCKP鲁棒优化持续迭代
+[实际确认CSV](iterations/I017_LSS_mainflow_two_case_confirmation/CONFIRMED_OUTPUT.csv) · [源码](iterations/I017_LSS_mainflow_two_case_confirmation/I017_LSS_MAINFLOW_TWO_CASE_SOURCE.zip) · [完整新运行证据](iterations/I017_LSS_mainflow_two_case_confirmation/I017_TWO_CASE_ACTUAL_MAINFLOW_EVIDENCE.zip) · [详情及运行方式](iterations/I017_LSS_mainflow_two_case_confirmation/README.md)
 
-目标进行中。验收保持全部原样本严格sum<T整数下界≥0.99，加原完整LSS1000万次/seed832273/sum≤T点估计≥0.985；无新增尾部硬筛。搜索不读真实参数、旧向量、历史目标或验收缓存。
+[当前验收要求](CURRENT_ACCEPTANCE_POLICY.json) · [完整历史过程](ITERATION_LOG.md)
 
-**最新I016完整开发对照已通过，新一轮全40×30已在服务器实际启动。**
-
-|39号冻结开发版本|新配对种子数|Best|Avg|Std.P|Avg−自身Best|
-|---|---:|---:|---:|---:|---:|
-|I015父版|3|325.700219|327.649035|1.554774|1.948816|
-|I016通用两组覆盖|3|324.916225|324.916225|0.000000|0.000000|
-
-39号历史Best321.700547仍未达到；三次开发实验不能替代30次。四个额外大例各一配对，35/37/38成本持平，40号292.957538→292.275925，全部完整前缀与原样本已独立审计。[39号完整证据](research/D005_I016_pair_prefix/D005_COMPLETE_COHORT_EVIDENCE.zip) · [四例完整证据](research/D006_I016_breadth_prefix/D006_COMPLETE_COHORT_EVIDENCE.zip)
-
-F002将用原封不动I016、30个全新种子跑40×30，600秒/共享180秒、16工且大例4工，保留所有失败。先完成1200搜索，再独立原样本审计与另行冻结原LSS验收，未全30合格不报告成功子集Avg。[F002源码与协议](formal/F002_I016_40x30/F002_FROZEN_SEARCH_SOURCE.zip) · [登记](formal/F002_I016_40x30/REGISTRATION.json)
-
-**已有正式完整结果对应上一冻结I002版本**：1200/1200协议有效并联合合格；39例Avg=自身Best，39号Avg329.781011、Std.P0.123327；25例Avg不高于历史Best。[已完成40×30 Excel](formal/F001_I002_40x30/F001_40cases_30runs.xlsx) · [对应源码](formal/F001_I002_40x30/full_records/F001_SOURCE_AND_AUDIT.zip) · [全部40例记录](formal/F001_I002_40x30/full_records)
-
-第三组修复暂不采用：首版回放120全拒绝；平衡回放133原样本合格成员的最低成本325.667369，全部高于旧固定池已合格324.916225，未带来降本，不做多余LSS调用，未加入F002。
-
-[每次思路、尝试、负结果与取舍](ITERATION_LOG.md) · [全部交付SHA256清单](CHECKSUMS_SHA256.json)
-
-F002实际控制器1079245、原样本审计等待1083571；最新已归档快照138/1200，错误和预算违规均0。[运行快照](formal/F002_I016_40x30/SEARCH_PROGRESS.json) · [原LSS验收程序预检](research/F002_native_audit_preflight/README.md)。新版全量Avg和Excel仍等待完整验收。
+此前采用原样本99加真实概率985硬筛的代码、Excel和实验保留为不同口径的历史记录，不代表当前与LSS的公平比较。用户已暂停持续目标，本次只完成指定两例确认。
