@@ -1,0 +1,125 @@
+{
+  "time": 1794277692.154664,
+  "scope": "user requested original S10 search unchanged, remove external real-probability hard filter; run APP_3_5_30 T21/T27 each once via original LSS output0/1/2/main CSV flow",
+  "S10_source_sha256": {
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "run.py": "e5f196f1cb19167a16390372c112c8d3f7f67ff56474f925b9556ad46d59ab83",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "S10_original_frozen_directory": "/home/quanliangwen/work/cdf_lss_S10_20261109/frozen_candidate",
+  "benchmark": "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/APP_3_5_30_",
+  "capacities": [
+    21,
+    27
+  ],
+  "search_seed": 9821001,
+  "search_seconds": 600,
+  "watchdog_seconds": 640,
+  "driver_sha256": {
+    "s10_lss_bridge.py": "52f53fe1fd8ff84b32e13bbf922679e2f35636ea4c6c73db60249d140529bd5c",
+    "run_s10_lss_confirmation.py": "ad6de7c992d890eff299dd18c58670a27e0f4b4efaef76be85bb032044dc463d",
+    "prepare_s10_lss_confirmation.py": "9f3cda33953b208826ca6eca3f9adfeeba7c4d6f6774f4446902f3c074e56f36"
+  },
+  "original_LSS_sources_sha256": [
+    {
+      "path": "src/exp_Result_GA.py",
+      "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac"
+    },
+    {
+      "path": "src/exp_Result_Localsearch.py",
+      "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6"
+    },
+    {
+      "path": "src/exp_Result_Greedy.py",
+      "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da"
+    },
+    {
+      "path": "src/exp_Result_EDA.py",
+      "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81"
+    },
+    {
+      "path": "src/benchmark/benchmark_LAB.py",
+      "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d"
+    },
+    {
+      "path": "src/benchmark/benchmark_APP.py",
+      "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2"
+    },
+    {
+      "path": "src/benchmark/benchmark_resample.py",
+      "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742"
+    },
+    {
+      "path": "src/utils/factor.py",
+      "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370"
+    },
+    {
+      "path": "src/utils/my_file.py",
+      "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02"
+    },
+    {
+      "path": "src/functions/func_solution_factor.py",
+      "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a"
+    },
+    {
+      "path": "src/functions/func_realP_statistical.py",
+      "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8"
+    },
+    {
+      "path": "src/functions/func_GA.py",
+      "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878"
+    },
+    {
+      "path": "src/functions/func_greedy.py",
+      "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371"
+    },
+    {
+      "path": "src/functions/func_MILPgurobi.py",
+      "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013"
+    },
+    {
+      "path": "src/functions/func_localsearch.py",
+      "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa"
+    },
+    {
+      "path": "src/functions/func_EDA.py",
+      "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067"
+    },
+    {
+      "path": "src/functions/func_cl_estimator.py",
+      "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd"
+    },
+    {
+      "path": "src/functions/func_bruct_force.py",
+      "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71"
+    },
+    {
+      "path": "src/functions/func_iterativeCCMCKP.py",
+      "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a"
+    },
+    {
+      "path": "src/functions/func_localsearch_cp.py",
+      "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005"
+    },
+    {
+      "path": "src/functions/func_Dyer_Zemel.py",
+      "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e"
+    }
+  ],
+  "final_feasibility": "original LSS advanced_exact_evaluation CL=.99; no external real_P_test rejection",
+  "output": "original Local_Search_DD output tail plus unmodified original param_test and CSV writers",
+  "real_probability": "original real_P_test10m/seed832273 recorded only",
+  "S10_internal_candidate_generation": "original source byte-identical, including own raw99 search and small-case branch; raw debug legacy985metadata inactive, old validate_portfolio postselector not invoked",
+  "previous_I017_algorithm_not_used": true,
+  "new_runs_per_capacity": 1,
+  "no_full40_or30run_claim": true
+}
