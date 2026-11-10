@@ -1,0 +1,388 @@
+{
+  "created_utc": "2026-11-10T03:29:30.469191+00:00",
+  "server": "quanliangwen@10.112.162.60",
+  "host": "xzg-Super-Server",
+  "scope": [
+    "/home/quanliangwen/parallel_test/CCMCKP/work",
+    "/home/quanliangwen/work"
+  ],
+  "delete_executed": false,
+  "source_modified": false,
+  "preservation_commit": "879d291a774fd7b952a7beffb276675b96cc6612",
+  "preservation_remote_verified": true,
+  "source_checks": {
+    "S10_original": 12,
+    "S10_LSS_copy": 12,
+    "I002": 16,
+    "I016": 22,
+    "total": 62,
+    "all_matched_saved_sources": true
+  },
+  "protected_roots": [
+    "/home/quanliangwen/work/cdf_lss_S10_20261109",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F001_I002_40x30",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case39",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case40",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F002_I016_40x30",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I016_pair_cover_case39",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth/I016_priority_four",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D004_I016_full_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D005_I016_pair_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D006_I016_breadth_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/artifact",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/reference",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/lss_cache",
+    "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I017_LSS_mainflow_two_case_confirmation"
+  ],
+  "protected_symlink_dependencies": [
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover/vendor313",
+      "target": "../I002_cdf_neighborhood/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_S10_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    }
+  ],
+  "primary_candidates": [
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I001_risk_portfolio",
+      "allocated_bytes": 23195648,
+      "mib": 22.12109375,
+      "gib": 0.021602630615234375,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier",
+      "allocated_bytes": 16158720,
+      "mib": 15.41015625,
+      "gib": 0.015048980712890625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I004_robust_pair_exchange",
+      "allocated_bytes": 29896704,
+      "mib": 28.51171875,
+      "gib": 0.027843475341796875,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound",
+      "allocated_bytes": 61399040,
+      "mib": 58.5546875,
+      "gib": 0.05718231201171875,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I006_cdf_branch_order",
+      "allocated_bytes": 8560640,
+      "mib": 8.1640625,
+      "gib": 0.00797271728515625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I007_integer_budget_cdf",
+      "allocated_bytes": 278528,
+      "mib": 0.265625,
+      "gib": 0.0002593994140625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I008_suffix_budget_search",
+      "allocated_bytes": 9256960,
+      "mib": 8.828125,
+      "gib": 0.0086212158203125,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I009_cached_mass_search",
+      "allocated_bytes": 19046400,
+      "mib": 18.1640625,
+      "gib": 0.01773834228515625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I010_robust_priority",
+      "allocated_bytes": 5128192,
+      "mib": 4.890625,
+      "gib": 0.0047760009765625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I011_robust_block_mitm",
+      "allocated_bytes": 1990656,
+      "mib": 1.8984375,
+      "gib": 0.00185394287109375,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I012_iterated_block_mitm",
+      "allocated_bytes": 6795264,
+      "mib": 6.48046875,
+      "gib": 0.006328582763671875,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I014_hybrid_cdf_blocks",
+      "allocated_bytes": 3309568,
+      "mib": 3.15625,
+      "gib": 0.003082275390625,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I015_precision_closure",
+      "allocated_bytes": 3489792,
+      "mib": 3.328125,
+      "gib": 0.0032501220703125,
+      "group": "old_search_iterations",
+      "reason": "旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_feasible_S2_20261109",
+      "allocated_bytes": 102367232,
+      "mib": 97.625,
+      "gib": 0.0953369140625,
+      "group": "old_campaigns",
+      "reason": "旧算法/对照实验；未列入保留三版的运行依赖。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_stability_20261109",
+      "allocated_bytes": 19918848,
+      "mib": 18.99609375,
+      "gib": 0.018550872802734375,
+      "group": "old_campaigns",
+      "reason": "旧算法/对照实验；未列入保留三版的运行依赖。"
+    },
+    {
+      "path": "/home/quanliangwen/work/S9_small_recheck_20261109",
+      "allocated_bytes": 32264192,
+      "mib": 30.76953125,
+      "gib": 0.030048370361328125,
+      "group": "old_campaigns",
+      "reason": "旧算法/对照实验；未列入保留三版的运行依赖。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/candidate",
+      "allocated_bytes": 286720,
+      "mib": 0.2734375,
+      "gib": 0.00026702880859375,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/deadline_stress",
+      "allocated_bytes": 401408,
+      "mib": 0.3828125,
+      "gib": 0.00037384033203125,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/delivery_archives",
+      "allocated_bytes": 28184576,
+      "mib": 26.87890625,
+      "gib": 0.026248931884765625,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development",
+      "allocated_bytes": 2265088,
+      "mib": 2.16015625,
+      "gib": 0.002109527587890625,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development_lss",
+      "allocated_bytes": 385024,
+      "mib": 0.3671875,
+      "gib": 0.00035858154296875,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss",
+      "allocated_bytes": 70197248,
+      "mib": 66.9453125,
+      "gib": 0.06537628173828125,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss_validation",
+      "allocated_bytes": 1089536,
+      "mib": 1.0390625,
+      "gib": 0.00101470947265625,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/frozen_candidate",
+      "allocated_bytes": 286720,
+      "mib": 0.2734375,
+      "gib": 0.00026702880859375,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/lss_eval_reference",
+      "allocated_bytes": 835584,
+      "mib": 0.796875,
+      "gib": 0.0007781982421875,
+      "group": "S9_children_except_vendor313",
+      "reason": "仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。"
+    }
+  ],
+  "primary_group_totals": {
+    "old_search_iterations": {
+      "allocated_bytes": 188506112,
+      "mib": 179.7734375
+    },
+    "old_campaigns": {
+      "allocated_bytes": 154550272,
+      "mib": 147.390625
+    },
+    "S9_children_except_vendor313": {
+      "allocated_bytes": 103931904,
+      "mib": 99.1171875
+    }
+  },
+  "primary_allocated_bytes": 446988288,
+  "primary_gib": 0.416290283203125,
+  "conditional_regenerable_summaries": [
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/summary.json",
+      "allocated_bytes": 5029416960,
+      "gib": 4.684009552001953,
+      "condition": "保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。",
+      "rebuild_verified": false,
+      "result_json_count": 1200
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL/summary.json",
+      "allocated_bytes": 220971008,
+      "gib": 0.2057952880859375,
+      "condition": "保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。",
+      "rebuild_verified": false,
+      "result_json_count": 120
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM/summary.json",
+      "allocated_bytes": 56397824,
+      "gib": 0.052524566650390625,
+      "condition": "保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。",
+      "rebuild_verified": false,
+      "result_json_count": 120
+    }
+  ],
+  "conditional_summary_allocated_bytes": 5306785792,
+  "conditional_summary_gib": 4.942329406738281,
+  "primary_plus_conditional_summary_gib": 5.358619689941406,
+  "held_due_to_running_processes": {
+    "path": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+    "allocated_bytes": 64499712,
+    "processes": [
+      {
+        "pid": 842249,
+        "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+        "command": "bash -c cd /home/quanliangwen/work/cdf_lss_aligned_S3_20261109; nohup python3 -u monitor_final_summary.py > monitor_final_summary.log 2>&1 < /dev/null & wait ",
+        "opened": []
+      },
+      {
+        "pid": 842250,
+        "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+        "command": "python3 -u monitor_final_summary.py ",
+        "opened": [
+          "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/monitor_final_summary.log"
+        ]
+      }
+    ]
+  },
+  "old_RL_whole_directory_alternative": {
+    "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101",
+    "allocated_bytes": 13284634624,
+    "gib": 12.37228012084961,
+    "classification": "旧RL/CVaR实验，独立于保留三版；包含原始40x30结果和证据，非单纯缓存。整目录清理需先决定放弃旧实验或完成可核验归档。未核验整套异地完整备份。",
+    "overlaps_all_conditional_summaries": true,
+    "do_not_add_to_summary_total": true
+  },
+  "old_work_total_allocated_bytes": 13446402048,
+  "old_work_top_level": [
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_refinement_20261024_30",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_R05_20261016",
+      "allocated_bytes": 90112
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_by_workbook_20261026",
+      "allocated_bytes": 32768
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016",
+      "allocated_bytes": 145833984
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_msddts_l03_20261101",
+      "allocated_bytes": 5521408
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/offline_all40_r05_nopr_30_20261010_151259",
+      "allocated_bytes": 3633152
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_current_R05_L03_20261102",
+      "allocated_bytes": 6586368
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101",
+      "allocated_bytes": 13284634624
+    }
+  ],
+  "measurement_limits": [
+    "du -x -B1实际分配字节；不跟随符号链接；两个扫描范围无权限错误，未发现硬链接。",
+    "父子目录不能相加；整套RL目录与三个汇总文件为互斥清理方案。",
+    "进程及打开文件仅检查当前账号；候选目录内未见占用，S3有监控进程故暂缓。",
+    "执行清理前需重新核对路径、进程、大小、依赖及保留源SHA；本次没有执行删除或停止进程。",
+    "候选判断针对保留三版的运行；旧实验回放可能依赖其历史目录。原始benchmark、Python环境、共享LSS参考和flint运行库均不列入清理。",
+    "仅清理清单内精确路径；不把CCMCKP/work、/home/quanliangwen/work或连续迭代总目录作为整目录清理目标。"
+  ]
+}

@@ -1,0 +1,61 @@
+CCMCKP磁盘清理评估（仅清单，未删除）
+账号：quanliangwen@10.112.162.60；主机：xzg-Super-Server
+测量时间UTC：2026-11-10T03:26:30.751631+00:00
+两个独立目录：/home/quanliangwen/parallel_test/CCMCKP/work（12.52 GiB，旧RL等实验）；/home/quanliangwen/work（1.76 GiB，当前S10/I002/I016所在目录）。
+保留三版源代码62项SHA256比对全部一致：S10原源码12+LSS入口副本12、I002 16、I016 22。
+三版及共用运行依赖已保存于固定提交879d291a774fd7b952a7beffb276675b96cc6612，已核验远端字节与SHA256。
+
+一、其他旧鲁棒/CDF实验清理候选：426.28 MiB（0.4163 GiB）
+不在三版搜索运行依赖中；删除这些旧版本会丢失它们的原路径复跑能力。
+22.12 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I001_risk_portfolio	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+15.41 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+28.51 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I004_robust_pair_exchange	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+58.55 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+8.16 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I006_cdf_branch_order	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+0.27 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I007_integer_budget_cdf	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+8.83 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I008_suffix_budget_search	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+18.16 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I009_cached_mass_search	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+4.89 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I010_robust_priority	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+1.90 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I011_robust_block_mitm	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+6.48 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I012_iterated_block_mitm	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+3.16 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I014_hybrid_cdf_blocks	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+3.33 MiB	/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I015_precision_closure	旧搜索版本，非保留三版的源码或运行依赖；移除后这些旧版本的原路径复跑会失效。
+97.62 MiB	/home/quanliangwen/work/cdf_feasible_S2_20261109	旧算法/对照实验；未列入保留三版的运行依赖。
+19.00 MiB	/home/quanliangwen/work/cdf_stability_20261109	旧算法/对照实验；未列入保留三版的运行依赖。
+30.77 MiB	/home/quanliangwen/work/S9_small_recheck_20261109	旧算法/对照实验；未列入保留三版的运行依赖。
+0.27 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/candidate	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+0.38 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/deadline_stress	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+26.88 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/delivery_archives	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+2.16 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+0.37 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development_lss	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+66.95 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+1.04 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss_validation	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+0.27 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/frozen_candidate	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+0.80 MiB	/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/lss_eval_reference	仅此精确子目录；禁止整目录删除S9，必须保留vendor313及当前父目录路径。
+
+二、旧RL汇总文件，待完整重建比对后再清理：4.9423 GiB
+对应40x30、4x30、4x30共1440份result.json的文件数量和阶段完成状态已核对；尚未全部重新解析内容或重建比对，不能称已验证完全可恢复。
+4.6840 GiB	/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/summary.json	保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。
+0.2058 GiB	/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL/summary.json	保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。
+0.0525 GiB	/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM/summary.json	保留全部原始result.json、状态/参数/源码和重建脚本；完整重建并比对后再清理。现有完整阶段的报告程序直接读取summary.json，删除后须重建才能继续读取。
+第一项与第二项合计候选约5.3586 GiB；第二项尚有重建验证条件。
+
+三、暂缓与保护
+S9/vendor313共25.71 MiB，S10/I002/I016通过符号链接共同依赖，禁止删除。
+S3目录61.51 MiB，监控进程842249/842250仍在，暂不列入可直接清理。
+保留S10全目录、I002/I016的算法及F001/F002正式原始数据，连同reference、lss_cache、artifact和所有research/stability/breadth历史（其中有混合I002/I016证据）。
+保留I017原LSS两例对照记录。保留原始benchmark和Python环境。
+
+四、另一种更大范围方案（不能与第二项相加）
+旧RL/CVaR整个目录/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101占12.3723 GiB。
+它不是S10/I002/I016，也不是纯缓存；包含1200次旧实验的原始数据和审计证据。只有决定舍弃旧RL实验，或先完成整套可核验归档，才将整个目录纳入清理。当前未核验其整套异地完整备份。
+最大的单文件为其stages/U18_FULL40/summary.json，占4.68 GiB；对应原始results目录6.35 GiB，保留原始结果时只考虑汇总文件方案。
+未把旧RL整目录、另一套rl_v2、cleanup记录或CCMCKP_R05外部副本计入426.28 MiB旧鲁棒/CDF清理合计。
+
+测量与执行界限：
+du -x -B1实际分配字节；不跟随符号链接；两个扫描范围无权限错误，未发现硬链接。
+父子目录不能相加；整套RL目录与三个汇总文件为互斥清理方案。
+进程及打开文件仅检查当前账号；候选目录内未见占用，S3有监控进程故暂缓。
+执行清理前需重新核对路径、进程、大小、依赖及保留源SHA；本次没有执行删除或停止进程。
+候选判断针对保留三版的运行；旧实验回放可能依赖其历史目录。原始benchmark、Python环境、共享LSS参考和flint运行库均不列入清理。
+仅清理清单内精确路径；不把CCMCKP/work、/home/quanliangwen/work或连续迭代总目录作为整目录清理目标。

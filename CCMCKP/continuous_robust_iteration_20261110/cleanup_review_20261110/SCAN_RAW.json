@@ -1,0 +1,1457 @@
+{
+  "created_utc": "2026-11-10T03:26:30.751631+00:00",
+  "account": "quanliangwen",
+  "host": "xzg-Super-Server",
+  "measurement": "du allocated bytes, -x, no symlink traversal; snapshot only; no deletion",
+  "roots": [
+    "/home/quanliangwen/work",
+    "/home/quanliangwen/parallel_test/CCMCKP/work"
+  ],
+  "keep_roots": [
+    "/home/quanliangwen/work/cdf_lss_S10_20261109",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F001_I002_40x30",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case39",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case40",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F002_I016_40x30",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I016_pair_cover_case39",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth/I016_priority_four",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D004_I016_full_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D005_I016_pair_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D006_I016_breadth_prefix",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/artifact",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/reference",
+    "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/lss_cache",
+    "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313"
+  ],
+  "sizes": [
+    {
+      "root": "/home/quanliangwen/parallel_test/CCMCKP/work",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_refinement_20261024_30",
+          "allocated_bytes": 12288
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_R05_20261016",
+          "allocated_bytes": 90112
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_by_workbook_20261026",
+          "allocated_bytes": 32768
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016",
+          "allocated_bytes": 145833984
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_msddts_l03_20261101",
+          "allocated_bytes": 5521408
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/offline_all40_r05_nopr_30_20261010_151259",
+          "allocated_bytes": 3633152
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/cleanup_keep_current_R05_L03_20261102",
+          "allocated_bytes": 6586368
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101",
+          "allocated_bytes": 13284634624
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work",
+          "allocated_bytes": 13446402048
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109",
+          "allocated_bytes": 135680000
+        },
+        {
+          "path": "/home/quanliangwen/work/S9_small_recheck_20261109",
+          "allocated_bytes": 32264192
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_feasible_S2_20261109",
+          "allocated_bytes": 102367232
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_stability_20261109",
+          "allocated_bytes": 19918848
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+          "allocated_bytes": 64499712
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110",
+          "allocated_bytes": 1390321664
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_S10_20261109",
+          "allocated_bytes": 141275136
+        },
+        {
+          "path": "/home/quanliangwen/work",
+          "allocated_bytes": 1886330880
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/reference",
+          "allocated_bytes": 331776
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/progress",
+          "allocated_bytes": 49152
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research",
+          "allocated_bytes": 93605888
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/lss_cache",
+          "allocated_bytes": 7344128
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal",
+          "allocated_bytes": 889036800
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/outputs",
+          "allocated_bytes": 245760
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/artifact",
+          "allocated_bytes": 154255360
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations",
+          "allocated_bytes": 206774272
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/__pycache__",
+          "allocated_bytes": 270336
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth",
+          "allocated_bytes": 7835648
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability",
+          "allocated_bytes": 24801280
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110",
+          "allocated_bytes": 1390321664
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I011_robust_block_mitm",
+          "allocated_bytes": 1990656
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood",
+          "allocated_bytes": 13721600
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I012_iterated_block_mitm",
+          "allocated_bytes": 6795264
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I014_hybrid_cdf_blocks",
+          "allocated_bytes": 3309568
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I017_LSS_mainflow_two_case_confirmation",
+          "allocated_bytes": 442368
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I001_risk_portfolio",
+          "allocated_bytes": 23195648
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover",
+          "allocated_bytes": 3256320
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I006_cdf_branch_order",
+          "allocated_bytes": 8560640
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I009_cached_mass_search",
+          "allocated_bytes": 19046400
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier",
+          "allocated_bytes": 16158720
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I008_suffix_budget_search",
+          "allocated_bytes": 9256960
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I007_integer_budget_cdf",
+          "allocated_bytes": 278528
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I004_robust_pair_exchange",
+          "allocated_bytes": 29896704
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation",
+          "allocated_bytes": 843776
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound",
+          "allocated_bytes": 61399040
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I010_robust_priority",
+          "allocated_bytes": 5128192
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I015_precision_closure",
+          "allocated_bytes": 3489792
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations",
+          "allocated_bytes": 206774272
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/small16_joint_global",
+          "allocated_bytes": 15949824
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/F002_phase_overrun_observation",
+          "allocated_bytes": 20480
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D002_isolated_full_prefix",
+          "allocated_bytes": 1286144
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D006_I016_breadth_prefix",
+          "allocated_bytes": 21467136
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/F002_native_catalogue_preflight",
+          "allocated_bytes": 65536
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/cdf_pair_coverage_replay",
+          "allocated_bytes": 6455296
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D001_isolated_precision_LSS",
+          "allocated_bytes": 344064
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/I013_adaptive_order",
+          "allocated_bytes": 49152
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/bootstrap_ambiguity",
+          "allocated_bytes": 11313152
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/native_catalogue_builder_preflight",
+          "allocated_bytes": 49152
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D004_I016_full_prefix",
+          "allocated_bytes": 6844416
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/P016_audit_preflight",
+          "allocated_bytes": 12288
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/F002_lineage_preflight",
+          "allocated_bytes": 73728
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/F002_native_audit_preflight",
+          "allocated_bytes": 16384
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D003_paired_stability_prefix",
+          "allocated_bytes": 9543680
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/I015_precision_replay",
+          "allocated_bytes": 32768
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/legacy_native_observation",
+          "allocated_bytes": 12288
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/raw_precision",
+          "allocated_bytes": 421888
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/third_group_repair_replay",
+          "allocated_bytes": 249856
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/third_group_repair_preflight",
+          "allocated_bytes": 8192
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D005_I016_pair_prefix",
+          "allocated_bytes": 18698240
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/final_archive_preflight",
+          "allocated_bytes": 12288
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/B016_audit_preflight",
+          "allocated_bytes": 16384
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/third_group_repair_balanced_replay",
+          "allocated_bytes": 372736
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/final_audit_preflight",
+          "allocated_bytes": 286720
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research",
+          "allocated_bytes": 93605888
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F002_I016_40x30",
+          "allocated_bytes": 160305152
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F001_I002_40x30",
+          "allocated_bytes": 728727552
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal",
+          "allocated_bytes": 889036800
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I016_pair_cover_case39",
+          "allocated_bytes": 5328896
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I015_gain_case39",
+          "allocated_bytes": 2600960
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case40",
+          "allocated_bytes": 8519680
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case39",
+          "allocated_bytes": 8347648
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability",
+          "allocated_bytes": 24801280
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth/I016_priority_four",
+          "allocated_bytes": 7831552
+        },
+        {
+          "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth",
+          "allocated_bytes": 7835648
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages",
+          "allocated_bytes": 12844572672
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/audit",
+          "allocated_bytes": 106573824
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/delivery_u18_20261103",
+          "allocated_bytes": 26198016
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/source_success_window_U18",
+          "allocated_bytes": 6225920
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/failure_archives",
+          "allocated_bytes": 1536000
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/completed_archives",
+          "allocated_bytes": 168534016
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/__pycache__",
+          "allocated_bytes": 241664
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/baseline",
+          "allocated_bytes": 741376
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/completed_case_backups",
+          "allocated_bytes": 28004352
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/version_evidence",
+          "allocated_bytes": 32104448
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101",
+          "allocated_bytes": 13284634624
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM",
+          "allocated_bytes": 167505920
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL",
+          "allocated_bytes": 515805184
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/NEW_FIXED",
+          "allocated_bytes": 44838912
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40",
+          "allocated_bytes": 12116418560
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages",
+          "allocated_bytes": 12844572672
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/source",
+          "allocated_bytes": 6234112
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results",
+          "allocated_bytes": 6822469632
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40",
+          "allocated_bytes": 12116418560
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_10_10_500_T19",
+          "allocated_bytes": 143310848
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_4_5_30_T18",
+          "allocated_bytes": 3444736
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_10_20_500_T12",
+          "allocated_bytes": 88489984
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_50_10_500_T100",
+          "allocated_bytes": 1302528
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_10_20_500_T13",
+          "allocated_bytes": 16965632
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T11",
+          "allocated_bytes": 809500672
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_10_10_500_T37",
+          "allocated_bytes": 29999104
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_4_5_30_T26",
+          "allocated_bytes": 8060928
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_5_5_30_T38",
+          "allocated_bytes": 156078080
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_50_10_500_T75",
+          "allocated_bytes": 6987776
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_20_10_500_T25",
+          "allocated_bytes": 21000192
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_30_10_500_T43",
+          "allocated_bytes": 11931648
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_5_5_30_T11",
+          "allocated_bytes": 622641152
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_50_10_500_T91",
+          "allocated_bytes": 1163264
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_50_10_500_T63",
+          "allocated_bytes": 4923392
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_40_10_500_T85",
+          "allocated_bytes": 1495040
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_5_5_30_T27",
+          "allocated_bytes": 218714112
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_5_5_30_T20",
+          "allocated_bytes": 578617344
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T27",
+          "allocated_bytes": 630673408
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_40_10_500_T63",
+          "allocated_bytes": 3407872
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_30_10_500_T70",
+          "allocated_bytes": 2277376
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_30_10_500_T52",
+          "allocated_bytes": 5881856
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_5_10_30_T16",
+          "allocated_bytes": 232439808
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_20_10_500_T32",
+          "allocated_bytes": 19824640
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_20_10_500_T48",
+          "allocated_bytes": 9519104
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_4_5_30_T49",
+          "allocated_bytes": 4755456
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_5_10_30_T10",
+          "allocated_bytes": 407560192
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14",
+          "allocated_bytes": 1283092480
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_5_10_30_T16",
+          "allocated_bytes": 414625792
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_10_10_500_T32",
+          "allocated_bytes": 74981376
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_10_20_500_T16",
+          "allocated_bytes": 14667776
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_10_10_500_T23",
+          "allocated_bytes": 171130880
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_10_20_500_T15",
+          "allocated_bytes": 54358016
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_40_10_500_T95",
+          "allocated_bytes": 2449408
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_5_10_30_T27",
+          "allocated_bytes": 181411840
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21",
+          "allocated_bytes": 560697344
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_40_10_500_T55",
+          "allocated_bytes": 1933312
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_30_10_500_T58",
+          "allocated_bytes": 1470464
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_20_10_500_T43",
+          "allocated_bytes": 16252928
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_4_5_30_T47",
+          "allocated_bytes": 4427776
+        },
+        {
+          "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results",
+          "allocated_bytes": 6822469632
+        }
+      ]
+    },
+    {
+      "root": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109",
+      "complete": true,
+      "errors": [],
+      "rows": [
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss_validation",
+          "allocated_bytes": 1089536
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/delivery_archives",
+          "allocated_bytes": 28184576
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/formal30_lss",
+          "allocated_bytes": 70197248
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/candidate",
+          "allocated_bytes": 286720
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+          "allocated_bytes": 26959872
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development_lss",
+          "allocated_bytes": 385024
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/development",
+          "allocated_bytes": 2265088
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/frozen_candidate",
+          "allocated_bytes": 286720
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/deadline_stress",
+          "allocated_bytes": 401408
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/lss_eval_reference",
+          "allocated_bytes": 835584
+        },
+        {
+          "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109",
+          "allocated_bytes": 135680000
+        }
+      ]
+    }
+  ],
+  "symlinks": [
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I011_robust_block_mitm/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I012_iterated_block_mitm/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I014_hybrid_cdf_blocks/vendor313",
+      "target": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I001_risk_portfolio/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover/vendor313",
+      "target": "../I002_cdf_neighborhood/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I006_cdf_branch_order/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I009_cached_mass_search/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier/vendor313",
+      "target": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I008_suffix_budget_search/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I007_integer_budget_cdf/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I004_robust_pair_exchange/vendor313",
+      "target": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_S10_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound/vendor313",
+      "target": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I010_robust_priority/vendor313",
+      "target": "../I005_exact_cdf_bound/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I015_precision_closure/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/vendor313",
+      "target": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "resolved": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L04_RL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L04_RL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L02_RL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L02_RL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/CONTROL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/CONTROL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L03_FULL40/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L03_FULL40/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L01_RL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L01_RL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L03_RL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/stages/L03_RL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/offline_all40_r05_nopr_30_20261010_151259/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/offline_all40_r05_nopr_30_20261010_151259/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/NEW_FIXED/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/NEW_FIXED/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/source/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/source/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/source_success_window_U18/.cache",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/.cache",
+      "exists": true
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/source_success_window_U18/benchmark",
+      "target": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "resolved": "/home/quanliangwen/parallel_test/CCMCKP/benchmark",
+      "exists": true
+    }
+  ],
+  "hardlinks": [],
+  "large_files": [
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/summary.json",
+      "bytes": 5029404781,
+      "allocated_bytes": 5029416960
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F001_I002_40x30/search/DISPATCH_RESULTS.json",
+      "bytes": 427304377,
+      "allocated_bytes": 427311104
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_RL/summary.json",
+      "bytes": 220965818,
+      "allocated_bytes": 220971008
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/completed_archives/HISTORICAL_CONTROL40_20261101_141921.zip",
+      "bytes": 101360831,
+      "allocated_bytes": 101367808
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_UNIFORM/summary.json",
+      "bytes": 56392383,
+      "allocated_bytes": 56397824
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/completed_archives/U18_RL_20261102_062328.zip",
+      "bytes": 47734919,
+      "allocated_bytes": 47742976
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/L03_full40_time_audit_v2/best_time_evidence.zip",
+      "bytes": 40331969,
+      "allocated_bytes": 40333312
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/L03_full40_time_audit/best_time_evidence.zip",
+      "bytes": 40331969,
+      "allocated_bytes": 40333312
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/2.log",
+      "bytes": 37996911,
+      "allocated_bytes": 38002688
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/1.log",
+      "bytes": 36212072,
+      "allocated_bytes": 36216832
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832287/result.json",
+      "bytes": 32740561,
+      "allocated_bytes": 32743424
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832288/result.json",
+      "bytes": 32302880,
+      "allocated_bytes": 32305152
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832290/result.json",
+      "bytes": 32267192,
+      "allocated_bytes": 32268288
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832273/result.json",
+      "bytes": 32199925,
+      "allocated_bytes": 32202752
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/version_evidence/SUPPORT_V2_U18_20261102_053442.zip",
+      "bytes": 32092509,
+      "allocated_bytes": 32100352
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832280/result.json",
+      "bytes": 31891779,
+      "allocated_bytes": 31895552
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832289/result.json",
+      "bytes": 31759239,
+      "allocated_bytes": 31760384
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832297/result.json",
+      "bytes": 31595950,
+      "allocated_bytes": 31596544
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/APP_3_5_30_T21/APP_3_5_30__T21_p0.99_seed832275/result.json",
+      "bytes": 31402697,
+      "allocated_bytes": 31404032
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832294/result.json",
+      "bytes": 31263331,
+      "allocated_bytes": 31268864
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832282/result.json",
+      "bytes": 31065210,
+      "allocated_bytes": 31072256
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832279/result.json",
+      "bytes": 31049567,
+      "allocated_bytes": 31055872
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/5.log",
+      "bytes": 31000323,
+      "allocated_bytes": 31006720
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832281/result.json",
+      "bytes": 30972869,
+      "allocated_bytes": 30978048
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832296/result.json",
+      "bytes": 30965972,
+      "allocated_bytes": 30973952
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832274/result.json",
+      "bytes": 30969392,
+      "allocated_bytes": 30973952
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832278/result.json",
+      "bytes": 30898923,
+      "allocated_bytes": 30904320
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832276/result.json",
+      "bytes": 30791414,
+      "allocated_bytes": 30797824
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832277/result.json",
+      "bytes": 30738939,
+      "allocated_bytes": 30744576
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832284/result.json",
+      "bytes": 30736742,
+      "allocated_bytes": 30744576
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832302/result.json",
+      "bytes": 30725464,
+      "allocated_bytes": 30732288
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832299/result.json",
+      "bytes": 30723291,
+      "allocated_bytes": 30728192
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832297/result.json",
+      "bytes": 30698833,
+      "allocated_bytes": 30703616
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832290/result.json",
+      "bytes": 30578735,
+      "allocated_bytes": 30584832
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832300/result.json",
+      "bytes": 30453242,
+      "allocated_bytes": 30457856
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832298/result.json",
+      "bytes": 30425585,
+      "allocated_bytes": 30433280
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832275/result.json",
+      "bytes": 29401200,
+      "allocated_bytes": 29409280
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832285/result.json",
+      "bytes": 29239980,
+      "allocated_bytes": 29245440
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832291/result.json",
+      "bytes": 29006094,
+      "allocated_bytes": 29011968
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832283/result.json",
+      "bytes": 28993546,
+      "allocated_bytes": 28999680
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/delivery/S10_FORMAL_1200_RUNS.zip",
+      "bytes": 27522314,
+      "allocated_bytes": 27529216
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/delivery_u18_20261103/U18_source_and_inputs_v2.zip",
+      "bytes": 26191737,
+      "allocated_bytes": 26193920
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832286/result.json",
+      "bytes": 24338093,
+      "allocated_bytes": 24342528
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832287/result.json",
+      "bytes": 24265463,
+      "allocated_bytes": 24272896
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832289/result.json",
+      "bytes": 24162161,
+      "allocated_bytes": 24166400
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832295/result.json",
+      "bytes": 24089341,
+      "allocated_bytes": 24096768
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832293/result.json",
+      "bytes": 24071325,
+      "allocated_bytes": 24076288
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/6.log",
+      "bytes": 23920133,
+      "allocated_bytes": 23924736
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832273/result.json",
+      "bytes": 23864854,
+      "allocated_bytes": 23871488
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832288/result.json",
+      "bytes": 23862694,
+      "allocated_bytes": 23867392
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_v2_iteration_20261016/L03_delivery/CCMCKP_L03_RL_完整代码与数据_20261016.zip",
+      "bytes": 23811187,
+      "allocated_bytes": 23814144
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832280/result.json",
+      "bytes": 23735113,
+      "allocated_bytes": 23740416
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832301/result.json",
+      "bytes": 23686469,
+      "allocated_bytes": 23691264
+    },
+    {
+      "path": "/home/quanliangwen/parallel_test/CCMCKP/work/rl_balanced_20261101/stages/U18_FULL40/results/LAB_3_5_30_T14/LAB_3_5_30__T14_p0.99_seed832292/result.json",
+      "bytes": 23567293,
+      "allocated_bytes": 23572480
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound/I005_EXACT_BOUND_EVIDENCE.zip",
+      "bytes": 22130329,
+      "allocated_bytes": 22130688
+    }
+  ],
+  "U18_FULL40_extensions": {
+    ".log": {
+      "files": 40,
+      "allocated_bytes": 258064384,
+      "logical_bytes": 257861448
+    },
+    ".json": {
+      "files": 1245,
+      "allocated_bytes": 10266763264,
+      "logical_bytes": 10263354687
+    },
+    ".py": {
+      "files": 46,
+      "allocated_bytes": 774144,
+      "logical_bytes": 680161
+    },
+    ".pyi": {
+      "files": 4,
+      "allocated_bytes": 65536,
+      "logical_bytes": 57564
+    },
+    ".so": {
+      "files": 1,
+      "allocated_bytes": 5316608,
+      "logical_bytes": 5310760
+    },
+    "[no extension]": {
+      "files": 4,
+      "allocated_bytes": 24576,
+      "logical_bytes": 11713
+    },
+    ".txt": {
+      "files": 1,
+      "allocated_bytes": 4096,
+      "logical_bytes": 1062
+    },
+    ".csv": {
+      "files": 4840,
+      "allocated_bytes": 1580277760,
+      "logical_bytes": 1569422342
+    }
+  },
+  "retained_source_path_references": [
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_final_certificates.py",
+      "line": 7,
+      "text": " sys.path[:0]=[str(H/'frozen_candidate'),str(H/'vendor313')]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_final_certificates.py",
+      "line": 11,
+      "text": " inst=load_instance('/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance']);s=inst.validate_selection(selected['selection']);cost=inst.selection_cost(s)"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_final_certificates.py",
+      "line": 30,
+      "text": "  with open(D/(key+'.log'),'x') as f:r=subprocess.run(['/home/junhao/miniconda3/bin/python',str(H/'audit_final_certificates.py'),'--one',str(p),str(out)],stdout=f,stderr=subprocess.STDOUT,timeout=1800)"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/solve_one.py",
+      "line": 8,
+      "text": "ap=argparse.ArgumentParser();ap.add_argument('--instance',required=True);ap.add_argument('--capacity',type=float,required=True);ap.add_argument('--seed',type=int,required=True);ap.add_argument('--seconds',type=float,default=600);ap.add_argument('--out-dir',required=True);ap.add_argument('--solver-python',default='/home/junhao/miniconda3/bin/python');ap.add_argument('--lss-python',default='python3');a=ap.parse_args()"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/summarize_final.py",
+      "line": 31,
+      "text": "    full_path='/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance']+'/'+path"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/formal_campaign.py",
+      "line": 27,
+      "text": "  cmd=['/home/junhao/miniconda3/bin/python','-u',str(H/'frozen_candidate/run.py'),'--instance','/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance'],'--capacity',str(c['tmax']),'--seed',str(960000+rep),'--seconds','600','--out',str(out)]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/develop.py",
+      "line": 6,
+      "text": " cmd=['/home/junhao/miniconda3/bin/python','-u',str(H/'candidate/run.py'),'--instance','/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance'],'--capacity',str(c['tmax']),'--seed','965001','--seconds','180','--out',str(out)]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/frozen_smoke.py",
+      "line": 6,
+      "text": " cmd=['/home/junhao/miniconda3/bin/python','-u',str(H/'frozen_candidate/run.py'),'--instance','/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance'],'--capacity',str(c['tmax']),'--seed',str(seed),'--seconds','180','--out',str(out)]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_old_raw.py",
+      "line": 6,
+      "text": " sys.path[:0]=[str(H/'frozen_candidate'),str(H/'vendor313')]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_old_raw.py",
+      "line": 9,
+      "text": " index=int(sys.argv[2]);c=next(x for x in json.load(open(H/'CASES.json')) if x['index']==index);old=next(x for x in json.load(open(H/'OLD_BEST_REFERENCE.json'))['rows'] if x['index']==index);inst=load_instance('/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance']);s=inst.validate_selection(old['selection']);oracle=ExactOracle(inst,c['tmax'],'.99');steps=[]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/audit_old_raw.py",
+      "line": 17,
+      "text": "  with (D/f'case_{i:02d}.log').open('x') as f:r=subprocess.run(['/home/junhao/miniconda3/bin/python',str(H/'audit_old_raw.py'),'--one',str(i)],stdout=f,stderr=subprocess.STDOUT,timeout=1800)"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/validate_portfolio.py",
+      "line": 21,
+      "text": "   cmd=['python3',str(H/'native_lss_eval.py'),'--instance','/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark/'+c['instance'],'--capacity',str(c['tmax']),'--selection',json.dumps(list(s)),'--out',str(out)]"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/candidate/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/candidate/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/frozen_candidate/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/frozen_candidate/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/development_source_v1/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109/development_source_v1/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation/S10_source/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation/S10_source/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/candidate/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood/candidate/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover/candidate/run.py",
+      "line": 4,
+      "text": "ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT.parent/'vendor313'))"
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover/candidate/run.py",
+      "line": 24,
+      "text": "  if p!=ROOT and ROOT not in p.parents and p!=(task/'vendor313').resolve() and (task/'vendor313').resolve() not in p.parents and str(p) not in own:raise PermissionError('Cross-run/task input: '+str(p))"
+    }
+  ],
+  "processes": [
+    {
+      "pid": 842249,
+      "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+      "command": "bash -c cd /home/quanliangwen/work/cdf_lss_aligned_S3_20261109; nohup python3 -u monitor_final_summary.py > monitor_final_summary.log 2>&1 < /dev/null & wait ",
+      "opened": []
+    },
+    {
+      "pid": 842250,
+      "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+      "command": "python3 -u monitor_final_summary.py ",
+      "opened": [
+        "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109/monitor_final_summary.log"
+      ]
+    }
+  ],
+  "walk_errors": []
+}
