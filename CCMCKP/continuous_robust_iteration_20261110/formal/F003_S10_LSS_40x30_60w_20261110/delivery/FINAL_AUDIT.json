@@ -1,0 +1,22 @@
+{
+  "registered": 1200,
+  "completed": 1200,
+  "failed": 0,
+  "all40_have30_completed": true,
+  "complete_case_count": 40,
+  "statistics_from_original_variant0": true,
+  "real_probability_recorded_only": true,
+  "extra_real_probability_filter": false,
+  "source_S10_12_files_unchanged": true,
+  "original_LSS_21_files_unchanged": true,
+  "matched_registered_S10_seeds_and_benchmark_inputs": true,
+  "original_per_run_CSV_and_result_SHA_verified": true,
+  "optimizer_reads_no_true_distribution_parameters": true,
+  "failure_policy": "Failed registered repetitions retained; incomplete cases have no Best/Avg/Std/Time aggregate",
+  "failures": [],
+  "infrastructure_interrupted_attempts": 26,
+  "same_seed_infrastructure_retry_amendment": "Infrastructure recovery only. Preserve every original partial attempt. Retry all 26 unfinished ENOSPC-era identities with the SAME registered seed; take the first complete rerun regardless of cost. No choice between old partial CSV costs and new results. No new seeds, no change to S10 or original LSS decision/output. Report 26 interrupted attempts separately from the 1200 registered completed outputs.",
+  "registration_sha256": "27d6be20e3a96e6ef1310fbdaf3beb3563fba6fd4fbdba1da08b00b3a7f91c68",
+  "finished_utc": "2026-11-10T16:20:11Z",
+  "postprocessor_sha256": "52a905acf0c617a4e37c62140a4d899c305b018dba6099a6b89c1650787a47f9"
+}

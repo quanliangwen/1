@@ -1,17 +1,12 @@
 {
-  "state": "running_recovered_after_ENOSPC",
-  "updated_utc": "2026-11-10T15:21:58.432031+00:00",
-  "workers": 60,
-  "registered": 1200,
-  "completed": 538,
-  "current_active": 60,
-  "failed_current_registered_runs": 0,
+  "state": "finished",
+  "updated_utc": "2026-11-10T16:20:41.104781+00:00",
+  "completed": 1200,
+  "failed": 0,
   "infrastructure_interrupted_attempts": 26,
-  "previous_completed_results_retained": 523,
-  "new_same_seed_attempts_for_interrupted_identities": 26,
-  "recovery_registration_commit": "057ac352844c56d8eeb7ca4263c8ad77393bcff6",
-  "old_S10_and_LSS_sources_unchanged": true,
+  "workers": 60,
+  "all40_have30_completed": true,
+  "source_commit": "fc21aa3379582bdb07ec0768531abc3e46fee2a3",
   "extra_true_probability_filter": false,
-  "output_spool": "/dev/shm/ccmckp_F003_recovery_20261110",
-  "completion_pipeline": "Updated independent audit and raw evidence packer; SHA-verified temporary live mirror, final Excel, GitHub publication and remote verification"
+  "statistics": "original LSS output0, all30 required for case aggregates"
 }
