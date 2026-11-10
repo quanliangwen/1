@@ -1,0 +1,45 @@
+{
+  "visual_review_passed": true,
+  "xlsx_sha256": "7d1a03416cffbddecae51e935dc8e5de9e446fb5ac63e5ba7d13e726db068a15",
+  "full_real_cohort_source_sha256": "242a9d9d628d6f4db846d35ff86d85431b0d439f1567c39ac71bb0206136da59",
+  "all5worksheets_reviewed": true,
+  "summary40_rows_and_first_last_detail1200_reviewed": true,
+  "headers_costs_probabilities_readable": true,
+  "method_long_notes_wrapping_corrected_and_reviewed": true,
+  "all40cachedstatistics_and1200IDs_match_independent_audit": true,
+  "formula_errors": 0,
+  "exact_integer_text_bytes_and_TEXT_format_wrap_row_heights_independently_XML_verified": true,
+  "integer_preview_limitation": "Artifact image renderer formats long numeric strings in scientific notation even when XLSX stores exact original shared-string text with @ format; exported exact text is independently byte-compared, wrapped and long-count rows explicitly60px. Native Excel was not opened. A literal-apostrophe display trial failed exact-text validation and was reverted before this final verified workbook.",
+  "reviewed_previews": [
+    {
+      "file": "summary_all.png",
+      "sha256": "d8265fe5fbe1395e3ccafb9ff2281d63702c56698d70aaa3289d7ad7d2015b6f"
+    },
+    {
+      "file": "detail_first.png",
+      "sha256": "282d41749abebb9b079c10a8fe1275a9236cee35563bf0f7bebfb68bda7e7500"
+    },
+    {
+      "file": "detail_last.png",
+      "sha256": "9a3edd56623df6d416e4ec4de75dcdec0e09fd959048d3af4dfbea3ceb843610"
+    },
+    {
+      "file": "native.png",
+      "sha256": "e5c6fcee08280ca27703061c539332aa28408b271e665a5723e99d55af7cc48c"
+    },
+    {
+      "file": "raw.png",
+      "sha256": "fea5f4c6a83a5b22d9ccac74f02e425d2c9a25ef3b1dfedc4ad6e8f303811a2e"
+    },
+    {
+      "file": "raw_exact_last.png",
+      "sha256": "302f0ff721a03ae3e44019b5eb849401266f8f245e064d4ebdf1f05de0efe2a4"
+    },
+    {
+      "file": "method.png",
+      "sha256": "47c6824282919d274d4488b507b6a546573a6d0ee3236ef3e087eadcf36169d6"
+    }
+  ],
+  "artifact_tool_only_authoring": true,
+  "actual_create_marker_executed_once": true
+}

@@ -42,5 +42,11 @@ with zipfile.ZipFile(file) as z:
   for col,key in [('G','numerator'),('H','denominator')]:
    c=sheets[3][f'{col}{row}']
    if c['type'] not in ['s','inlineStr','str'] or c['value']!=r[key]:raise RuntimeError('Exact integer lost text precision')
-result=dict(passed=True,xlsx_sha256=hashlib.sha256(file.read_bytes()).hexdigest(),summary_cases=40,registered_details=1200,cached_statistics_match_independent_audit=True,summary_formulas_preserved=True,exact_probability_integers_preserved_as_text=True,formula_error_cells=0,zip_CRC_passed=True,visual_review_still_required=True)
+ styles=ET.fromstring(z.read('xl/styles.xml'));formats={int(x.get('numFmtId')):x.get('formatCode') for x in styles.findall('s:numFmts/s:numFmt',ns)};formats[49]='@';xfs=styles.findall('s:cellXfs/s:xf',ns);rawsheet=ET.fromstring(z.read('xl/worksheets/sheet4.xml'));rawrows={int(r.get('r')):r for r in rawsheet.findall('s:sheetData/s:row',ns)}
+ for row,r in enumerate(data['independent_raw_recounts'],5):
+  for col in ['G','H']:
+   cell=next(c for c in rawrows[row].findall('s:c',ns) if c.get('r')==col+str(row));style=xfs[int(cell.get('s','0'))];align=style.find('s:alignment',ns)
+   if formats.get(int(style.get('numFmtId','0')))!='@' or align is None or align.get('wrapText') not in ['1','true']:raise RuntimeError('Exact integer text format/wrapping missing')
+  if max(len(r['numerator']),len(r['denominator']))>75 and float(rawrows[row].get('ht','0'))<40:raise RuntimeError('Exact long integer display row too short')
+result=dict(passed=True,xlsx_sha256=hashlib.sha256(file.read_bytes()).hexdigest(),summary_cases=40,registered_details=1200,cached_statistics_match_independent_audit=True,summary_formulas_preserved=True,exact_probability_integers_preserved_as_text=True,exact_integer_text_format_wrapping_and_row_height_verified=True,formula_error_cells=0,zip_CRC_passed=True,visual_review_still_required=True)
 (O/'XLSX_CACHED_VALUE_CHECK.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))

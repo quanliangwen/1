@@ -11,7 +11,8 @@ if {p.name:sha(p) for p in source.glob('*.py')}!=d['source_sha256']:raise Runtim
 R=T/'full_records';R.mkdir(parents=True,exist_ok=True);archives=[]
 def package(name,files,scope):
  files=sorted(set(files))
- if any(not p.is_file() for p in files):raise RuntimeError('Evidence file missing')
+ missing=[str(p.relative_to(H)) for p in files if not p.is_file()]
+ if missing:raise RuntimeError('Evidence files missing: '+json.dumps(missing))
  out=R/name
  if out.exists():raise RuntimeError('No archive overwrite; inspect existing evidence before retry '+name)
  with zipfile.ZipFile(out,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
@@ -21,8 +22,8 @@ def package(name,files,scope):
  if out.stat().st_size>=95*1024**2:raise RuntimeError('Archive requires further splitting before GitHub upload '+name)
  archives.append(dict(file=out.relative_to(T).as_posix(),bytes=out.stat().st_size,sha256=sha(out),scope=scope,zip_CRC_passed=True,files=[dict(path=p.relative_to(H).as_posix(),bytes=p.stat().st_size,sha256=sha(p)) for p in files]))
 guide=F/'SOURCE_README.md'
-if guide.exists():raise RuntimeError('No source guide overwrite')
-guide.write_text('''# F001：实际执行的冻结I002源码与正式证据
+existing_guide=guide.read_text(encoding='utf8') if guide.exists() else None
+guide_text='''# F001：实际执行的冻结I002源码与正式证据
 
 正式优化器为iterations/I002_cdf_neighborhood/candidate中的16个Python文件；登记和最终审计包含逐项SHA256。reference下是21个原LSS源码，校验后仅用兼容别名加载。主搜索不读取真实分布、历史解或外部验收缓存。
 
@@ -33,9 +34,13 @@ guide.write_text('''# F001：实际执行的冻结I002源码与正式证据
 主队列run_f001_stages.py严格先完成1200次搜索再调用validate_f001.py。全部原样本的sum<T整数下界≥0.99，再按冻结候选成本顺序运行原real_P_test：1000万次，seed832273，sum≤T，点估计≥0.985；首次通过即停。固定身份原调用可在优化器外复用，不能当1200次独立MC种子估计。不得只保留成功运行计算Avg；每例30次协议有效才给Avg和总体Std(ddof=0)。
 
 40个case_XX.zip包含各例全部登记种子的搜索输出/日志/元数据/终止记录、外部原LSS验收记录及实际引用的调用凭证。NATIVE_ATTEMPT_LOGS.zip单独保存本正式阶段新增的调用尝试日志（含可能失败）。最终审计、Excel、校验文件和归档逐项SHA在本目录。工程/开发结果不替代本正式队列。
-''',encoding='utf8')
+'''
+if existing_guide is not None:
+ if existing_guide!=guide_text:raise RuntimeError('Existing guide differs; no overwrite')
+else:guide.write_text(guide_text,encoding='utf8')
 files=list(source.glob('*.py'))+[H/'reference'/r['path'] for r in json.load(open(H/'REFERENCE_SHA256.json'))['files']]
 files+=[H/n for n in ['run_f001_search.py','run_f001_stages.py','validate_f001.py','native_lss_eval.py','reference_loader.py','audit_f001_progress.py','audit_f001_final.py','independent_raw_recount.py','check_independent_raw_recount.py','INDEPENDENT_RAW_RECOUNT_MATH_CHECK.json','CASES.json','BASELINE_S10.json','RAW_REFERENCE.json','REFERENCE_SHA256.json','LSS_DATA_REFERENCE.json']]
+files+=[H/n for n in ['build_f001_workbook.mjs','create_f001_excel.ps1','check_f001_xlsx.py']]+[O/n for n in ['AUTHORING_CHECK.json','XLSX_CACHED_VALUE_CHECK.json','FINAL_QA.json']]
 files+=[F/n for n in ['REGISTRATION.json','LAUNCH.json','CACHE_BEFORE_VALIDATION.json','CACHE_LOGS_BEFORE_VALIDATION.json','FINAL_AUDIT_STATS.json','SOURCE_README.md']]
 P=H/'research/final_audit_preflight';proof=json.load(open(P/'FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json'));check=json.load(open(P/'FIRST3_APP_INTEGER_RECHECK.json'))
 if not check['passed'] or check['proof_sha256']!=sha(P/'FIRST3_APP_EXHAUSTIVE_JOINT_AUDIT.json'):raise RuntimeError('First3 cost-line proof identity differs')

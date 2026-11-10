@@ -70,6 +70,8 @@ m.getRange(`C5:C${mc.length+4}`).setNumberFormat('0.0000000');m.getRange(`F5:F${
 const raw=data.independent_raw_recounts;
 const p=table(names[3],'原样本 · 选中证书独立重算',['算例','T','下界','原方法','独立方法','原格数','精确计数分子','精确计数分母','重算身份SHA256','选择向量'],raw.map(r=>[r.instance,r.capacity,r.lower,r.original_method,r.method,r.original_bins??'',r.numerator,r.denominator,r.key,r.selection.join(',')]),[185,65,120,330,390,95,540,540,540,540]);
 p.getRange(`C5:C${raw.length+4}`).setNumberFormat('0.00000000');p.getRange(`G5:H${raw.length+4}`).setNumberFormat('@');
+p.getRange(`G5:H${raw.length+4}`).format.wrapText=true;
+for(let i=0;i<raw.length;i++)p.getRange(`A${i+5}:J${i+5}`).format.rowHeightPx=Math.max(raw[i].numerator.length,raw[i].denominator.length)>75?60:24;
 const notes=[
  ['原样本门槛','全部原始样本；严格事件 sum<T；整数证书下界≥0.99。'],
  ['原LSS门槛','原 real_P_test 完整源码；1000万次，seed=832273，事件 sum≤T；点估计≥0.985。'],
@@ -79,7 +81,7 @@ const notes=[
  ['历史Best','来自用户原统计表；缺少相应可行向量时，单凭旧成本不能证明联合可行或不可能。'],
  ['前三例已完成全枚举','APP编号21/22/23全部875组合；328个较便宜组合的精确原样本概率双实现复核，42项原LSS凭证核对。固定联合验收下最优成本分别14.076616、13.564858、5.796148，旧成本线不可达。'],
  ['前三例旧向量LSS点估计','0.9651546、0.9713810、0.9731601，均低于0.985。其原样本概率达到0.99，不代表原LSS通过。'],
- ['全枚举结论范围','仅这三例及当前固定联合验收谓词；不是总体概率置信区间或整个DRO歧义集合的证明；其余例的旧向量失败不等于旧成本线不可达。'],
+ ['全枚举结论范围','已证明16小例的当前固定联合最优成本，其中8个APP旧成本线不可达；其他算例不能仅据旧向量失败推断旧成本线不可达。这些是固定验收结论。'],
  ['全枚举证据SHA256',createHash('sha256').update(proofBytes).digest('hex')],
  ['16小例完整核查','共415500个组合，204423个较便宜组合精确计数；独立C++128重算全部便宜组合及16个见证，317项原LSS凭证核对，当前固定联合成本均为全局最优。'],
  ['8个APP小例旧目标','编号21–28的旧Best均低于联合最优成本（差距>1e-6）；在当前原样本99/原LSS985验收下，Avg无法达到旧成本。其余例不能据旧向量失败推断成本线不可达。'],
@@ -95,7 +97,9 @@ const notes=[
  ['GitHub任务目录','https://github.com/quanliangwen/1/tree/main/CCMCKP/continuous_robust_iteration_20261110'],
  ...Object.entries(data.source_sha256).map(([k,v])=>[`冻结源码 ${k}`,v]),
  ...data.protocol_errors.map(r=>[`异常 ${r.index}/${r.seed}/${r.stage}`,String(r.error)])];
-table(names[4],'F001 · 验收定义、计时与源码身份',['项目','定义或审计值'],notes,[300,1080]);
+const methodSheet=table(names[4],'F001 · 验收定义、计时与源码身份',['项目','定义或审计值'],notes,[300,1080]);
+methodSheet.getRange(`B5:B${notes.length+4}`).format.wrapText=true;
+methodSheet.getRange(`B5:B${notes.length+4}`).format.autofitRows();
 wb.recalculate();
 // Compare calculated results against independently computed Python statistics.
 const actual=summary.getRange('D5:M44').values;
@@ -112,7 +116,7 @@ for(const n of names){
 }
 const inspection=await wb.inspect({kind:'region',sheetId:names[0],range:'A4:M12',maxChars:5000});
 await fs.writeFile(path.join(O,'inspection.json'),JSON.stringify(inspection,null,2));
-const ranges=[['summary_all',names[0],'A1:N44'],['detail_first',names[1],'A1:P16'],['detail_last',names[1],'A1199:P1204'],['native',names[2],`A1:H${Math.min(mc.length+4,16)}`],['raw',names[3],`A1:F${Math.min(raw.length+4,16)}`],['method',names[4],'A1:B31']];
+const ranges=[['summary_all',names[0],'A1:N44'],['detail_first',names[1],'A1:P16'],['detail_last',names[1],'A1199:P1204'],['native',names[2],`A1:H${Math.min(mc.length+4,16)}`],['raw',names[3],`A1:F${Math.min(raw.length+4,16)}`],['raw_exact_last',names[3],`F${Math.max(5,raw.length)}:H${raw.length+4}`],['method',names[4],'A1:B31']];
 for(const [file,sheetName,range]of ranges){const img=await wb.render({sheetName,range,scale:1,format:'png'});await fs.writeFile(path.join(O,file+'.png'),new Uint8Array(await img.arrayBuffer()));}
 const output=await SpreadsheetFile.exportXlsx(wb);await output.save(path.join(O,'F001_40cases_30runs.xlsx'));
 await fs.writeFile(path.join(O,'AUTHORING_CHECK.json'),JSON.stringify({real_complete_cohort:true,all_formula_statistics_matched:true,formula_errors:0,all_sheets_rendered:true,model_visual_review_pending:true,source_sha256:createHash('sha256').update(bytes).digest('hex'),sheet_names:names},null,2));

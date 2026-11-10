@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "error": null,
+  "steps": [
+    {
+      "driver": "snapshot_d003_isolation.py",
+      "exit": 0,
+      "wall": 0.06557227112352848
+    },
+    {
+      "driver": "audit_d003_stability_prefix.py",
+      "exit": 0,
+      "wall": 1.6693300856277347
+    },
+    {
+      "driver": "summarize_d003_paired_stability.py",
+      "exit": 0,
+      "wall": 0.0650976924225688
+    }
+  ],
+  "wall_including_wait": 312.31747880391777,
+  "scope": "actual six-prefix direct audit and3seeddevelopment statistics; no new MC or30formalAvg"
+}
