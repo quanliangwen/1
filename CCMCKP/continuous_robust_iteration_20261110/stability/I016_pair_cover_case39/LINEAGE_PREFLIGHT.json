@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "checks": 27,
+  "scope": "Real prior engineering inputs + in-memory corruptions of new lineage code.\n\nThis executes only the pool/lineage/phase/precision branch extracted from the\nnew auditor, not its six-new-search/source-read or independent recount branches.\nNo synthetic or renamed search outcomes are written and no MC/search is run.\n",
+  "auditor_sha256": "cd5f786bd1c3bf2551dd069cd927a9b68623824a3d249a346e278f2a2e64fb4f",
+  "fixture_source_sha256": {
+    "iterations/I015_precision_closure/engineering39/result.json.gz": "1cf7d02520074e84a8f234ee66b1dd165fd01682d155618041da8bd55949b264",
+    "iterations/I016_cdf_pair_cover/engineering39/result.json.gz": "a6491942a2542ebbb2c20f478dfa7f560216d00410242ee73293242984474ddd"
+  },
+  "records": [
+    {
+      "label": "I015_parent",
+      "test": "original real engineering pool/lineage passes, semantic enumeration matches prior independent recount",
+      "passed": true,
+      "actual_original_seed": 9715039,
+      "semantic_certificates": 1005
+    },
+    {
+      "label": "I015_parent",
+      "test": "changed canonical price",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "unaccepted integer lower",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "nonstrict event",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "lost original sample flag",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "phase exceeds180",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "precision phase reset",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "CDF retained flag false",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "CDF stage counts forged",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "precision initial pool mismatch",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "precision foreign decision",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I015_parent",
+      "test": "remove retained CDF member",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "original real engineering pool/lineage passes, semantic enumeration matches prior independent recount",
+      "passed": true,
+      "actual_original_seed": 9716039,
+      "semantic_certificates": 1071
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "changed canonical price",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "unaccepted integer lower",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "nonstrict event",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "lost original sample flag",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "phase exceeds180",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "precision phase reset",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "CDF retained flag false",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "CDF stage counts forged",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "precision initial pool mismatch",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "precision foreign decision",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "remove retained CDF member",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "pair retained flag false",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "pair pool count forged",
+      "passed": true,
+      "invalid_data_rejected": true
+    },
+    {
+      "label": "I016_pair_cover",
+      "test": "remove retained pair-specific member",
+      "passed": true,
+      "invalid_data_rejected": true
+    }
+  ],
+  "full_new_six_search_audit_executed": false,
+  "new_MC_calls": 0,
+  "new_searches": 0
+}
