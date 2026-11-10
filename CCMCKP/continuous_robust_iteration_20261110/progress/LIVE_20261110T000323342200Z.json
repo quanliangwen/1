@@ -1,0 +1,129 @@
+{
+  "time": 1794269003.3415189,
+  "scope": "Actual narrow process/marker/progress observation, never optimizer input.",
+  "formal_F001": {
+    "controller": {
+      "pid": 924526,
+      "confirmed_live": true
+    },
+    "stage": {
+      "stage": "search",
+      "time": 1794245790.4804265,
+      "goal_status": "active"
+    },
+    "search_progress": {
+      "finished": 1198,
+      "required": 1200,
+      "running": 2,
+      "pending": 0,
+      "ordinary_errors": 0
+    },
+    "last_independent_progress_audit": {
+      "stage": "search",
+      "required": 1200,
+      "search_finished": 1196,
+      "search_source_and_input_verified": 1196,
+      "validation_finished": 0,
+      "qualified": 0,
+      "errors": [],
+      "warning": "search completion is not LSS qualification; no30-run Avg until complete audit"
+    },
+    "search_finished": false,
+    "validation_finished": false,
+    "actual_validation_records": 0,
+    "actual_validation_qualified": 0,
+    "validation_errors": [],
+    "final_audit_exists": false
+  },
+  "D003": {
+    "controller": {
+      "pid": 1038419,
+      "confirmed_live": true
+    },
+    "postcontroller": {
+      "pid": 1040304,
+      "confirmed_live": true
+    },
+    "progress": {
+      "result_file": "PROGRESS.json",
+      "batches": 12,
+      "physical_attempts": 48,
+      "all_prefixes_complete": false,
+      "controller_error": null,
+      "pools": {
+        "I002_control_seed9715211": {
+          "prefix_complete": false,
+          "accepted": false,
+          "selected_cost": null,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 5,
+          "failures": 0
+        },
+        "I002_control_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.83616418693003,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 0,
+          "failures": 0
+        },
+        "I002_control_seed9715213": {
+          "prefix_complete": false,
+          "accepted": false,
+          "selected_cost": null,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 4,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715211": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 324.9162246028648,
+          "known_upper_cost": 324.9162246028648,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 325.92697338399864,
+          "known_upper_cost": 325.92697338399864,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715213": {
+          "prefix_complete": false,
+          "accepted": false,
+          "selected_cost": null,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 22,
+          "failures": 0
+        }
+      }
+    },
+    "post_state": {
+      "stage": "waiting_actual_D003_complete_prefixes",
+      "time": 1794269002.2647803
+    },
+    "post_terminal": null,
+    "three_seed_statistics_ready": false
+  },
+  "I016": {
+    "controller": {
+      "pid": 1040300,
+      "confirmed_live": true
+    },
+    "postcontroller": {
+      "pid": 1040303,
+      "confirmed_live": true
+    },
+    "terminal": null,
+    "post_state": {
+      "stage": "waiting_for_actual_engineering_terminal",
+      "pid": 1040300,
+      "time": 1794268806.9037833
+    },
+    "post_terminal": null,
+    "independent_raw_audit_exists": false
+  }
+}
