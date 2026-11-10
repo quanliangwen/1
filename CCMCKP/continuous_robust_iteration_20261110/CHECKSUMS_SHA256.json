@@ -553,6 +553,11 @@
       "sha256": "d8e68dcb0d4f82919ecb8024ab3bf7d32546111f106299b205570419a4ad77d1"
     },
     {
+      "path": "inspect_completed_prefix.py",
+      "bytes": 1855,
+      "sha256": "8b49ae365d6f302e9d8f9a3056e608b9a49582fcbb9cde94e3937f8e5f6d6d76"
+    },
+    {
       "path": "ITERATION_LOG.md",
       "bytes": 71597,
       "sha256": "269ed3981bbd8aa23186410cf92e7c9a29f26d97e530c64ae280d2f7bfe8fa48"
@@ -1948,6 +1953,11 @@
       "sha256": "f67855b925d2936fc34f174d62ba1d75d3fc8ae12cb07cbd65257875ba803377"
     },
     {
+      "path": "launch_f002_search.py",
+      "bytes": 1964,
+      "sha256": "4cc49de8725688abf7244fdca4c6964069abb0c9274a9d8f51778431b6a7ef58"
+    },
+    {
       "path": "LSS_DATA_REFERENCE.json",
       "bytes": 760712,
       "sha256": "baf97005886d754712671409c1e565099e536f4a8183a994f9d01336c58e9abd"
@@ -1956,6 +1966,11 @@
       "path": "make_completed_prefix_remote_receipt.py",
       "bytes": 1585,
       "sha256": "d835b10bb6bef6b570466e341bc75d33a7b0db0db8685bbec323d28b5b8e65b7"
+    },
+    {
+      "path": "make_f002_search_remote_receipt.py",
+      "bytes": 1322,
+      "sha256": "1cb4520f066d9b6a924aa805926aa6f266385480c61818b99f5065100c33e4d8"
     },
     {
       "path": "METHODS.md",
@@ -1991,6 +2006,11 @@
       "path": "pack_completed_pool_registration.py",
       "bytes": 2874,
       "sha256": "168901346eee72098e1d398a71d5b3b83a9f29ed859b54b8631608d052765fe2"
+    },
+    {
+      "path": "pack_f002_search_source.py",
+      "bytes": 2140,
+      "sha256": "dbab00cf496d92be75a4f207dbefcee4b97f830b4f122b284757018e5b33e562"
     },
     {
       "path": "pack_i001.py",
@@ -2081,6 +2101,11 @@
       "path": "register_completed_pool_prefix.py",
       "bytes": 10402,
       "sha256": "38538a1f34e2cd82b89fc70d221bf4d8e5284d224fa5c490f6a422cf4f99d33d"
+    },
+    {
+      "path": "register_f002.py",
+      "bytes": 5580,
+      "sha256": "ee85e23acbc364b245714b4c4d986335d565a541fe1b335454c1fdd03e1523bc"
     },
     {
       "path": "research/adaptive_budget_cdf/adaptive_budget_cdf.py",
@@ -2683,6 +2708,31 @@
       "sha256": "2d4675eabdda164cb8f572d81bb408118dc6d2376be661bf412fb0779a5787c1"
     },
     {
+      "path": "research/D005_I016_pair_prefix/LAUNCH.json",
+      "bytes": 364,
+      "sha256": "7f33e8698aad8a548c69b574ab5f2b499ede609b7f44995be06537e3f4d7c687"
+    },
+    {
+      "path": "research/D005_I016_pair_prefix/POSTPROCESS_LAUNCH.json",
+      "bytes": 179,
+      "sha256": "d394c1a93b5dfcdc3833ff32e9c9c5114a441e8d5ea2490275fb0371ec571bc9"
+    },
+    {
+      "path": "research/D005_I016_pair_prefix/POSTPROCESS_REGISTRATION.json",
+      "bytes": 887,
+      "sha256": "090967bb16459f94215b8b8697fcfe6f57a94030fab7d8e2530f8947509a82db"
+    },
+    {
+      "path": "research/D005_I016_pair_prefix/POSTPROCESS_STATE.json",
+      "bytes": 71,
+      "sha256": "67cc5c83f2721599f47822fba8471b49e65bdf5561c44d81c1902c455e0a508f"
+    },
+    {
+      "path": "research/D005_I016_pair_prefix/PRE_REG_REMOTE_VERIFIED.json",
+      "bytes": 437,
+      "sha256": "a9057c0958c4ca410cc704b53957ccb63d1f6b3e0538540cc52ac0a41523fc57"
+    },
+    {
       "path": "research/D005_I016_pair_prefix/REGISTRATION.json",
       "bytes": 106010,
       "sha256": "1de14f3851b75271af44768af4dbecb2b10eebfc4de464430c71e4e40502f440"
@@ -3108,6 +3158,11 @@
       "sha256": "8477a8509cc85851a9c81ef4160cc55f58134f07b0b1038a29bb169bdf2e3367"
     },
     {
+      "path": "run_f002_search.py",
+      "bytes": 5367,
+      "sha256": "a7c91479431273e9d9d418bfb191cfd8137563e0b161f57f68ebaa64d57cf115"
+    },
+    {
       "path": "run_i001_pilot.py",
       "bytes": 1951,
       "sha256": "6f0eaf89b193a43defabb3514b93c009ea73e143026339d11c9333c8f275c125"
@@ -3371,6 +3426,11 @@
       "path": "stability/I016_pair_cover_case39/RAW_AUDIT_PROGRESS.json",
       "bytes": 63,
       "sha256": "3821fb9e88a20a3d41d8a179f4adb68e01d6ddb3c5346e6f8177ec341b7c11ce"
+    },
+    {
+      "path": "stability/I016_pair_cover_case39/RAW_CERTIFICATE_RECOUNTS.json.gz",
+      "bytes": 213778,
+      "sha256": "e0aff42ad235410eba2588d14408853998b5290c7d9228a92f9376f793ee44ae"
     },
     {
       "path": "stability/I016_pair_cover_case39/README.md",

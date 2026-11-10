@@ -1,0 +1,14 @@
+{
+  "time": 1794273347.854537,
+  "native_controller_pid": 1064724,
+  "cohort": "P016",
+  "drivers": {
+    "postprocess_completed_pool_prefix.py": "58f15b1ba02ee7c9d0984dbe252ef884609d54cf48685f643d361c992265e6ab",
+    "register_completed_pool_prefix.py": "38538a1f34e2cd82b89fc70d221bf4d8e5284d224fa5c490f6a422cf4f99d33d",
+    "summarize_completed_prefix.py": "bf950c7527c0e217ca2344f6cd81ba21ce92f182675c2985a77405e85a172d00",
+    "snapshot_d005_isolation.py": "9af3465b87f43ef1db99bdd26bf0de76bb9be3ff171666650a64c089cdf32b9f",
+    "audit_d005_prefix.py": "b5b7701d032609ea75bfcb164f472d9db083450d74b0014b506bb9309c2f3342",
+    "independent_raw_recount.py": "6aece721b45de969e19b2df608301a2a93b41c618c6a15f1d7c52f28a3b9e820"
+  },
+  "scope": "observe actual same native controller then independent complete-prefix/raw/ledger/isolation audit and strictly-scoped development comparison"
+}
