@@ -1,0 +1,64 @@
+{
+  "scope": "鲁棒优化领域研究现状 一页PPT及讲解资料",
+  "date": "2026-11-10",
+  "references": [
+    {
+      "id": "R1",
+      "citation": "Bertsimas, D.; Brown, D. B.; Caramanis, C. (2011). Theory and Applications of Robust Optimization. SIAM Review, 53(3), 464–501.",
+      "url": "https://doi.org/10.1137/080734510",
+      "fulltext": "https://users.ece.utexas.edu/~cmcaram/pubs/RobustOptimizationPaper.pdf",
+      "read": "§2.2及§4.1—§4.3。领域基础综述，不作为近年进展本身。"
+    },
+    {
+      "id": "R2",
+      "citation": "Kuhn, D.; Shafiee, S.; Wiesemann, W. (2025). Distributionally robust optimization. Acta Numerica, 34, 579–804.",
+      "url": "https://doi.org/10.1017/S0962492924000084",
+      "fulltext": "https://arxiv.org/html/2411.02549v3",
+      "read": "模型与重构章节、§8及§10.3；区分集中界与泛化界。"
+    },
+    {
+      "id": "R3",
+      "citation": "Mohajerin Esfahani, P.; Kuhn, D. (2018). Data-driven distributionally robust optimization using the Wasserstein metric: performance guarantees and tractable reformulations. Mathematical Programming, 171, 115–166.",
+      "url": "https://doi.org/10.1007/s10107-017-1172-1",
+      "fulltext": "https://link.springer.com/article/10.1007/s10107-017-1172-1",
+      "read": "§3—§4，Theorems 3.4、3.5及4.2。"
+    },
+    {
+      "id": "R4",
+      "citation": "Yu, X.; Basciftci, B. (2026). Distributionally robust optimization with multimodal decision-dependent ambiguity sets. Mathematical Programming. Published 9 March 2026.",
+      "url": "https://doi.org/10.1007/s10107-026-02337-1",
+      "fulltext": "https://link.springer.com/article/10.1007/s10107-026-02337-1",
+      "read": "§2—§3、Assumption 1及§6 Theorem 12。",
+      "pdf": "R4_Yu2026.pdf",
+      "pdf_sha256": "e30c6f985c36dcba319712df0801965485c71c1035338961065124dd401207df"
+    },
+    {
+      "id": "R5",
+      "citation": "Lefebvre, H.; Schmidt, M.; Thürauf, J. (2026). Column generation in column-and-constraint generation for adjustable robust optimization with Interdiction-type linking Constraints. Mathematical Programming Computation, 18, 259–296.",
+      "url": "https://doi.org/10.1007/s12532-025-00300-3",
+      "fulltext": "https://link.springer.com/article/10.1007/s12532-025-00300-3",
+      "read": "§2、§4及§6；包含不利的调度应用结果。",
+      "pdf": "R5_Lefebvre2026.pdf",
+      "pdf_sha256": "b1a8a8c1aaf9eba8e3923fa32cdc336d13069239fdee3c7377e5adfcff419957"
+    },
+    {
+      "id": "R6",
+      "citation": "Dumouchelle, J.; Julien, E.; Kurtz, J.; Khalil, E. B. (2024). Neur2RO: Neural Two-Stage Robust Optimization. International Conference on Learning Representations.",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/28fdc4c3fa25412b7a1f25e6602217c4-Abstract-Conference.html",
+      "fulltext": "https://optimization-online.org/wp-content/uploads/2023/10/neur2ro_camera_ready.pdf",
+      "read": "§3与Theorem 1；使用ICLR 2024版。",
+      "pdf": "R6_Dumouchelle2024.pdf",
+      "pdf_sha256": "b5ac4136a155c4ecc1e0e9cd6a27aef33f67be861b8de032750038b7a98d52c2"
+    },
+    {
+      "id": "R7",
+      "citation": "Goerigk, M.; Kurtz, J. (2025). Data-driven prediction of relevant scenarios for robust combinatorial optimization. Computers & Operations Research, 174, 106886.",
+      "url": "https://doi.org/10.1016/j.cor.2024.106886",
+      "fulltext": "https://pure.uva.nl/ws/files/281696151/1-s2.0-S0305054824003587-main.pdf",
+      "read": "§4.3—§4.4及§6；使用2025年期刊版。"
+    }
+  ],
+  "source_review": "Methods and stated assumptions or limitations read from linked full texts; not abstract-only.",
+  "gap_status": "Selective synthesis rather than exhaustive novelty claims.",
+  "docx_sha256": "97ba74787e5ad38eab1158d6b78d6243613528a58bcf026cc406a5652eca88cb"
+}
