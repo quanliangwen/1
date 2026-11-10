@@ -17,8 +17,10 @@
 
 三个配对成本均降低，但自身Best差距及波动扩大，稳定性目标仍需改进。这是3次开发统计；正式40×30表对应上方冻结I002。[配对源码与全证据](research/D003_paired_stability_prefix/D003_COMPLETE_PAIRED_EVIDENCE.zip) · [正反结果与费用](research/D003_paired_stability_prefix/RESULTS_NOTES.md)
 
-I016已实现自身CDF后通用两组覆盖并使用剩余预算做块/精度，保留全部已接受成员。新种子冷启动536.94秒，27次完整组对扫描、33075组对，全部1071份原样本证书独立重算通过；已再现已知合格324.916225同一身份，31个更便宜未知点的独立D004完整原LSS前缀已实际启动。源码与冷启动证据已经冻结，尚无I016三种子或30次Avg。[I016源码](iterations/I016_cdf_pair_cover/I016_FROZEN_ENGINEERING_SOURCE.zip) · [实际冷搜索与全部原样本复核](iterations/I016_cdf_pair_cover/engineering39/I016_COLD_SEARCH_EVIDENCE.zip) · [D004验收前登记](research/D004_I016_full_prefix/REGISTRATION.json)
+I016已实现自身CDF后通用两组覆盖并使用剩余预算做块/精度，保留全部已接受成员。新种子冷启动536.94秒，27次完整组对扫描、33075组对，全部1071份原样本证书独立重算通过；已再现已知合格324.916225同一身份，D004完整原LSS前缀现已完成独立审计，确认池内最低合格成本324.916225及70项更便宜成员拒绝。源码与冷启动证据已经冻结，尚无I016三种子或30次Avg。[I016源码](iterations/I016_cdf_pair_cover/I016_FROZEN_ENGINEERING_SOURCE.zip) · [实际冷搜索与全部原样本复核](iterations/I016_cdf_pair_cover/engineering39/I016_COLD_SEARCH_EVIDENCE.zip) · [D004验收前登记](research/D004_I016_full_prefix/REGISTRATION.json)
 
 [完整迭代思考、尝试和负结果](ITERATION_LOG.md) · [最新实际状态快照](progress/LATEST.json) · [全部文件SHA256清单](CHECKSUMS_SHA256.json)
 
 正式全部文件已在提交`6fd5f9455b4e93c99ac514910a2a8a14a02de3a9`经远端608文件255525881字节及SHA核验。[D004实际启动与持续迭代](research/D004_I016_full_prefix/ACTUAL_RUN_STATUS.md)
+
+I016下一组三种子配对已登记：与I015父版在9716211/12/13同预算冷启动，核验启动前源码后运行。[协议与源文件](stability/I016_pair_cover_case39/README.md) · [D004完整冷搜索验收证据](research/D004_I016_full_prefix/D004_COMPLETE_I016_PREFIX_EVIDENCE.zip)

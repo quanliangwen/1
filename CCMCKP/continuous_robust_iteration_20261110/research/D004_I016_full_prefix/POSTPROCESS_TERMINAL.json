@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "error": null,
+  "steps": [
+    {
+      "driver": "snapshot_d004_isolation.py",
+      "exit": 0,
+      "wall": 0.0655626468360424
+    },
+    {
+      "driver": "audit_d004_i016_prefix.py",
+      "exit": 0,
+      "wall": 0.5169711709022522
+    }
+  ],
+  "wall_including_wait": 336.49314504675567,
+  "scope": "actual single-prefix direct audit and single engineering evidence; no new MC or30formalAvg"
+}
