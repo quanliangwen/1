@@ -25,4 +25,4 @@ I016已实现自身CDF后通用两组覆盖并使用剩余预算做块/精度，
 
 I016下一组三种子配对已实际启动：与I015父版在9716211/12/13同预算冷启动，源码先远端核验。[协议与源文件](stability/I016_pair_cover_case39/README.md) · [D004完整冷搜索验收证据](research/D004_I016_full_prefix/D004_COMPLETE_I016_PREFIX_EVIDENCE.zip)
 
-35/37/38/40号各一新种子的父/新版配对已登记、冻结源码，核验后启动，逐例报告而不混算成本Avg。[四大例协议与源文件](breadth/I016_priority_four/README.md)
+35/37/38/40号各一新种子的父/新版配对已实际启动（2工），另39号三种子配对2工，合计最多4个大例搜索，逐例报告而不混算成本Avg。[四大例协议与源文件](breadth/I016_priority_four/README.md)

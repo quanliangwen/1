@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": 1,
+  "scope": "Actual old selection/raw samples; two generous mathematical capacities only.\n\nBoth counts deliberately saturate at one, so selection/bins/numerator/denominator\nare identical. The auditor must retain two capacity namespaces. These are math\nfixtures, not new benchmark search outcomes or original-LSS evaluations.\n",
+  "auditor_sha256": "db94795439327338024a3bc1ddfbe00457c8be4b07a884ebb89344484211e703",
+  "original_selection_post_sha256": "9aa655a6a17a9fc7664743c28e39a54b3984070aba54a745b064159849dec5c3",
+  "records": [
+    {
+      "capacity": 437.59671167750446,
+      "bins": 1024,
+      "numerator": "909494701772928237915039062500000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "denominator": "909494701772928237915039062500000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "capacity": 875.1934233550089,
+      "bins": 1024,
+      "numerator": "909494701772928237915039062500000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "denominator": "909494701772928237915039062500000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "semantic_capacity_namespaces_retained": 2,
+  "new_searches": 0,
+  "new_original_MC_calls": 0,
+  "not_benchmark_cost_or_probability_results": true
+}
