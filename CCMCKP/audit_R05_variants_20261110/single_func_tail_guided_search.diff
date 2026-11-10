@@ -1,0 +1,278 @@
+--- r05/functions\func_tail_guided_search.py
++++ single/functions\func_tail_guided_search.py
+@@ -41,7 +41,18 @@
+     time_limit_seconds=600.0,evaluation_budget=None,gurobi_optimum=None,
+     progress_callback=None,run_seed=0,crn_seed=None,restart_no_improve_cycles=None,
+     mc_context_factory=None,perturbation_policy='nearby_pair',pair_exchange_pilot_samples=10000,
++    dual_perturbation_enabled=True,strong_perturb_no_improve=5,strong_perturb_class_ratio=0.5,
++    operator_selection_policy='ucb',ucb_exploration_c=1.0,
++    reward_window=5,ucb_discount=0.9,guided_destroy_class_ratio=0.3,
+ ):
++    dual_perturbation_enabled=bool(dual_perturbation_enabled)
++    strong_perturb_no_improve=max(1,int(strong_perturb_no_improve))
++    strong_perturb_class_ratio=min(1.0,max(0.0,float(strong_perturb_class_ratio)))
++    if strong_perturb_class_ratio<=0.0:strong_perturb_class_ratio=0.5
++    strong_perturbation_count=0;strong_destroyed_class_count=0
++    guided_destroy_class_ratio=min(1.0,max(0.0,float(guided_destroy_class_ratio)))
++    if guided_destroy_class_ratio<=0.0:guided_destroy_class_ratio=0.3
++    guided_perturbation_count=0;guided_destroyed_class_count=0
+     policy=get_policy()
+     if not getattr(EvaluationFunction,'reference_mc',False):
+         return legacy_search(EvaluationFunction,S_cp,node_items,factor_id2obj,ConfidenceLevel,
+@@ -50,7 +61,14 @@
+             evaluation_budget=evaluation_budget,gurobi_optimum=gurobi_optimum,
+             progress_callback=progress_callback,run_seed=run_seed,crn_seed=crn_seed,
+             restart_no_improve_cycles=restart_no_improve_cycles,mc_context_factory=mc_context_factory,
+-            perturbation_policy=perturbation_policy,pair_exchange_pilot_samples=pair_exchange_pilot_samples)
++            perturbation_policy=perturbation_policy,pair_exchange_pilot_samples=pair_exchange_pilot_samples,
++            dual_perturbation_enabled=dual_perturbation_enabled,
++            strong_perturb_no_improve=strong_perturb_no_improve,
++            strong_perturb_class_ratio=strong_perturb_class_ratio,
++            operator_selection_policy=operator_selection_policy,
++            ucb_exploration_c=ucb_exploration_c,
++            reward_window=reward_window,ucb_discount=ucb_discount,
++            guided_destroy_class_ratio=guided_destroy_class_ratio)
+     started=time.perf_counter();tol=1e-12
+     current=np.asarray(S_cp[0],dtype=int).copy();current_cost=solution_cost(current,factor_id2obj)
+     current_p=float(S_cp[2]);best=current.copy();best_cost=current_cost;best_p=current_p
+@@ -65,6 +83,81 @@
+     convergence=[];move_log=[];perturb_log=[];reason='time_limit'
+     reaction=ReactiveCycleMemory(current,tabu_tenure,policy['reactive_scope']=='all')
+     deferred_accepts=0
++    # Operator selection. Arm 0 = light, 1 = strong. "rule" is the idle-count
++    # hard switch, "ucb" is UCB1 with immediate rewards, "ucb_w" is discounted
++    # UCB with delayed windowed credit (reward settles reward_window cycles later
++    # and all statistics decay by ucb_discount each step).
++    operator_selection_policy=str(operator_selection_policy).lower()
++    _VALID_SELECTION_POLICIES=('rule','ucb','ucb_w','single','force_light','force_strong','force_guided')
++    if operator_selection_policy not in _VALID_SELECTION_POLICIES:operator_selection_policy='ucb'
++    ucb_exploration_c=float(ucb_exploration_c)
++    if ucb_exploration_c<0.0:ucb_exploration_c=1.0
++    reward_window=max(1,int(reward_window))
++    ucb_discount=min(1.0,max(0.1,float(ucb_discount)))
++    ucb_counts=[0,0,0];ucb_reward_sum=[0.0,0.0,0.0];ucb_decisions=0
++    disc_counts=[0.0,0.0,0.0];disc_rewards=[0.0,0.0,0.0];t_step=0
++    pending=[];selection_counts=[0,0,0];ucb_selection_log=[]
++    def relative_drop(pre_cost,post_cost):
++        base=abs(pre_cost) if abs(pre_cost)>1e-12 else 1.0
++        return max(0.0,(pre_cost-post_cost)/base)
++    def credit(arm,reward):
++        nonlocal ucb_decisions,t_step
++        if operator_selection_policy=='ucb_w':
++            for a in (0,1,2):
++                disc_counts[a]*=ucb_discount;disc_rewards[a]*=ucb_discount
++            disc_counts[arm]+=1.0;disc_rewards[arm]+=reward;t_step+=1
++        else:
++            ucb_counts[arm]+=1;ucb_reward_sum[arm]+=reward;ucb_decisions+=1
++    def select_perturbation_arm(idle_cycles):
++        if operator_selection_policy=='single':return 0
++        if operator_selection_policy=='force_light':return 0
++        if operator_selection_policy=='force_strong':return 1
++        if operator_selection_policy=='force_guided':return 2
++        if operator_selection_policy=='rule':
++            return 1 if idle_cycles>=strong_perturb_no_improve else 0
++        for arm in (0,1,2):
++            if selection_counts[arm]==0:return arm
++        if operator_selection_policy=='ucb_w':
++            if sum(disc_counts)<1e-9:
++                return min(range(3),key=lambda arm:selection_counts[arm])
++            best_arm,best_value=0,None
++            for arm in (0,1,2):
++                n_eff=max(disc_counts[arm],1e-9)
++                q_value=disc_rewards[arm]/n_eff
++                bonus=ucb_exploration_c*np.sqrt(2.0*np.log(max(t_step,1))/n_eff)
++                value=q_value+bonus
++                if best_value is None or value>best_value:best_arm,best_value=arm,value
++            return best_arm
++        best_arm,best_value=0,None
++        for arm in (0,1,2):
++            q_value=ucb_reward_sum[arm]/ucb_counts[arm]
++            bonus=ucb_exploration_c*np.sqrt(2.0*np.log(ucb_decisions)/ucb_counts[arm])
++            value=q_value+bonus
++            if best_value is None or value>best_value:best_arm,best_value=arm,value
++        return best_arm
++    def settle_due(cycle,current_cost):
++        remaining=[]
++        for item in pending:
++            if item['due']<=cycle:
++                reward=relative_drop(item['pre'],current_cost)
++                credit(item['arm'],reward);item['log']['reward']=reward
++            else:remaining.append(item)
++        pending[:]=remaining
++    def end_cycle(arm,pre_cost,post_cost,cycle,log_entry):
++        selection_counts[arm]+=1
++        if operator_selection_policy=='single':
++            log_entry['reward']=relative_drop(pre_cost,post_cost)
++            return
++        if operator_selection_policy=='ucb_w':
++            pending.append(dict(arm=arm,pre=pre_cost,due=cycle+reward_window,log=log_entry))
++        else:
++            reward=relative_drop(pre_cost,post_cost)
++            credit(arm,reward);log_entry['reward']=reward
++    def finalize_pending(final_cost):
++        for item in pending:
++            reward=relative_drop(item['pre'],final_cost)
++            credit(item['arm'],reward);item['log']['reward']=reward
++        pending.clear()
+     def stopped():
+         return ((time_limit_seconds is not None and time.perf_counter()-started>=time_limit_seconds)
+             or (evaluation_budget is not None and evaluations>=evaluation_budget))
+@@ -102,10 +195,13 @@
+             old_cost=before,new_cost=current_cost,new_probability=p,was_tabu=False,
+             aspiration_by_objective=improved,tabu_until_iteration=cycle+int(reaction.tenure),
+             improved_global_best=improved)
+-        if event=='random_perturbation':
++        if event in ('random_perturbation','strong_perturbation','guided_perturbation'):
+             perturb_log.append({k:row[k] for k in ['cycle','class_id','old_factor','new_factor',
+                 'old_cost','new_cost','new_probability','tabu_until_iteration','improved_global_best']})
+             perturb_log[-1]['success']=True
++            perturb_log[-1]['operator']=(
++                'strong' if event=='strong_perturbation'
++                else 'guided' if event=='guided_perturbation' else 'light')
+         else:move_log.append(row)
+         if progress_callback:progress_callback(f'{event} cycle={cycle} cost={before:.12g}->{current_cost:.12g}')
+ 
+@@ -156,25 +252,96 @@
+                 singles+=1;deferred_accepts+=1;commit(candidate,p,changes,'deferred_single');accepted=True;break
+             if stopped() or not accepted:break
+         if stopped():break
+-        moved=False
+-        for cid in np.random.permutation(int(param[0])).tolist():
+-            old=int(current[cid]);alternatives=np.random.permutation([
+-                int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
+-            if policy['mc_perturbation_order']=='nearby':
+-                alternatives.sort(key=lambda fid:abs(float(factor_id2obj[fid].cost)-float(factor_id2obj[old].cost)))
+-            for fid in alternatives:
+-                candidate,p=evaluate(((cid,fid),))
+-                if candidate is None:break
+-                if p+tol<ConfidenceLevel:continue
+-                perturbations+=1;commit(candidate,p,((cid,fid),),'random_perturbation');moved=True;break
+-            if moved or stopped():break
++        settle_due(cycle,float(current_cost))
++        if dual_perturbation_enabled:
++            selected_arm=int(select_perturbation_arm(stagnation))
++        else:
++            selected_arm=0
++        pre_perturb_cost=float(current_cost)
++        destroy_ratio=(guided_destroy_class_ratio if selected_arm==2
++                       else strong_perturb_class_ratio)
++        target_count=max(1,min(int(param[0]),
++            int(np.ceil(float(param[0])*destroy_ratio))))
++        arm_name=('light','strong','guided')[selected_arm]
++        if selected_arm==1:
++            # Strong multi-class destruction: wide-span random replacements over
++            # target_count classes, recreating the multi-start basin jump.
++            destroyed=0
++            for cid in np.random.permutation(int(param[0])).tolist():
++                if stopped() or destroyed>=target_count:break
++                old=int(current[cid])
++                # Wide-span: random order, deliberately not nearby-sorted.
++                alternatives=np.random.permutation([
++                    int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
++                for fid in alternatives:
++                    candidate,p=evaluate(((cid,fid),))
++                    if candidate is None:break
++                    if p+tol<ConfidenceLevel:continue
++                    perturbations+=1;commit(candidate,p,((cid,fid),),'strong_perturbation')
++                    destroyed+=1;break
++            strong_perturbation_count+=1
++            strong_destroyed_class_count+=destroyed
++        elif selected_arm==2:
++            # Guided ruin-and-recreate: directed class selection by cost headroom,
++            # then greedy cheapest-feasible rebuild. Informed, not blind.
++            headroom=[]
++            for cid in range(int(param[0])):
++                curf=int(current[cid]);cur_item_cost=float(factor_id2obj[curf].cost)
++                alt_costs=[float(factor_id2obj[int(f)].cost)
++                           for f in node_items[cid] if int(f)!=curf]
++                gap=(cur_item_cost-min(alt_costs)) if alt_costs else 0.0
++                headroom.append((max(0.0,gap)+float(np.random.uniform(0,1e-6)),cid))
++            headroom.sort(key=lambda pair:pair[0],reverse=True)
++            guided_ids=[cid for _,cid in headroom[:target_count]]
++            destroyed=0
++            for cid in guided_ids:
++                if stopped() or destroyed>=target_count:break
++                old=int(current[cid])
++                # Greedy rebuild: cheapest-first, unlike strong's random order.
++                alternatives=sorted([int(fid) for fid in node_items[cid]
++                                     if int(fid)!=old],
++                                    key=lambda fid:float(factor_id2obj[fid].cost))
++                for fid in alternatives:
++                    candidate,p=evaluate(((cid,fid),))
++                    if candidate is None:break
++                    if p+tol<ConfidenceLevel:continue
++                    perturbations+=1;commit(candidate,p,((cid,fid),),'guided_perturbation')
++                    destroyed+=1;break
++            guided_perturbation_count+=1
++            guided_destroyed_class_count+=destroyed
++        else:
++            moved=False
++            for cid in np.random.permutation(int(param[0])).tolist():
++                old=int(current[cid]);alternatives=np.random.permutation([
++                    int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
++                if policy['mc_perturbation_order']=='nearby':
++                    alternatives.sort(key=lambda fid:abs(float(factor_id2obj[fid].cost)-float(factor_id2obj[old].cost)))
++                for fid in alternatives:
++                    candidate,p=evaluate(((cid,fid),))
++                    if candidate is None:break
++                    if p+tol<ConfidenceLevel:continue
++                    perturbations+=1;commit(candidate,p,((cid,fid),),'random_perturbation');moved=True;break
++                if moved or stopped():break
+         if stopped():break
+         reaction.observe(current,cycle)
+         completed_cycles=cycle;record('iteration_end')
+-        stagnation=0 if best_cost<previous_best-tol else stagnation+1
+-        if restart_no_improve_cycles is not None and stagnation>=restart_no_improve_cycles:
++        if selected_arm in (1,2):
++            # Reset the idle window after a multi-class jump.
++            stagnation=0
++        else:
++            stagnation=0 if best_cost<previous_best-tol else stagnation+1
++        # Operator feedback: immediate credit now, or queue for windowed credit.
++        log_entry=dict(cycle=int(cycle),arm=int(selected_arm),
++            operator=arm_name,
++            pre_cost=pre_perturb_cost,post_cost=float(current_cost),reward=None)
++        ucb_selection_log.append(log_entry)
++        end_cycle(selected_arm,pre_perturb_cost,float(current_cost),cycle,log_entry)
++        # Stagnation break (outer multi-start) retained only when dual is off.
++        if (not dual_perturbation_enabled and restart_no_improve_cycles is not None
++                and stagnation>=restart_no_improve_cycles):
+             reason='stagnation_restart';break
+     if stopped():reason='evaluation_budget' if evaluation_budget is not None and evaluations>=evaluation_budget else 'time_limit'
++    finalize_pending(float(current_cost))
+     valid,validation_reason=validate_multiple_choice_solution(best,node_items)
+     if not valid:raise AssertionError(validation_reason)
+     result=DDTSResult(solution=best.tolist(),cost=best_cost,probability=best_p,search_probability=best_p,
+@@ -190,4 +357,32 @@
+     result.tail_proposal_count=proposal_moves;result.tail_proposal_rebuild_count=proposal_rebuilds
+     result.tail_deferred_evaluation_count=deferred_evals;result.tail_proposal_seconds=proposal_seconds
+     result.search_ablation_activity=dict(evaluator_branch='reference_mc',reactive_enabled=reaction.enabled,reactive_repeats=reaction.repeats,reactive_updates=reaction.updates,reactive_max_tenure=reaction.maximum_tenure,deferred_single_accepts=deferred_accepts,pair_accepts=pairs,pair_evaluations=pair_evals,deferred_evaluations=deferred_evals)
++    result.dual_perturbation_enabled=bool(dual_perturbation_enabled)
++    result.strong_perturbation_count=int(strong_perturbation_count)
++    result.strong_destroyed_class_count=int(strong_destroyed_class_count)
++    result.strong_perturb_no_improve=int(strong_perturb_no_improve)
++    result.strong_perturb_class_ratio=float(strong_perturb_class_ratio)
++    result.guided_perturbation_count=int(guided_perturbation_count)
++    result.guided_destroyed_class_count=int(guided_destroyed_class_count)
++    result.guided_destroy_class_ratio=float(guided_destroy_class_ratio)
++    result.operator_selection_policy=operator_selection_policy
++    result.ucb_exploration_c=float(ucb_exploration_c)
++    if operator_selection_policy=='ucb_w':
++        result.ucb_counts=[int(v) for v in selection_counts]
++        result.ucb_reward_sum=[float(v) for v in disc_rewards]
++        result.ucb_average_reward=[
++            float(disc_rewards[a]/disc_counts[a]) if disc_counts[a]>1e-9 else 0.0
++            for a in (0,1,2)]
++        result.disc_counts=[float(v) for v in disc_counts]
++        result.disc_rewards=[float(v) for v in disc_rewards]
++    else:
++        result.ucb_counts=[int(v) for v in ucb_counts]
++        result.ucb_reward_sum=[float(v) for v in ucb_reward_sum]
++        result.ucb_average_reward=[
++            float(ucb_reward_sum[a]/ucb_counts[a]) if ucb_counts[a]>0 else 0.0
++            for a in (0,1,2)]
++    result.reward_window=int(reward_window)
++    result.ucb_discount=float(ucb_discount)
++    result.pending_left=int(len(pending))
++    result.ucb_selection_log=ucb_selection_log
+     return result

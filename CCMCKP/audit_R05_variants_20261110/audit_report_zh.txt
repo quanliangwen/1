@@ -1,0 +1,112 @@
+CCMCKP R05 / 单扰动 / 双扰动 源码对齐核查
+核查日期：2026-11-10（Asia/Shanghai）
+
+结论
+在显式加载同一 selected_policy.json、使用同一数据和同一运行参数的前提下，两份变种的核心解验收规则与本次 R05 基准一致：没有发现降低可行性门槛、用小样本 pilot 替代正式验收、改变目标值或改变最终可行性标记的改动。
+但不能认定“除算法外其他完全一致”。确认存在默认配置与包名不符、精确分支漏传参数、结果元数据/日志丢失、批处理完整性验收变弱等问题。实际历史实验是否对齐，仍须结合当时的启动命令、manifest、输入数据哈希和 result.json 判断；这三份 ZIP 本身不能证明历史跑法一致。
+本次仅核查，未修改三个原始 ZIP 或其原始源码。
+
+一、基准与逐文件范围
+R05 基准：CCMCKP_R05_关闭精英路径重连_完整代码.zip 的 source/src/，结合 source/selected_policy.json、source/run_selected.py、source/run_r05_no_pr.py、run_all40_r05_nopr.py 解释正式运行配置。
+单扰动：CCMCKP_单扰动源码_20261109.zip 的 src/。
+双扰动：CCMCKP_双扰动源码_20261107.zip 的 CCMCKP_dual_perturbation/src/。
+每个 src 均有 43 个 Python 文件；两个变种各有 40 个文件与 R05 逐字节一致。各自只有以下 3 个文件不同：
+  exp_Result_TabuSearch.py
+  functions/func_tabu_search.py
+  functions/func_tail_guided_search.py
+两个变种的顶层 exp_Result_TabuSearch.py 均与各自 src 内副本逐字节一致。
+三份 selected_policy.json 的 JSON 内容一致，均为：
+  mc_pair_exchange=true
+  mc_deferred_singles=false
+  reactive_scope=exact_only
+  mc_perturbation_order=nearby
+  mc_pilot_priority=true
+  pr_mode=baseline
+  lr_guidance=false
+
+二、已对齐的验收逻辑
+1. 问题及目标：每类恰选一个合法 factor；成本为选中 factor.cost 之和。初始解结构及成本检查、最终实验入口的成本重算检查一致，成本核对容差 1e-9。
+2. 概率评估分支：L**m < 10**7 时使用 author_reference_exact，否则使用 author_reference_advanced_monte_carlo。choose_evaluator 的 AST 在三者相同。
+3. 正式评估器：func_reference_author.py、func_reference_evaluation.py、func_solution_factor_corrected.py 等共享评估文件逐字节相同。正式 MC 默认 M=1,000,000；成功事件为 sum_samples < Tmax。作者适配器采样索引为 [0, len(samples)-2]，每次重新使用全局 RNG 抽样，未启用正式固定 CRN / Delta-MC / 概率缓存。这些是基准本身的设定。
+4. 搜索接受：各分支沿用 p + 1e-12 >= P0；新增 strong / guided 扰动的每一步也调用同一正式评估路径并检查此门槛。pilot 用于提议与排序；R05 策略中 deferred singles 被关闭这一搜索行为，两变种仍相同。
+5. 正式调用路径未改：MC 分支内部 evaluate()，精确分支 evaluate_probability_from_bounds()、front_quickcheck_reject()、原 random_perturbation() 的 AST 与 R05 相同。
+6. 最优解更新及成本：沿用同一成本优越判断和 tol；精确分支以多步扰动末态更新 best、MC 分支逐步 commit 的差别属于新增算子的实现行为，不能把它们理解为同一条搜索轨迹。
+7. 最终可行性标记：result.json 仍是 global_best_p + 1e-12 >= P0。最终结构检查、目标重算逻辑一致。没有新增“结束后独立 MC 复验”；沿用搜索中记录的 best_p 是三者共有的逻辑。
+8. 资源预算：正式入口均锁定每次运行 600 秒；max_iter 不作为停止条件；禁止用户用 eval-budget 终止正式实验；ms-max-starts 必须为 0。初始化和搜索共享全局截止时间，预处理仍在每次 run 的计时之外。
+   这里的 600 秒是三者沿用的截止检查口径；完整评估调用不一定可在中途抢占，本次未实测长调用越界时长，不能据源码称为操作系统级硬中断。
+9. 种子和统计：基础 seed=832273、run r 用 seed+r 的逻辑相同；正式 30 次使用 832273..832302。均值、总体标准差、best 命中判据和时间统计函数保持一致。不同搜索路径会消耗不同数量 RNG，种子相同不意味着对不同候选使用同一批样本。
+
+三、需处理的问题（按对实验判断的影响排列）
+
+A. “单扰动”包并不默认运行单扰动（高影响，已动态复现）
+位置：single/src/exp_Result_TabuSearch.py:93-103，尤其第98行；main 第1800行附近。
+DUAL_PERTURBATION_ENABLED=True，OPERATOR_SELECTION_POLICY="ucb"。轻扰动、强扰动、guided 三个 arm 都会使用。
+短测试中默认 MC 分支确实执行了 light、strong、guided；精确分支也执行三种。
+若论文/实验定义是只用单个轻扰动，需要显式传 --operator-selection-policy single。该选项只固定轻扰动，仍保留变种“不因停滞触发外层重启”的规则；这不是完全恢复 R05。
+关闭整个新机制以对照 R05，需要通过函数/代码配置 dual_perturbation_enabled=False；目前正式 CLI 没有单独的关闭开关。
+历史运行是否实际传了 single，不在所附 ZIP 可证范围内。
+
+B. selected_policy.json 放在目录中不会自动生效（高影响，三者共同入口行为；变种缺少等效固定入口会增加误用）
+位置：共享 functions/func_search_ablation.py:5-20；R05 main:1767-1773；single main:1817-1821。
+只有 --search-ablation-policy <path> 或 CCMCKP_SEARCH_ABLATION_POLICY 环境变量才读取该 JSON。否则回退默认策略：mc_deferred_singles=true、pr_mode=lr-risk-pr、lr_guidance=true，与本次 R05 无 PR 基准不符。
+R05 随包有固定策略启动器。双扰动批处理脚本会显式传策略路径；单扰动包未包含对应正式批处理/固定策略启动器。
+建议正式入口明确要求策略文件，并把最终生效策略完整存入结果。只写 --pr-ablation baseline 还不足以保证其它搜索策略相同。
+
+C. 双扰动精确分支漏传三项控制参数（明确缺陷，已动态复现）
+位置：double/CCMCKP_dual_perturbation/src/functions/func_tail_guided_search.py:52-59。
+外层接受 dual_perturbation_enabled、strong_perturb_no_improve、strong_perturb_class_ratio，却在委托 legacy_search 时未传递。内部默认为 True / 5 / 0.5。
+测试传入 False / 17 / 0.8，委托接收到的三项参数全部缺失。实际运行传 False 后，精确分支仍执行 strong；MC 分支则能正确关闭。
+影响：使用默认 True/5/0.5 的正式双扰动试验不因这项漏传而改变配置；关闭消融、调强扰动触发阈值或比例时，小实例设置会失效，可能造成不同实例规模对应不同实验处理。
+建议：委托调用补传这三项参数。单扰动版此处已正确传递。
+
+D. 新算子配置与统计未完整落盘，CSV 还会静默丢字段（影响验收可追溯性）
+位置：single exp_Result_TabuSearch.py:564-569、1234以后 payload；double exp_Result_TabuSearch.py:556-561；两者原有 CSV 列表。
+两个变种把 csv.DictWriter 改为 extrasaction="ignore"，但没有把 operator / destroyed_classes 等新增字段补入对应 CSV 列表。因此这些额外字段会被直接舍弃；用实际 write_csv 函数已复现。
+DDTSResult 上新增的 strong_perturbation_count、strong_destroyed_class_count 等没有汇总写入 result.json；单扰动版 operator_selection_policy、UCB 参数和 ucb_selection_log 也没有完整写出。
+ALGORITHM_NAME、CODE_VERSION 仍与 R05 相同。因此同一个版本号和同一份 search_ablation_policy，并不能证明运行的是同一个扰动模式。
+MC convergence 的 event 仍可提供部分 strong/guided 活动线索，但不能代替完整参数和选择统计。
+建议：把实际选择模式、所有算子参数、选择次数、成功次数、破坏类数及 UCB 轨迹正式序列化；给变种独立版本标识；为新增字段扩展 CSV schema，避免统一静默忽略。
+
+E. 双扰动全40例批处理的完整性验收弱于 R05
+位置：R05 run_all40_r05_nopr.py:65-77、137-139、158-176；双扰动 run_dual_all40.py:111-126、261-313。
+仍相同的关键检查：30次、种子序列、M=1e6、P0=.99、600秒、instance/Tmax、最终可行、PR关闭；汇总统计口径相同。
+差别：
+  a) R05 summarize 逐条要求 result.search_ablation_policy == manifest.policy；双扰动 summarize 删除了这项检查，只在 launch 时检查一次策略文件。
+  b) R05 对全部指定源文件和输入数据做开始/结束哈希核验；双扰动只记录3项源码哈希，没有对应输入数据与结束后完整性核验。
+  c) 双扰动实际执行 src/exp_Result_TabuSearch.py（第185行），所记录的入口哈希却是顶层 exp_Result_TabuSearch.py（第308行）。本 ZIP 两个副本恰好一致，但未来只修改 src 副本时，这个哈希不能证明执行版本。
+  d) 单扰动包没有提供全40例的等效验收脚本，无法从包内确认批处理验收与 R05 相同。
+建议：恢复逐结果策略断言、对实际执行文件及共享依赖记录哈希、记录输入数据哈希并在结束时复核。
+
+F. 源码包的实验材料不完整，不能核实全部外部条件
+R05 包含 benchmark、QuickCheck 缓存和启动器；两个变种为源码包，不包含对应 benchmark 和缓存。双扰动全40脚本还依赖 Linux 的固定绝对路径及一个外部 baseline manifest。
+因此本次可以证明数据读取、预处理和 QuickCheck 代码未改，却不能证明外部数据、缓存内容、40组 instance/Tmax、实际服务器依赖版本和历史启动参数完全一致。
+建议正式比较时共用同一只读数据/缓存快照、同一实例清单和参数模板，并保存各自哈希。不同 QuickCheck 缓存状态会改变筛查路径或预处理开销；缓存列表不是验收门槛变更的证据，但属于需要冻结的实验输入。
+
+四、预期算法差异，应与上述问题分开
+R05：停滞达到 restart_no_improve_cycles 后返回 stagnation_restart，由外层继续初始化新起点。
+双扰动：默认在轻扰动与停滞触发的强扰动间切换，并关闭该停滞重启，使 ILS 持续到全局预算。
+单扰动包：实现支持 rule / ucb / ucb_w / single / force_light / force_strong / force_guided；默认 ucb 为三算子选择。single 模式固定轻扰动但仍关闭停滞重启。
+这些改变会影响搜索循环数、起点数、评估次数、随机数消耗、best-found time 及最终成本，是算法机制差别，不应强行要求与 R05 相等。要求一致的应是问题数据、正式评估器、可行性门槛、资源预算定义、参数冻结方式和验收统计口径。
+
+五、验证方法和结果
+1. 三个 ZIP 只读读取、SHA256 固定；每份 src 的全部43个 Python 文件进行字节比较与函数 AST 比较。
+2. 三份共129个 src Python 文件均通过内存 compile 语法检查；未据此宣称所有非活动算法模块均做运行验证。
+3. 对 MC / 精确两条活动搜索路径共执行22组受控短测试。使用构造 factor、受控正式概率 oracle 和内部 evaluation_budget=150（仅测试，正式入口禁止），pilot=40；不属于40例×30次×600秒正式实验。
+   验证：p=.989 的候选被拒，p=.99 的候选可接受；所有已接受日志概率满足原门槛；oracle 调用参数均为 M=1e6；返回解成本重算一致。
+   单扰动关闭新机制后，两条分支的受控轨迹均与 R05 相同；双扰动关闭新机制后，MC轨迹与R05相同；精确分支无法关闭，确认问题C。
+   这不构成所有输入上的形式等价证明，也不代表算法质量相等。
+4. 另外直接运行真实作者 MC 适配器，三份在同种子同输入上得到相同结果：严格小于事件测试为1/3；仅最后样本异常的构造案例概率为1.0，确认沿用作者排除最后索引的行为；两次 fresh MC 为0.996372与0.996517，均为1e6样本，确认重新抽样。
+5. 实际 write_csv 函数验证了未知 operator / destroyed_classes 字段被静默丢弃。
+6. 未执行附包的 Linux 全40例长实验控制器，未核查外部历史实验结果、远端 baseline manifest 或外部 benchmark 的实际哈希。
+
+六、正式比较前建议的最小处理顺序
+先明确单扰动是否要求默认 single，并固定对应启动命令；统一显式加载现有 R05 策略；补齐双扰动精确分支三项参数转发；补齐结果参数与日志及独立版本标识；恢复全40例逐结果策略和输入/执行源码哈希核验。以上修改完成后再进行正式三算法比较。
+本报告未替用户实施这些源码改动。
+
+七、随附证据与复核方式
+source_comparison.json：逐源码SHA256、行号、函数AST摘要、策略及CSV丢字段探针结论。
+test_results.json：22组受控搜索测试、真实作者MC检查、配置回退及参数转发结果。
+audit_tests.py：本次短测试脚本。重跑时将三份ZIP分别解包为 r05/（保留source）、single/（保留src）、double/（保留CCMCKP_dual_perturbation）；环境需 numpy、scipy；脚本与三目录同级执行。
+六份 *.diff：两个变种的3个变化源文件相对R05的完整差异。
+input_archives.json：三个输入ZIP的SHA256及大小。
+SHA256SUMS.txt：交付文件校验和。

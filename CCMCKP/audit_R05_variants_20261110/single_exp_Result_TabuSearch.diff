@@ -1,0 +1,95 @@
+--- r05/exp_Result_TabuSearch.py
++++ single/exp_Result_TabuSearch.py
+@@ -84,6 +84,23 @@
+ PERTURBATION_POLICY = "nearby_pair"
+ USE_COST_RISK_INITIALIZATION = True
+ GLOBAL_RUN_TIME_LIMIT_SECONDS = 600.0
++
++# Dual perturbation replaces outer multi-start. A light nearby perturbation is
++# used while idle cycles stay below STRONG_PERTURB_NO_IMPROVE; once the global
++# best is not improved for that many cycles, the strong multi-class destruction
++# operator (STRONGLY destroying a fixed ratio of classes) takes over. Set
++# DUAL_PERTURBATION_ENABLED = False to fully recover the original multi-start.
++DUAL_PERTURBATION_ENABLED = True
++STRONG_PERTURB_NO_IMPROVE = 5
++STRONG_PERTURB_CLASS_RATIO = 0.5
++# Operator selection between the light/strong perturbation arms. "ucb" selects
++# online with UCB1 (multi-armed bandit); "rule" keeps the idle-cycle hard switch.
++OPERATOR_SELECTION_POLICY = "ucb"
++UCB_EXPLORATION_C = 1.0
++REWARD_WINDOW = 5
++UCB_DISCOUNT = 0.9
++# Third arm: guided ruin-and-recreate destruction ratio (directed, greedy).
++GUIDED_DESTROY_CLASS_RATIO = 0.3
+ 
+ KNOWN_GUROBI_EXACT = {
+     ("APP_3_5_30_", 21.0, 0.99): 9.034717299521294,
+@@ -547,7 +564,7 @@
+ def write_csv(path: Path, fieldnames, rows):
+     path.parent.mkdir(parents=True, exist_ok=True)
+     with path.open("w", newline="", encoding="utf-8") as f:
+-        writer = csv.DictWriter(f, fieldnames=fieldnames)
++        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+         writer.writeheader()
+         writer.writerows(rows)
+ 
+@@ -897,6 +914,13 @@
+             mc_context_factory=mc_sampler,
+             perturbation_policy=PERTURBATION_POLICY,
+             pair_exchange_pilot_samples=init_pilot_samples,
++            dual_perturbation_enabled=DUAL_PERTURBATION_ENABLED,
++            strong_perturb_no_improve=STRONG_PERTURB_NO_IMPROVE,
++            strong_perturb_class_ratio=STRONG_PERTURB_CLASS_RATIO,
++            operator_selection_policy=OPERATOR_SELECTION_POLICY,
++            ucb_exploration_c=UCB_EXPLORATION_C,
++            reward_window=REWARD_WINDOW, ucb_discount=UCB_DISCOUNT,
++            guided_destroy_class_ratio=GUIDED_DESTROY_CLASS_RATIO,
+         )
+ 
+         search_ablation_activity.append(getattr(result, 'search_ablation_activity', {'evaluator_branch':'exact_legacy'}))
+@@ -1035,6 +1059,13 @@
+                             mc_context_factory=mc_sampler,
+                             perturbation_policy=PERTURBATION_POLICY,
+                             pair_exchange_pilot_samples=init_pilot_samples,
++                            dual_perturbation_enabled=DUAL_PERTURBATION_ENABLED,
++                            strong_perturb_no_improve=STRONG_PERTURB_NO_IMPROVE,
++                            strong_perturb_class_ratio=STRONG_PERTURB_CLASS_RATIO,
++                            operator_selection_policy=OPERATOR_SELECTION_POLICY,
++                            ucb_exploration_c=UCB_EXPLORATION_C,
++                            reward_window=REWARD_WINDOW, ucb_discount=UCB_DISCOUNT,
++                            guided_destroy_class_ratio=GUIDED_DESTROY_CLASS_RATIO,
+                         )
+                         search_ablation_activity.append(getattr(cont, 'search_ablation_activity', {'evaluator_branch':'exact_legacy'}))
+                         total_eval_count += int(cont.evaluation_count)
+@@ -1706,6 +1737,7 @@
+ 
+ 
+ def main():
++    global OPERATOR_SELECTION_POLICY, UCB_EXPLORATION_C, REWARD_WINDOW, UCB_DISCOUNT, GUIDED_DESTROY_CLASS_RATIO
+     parser = argparse.ArgumentParser(description="Run 10.3 LR-OperationTabu + quality-diversity elite path relinking for CCMCKP")
+     parser.add_argument("--instance", required=True, help="e.g. APP_3_5_30_ or benchmark/APP_3_5_30_")
+     parser.add_argument("--tmax", type=float, nargs="+", required=True)
+@@ -1765,7 +1797,23 @@
+     parser.add_argument("--gurobi-optimum", type=float, default=None, help="override exact reference; intended for one Tmax")
+     parser.add_argument("--output-dir", default="result/LR_OP_QD_ELITE_PR_10_3_lr-risk-pr")
+     parser.add_argument("--search-ablation-policy", default=None, help="JSON search controls; no probability/evaluation parameter overrides")
++    parser.add_argument("--operator-selection-policy",
++                        choices=["rule", "ucb", "ucb_w", "single", "force_light", "force_strong", "force_guided"],
++                        default=OPERATOR_SELECTION_POLICY,
++                        help="perturbation selection: hard rule, UCB1, discounted windowed UCB, single perturbation, or forced ablation")
++    parser.add_argument("--ucb-exploration-c", type=float, default=UCB_EXPLORATION_C, help="UCB exploration constant")
++    parser.add_argument("--reward-window", type=int, default=REWARD_WINDOW, help="delayed-credit window in cycles")
++    parser.add_argument("--ucb-discount", type=float, default=UCB_DISCOUNT, help="discounted-UCB decay factor")
++    parser.add_argument("--guided-destroy-class-ratio", type=float, default=GUIDED_DESTROY_CLASS_RATIO,
++                        help="guided ruin-and-recreate destruction ratio")
+     args = parser.parse_args()
++    OPERATOR_SELECTION_POLICY = str(args.operator_selection_policy).lower()
++    UCB_EXPLORATION_C = float(args.ucb_exploration_c)
++    REWARD_WINDOW = max(1, int(args.reward_window))
++    UCB_DISCOUNT = min(1.0, max(0.1, float(args.ucb_discount)))
++    GUIDED_DESTROY_CLASS_RATIO = min(1.0, max(0.0, float(args.guided_destroy_class_ratio)))
++    if GUIDED_DESTROY_CLASS_RATIO <= 0.0:
++        GUIDED_DESTROY_CLASS_RATIO = 0.3
+     if args.search_ablation_policy:
+         os.environ["CCMCKP_SEARCH_ABLATION_POLICY"] = str(Path(args.search_ablation_policy).resolve())
+         policy = get_policy()

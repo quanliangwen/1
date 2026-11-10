@@ -1,0 +1,318 @@
+--- r05/functions\func_tabu_search.py
++++ double/functions\func_tabu_search.py
+@@ -147,6 +147,9 @@
+     mc_context_factory=None,
+     perturbation_policy="random",
+     pair_exchange_pilot_samples=10000,
++    dual_perturbation_enabled=True,
++    strong_perturb_no_improve=5,
++    strong_perturb_class_ratio=0.5,
+ ):
+     """Run time-limited LSS-style classwise DDTS.
+ 
+@@ -169,6 +172,18 @@
+         restart_no_improve_cycles = None
+     elif restart_no_improve_cycles is not None:
+         restart_no_improve_cycles = int(restart_no_improve_cycles)
++
++    # Dual perturbation: a light nearby perturbation and a strong multi-class
++    # destruction perturbation. The strong operator replaces outer multi-start by
++    # recreating its wide-basin jump inside the ILS loop.
++    dual_perturbation_enabled = bool(dual_perturbation_enabled)
++    strong_perturb_no_improve = max(1, int(strong_perturb_no_improve))
++    strong_perturb_class_ratio = float(strong_perturb_class_ratio)
++    if strong_perturb_class_ratio <= 0.0:
++        strong_perturb_class_ratio = 0.5
++    strong_perturb_class_ratio = min(1.0, strong_perturb_class_ratio)
++    strong_perturbation_count = 0
++    strong_destroyed_class_count = 0
+ 
+     def progress(message: str):
+         if progress_callback is not None:
+@@ -629,6 +644,106 @@
+                 }, False
+ 
+         return None, False
++
++    def strong_perturbation(
++        cycle_id,
++        solution,
++        solution_cost_value,
++        solution_p,
++        min_sum_value,
++        max_sum_value,
++        target_count,
++    ):
++        """Multi-class destruction perturbation (replaces outer multi-start).
++
++        ``target_count`` distinct classes are selected at random and each is
++        moved to a random, wide-span (non-nearby) feasible replacement, so the
++        resulting solution has a large Hamming distance from the input. Every
++        step stays probability-feasible using the same screens as the light
++        perturbation; classes without any feasible replacement are skipped.
++        Per-step metadata is returned for logging and tabu bookkeeping.
++        """
++        work_solution = np.asarray(solution, dtype=int).copy()
++        work_cost = float(solution_cost_value)
++        work_p = float(solution_p)
++        work_min_sum = float(min_sum_value)
++        work_max_sum = float(max_sum_value)
++        steps = []
++        selected = np.random.permutation(int(param[0])).tolist()[: int(target_count)]
++        for class_id in selected:
++            if time_exhausted() or budget_exhausted():
++                break
++            old_factor = int(work_solution[class_id])
++            old_obj = factor_id2obj[old_factor]
++            alternatives = [
++                int(fid) for fid in node_items[class_id]
++                if int(fid) != old_factor
++            ]
++            if not alternatives:
++                continue
++            # Wide-span diversity: random order, deliberately not nearby-sorted.
++            alternatives = np.random.permutation(alternatives).tolist()
++            base_amc_screen_sums = amc_screen_sums(work_solution)
++            chosen = None
++            for new_factor in alternatives:
++                new_obj = factor_id2obj[int(new_factor)]
++                candidate_cost = float(work_cost - old_obj.cost + new_obj.cost)
++                candidate_min_sum = float(
++                    work_min_sum - old_obj.sample_min + new_obj.sample_min
++                )
++                candidate_max_sum = float(
++                    work_max_sum - old_obj.sample_max + new_obj.sample_max
++                )
++                amc_qc_reject = amc_quickcheck_reject_1swap(
++                    base_amc_screen_sums, class_id, old_factor, new_factor
++                )
++                move = {
++                    "candidate_min_sum": candidate_min_sum,
++                    "candidate_max_sum": candidate_max_sum,
++                    "amc_quickcheck_reject": bool(amc_qc_reject),
++                }
++                qc_reject, limit_hit = front_quickcheck_reject(move)
++                if limit_hit:
++                    return None, True, steps
++                if qc_reject:
++                    continue
++                candidate = build_candidate(work_solution, class_id, new_factor)
++                candidate_p, limit_hit, eval_source = evaluate_probability_from_bounds(
++                    candidate, candidate_min_sum, candidate_max_sum,
++                    class_id, old_factor, new_factor,
++                )
++                if limit_hit:
++                    return None, True, steps
++                if candidate_p + tol < ConfidenceLevel:
++                    continue
++                chosen = {
++                    "class_id": int(class_id),
++                    "old_factor": int(old_factor),
++                    "new_factor": int(new_factor),
++                    "candidate": candidate,
++                    "cost": candidate_cost,
++                    "probability": float(candidate_p),
++                    "candidate_min_sum": candidate_min_sum,
++                    "candidate_max_sum": candidate_max_sum,
++                    "eval_source": eval_source,
++                }
++                break
++            if chosen is None:
++                continue
++            work_solution = chosen["candidate"]
++            work_cost = chosen["cost"]
++            work_p = chosen["probability"]
++            work_min_sum = chosen["candidate_min_sum"]
++            work_max_sum = chosen["candidate_max_sum"]
++            steps.append(chosen)
++        return {
++            "candidate": work_solution,
++            "cost": work_cost,
++            "probability": work_p,
++            "candidate_min_sum": work_min_sum,
++            "candidate_max_sum": work_max_sum,
++            "steps": steps,
++        }, False, steps
+ 
+     # ==================================================================
+     # OUTER SEARCH: each iteration = full class scan + random perturbation.
+@@ -831,23 +946,57 @@
+                 break
+ 
+         # --------------------------------------------------------------
+-        # RANDOM PERTURBATION: exactly once after all classes are scanned.
++        # PERTURBATION: once after all classes are scanned. The operator is
++        # selected by consecutive non-improving cycles. A light nearby
++        # perturbation is the default; after ``strong_perturb_no_improve`` idle
++        # cycles the strong multi-class destruction operator takes over the
++        # wide-basin role previously provided by outer multi-start.
+         # --------------------------------------------------------------
++        use_strong = (
++            dual_perturbation_enabled
++            and cycles_without_best_improvement >= strong_perturb_no_improve
++        )
++        target_count = max(
++            1,
++            min(
++                int(param[0]),
++                int(np.ceil(float(param[0]) * strong_perturb_class_ratio)),
++            ),
++        )
+         progress(
+-            f"iteration={cycle} RANDOM_PERTURB_START "
++            f"iteration={cycle} PERTURB_START operator="
++            f"{'strong' if use_strong else 'light'} "
++            f"idle_cycles={cycles_without_best_improvement} "
+             f"from_cost={current_cost:.12g} eval={eval_count}"
+         )
+-        perturbation, limit_hit = random_perturbation(
+-            cycle,
+-            current,
+-            current_cost,
+-            current_p,
+-            current_min_sum,
+-            current_max_sum,
+-        )
++        if use_strong:
++            perturbation, limit_hit, strong_steps = strong_perturbation(
++                cycle,
++                current,
++                current_cost,
++                current_p,
++                current_min_sum,
++                current_max_sum,
++                target_count,
++            )
++        else:
++            perturbation, limit_hit = random_perturbation(
++                cycle,
++                current,
++                current_cost,
++                current_p,
++                current_min_sum,
++                current_max_sum,
++            )
++            strong_steps = []
+         if limit_hit:
+             hard_stop = True
+             break
++
++        if use_strong and len(strong_steps) == 0:
++            # No class could be destroyed feasibly. Treat as a no-op so the ILS
++            # loop keeps running under the global time budget.
++            perturbation = None
+ 
+         if perturbation is None:
+             # Match the original Degrade fallback: keep the current feasible
+@@ -884,6 +1033,70 @@
+             progress(
+                 f"iteration={cycle} RANDOM_PERTURB_END no_feasible_replacement "
+                 f"keep_cost={current_cost:.12g} eval={eval_count}"
++            )
++        elif use_strong:
++            old_cost = float(current_cost)
++            current = perturbation["candidate"].copy()
++            current_cost = float(perturbation["cost"])
++            current_p = float(perturbation["probability"])
++            current_min_sum = float(perturbation["candidate_min_sum"])
++            current_max_sum = float(perturbation["candidate_max_sum"])
++            for step in strong_steps:
++                if sync_delta_after_accepted_move(
++                    step["class_id"], step["old_factor"], step["new_factor"],
++                    step.get("eval_source"),
++                ):
++                    hard_stop = True
++                    break
++                tabu_expiry = int(cycle + effective_tabu_tenure)
++                tabu_until_iteration[(step["class_id"], step["old_factor"])] = tabu_expiry
++                perturbation_log.append(
++                    {
++                        "cycle": int(cycle),
++                        "success": True,
++                        "class_id": step["class_id"],
++                        "old_factor": step["old_factor"],
++                        "new_factor": step["new_factor"],
++                        "old_cost": old_cost,
++                        "new_cost": current_cost,
++                        "new_probability": current_p,
++                        "tabu_until_iteration": int(tabu_expiry),
++                        "improved_global_best": False,
++                        "operator": "strong",
++                    }
++                )
++            if hard_stop:
++                break
++            perturbation_count += len(strong_steps)
++            strong_perturbation_count += 1
++            strong_destroyed_class_count += len(strong_steps)
++            improved_global_by_perturbation = current_cost < best_cost - tol
++            if improved_global_by_perturbation:
++                best = current.copy()
++                best_cost = current_cost
++                best_p = current_p
++                best_found_time_seconds = float(time.perf_counter() - start)
++                cycle_improved_best = True
++            convergence_log.append(
++                {
++                    "cycle": int(cycle),
++                    "scan_position": int(param[0]),
++                    "class_id": None,
++                    "total_class_scans": int(total_class_scans),
++                    "total_tabu_moves": int(total_tabu_moves),
++                    "event": "strong_perturbation",
++                    "evaluation_count": int(eval_count),
++                    "current_cost": current_cost,
++                    "current_probability": current_p,
++                    "best_cost": best_cost,
++                    "best_probability": best_p,
++                    "destroyed_classes": len(strong_steps),
++                }
++            )
++            progress(
++                f"iteration={cycle} STRONG_PERTURB_END destroyed={len(strong_steps)} "
++                f"cost={old_cost:.12g}->{current_cost:.12g} best={best_cost:.12g} "
++                f"eval={eval_count}"
+             )
+         else:
+             old_cost = float(current_cost)
+@@ -990,12 +1203,19 @@
+             f"best_cost={best_cost:.12g} eval={eval_count}"
+         )
+ 
+-        if cycle_improved_best:
++        if use_strong:
++            # Reset the idle window after a wide-basin jump so the new basin gets
++            # a full observation window before another strong perturbation.
++            cycles_without_best_improvement = 0
++        elif cycle_improved_best:
+             cycles_without_best_improvement = 0
+         else:
+             cycles_without_best_improvement += 1
++        # The stagnation break (outer multi-start) is retained only when the dual
++        # perturbation is disabled, preserving the original behavior as a fallback.
+         if (
+-            restart_no_improve_cycles is not None
++            not dual_perturbation_enabled
++            and restart_no_improve_cycles is not None
+             and cycles_without_best_improvement >= restart_no_improve_cycles
+         ):
+             stop_reason = "stagnation_restart"
+@@ -1029,7 +1249,7 @@
+         f"eval={eval_count} runtime={runtime:.3f}s stop={stop_reason}"
+     )
+ 
+-    return DDTSResult(
++    result = DDTSResult(
+         solution=[int(v) for v in best],
+         cost=float(best_cost),
+         probability=float(validation_p),
+@@ -1061,3 +1281,9 @@
+         perturbation_log=perturbation_log,
+         best_found_time_seconds=float(best_found_time_seconds),
+     )
++    result.dual_perturbation_enabled = bool(dual_perturbation_enabled)
++    result.strong_perturbation_count = int(strong_perturbation_count)
++    result.strong_destroyed_class_count = int(strong_destroyed_class_count)
++    result.strong_perturb_no_improve = int(strong_perturb_no_improve)
++    result.strong_perturb_class_ratio = float(strong_perturb_class_ratio)
++    return result

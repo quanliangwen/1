@@ -1,0 +1,105 @@
+--- r05/functions\func_tail_guided_search.py
++++ double/functions\func_tail_guided_search.py
+@@ -41,7 +41,13 @@
+     time_limit_seconds=600.0,evaluation_budget=None,gurobi_optimum=None,
+     progress_callback=None,run_seed=0,crn_seed=None,restart_no_improve_cycles=None,
+     mc_context_factory=None,perturbation_policy='nearby_pair',pair_exchange_pilot_samples=10000,
++    dual_perturbation_enabled=True,strong_perturb_no_improve=5,strong_perturb_class_ratio=0.5,
+ ):
++    dual_perturbation_enabled=bool(dual_perturbation_enabled)
++    strong_perturb_no_improve=max(1,int(strong_perturb_no_improve))
++    strong_perturb_class_ratio=min(1.0,max(0.0,float(strong_perturb_class_ratio)))
++    if strong_perturb_class_ratio<=0.0:strong_perturb_class_ratio=0.5
++    strong_perturbation_count=0;strong_destroyed_class_count=0
+     policy=get_policy()
+     if not getattr(EvaluationFunction,'reference_mc',False):
+         return legacy_search(EvaluationFunction,S_cp,node_items,factor_id2obj,ConfidenceLevel,
+@@ -102,10 +108,11 @@
+             old_cost=before,new_cost=current_cost,new_probability=p,was_tabu=False,
+             aspiration_by_objective=improved,tabu_until_iteration=cycle+int(reaction.tenure),
+             improved_global_best=improved)
+-        if event=='random_perturbation':
++        if event in ('random_perturbation','strong_perturbation'):
+             perturb_log.append({k:row[k] for k in ['cycle','class_id','old_factor','new_factor',
+                 'old_cost','new_cost','new_probability','tabu_until_iteration','improved_global_best']})
+             perturb_log[-1]['success']=True
++            perturb_log[-1]['operator']='strong' if event=='strong_perturbation' else 'light'
+         else:move_log.append(row)
+         if progress_callback:progress_callback(f'{event} cycle={cycle} cost={before:.12g}->{current_cost:.12g}')
+ 
+@@ -156,23 +163,51 @@
+                 singles+=1;deferred_accepts+=1;commit(candidate,p,changes,'deferred_single');accepted=True;break
+             if stopped() or not accepted:break
+         if stopped():break
+-        moved=False
+-        for cid in np.random.permutation(int(param[0])).tolist():
+-            old=int(current[cid]);alternatives=np.random.permutation([
+-                int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
+-            if policy['mc_perturbation_order']=='nearby':
+-                alternatives.sort(key=lambda fid:abs(float(factor_id2obj[fid].cost)-float(factor_id2obj[old].cost)))
+-            for fid in alternatives:
+-                candidate,p=evaluate(((cid,fid),))
+-                if candidate is None:break
+-                if p+tol<ConfidenceLevel:continue
+-                perturbations+=1;commit(candidate,p,((cid,fid),),'random_perturbation');moved=True;break
+-            if moved or stopped():break
++        use_strong=(dual_perturbation_enabled and stagnation>=strong_perturb_no_improve)
++        target_count=max(1,min(int(param[0]),
++            int(np.ceil(float(param[0])*strong_perturb_class_ratio))))
++        if use_strong:
++            # Strong multi-class destruction: wide-span random replacements over
++            # target_count classes, recreating the multi-start basin jump.
++            destroyed=0
++            for cid in np.random.permutation(int(param[0])).tolist():
++                if stopped() or destroyed>=target_count:break
++                old=int(current[cid])
++                # Wide-span: random order, deliberately not nearby-sorted.
++                alternatives=np.random.permutation([
++                    int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
++                for fid in alternatives:
++                    candidate,p=evaluate(((cid,fid),))
++                    if candidate is None:break
++                    if p+tol<ConfidenceLevel:continue
++                    perturbations+=1;commit(candidate,p,((cid,fid),),'strong_perturbation')
++                    destroyed+=1;break
++            strong_perturbation_count+=1
++            strong_destroyed_class_count+=destroyed
++        else:
++            moved=False
++            for cid in np.random.permutation(int(param[0])).tolist():
++                old=int(current[cid]);alternatives=np.random.permutation([
++                    int(fid) for fid in node_items[cid] if int(fid)!=old]).tolist()
++                if policy['mc_perturbation_order']=='nearby':
++                    alternatives.sort(key=lambda fid:abs(float(factor_id2obj[fid].cost)-float(factor_id2obj[old].cost)))
++                for fid in alternatives:
++                    candidate,p=evaluate(((cid,fid),))
++                    if candidate is None:break
++                    if p+tol<ConfidenceLevel:continue
++                    perturbations+=1;commit(candidate,p,((cid,fid),),'random_perturbation');moved=True;break
++                if moved or stopped():break
+         if stopped():break
+         reaction.observe(current,cycle)
+         completed_cycles=cycle;record('iteration_end')
+-        stagnation=0 if best_cost<previous_best-tol else stagnation+1
+-        if restart_no_improve_cycles is not None and stagnation>=restart_no_improve_cycles:
++        if use_strong:
++            # Reset the idle window after a wide-basin jump.
++            stagnation=0
++        else:
++            stagnation=0 if best_cost<previous_best-tol else stagnation+1
++        # Stagnation break (outer multi-start) retained only when dual is off.
++        if (not dual_perturbation_enabled and restart_no_improve_cycles is not None
++                and stagnation>=restart_no_improve_cycles):
+             reason='stagnation_restart';break
+     if stopped():reason='evaluation_budget' if evaluation_budget is not None and evaluations>=evaluation_budget else 'time_limit'
+     valid,validation_reason=validate_multiple_choice_solution(best,node_items)
+@@ -190,4 +225,9 @@
+     result.tail_proposal_count=proposal_moves;result.tail_proposal_rebuild_count=proposal_rebuilds
+     result.tail_deferred_evaluation_count=deferred_evals;result.tail_proposal_seconds=proposal_seconds
+     result.search_ablation_activity=dict(evaluator_branch='reference_mc',reactive_enabled=reaction.enabled,reactive_repeats=reaction.repeats,reactive_updates=reaction.updates,reactive_max_tenure=reaction.maximum_tenure,deferred_single_accepts=deferred_accepts,pair_accepts=pairs,pair_evaluations=pair_evals,deferred_evaluations=deferred_evals)
++    result.dual_perturbation_enabled=bool(dual_perturbation_enabled)
++    result.strong_perturbation_count=int(strong_perturbation_count)
++    result.strong_destroyed_class_count=int(strong_destroyed_class_count)
++    result.strong_perturb_no_improve=int(strong_perturb_no_improve)
++    result.strong_perturb_class_ratio=float(strong_perturb_class_ratio)
+     return result

@@ -1,0 +1,1613 @@
+{
+  "r05": {
+    "policy": {
+      "mc_pair_exchange": true,
+      "mc_deferred_singles": false,
+      "reactive_scope": "exact_only",
+      "mc_perturbation_order": "nearby",
+      "mc_pilot_priority": true,
+      "pr_mode": "baseline",
+      "lr_guidance": false
+    },
+    "files": [
+      {
+        "file": "benchmark/benchmark_APP.py",
+        "lines": 248,
+        "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_LAB.py",
+        "lines": 234,
+        "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_resample.py",
+        "lines": 254,
+        "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_EDA.py",
+        "lines": 140,
+        "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_GA.py",
+        "lines": 139,
+        "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Greedy.py",
+        "lines": 135,
+        "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch.py",
+        "lines": 163,
+        "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch_fixed.py",
+        "lines": 176,
+        "sha256": "62a71c9c942ca1c533ca7e692bcd363a56a6d34d3613e42b9ed82bb535048604",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_TabuSearch.py",
+        "lines": 1988,
+        "sha256": "5a854d299bad9d858a8c50d814bd27bf20fd1c912d2173dc7b04668cb29d6c9c",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_bruct_force.py",
+        "lines": 109,
+        "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator_corrected.py",
+        "lines": 260,
+        "sha256": "bcbde5b0ba6af60098f28a23df4fc1ce6f744da60303f2477d5367809224bf02",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cost_risk_seed.py",
+        "lines": 47,
+        "sha256": "aabe64508eddc6e13b4fc5d8aea70dfda7b014c94811297675604ac3193e7d60",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_delta_mc.py",
+        "lines": 328,
+        "sha256": "ac14d45d12686daa8f51069be5bbaa49fb6ea4b3f475d873256c639faa59ffdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_Dyer_Zemel.py",
+        "lines": 199,
+        "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_EDA.py",
+        "lines": 169,
+        "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_elite_path_relinking.py",
+        "lines": 447,
+        "sha256": "509982468cc0d23afb7be3972d01d3b7d1398babbf3dc082ae0d41a55ed6842d",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_empirical_dominance.py",
+        "lines": 128,
+        "sha256": "d429a1a00a71608cae23f6f2eff93f4e960388108f7fdcd207dade0a6d95bbc8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_fast_initialization.py",
+        "lines": 633,
+        "sha256": "604aaaca9e8b54b1e1ec041ee58e1a6bd3fb354789e3dd7aed9445b056b9f3ff",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_GA.py",
+        "lines": 211,
+        "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_greedy.py",
+        "lines": 116,
+        "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_importance_cmc.py",
+        "lines": 222,
+        "sha256": "595edde99c3fcef0edaf55665ebce8a9b04ac982eb18a0baba0ae27fa934aaa2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_iterativeCCMCKP.py",
+        "lines": 180,
+        "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lagrangian_guidance.py",
+        "lines": 288,
+        "sha256": "98c897ebeb9c5e56354d53d1bbf66ca881e611eebac67f53456fc98851550878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp.py",
+        "lines": 92,
+        "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp_corrected.py",
+        "lines": 217,
+        "sha256": "b01dd1d6ff8017bb957b5c86b1969611f31f39f46b68cd4c93736fb28723bae2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_fixed.py",
+        "lines": 346,
+        "sha256": "083d792880ba8cb640abf0ebdfbf7c792314fdf5ac1d6d93dc64c896a4fee5f3",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_author.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_control.py",
+        "lines": 70,
+        "sha256": "7ac7dcafda9f7716861c3d0c2a3699cebfa019bf2cd46e8d87df1a9bbe8c8fdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_MILPgurobi.py",
+        "lines": 313,
+        "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_pair_exchange.py",
+        "lines": 34,
+        "sha256": "ebf6a5b418cd729a2b231d593b4e5b8c813010488ec59110448893a05b4464fd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_realP_statistical.py",
+        "lines": 299,
+        "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_author.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_evaluation.py",
+        "lines": 66,
+        "sha256": "16c8323ad9318fe09581ed678d17ef720e8f2c434c6c0504d1859ca114388306",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_search_ablation.py",
+        "lines": 69,
+        "sha256": "02615194097bcf34ed2245f82d4bbcc077796e7f30f8b315759172b735625a73",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor.py",
+        "lines": 157,
+        "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor_corrected.py",
+        "lines": 72,
+        "sha256": "024947303a98d6cd15bcae62be5c152954a212de504c99f063084e00365918d1",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_tabu_search.py",
+        "lines": 1063,
+        "sha256": "2d0a57a96b455f69df115cd39e1d6600ec6791c518038c2d34edd52a623585f6",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_tail_guided_search.py",
+        "lines": 193,
+        "sha256": "dc7acf3f4f7ed3ffb8a66b0ecf649fe1d106baa22c88a8207063b951a511dcc0",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/factor.py",
+        "lines": 155,
+        "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/factor_corrected.py",
+        "lines": 135,
+        "sha256": "36d472587450e1a9f02c32b52a1e60eca8c3c53b1201d08719419b94195e6334",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/my_file.py",
+        "lines": 57,
+        "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02",
+        "equals_r05": true
+      }
+    ],
+    "functions": {
+      "exp_Result_TabuSearch.py::stage_log": {
+        "line": 108,
+        "end_line": 114,
+        "ast_sha256": "383d3d0dbd11175f0420eceda72662665235dfed0149ef9697bda08d1aa815d3"
+      },
+      "exp_Result_TabuSearch.py::_stable_quick_check_seed": {
+        "line": 117,
+        "end_line": 124,
+        "ast_sha256": "91e82261e1ea84580e009b5758c69b85104c65f29f591cbac62c41413a7f7173"
+      },
+      "exp_Result_TabuSearch.py::_quick_check_cache_path": {
+        "line": 127,
+        "end_line": 134,
+        "ast_sha256": "58e11ec654fca19a91f18c0bc1af2ec4eadba700fc9bcfbb748b74b9b4e5ffcc"
+      },
+      "exp_Result_TabuSearch.py::_validate_quick_check_payload": {
+        "line": 137,
+        "end_line": 172,
+        "ast_sha256": "b0ee16f40c7883ed3074470b516e27184a23a9c359f30a433f0dbc70667cb88b"
+      },
+      "exp_Result_TabuSearch.py::_try_load_quick_check_cache": {
+        "line": 175,
+        "end_line": 183,
+        "ast_sha256": "999e17e81849872d90493219c97bf7283d0acaeea8bf11465585cc3886b481da"
+      },
+      "exp_Result_TabuSearch.py::_exclusive_cache_lock": {
+        "line": 187,
+        "end_line": 252,
+        "ast_sha256": "1672fe775bfb0a41d671812185ff143bb00a6246c2d0e35abf0ff7f0c6947f82"
+      },
+      "exp_Result_TabuSearch.py::load_or_build_quick_check": {
+        "line": 255,
+        "end_line": 379,
+        "ast_sha256": "b12a38bf6f01a4684dda369e91987f66e978a001bb5a0250571aab1ba690bb1c"
+      },
+      "exp_Result_TabuSearch.py::prepare_instance_resources": {
+        "line": 400,
+        "end_line": 485,
+        "ast_sha256": "3e6a9c28abf6094e0c1b11e36f44b59346ee62246418c34cf109689a147b462f"
+      },
+      "exp_Result_TabuSearch.py::resolve_instance_dir": {
+        "line": 488,
+        "end_line": 514,
+        "ast_sha256": "d2c80461b93a3b522f53afeadb9d350cec2b8763539e9a84aa6915ddd9dfaf8f"
+      },
+      "exp_Result_TabuSearch.py::repo_relative": {
+        "line": 517,
+        "end_line": 518,
+        "ast_sha256": "fd8beed8c9f1fe0e74834f90c5cc8cfabd4d7d56c2bac3a9d2b709269c8ddf65"
+      },
+      "exp_Result_TabuSearch.py::parse_param": {
+        "line": 521,
+        "end_line": 525,
+        "ast_sha256": "9e0866e866d0ee9ca967c4ef76bab46c880eb0b01468e48763759dbe53b9f249"
+      },
+      "exp_Result_TabuSearch.py::choose_evaluator": {
+        "line": 528,
+        "end_line": 532,
+        "ast_sha256": "1d1f0b3aa234198b46c34aa6b5b518d8b5fd4f3d2f4071f3b1360db277be9cf6"
+      },
+      "exp_Result_TabuSearch.py::_make_mc_sampler": {
+        "line": 535,
+        "end_line": 537,
+        "ast_sha256": "33f09dfa1c5911f6d3ffd54c0d5f1624e74775166ecbcdb4f64bb6ad1d3f51b3"
+      },
+      "exp_Result_TabuSearch.py::known_gurobi": {
+        "line": 540,
+        "end_line": 544,
+        "ast_sha256": "f0ed01895cc687c0276afe2d005d053500b8ef0c18c56ae2aa4552cbc5dd9a6a"
+      },
+      "exp_Result_TabuSearch.py::write_csv": {
+        "line": 547,
+        "end_line": 552,
+        "ast_sha256": "a53c06929eb3aa5470dee3c9753bb0ec498d600a6e206b52e1e1dc476cb4b9b3"
+      },
+      "exp_Result_TabuSearch.py::_hamming_distance": {
+        "line": 555,
+        "end_line": 558,
+        "ast_sha256": "3b835a889fceebb2e472b29108fdee81dfaf297d648b241583de0db32978af45"
+      },
+      "exp_Result_TabuSearch.py::run_one": {
+        "line": 561,
+        "end_line": 1426,
+        "ast_sha256": "5112cffd5da4925142a54e49a5c1a4781c5cfbdb877fc1479249112555ef4c80"
+      },
+      "exp_Result_TabuSearch.py::_parallel_run_task": {
+        "line": 1429,
+        "end_line": 1505,
+        "ast_sha256": "a41f7f9a3eb664c6440a2c18cafc9ae3e9d879629ed48e6c9e61a645eb56c077"
+      },
+      "exp_Result_TabuSearch.py::_make_run_task": {
+        "line": 1508,
+        "end_line": 1542,
+        "ast_sha256": "aa8e9d2f0863fd4253e6a766a8acda7a709f1877d9a00f99a435977000d99823"
+      },
+      "exp_Result_TabuSearch.py::_print_run_summary": {
+        "line": 1545,
+        "end_line": 1555,
+        "ast_sha256": "a64480c71b07871ef9bfbdbf52a286af2452e3a19207640e8fb5b5c8c2966e87"
+      },
+      "exp_Result_TabuSearch.py::summarize": {
+        "line": 1558,
+        "end_line": 1705,
+        "ast_sha256": "ff9c16c5813de2ac5a3ba99de7b6d0563f92a867a14e050289596d921fca38ad"
+      },
+      "exp_Result_TabuSearch.py::main": {
+        "line": 1708,
+        "end_line": 1984,
+        "ast_sha256": "f0fb1f62251bc7b12ee137fe8baca981bc16958984e56dfce0515ee39ec7a924"
+      },
+      "exp_Result_TabuSearch.py::expired": {
+        "line": 200,
+        "end_line": 204,
+        "ast_sha256": "5860c2a848ae321fb9e2ed51db453a15c21c1745ee3ea7dc70df74a9a2612cc8"
+      },
+      "exp_Result_TabuSearch.py::ts_progress": {
+        "line": 869,
+        "end_line": 870,
+        "ast_sha256": "cb5e0362be63972fc78cbbeaa593a9e9fc396025b463e45323fa823220a1d2cc"
+      },
+      "functions/func_tabu_search.py::validate_multiple_choice_solution": {
+        "line": 105,
+        "end_line": 114,
+        "ast_sha256": "a4aa8d9e618b8e7ebc2a8a8bc4f8154cbddb51a6392c1ee4152ef82cf5d143aa"
+      },
+      "functions/func_tabu_search.py::_gap_percent": {
+        "line": 117,
+        "end_line": 124,
+        "ast_sha256": "146aad4c1453a458b9debdccf9bb3c6d6447e3ecdc4a36ea3382317e24c9b4c5"
+      },
+      "functions/func_tabu_search.py::Data_Driven_Tabu_Search": {
+        "line": 127,
+        "end_line": 1063,
+        "ast_sha256": "677b748a6f96ddcba058189466477121fddbef2392041d9276cf9f51d8f13790"
+      },
+      "functions/func_tabu_search.py::to_dict": {
+        "line": 101,
+        "end_line": 102,
+        "ast_sha256": "0efa4c636813974aeccc30bb28d58cfb725e6687ad59f6131d9aa58b98d540ba"
+      },
+      "functions/func_tabu_search.py::progress": {
+        "line": 173,
+        "end_line": 175,
+        "ast_sha256": "a6660286d76d6fd65f3e1746d110765aaf05753ad1758e3e57cddefd0b3d6d04"
+      },
+      "functions/func_tabu_search.py::amc_screen_sums": {
+        "line": 230,
+        "end_line": 237,
+        "ast_sha256": "338b1a252c51bd2aa10cd04259234054e421d65cccb057a23bc2e1f7cea57cd5"
+      },
+      "functions/func_tabu_search.py::amc_quickcheck_reject_1swap": {
+        "line": 239,
+        "end_line": 247,
+        "ast_sha256": "18e24ddd921855ed7ce2cb103f272671be70b80b7cfbacf12dacf48e2222b2ad"
+      },
+      "functions/func_tabu_search.py::time_exhausted": {
+        "line": 289,
+        "end_line": 293,
+        "ast_sha256": "0af075a94d88b0fd91d65009e408f5c4df5da8481cbf7fc9d8a1bf50ccbe0dd4"
+      },
+      "functions/func_tabu_search.py::budget_exhausted": {
+        "line": 295,
+        "end_line": 296,
+        "ast_sha256": "9baaa95797f8b714b38555d83784057cf3bd9f9ee771c2f64ae8d29635b3a208"
+      },
+      "functions/func_tabu_search.py::build_candidate": {
+        "line": 328,
+        "end_line": 331,
+        "ast_sha256": "bd3e365d03323b330949faaa1b05fc18e695902dd080f5dbe29a646e1f3c320b"
+      },
+      "functions/func_tabu_search.py::evaluate_probability_from_bounds": {
+        "line": 333,
+        "end_line": 406,
+        "ast_sha256": "283dee3b93bfa309b3b240c7b41f9a26f9add8aa2905f57ddb008dcc1b67a808"
+      },
+      "functions/func_tabu_search.py::sync_delta_after_accepted_move": {
+        "line": 408,
+        "end_line": 427,
+        "ast_sha256": "8767268f425bdd8dbeaf071556e0983289c5ed2665a816928538df82d9c65306"
+      },
+      "functions/func_tabu_search.py::front_quickcheck_reject": {
+        "line": 429,
+        "end_line": 450,
+        "ast_sha256": "c9ae09392ad992c66f1bbd4bd944bcb3441716047d0947321f218e13072241de"
+      },
+      "functions/func_tabu_search.py::make_class_move_metadata": {
+        "line": 452,
+        "end_line": 503,
+        "ast_sha256": "fdba3d4cfa05e57972e0b6bb09305078193888fd06759848c6cb5f362b9eb38e"
+      },
+      "functions/func_tabu_search.py::select_best_class_improvement": {
+        "line": 505,
+        "end_line": 543,
+        "ast_sha256": "5f218dea603dc804278fd1b0a2f6a0990c3dcd9a6f330397ba021b9f04ca1d31"
+      },
+      "functions/func_tabu_search.py::random_perturbation": {
+        "line": 545,
+        "end_line": 631,
+        "ast_sha256": "7b9d0197cc10cfb2078882dcfc89f1fdcac1cf351a72ea1ed4245c91481aca10"
+      },
+      "functions/func_tail_guided_search.py::ranked_single_moves": {
+        "line": 18,
+        "end_line": 36,
+        "ast_sha256": "6522d09cbe228d334bc01c64e03499b1bdd714c00964c6650c6860fc0047096a"
+      },
+      "functions/func_tail_guided_search.py::Data_Driven_Tabu_Search": {
+        "line": 38,
+        "end_line": 193,
+        "ast_sha256": "7f82715bad7a8dd4f63250d872be51dbf69a677603138cb78bacaca4bd31e4e6"
+      },
+      "functions/func_tail_guided_search.py::stopped": {
+        "line": 68,
+        "end_line": 70,
+        "ast_sha256": "312385ac9644ee2b8e95934932aed50c156ba245350b3053e15d0687d6331370"
+      },
+      "functions/func_tail_guided_search.py::record": {
+        "line": 75,
+        "end_line": 78,
+        "ast_sha256": "92949fa360e688d42280efc01f0e8544d68b8c16562dcfd0d8b49aac11ca7dd2"
+      },
+      "functions/func_tail_guided_search.py::evaluate": {
+        "line": 80,
+        "end_line": 88,
+        "ast_sha256": "1fd8b4f6c43414359bdfba9a7d41010df75932e73c519a89187cbae0c5185553"
+      },
+      "functions/func_tail_guided_search.py::commit": {
+        "line": 89,
+        "end_line": 110,
+        "ast_sha256": "165400e1c3d458ab7ebedfaf3d564e829e97bb113829a739e75e295f36c73753"
+      }
+    }
+  },
+  "single": {
+    "policy": {
+      "mc_pair_exchange": true,
+      "mc_deferred_singles": false,
+      "reactive_scope": "exact_only",
+      "mc_perturbation_order": "nearby",
+      "mc_pilot_priority": true,
+      "pr_mode": "baseline",
+      "lr_guidance": false
+    },
+    "files": [
+      {
+        "file": "benchmark/benchmark_APP.py",
+        "lines": 248,
+        "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_LAB.py",
+        "lines": 234,
+        "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_resample.py",
+        "lines": 254,
+        "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_EDA.py",
+        "lines": 140,
+        "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_GA.py",
+        "lines": 139,
+        "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Greedy.py",
+        "lines": 135,
+        "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch.py",
+        "lines": 163,
+        "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch_fixed.py",
+        "lines": 176,
+        "sha256": "62a71c9c942ca1c533ca7e692bcd363a56a6d34d3613e42b9ed82bb535048604",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_TabuSearch.py",
+        "lines": 2036,
+        "sha256": "f72895ea26ff209ca9013d82ede3b30ef019d6bd3a47b8756d67500b6e1d743f",
+        "equals_r05": false
+      },
+      {
+        "file": "functions/func_bruct_force.py",
+        "lines": 109,
+        "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator_corrected.py",
+        "lines": 260,
+        "sha256": "bcbde5b0ba6af60098f28a23df4fc1ce6f744da60303f2477d5367809224bf02",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cost_risk_seed.py",
+        "lines": 47,
+        "sha256": "aabe64508eddc6e13b4fc5d8aea70dfda7b014c94811297675604ac3193e7d60",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_delta_mc.py",
+        "lines": 328,
+        "sha256": "ac14d45d12686daa8f51069be5bbaa49fb6ea4b3f475d873256c639faa59ffdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_Dyer_Zemel.py",
+        "lines": 199,
+        "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_EDA.py",
+        "lines": 169,
+        "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_elite_path_relinking.py",
+        "lines": 447,
+        "sha256": "509982468cc0d23afb7be3972d01d3b7d1398babbf3dc082ae0d41a55ed6842d",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_empirical_dominance.py",
+        "lines": 128,
+        "sha256": "d429a1a00a71608cae23f6f2eff93f4e960388108f7fdcd207dade0a6d95bbc8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_fast_initialization.py",
+        "lines": 633,
+        "sha256": "604aaaca9e8b54b1e1ec041ee58e1a6bd3fb354789e3dd7aed9445b056b9f3ff",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_GA.py",
+        "lines": 211,
+        "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_greedy.py",
+        "lines": 116,
+        "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_importance_cmc.py",
+        "lines": 222,
+        "sha256": "595edde99c3fcef0edaf55665ebce8a9b04ac982eb18a0baba0ae27fa934aaa2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_iterativeCCMCKP.py",
+        "lines": 180,
+        "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lagrangian_guidance.py",
+        "lines": 288,
+        "sha256": "98c897ebeb9c5e56354d53d1bbf66ca881e611eebac67f53456fc98851550878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp.py",
+        "lines": 92,
+        "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp_corrected.py",
+        "lines": 217,
+        "sha256": "b01dd1d6ff8017bb957b5c86b1969611f31f39f46b68cd4c93736fb28723bae2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_fixed.py",
+        "lines": 346,
+        "sha256": "083d792880ba8cb640abf0ebdfbf7c792314fdf5ac1d6d93dc64c896a4fee5f3",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_author.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_control.py",
+        "lines": 70,
+        "sha256": "7ac7dcafda9f7716861c3d0c2a3699cebfa019bf2cd46e8d87df1a9bbe8c8fdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_MILPgurobi.py",
+        "lines": 313,
+        "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_pair_exchange.py",
+        "lines": 34,
+        "sha256": "ebf6a5b418cd729a2b231d593b4e5b8c813010488ec59110448893a05b4464fd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_realP_statistical.py",
+        "lines": 299,
+        "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_author.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_evaluation.py",
+        "lines": 66,
+        "sha256": "16c8323ad9318fe09581ed678d17ef720e8f2c434c6c0504d1859ca114388306",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_search_ablation.py",
+        "lines": 69,
+        "sha256": "02615194097bcf34ed2245f82d4bbcc077796e7f30f8b315759172b735625a73",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor.py",
+        "lines": 157,
+        "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor_corrected.py",
+        "lines": 72,
+        "sha256": "024947303a98d6cd15bcae62be5c152954a212de504c99f063084e00365918d1",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_tabu_search.py",
+        "lines": 1623,
+        "sha256": "a38f12accdda9ad1547db4fa49eede81deac11ac5f64e2df30b7dd0a1eb3dbac",
+        "equals_r05": false
+      },
+      {
+        "file": "functions/func_tail_guided_search.py",
+        "lines": 388,
+        "sha256": "7cd5a0458a7d7a52f41d6a7da2e202f3bcec3578dede6ad03f5511236a0999ad",
+        "equals_r05": false
+      },
+      {
+        "file": "utils/factor.py",
+        "lines": 155,
+        "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/factor_corrected.py",
+        "lines": 135,
+        "sha256": "36d472587450e1a9f02c32b52a1e60eca8c3c53b1201d08719419b94195e6334",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/my_file.py",
+        "lines": 57,
+        "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02",
+        "equals_r05": true
+      }
+    ],
+    "functions": {
+      "exp_Result_TabuSearch.py::stage_log": {
+        "line": 125,
+        "end_line": 131,
+        "ast_sha256": "383d3d0dbd11175f0420eceda72662665235dfed0149ef9697bda08d1aa815d3"
+      },
+      "exp_Result_TabuSearch.py::_stable_quick_check_seed": {
+        "line": 134,
+        "end_line": 141,
+        "ast_sha256": "91e82261e1ea84580e009b5758c69b85104c65f29f591cbac62c41413a7f7173"
+      },
+      "exp_Result_TabuSearch.py::_quick_check_cache_path": {
+        "line": 144,
+        "end_line": 151,
+        "ast_sha256": "58e11ec654fca19a91f18c0bc1af2ec4eadba700fc9bcfbb748b74b9b4e5ffcc"
+      },
+      "exp_Result_TabuSearch.py::_validate_quick_check_payload": {
+        "line": 154,
+        "end_line": 189,
+        "ast_sha256": "b0ee16f40c7883ed3074470b516e27184a23a9c359f30a433f0dbc70667cb88b"
+      },
+      "exp_Result_TabuSearch.py::_try_load_quick_check_cache": {
+        "line": 192,
+        "end_line": 200,
+        "ast_sha256": "999e17e81849872d90493219c97bf7283d0acaeea8bf11465585cc3886b481da"
+      },
+      "exp_Result_TabuSearch.py::_exclusive_cache_lock": {
+        "line": 204,
+        "end_line": 269,
+        "ast_sha256": "1672fe775bfb0a41d671812185ff143bb00a6246c2d0e35abf0ff7f0c6947f82"
+      },
+      "exp_Result_TabuSearch.py::load_or_build_quick_check": {
+        "line": 272,
+        "end_line": 396,
+        "ast_sha256": "b12a38bf6f01a4684dda369e91987f66e978a001bb5a0250571aab1ba690bb1c"
+      },
+      "exp_Result_TabuSearch.py::prepare_instance_resources": {
+        "line": 417,
+        "end_line": 502,
+        "ast_sha256": "3e6a9c28abf6094e0c1b11e36f44b59346ee62246418c34cf109689a147b462f"
+      },
+      "exp_Result_TabuSearch.py::resolve_instance_dir": {
+        "line": 505,
+        "end_line": 531,
+        "ast_sha256": "d2c80461b93a3b522f53afeadb9d350cec2b8763539e9a84aa6915ddd9dfaf8f"
+      },
+      "exp_Result_TabuSearch.py::repo_relative": {
+        "line": 534,
+        "end_line": 535,
+        "ast_sha256": "fd8beed8c9f1fe0e74834f90c5cc8cfabd4d7d56c2bac3a9d2b709269c8ddf65"
+      },
+      "exp_Result_TabuSearch.py::parse_param": {
+        "line": 538,
+        "end_line": 542,
+        "ast_sha256": "9e0866e866d0ee9ca967c4ef76bab46c880eb0b01468e48763759dbe53b9f249"
+      },
+      "exp_Result_TabuSearch.py::choose_evaluator": {
+        "line": 545,
+        "end_line": 549,
+        "ast_sha256": "1d1f0b3aa234198b46c34aa6b5b518d8b5fd4f3d2f4071f3b1360db277be9cf6"
+      },
+      "exp_Result_TabuSearch.py::_make_mc_sampler": {
+        "line": 552,
+        "end_line": 554,
+        "ast_sha256": "33f09dfa1c5911f6d3ffd54c0d5f1624e74775166ecbcdb4f64bb6ad1d3f51b3"
+      },
+      "exp_Result_TabuSearch.py::known_gurobi": {
+        "line": 557,
+        "end_line": 561,
+        "ast_sha256": "f0ed01895cc687c0276afe2d005d053500b8ef0c18c56ae2aa4552cbc5dd9a6a"
+      },
+      "exp_Result_TabuSearch.py::write_csv": {
+        "line": 564,
+        "end_line": 569,
+        "ast_sha256": "b8962e9fcd22724007fef472a3467e9392c3e789fac788a6e8f2ae5f7ad3e81d"
+      },
+      "exp_Result_TabuSearch.py::_hamming_distance": {
+        "line": 572,
+        "end_line": 575,
+        "ast_sha256": "3b835a889fceebb2e472b29108fdee81dfaf297d648b241583de0db32978af45"
+      },
+      "exp_Result_TabuSearch.py::run_one": {
+        "line": 578,
+        "end_line": 1457,
+        "ast_sha256": "72c659629d44fc356d2f586b50813c260628ec5f220a63369a2c14a6a2df5d8a"
+      },
+      "exp_Result_TabuSearch.py::_parallel_run_task": {
+        "line": 1460,
+        "end_line": 1536,
+        "ast_sha256": "a41f7f9a3eb664c6440a2c18cafc9ae3e9d879629ed48e6c9e61a645eb56c077"
+      },
+      "exp_Result_TabuSearch.py::_make_run_task": {
+        "line": 1539,
+        "end_line": 1573,
+        "ast_sha256": "aa8e9d2f0863fd4253e6a766a8acda7a709f1877d9a00f99a435977000d99823"
+      },
+      "exp_Result_TabuSearch.py::_print_run_summary": {
+        "line": 1576,
+        "end_line": 1586,
+        "ast_sha256": "a64480c71b07871ef9bfbdbf52a286af2452e3a19207640e8fb5b5c8c2966e87"
+      },
+      "exp_Result_TabuSearch.py::summarize": {
+        "line": 1589,
+        "end_line": 1736,
+        "ast_sha256": "ff9c16c5813de2ac5a3ba99de7b6d0563f92a867a14e050289596d921fca38ad"
+      },
+      "exp_Result_TabuSearch.py::main": {
+        "line": 1739,
+        "end_line": 2032,
+        "ast_sha256": "f14fe0a61ada9b7d35381d753d5b9751a8fcbaa043c8d16d9df505e0917b470b"
+      },
+      "exp_Result_TabuSearch.py::expired": {
+        "line": 217,
+        "end_line": 221,
+        "ast_sha256": "5860c2a848ae321fb9e2ed51db453a15c21c1745ee3ea7dc70df74a9a2612cc8"
+      },
+      "exp_Result_TabuSearch.py::ts_progress": {
+        "line": 886,
+        "end_line": 887,
+        "ast_sha256": "cb5e0362be63972fc78cbbeaa593a9e9fc396025b463e45323fa823220a1d2cc"
+      },
+      "functions/func_tabu_search.py::validate_multiple_choice_solution": {
+        "line": 105,
+        "end_line": 114,
+        "ast_sha256": "a4aa8d9e618b8e7ebc2a8a8bc4f8154cbddb51a6392c1ee4152ef82cf5d143aa"
+      },
+      "functions/func_tabu_search.py::_gap_percent": {
+        "line": 117,
+        "end_line": 124,
+        "ast_sha256": "146aad4c1453a458b9debdccf9bb3c6d6447e3ecdc4a36ea3382317e24c9b4c5"
+      },
+      "functions/func_tabu_search.py::Data_Driven_Tabu_Search": {
+        "line": 127,
+        "end_line": 1623,
+        "ast_sha256": "76b0231e8601d7536e32940cfe74b4301b6d6d9e30c5314dff022d015a9ae139"
+      },
+      "functions/func_tabu_search.py::to_dict": {
+        "line": 101,
+        "end_line": 102,
+        "ast_sha256": "0efa4c636813974aeccc30bb28d58cfb725e6687ad59f6131d9aa58b98d540ba"
+      },
+      "functions/func_tabu_search.py::relative_drop": {
+        "line": 234,
+        "end_line": 236,
+        "ast_sha256": "b73216a8c67e8326d52730170dae5039f216e7a4b3b84f53211cc0a319563d6b"
+      },
+      "functions/func_tabu_search.py::credit": {
+        "line": 238,
+        "end_line": 250,
+        "ast_sha256": "43de5d12e6857b26786701ad52c52b579cd65c20766939d8fafd9c664de81f0a"
+      },
+      "functions/func_tabu_search.py::select_perturbation_arm": {
+        "line": 252,
+        "end_line": 298,
+        "ast_sha256": "9d9076ff062fc11310957163e9bf5e5d79b81deed32fafdd9a0d18bd4a41ba66"
+      },
+      "functions/func_tabu_search.py::settle_due": {
+        "line": 300,
+        "end_line": 309,
+        "ast_sha256": "eae4db5a22dd99bea39e060e138234be69785fe063857d5d07c7eaca46f45507"
+      },
+      "functions/func_tabu_search.py::end_cycle": {
+        "line": 311,
+        "end_line": 326,
+        "ast_sha256": "8df7fd880b604f39ae7a8068e2852cc262cc80fe8cc86492e65487191b0ebbef"
+      },
+      "functions/func_tabu_search.py::finalize_pending": {
+        "line": 328,
+        "end_line": 333,
+        "ast_sha256": "24e85963b03e5991a4654946a5b81e62298eb037ac4e5b4eacbd0f3172fd639d"
+      },
+      "functions/func_tabu_search.py::progress": {
+        "line": 335,
+        "end_line": 337,
+        "ast_sha256": "a6660286d76d6fd65f3e1746d110765aaf05753ad1758e3e57cddefd0b3d6d04"
+      },
+      "functions/func_tabu_search.py::amc_screen_sums": {
+        "line": 392,
+        "end_line": 399,
+        "ast_sha256": "338b1a252c51bd2aa10cd04259234054e421d65cccb057a23bc2e1f7cea57cd5"
+      },
+      "functions/func_tabu_search.py::amc_quickcheck_reject_1swap": {
+        "line": 401,
+        "end_line": 409,
+        "ast_sha256": "18e24ddd921855ed7ce2cb103f272671be70b80b7cfbacf12dacf48e2222b2ad"
+      },
+      "functions/func_tabu_search.py::time_exhausted": {
+        "line": 451,
+        "end_line": 455,
+        "ast_sha256": "0af075a94d88b0fd91d65009e408f5c4df5da8481cbf7fc9d8a1bf50ccbe0dd4"
+      },
+      "functions/func_tabu_search.py::budget_exhausted": {
+        "line": 457,
+        "end_line": 458,
+        "ast_sha256": "9baaa95797f8b714b38555d83784057cf3bd9f9ee771c2f64ae8d29635b3a208"
+      },
+      "functions/func_tabu_search.py::build_candidate": {
+        "line": 490,
+        "end_line": 493,
+        "ast_sha256": "bd3e365d03323b330949faaa1b05fc18e695902dd080f5dbe29a646e1f3c320b"
+      },
+      "functions/func_tabu_search.py::evaluate_probability_from_bounds": {
+        "line": 495,
+        "end_line": 568,
+        "ast_sha256": "283dee3b93bfa309b3b240c7b41f9a26f9add8aa2905f57ddb008dcc1b67a808"
+      },
+      "functions/func_tabu_search.py::sync_delta_after_accepted_move": {
+        "line": 570,
+        "end_line": 589,
+        "ast_sha256": "8767268f425bdd8dbeaf071556e0983289c5ed2665a816928538df82d9c65306"
+      },
+      "functions/func_tabu_search.py::front_quickcheck_reject": {
+        "line": 591,
+        "end_line": 612,
+        "ast_sha256": "c9ae09392ad992c66f1bbd4bd944bcb3441716047d0947321f218e13072241de"
+      },
+      "functions/func_tabu_search.py::make_class_move_metadata": {
+        "line": 614,
+        "end_line": 665,
+        "ast_sha256": "fdba3d4cfa05e57972e0b6bb09305078193888fd06759848c6cb5f362b9eb38e"
+      },
+      "functions/func_tabu_search.py::select_best_class_improvement": {
+        "line": 667,
+        "end_line": 705,
+        "ast_sha256": "5f218dea603dc804278fd1b0a2f6a0990c3dcd9a6f330397ba021b9f04ca1d31"
+      },
+      "functions/func_tabu_search.py::random_perturbation": {
+        "line": 707,
+        "end_line": 793,
+        "ast_sha256": "7b9d0197cc10cfb2078882dcfc89f1fdcac1cf351a72ea1ed4245c91481aca10"
+      },
+      "functions/func_tabu_search.py::strong_perturbation": {
+        "line": 795,
+        "end_line": 893,
+        "ast_sha256": "25079825826360c8d8465a5a7661237a4db4be59064552aedf6b19a6ca5f9279"
+      },
+      "functions/func_tabu_search.py::guided_perturbation": {
+        "line": 895,
+        "end_line": 1009,
+        "ast_sha256": "5e81bfec839df2b5ecefd2eb299c1952317ebb34550047823d59a223f5065a35"
+      },
+      "functions/func_tail_guided_search.py::ranked_single_moves": {
+        "line": 18,
+        "end_line": 36,
+        "ast_sha256": "6522d09cbe228d334bc01c64e03499b1bdd714c00964c6650c6860fc0047096a"
+      },
+      "functions/func_tail_guided_search.py::Data_Driven_Tabu_Search": {
+        "line": 38,
+        "end_line": 388,
+        "ast_sha256": "f5e365c85b08c527e0453555cba94b1df666203e611f4b900d1dcaac5f3ceb8e"
+      },
+      "functions/func_tail_guided_search.py::relative_drop": {
+        "line": 100,
+        "end_line": 102,
+        "ast_sha256": "b73216a8c67e8326d52730170dae5039f216e7a4b3b84f53211cc0a319563d6b"
+      },
+      "functions/func_tail_guided_search.py::credit": {
+        "line": 103,
+        "end_line": 110,
+        "ast_sha256": "43de5d12e6857b26786701ad52c52b579cd65c20766939d8fafd9c664de81f0a"
+      },
+      "functions/func_tail_guided_search.py::select_perturbation_arm": {
+        "line": 111,
+        "end_line": 137,
+        "ast_sha256": "9d9076ff062fc11310957163e9bf5e5d79b81deed32fafdd9a0d18bd4a41ba66"
+      },
+      "functions/func_tail_guided_search.py::settle_due": {
+        "line": 138,
+        "end_line": 145,
+        "ast_sha256": "eae4db5a22dd99bea39e060e138234be69785fe063857d5d07c7eaca46f45507"
+      },
+      "functions/func_tail_guided_search.py::end_cycle": {
+        "line": 146,
+        "end_line": 155,
+        "ast_sha256": "c2ce6b5d1bc877db009501e4030c4b243413a5e18c9f206d98fdc87cad74a241"
+      },
+      "functions/func_tail_guided_search.py::finalize_pending": {
+        "line": 156,
+        "end_line": 160,
+        "ast_sha256": "24e85963b03e5991a4654946a5b81e62298eb037ac4e5b4eacbd0f3172fd639d"
+      },
+      "functions/func_tail_guided_search.py::stopped": {
+        "line": 161,
+        "end_line": 163,
+        "ast_sha256": "312385ac9644ee2b8e95934932aed50c156ba245350b3053e15d0687d6331370"
+      },
+      "functions/func_tail_guided_search.py::record": {
+        "line": 168,
+        "end_line": 171,
+        "ast_sha256": "92949fa360e688d42280efc01f0e8544d68b8c16562dcfd0d8b49aac11ca7dd2"
+      },
+      "functions/func_tail_guided_search.py::evaluate": {
+        "line": 173,
+        "end_line": 181,
+        "ast_sha256": "1fd8b4f6c43414359bdfba9a7d41010df75932e73c519a89187cbae0c5185553"
+      },
+      "functions/func_tail_guided_search.py::commit": {
+        "line": 182,
+        "end_line": 206,
+        "ast_sha256": "8b001ecbbd79c6d14517593de373ac70bfd2b073594fa050fa19b353db022b95"
+      }
+    },
+    "csv_extra_fields_silently_discarded": true,
+    "duplicate_entry_equals_src": true
+  },
+  "double": {
+    "policy": {
+      "mc_pair_exchange": true,
+      "mc_deferred_singles": false,
+      "reactive_scope": "exact_only",
+      "mc_perturbation_order": "nearby",
+      "mc_pilot_priority": true,
+      "pr_mode": "baseline",
+      "lr_guidance": false
+    },
+    "files": [
+      {
+        "file": "benchmark/benchmark_APP.py",
+        "lines": 248,
+        "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_LAB.py",
+        "lines": 234,
+        "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d",
+        "equals_r05": true
+      },
+      {
+        "file": "benchmark/benchmark_resample.py",
+        "lines": 254,
+        "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_EDA.py",
+        "lines": 140,
+        "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_GA.py",
+        "lines": 139,
+        "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Greedy.py",
+        "lines": 135,
+        "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch.py",
+        "lines": 163,
+        "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_Localsearch_fixed.py",
+        "lines": 176,
+        "sha256": "62a71c9c942ca1c533ca7e692bcd363a56a6d34d3613e42b9ed82bb535048604",
+        "equals_r05": true
+      },
+      {
+        "file": "exp_Result_TabuSearch.py",
+        "lines": 2003,
+        "sha256": "de38ecc674b71ea415d0baa98ef060e44e5b35bb6d111578e258824dbac7571b",
+        "equals_r05": false
+      },
+      {
+        "file": "functions/func_bruct_force.py",
+        "lines": 109,
+        "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cl_estimator_corrected.py",
+        "lines": 260,
+        "sha256": "bcbde5b0ba6af60098f28a23df4fc1ce6f744da60303f2477d5367809224bf02",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_cost_risk_seed.py",
+        "lines": 47,
+        "sha256": "aabe64508eddc6e13b4fc5d8aea70dfda7b014c94811297675604ac3193e7d60",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_delta_mc.py",
+        "lines": 328,
+        "sha256": "ac14d45d12686daa8f51069be5bbaa49fb6ea4b3f475d873256c639faa59ffdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_Dyer_Zemel.py",
+        "lines": 199,
+        "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_EDA.py",
+        "lines": 169,
+        "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_elite_path_relinking.py",
+        "lines": 447,
+        "sha256": "509982468cc0d23afb7be3972d01d3b7d1398babbf3dc082ae0d41a55ed6842d",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_empirical_dominance.py",
+        "lines": 128,
+        "sha256": "d429a1a00a71608cae23f6f2eff93f4e960388108f7fdcd207dade0a6d95bbc8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_fast_initialization.py",
+        "lines": 633,
+        "sha256": "604aaaca9e8b54b1e1ec041ee58e1a6bd3fb354789e3dd7aed9445b056b9f3ff",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_GA.py",
+        "lines": 211,
+        "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_greedy.py",
+        "lines": 116,
+        "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_importance_cmc.py",
+        "lines": 222,
+        "sha256": "595edde99c3fcef0edaf55665ebce8a9b04ac982eb18a0baba0ae27fa934aaa2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_iterativeCCMCKP.py",
+        "lines": 180,
+        "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lagrangian_guidance.py",
+        "lines": 288,
+        "sha256": "98c897ebeb9c5e56354d53d1bbf66ca881e611eebac67f53456fc98851550878",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp.py",
+        "lines": 92,
+        "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_cp_corrected.py",
+        "lines": 217,
+        "sha256": "b01dd1d6ff8017bb957b5c86b1969611f31f39f46b68cd4c93736fb28723bae2",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_localsearch_fixed.py",
+        "lines": 346,
+        "sha256": "083d792880ba8cb640abf0ebdfbf7c792314fdf5ac1d6d93dc64c896a4fee5f3",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_author.py",
+        "lines": 342,
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_lss_degrade_control.py",
+        "lines": 70,
+        "sha256": "7ac7dcafda9f7716861c3d0c2a3699cebfa019bf2cd46e8d87df1a9bbe8c8fdd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_MILPgurobi.py",
+        "lines": 313,
+        "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_pair_exchange.py",
+        "lines": 34,
+        "sha256": "ebf6a5b418cd729a2b231d593b4e5b8c813010488ec59110448893a05b4464fd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_realP_statistical.py",
+        "lines": 299,
+        "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_author.py",
+        "lines": 470,
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_reference_evaluation.py",
+        "lines": 66,
+        "sha256": "16c8323ad9318fe09581ed678d17ef720e8f2c434c6c0504d1859ca114388306",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_search_ablation.py",
+        "lines": 69,
+        "sha256": "02615194097bcf34ed2245f82d4bbcc077796e7f30f8b315759172b735625a73",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor.py",
+        "lines": 157,
+        "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_solution_factor_corrected.py",
+        "lines": 72,
+        "sha256": "024947303a98d6cd15bcae62be5c152954a212de504c99f063084e00365918d1",
+        "equals_r05": true
+      },
+      {
+        "file": "functions/func_tabu_search.py",
+        "lines": 1289,
+        "sha256": "844049e46780d5e33dbadc8f99770c2bed36c2812f86907364872bf0558d5087",
+        "equals_r05": false
+      },
+      {
+        "file": "functions/func_tail_guided_search.py",
+        "lines": 233,
+        "sha256": "217cac41f32d073ef23d390863d5bdbafb605e577f722f2435db06ce772a23c8",
+        "equals_r05": false
+      },
+      {
+        "file": "utils/factor.py",
+        "lines": 155,
+        "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/factor_corrected.py",
+        "lines": 135,
+        "sha256": "36d472587450e1a9f02c32b52a1e60eca8c3c53b1201d08719419b94195e6334",
+        "equals_r05": true
+      },
+      {
+        "file": "utils/my_file.py",
+        "lines": 57,
+        "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02",
+        "equals_r05": true
+      }
+    ],
+    "functions": {
+      "exp_Result_TabuSearch.py::stage_log": {
+        "line": 117,
+        "end_line": 123,
+        "ast_sha256": "383d3d0dbd11175f0420eceda72662665235dfed0149ef9697bda08d1aa815d3"
+      },
+      "exp_Result_TabuSearch.py::_stable_quick_check_seed": {
+        "line": 126,
+        "end_line": 133,
+        "ast_sha256": "91e82261e1ea84580e009b5758c69b85104c65f29f591cbac62c41413a7f7173"
+      },
+      "exp_Result_TabuSearch.py::_quick_check_cache_path": {
+        "line": 136,
+        "end_line": 143,
+        "ast_sha256": "58e11ec654fca19a91f18c0bc1af2ec4eadba700fc9bcfbb748b74b9b4e5ffcc"
+      },
+      "exp_Result_TabuSearch.py::_validate_quick_check_payload": {
+        "line": 146,
+        "end_line": 181,
+        "ast_sha256": "b0ee16f40c7883ed3074470b516e27184a23a9c359f30a433f0dbc70667cb88b"
+      },
+      "exp_Result_TabuSearch.py::_try_load_quick_check_cache": {
+        "line": 184,
+        "end_line": 192,
+        "ast_sha256": "999e17e81849872d90493219c97bf7283d0acaeea8bf11465585cc3886b481da"
+      },
+      "exp_Result_TabuSearch.py::_exclusive_cache_lock": {
+        "line": 196,
+        "end_line": 261,
+        "ast_sha256": "1672fe775bfb0a41d671812185ff143bb00a6246c2d0e35abf0ff7f0c6947f82"
+      },
+      "exp_Result_TabuSearch.py::load_or_build_quick_check": {
+        "line": 264,
+        "end_line": 388,
+        "ast_sha256": "b12a38bf6f01a4684dda369e91987f66e978a001bb5a0250571aab1ba690bb1c"
+      },
+      "exp_Result_TabuSearch.py::prepare_instance_resources": {
+        "line": 409,
+        "end_line": 494,
+        "ast_sha256": "3e6a9c28abf6094e0c1b11e36f44b59346ee62246418c34cf109689a147b462f"
+      },
+      "exp_Result_TabuSearch.py::resolve_instance_dir": {
+        "line": 497,
+        "end_line": 523,
+        "ast_sha256": "d2c80461b93a3b522f53afeadb9d350cec2b8763539e9a84aa6915ddd9dfaf8f"
+      },
+      "exp_Result_TabuSearch.py::repo_relative": {
+        "line": 526,
+        "end_line": 527,
+        "ast_sha256": "fd8beed8c9f1fe0e74834f90c5cc8cfabd4d7d56c2bac3a9d2b709269c8ddf65"
+      },
+      "exp_Result_TabuSearch.py::parse_param": {
+        "line": 530,
+        "end_line": 534,
+        "ast_sha256": "9e0866e866d0ee9ca967c4ef76bab46c880eb0b01468e48763759dbe53b9f249"
+      },
+      "exp_Result_TabuSearch.py::choose_evaluator": {
+        "line": 537,
+        "end_line": 541,
+        "ast_sha256": "1d1f0b3aa234198b46c34aa6b5b518d8b5fd4f3d2f4071f3b1360db277be9cf6"
+      },
+      "exp_Result_TabuSearch.py::_make_mc_sampler": {
+        "line": 544,
+        "end_line": 546,
+        "ast_sha256": "33f09dfa1c5911f6d3ffd54c0d5f1624e74775166ecbcdb4f64bb6ad1d3f51b3"
+      },
+      "exp_Result_TabuSearch.py::known_gurobi": {
+        "line": 549,
+        "end_line": 553,
+        "ast_sha256": "f0ed01895cc687c0276afe2d005d053500b8ef0c18c56ae2aa4552cbc5dd9a6a"
+      },
+      "exp_Result_TabuSearch.py::write_csv": {
+        "line": 556,
+        "end_line": 561,
+        "ast_sha256": "b8962e9fcd22724007fef472a3467e9392c3e789fac788a6e8f2ae5f7ad3e81d"
+      },
+      "exp_Result_TabuSearch.py::_hamming_distance": {
+        "line": 564,
+        "end_line": 567,
+        "ast_sha256": "3b835a889fceebb2e472b29108fdee81dfaf297d648b241583de0db32978af45"
+      },
+      "exp_Result_TabuSearch.py::run_one": {
+        "line": 570,
+        "end_line": 1441,
+        "ast_sha256": "1e986e75f1fc218c753a37cc11e3411b565212ed85e8a1040e4a0e03b3315a31"
+      },
+      "exp_Result_TabuSearch.py::_parallel_run_task": {
+        "line": 1444,
+        "end_line": 1520,
+        "ast_sha256": "a41f7f9a3eb664c6440a2c18cafc9ae3e9d879629ed48e6c9e61a645eb56c077"
+      },
+      "exp_Result_TabuSearch.py::_make_run_task": {
+        "line": 1523,
+        "end_line": 1557,
+        "ast_sha256": "aa8e9d2f0863fd4253e6a766a8acda7a709f1877d9a00f99a435977000d99823"
+      },
+      "exp_Result_TabuSearch.py::_print_run_summary": {
+        "line": 1560,
+        "end_line": 1570,
+        "ast_sha256": "a64480c71b07871ef9bfbdbf52a286af2452e3a19207640e8fb5b5c8c2966e87"
+      },
+      "exp_Result_TabuSearch.py::summarize": {
+        "line": 1573,
+        "end_line": 1720,
+        "ast_sha256": "ff9c16c5813de2ac5a3ba99de7b6d0563f92a867a14e050289596d921fca38ad"
+      },
+      "exp_Result_TabuSearch.py::main": {
+        "line": 1723,
+        "end_line": 1999,
+        "ast_sha256": "f0fb1f62251bc7b12ee137fe8baca981bc16958984e56dfce0515ee39ec7a924"
+      },
+      "exp_Result_TabuSearch.py::expired": {
+        "line": 209,
+        "end_line": 213,
+        "ast_sha256": "5860c2a848ae321fb9e2ed51db453a15c21c1745ee3ea7dc70df74a9a2612cc8"
+      },
+      "exp_Result_TabuSearch.py::ts_progress": {
+        "line": 878,
+        "end_line": 879,
+        "ast_sha256": "cb5e0362be63972fc78cbbeaa593a9e9fc396025b463e45323fa823220a1d2cc"
+      },
+      "functions/func_tabu_search.py::validate_multiple_choice_solution": {
+        "line": 105,
+        "end_line": 114,
+        "ast_sha256": "a4aa8d9e618b8e7ebc2a8a8bc4f8154cbddb51a6392c1ee4152ef82cf5d143aa"
+      },
+      "functions/func_tabu_search.py::_gap_percent": {
+        "line": 117,
+        "end_line": 124,
+        "ast_sha256": "146aad4c1453a458b9debdccf9bb3c6d6447e3ecdc4a36ea3382317e24c9b4c5"
+      },
+      "functions/func_tabu_search.py::Data_Driven_Tabu_Search": {
+        "line": 127,
+        "end_line": 1289,
+        "ast_sha256": "1071283dfe58d555ec871d105f1aa87fa87cdbfcf992a4c01d8e22a125d13161"
+      },
+      "functions/func_tabu_search.py::to_dict": {
+        "line": 101,
+        "end_line": 102,
+        "ast_sha256": "0efa4c636813974aeccc30bb28d58cfb725e6687ad59f6131d9aa58b98d540ba"
+      },
+      "functions/func_tabu_search.py::progress": {
+        "line": 188,
+        "end_line": 190,
+        "ast_sha256": "a6660286d76d6fd65f3e1746d110765aaf05753ad1758e3e57cddefd0b3d6d04"
+      },
+      "functions/func_tabu_search.py::amc_screen_sums": {
+        "line": 245,
+        "end_line": 252,
+        "ast_sha256": "338b1a252c51bd2aa10cd04259234054e421d65cccb057a23bc2e1f7cea57cd5"
+      },
+      "functions/func_tabu_search.py::amc_quickcheck_reject_1swap": {
+        "line": 254,
+        "end_line": 262,
+        "ast_sha256": "18e24ddd921855ed7ce2cb103f272671be70b80b7cfbacf12dacf48e2222b2ad"
+      },
+      "functions/func_tabu_search.py::time_exhausted": {
+        "line": 304,
+        "end_line": 308,
+        "ast_sha256": "0af075a94d88b0fd91d65009e408f5c4df5da8481cbf7fc9d8a1bf50ccbe0dd4"
+      },
+      "functions/func_tabu_search.py::budget_exhausted": {
+        "line": 310,
+        "end_line": 311,
+        "ast_sha256": "9baaa95797f8b714b38555d83784057cf3bd9f9ee771c2f64ae8d29635b3a208"
+      },
+      "functions/func_tabu_search.py::build_candidate": {
+        "line": 343,
+        "end_line": 346,
+        "ast_sha256": "bd3e365d03323b330949faaa1b05fc18e695902dd080f5dbe29a646e1f3c320b"
+      },
+      "functions/func_tabu_search.py::evaluate_probability_from_bounds": {
+        "line": 348,
+        "end_line": 421,
+        "ast_sha256": "283dee3b93bfa309b3b240c7b41f9a26f9add8aa2905f57ddb008dcc1b67a808"
+      },
+      "functions/func_tabu_search.py::sync_delta_after_accepted_move": {
+        "line": 423,
+        "end_line": 442,
+        "ast_sha256": "8767268f425bdd8dbeaf071556e0983289c5ed2665a816928538df82d9c65306"
+      },
+      "functions/func_tabu_search.py::front_quickcheck_reject": {
+        "line": 444,
+        "end_line": 465,
+        "ast_sha256": "c9ae09392ad992c66f1bbd4bd944bcb3441716047d0947321f218e13072241de"
+      },
+      "functions/func_tabu_search.py::make_class_move_metadata": {
+        "line": 467,
+        "end_line": 518,
+        "ast_sha256": "fdba3d4cfa05e57972e0b6bb09305078193888fd06759848c6cb5f362b9eb38e"
+      },
+      "functions/func_tabu_search.py::select_best_class_improvement": {
+        "line": 520,
+        "end_line": 558,
+        "ast_sha256": "5f218dea603dc804278fd1b0a2f6a0990c3dcd9a6f330397ba021b9f04ca1d31"
+      },
+      "functions/func_tabu_search.py::random_perturbation": {
+        "line": 560,
+        "end_line": 646,
+        "ast_sha256": "7b9d0197cc10cfb2078882dcfc89f1fdcac1cf351a72ea1ed4245c91481aca10"
+      },
+      "functions/func_tabu_search.py::strong_perturbation": {
+        "line": 648,
+        "end_line": 746,
+        "ast_sha256": "25079825826360c8d8465a5a7661237a4db4be59064552aedf6b19a6ca5f9279"
+      },
+      "functions/func_tail_guided_search.py::ranked_single_moves": {
+        "line": 18,
+        "end_line": 36,
+        "ast_sha256": "6522d09cbe228d334bc01c64e03499b1bdd714c00964c6650c6860fc0047096a"
+      },
+      "functions/func_tail_guided_search.py::Data_Driven_Tabu_Search": {
+        "line": 38,
+        "end_line": 233,
+        "ast_sha256": "3c7e365caea8ee069e4d21d00589870f425fa1dad167e5d3967ee9c6d9827cbf"
+      },
+      "functions/func_tail_guided_search.py::stopped": {
+        "line": 74,
+        "end_line": 76,
+        "ast_sha256": "312385ac9644ee2b8e95934932aed50c156ba245350b3053e15d0687d6331370"
+      },
+      "functions/func_tail_guided_search.py::record": {
+        "line": 81,
+        "end_line": 84,
+        "ast_sha256": "92949fa360e688d42280efc01f0e8544d68b8c16562dcfd0d8b49aac11ca7dd2"
+      },
+      "functions/func_tail_guided_search.py::evaluate": {
+        "line": 86,
+        "end_line": 94,
+        "ast_sha256": "1fd8b4f6c43414359bdfba9a7d41010df75932e73c519a89187cbae0c5185553"
+      },
+      "functions/func_tail_guided_search.py::commit": {
+        "line": 95,
+        "end_line": 117,
+        "ast_sha256": "033b541a441c5c555e8888baac1988296921032bc478dc808bef2c501cf4b2aa"
+      }
+    },
+    "csv_extra_fields_silently_discarded": true,
+    "duplicate_entry_equals_src": true
+  },
+  "syntax_checked_file_count": 129,
+  "nested_acceptance_functions_equal": {
+    "single": {
+      "functions/func_tabu_search.py::evaluate_probability_from_bounds": true,
+      "functions/func_tabu_search.py::front_quickcheck_reject": true,
+      "functions/func_tabu_search.py::random_perturbation": true,
+      "functions/func_tail_guided_search.py::evaluate": true,
+      "functions/func_tail_guided_search.py::ranked_single_moves": true,
+      "exp_Result_TabuSearch.py::choose_evaluator": true,
+      "exp_Result_TabuSearch.py::_make_mc_sampler": true,
+      "exp_Result_TabuSearch.py::summarize": true
+    },
+    "double": {
+      "functions/func_tabu_search.py::evaluate_probability_from_bounds": true,
+      "functions/func_tabu_search.py::front_quickcheck_reject": true,
+      "functions/func_tabu_search.py::random_perturbation": true,
+      "functions/func_tail_guided_search.py::evaluate": true,
+      "functions/func_tail_guided_search.py::ranked_single_moves": true,
+      "exp_Result_TabuSearch.py::choose_evaluator": true,
+      "exp_Result_TabuSearch.py::_make_mc_sampler": true,
+      "exp_Result_TabuSearch.py::summarize": true
+    }
+  }
+}
