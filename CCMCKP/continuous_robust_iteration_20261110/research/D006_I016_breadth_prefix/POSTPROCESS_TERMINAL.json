@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "error": null,
+  "steps": [
+    {
+      "driver": "snapshot_d006_isolation.py",
+      "exit": 0,
+      "wall": 0.11565505899488926
+    },
+    {
+      "driver": "audit_d006_prefix.py",
+      "exit": 0,
+      "wall": 5.0808506309986115
+    },
+    {
+      "driver": "summarize_completed_prefix.py",
+      "exit": 0,
+      "wall": 0.11563824862241745
+    }
+  ],
+  "wall_including_wait": 175.50737422611564,
+  "scope": "actual four frozen cases x2methods,one NEWpairedseed percase, complete native prefixes; no percase/crosscasecostAvg; no new MC or formal30Avg"
+}

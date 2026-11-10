@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "scope": "Actual9 fixture branches: 7 completed I016 large runs and2 fresh small probes.\n\nSmall probes are audit engineering only, not formal1200 or30-run performance.\n",
+  "fixtures": 9,
+  "small_probes": 2,
+  "complete_large_real_fixtures": 7,
+  "small_semantic_certificates_independently_recounted": 40,
+  "registration_sha256": "b12c61d6621863a337300dd5cc72f8e80ce57ee887bcfdeef08f0fc979f8159f",
+  "lineage_source_sha256": "79e576312f70a821e45876bb979b7bc026eb4b9a8d8703c989993255173b21f3",
+  "new_original_MC_calls": 0,
+  "no_formal_run_or_Avg_claim": true,
+  "rows": [
+    {
+      "result_file": "research/F002_lineage_preflight/small_case1_seed9716681.json.gz",
+      "result_sha256": "02c283e1fd050fa0d5c45830e6dd196cea70874e0775d658cefe8dc026cedbc0",
+      "semantic_certificates": 3,
+      "independent_prior_large_recounts_matched": false,
+      "report": {
+        "branch": "unchanged small-case base solver",
+        "raw_members": 3
+      }
+    },
+    {
+      "result_file": "research/F002_lineage_preflight/small_case2_seed9716682.json.gz",
+      "result_sha256": "f18182da71742b417025dd5a87b778f73be8b4975647773475b96610ab786fd2",
+      "semantic_certificates": 37,
+      "independent_prior_large_recounts_matched": false,
+      "report": {
+        "branch": "unchanged small-case base solver",
+        "raw_members": 37
+      }
+    },
+    {
+      "result_file": "stability/I016_pair_cover_case39/search/I016_pair_cover_seed9716211.json.gz",
+      "result_sha256": "0aac246557691d6b4585b2f93cbda97a3b22dbfdee671654bc566a53bc74e8c7",
+      "semantic_certificates": 1071,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 1071
+      }
+    },
+    {
+      "result_file": "stability/I016_pair_cover_case39/search/I016_pair_cover_seed9716212.json.gz",
+      "result_sha256": "aaa86d34c26838e977a1daa6da674ad85f81fe06a00e4ffc6daf204a16c7cd36",
+      "semantic_certificates": 1066,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 1066
+      }
+    },
+    {
+      "result_file": "stability/I016_pair_cover_case39/search/I016_pair_cover_seed9716213.json.gz",
+      "result_sha256": "bafbedbc165519e5ee2d4b4028060f7248bc3b8d9877dfe2026cbfecde5df25e",
+      "semantic_certificates": 1071,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 1071
+      }
+    },
+    {
+      "result_file": "breadth/I016_priority_four/search/I016_pair_cover_case35_seed9716435.json.gz",
+      "result_sha256": "36b4a23fb509354022c6042a6c9d2b7a69e496f98ce54527f85841a893a7e3b3",
+      "semantic_certificates": 1216,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 1216
+      }
+    },
+    {
+      "result_file": "breadth/I016_priority_four/search/I016_pair_cover_case37_seed9716437.json.gz",
+      "result_sha256": "5fd88f205c6260029ca99dcce9beb7591e0b6424515da00a2fc11870a9766ed9",
+      "semantic_certificates": 768,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 768
+      }
+    },
+    {
+      "result_file": "breadth/I016_priority_four/search/I016_pair_cover_case38_seed9716438.json.gz",
+      "result_sha256": "7176ce693e9190adfb34a8ac6947010dd3abcc55d8f7acc9f51d5f4018c4e859",
+      "semantic_certificates": 2468,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 2468
+      }
+    },
+    {
+      "result_file": "breadth/I016_priority_four/search/I016_pair_cover_case40_seed9716440.json.gz",
+      "result_sha256": "a44fc5651bf54a8eec7690e57bb45d9c7b2b985f70a0d2eecca70cf0efa09738",
+      "semantic_certificates": 895,
+      "independent_prior_large_recounts_matched": true,
+      "report": {
+        "branch": "previously exercised complete ownCDF/pair/block/precision branch",
+        "raw_members": 895
+      }
+    }
+  ]
+}
