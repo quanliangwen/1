@@ -1,16 +1,16 @@
-# CCMCKP：当前按原LSS主流程对齐
+# S10原算法与LSS主流程对齐
 
-已去掉额外真实概率硬筛。原LSS的评估函数、CL=.99、原始最小成本输出_0和CSV记录流程保持原样，只替换搜索阶段。
+最新实跑使用原冻结S10搜索算法：12份搜索源码逐字节保持一致，只替换外围额外真实概率后筛。候选复核和最终输出复用原LSS评估函数CL=.99及原始_0输出、CSV写入；真实概率仅记录。
 
-|算例|T|新运行输出|
+|算例|T|S10新运行输出|
 |---|---:|---:|
 |APP_3_5_30_|21|9.034717|
 |APP_3_5_30_|27|7.250013|
 
-两例各一次新运行，已核对原始CSV、原21份参考源码和输出段AST。真实概率仅作为原CSV列记录，不筛输出。这里还不是新口径的40×30统计。
+两例各一次新运行。原S10均完成其125组合小例枚举，最终结果及原LSS判定均已核验；本次未使用I017替换搜索，也不是40×30统计。
 
-[实际确认CSV](iterations/I017_LSS_mainflow_two_case_confirmation/CONFIRMED_OUTPUT.csv) · [源码](iterations/I017_LSS_mainflow_two_case_confirmation/I017_LSS_MAINFLOW_TWO_CASE_SOURCE.zip) · [完整新运行证据](iterations/I017_LSS_mainflow_two_case_confirmation/I017_TWO_CASE_ACTUAL_MAINFLOW_EVIDENCE.zip) · [详情及运行方式](iterations/I017_LSS_mainflow_two_case_confirmation/README.md)
+[S10实跑CSV](iterations/S10_LSS_mainflow_APP3_confirmation/S10_CONFIRMED_OUTPUT.csv) · [原S10源码和LSS适配入口](iterations/S10_LSS_mainflow_APP3_confirmation/S10_LSS_MAINFLOW_SOURCE.zip) · [完整新运行证据](iterations/S10_LSS_mainflow_APP3_confirmation/S10_APP3_ACTUAL_EVIDENCE.zip) · [方法和计时说明](iterations/S10_LSS_mainflow_APP3_confirmation/README.md)
 
-[当前验收要求](CURRENT_ACCEPTANCE_POLICY.json) · [完整历史过程](ITERATION_LOG.md)
+[当前口径](CURRENT_ACCEPTANCE_POLICY.json) · [完整历史过程](ITERATION_LOG.md)
 
-此前采用原样本99加真实概率985硬筛的代码、Excel和实验保留为不同口径的历史记录，不代表当前与LSS的公平比较。用户已暂停持续目标，本次只完成指定两例确认。
+早先双门槛99+真实985的统计是不同口径历史记录，不用于当前公平比较；之前I017两例确认另行保留。持续目标由用户暂停。
