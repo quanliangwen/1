@@ -19,4 +19,4 @@ F002将用原封不动I016、30个全新种子跑40×30，600秒/共享180秒、
 
 [每次思路、尝试、负结果与取舍](ITERATION_LOG.md) · [全部交付SHA256清单](CHECKSUMS_SHA256.json)
 
-F002实际控制器1079245，独立原样本审计等待进程1083571。最新快照46/1200，普通错误0、总预算及阶段违规均0。[运行快照](formal/F002_I016_40x30/SEARCH_PROGRESS.json) · [启动前远端核验](formal/F002_I016_40x30/PRE_REG_REMOTE_VERIFIED.json)。尚无F002最终Avg或新版全量Excel。
+F002实际控制器1079245、原样本审计等待1083571；最新已归档快照138/1200，错误和预算违规均0。[运行快照](formal/F002_I016_40x30/SEARCH_PROGRESS.json) · [原LSS验收程序预检](research/F002_native_audit_preflight/README.md)。新版全量Avg和Excel仍等待完整验收。

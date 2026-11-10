@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "time": 1794275077.7905211,
+  "scope": "Run new independent audit on actual completed6+8 development pools only.; complete14success-prefix/89physical fixture branches; NOT full1200 formal namespace or native-error branches",
+  "source_sha256": "36182ca0e85702ae9dd3a9393be24852f6873490a43e04916d873a6a76eec05c",
+  "subprocess_calls": 0,
+  "new_MC_calls": 0,
+  "formal_all1200_audit_claimed": false,
+  "rows": [
+    {
+      "study": "D005_I016_pair_prefix",
+      "pools": 6,
+      "physical_new_MC_attempts": 75,
+      "seconds": 1.7807373879477382,
+      "actual_result_sha256": "7436f03cef5a67732b1755000c786094f0d3adcaa9ca5fa490c3c165568fbcbf",
+      "prior_independent_audit_sha256": "94d26f43c40d9a4aea0c86363e6f6569bd77972be1b8f650fea73766f7960d44",
+      "all_selected_original_raw_recounted": true
+    },
+    {
+      "study": "D006_I016_breadth_prefix",
+      "pools": 8,
+      "physical_new_MC_attempts": 14,
+      "seconds": 2.9938524244353175,
+      "actual_result_sha256": "2da6274f9368a6d223ab7714ed736efb595ed7a457d962beada2cf0455f8450d",
+      "prior_independent_audit_sha256": "0c079385585c88efe990093fecdc0490ec5d37f46ba4e8e203a192073ad3ba5c",
+      "all_selected_original_raw_recounted": true
+    }
+  ]
+}

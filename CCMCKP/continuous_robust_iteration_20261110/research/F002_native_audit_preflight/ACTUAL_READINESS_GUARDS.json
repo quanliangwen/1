@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "time": 1794275401.2790148,
+  "scope": "Actual premature-registration/final-statistics guards; no simulation attempt.",
+  "actual_search_controller_pid": 1079245,
+  "actual_search_controller_confirmed_live": true,
+  "actual_native_directory_created": false,
+  "final_statistics_created": false,
+  "new_MC_calls": 0,
+  "rows": [
+    {
+      "driver": "register_f002_native.py",
+      "source_sha256": "87167b09c4dcb7b6004b2fc307ca7d6b3d35c6d73249fc6b71ec5d50219d94b3",
+      "actual_response": {
+        "ready": false,
+        "reason": "whole actual1200 search/raw audit not yet terminal",
+        "new_MC_calls": 0,
+        "formal_native_registered": false
+      },
+      "exit": 0
+    },
+    {
+      "driver": "audit_f002_final.py",
+      "source_sha256": "f01d1e7da7b5a94fb0de446329f857284ce47db4cb2034b2b0f1bbc28c305c90",
+      "actual_response": {
+        "ready": false,
+        "reason": "actual full native stage/isolation/raw audit not yet terminal",
+        "final_statistics_written": false
+      },
+      "exit": 0
+    }
+  ]
+}

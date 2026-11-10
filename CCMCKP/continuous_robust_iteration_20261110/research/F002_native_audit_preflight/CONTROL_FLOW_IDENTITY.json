@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "time": 1794275325.2903955,
+  "scope": "AST identity of numerical scheduling/error decisions versus completed D005.; static comparison after removal of log print only, not a new formal runtime/MC experiment",
+  "checked_blocks": [
+    "hash_guards",
+    "whole_batch_error_control",
+    "complete_pool_loading"
+  ],
+  "source_sha256": "7fa812b0613166512e3fc8cd4158aea0ac5c51369200267dce2344247d2cba5b",
+  "predecessor_sha256": "94d2a58d982858476a62fa11e8ca07f232b81bd5dd85ab1d1d7c8b38de7669bf",
+  "same_batch_engine": true,
+  "full1200_native_runtime_exercised": false,
+  "new_MC_calls": 0
+}
