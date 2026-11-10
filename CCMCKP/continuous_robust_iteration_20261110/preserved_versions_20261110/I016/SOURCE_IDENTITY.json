@@ -1,0 +1,55 @@
+{
+  "version": "I016",
+  "source_archive": "I016_FROZEN_ENGINEERING_SOURCE.zip",
+  "source_archive_sha256": "62d3b7d087b68111f5569575377807134c455dc170e7cc7d98d942dbb77f9f6f",
+  "source_archive_bytes": 246917,
+  "zip_CRC_passed": true,
+  "verified_search_source_files": 22,
+  "frozen_search_source_sha256": {
+    "block_exchange.py": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5",
+    "ellipsoid_frontier.py": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "hybrid_schedule.py": "4e46853128575a33919e0546741100f501a4cf2b9b483175489f2ad343eae7ae",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "pair_cover_schedule.py": "3e986eee5d6f55ca8bcc5cdbe7ee7082cb347f528d3e0faaaab6ee8edf76544a",
+    "pair_exchange.py": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df",
+    "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+    "precision_closure.py": "f9f8eb7aac88309058053081f962a1441142dcd9607f88b0d3bad3998ce66485",
+    "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+    "risk_solver.py": "8b325847334f3aba1d10d93d0d2f186e1fa33144f8ca1991c842f55b307ee7f0",
+    "run.py": "4ae64000fcc6f38ac47889e6aa863e722df8ad6c4f42ec4d1513091fb0da3c50",
+    "s10_kernel.py": "104b6e9bf441966c0d32997e5bdfa1faddd5a2afe7acdf1f9af717d937d987b3",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "source_upstream_path": "iterations/I016_cdf_pair_cover/I016_FROZEN_ENGINEERING_SOURCE.zip",
+  "source_upstream_commit": "add14849dab245c3a8bf6f4da0b9f127f6c451d9",
+  "scope_note": "按用户I1016指此前I016处理；原算法22文件，保存真实开发对照证据；尚无新口径完整40×30结论",
+  "saved_results_or_references": [
+    {
+      "original_path": "research/D005_I016_pair_prefix/D005_COMPLETE_COHORT_EVIDENCE.zip",
+      "url": "https://github.com/quanliangwen/1/blob/add14849dab245c3a8bf6f4da0b9f127f6c451d9/CCMCKP/continuous_robust_iteration_20261110/research/D005_I016_pair_prefix/D005_COMPLETE_COHORT_EVIDENCE.zip",
+      "bytes": 8214793,
+      "sha256": "d79608b9654aedd65b4d925ffeed93b358f997f96e5b060f44875b6a75c1545a"
+    },
+    {
+      "original_path": "research/D005_I016_pair_prefix/DEVELOPMENT_COMPARISON.json",
+      "url": "https://github.com/quanliangwen/1/blob/add14849dab245c3a8bf6f4da0b9f127f6c451d9/CCMCKP/continuous_robust_iteration_20261110/research/D005_I016_pair_prefix/DEVELOPMENT_COMPARISON.json",
+      "bytes": 13773,
+      "sha256": "bef9d52011b37c866902bc0a223284b9039149c5d6259f896147a03105c764e3"
+    },
+    {
+      "original_path": "research/D006_I016_breadth_prefix/DEVELOPMENT_COMPARISON.json",
+      "url": "https://github.com/quanliangwen/1/blob/add14849dab245c3a8bf6f4da0b9f127f6c451d9/CCMCKP/continuous_robust_iteration_20261110/research/D006_I016_breadth_prefix/DEVELOPMENT_COMPARISON.json",
+      "bytes": 7341,
+      "sha256": "e4fa40bf625c0e719a165b62dd2c41bae477f1cf27fbabb1b977630b560b0846"
+    }
+  ]
+}

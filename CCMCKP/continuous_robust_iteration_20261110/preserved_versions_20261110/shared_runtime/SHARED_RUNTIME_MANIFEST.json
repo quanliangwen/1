@@ -1,0 +1,398 @@
+{
+  "time": 1794280448.0263944,
+  "file": "SAVED_SHARED_FLINT_PY313.zip",
+  "bytes": 9608075,
+  "sha256": "f5349236eb6458533111d84c34fd5efad2e78fced2f094a3578eb73b510d5a18",
+  "zip_CRC_passed": true,
+  "source_directory": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+  "purpose": "shared dependency used by S10/I002/I016; preserved alongside source so it is not mistaken for disposable S9-only data",
+  "runtime": "Python3.13 Linux x86_64 python-flint0.8.0, NumPy2.4.0, SciPy1.17.1; original LSS reporting separately Python3.8 NumPy1.24.4 SciPy1.10.1",
+  "files": [
+    {
+      "path": "vendor313/flint/__init__.py",
+      "bytes": 2713,
+      "sha256": "c29a1302b339b1a7faa4638439647fb83b0f41732d0a1d378ede48d4ed271201"
+    },
+    {
+      "path": "vendor313/flint/flint_base/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/flint_base/flint_base.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 512361,
+      "sha256": "db113d8cbd5beeafd6f9d3e071772fc42ffa279e66ac8a35de71d899f452b21b"
+    },
+    {
+      "path": "vendor313/flint/flint_base/flint_base.pyi",
+      "bytes": 8380,
+      "sha256": "8734e03ac2cfb6fd9458158109a054587727824f071b5628f1deec244421811c"
+    },
+    {
+      "path": "vendor313/flint/flint_base/flint_context.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 175353,
+      "sha256": "745feca79a1367cac8513e7fc918f53044c4b2eb88ff07244683151b73f74a85"
+    },
+    {
+      "path": "vendor313/flint/functions/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/functions/showgood.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 159185,
+      "sha256": "32b4d3028dff5d0cf20142164849391ee2311529b3e101ceed3d87d8e1c6958e"
+    },
+    {
+      "path": "vendor313/flint/py.typed",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/pyflint.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 29864,
+      "sha256": "b565e173fd651688a8303c48e28adf1d36393894bac9058127f61b7a2781455d"
+    },
+    {
+      "path": "vendor313/flint/test/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/test/__main__.py",
+      "bytes": 3683,
+      "sha256": "51ba356cbbc6c5789e808e3a3829f8c91b6bf1fe5532e9564f906b3b2bb11972"
+    },
+    {
+      "path": "vendor313/flint/test/test_all.py",
+      "bytes": 204700,
+      "sha256": "e89723d219debc6afad53f0f456d93c0428f948a2f324a10c8769dc15ab2a3f8"
+    },
+    {
+      "path": "vendor313/flint/test/test_docstrings.py",
+      "bytes": 3480,
+      "sha256": "36585910ff561523950540add07369e54ff3b61f7f93fb0307e5ab76d44ff638"
+    },
+    {
+      "path": "vendor313/flint/types/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/types/_gr.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 766105,
+      "sha256": "5c98c84bd2a6c76c9ca00d1636af65afbe11e6e4ae0dd0f5c7b7c878b8c7585d"
+    },
+    {
+      "path": "vendor313/flint/types/acb.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 677913,
+      "sha256": "aa8afad12ef0281bebdbf75104b5718150ab20e5d7eebf876963106495afc663"
+    },
+    {
+      "path": "vendor313/flint/types/acb_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 250169,
+      "sha256": "156a671e6665341268064ce94e2e500caaff8a2eaab4d7c3478227c9b9057ea6"
+    },
+    {
+      "path": "vendor313/flint/types/acb_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 204969,
+      "sha256": "aabf42d5d74bef2f8ddc10bf77cd4870604a402023b8f99c98fe90345d5b0d43"
+    },
+    {
+      "path": "vendor313/flint/types/acb_series.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 295729,
+      "sha256": "1aac376c7ef84762f0907641650595f3fd3263eb7c55233d5c785e63e535ed9e"
+    },
+    {
+      "path": "vendor313/flint/types/acb_theta.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 84713,
+      "sha256": "5b02aa025784eaff2b66c80744aba80d3d63b1ce12b24519fafa3d606de331e5"
+    },
+    {
+      "path": "vendor313/flint/types/arb.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 624633,
+      "sha256": "9074a13c939be17d3bf04542523cfd97585e33f4b1d10014171c250b781398cd"
+    },
+    {
+      "path": "vendor313/flint/types/arb_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 233529,
+      "sha256": "c1d651ba7153ba93ef153b708fb5f5503055182440ab8a3ad60a415d867bc1be"
+    },
+    {
+      "path": "vendor313/flint/types/arb_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 188329,
+      "sha256": "e43ac034f9b3254027166d2f587a9578aee902ab1765224c1f2c28346fa15156"
+    },
+    {
+      "path": "vendor313/flint/types/arb_series.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 308001,
+      "sha256": "66f07eae88f0c281588a7b7aef2b02cce561747813a79b244b18f3b3c959e791"
+    },
+    {
+      "path": "vendor313/flint/types/arf.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 138673,
+      "sha256": "52c7e4adad113f665465cd40d27db9daa3ab6fe13ddeb3ee3106b47c5968a8ad"
+    },
+    {
+      "path": "vendor313/flint/types/dirichlet.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 146785,
+      "sha256": "014e4444aeeefbe86fa7845d27fd598116e17a4ea104125e1f97dee3a7ca98ce"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 183913,
+      "sha256": "5ac1456e9111eb148ff6a3ef823474d8812803cadd67f66779442050dd286b81"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq.pyi",
+      "bytes": 2784,
+      "sha256": "e8c51d05f1ff0a105ddb64581d26e04cb3d3b0922d31f3f6ed059b1c9253c316"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 179953,
+      "sha256": "7266eaf15c0542055f32a288b97c52979f974a31daed9bf0563617e938dd6997"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_mpoly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 382073,
+      "sha256": "1b08a224308a94b21f409d570db364ab7afa70e47367d66f1bed34547e976830"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_mpoly.pyi",
+      "bytes": 5049,
+      "sha256": "755325b0b935bbcd4020b5e03b942562a05e4bface222fdec55adfd172eaa749"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 241777,
+      "sha256": "217bd96dbd0fcd72f5b225213e62aceab97496693bcc94c3041c18bec4f58285"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_poly.pyi",
+      "bytes": 3507,
+      "sha256": "ac14651872d49670cc923fb29bc19d60f68ccd635a68c796c05f5a9f77ec6dbe"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_series.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 208953,
+      "sha256": "56da1ab9a13e77c72e74794a2af1145fd088e5967246043fb722dba10be6ea8e"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_series.pyi",
+      "bytes": 2764,
+      "sha256": "8dd64c878beeaa4d5699e791fdddac24051de068193b00d9bc63e554d5f2b019"
+    },
+    {
+      "path": "vendor313/flint/types/fmpq_vec.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 126377,
+      "sha256": "1618d0ad0cefd1d903a5d2d478532cafbe032ac5d1f984321a9e1a6ed0ae8896"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 246033,
+      "sha256": "ecd570d20e26892c2e31f6d7a12c3354cdc9f38d8368ff6e28d5b5d868bdb76c"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz.pyi",
+      "bytes": 4160,
+      "sha256": "efee53246aa7fbfc8982ee7b827f7e79883065158b5e88eedbfe904adc1e6dd3"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 254081,
+      "sha256": "27125414c2eb01d67cd133008b795337d51a066167bfdb1d9bce8e754deb57dd"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 175521,
+      "sha256": "0fe8a3da377f44e695e1c3218be99db610cf8064e2568a6436643ecd8bc0e61e"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod.pyi",
+      "bytes": 1958,
+      "sha256": "fe86814eaf00f0c0dd7d7aa7854681469cb18d6fde2c869baaed78e195a33de2"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 237465,
+      "sha256": "bbdf19f931b1577ed7a10d616fd450c45fa0878050724d4d6937bee9d47111f2"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod_mpoly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 382177,
+      "sha256": "7db353a76215063251c242c99cf327e1c6d2b89ecaf0c4a87b60fadb611d8f66"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod_mpoly.pyi",
+      "bytes": 5606,
+      "sha256": "eda16b4d9f8789527df8e3f2e23a1cd2064453cbc0fb0d0c017567259f2921ce"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 418977,
+      "sha256": "8af03f8ee00bf201cb6bb2dc406a21826e54bc0134271a129839b220c349d700"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mod_poly.pyi",
+      "bytes": 6915,
+      "sha256": "a380cb85f3012f1bdc1fbc0918da126b98db2720d9c6f060bb775e06a4af79ec"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mpoly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 406985,
+      "sha256": "585d56603ea8231b8fbb86c8e321b3abbbd26fc521156f9f82c9266b9266030d"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_mpoly.pyi",
+      "bytes": 5582,
+      "sha256": "141f9dd1cf9e92097f116b7295174c22aeaf7f900fc52f8895d1d272d83d8b24"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 270985,
+      "sha256": "c4b54c12e2c10c01f16805369e8a7780a4d0af6b63a902b1913a6fc11441f0dd"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_poly.pyi",
+      "bytes": 3833,
+      "sha256": "8a9130cd258e3a9e706f532456b0ac0a9046e625712a8841d04deda0e5529398"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_series.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 167465,
+      "sha256": "6545578c1f90cb875efa0a0649201fd24e07837a144a8d01bedd60ee5e9ef85d"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_series.pyi",
+      "bytes": 1626,
+      "sha256": "9931112df1d6a98008ab35b6b874e89218769b723363e37a9f2ca2e4124f29ac"
+    },
+    {
+      "path": "vendor313/flint/types/fmpz_vec.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 126385,
+      "sha256": "942adcecb773e8eccb207df46aa23d6a3673cd153931b7355f61bbfba318a510"
+    },
+    {
+      "path": "vendor313/flint/types/fq_default.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 278745,
+      "sha256": "6283669a0e8b3ab8b22c2dbe2c8219210812d87b576d1a176ecb8b796f394960"
+    },
+    {
+      "path": "vendor313/flint/types/fq_default.pyi",
+      "bytes": 2781,
+      "sha256": "eaa31dec2e8a5ab93d823c149805bb88402677160eaba581e46ac496659bf288"
+    },
+    {
+      "path": "vendor313/flint/types/fq_default_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 431009,
+      "sha256": "cb6f3dfaf6b5b70d9cc73f6e9dcbafb4561427c878502127fac728f4c32341df"
+    },
+    {
+      "path": "vendor313/flint/types/fq_default_poly.pyi",
+      "bytes": 6402,
+      "sha256": "412abe1dc606b56200eac384b3726ea5ff252562ce6fc3fc54862a512fe89b17"
+    },
+    {
+      "path": "vendor313/flint/types/nmod.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 130201,
+      "sha256": "377fb095d8512b121dc4fb1a4ca7875c71e7d71d76f50dafe2a74cbd1279eb1f"
+    },
+    {
+      "path": "vendor313/flint/types/nmod.pyi",
+      "bytes": 1126,
+      "sha256": "8499b57e0c9963a6edd5e6cdf0e429a4b4d995ea9e5d46cf1b072026ef5051b9"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_mat.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 184073,
+      "sha256": "9c2032ff1b12b65bc0a9a629ccc16b5736cce0e029de0608aee3d243206c5edd"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_mpoly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 377825,
+      "sha256": "4dbc16da63815a4a82b96bc854a84ef8a196db7c2dfac82b6c1e55f06890c7c6"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_mpoly.pyi",
+      "bytes": 5185,
+      "sha256": "9c6e9e4012b1fe9e42091ff66aecfbcce4b08138b315f122f1d513eca76d0018"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_poly.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 278977,
+      "sha256": "309fc65e15ce71cd67babfc46cbc45bd5ddca52ed042278f20eb986cb6be59c5"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_poly.pyi",
+      "bytes": 3439,
+      "sha256": "38ffdca3fcaef609d03d953ab586ad3b17fffa8cf4fc9306a2e2934a6afd5bf1"
+    },
+    {
+      "path": "vendor313/flint/types/nmod_series.cpython-313-x86_64-linux-gnu.so",
+      "bytes": 67232,
+      "sha256": "a9323819d95df849421810a69b1fe29e50e5b15665a44d8b281e93b78c572289"
+    },
+    {
+      "path": "vendor313/flint/typing.py",
+      "bytes": 11837,
+      "sha256": "c70ece49cee6da815de4d7fa990f7c0bc3d651b1fa15754c33512ac5fb3b0d5b"
+    },
+    {
+      "path": "vendor313/flint/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/flint/utils/flint_exceptions.py",
+      "bytes": 752,
+      "sha256": "4ee9e74f1529883e68eb7281ee219d5d338d83d81b5d4c81c4af5dc05a067401"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/INSTALLER",
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/LICENSE",
+      "bytes": 24642,
+      "sha256": "92876ec27338b1d0d994eaa85d7837b916671c871e37d56e4676caf7cb134843"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/METADATA",
+      "bytes": 49803,
+      "sha256": "bbc916eb97debc8c6c6b179312a0f3ea36331915d703ff2055b5b1ca22bddfc0"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/RECORD",
+      "bytes": 8168,
+      "sha256": "d9135355b32d56d3e7e2ea66f3df93b400737477f165eaa904ca7e962384f353"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/REQUESTED",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor313/python_flint-0.8.0.dist-info/WHEEL",
+      "bytes": 137,
+      "sha256": "e232527718bbbb024f0fc136bfcb402242fad2f70de989cb69ceb410c4de3bee"
+    },
+    {
+      "path": "vendor313/python_flint.libs/libflint-24205715.so.21.0.0",
+      "bytes": 13708473,
+      "sha256": "513ac27a526bef27a1aa66bf0756ce62bbe41eba41f54f14771d8306b52a4228"
+    },
+    {
+      "path": "vendor313/python_flint.libs/libgmp-e0c82b6b.so.10.5.0",
+      "bytes": 744977,
+      "sha256": "33d24e675b10f8b1ab93a8ad3fa2ed5012e1b0d89dcdb97273877c6c6b9450d8"
+    },
+    {
+      "path": "vendor313/python_flint.libs/libmpfr-be332c05.so.6.2.2",
+      "bytes": 827881,
+      "sha256": "c4dfcfc7c5c7ab71d427e15f2f9fae4ace88592a81d4596a918dcc02eadfc6e3"
+    }
+  ],
+  "read_only_originals": true
+}

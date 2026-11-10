@@ -1,0 +1,651 @@
+{
+  "time": 1794280445.947519,
+  "measurement": "du allocated bytes, no symlink traversal; process memory current SSH account only; readonly, no deletion",
+  "account_uid": 1010,
+  "work_directory_rows": [
+    {
+      "path": "/home/quanliangwen/work/S9_small_recheck_20261109",
+      "exists": true,
+      "allocated_bytes": 32264192,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110",
+      "exists": true,
+      "allocated_bytes": 1390321664,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_feasible_S2_20261109",
+      "exists": true,
+      "allocated_bytes": 102367232,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_S10_20261109",
+      "exists": true,
+      "allocated_bytes": 141275136,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+      "exists": true,
+      "allocated_bytes": 64499712,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109",
+      "exists": true,
+      "allocated_bytes": 135680000,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_stability_20261109",
+      "exists": true,
+      "allocated_bytes": 19918848,
+      "complete": true,
+      "errors": []
+    }
+  ],
+  "work_directory_total_bytes": 1886326784,
+  "retained_version_directory_rows": {
+    "S10": [
+      {
+        "path": "/home/quanliangwen/work/cdf_lss_S10_20261109",
+        "exists": true,
+        "allocated_bytes": 141275136,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation",
+        "exists": true,
+        "allocated_bytes": 843776,
+        "complete": true,
+        "errors": []
+      }
+    ],
+    "I002": [
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood",
+        "exists": true,
+        "allocated_bytes": 13721600,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F001_I002_40x30",
+        "exists": true,
+        "allocated_bytes": 728727552,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case39",
+        "exists": true,
+        "allocated_bytes": 8347648,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I002_case40",
+        "exists": true,
+        "allocated_bytes": 8519680,
+        "complete": true,
+        "errors": []
+      }
+    ],
+    "I016": [
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover",
+        "exists": true,
+        "allocated_bytes": 3256320,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/formal/F002_I016_40x30",
+        "exists": true,
+        "allocated_bytes": 160305152,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/stability/I016_pair_cover_case39",
+        "exists": true,
+        "allocated_bytes": 5328896,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/breadth/I016_priority_four",
+        "exists": true,
+        "allocated_bytes": 7831552,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D004_I016_full_prefix",
+        "exists": true,
+        "allocated_bytes": 6844416,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D005_I016_pair_prefix",
+        "exists": true,
+        "allocated_bytes": 18698240,
+        "complete": true,
+        "errors": []
+      },
+      {
+        "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/research/D006_I016_breadth_prefix",
+        "exists": true,
+        "allocated_bytes": 21467136,
+        "complete": true,
+        "errors": []
+      }
+    ]
+  },
+  "retained_version_direct_bytes": 1125167104,
+  "shared_dependencies_or_delivery_rows": [
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/artifact",
+      "exists": true,
+      "allocated_bytes": 154255360,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/reference",
+      "exists": true,
+      "allocated_bytes": 331776,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/lss_cache",
+      "exists": true,
+      "allocated_bytes": 7344128,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/cdf_lss_aligned_S9_20261109/vendor313",
+      "exists": true,
+      "allocated_bytes": 26959872,
+      "complete": true,
+      "errors": []
+    }
+  ],
+  "shared_dependencies_or_delivery_bytes": 188891136,
+  "other_current_experiments_and_auxiliary_bytes": 572268544,
+  "historical_project_work": {
+    "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work",
+    "exists": true,
+    "allocated_bytes": 3939840000,
+    "complete": false,
+    "errors": [
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage3_test_20261107': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_test_20261106': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_callback_20261106': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v37_20261005': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_final600_20261106': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage4_test_20261107': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v14_20261005': Permission denied",
+      "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage2_test_20261107': Permission denied"
+    ]
+  },
+  "historical_project_directory_rows": [
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/assessed_cleanup_20261016",
+      "exists": true,
+      "allocated_bytes": 8335360,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R03_20261101",
+      "exists": true,
+      "allocated_bytes": 11857920,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R04_20261101",
+      "exists": true,
+      "allocated_bytes": 220037120,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R05_20261102",
+      "exists": true,
+      "allocated_bytes": 20480,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R06_20261102",
+      "exists": true,
+      "allocated_bytes": 48467968,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R07_20261102",
+      "exists": true,
+      "allocated_bytes": 45686784,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R08F_20261102",
+      "exists": true,
+      "allocated_bytes": 59715584,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R08_20261102",
+      "exists": true,
+      "allocated_bytes": 2233466880,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R09_20261102",
+      "exists": true,
+      "allocated_bytes": 56209408,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_R10_component_20261102",
+      "exists": true,
+      "allocated_bytes": 21278720,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_DRO_goal_20261101",
+      "exists": true,
+      "allocated_bytes": 36839424,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_Gamma_EPS_20261109",
+      "exists": true,
+      "allocated_bytes": 78594048,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_Gamma_flow_20261109",
+      "exists": true,
+      "allocated_bytes": 26697728,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_Gamma_flow_A02_20261109",
+      "exists": true,
+      "allocated_bytes": 30371840,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_B_R01_audit_20261101",
+      "exists": true,
+      "allocated_bytes": 2318336,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_ellipsoid_iteration_20261011",
+      "exists": true,
+      "allocated_bytes": 34385920,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_iteration_20261007",
+      "exists": true,
+      "allocated_bytes": 18198528,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v14_20261005",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v14_20261005': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v37_20261005",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v37_20261005': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_robust_v37_all40_20261005",
+      "exists": true,
+      "allocated_bytes": 92811264,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_ablation_20261016",
+      "exists": true,
+      "allocated_bytes": 243793920,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i01_20261017",
+      "exists": true,
+      "allocated_bytes": 94867456,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i02_20261024",
+      "exists": true,
+      "allocated_bytes": 17063936,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i03_20261025",
+      "exists": true,
+      "allocated_bytes": 15794176,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i04_20261025",
+      "exists": true,
+      "allocated_bytes": 13377536,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i05_20261025",
+      "exists": true,
+      "allocated_bytes": 17358848,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i06_20261025",
+      "exists": true,
+      "allocated_bytes": 17526784,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/codex_v50_dro_i07_20261026",
+      "exists": true,
+      "allocated_bytes": 17469440,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/nro_matpd_mckp_20261029",
+      "exists": true,
+      "allocated_bytes": 17616896,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/retention_v14_v37_v50_20261026",
+      "exists": true,
+      "allocated_bytes": 3497984,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_callback_20261106",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_callback_20261106': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_final600_20261106",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_final600_20261106': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_test_20261106",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage1_test_20261106': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage2_test_20261107",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage2_test_20261107': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage3_test_20261107",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage3_test_20261107': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage4_test_20261107",
+      "exists": true,
+      "allocated_bytes": 4096,
+      "complete": false,
+      "errors": [
+        "du: cannot read directory '/home/junhao/quan/parallel_test_solver/CCMKCP/work/stage4_test_20261107': Permission denied"
+      ]
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/v37_final_all40x30_20261006",
+      "exists": true,
+      "allocated_bytes": 10096640,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/v50_all40x30_20261007",
+      "exists": true,
+      "allocated_bytes": 390311936,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/v50_i01_all40x30_offline_20261026",
+      "exists": true,
+      "allocated_bytes": 51384320,
+      "complete": true,
+      "errors": []
+    }
+  ],
+  "other_current_plus_visible_historical_bytes": 4512108544,
+  "historical_measurement_complete": false,
+  "historical_permission_denied_directories": 8,
+  "original_shared_benchmark": {
+    "path": "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark",
+    "exists": true,
+    "allocated_bytes": 71987200,
+    "complete": true,
+    "errors": []
+  },
+  "iterations_detail": [
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I001_risk_portfolio",
+      "exists": true,
+      "allocated_bytes": 23195648,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I002_cdf_neighborhood",
+      "exists": true,
+      "allocated_bytes": 13721600,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I003_ellipsoid_frontier",
+      "exists": true,
+      "allocated_bytes": 16158720,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I004_robust_pair_exchange",
+      "exists": true,
+      "allocated_bytes": 29896704,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I005_exact_cdf_bound",
+      "exists": true,
+      "allocated_bytes": 61399040,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I006_cdf_branch_order",
+      "exists": true,
+      "allocated_bytes": 8560640,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I007_integer_budget_cdf",
+      "exists": true,
+      "allocated_bytes": 278528,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I008_suffix_budget_search",
+      "exists": true,
+      "allocated_bytes": 9256960,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I009_cached_mass_search",
+      "exists": true,
+      "allocated_bytes": 19046400,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I010_robust_priority",
+      "exists": true,
+      "allocated_bytes": 5128192,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I011_robust_block_mitm",
+      "exists": true,
+      "allocated_bytes": 1990656,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I012_iterated_block_mitm",
+      "exists": true,
+      "allocated_bytes": 6795264,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I014_hybrid_cdf_blocks",
+      "exists": true,
+      "allocated_bytes": 3309568,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I015_precision_closure",
+      "exists": true,
+      "allocated_bytes": 3489792,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I016_cdf_pair_cover",
+      "exists": true,
+      "allocated_bytes": 3256320,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/I017_LSS_mainflow_two_case_confirmation",
+      "exists": true,
+      "allocated_bytes": 442368,
+      "complete": true,
+      "errors": []
+    },
+    {
+      "path": "/home/quanliangwen/work/ccmckp_robust_continuous_20261110/iterations/S10_LSS_mainflow_APP3_confirmation",
+      "exists": true,
+      "allocated_bytes": 843776,
+      "complete": true,
+      "errors": []
+    }
+  ],
+  "related_current_account_processes": [
+    {
+      "pid": 842249,
+      "command": "bash -c cd /home/quanliangwen/work/cdf_lss_aligned_S3_20261109; nohup python3 -u monitor_final_summary.py > monitor_final_summary.log 2>&1 < /dev/null & wait ",
+      "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+      "state": "S (sleeping)",
+      "rss_kib": 3620,
+      "pss_kib": 992
+    },
+    {
+      "pid": 842250,
+      "command": "python3 -u monitor_final_summary.py ",
+      "cwd": "/home/quanliangwen/work/cdf_lss_aligned_S3_20261109",
+      "state": "S (sleeping)",
+      "rss_kib": 11508,
+      "pss_kib": 6632
+    }
+  ],
+  "process_rss_total_kib": 15128,
+  "process_pss_total_kib": 7624,
+  "process_pss_all_available": true,
+  "root_free_for_account_bytes": 241377280,
+  "preservation_not_a_cleanup": true,
+  "new_60worker_experiments_started": false
+}
