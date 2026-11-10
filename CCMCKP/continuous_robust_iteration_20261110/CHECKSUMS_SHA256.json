@@ -193,6 +193,11 @@
       "sha256": "60063061bdab660a6c2432d853b953d63517bc1f11ca5f93e6c0d79bfcef382c"
     },
     {
+      "path": "check_third_group_repair.py",
+      "bytes": 2318,
+      "sha256": "02673e219104a53e51478fe846416c6095d4fc6e4ccfbc18b66b98c2fa9d222d"
+    },
+    {
       "path": "COST_CDF_BOUND_DIAGNOSTIC.json",
       "bytes": 56530,
       "sha256": "d03fd3731e4192faf1a28ef86f6f56243c99b8d26ba1b940fe427ed3564c672f"
@@ -2108,6 +2113,16 @@
       "sha256": "ee85e23acbc364b245714b4c4d986335d565a541fe1b335454c1fdd03e1523bc"
     },
     {
+      "path": "register_third_group_replay.py",
+      "bytes": 2248,
+      "sha256": "239d601ea4395f125e9361d9f06c5a0646342b5ac10314172284855bc9a67d8a"
+    },
+    {
+      "path": "replay_third_group_repair.py",
+      "bytes": 4393,
+      "sha256": "f020a5a55cb9f371de84c6b8f4c1ffa7147032721faabf505b2a9e9f035c2c86"
+    },
+    {
       "path": "research/adaptive_budget_cdf/adaptive_budget_cdf.py",
       "bytes": 1195,
       "sha256": "75079e4e591e85615257cac1e677c67979e85b1228750bb1015f7071f85d111c"
@@ -3133,6 +3148,16 @@
       "sha256": "6d244fb724225778fba2f63598697c3cbd4926dc1eee7cd3d1bb45dcc432867c"
     },
     {
+      "path": "research/third_group_repair_preflight/MATH_CHECK.json",
+      "bytes": 2606,
+      "sha256": "fca2a2febbb27201d7aa71b4311a809c587155167dfa820ab47df14ff067b321"
+    },
+    {
+      "path": "research/third_group_repair_replay/REGISTRATION.json",
+      "bytes": 49566,
+      "sha256": "047d462ea42ecefb0c12a7e80b79bf881e8890a16df77231369c591b47bb988f"
+    },
+    {
       "path": "RISK_MATH_CHECK.json",
       "bytes": 86,
       "sha256": "fcf36dd93da111351dbd3aa5c479983f7dd069be0bf96dcc804cb6de79ff353f"
@@ -3471,6 +3496,11 @@
       "path": "summarize_i001_progress.py",
       "bytes": 2786,
       "sha256": "58dfb0ca6f718220475682815d99429afd0249c306003a433dda97a1c87490c3"
+    },
+    {
+      "path": "third_group_repair.py",
+      "bytes": 1657,
+      "sha256": "0655ee82dac68142cffc25fcc8da2762ba31daf9e1d99fccf13eb6949e556fc5"
     },
     {
       "path": "validate_f001.py",

@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "fixtures": 36,
+  "checks": 94,
+  "max_probability_error": 3.2959746043559335e-17,
+  "scope": "actual proposal kernel versus direct positive truncated convolutions; no benchmark search/MC/performance or new feasibility claim",
+  "preflight_recovery": "first test incorrectly required nonempty proposals for every random fixture; actual proposal layers may legitimately be empty; removed only that fixture assumption and retained all36 fixtures including empty outcomes; numerical proposal source unchanged",
+  "source_sha256": "0655ee82dac68142cffc25fcc8da2762ba31daf9e1d99fccf13eb6949e556fc5",
+  "records": [
+    {
+      "fixture": 0,
+      "proposals": 2
+    },
+    {
+      "fixture": 1,
+      "proposals": 3
+    },
+    {
+      "fixture": 2,
+      "proposals": 3
+    },
+    {
+      "fixture": 3,
+      "proposals": 3
+    },
+    {
+      "fixture": 4,
+      "proposals": 2
+    },
+    {
+      "fixture": 5,
+      "proposals": 2
+    },
+    {
+      "fixture": 6,
+      "proposals": 3
+    },
+    {
+      "fixture": 7,
+      "proposals": 2
+    },
+    {
+      "fixture": 8,
+      "proposals": 3
+    },
+    {
+      "fixture": 9,
+      "proposals": 3
+    },
+    {
+      "fixture": 10,
+      "proposals": 3
+    },
+    {
+      "fixture": 11,
+      "proposals": 2
+    },
+    {
+      "fixture": 12,
+      "proposals": 3
+    },
+    {
+      "fixture": 13,
+      "proposals": 3
+    },
+    {
+      "fixture": 14,
+      "proposals": 1
+    },
+    {
+      "fixture": 15,
+      "proposals": 3
+    },
+    {
+      "fixture": 16,
+      "proposals": 3
+    },
+    {
+      "fixture": 17,
+      "proposals": 2
+    },
+    {
+      "fixture": 18,
+      "proposals": 1
+    },
+    {
+      "fixture": 19,
+      "proposals": 3
+    },
+    {
+      "fixture": 20,
+      "proposals": 0
+    },
+    {
+      "fixture": 21,
+      "proposals": 3
+    },
+    {
+      "fixture": 22,
+      "proposals": 3
+    },
+    {
+      "fixture": 23,
+      "proposals": 3
+    },
+    {
+      "fixture": 24,
+      "proposals": 3
+    },
+    {
+      "fixture": 25,
+      "proposals": 3
+    },
+    {
+      "fixture": 26,
+      "proposals": 3
+    },
+    {
+      "fixture": 27,
+      "proposals": 3
+    },
+    {
+      "fixture": 28,
+      "proposals": 3
+    },
+    {
+      "fixture": 29,
+      "proposals": 2
+    },
+    {
+      "fixture": 30,
+      "proposals": 3
+    },
+    {
+      "fixture": 31,
+      "proposals": 3
+    },
+    {
+      "fixture": 32,
+      "proposals": 3
+    },
+    {
+      "fixture": 33,
+      "proposals": 3
+    },
+    {
+      "fixture": 34,
+      "proposals": 1
+    },
+    {
+      "fixture": 35,
+      "proposals": 3
+    }
+  ]
+}
