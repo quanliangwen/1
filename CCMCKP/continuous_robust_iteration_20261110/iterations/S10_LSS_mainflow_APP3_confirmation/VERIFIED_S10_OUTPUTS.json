@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "time": 1794277910.2253132,
+  "scope": "APP_3_5_30 T21/T27 each one NEW original frozen S10 run, original LSS evaluator and output0 CSV; not40x30",
+  "S10_search_files_byte_identical": 12,
+  "S10_source_sha256": {
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "run.py": "e5f196f1cb19167a16390372c112c8d3f7f67ff56474f925b9556ad46d59ab83",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "original_LSS_files_unmodified": 21,
+  "original_LSS_output_tail_AST_unchanged": true,
+  "extra_real_probability_hard_filter": false,
+  "old_real_probability_postselector_invoked": false,
+  "I017_search_not_used": true,
+  "new_MC_calls_by_verifier": 0,
+  "rows": [
+    {
+      "instance": "APP_3_5_30_",
+      "capacity": 21,
+      "cost": 9.034717299521294,
+      "cost_6dp": "9.034717",
+      "original_LSS_confidence": 0.9924814814814815,
+      "recorded_real_probability": 0.9651546,
+      "selection": [
+        12,
+        10,
+        11
+      ],
+      "S10_search_seconds": 0.028291805647313595,
+      "original_mainflow_search_seconds": 1.1906640529632568,
+      "S10_candidates": 24,
+      "S10_complete_enumerated_choices": 125,
+      "original_CSV": "iterations/S10_LSS_mainflow_APP3_confirmation/case_T21/result/Localsearch/LocalSearch_app_3_5_30_21_0.csv",
+      "original_CSV_sha256": "5c6bec206fe6a1b4487e7025639967aaa63f2d83cc6fd0595ecec4e4d985a86e",
+      "S10_result_sha256": "967451f6efc12698a680db83ab89f3cd1ac9ec9640aa6e90018123ec799beb0d",
+      "new_runs": 1
+    },
+    {
+      "instance": "APP_3_5_30_",
+      "capacity": 27,
+      "cost": 7.25001317010452,
+      "cost_6dp": "7.250013",
+      "original_LSS_confidence": 0.9955185185185185,
+      "recorded_real_probability": 0.971381,
+      "selection": [
+        12,
+        1,
+        11
+      ],
+      "S10_search_seconds": 0.025360604748129845,
+      "original_mainflow_search_seconds": 1.0296838283538818,
+      "S10_candidates": 34,
+      "S10_complete_enumerated_choices": 125,
+      "original_CSV": "iterations/S10_LSS_mainflow_APP3_confirmation/case_T27/result/Localsearch/LocalSearch_app_3_5_30_27_0.csv",
+      "original_CSV_sha256": "de477c7468452f8d39f36795f4bed875477e715983e078e4082bc4172191ebd5",
+      "S10_result_sha256": "714de6edf71e60669fd7a1eb6e52cc4add420b6a876775449c056e39e72befbf",
+      "new_runs": 1
+    }
+  ]
+}
