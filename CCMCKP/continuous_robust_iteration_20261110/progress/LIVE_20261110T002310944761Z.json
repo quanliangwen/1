@@ -1,0 +1,223 @@
+{
+  "time": 1794270190.9272091,
+  "scope": "Actual narrow process/marker/progress observation, never optimizer input.",
+  "formal_F001": {
+    "controller": {
+      "pid": 924526,
+      "confirmed_live": false
+    },
+    "stage": {
+      "stage": "complete pending independent audit and Excel",
+      "time": 1794269421.4443867,
+      "goal_status": "active"
+    },
+    "search_progress": {
+      "finished": 1200,
+      "required": 1200,
+      "running": 0,
+      "pending": 0,
+      "ordinary_errors": 0
+    },
+    "last_independent_progress_audit": {
+      "stage": "validation",
+      "required": 1200,
+      "search_finished": 1200,
+      "search_source_and_input_verified": 1200,
+      "validation_finished": 915,
+      "qualified": 915,
+      "errors": [],
+      "warning": "search completion is not LSS qualification; no30-run Avg until complete audit"
+    },
+    "search_finished": true,
+    "validation_finished": true,
+    "actual_validation_records": 1200,
+    "actual_validation_qualified": 1200,
+    "validation_errors": [],
+    "final_audit_exists": true,
+    "final_independent_audit": {
+      "integrity_passed": true,
+      "all1200_qualified": true,
+      "registered_attempts": 1200,
+      "protocol_valid": 1200,
+      "joint_accepted": 1200,
+      "physical_new_invocation_attempts": 7,
+      "physical_new_native_call_wall_seconds": 280.610878797248
+    },
+    "actual_final_workbook": {
+      "exists": true,
+      "visual_review_passed": true,
+      "xlsx_sha256": "7d1a03416cffbddecae51e935dc8e5de9e446fb5ac63e5ba7d13e726db068a15"
+    }
+  },
+  "D003": {
+    "controller": {
+      "pid": 1038419,
+      "confirmed_live": false
+    },
+    "postcontroller": {
+      "pid": 1040304,
+      "confirmed_live": false
+    },
+    "progress": {
+      "result_file": "RESULT.json",
+      "batches": 15,
+      "physical_attempts": 57,
+      "all_prefixes_complete": true,
+      "controller_error": null,
+      "pools": {
+        "I002_control_seed9715211": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.5052425852936,
+          "known_upper_cost": 329.5052425852936,
+          "missing": 0,
+          "failures": 0
+        },
+        "I002_control_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.83616418693003,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 0,
+          "failures": 0
+        },
+        "I002_control_seed9715213": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.6329448413432,
+          "known_upper_cost": 329.6329448413432,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715211": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 324.9162246028648,
+          "known_upper_cost": 324.9162246028648,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 325.92697338399864,
+          "known_upper_cost": 325.92697338399864,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715213": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 327.74660571656574,
+          "known_upper_cost": 327.74660571656574,
+          "missing": 0,
+          "failures": 0
+        }
+      }
+    },
+    "post_state": {
+      "stage": "completed",
+      "time": 1794269119.2649636,
+      "error": null
+    },
+    "post_terminal": {
+      "passed": true,
+      "error": null,
+      "steps": [
+        {
+          "driver": "snapshot_d003_isolation.py",
+          "exit": 0,
+          "wall": 0.06557227112352848
+        },
+        {
+          "driver": "audit_d003_stability_prefix.py",
+          "exit": 0,
+          "wall": 1.6693300856277347
+        },
+        {
+          "driver": "summarize_d003_paired_stability.py",
+          "exit": 0,
+          "wall": 0.0650976924225688
+        }
+      ],
+      "wall_including_wait": 312.31747880391777,
+      "scope": "actual six-prefix direct audit and3seeddevelopment statistics; no new MC or30formalAvg"
+    },
+    "three_seed_statistics_ready": true
+  },
+  "I016": {
+    "controller": {
+      "pid": 1040300,
+      "confirmed_live": false
+    },
+    "postcontroller": {
+      "pid": 1040303,
+      "confirmed_live": false
+    },
+    "terminal": {
+      "exit": 0,
+      "wall": 537.6482402132824,
+      "source_sha256": {
+        "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c",
+        "risk_models.py": "40eaa4b27494eacd9c79d5aa269d79b6ad311a3b5cf9643efb990c71e9bc8073",
+        "risk_solver.py": "8b325847334f3aba1d10d93d0d2f186e1fa33144f8ca1991c842f55b307ee7f0",
+        "block_exchange.py": "83ad3451723e5f0a65fed3567e656ae95c9b891270b5bf7ab75b4319bd3804a5",
+        "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+        "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+        "pair_cover_schedule.py": "3e986eee5d6f55ca8bcc5cdbe7ee7082cb347f528d3e0faaaab6ee8edf76544a",
+        "hybrid_schedule.py": "4e46853128575a33919e0546741100f501a4cf2b9b483175489f2ad343eae7ae",
+        "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+        "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+        "s10_kernel.py": "104b6e9bf441966c0d32997e5bdfa1faddd5a2afe7acdf1f9af717d937d987b3",
+        "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+        "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+        "run.py": "4ae64000fcc6f38ac47889e6aa863e722df8ad6c4f42ec4d1513091fb0da3c50",
+        "ellipsoid_frontier.py": "771ae4c839294dd021d781e11f024086dfc3a0e6c9dccd0d09365f1ebc2966b9",
+        "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+        "pair_exchange.py": "1420069cbb9c741dc3e1f2fe2b2ad3dfdeb783a6093a949a171753a04a5a43df",
+        "precision_closure.py": "f9f8eb7aac88309058053081f962a1441142dcd9607f88b0d3bad3998ce66485",
+        "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+        "portfolio_lns.py": "9261884c2d09d049bad18f5ff33691debaa8f48586daa93357e7b2bf57cd2348",
+        "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+        "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190"
+      }
+    },
+    "post_state": {
+      "stage": "completed",
+      "time": 1794269455.9866838,
+      "error": null
+    },
+    "post_terminal": {
+      "passed": true,
+      "error": null,
+      "steps": [
+        {
+          "driver": "audit_i016_engineering39.py",
+          "exit": 0,
+          "wall": 108.51532575953752
+        }
+      ],
+      "wall_including_wait": 649.0829715896398,
+      "registration_sha256": "3a9713d4f740bba4b2487235b5b538b796c381e60ab6f179281547bc682b8c0e",
+      "scope": "actual frozen engineering structural/budget/source/input and full independent raw recount only; no new original-LSS MC or30-run statistics"
+    },
+    "independent_raw_audit_exists": true
+  },
+  "D004": {
+    "registered": true,
+    "controller": {
+      "pid": 1047135,
+      "confirmed_live": true
+    },
+    "postcontroller": {
+      "pid": 1047137,
+      "confirmed_live": true
+    },
+    "progress": null,
+    "post_state": {
+      "stage": "waiting_actual_D004_complete_prefixes",
+      "time": 1794270190.8075955
+    },
+    "post_terminal": null
+  }
+}

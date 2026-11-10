@@ -1,0 +1,152 @@
+{
+  "time": 1794269311.9336786,
+  "scope": "Actual narrow process/marker/progress observation, never optimizer input.",
+  "formal_F001": {
+    "controller": {
+      "pid": 924526,
+      "confirmed_live": true
+    },
+    "stage": {
+      "stage": "validation",
+      "time": 1794269129.5696929,
+      "goal_status": "active"
+    },
+    "search_progress": {
+      "finished": 1200,
+      "required": 1200,
+      "running": 0,
+      "pending": 0,
+      "ordinary_errors": 0
+    },
+    "last_independent_progress_audit": {
+      "stage": "validation",
+      "required": 1200,
+      "search_finished": 1200,
+      "search_source_and_input_verified": 1200,
+      "validation_finished": 915,
+      "qualified": 915,
+      "errors": [],
+      "warning": "search completion is not LSS qualification; no30-run Avg until complete audit"
+    },
+    "search_finished": true,
+    "validation_finished": false,
+    "actual_validation_records": 915,
+    "actual_validation_qualified": 915,
+    "validation_errors": [],
+    "final_audit_exists": false
+  },
+  "D003": {
+    "controller": {
+      "pid": 1038419,
+      "confirmed_live": false
+    },
+    "postcontroller": {
+      "pid": 1040304,
+      "confirmed_live": false
+    },
+    "progress": {
+      "result_file": "RESULT.json",
+      "batches": 15,
+      "physical_attempts": 57,
+      "all_prefixes_complete": true,
+      "controller_error": null,
+      "pools": {
+        "I002_control_seed9715211": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.5052425852936,
+          "known_upper_cost": 329.5052425852936,
+          "missing": 0,
+          "failures": 0
+        },
+        "I002_control_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.83616418693003,
+          "known_upper_cost": 329.83616418693003,
+          "missing": 0,
+          "failures": 0
+        },
+        "I002_control_seed9715213": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 329.6329448413432,
+          "known_upper_cost": 329.6329448413432,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715211": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 324.9162246028648,
+          "known_upper_cost": 324.9162246028648,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715212": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 325.92697338399864,
+          "known_upper_cost": 325.92697338399864,
+          "missing": 0,
+          "failures": 0
+        },
+        "I015_hybrid_seed9715213": {
+          "prefix_complete": true,
+          "accepted": true,
+          "selected_cost": 327.74660571656574,
+          "known_upper_cost": 327.74660571656574,
+          "missing": 0,
+          "failures": 0
+        }
+      }
+    },
+    "post_state": {
+      "stage": "completed",
+      "time": 1794269119.2649636,
+      "error": null
+    },
+    "post_terminal": {
+      "passed": true,
+      "error": null,
+      "steps": [
+        {
+          "driver": "snapshot_d003_isolation.py",
+          "exit": 0,
+          "wall": 0.06557227112352848
+        },
+        {
+          "driver": "audit_d003_stability_prefix.py",
+          "exit": 0,
+          "wall": 1.6693300856277347
+        },
+        {
+          "driver": "summarize_d003_paired_stability.py",
+          "exit": 0,
+          "wall": 0.0650976924225688
+        }
+      ],
+      "wall_including_wait": 312.31747880391777,
+      "scope": "actual six-prefix direct audit and3seeddevelopment statistics; no new MC or30formalAvg"
+    },
+    "three_seed_statistics_ready": true
+  },
+  "I016": {
+    "controller": {
+      "pid": 1040300,
+      "confirmed_live": true
+    },
+    "postcontroller": {
+      "pid": 1040303,
+      "confirmed_live": true
+    },
+    "terminal": null,
+    "post_state": {
+      "stage": "waiting_for_actual_engineering_terminal",
+      "pid": 1040300,
+      "time": 1794268806.9037833
+    },
+    "post_terminal": null,
+    "independent_raw_audit_exists": false
+  }
+}
