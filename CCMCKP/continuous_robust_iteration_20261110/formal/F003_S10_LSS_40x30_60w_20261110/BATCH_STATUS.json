@@ -1,0 +1,15 @@
+{
+  "state": "running",
+  "updated_utc": "2026-11-10T04:49:20.269151+00:00",
+  "registered": 1200,
+  "workers": 60,
+  "completed_at_snapshot": 92,
+  "failed_at_snapshot": 0,
+  "supervisor_pid": 1137946,
+  "postprocessor_pid": 1141461,
+  "source_commit": "fc21aa3379582bdb07ec0768531abc3e46fee2a3",
+  "source_remote_byte_and_SHA256_verified": true,
+  "extra_true_probability_filter": false,
+  "old_goal_remains_paused": true,
+  "completion_pipeline": "Independent audit and original CSV merge, 40case raw evidence archives, artifact-tool Excel, GitHub upload and remote byte/SHA verification; no old solver jobs resumed"
+}

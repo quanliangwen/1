@@ -1,0 +1,38 @@
+{
+  "time": 1794285657.6590223,
+  "pid": 1137946,
+  "workers": 60,
+  "registered_trials": 1200,
+  "source_remote_verified": {
+    "commit": "fc21aa3379582bdb07ec0768531abc3e46fee2a3",
+    "folder": "CCMCKP/continuous_robust_iteration_20261110/formal/F003_S10_LSS_40x30_60w_20261110",
+    "verified_files": [
+      {
+        "path": "BENCHMARK_MANIFEST.json",
+        "bytes": 645180,
+        "sha256": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d",
+        "git_blob": "d4822aed1bdaa7ecd2d3e47a2158f5ac55d4688e"
+      },
+      {
+        "path": "REGISTRATION.json",
+        "bytes": 11024,
+        "sha256": "27d6be20e3a96e6ef1310fbdaf3beb3563fba6fd4fbdba1da08b00b3a7f91c68",
+        "git_blob": "20f48db3ea1f97a10bfa5e6a3aef4efeb737baf1"
+      },
+      {
+        "path": "S10_FULL60_FROZEN_SOURCE.zip",
+        "bytes": 401632,
+        "sha256": "46a5f970c0633e3eeb0ef455e0d721d7cee0b6d7ea298fd2d9f5f3c74ea4c575",
+        "git_blob": "a4e73f4c6eaa53794b0e5131a72e54a1d697c7bb"
+      },
+      {
+        "path": "SOURCE_MANIFEST.json",
+        "bytes": 7340,
+        "sha256": "0d6886b1a0909c3786b2ad73c2bb20f8b69a27f13bb496714ec22d42ccdc2205",
+        "git_blob": "bd2076eb2030b69624fb8c91ffca3f04923c1bd8"
+      }
+    ],
+    "byte_and_sha256_verified": true,
+    "source_zip_CRC_passed": true
+  }
+}
