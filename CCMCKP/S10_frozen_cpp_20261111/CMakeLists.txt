@@ -1,0 +1,55 @@
+cmake_minimum_required(VERSION 3.20)
+project(ccmckp_s10 LANGUAGES C CXX)
+
+option(S10_ENABLE_GUROBI "Build the native Gurobi backend" ON)
+option(S10_ENABLE_HIGHS "Build the optional native HiGHS backend" OFF)
+set(S10_GUROBI_ROOT "$ENV{GUROBI_HOME}" CACHE PATH "Gurobi SDK root")
+set(S10_GMP_ROOT "" CACHE PATH "GMP installation prefix")
+
+find_path(S10_GMP_INCLUDE gmpxx.h HINTS "${S10_GMP_ROOT}/include" REQUIRED)
+find_library(S10_GMP gmp HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+find_library(S10_GMPXX gmpxx HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+
+add_executable(ccmckp_s10 main.cpp model.cpp rng.cpp evaluation.cpp search.cpp mip.cpp report.cpp)
+target_compile_features(ccmckp_s10 PRIVATE cxx_std_17)
+target_include_directories(ccmckp_s10 SYSTEM PRIVATE "${S10_GMP_INCLUDE}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
+target_link_libraries(ccmckp_s10 PRIVATE "${S10_GMPXX}" "${S10_GMP}")
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(ccmckp_s10 PRIVATE -Wall -Wextra -ffp-contract=off)
+else()
+    message(FATAL_ERROR "Use 64-bit GCC or Clang with unsigned __int128 support")
+endif()
+
+if(S10_ENABLE_GUROBI)
+    find_path(S10_GUROBI_INCLUDE gurobi_c.h HINTS "${S10_GUROBI_ROOT}/include" REQUIRED)
+    find_library(S10_GUROBI_LIBRARY NAMES gurobi130 gurobi120 gurobi110 gurobi100 gurobi
+        HINTS "${S10_GUROBI_ROOT}/lib" REQUIRED)
+    target_include_directories(ccmckp_s10 PRIVATE "${S10_GUROBI_INCLUDE}")
+    target_link_libraries(ccmckp_s10 PRIVATE "${S10_GUROBI_LIBRARY}")
+    target_compile_definitions(ccmckp_s10 PRIVATE S10_HAS_GUROBI)
+endif()
+
+if(S10_ENABLE_HIGHS)
+    find_package(highs 1.11 CONFIG QUIET)
+    if(NOT TARGET highs::highs AND NOT TARGET highs)
+        include(FetchContent)
+        set(FAST_BUILD ON CACHE BOOL "" FORCE)
+        set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+        set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+        set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+        FetchContent_Declare(highs
+            GIT_REPOSITORY https://github.com/ERGO-Code/HiGHS.git
+            GIT_TAG 364c83a51e44ba6c27def9c8fc1a49b1daf5ad5c)
+        FetchContent_MakeAvailable(highs)
+    endif()
+    if(TARGET highs::highs)
+        target_link_libraries(ccmckp_s10 PRIVATE highs::highs)
+    else()
+        target_link_libraries(ccmckp_s10 PRIVATE highs)
+    endif()
+    target_compile_definitions(ccmckp_s10 PRIVATE S10_HAS_HIGHS)
+endif()
+
+configure_file(CASES.json CASES.json COPYONLY)
+configure_file(BENCHMARK_MANIFEST.json BENCHMARK_MANIFEST.json COPYONLY)
+
