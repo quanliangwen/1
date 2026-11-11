@@ -1,0 +1,403 @@
+{
+  "study": "S10_Gurobi_no_local_40x30_60w_20261111",
+  "cases": [
+    {
+      "index": 1,
+      "instance": "LAB_3_5_30_",
+      "tmax": 11.0
+    },
+    {
+      "index": 2,
+      "instance": "LAB_3_5_30_",
+      "tmax": 14.0
+    },
+    {
+      "index": 3,
+      "instance": "LAB_4_5_30_",
+      "tmax": 18.0
+    },
+    {
+      "index": 4,
+      "instance": "LAB_4_5_30_",
+      "tmax": 26.0
+    },
+    {
+      "index": 5,
+      "instance": "LAB_5_5_30_",
+      "tmax": 11.0
+    },
+    {
+      "index": 6,
+      "instance": "LAB_5_5_30_",
+      "tmax": 20.0
+    },
+    {
+      "index": 7,
+      "instance": "LAB_5_10_30_",
+      "tmax": 10.0
+    },
+    {
+      "index": 8,
+      "instance": "LAB_5_10_30_",
+      "tmax": 16.0
+    },
+    {
+      "index": 9,
+      "instance": "LAB_10_10_500_",
+      "tmax": 19.0
+    },
+    {
+      "index": 10,
+      "instance": "LAB_10_10_500_",
+      "tmax": 23.0
+    },
+    {
+      "index": 11,
+      "instance": "LAB_10_20_500_",
+      "tmax": 12.0
+    },
+    {
+      "index": 12,
+      "instance": "LAB_10_20_500_",
+      "tmax": 15.0
+    },
+    {
+      "index": 13,
+      "instance": "LAB_20_10_500_",
+      "tmax": 25.0
+    },
+    {
+      "index": 14,
+      "instance": "LAB_20_10_500_",
+      "tmax": 32.0
+    },
+    {
+      "index": 15,
+      "instance": "LAB_30_10_500_",
+      "tmax": 43.0
+    },
+    {
+      "index": 16,
+      "instance": "LAB_30_10_500_",
+      "tmax": 52.0
+    },
+    {
+      "index": 17,
+      "instance": "LAB_40_10_500_",
+      "tmax": 55.0
+    },
+    {
+      "index": 18,
+      "instance": "LAB_40_10_500_",
+      "tmax": 63.0
+    },
+    {
+      "index": 19,
+      "instance": "LAB_50_10_500_",
+      "tmax": 63.0
+    },
+    {
+      "index": 20,
+      "instance": "LAB_50_10_500_",
+      "tmax": 75.0
+    },
+    {
+      "index": 21,
+      "instance": "APP_3_5_30_",
+      "tmax": 21.0
+    },
+    {
+      "index": 22,
+      "instance": "APP_3_5_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 23,
+      "instance": "APP_4_5_30_",
+      "tmax": 47.0
+    },
+    {
+      "index": 24,
+      "instance": "APP_4_5_30_",
+      "tmax": 49.0
+    },
+    {
+      "index": 25,
+      "instance": "APP_5_5_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 26,
+      "instance": "APP_5_5_30_",
+      "tmax": 38.0
+    },
+    {
+      "index": 27,
+      "instance": "APP_5_10_30_",
+      "tmax": 16.0
+    },
+    {
+      "index": 28,
+      "instance": "APP_5_10_30_",
+      "tmax": 27.0
+    },
+    {
+      "index": 29,
+      "instance": "APP_10_10_500_",
+      "tmax": 32.0
+    },
+    {
+      "index": 30,
+      "instance": "APP_10_10_500_",
+      "tmax": 37.0
+    },
+    {
+      "index": 31,
+      "instance": "APP_10_20_500_",
+      "tmax": 13.0
+    },
+    {
+      "index": 32,
+      "instance": "APP_10_20_500_",
+      "tmax": 16.0
+    },
+    {
+      "index": 33,
+      "instance": "APP_20_10_500_",
+      "tmax": 43.0
+    },
+    {
+      "index": 34,
+      "instance": "APP_20_10_500_",
+      "tmax": 48.0
+    },
+    {
+      "index": 35,
+      "instance": "APP_30_10_500_",
+      "tmax": 58.0
+    },
+    {
+      "index": 36,
+      "instance": "APP_30_10_500_",
+      "tmax": 70.0
+    },
+    {
+      "index": 37,
+      "instance": "APP_40_10_500_",
+      "tmax": 85.0
+    },
+    {
+      "index": 38,
+      "instance": "APP_40_10_500_",
+      "tmax": 95.0
+    },
+    {
+      "index": 39,
+      "instance": "APP_50_10_500_",
+      "tmax": 91.0
+    },
+    {
+      "index": 40,
+      "instance": "APP_50_10_500_",
+      "tmax": 100.0
+    }
+  ],
+  "repetitions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "search_seeds": [
+    960001,
+    960002,
+    960003,
+    960004,
+    960005,
+    960006,
+    960007,
+    960008,
+    960009,
+    960010,
+    960011,
+    960012,
+    960013,
+    960014,
+    960015,
+    960016,
+    960017,
+    960018,
+    960019,
+    960020,
+    960021,
+    960022,
+    960023,
+    960024,
+    960025,
+    960026,
+    960027,
+    960028,
+    960029,
+    960030
+  ],
+  "arms": {
+    "G_NONE": {
+      "backend": "gurobi",
+      "phases": "none"
+    }
+  },
+  "trials": 1200,
+  "concurrent_trials": 60,
+  "search_seconds": 600,
+  "search_watchdog_seconds": 640,
+  "S10_source_sha256": {
+    "ablation_solver.py": "eb84d958a62c5a545c0f0f08c83ee48c59f738d116c259715fdfd5b3a46dac6a",
+    "engine.py": "09237b1f2641523a29421be0c9a31253e79e53a906c3eb5cb4958779ddb0dc46",
+    "exact_oracle.py": "053b09e54d5bfa34dd9cfee254f6448f51b9c7fcd1e714e7d4ad9336c5424e49",
+    "gurobi_backend.py": "178781910fa894081093f1ed17be94ea4a6a0092127d7b72c941e711178ec3aa",
+    "instance.py": "288eb52959cfb9e665a5c65948c91b178214bb6cde651df77190fa329a5000a0",
+    "lss_vendor.py": "90bd8d7a843d7c860cb03cd61b590b1c748ca4acb0d30e083dfaea1720008ab4",
+    "mip_backend.py": "2f90f5961fccfc429ad3f5d0066e005a0119482bea2b5504a8c3faddb4cae8c9",
+    "native_evaluator.py": "cee89b8785834f792d68321b7f4b3715b533e87558d9d821c5239e343ace4190",
+    "native_support.py": "1faf9869f407c12652ea37ecb6335b07476e85aa05d8803e7191144870beb66c",
+    "run.py": "251c5e67a68d4196c7eceb8adaa45ee7fbba09318a1dd628d9967ee97bdb8c93",
+    "small_counts.py": "33ecab01ea11cb2a38358b64850a87a73633ba8080926b614fdc6bfed5496b49",
+    "small_guidance.py": "d860d490990bf91c7b0075f400dd6596b9e7d295643155e7d94567e315cf5a8e",
+    "stable_solver.py": "59a1ff1b7274609d5ec3a03a372c3afcf992eb3d7e38059856449144f299c426",
+    "strict_solver.py": "820bec73a449dc4f5ce330221de2b85edc3375432fadb577ddfc7f42974be42c"
+  },
+  "driver_sha256": {
+    "worker.py": "f9de2d346b713f0789fc3bd9060d416a938c5dd04510d0897374dcbea7e5801d",
+    "dispatch.py": "446f8890d701b5586174142620ef19fd4b3c7c1a702304c02f52a710abcefb89",
+    "s10_lss_bridge.py": "52f53fe1fd8ff84b32e13bbf922679e2f35636ea4c6c73db60249d140529bd5c",
+    "reference_loader.py": "2919bd2c3ec15c05f492ef2cc4261ce1cc9a327946bcc435c232c5e14212568c",
+    "finalize.py": "0651907710b54aed7b82ea7b69271e9c1c1e761ea232f1e044f55635fd7f1014"
+  },
+  "original_LSS_output_tail_AST_sha256": "00a03fc080f643b052d8b4bfda19cab87a3f8e82c323a937148e48395d3357ed",
+  "benchmark_root": "/home/junhao/quan/parallel_test_solver/CCMKCP/benchmark",
+  "source_comparison_commit": "9173e70da7010cb26f327af4b356fee9774adbe7",
+  "account": "junhao@10.112.162.60",
+  "solver_python": "/home/junhao/miniconda3/bin/python",
+  "solver_environment": "Python3.13.9; NumPy/SciPy as previous S10; shared vendor313 flint; Gurobi13.0.1 license tested",
+  "phase_ablation": "Gurobi backend and both local_search calls disabled, exactly the G_NONE pilot arm. The small-case enumeration remains unchanged.",
+  "resource_policy": "600s S10 search, 640s inner watchdog, 60 concurrent trials, per-solver thread1. Runtime files written to a dedicated tmpfs spool.",
+  "backend_comparison": "Same linear constraints/objective and repeated no-good-cut enumeration. Gurobi single-thread Seed and MIPGap0. Reset between solves, no multi-solution PoolSearchMode or cross-call start vectors.",
+  "measurement": "Report both S10 raw best and original LSS output0, times, candidates and per-phase changes. Original LSS param_test/_0/_1/_2 and true probability recording. Original times==0 top10 reporting retained for rep1.",
+  "analysis": "Compare original LSS output0 Best/Avg/Std/Time and matched case/seed costs against the completed S10 baseline. Full-run contrast combines the backend change and disabled local phases.",
+  "original_LSS_sources": {
+    "zip_sha256": "6ffdbb557649d919df71be1a5e18bf621a87a72a11cdec8b39bb56fbe539f6ca",
+    "files": [
+      {
+        "path": "src/exp_Result_GA.py",
+        "sha256": "84e5777fd9e0514dc078029737f789c22ddd1ee1bd6bf84879bc13d3c51485ac"
+      },
+      {
+        "path": "src/exp_Result_Localsearch.py",
+        "sha256": "6b3fbb17d610d551a76ba6f8915856effe956a80f83bcc70260ceb14bf232ec6"
+      },
+      {
+        "path": "src/exp_Result_Greedy.py",
+        "sha256": "61ee2fd12f7d28cac48eeabafff4187980b8ee1e6fb936e8c47c9f55b4ed07da"
+      },
+      {
+        "path": "src/exp_Result_EDA.py",
+        "sha256": "b7da172588e31749a8c2a5a405695a4aeea82c5e30f23b525fc54a3369887d81"
+      },
+      {
+        "path": "src/benchmark/benchmark_LAB.py",
+        "sha256": "89cba0bf8232d53859de2bb39af2cd79b0c7ac4f1956d7ff6c6f90377033369d"
+      },
+      {
+        "path": "src/benchmark/benchmark_APP.py",
+        "sha256": "1c774cf80a96b720238ce6612eaca0fceeedc75bb646bea9a3c9e117530cbcc2"
+      },
+      {
+        "path": "src/benchmark/benchmark_resample.py",
+        "sha256": "4b54d3f263c333d7eca61de8457f449ff044efdef93d53bae99f48c4ecc01742"
+      },
+      {
+        "path": "src/utils/factor.py",
+        "sha256": "c35b1b1fb63ef85b4af96fbbfafaaa8b05b22d429df2f760dfd1c7c2fe88c370"
+      },
+      {
+        "path": "src/utils/my_file.py",
+        "sha256": "6a9739b75c0f4ce21403f928917b4b6bab8e35325f5aa796fa21aedc0c66ff02"
+      },
+      {
+        "path": "src/functions/func_solution_factor.py",
+        "sha256": "de6b3b9d9768af83802868eb2d4889376db6840970f2d1796dfaebe48535402a"
+      },
+      {
+        "path": "src/functions/func_realP_statistical.py",
+        "sha256": "1e76802c8391603d817532bcda96859b8309696b4b5711f7e522d5e6b728afb8"
+      },
+      {
+        "path": "src/functions/func_GA.py",
+        "sha256": "88ab3ab1bb23a549b9400694347123f8d0fac853b6e1949ff99c69e5a30ea878"
+      },
+      {
+        "path": "src/functions/func_greedy.py",
+        "sha256": "68d0fcb1d458b0645054cc4574a5e0c78bb7a05eb2c1fbd9a495bf3e449da371"
+      },
+      {
+        "path": "src/functions/func_MILPgurobi.py",
+        "sha256": "610a459799dedc24972bea1cd2de0511b1c043e423973b5556a03e906c2df013"
+      },
+      {
+        "path": "src/functions/func_localsearch.py",
+        "sha256": "c8fcbe2bdc9044518a5d47a5dd58db2c04fd69ba6626223ad66cd0652e82a5aa"
+      },
+      {
+        "path": "src/functions/func_EDA.py",
+        "sha256": "cc6fd8406a6dcb42e0ae589c5beb545614d276ecc451628c510ccc250f017067"
+      },
+      {
+        "path": "src/functions/func_cl_estimator.py",
+        "sha256": "732a6a3d79931e4b08e5b7510e90a04f343ae5193e940ebc1f561db4fdccf8dd"
+      },
+      {
+        "path": "src/functions/func_bruct_force.py",
+        "sha256": "773f24531a60daa2de77406a1589ec6b7b6e8797f17996aaa8c28ee40e4a6d71"
+      },
+      {
+        "path": "src/functions/func_iterativeCCMCKP.py",
+        "sha256": "949455e5b683701c1f96cadac7c25c366c4c0d26528d9c83d7e205260dad2a2a"
+      },
+      {
+        "path": "src/functions/func_localsearch_cp.py",
+        "sha256": "672717f10b13b559789186d0e0d01430f75f359c7c86bfe36aee5836a23c0005"
+      },
+      {
+        "path": "src/functions/func_Dyer_Zemel.py",
+        "sha256": "12de669173ca6e373f3a6c0daa54e1aa92f6d7ad8ce389f402a386d60d3f681e"
+      }
+    ]
+  },
+  "ablation_commit": "0b9a72b9bcf72d124dbc04a207565c3b10c0c0d0"
+}
