@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+project(ccmckp_single LANGUAGES CXX)
+find_package(Threads REQUIRED)
+add_executable(ccmckp_single main.cpp model.cpp rng.cpp quantile.cpp quick_check.cpp
+    evaluation.cpp initialization.cpp search.cpp)
+target_compile_features(ccmckp_single PRIVATE cxx_std_17)
+set_target_properties(ccmckp_single PROPERTIES CXX_EXTENSIONS OFF)
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(ccmckp_single PRIVATE -Wall -Wextra -ffp-contract=off)
+else()
+    message(FATAL_ERROR "Use 64-bit GCC or Clang with unsigned 128-bit integer support")
+endif()
+target_link_libraries(ccmckp_single PRIVATE Threads::Threads)
