@@ -1,0 +1,1108 @@
+{
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "sdk_archive_sha256": "9155bc4cdf5e0813cd328d3a56c3b73633ba351c3859e694762ed41376fc6860",
+  "seed": 615,
+  "round_mode": "place",
+  "red_rounds": 4,
+  "blue_rounds": 0,
+  "layout_evaluations": 0,
+  "score_columns": {
+    "map_max": 100,
+    "wall_max": 100,
+    "time_max": 100,
+    "partial_max": 80
+  },
+  "candidate_sha256": "8b60ed981c6851d28b74ef5c3b2a8da8ea8cbe398a348f633bb6b8e6148621fa",
+  "baseline_sha256": "d83917cdda93f1dbdea572fdf3ef80032ee931f933c812ccea04e8ae099c93d3",
+  "changed_files": {
+    "deadline_submission.py": [
+      "b9fa1cf3fdb07a6a8dcfbf35aace19e2b7bc14e9a2244aabf2ad4e98c672838f",
+      "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf"
+    ],
+    "placement_maneuvers.py": [
+      "b485a616b7c1f7f5f04fc53cf30045602d9d76ae9048c5e46f7ebad1dbee3b2d",
+      "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23"
+    ],
+    "red_hooks.py": [
+      "cfc0a8e7f28f30134e7f6f352dbc19ecc576653b5528636456214042fa147de0",
+      "882278d9ea25a8b9677ba7da5fb7c2a5704a7dc5e493333036be076b8df25d4a"
+    ],
+    "second_drop_site.py": [
+      "92b9b371ba09219e6e45787bd3bfe406a69b9fea935e35e47c4d2b31e0b5bf2d",
+      "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b"
+    ]
+  },
+  "static_check": "PASS",
+  "counterexamples": {
+    "baseline": {
+      "arm": "baseline",
+      "status": "PASS",
+      "scenarios": {
+        "walltime_missing_peer": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 1
+        },
+        "walltime_holding_bomb": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 1
+        },
+        "timestep_holding_bomb": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 1
+        },
+        "walltime_during_fast_closeout": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 0
+        },
+        "healthy_budget": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 1
+        },
+        "physics_confirmation_before_submit_missing_pose": {
+          "submitted": false,
+          "confirmed_inventory": 0
+        },
+        "expired_closeout_resume": {
+          "survey": false,
+          "on_route_eligible": false,
+          "narrow_drop_request": false
+        }
+      }
+    },
+    "candidate": {
+      "arm": "candidate",
+      "status": "PASS",
+      "scenarios": {
+        "walltime_missing_peer": {
+          "submitted": true,
+          "ordinary_control_called": false,
+          "place_bomb": 0
+        },
+        "walltime_holding_bomb": {
+          "submitted": true,
+          "ordinary_control_called": false,
+          "place_bomb": 0
+        },
+        "timestep_holding_bomb": {
+          "submitted": true,
+          "ordinary_control_called": false,
+          "place_bomb": 0
+        },
+        "walltime_during_fast_closeout": {
+          "submitted": true,
+          "ordinary_control_called": false,
+          "place_bomb": 0
+        },
+        "healthy_budget": {
+          "submitted": false,
+          "ordinary_control_called": true,
+          "place_bomb": 1
+        },
+        "physics_confirmation_before_submit_missing_pose": {
+          "submitted": true,
+          "confirmed_inventory": 0
+        },
+        "no_backup_renders_available_map": true,
+        "empty_image_is_not_submitted": true,
+        "slowdown_and_backup_refresh": true,
+        "expired_closeout_resume": {
+          "survey": true,
+          "on_route_eligible": true,
+          "narrow_drop_request": true
+        }
+      }
+    }
+  },
+  "rounds": {
+    "Map07": {
+      "baseline": {
+        "placed": 9,
+        "expected": 10,
+        "map_score": 0.0,
+        "coverage": 43.789446963665526,
+        "time_score": 14.814814814814813,
+        "partial": 10.239370874214586,
+        "trajectory": 100.0,
+        "steps": 4840,
+        "elapsed_walltime": 180.0,
+        "submitted_map": false,
+        "selected_submission": null,
+        "submissions": [],
+        "timestep_limit": 5400,
+        "walltime_limit": 180,
+        "last_physical_drop_step": 2382,
+        "health_lost": 0,
+        "drones_at_zero_health": 0,
+        "emergency_submissions": [],
+        "closeouts": [
+          {
+            "drone": 0,
+            "events": []
+          },
+          {
+            "drone": 1,
+            "events": [
+              [
+                2704,
+                "planned",
+                [
+                  2712,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              [
+                2705,
+                "adopted",
+                [
+                  2711,
+                  2
+                ],
+                2
+              ],
+              [
+                2760,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 2,
+            "events": [
+              [
+                2703,
+                "planned",
+                [
+                  2711,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              [
+                2760,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 3,
+            "events": []
+          },
+          {
+            "drone": 4,
+            "events": [
+              [
+                1620,
+                "isolated_closeout",
+                [
+                  1628,
+                  4
+                ],
+                "post_drop_stall",
+                1368
+              ],
+              [
+                1652,
+                "isolated_window_complete",
+                1
+              ]
+            ]
+          }
+        ],
+        "physical_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ]
+          }
+        ],
+        "accepted_requests_by_drone": {
+          "3": 2,
+          "1": 2,
+          "4": 1,
+          "0": 2,
+          "2": 2
+        }
+      },
+      "candidate": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 44.85801375311188,
+        "coverage": 43.91713878023546,
+        "time_score": 22.301587301587304,
+        "partial": 33.44259336276176,
+        "trajectory": 100.0,
+        "steps": 4557,
+        "elapsed_walltime": 178.65994882583618,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 4557,
+          "walltime_seconds": 178.53333592414856,
+          "image_sha256": "d775390a68f4c37c60c66cdcf8451b2928aff185bec1364447604f4c01a35084"
+        },
+        "submissions": [
+          {
+            "drone": 0,
+            "step": 4557,
+            "walltime_seconds": 178.53333592414856,
+            "image_sha256": "d775390a68f4c37c60c66cdcf8451b2928aff185bec1364447604f4c01a35084"
+          },
+          {
+            "drone": 1,
+            "step": 4557,
+            "walltime_seconds": 178.53333592414856,
+            "image_sha256": "d625966a7dca023699a10b68ecbccb053732c97e7870c385c02c689873321e95"
+          },
+          {
+            "drone": 2,
+            "step": 4557,
+            "walltime_seconds": 178.53333592414856,
+            "image_sha256": "f478fcdd091cc01858321e6327e3217873c1e54b127c90199ca5c84064d16b9a"
+          },
+          {
+            "drone": 3,
+            "step": 4557,
+            "walltime_seconds": 178.53333592414856,
+            "image_sha256": "3bce4222756cd93a747e1eb729ca8ee37e892eb324fa31ca715f0b99a1720651"
+          },
+          {
+            "drone": 4,
+            "step": 4557,
+            "walltime_seconds": 178.53333592414856,
+            "image_sha256": "759d15df2ad66ba80bc305932e05b94ab040955e0bac3cb493ac861dafc430a0"
+          }
+        ],
+        "timestep_limit": 5400,
+        "walltime_limit": 180,
+        "last_physical_drop_step": 3388,
+        "health_lost": 4,
+        "drones_at_zero_health": 0,
+        "emergency_submissions": [
+          {
+            "drone": 0,
+            "step": 4557,
+            "fallback": "walltime",
+            "remaining_steps": 843,
+            "remaining_walltime": 1.4666640758514404,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4185
+          },
+          {
+            "drone": 1,
+            "step": 4557,
+            "fallback": "walltime",
+            "remaining_steps": 843,
+            "remaining_walltime": 1.4666640758514404,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4186
+          },
+          {
+            "drone": 2,
+            "step": 4557,
+            "fallback": "walltime",
+            "remaining_steps": 843,
+            "remaining_walltime": 1.4666640758514404,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4232
+          },
+          {
+            "drone": 3,
+            "step": 4557,
+            "fallback": "walltime",
+            "remaining_steps": 843,
+            "remaining_walltime": 1.4666640758514404,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4323
+          },
+          {
+            "drone": 4,
+            "step": 4557,
+            "fallback": "walltime",
+            "remaining_steps": 843,
+            "remaining_walltime": 1.4666640758514404,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4504
+          }
+        ],
+        "closeouts": [
+          {
+            "drone": 0,
+            "events": []
+          },
+          {
+            "drone": 1,
+            "events": [
+              [
+                2704,
+                "planned",
+                [
+                  2712,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              [
+                2705,
+                "adopted",
+                [
+                  2711,
+                  2
+                ],
+                2
+              ],
+              [
+                2760,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 2,
+            "events": [
+              [
+                2703,
+                "planned",
+                [
+                  2711,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              [
+                2760,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 3,
+            "events": []
+          },
+          {
+            "drone": 4,
+            "events": [
+              [
+                1620,
+                "isolated_closeout",
+                [
+                  1628,
+                  4
+                ],
+                "post_drop_stall",
+                1368
+              ],
+              [
+                1652,
+                "isolated_window_complete",
+                1
+              ]
+            ]
+          }
+        ],
+        "physical_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ]
+          }
+        ],
+        "accepted_requests_by_drone": {
+          "3": 2,
+          "1": 2,
+          "4": 2,
+          "0": 2,
+          "2": 2
+        }
+      },
+      "delta": {
+        "placed": 1,
+        "map_score": 44.85801375311188,
+        "coverage": 0.12769181656993567,
+        "time_score": 7.486772486772491,
+        "partial": 23.203222488547176,
+        "steps": -283,
+        "elapsed_walltime": -1.3400511741638184,
+        "health_lost": 4
+      },
+      "identical_physical_drops": false,
+      "identical_submitted_image": false
+    },
+    "Map08": {
+      "baseline": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 79.50186259402288,
+        "coverage": 44.46648630221442,
+        "time_score": 51.746031746031754,
+        "partial": 53.818831732057504,
+        "trajectory": 98.1603810454624,
+        "steps": 3444,
+        "elapsed_walltime": 143.96191883087158,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 142.4019215106964,
+          "image_sha256": "fb7d191e5561432093494c8092b6d9676b6a1b7844b1817cb978389762f9c720"
+        },
+        "submissions": [
+          {
+            "drone": 0,
+            "step": 3444,
+            "walltime_seconds": 142.4019215106964,
+            "image_sha256": "fb7d191e5561432093494c8092b6d9676b6a1b7844b1817cb978389762f9c720"
+          }
+        ],
+        "timestep_limit": 5400,
+        "walltime_limit": 180,
+        "last_physical_drop_step": 2488,
+        "health_lost": 9,
+        "drones_at_zero_health": 0,
+        "emergency_submissions": [],
+        "closeouts": [
+          {
+            "drone": 0,
+            "events": [
+              [
+                2300,
+                "isolated_closeout",
+                [
+                  2308,
+                  0
+                ],
+                "local_low_gain",
+                2141
+              ],
+              [
+                2332,
+                "isolated_window_complete",
+                0
+              ]
+            ]
+          },
+          {
+            "drone": 1,
+            "events": []
+          },
+          {
+            "drone": 2,
+            "events": [
+              [
+                2305,
+                "planned",
+                [
+                  2313,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              [
+                2306,
+                "adopted",
+                [
+                  2312,
+                  3
+                ],
+                3
+              ],
+              [
+                2361,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 3,
+            "events": [
+              [
+                2304,
+                "planned",
+                [
+                  2312,
+                  3
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              [
+                2361,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 4,
+            "events": []
+          }
+        ],
+        "physical_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          }
+        ],
+        "accepted_requests_by_drone": {
+          "0": 2,
+          "3": 2,
+          "1": 2,
+          "2": 2,
+          "4": 2
+        }
+      },
+      "candidate": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 79.50186259402288,
+        "coverage": 44.46648630221442,
+        "time_score": 51.746031746031754,
+        "partial": 53.818831732057504,
+        "trajectory": 98.1603810454624,
+        "steps": 3444,
+        "elapsed_walltime": 157.2063672542572,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 155.61949729919434,
+          "image_sha256": "fb7d191e5561432093494c8092b6d9676b6a1b7844b1817cb978389762f9c720"
+        },
+        "submissions": [
+          {
+            "drone": 0,
+            "step": 3444,
+            "walltime_seconds": 155.61949729919434,
+            "image_sha256": "fb7d191e5561432093494c8092b6d9676b6a1b7844b1817cb978389762f9c720"
+          }
+        ],
+        "timestep_limit": 5400,
+        "walltime_limit": 180,
+        "last_physical_drop_step": 2488,
+        "health_lost": 9,
+        "drones_at_zero_health": 0,
+        "emergency_submissions": [],
+        "closeouts": [
+          {
+            "drone": 0,
+            "events": [
+              [
+                2300,
+                "isolated_closeout",
+                [
+                  2308,
+                  0
+                ],
+                "local_low_gain",
+                2141
+              ],
+              [
+                2332,
+                "isolated_window_complete",
+                0
+              ]
+            ]
+          },
+          {
+            "drone": 1,
+            "events": []
+          },
+          {
+            "drone": 2,
+            "events": [
+              [
+                2305,
+                "planned",
+                [
+                  2313,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              [
+                2306,
+                "adopted",
+                [
+                  2312,
+                  3
+                ],
+                3
+              ],
+              [
+                2361,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 3,
+            "events": [
+              [
+                2304,
+                "planned",
+                [
+                  2312,
+                  3
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              [
+                2361,
+                "expired",
+                0,
+                false
+              ]
+            ]
+          },
+          {
+            "drone": 4,
+            "events": []
+          }
+        ],
+        "physical_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          }
+        ],
+        "accepted_requests_by_drone": {
+          "0": 2,
+          "3": 2,
+          "1": 2,
+          "2": 2,
+          "4": 2
+        }
+      },
+      "delta": {
+        "placed": 0,
+        "map_score": 0.0,
+        "coverage": 0.0,
+        "time_score": 0.0,
+        "partial": 0.0,
+        "steps": 0,
+        "elapsed_walltime": 13.24444842338562,
+        "health_lost": 0
+      },
+      "identical_physical_drops": true,
+      "identical_submitted_image": true
+    }
+  }
+}

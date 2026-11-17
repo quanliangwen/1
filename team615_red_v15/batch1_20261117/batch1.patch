@@ -1,0 +1,173 @@
+diff --git a/deadline_submission.py b/deadline_submission.py
+index 8f30de5..1e7115d 100644
+--- a/deadline_submission.py
++++ b/deadline_submission.py
+@@ -1,4 +1,4 @@
+-"""Last-window election on locally estimated map quality."""
++"""Last-window election and emergency submission budget."""
+ from dataclasses import dataclass
+ 
+ 
+@@ -8,9 +8,40 @@ class DeadlineSubmission:
+     BID_STEPS = 3
+     SCORE_SLOTS = 22
+     SCORE_MAX = 10000
++    FALLBACK_STEPS = 4
++    MIN_WALL_MARGIN = 1.5
++    WALL_OVERHEAD = 0.5
++    BACKUP_INTERVAL = 360
+     image: object = None
+     score: int | None = None
+     cache: tuple | None = None
++    backup_image: object = None
++    backup_step: int = -1
++    observed_step: int | None = None
++    observed_walltime: float | None = None
++    recent_step_seconds: float = 0.0
++
++    def fallback_reason(self, step, limit, elapsed_walltime, walltime_limit):
++        if self.observed_step is not None and step > self.observed_step:
++            seconds = (elapsed_walltime - self.observed_walltime) / (step - self.observed_step)
++            self.recent_step_seconds = 0.8 * self.recent_step_seconds + 0.2 * max(0.0, seconds)
++        self.observed_step = step
++        self.observed_walltime = elapsed_walltime
++
++        seconds_per_step = max(self.recent_step_seconds, elapsed_walltime / max(1, step))
++        wall_margin = max(self.MIN_WALL_MARGIN, self.WALL_OVERHEAD + self.FALLBACK_STEPS * seconds_per_step)
++        if walltime_limit - elapsed_walltime <= wall_margin:
++            return "walltime"
++        if limit - step <= self.FALLBACK_STEPS:
++            return "timestep"
++        return None
++
++    def backup_due(self, step):
++        return self.backup_image is None or step - self.backup_step >= self.BACKUP_INTERVAL
++
++    def remember(self, step, image):
++        self.backup_step = step
++        self.backup_image = image
+ 
+     @classmethod
+     def window_start(cls, limit):
+@@ -36,4 +67,4 @@ class DeadlineSubmission:
+             return True
+         # Give the elected candidate time to submit. If it never does, use
+         # the final few frames instead of losing the whole team's map.
+-        return step >= limit-4
++        return step >= limit-cls.FALLBACK_STEPS
+diff --git a/placement_maneuvers.py b/placement_maneuvers.py
+index a0a13bb..6fd0d26 100644
+--- a/placement_maneuvers.py
++++ b/placement_maneuvers.py
+@@ -115,7 +115,7 @@ class PlacementManeuvers:
+     def drop_in_lane(self, placement, drone, command, step, ranges, angles, semantic, count):
+         if (self.narrow_used or count != 1 or ranges is None or not drone.grid.pose_fixed
+                 or drone._odometry_only or drone.pending_drop is not None or not self.path
+-                or drone.fast_closeout.plan is not None
++                or drone.fast_closeout.phase(step) is not None
+                 or step >= drone.limit - 110 or drone.walltime_limit - drone.elapsed_walltime < 7.):
+             return False
+         exit_data = self.prior_exit(drone)
+diff --git a/red_hooks.py b/red_hooks.py
+index cfcb83b..b3d50dc 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -506,6 +506,8 @@ class RedHooks(LBBDRescue):
+             packed = np.packbits(image.reshape(-1) != 0).tobytes()
+             digest = _map_cache_digest(int(self.identifier), step, self.map_quality, packed)
+             self.prepared_map = (step, self.map_quality, digest, packed)
++            return image
++        return None
+ 
+     def _cached_map_offer(self, step):
+         prepared = self.prepared_map
+@@ -872,6 +874,37 @@ class RedHooks(LBBDRescue):
+             return None
+         return result
+ 
++    def _force_deadline_submission(self, step):
++        deadline = self.deadline_submission
++        reason = deadline.fallback_reason(step, self.limit, self.elapsed_walltime, self.walltime_limit)
++        if reason is None:
++            return False
++
++        if deadline.image is not None:
++            image, cache, versions = deadline.image, deadline.cache, self.deadline_versions.copy()
++        elif deadline.backup_image is not None:
++            image, cache, versions = deadline.backup_image, None, {}
++        else:
++            image, cache, versions = self._submission_image(step)
++            if not image.any():
++                return False
++
++        # Submission ends the SDK round before its next physics tick. Stock
++        # has already been synchronized, so only completed drops count here.
++        self.submit_exploration_map(image.astype(np.uint8, copy=False))
++        self.submitted_cache = cache
++        self.final_submission_versions = versions
++        self.submission_elected_rank = deadline.score
++        self.red_submission_step = step
++        self.submitted = True
++        self.deadline_submission_event = dict(
++            step=step, fallback=reason, remaining_steps=self.limit-step,
++            remaining_walltime=self.walltime_limit-self.elapsed_walltime,
++            local_inventory=self.previous_inventory, team_confirmed=self._all_inventory_empty(),
++            backup_step=deadline.backup_step if image is deadline.backup_image else None,
++        )
++        return True
++
+     def _submit_at_deadline(self, step):
+         deadline = self.deadline_submission
+         clear = self.previous_inventory == 0 and self.pending_drop is None
+@@ -912,9 +945,11 @@ class RedHooks(LBBDRescue):
+         self._sync_placement(step)
+         if before is not None and self.previous_inventory < before:
+             self.last_confirmed_drop_step = step
++        if self.submitted or self._force_deadline_submission(step):
++            return CoveragePlacementDrone._empty_command()
+         command = super().control()
+         command["place_bomb"] = 0
+-        if self.pose is None or self.submitted:
++        if self.pose is None:
+             return command
+ 
+         ranges = self.lidar_values()
+@@ -937,7 +972,15 @@ class RedHooks(LBBDRescue):
+             known = self.memory.free.mean()
+             stable = min(1., np.count_nonzero(wall_evidence >= 3) / (.018 * self.memory.hits.size))
+             self.map_quality = round(10000 * (.90 * known + .10 * stable))
+-            self._prepare_map_cache(step)
++            prepared_image = self._prepare_map_cache(step)
++            deadline = self.deadline_submission
++            if prepared_image is not None:
++                deadline.remember(step, prepared_image)
++            elif (deadline.backup_due(step) and self.walltime_limit - self.elapsed_walltime > 3.
++                  and np.any(wall_evidence >= 3)):
++                image = self._render_submission()
++                if image.any():
++                    deadline.remember(step, image)
+         self._update_drop_hints(step, semantic)
+         maneuvers = self.placement.maneuvers
+         if self.previous_inventory or maneuvers.exit is not None or maneuvers.waiting_exit is not None:
+diff --git a/second_drop_site.py b/second_drop_site.py
+index 5be7b39..b7cb779 100644
+--- a/second_drop_site.py
++++ b/second_drop_site.py
+@@ -161,7 +161,7 @@ class SecondDropSite:
+         return origin,baseline,floor,rows,best
+ 
+     def observe_route(self, drone, step, ranges, semantic):
+-        if (self.used or drone.previous_inventory != 1 or drone.fast_closeout.plan is not None
++        if (self.used or drone.previous_inventory != 1 or drone.fast_closeout.phase(step) is not None
+                 or step%self.OBSERVE_INTERVAL != drone.identifier%self.OBSERVE_INTERVAL):
+             return
+         gate = self.gate(drone,step,ranges)
+@@ -216,7 +216,7 @@ class SecondDropSite:
+                    for stamp,site,_ in self.backups)
+ 
+     def on_route_opportunity(self, drone, step, ranges, semantic):
+-        if (self.plan is not None or drone.fast_closeout.plan is not None
++        if (self.plan is not None or drone.fast_closeout.phase(step) is not None
+                 or self.gate(drone,step,ranges) or not self.recent_at(drone.pose,step)):
+             return False
+         # Recheck the exact current position and speed. This budget-free
