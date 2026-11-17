@@ -1,0 +1,1444 @@
+{
+  "seed": 615,
+  "map": "Map08",
+  "sdk": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "sdk_archive_sha256": "9155bc4cdf5e0813cd328d3a56c3b73633ba351c3859e694762ed41376fc6860",
+  "new_rounds": 2,
+  "blue_rounds": 0,
+  "initial_health_per_drone": 25,
+  "rounds": {
+    "repair": {
+      "source_commit": "e1561d868400b613e7a7da417f5e72a32b0e7d25",
+      "source_zip_sha256": "5c463b2a17e376b96eb45ebd63007eed3ad5abde8a7346ecc9c194ee3c07d479",
+      "selected_submission": {
+        "drone": 1,
+        "step": 3444,
+        "walltime_seconds": 133.91861057281494,
+        "image_sha256": "e7a52610b17ba601a69fe309be965da920bbfe89fc0522dcde55685addb87c4c"
+      },
+      "completed_step": 3444,
+      "health": {
+        "0": 23,
+        "1": 23,
+        "2": 23,
+        "3": 24,
+        "4": 24
+      },
+      "health_lost": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      },
+      "total_health_lost": 8,
+      "wall_coverage_score": 43.95005403680305,
+      "weighted_wall_coverage_fraction": 0.3167335310952263,
+      "covered_wall_pixels": 61544,
+      "map_score": 72.05287033312813,
+      "round_score": 49.99104914852785,
+      "elapsed_walltime_seconds": 135.59280133247375,
+      "accepted_drops": [
+        {
+          "drone": 0,
+          "step": 1220,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -62.48680434384124,
+            126.0384570644275
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 1236,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -371.84056809437453,
+            -325.9435083627755
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1272,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -383.93613816453984,
+            -195.4624415409219
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 1274,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -706.7226161764866,
+            -177.84838001323521
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 1348,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -181.12532515050873,
+            -156.4885712480484
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1692,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            142.30439103865308,
+            208.82534295391218
+          ]
+        },
+        {
+          "drone": 0,
+          "step": 2308,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            431.2351673498616,
+            -415.38638189798957
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 2314,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            84.96075503143555,
+            -454.1745849309364
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 2315,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            75.46089184220082,
+            -396.48945811292685
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 3316,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            310.74780483962223,
+            5.434944339749732
+          ]
+        }
+      ],
+      "last_physical_drop": {
+        "drone": 4,
+        "step": 3316,
+        "event": "sdk_placement",
+        "accepted": true,
+        "physical_xy": [
+          310.74780483962223,
+          5.434944339749732
+        ]
+      },
+      "last_drop_local_inventory_confirmation": 3317,
+      "lead_last_bomb_confirmation": null,
+      "backup_last_bomb_confirmation": {
+        "event": "received_inventory",
+        "drone": 1,
+        "step": 3415,
+        "peer": 4,
+        "before": [
+          3183,
+          1
+        ],
+        "after": [
+          3413,
+          0
+        ],
+        "sender": 4,
+        "sender_inventory": [
+          3413,
+          0
+        ]
+      },
+      "lead_final_inventory_records": {
+        "0": [
+          3444,
+          0
+        ],
+        "1": [
+          2873,
+          0
+        ],
+        "2": [
+          2420,
+          0
+        ],
+        "3": [
+          3122,
+          0
+        ],
+        "4": [
+          3040,
+          1
+        ]
+      },
+      "lead_wait_audit": null,
+      "lead_park_step": null,
+      "lead_brake_frames": [],
+      "late_health_transitions": [],
+      "lead_settled_control_frames": 0,
+      "lead_measured_park_path_pixels": null,
+      "lead_max_measured_park_drift_pixels": null,
+      "lead_wait_safety_events": [],
+      "lead_selected_frames": {
+        "3240": {
+          "physical_xy": [
+            578.5236801869505,
+            -192.29168957769417
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.11843534990577503,
+            "lateral": -0.03193876807719386,
+            "rotation": 0.09091556980719595,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.5386081197070323,
+          "records": {
+            "0": [
+              3240,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        },
+        "3316": {
+          "physical_xy": [
+            595.157931672616,
+            -53.960625592285034
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.3123360501964765,
+            "lateral": -0.043009631109847485,
+            "rotation": -0.07012557926582907,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 2.2659952276293343,
+          "records": {
+            "0": [
+              3316,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        },
+        "3317": {
+          "physical_xy": [
+            596.5997491250678,
+            -51.75269384718258
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.2488795787469278,
+            "lateral": -0.09052692553893339,
+            "rotation": -0.06513437608764683,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 2.6778569129659946,
+          "records": {
+            "0": [
+              3317,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        },
+        "3417": {
+          "physical_xy": [
+            690.8559101198786,
+            -16.57246621775731
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.19064606811652116,
+            "lateral": 0.15371408898401637,
+            "rotation": 0.334308974665396,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.5548345529664538,
+          "records": {
+            "0": [
+              3417,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        },
+        "3440": {
+          "physical_xy": [
+            651.7457288041832,
+            -21.01317801742274
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.1489213346345902,
+            "lateral": 0.09584136145537973,
+            "rotation": 0.22711301726512145,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.8958472208256147,
+          "records": {
+            "0": [
+              3440,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        },
+        "3444": {
+          "physical_xy": [
+            645.0219528186841,
+            -22.51204595403218
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.19181567173389477,
+            "lateral": 0.10058682319680876,
+            "rotation": 0.10984891140581121,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.731270387183033,
+          "records": {
+            "0": [
+              3444,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": null,
+          "wait_settled": null,
+          "wait_finished": null
+        }
+      }
+    },
+    "wait": {
+      "source_commit": "4ba1fb0cdd8f871e41d799c4e7ff6fc1325b5cd8",
+      "source_zip_sha256": "0cad0c65622e54740a0e6c2e7d61359fcf2e826efc8293808cedb150fa7770ff",
+      "selected_submission": {
+        "drone": 1,
+        "step": 3444,
+        "walltime_seconds": 122.41453337669373,
+        "image_sha256": "8a20ed3a13795067a6b2e54013aa86e957b71ce8b44ef61e97a2006060705ada"
+      },
+      "completed_step": 3444,
+      "health": {
+        "0": 23,
+        "1": 22,
+        "2": 23,
+        "3": 24,
+        "4": 24
+      },
+      "health_lost": {
+        "0": 2,
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      },
+      "total_health_lost": 9,
+      "wall_coverage_score": 43.92684359790816,
+      "weighted_wall_coverage_fraction": 0.31656626112410646,
+      "covered_wall_pixels": 61512,
+      "map_score": 72.16984645946282,
+      "round_score": 50.04489512391622,
+      "elapsed_walltime_seconds": 123.57691645622253,
+      "accepted_drops": [
+        {
+          "drone": 0,
+          "step": 1220,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -62.48680434384124,
+            126.0384570644275
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 1236,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -371.84056809437453,
+            -325.9435083627755
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1272,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -383.93613816453984,
+            -195.4624415409219
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 1274,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -706.7226161764866,
+            -177.84838001323521
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 1348,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -181.12532515050873,
+            -156.4885712480484
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1692,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            142.30439103865308,
+            208.82534295391218
+          ]
+        },
+        {
+          "drone": 0,
+          "step": 2308,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            431.2351673498616,
+            -415.38638189798957
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 2314,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            84.96075503143555,
+            -454.1745849309364
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 2315,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            75.46089184220082,
+            -396.48945811292685
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 3316,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            310.297231702246,
+            5.600668711662883
+          ]
+        }
+      ],
+      "last_physical_drop": {
+        "drone": 4,
+        "step": 3316,
+        "event": "sdk_placement",
+        "accepted": true,
+        "physical_xy": [
+          310.297231702246,
+          5.600668711662883
+        ]
+      },
+      "last_drop_local_inventory_confirmation": 3317,
+      "lead_last_bomb_confirmation": null,
+      "backup_last_bomb_confirmation": {
+        "event": "received_inventory",
+        "drone": 1,
+        "step": 3407,
+        "peer": 4,
+        "before": [
+          3183,
+          1
+        ],
+        "after": [
+          3405,
+          0
+        ],
+        "sender": 4,
+        "sender_inventory": [
+          3405,
+          0
+        ]
+      },
+      "lead_final_inventory_records": {
+        "0": [
+          3444,
+          0
+        ],
+        "1": [
+          2873,
+          0
+        ],
+        "2": [
+          2420,
+          0
+        ],
+        "3": [
+          3284,
+          0
+        ],
+        "4": [
+          3040,
+          1
+        ]
+      },
+      "lead_wait_audit": [
+        [
+          3240,
+          "brake",
+          4
+        ],
+        [
+          3248,
+          "braking_timeout",
+          4
+        ]
+      ],
+      "lead_park_step": null,
+      "lead_brake_frames": [
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3240,
+          "physical_xy": [
+            578.5236801869505,
+            -192.29168957769417
+          ],
+          "pose": [
+            580.876858010217,
+            -163.80709964375117
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.2672391729272465,
+            "lateral": -0.08271378226398822,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.5386081197070323,
+          "records": {
+            "0": [
+              3240,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3241,
+          "physical_xy": [
+            578.5473570016688,
+            -190.6436513483095
+          ],
+          "pose": [
+            581.3654654492243,
+            -162.18237379141388
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.29631591428916887,
+            "lateral": 0.08574937777484497,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.6966058247885465,
+          "records": {
+            "0": [
+              3241,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3242,
+          "physical_xy": [
+            578.5311549499265,
+            -189.2505460449783
+          ],
+          "pose": [
+            581.0363547723274,
+            -160.69760054301733
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.26923120177020177,
+            "lateral": -0.06303111565355704,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.5208107827082122,
+          "records": {
+            "0": [
+              3242,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3243,
+          "physical_xy": [
+            578.5459864548139,
+            -188.0861884459102
+          ],
+          "pose": [
+            581.2244937283749,
+            -159.5141539469868
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.21590333064635425,
+            "lateral": 0.029238887762594028,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.1983080206853838,
+          "records": {
+            "0": [
+              3243,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3244,
+          "physical_xy": [
+            578.549674124148,
+            -187.1098288909905
+          ],
+          "pose": [
+            581.0431028808565,
+            -158.6223057466742
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.1610523438063808,
+            "lateral": -0.03799767902309722,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 0.9101076046074431,
+          "records": {
+            "0": [
+              3244,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3245,
+          "physical_xy": [
+            578.5727002533602,
+            -186.27965363310534
+          ],
+          "pose": [
+            581.1188873487274,
+            -158.01022428338774
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.1119311806058255,
+            "lateral": 0.00679615889811901,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 0.6167552215177167,
+          "records": {
+            "0": [
+              3245,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3246,
+          "physical_xy": [
+            578.5939248237235,
+            -185.55944648421163
+          ],
+          "pose": [
+            581.4100884020714,
+            -157.11998420849193
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.16559656374114032,
+            "lateral": 0.039752636485046774,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 0.936656524249509,
+          "records": {
+            "0": [
+              3246,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3247,
+          "physical_xy": [
+            578.5937233219331,
+            -184.96951094424452
+          ],
+          "pose": [
+            581.5566062863593,
+            -156.67749489126416
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.08245264910329174,
+            "lateral": 0.01959211860119271,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 0.4661161725116081,
+          "records": {
+            "0": [
+              3247,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3245,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        {
+          "event": "late_trace",
+          "drone": 0,
+          "step": 3248,
+          "physical_xy": [
+            578.5814855494585,
+            -184.46232234965515
+          ],
+          "pose": [
+            581.5826262576678,
+            -156.13339327488853
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.4058509691934198,
+            "lateral": 0.060892590385331055,
+            "rotation": 0.16681038543524096,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "pending_drop": false,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 0.5447234232612544,
+          "records": {
+            "0": [
+              3248,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3246,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        }
+      ],
+      "late_health_transitions": [
+        {
+          "drone": 1,
+          "step": 3347,
+          "before": 23,
+          "after": 22
+        }
+      ],
+      "lead_settled_control_frames": 0,
+      "lead_measured_park_path_pixels": null,
+      "lead_max_measured_park_drift_pixels": null,
+      "lead_wait_safety_events": [
+        {
+          "event": "wait_safety",
+          "drone": 0,
+          "step": 3240,
+          "block": null,
+          "speed": 1.5386081197070323,
+          "lidar_count": 181,
+          "lidar_valid": 181,
+          "lidar_min": 36.79570290559832,
+          "closest_drone": null
+        }
+      ],
+      "lead_selected_frames": {
+        "3240": {
+          "physical_xy": [
+            578.5236801869505,
+            -192.29168957769417
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.2672391729272465,
+            "lateral": -0.08271378226398822,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.5386081197070323,
+          "records": {
+            "0": [
+              3240,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3122,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": false
+        },
+        "3316": {
+          "physical_xy": [
+            576.6005689688309,
+            -71.61242953386373
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.32208418852284776,
+            "lateral": -0.20331392830252387,
+            "rotation": -0.2731514180575143,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 2.093883977985578,
+          "records": {
+            "0": [
+              3316,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3284,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        },
+        "3317": {
+          "physical_xy": [
+            576.9354486213117,
+            -69.34576257239166
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.2003296109106012,
+            "lateral": -0.45632299943992566,
+            "rotation": -0.6,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 2.0729479795701713,
+          "records": {
+            "0": [
+              3317,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3284,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        },
+        "3417": {
+          "physical_xy": [
+            747.3409830988828,
+            -9.263814106934705
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.21159312457795992,
+            "lateral": -0.08150361897135308,
+            "rotation": -0.04013876677771222,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": false,
+          "odometry_only": true,
+          "odom_speed": 1.6144079779505107,
+          "records": {
+            "0": [
+              3417,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3284,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        },
+        "3440": {
+          "physical_xy": [
+            766.3706590596593,
+            -17.69386107465378
+          ],
+          "health": 23,
+          "command": {
+            "forward": -0.07060745156485868,
+            "lateral": -0.06765533500688516,
+            "rotation": -0.6,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": true,
+          "odometry_only": false,
+          "odom_speed": 1.1278668453242524,
+          "records": {
+            "0": [
+              3440,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3284,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        },
+        "3444": {
+          "physical_xy": [
+            761.9042931940903,
+            -16.969530918138563
+          ],
+          "health": 23,
+          "command": {
+            "forward": 0.1887020128086534,
+            "lateral": -0.25278116386845156,
+            "rotation": -0.6,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "mode": "search",
+          "inventory": 0,
+          "gps_fixed": true,
+          "odometry_only": false,
+          "odom_speed": 1.0961247533218104,
+          "records": {
+            "0": [
+              3444,
+              0
+            ],
+            "1": [
+              2873,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3284,
+              0
+            ],
+            "4": [
+              3040,
+              1
+            ]
+          },
+          "wait_started": 3240,
+          "wait_settled": false,
+          "wait_finished": true
+        }
+      }
+    }
+  },
+  "candidate_minus_repair": {
+    "completed_step": 0,
+    "total_health_lost": 1,
+    "wall_coverage_score": -0.023210438894892604,
+    "weighted_wall_coverage_fraction": -0.00016726997111982111,
+    "covered_wall_pixels": -32,
+    "map_score": 0.11697612633469134,
+    "round_score": 0.05384597538836999,
+    "elapsed_walltime_seconds": -12.01588487625122
+  },
+  "same_physical_drop_events": false,
+  "observation": "Live official SDK simulation. Identical external tracing is enabled in both rounds; candidate-only safety check results are also read. Solution ZIPs are unchanged."
+}
