@@ -1,0 +1,3239 @@
+{
+  "sdk": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "source_sha256": "0cad0c65622e54740a0e6c2e7d61359fcf2e826efc8293808cedb150fa7770ff",
+  "map": "Map08",
+  "full_rounds": 0,
+  "physics_steps": 1968,
+  "test_design": {
+    "seeds": [
+      615,
+      616,
+      617
+    ],
+    "start_gap": 56.0,
+    "release_distances": [
+      24.0,
+      30.0,
+      38.0
+    ],
+    "exit_travel_px": 55.0,
+    "wall_face_y": 296.0,
+    "fixture": "one drone; common start position and preassigned approach bearing; original sensor noise; seeded local free/blocked cells, route, first-bomb depletion, and positive coverage gain; actual release gates, SDK actuator, and inventory readback; exit uses GPS/odometry along the prechecked path, since the newly created bomb can obscure the lidar at the ray origin; no run of squad scheduler"
+  },
+  "trials": [
+    {
+      "seed": 615,
+      "target_gap": 24.0,
+      "arm": "front",
+      "physics_steps": 166,
+      "sdk_event": null,
+      "inventory_confirmed": false,
+      "release_tick": null,
+      "actual_bomb_gap": null,
+      "true_minimum_gap": 20.38762103732114,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 47,
+          "lidar_gap": 25.31999905914584,
+          "true_gap": 24.882077125164983,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 48,
+          "lidar_gap": 24.554570617065,
+          "true_gap": 24.554378530085557,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 51,
+          "lidar_gap": 25.422295289434125,
+          "true_gap": 23.80198516523825,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 54,
+          "lidar_gap": 23.13721554910078,
+          "true_gap": 23.460945745484423,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 55,
+          "lidar_gap": 23.21160321558694,
+          "true_gap": 23.422562961383107,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 56,
+          "lidar_gap": 23.278277387035526,
+          "true_gap": 23.398824392742256,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 59,
+          "lidar_gap": 23.99390180775167,
+          "true_gap": 23.429800789425315,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 60,
+          "lidar_gap": 23.9970229164708,
+          "true_gap": 23.43033496108069,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 61,
+          "lidar_gap": 23.26961766719109,
+          "true_gap": 23.43008399103701,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 62,
+          "lidar_gap": 23.790440872864725,
+          "true_gap": 23.440841959699526,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 63,
+          "lidar_gap": 24.388308486012555,
+          "true_gap": 23.457532910802854,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 64,
+          "lidar_gap": 23.17402458991898,
+          "true_gap": 23.46824041128201,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 65,
+          "lidar_gap": 24.459318920688595,
+          "true_gap": 23.489015405385032,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 66,
+          "lidar_gap": 24.138755666828303,
+          "true_gap": 23.490919079089167,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 67,
+          "lidar_gap": 23.46501624386678,
+          "true_gap": 23.49274775435549,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 68,
+          "lidar_gap": 23.396840806457792,
+          "true_gap": 23.497885238030676,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 69,
+          "lidar_gap": 23.468828162576873,
+          "true_gap": 23.50680207305078,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 70,
+          "lidar_gap": 24.124583774034768,
+          "true_gap": 23.495806814684215,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 71,
+          "lidar_gap": 23.00381956219312,
+          "true_gap": 23.502383335710476,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 74,
+          "lidar_gap": 23.715345022337374,
+          "true_gap": 23.64267342887723,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 75,
+          "lidar_gap": 23.478544576933736,
+          "true_gap": 23.709703806512096,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 76,
+          "lidar_gap": 23.271059205217576,
+          "true_gap": 23.766626465899833,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 77,
+          "lidar_gap": 23.095753774459162,
+          "true_gap": 23.78365013912037,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 78,
+          "lidar_gap": 23.878986969499106,
+          "true_gap": 23.79822600159548,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 79,
+          "lidar_gap": 23.106183455719655,
+          "true_gap": 23.81074222870558,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 80,
+          "lidar_gap": 24.65649097029633,
+          "true_gap": 23.837969408436606,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 81,
+          "lidar_gap": 23.508708337840016,
+          "true_gap": 23.85716784066625,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 82,
+          "lidar_gap": 22.988787335963096,
+          "true_gap": 23.887178154374396,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 83,
+          "lidar_gap": 23.988414617989246,
+          "true_gap": 23.944285043890147,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 84,
+          "lidar_gap": 22.839137428810055,
+          "true_gap": 23.984310350899307,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 85,
+          "lidar_gap": 23.793424472863673,
+          "true_gap": 24.053726207093803,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 86,
+          "lidar_gap": 23.624513586472627,
+          "true_gap": 24.126496679704246,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 87,
+          "lidar_gap": 24.068142197428052,
+          "true_gap": 24.191348576671203,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 88,
+          "lidar_gap": 24.24284878477089,
+          "true_gap": 24.267226134444456,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 89,
+          "lidar_gap": 23.519718854101804,
+          "true_gap": 24.35845823412393,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 90,
+          "lidar_gap": 25.353547265397715,
+          "true_gap": 24.43295846235503,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 91,
+          "lidar_gap": 23.610791392510833,
+          "true_gap": 24.469019412304704,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 92,
+          "lidar_gap": 25.052480965196533,
+          "true_gap": 24.50354687111752,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 93,
+          "lidar_gap": 25.151130471722954,
+          "true_gap": 24.516863581395796,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 94,
+          "lidar_gap": 24.147504620934523,
+          "true_gap": 24.524254970326012,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 95,
+          "lidar_gap": 23.900223563333345,
+          "true_gap": 24.544842702796302,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 98,
+          "lidar_gap": 24.667057838177133,
+          "true_gap": 24.452498748389246,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 99,
+          "lidar_gap": 24.61018681574007,
+          "true_gap": 24.386134795901626,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 100,
+          "lidar_gap": 24.597405518310637,
+          "true_gap": 24.328832922625736,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 101,
+          "lidar_gap": 25.120268241630804,
+          "true_gap": 24.285342370536455,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 102,
+          "lidar_gap": 23.7899497269274,
+          "true_gap": 24.242021116574108,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 103,
+          "lidar_gap": 24.420990752488343,
+          "true_gap": 24.194207494542354,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 104,
+          "lidar_gap": 24.8652872630141,
+          "true_gap": 24.1956099687942,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 105,
+          "lidar_gap": 24.04793540095052,
+          "true_gap": 24.183701579134606,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 106,
+          "lidar_gap": 24.13316888532041,
+          "true_gap": 24.16848859055324,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 109,
+          "lidar_gap": 23.446666442770898,
+          "true_gap": 24.027660677724327,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 110,
+          "lidar_gap": 23.83358996358917,
+          "true_gap": 23.964403457188666,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 111,
+          "lidar_gap": 23.71554996115732,
+          "true_gap": 23.898213949973467,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 112,
+          "lidar_gap": 24.160848468475155,
+          "true_gap": 23.838620987723402,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 113,
+          "lidar_gap": 23.966976623141353,
+          "true_gap": 23.77681692501352,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 114,
+          "lidar_gap": 23.16719449401337,
+          "true_gap": 23.74186867685546,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 115,
+          "lidar_gap": 24.286455764686874,
+          "true_gap": 23.718502687328055,
+          "blocks": [
+            "live_exit"
+          ]
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": null,
+      "exit_first_lidar_maxima": [
+        235.13779755603642,
+        236.1856791305381,
+        236.30191613642498,
+        236.29601949675003,
+        237.03141995489048,
+        233.72045239698676,
+        237.6088243874345,
+        239.6031100460876,
+        234.45598913210685,
+        235.54941208483788,
+        233.71274674352296,
+        234.80365231525803
+      ]
+    },
+    {
+      "seed": 615,
+      "target_gap": 24.0,
+      "arm": "side",
+      "physics_steps": 166,
+      "sdk_event": null,
+      "inventory_confirmed": false,
+      "release_tick": null,
+      "actual_bomb_gap": null,
+      "true_minimum_gap": 20.661987859057206,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 45,
+          "lidar_gap": 25.11112534173528,
+          "true_gap": 25.454234158008944,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 46,
+          "lidar_gap": 25.12136817255815,
+          "true_gap": 25.116490331779175,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 47,
+          "lidar_gap": 24.735273069253612,
+          "true_gap": 24.801984198479317,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 48,
+          "lidar_gap": 24.919956989899255,
+          "true_gap": 24.489500233392732,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 51,
+          "lidar_gap": 23.932436474302676,
+          "true_gap": 23.770443955774397,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 54,
+          "lidar_gap": 22.920205715151834,
+          "true_gap": 23.534890425472213,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 55,
+          "lidar_gap": 24.591155292768068,
+          "true_gap": 23.530576483064692,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 56,
+          "lidar_gap": 24.078673271795527,
+          "true_gap": 23.518200680059977,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 57,
+          "lidar_gap": 22.87499224541013,
+          "true_gap": 23.50695147211883,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 58,
+          "lidar_gap": 22.969397371650707,
+          "true_gap": 23.49948732152012,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 59,
+          "lidar_gap": 23.562247526624663,
+          "true_gap": 23.503056865991766,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 60,
+          "lidar_gap": 22.733289553986985,
+          "true_gap": 23.499509921590345,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 61,
+          "lidar_gap": 23.22627762002378,
+          "true_gap": 23.507627368108388,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 64,
+          "lidar_gap": 23.663862141149284,
+          "true_gap": 23.640120573335594,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 65,
+          "lidar_gap": 23.248956028414728,
+          "true_gap": 23.69852327420557,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 66,
+          "lidar_gap": 23.15893872556972,
+          "true_gap": 23.738633830149524,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 67,
+          "lidar_gap": 23.369302453161563,
+          "true_gap": 23.793427211558424,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 68,
+          "lidar_gap": 22.766169061108997,
+          "true_gap": 23.82052563911236,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 69,
+          "lidar_gap": 24.286475156739364,
+          "true_gap": 23.838759765450448,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 70,
+          "lidar_gap": 24.511775599926526,
+          "true_gap": 23.823673318226383,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 71,
+          "lidar_gap": 24.3621080065544,
+          "true_gap": 23.821052807068327,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 72,
+          "lidar_gap": 23.71930036977051,
+          "true_gap": 23.79634054004208,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 73,
+          "lidar_gap": 24.004441797525033,
+          "true_gap": 23.79261662107217,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 74,
+          "lidar_gap": 23.79597292523141,
+          "true_gap": 23.797215269404774,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 75,
+          "lidar_gap": 24.174406977288108,
+          "true_gap": 23.822201540917547,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 76,
+          "lidar_gap": 24.427805423394116,
+          "true_gap": 23.837675806714287,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 77,
+          "lidar_gap": 24.61900672235577,
+          "true_gap": 23.811772127582742,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 78,
+          "lidar_gap": 24.872802242066236,
+          "true_gap": 23.78404170066949,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 79,
+          "lidar_gap": 24.73147404451367,
+          "true_gap": 23.749568130935813,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 82,
+          "lidar_gap": 23.11375229208235,
+          "true_gap": 23.565822666994222,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 83,
+          "lidar_gap": 23.277794546691673,
+          "true_gap": 23.498246048648525,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 84,
+          "lidar_gap": 24.773447752910922,
+          "true_gap": 23.46278774390771,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 85,
+          "lidar_gap": 22.988014365264778,
+          "true_gap": 23.404115239557996,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 88,
+          "lidar_gap": 23.520660892595945,
+          "true_gap": 23.296337556141737,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 89,
+          "lidar_gap": 22.88122749806111,
+          "true_gap": 23.229972408362187,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 90,
+          "lidar_gap": 22.718908174543607,
+          "true_gap": 23.198203035200606,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 93,
+          "lidar_gap": 23.604358400526678,
+          "true_gap": 23.270767117623166,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 94,
+          "lidar_gap": 23.77507185809336,
+          "true_gap": 23.31896350350337,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 97,
+          "lidar_gap": 23.846508367949077,
+          "true_gap": 23.478367108277553,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 98,
+          "lidar_gap": 23.42264356047411,
+          "true_gap": 23.52049290406842,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 99,
+          "lidar_gap": 24.131346359399103,
+          "true_gap": 23.58597871714926,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 100,
+          "lidar_gap": 22.868725072017764,
+          "true_gap": 23.632081174457596,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 101,
+          "lidar_gap": 23.693152488831288,
+          "true_gap": 23.67299348527689,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 102,
+          "lidar_gap": 24.532748008480425,
+          "true_gap": 23.704153038394736,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 103,
+          "lidar_gap": 23.43389686965498,
+          "true_gap": 23.736014838734548,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 104,
+          "lidar_gap": 23.457691911608578,
+          "true_gap": 23.722596270781935,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 105,
+          "lidar_gap": 24.256715323736017,
+          "true_gap": 23.73983563450753,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 106,
+          "lidar_gap": 23.812572706819186,
+          "true_gap": 23.759383874877017,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 107,
+          "lidar_gap": 24.924481576305965,
+          "true_gap": 23.809260450173326,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 108,
+          "lidar_gap": 23.83138143090036,
+          "true_gap": 23.835899618541248,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 109,
+          "lidar_gap": 22.970492657118715,
+          "true_gap": 23.85904010685789,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 110,
+          "lidar_gap": 25.117135121752916,
+          "true_gap": 23.913671890649766,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 111,
+          "lidar_gap": 23.008802912185082,
+          "true_gap": 23.962670832336983,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 112,
+          "lidar_gap": 24.09025935045458,
+          "true_gap": 24.023557114232858,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 113,
+          "lidar_gap": 24.516587040727984,
+          "true_gap": 24.085697565200007,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 114,
+          "lidar_gap": 24.129705640293025,
+          "true_gap": 24.112846147147025,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 115,
+          "lidar_gap": 24.31922347615332,
+          "true_gap": 24.13831068115178,
+          "blocks": [
+            "live_exit"
+          ]
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": null,
+      "exit_first_lidar_maxima": [
+        236.36362535073673,
+        235.6344248517596,
+        234.87700796854867,
+        237.30163784716584,
+        235.47083911946044,
+        234.82323755404096,
+        237.6088243874345,
+        239.6031100460876,
+        234.45598913210685,
+        235.54941208483788,
+        233.49916281330246,
+        234.80365231525803
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 24.0,
+      "arm": "front",
+      "physics_steps": 166,
+      "sdk_event": null,
+      "inventory_confirmed": false,
+      "release_tick": null,
+      "actual_bomb_gap": null,
+      "true_minimum_gap": 22.25956666211158,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 46,
+          "lidar_gap": 24.75539391945052,
+          "true_gap": 24.7674533320087,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 49,
+          "lidar_gap": 23.571717155565207,
+          "true_gap": 23.677427859257364,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 50,
+          "lidar_gap": 23.442875943389822,
+          "true_gap": 23.370748301035746,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 51,
+          "lidar_gap": 22.671467235308167,
+          "true_gap": 23.09451417465243,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 52,
+          "lidar_gap": 23.196099466111697,
+          "true_gap": 22.885743096597764,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 53,
+          "lidar_gap": 24.22676696537986,
+          "true_gap": 22.691617389905787,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 65,
+          "lidar_gap": 23.4828092240075,
+          "true_gap": 22.721543670293443,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 66,
+          "lidar_gap": 22.58009655824561,
+          "true_gap": 22.843842329414883,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 67,
+          "lidar_gap": 22.659681739968153,
+          "true_gap": 22.994045635380132,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 68,
+          "lidar_gap": 23.193352293400057,
+          "true_gap": 23.142594925351318,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 71,
+          "lidar_gap": 24.21566982537033,
+          "true_gap": 23.48829450171479,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 72,
+          "lidar_gap": 24.40958045709896,
+          "true_gap": 23.597772688104726,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 73,
+          "lidar_gap": 24.030705256185147,
+          "true_gap": 23.704971292771006,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 74,
+          "lidar_gap": 23.736272493436438,
+          "true_gap": 23.799711917304137,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 75,
+          "lidar_gap": 23.89872327494258,
+          "true_gap": 23.86508451687871,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 76,
+          "lidar_gap": 23.784842805352046,
+          "true_gap": 23.909975341179177,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 77,
+          "lidar_gap": 24.95030006568851,
+          "true_gap": 23.932566567370827,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 78,
+          "lidar_gap": 24.795700471647486,
+          "true_gap": 23.968487826654837,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 79,
+          "lidar_gap": 24.577684416323294,
+          "true_gap": 24.021820907106417,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 80,
+          "lidar_gap": 24.218605230713994,
+          "true_gap": 24.067666318140255,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 81,
+          "lidar_gap": 24.44411933289403,
+          "true_gap": 24.074169220843316,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 84,
+          "lidar_gap": 24.340233962921147,
+          "true_gap": 23.99555298459842,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 85,
+          "lidar_gap": 24.505518318046995,
+          "true_gap": 23.937945000450384,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 86,
+          "lidar_gap": 24.841368308026688,
+          "true_gap": 23.913372992156553,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 87,
+          "lidar_gap": 25.071675525805325,
+          "true_gap": 23.86518105683166,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 88,
+          "lidar_gap": 24.59084538108483,
+          "true_gap": 23.821088440344283,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 89,
+          "lidar_gap": 24.8136887634289,
+          "true_gap": 23.767934681920508,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 90,
+          "lidar_gap": 23.946803700717552,
+          "true_gap": 23.68484660670356,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 91,
+          "lidar_gap": 24.73172797928553,
+          "true_gap": 23.621376556247867,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 92,
+          "lidar_gap": 22.72056221909955,
+          "true_gap": 23.55804625117173,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 93,
+          "lidar_gap": 23.63774424810027,
+          "true_gap": 23.510436459366588,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 94,
+          "lidar_gap": 23.465092655505114,
+          "true_gap": 23.469660763839556,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 95,
+          "lidar_gap": 24.90459982179181,
+          "true_gap": 23.448347762609558,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 96,
+          "lidar_gap": 23.954542393588213,
+          "true_gap": 23.41296718766563,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 97,
+          "lidar_gap": 23.69911531891123,
+          "true_gap": 23.390908757098202,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 100,
+          "lidar_gap": 23.603381358084,
+          "true_gap": 23.33804962664078,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 101,
+          "lidar_gap": 22.8038863950305,
+          "true_gap": 23.3451264486564,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 102,
+          "lidar_gap": 22.9143191492899,
+          "true_gap": 23.352632673014625,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 103,
+          "lidar_gap": 23.732730039057166,
+          "true_gap": 23.371345719284022,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 104,
+          "lidar_gap": 22.717501544880832,
+          "true_gap": 23.391568350675072,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 105,
+          "lidar_gap": 24.33042694089612,
+          "true_gap": 23.418440301891565,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 106,
+          "lidar_gap": 24.49753544903035,
+          "true_gap": 23.426228695075793,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 107,
+          "lidar_gap": 23.870609901585855,
+          "true_gap": 23.435405528988838,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 108,
+          "lidar_gap": 23.1482857810135,
+          "true_gap": 23.4676575707702,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 109,
+          "lidar_gap": 24.20192646169757,
+          "true_gap": 23.518532559916537,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 110,
+          "lidar_gap": 24.731127414020165,
+          "true_gap": 23.55968886196814,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 111,
+          "lidar_gap": 23.148421389043317,
+          "true_gap": 23.555035374523072,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 114,
+          "lidar_gap": 22.65297343558429,
+          "true_gap": 23.589532922807905,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 115,
+          "lidar_gap": 23.709985828803795,
+          "true_gap": 23.600389649655256,
+          "blocks": [
+            "live_exit"
+          ]
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": null,
+      "exit_first_lidar_maxima": [
+        234.5170225629473,
+        234.803648377219,
+        235.60038353981474,
+        234.67805834924022,
+        235.19009268185806,
+        234.7248312769363,
+        235.65427811419252,
+        234.03373113729972,
+        236.64122146028467,
+        237.18639528126855,
+        237.37895216077035,
+        233.70166566480242
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 24.0,
+      "arm": "side",
+      "physics_steps": 166,
+      "sdk_event": null,
+      "inventory_confirmed": false,
+      "release_tick": null,
+      "actual_bomb_gap": null,
+      "true_minimum_gap": 22.072641517155716,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 46,
+          "lidar_gap": 24.71686275772245,
+          "true_gap": 24.60366684710084,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 47,
+          "lidar_gap": 24.929802878131785,
+          "true_gap": 24.194434928819476,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 48,
+          "lidar_gap": 24.30324234963001,
+          "true_gap": 23.835870479743107,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 49,
+          "lidar_gap": 23.77832903978222,
+          "true_gap": 23.509638427688742,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 50,
+          "lidar_gap": 24.380492058951333,
+          "true_gap": 23.20536717891963,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 51,
+          "lidar_gap": 22.530956431776545,
+          "true_gap": 22.91794223053165,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 52,
+          "lidar_gap": 23.115999237673346,
+          "true_gap": 22.70009565788922,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 53,
+          "lidar_gap": 22.798970657457964,
+          "true_gap": 22.499637442933306,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 54,
+          "lidar_gap": 22.85797473447715,
+          "true_gap": 22.356980277295747,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 66,
+          "lidar_gap": 24.242928960132136,
+          "true_gap": 22.76485413350457,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 67,
+          "lidar_gap": 24.317574507400114,
+          "true_gap": 22.901646036711497,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 68,
+          "lidar_gap": 23.630312054455022,
+          "true_gap": 23.013364484862507,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 69,
+          "lidar_gap": 22.989621096558675,
+          "true_gap": 23.08358521110989,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 70,
+          "lidar_gap": 24.247854318414028,
+          "true_gap": 23.15968393978295,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 71,
+          "lidar_gap": 24.191540107459552,
+          "true_gap": 23.21963972812557,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 72,
+          "lidar_gap": 22.86379583372951,
+          "true_gap": 23.282889371679346,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 73,
+          "lidar_gap": 23.306014799231527,
+          "true_gap": 23.372223547535498,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 74,
+          "lidar_gap": 23.664103544699,
+          "true_gap": 23.464365865338152,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 75,
+          "lidar_gap": 22.922045970018708,
+          "true_gap": 23.529767772693106,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 76,
+          "lidar_gap": 25.497663775412253,
+          "true_gap": 23.588209999775074,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 77,
+          "lidar_gap": 24.270287757339155,
+          "true_gap": 23.60033537706704,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 78,
+          "lidar_gap": 23.746659295736908,
+          "true_gap": 23.633405849828705,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 79,
+          "lidar_gap": 24.650234123814414,
+          "true_gap": 23.699270709877283,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 82,
+          "lidar_gap": 23.429990731003645,
+          "true_gap": 23.84202956134874,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 83,
+          "lidar_gap": 22.858064254550154,
+          "true_gap": 23.90297830971076,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 84,
+          "lidar_gap": 23.31102714405651,
+          "true_gap": 23.98404010754831,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 85,
+          "lidar_gap": 24.953425851311376,
+          "true_gap": 24.08275523257487,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 86,
+          "lidar_gap": 23.52115445008712,
+          "true_gap": 24.11524524604056,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 87,
+          "lidar_gap": 23.71611295717414,
+          "true_gap": 24.168539400767713,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 88,
+          "lidar_gap": 24.26034168791823,
+          "true_gap": 24.20022513352552,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 89,
+          "lidar_gap": 24.38333268097066,
+          "true_gap": 24.230006485515673,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 90,
+          "lidar_gap": 24.5543375738645,
+          "true_gap": 24.274042106464208,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 91,
+          "lidar_gap": 24.001141110976224,
+          "true_gap": 24.29614747180335,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 92,
+          "lidar_gap": 24.752581251870694,
+          "true_gap": 24.31404557818422,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 93,
+          "lidar_gap": 24.637828811481274,
+          "true_gap": 24.328484160349888,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 94,
+          "lidar_gap": 25.16488088372109,
+          "true_gap": 24.33694566271356,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 95,
+          "lidar_gap": 24.91621270918933,
+          "true_gap": 24.326116180791757,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 96,
+          "lidar_gap": 24.159781132850213,
+          "true_gap": 24.299339057787336,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 97,
+          "lidar_gap": 25.415181540370273,
+          "true_gap": 24.27979759375961,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 98,
+          "lidar_gap": 24.834296614914187,
+          "true_gap": 24.226819836957418,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 99,
+          "lidar_gap": 24.44147870441782,
+          "true_gap": 24.143117760489417,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 100,
+          "lidar_gap": 24.325882404129608,
+          "true_gap": 24.09023853072597,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 101,
+          "lidar_gap": 23.4099405614689,
+          "true_gap": 24.051490453106396,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 102,
+          "lidar_gap": 24.362612742343487,
+          "true_gap": 24.043453725325833,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 103,
+          "lidar_gap": 23.262721779942066,
+          "true_gap": 24.037666704817923,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 104,
+          "lidar_gap": 25.431996348699666,
+          "true_gap": 24.043412962309674,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 105,
+          "lidar_gap": 24.0398085695865,
+          "true_gap": 24.02184280143632,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 106,
+          "lidar_gap": 23.36310103269007,
+          "true_gap": 24.011849418371355,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 107,
+          "lidar_gap": 23.29261328559098,
+          "true_gap": 24.00210454661658,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 108,
+          "lidar_gap": 24.62677179021247,
+          "true_gap": 23.980930038098677,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 109,
+          "lidar_gap": 24.344152681111794,
+          "true_gap": 23.94455431333705,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 110,
+          "lidar_gap": 24.849799892806338,
+          "true_gap": 23.908405053513945,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 111,
+          "lidar_gap": 24.254268880626242,
+          "true_gap": 23.893996361395864,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 112,
+          "lidar_gap": 24.087570598063575,
+          "true_gap": 23.87836599902306,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 113,
+          "lidar_gap": 24.285557690590377,
+          "true_gap": 23.87543406212825,
+          "blocks": [
+            "live_exit"
+          ]
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": null,
+      "exit_first_lidar_maxima": [
+        235.17400723121435,
+        234.68135195216692,
+        236.0501978728143,
+        233.74205123251684,
+        234.31774389559928,
+        235.23785437429598,
+        235.65427811419252,
+        238.5870835025506,
+        234.57492648037191,
+        237.18639528126855,
+        237.37895216077035,
+        235.49380618939253
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 24.0,
+      "arm": "front",
+      "physics_steps": 96,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -1.0012825742891598,
+          270.9809688003537
+        ],
+        "angle": 1.6106540896087296,
+        "speed": 0.38744087157875556,
+        "bomb": [
+          -1.0012825742891598,
+          270.9809688003537
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 48,
+      "actual_bomb_gap": 25.019031199646292,
+      "true_minimum_gap": 16.927586387118083,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 47,
+          "lidar_gap": 24.93542517644742,
+          "true_gap": 25.019031199646292,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 48,
+      "reached_and_aligned_tick": 48,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        8.840137800684344,
+        7.471298808685543,
+        6.605908906735909,
+        6.1620962464510525,
+        6.508464123211732,
+        6.092577314451323,
+        8.731625044029155,
+        6.8221747437621145,
+        8.639240055516172,
+        7.873881031403133,
+        8.289773865768215,
+        6.179764462795132
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 24.0,
+      "arm": "side",
+      "physics_steps": 166,
+      "sdk_event": null,
+      "inventory_confirmed": false,
+      "release_tick": null,
+      "actual_bomb_gap": null,
+      "true_minimum_gap": 23.034633318663566,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 50,
+          "lidar_gap": 23.041458432204365,
+          "true_gap": 24.22110123590653,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 51,
+          "lidar_gap": 24.604710224026785,
+          "true_gap": 24.00231979821814,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 52,
+          "lidar_gap": 23.45872717715181,
+          "true_gap": 23.81933016465308,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 53,
+          "lidar_gap": 24.02258239305972,
+          "true_gap": 23.68968351220707,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 54,
+          "lidar_gap": 24.484884383002978,
+          "true_gap": 23.59187760236273,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 57,
+          "lidar_gap": 24.39054558559602,
+          "true_gap": 23.327785781836837,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 58,
+          "lidar_gap": 24.1460372048579,
+          "true_gap": 23.24604646054405,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 59,
+          "lidar_gap": 24.952399387311655,
+          "true_gap": 23.152387869058543,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 60,
+          "lidar_gap": 23.43205613593864,
+          "true_gap": 23.104800931788418,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 61,
+          "lidar_gap": 22.502687077648712,
+          "true_gap": 23.085512554762715,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 62,
+          "lidar_gap": 24.574634188673784,
+          "true_gap": 23.08240961413935,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 63,
+          "lidar_gap": 23.568514912702888,
+          "true_gap": 23.070360100779396,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 64,
+          "lidar_gap": 24.34205255888885,
+          "true_gap": 23.047656287975656,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 65,
+          "lidar_gap": 23.267852350948875,
+          "true_gap": 23.03747931150758,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 66,
+          "lidar_gap": 24.21686039479428,
+          "true_gap": 23.046049771942535,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 67,
+          "lidar_gap": 25.088968307816188,
+          "true_gap": 23.050477107904783,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 70,
+          "lidar_gap": 22.59999572558974,
+          "true_gap": 23.062591687751308,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 75,
+          "lidar_gap": 24.097367034378838,
+          "true_gap": 23.496774980317298,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 76,
+          "lidar_gap": 23.9677059359784,
+          "true_gap": 23.567444287073897,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 77,
+          "lidar_gap": 23.7599390769837,
+          "true_gap": 23.614313886630384,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 78,
+          "lidar_gap": 23.087673482105625,
+          "true_gap": 23.63009280219353,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 79,
+          "lidar_gap": 24.34094366389475,
+          "true_gap": 23.642761692820216,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 80,
+          "lidar_gap": 24.149083795573763,
+          "true_gap": 23.649712913618202,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 81,
+          "lidar_gap": 24.31730241632581,
+          "true_gap": 23.639765897536847,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 82,
+          "lidar_gap": 25.149084302312772,
+          "true_gap": 23.64170556830078,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 83,
+          "lidar_gap": 24.226116318806447,
+          "true_gap": 23.627088136664042,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 84,
+          "lidar_gap": 24.141745682262663,
+          "true_gap": 23.612760253250713,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 85,
+          "lidar_gap": 24.028878974872722,
+          "true_gap": 23.575779747807417,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 86,
+          "lidar_gap": 25.08050736109607,
+          "true_gap": 23.549875781211256,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 87,
+          "lidar_gap": 23.662577136671405,
+          "true_gap": 23.520134283772904,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 88,
+          "lidar_gap": 24.387540955960066,
+          "true_gap": 23.50002622910472,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 89,
+          "lidar_gap": 24.099447348006166,
+          "true_gap": 23.48693979555634,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 90,
+          "lidar_gap": 23.613263942870994,
+          "true_gap": 23.468960319544863,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 95,
+          "lidar_gap": 23.591131002935118,
+          "true_gap": 23.432294927047394,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 98,
+          "lidar_gap": 23.25374908962479,
+          "true_gap": 23.425064388433952,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 99,
+          "lidar_gap": 22.650791409556394,
+          "true_gap": 23.462651612053776,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 100,
+          "lidar_gap": 23.96500460500262,
+          "true_gap": 23.530901123389242,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 103,
+          "lidar_gap": 23.56866140982289,
+          "true_gap": 23.7179900017789,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 104,
+          "lidar_gap": 23.713641159504295,
+          "true_gap": 23.757522324539707,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 105,
+          "lidar_gap": 23.301076704122583,
+          "true_gap": 23.799403029832945,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 106,
+          "lidar_gap": 22.820515453708087,
+          "true_gap": 23.809458102172186,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 107,
+          "lidar_gap": 23.47726743776905,
+          "true_gap": 23.8399958735846,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 108,
+          "lidar_gap": 24.28518594131311,
+          "true_gap": 23.869144683319746,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 109,
+          "lidar_gap": 24.145003790459576,
+          "true_gap": 23.900046797450045,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 110,
+          "lidar_gap": 24.391966358415797,
+          "true_gap": 23.930004140415747,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 111,
+          "lidar_gap": 23.56792852194084,
+          "true_gap": 23.966968090582384,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 112,
+          "lidar_gap": 24.37908013336086,
+          "true_gap": 23.966070380917245,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 113,
+          "lidar_gap": 24.89457607684764,
+          "true_gap": 23.921417047013392,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 114,
+          "lidar_gap": 23.339840715444943,
+          "true_gap": 23.853336617923844,
+          "blocks": [
+            "live_exit"
+          ]
+        },
+        {
+          "tick": 115,
+          "lidar_gap": 24.658685167261183,
+          "true_gap": 23.812213292744104,
+          "blocks": [
+            "live_exit"
+          ]
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": null,
+      "exit_first_lidar_maxima": [
+        235.83308215474142,
+        238.16223053280333,
+        235.44529756749023,
+        233.48545152062985,
+        236.1046357233677,
+        234.94494200006608,
+        233.8386901305343,
+        236.90975186217494,
+        234.97052418813698,
+        234.83460034046604,
+        234.78595913191103,
+        235.4924617898428
+      ]
+    },
+    {
+      "seed": 615,
+      "target_gap": 30.0,
+      "arm": "front",
+      "physics_steps": 90,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.25036188145057864,
+          264.58823261008206
+        ],
+        "angle": 1.5344128348351713,
+        "speed": 0.41202870675621217,
+        "bomb": [
+          -0.25036188145057864,
+          264.58823261008206
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 39,
+      "actual_bomb_gap": 31.41176738991794,
+      "true_minimum_gap": 21.913648768741382,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 38,
+          "lidar_gap": 30.65778231115788,
+          "true_gap": 31.41176738991794,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 51,
+      "reached_and_aligned_tick": 51,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        8.05070451710304,
+        7.613346153643068,
+        7.626633328931523,
+        6.592582529038712,
+        6.60831529135334,
+        8.509966033609931,
+        6.400293452716009,
+        6.608182717203018,
+        8.463996160124989,
+        8.2366757501879,
+        6.452143827386433,
+        8.475397448208406
+      ]
+    },
+    {
+      "seed": 615,
+      "target_gap": 30.0,
+      "arm": "side",
+      "physics_steps": 94,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.2618654260789259,
+          265.653397114112
+        ],
+        "angle": 3.102811827519906,
+        "speed": 0.2630014684125582,
+        "bomb": [
+          -0.2618654260789259,
+          265.653397114112
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 42,
+      "actual_bomb_gap": 30.34660288588799,
+      "true_minimum_gap": 27.936201451470822,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 41,
+          "lidar_gap": 29.93511551490353,
+          "true_gap": 30.34660288588799,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 52,
+      "reached_and_aligned_tick": 52,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.555379490839833,
+        5.489119651364298,
+        8.446797776135032,
+        6.639572901702063,
+        6.8705018725656934,
+        8.551927316283436,
+        8.58518159923796,
+        5.606547283268796,
+        6.8965765364639955,
+        8.053666691448763,
+        7.935176386456725,
+        7.495448999112956
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 30.0,
+      "arm": "front",
+      "physics_steps": 89,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.453161724417396,
+          265.4464170000944
+        ],
+        "angle": 1.5351238009935635,
+        "speed": 0.38335926658564173,
+        "bomb": [
+          -0.453161724417396,
+          265.4464170000944
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 40,
+      "actual_bomb_gap": 30.553582999905586,
+      "true_minimum_gap": 25.454084334556967,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 39,
+          "lidar_gap": 30.44710425394909,
+          "true_gap": 30.553582999905586,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 14,
+      "reached_exit_tick": 49,
+      "reached_and_aligned_tick": 49,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.317453756701861,
+        6.675730513228602,
+        7.986425954293284,
+        7.167695644373527,
+        7.917617642727581,
+        7.9784961185303445,
+        8.49269947212213,
+        7.004064672179647,
+        8.827666962106036,
+        7.324498926939305,
+        7.75989530523842,
+        7.97536841149924
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 30.0,
+      "arm": "side",
+      "physics_steps": 92,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.43977373307610473,
+          265.680067054987
+        ],
+        "angle": 3.1088641936416153,
+        "speed": 0.3082045833921297,
+        "bomb": [
+          -0.43977373307610473,
+          265.680067054987
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 41,
+      "actual_bomb_gap": 30.319932945013022,
+      "true_minimum_gap": 27.435734515608203,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 40,
+          "lidar_gap": 30.722851714534176,
+          "true_gap": 30.319932945013022,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 51,
+      "reached_and_aligned_tick": 51,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.366814123286432,
+        6.731381862804069,
+        6.668592873091331,
+        6.999767436824978,
+        7.5240647039261574,
+        8.665008751563963,
+        5.458573099773267,
+        8.391680324036884,
+        7.342374002279576,
+        7.7836311264855205,
+        8.540185476633555,
+        6.800774026770878
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 30.0,
+      "arm": "front",
+      "physics_steps": 91,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.7414427576330614,
+          265.14038869388025
+        ],
+        "angle": 1.60043373463618,
+        "speed": 0.3182988805653486,
+        "bomb": [
+          -0.7414427576330614,
+          265.14038869388025
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 41,
+      "actual_bomb_gap": 30.859611306119746,
+      "true_minimum_gap": 24.83391956797277,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 40,
+          "lidar_gap": 29.66800596912286,
+          "true_gap": 30.859611306119746,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.800248464123461,
+        8.313380408653817,
+        8.039674880032942,
+        6.855494188195715,
+        9.213662605810166,
+        7.298752809765391,
+        8.21363284300841,
+        7.163498038879635,
+        7.2359728881930305,
+        5.530053182810458,
+        6.269799257717958,
+        6.826357013061629
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 30.0,
+      "arm": "side",
+      "physics_steps": 95,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.779188870292337,
+          265.675383231212
+        ],
+        "angle": -3.0975266786002402,
+        "speed": 0.19584216768277504,
+        "bomb": [
+          -0.779188870292337,
+          265.675383231212
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 44,
+      "actual_bomb_gap": 30.32461676878802,
+      "true_minimum_gap": 24.458500790215908,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 43,
+          "lidar_gap": 30.97253858711457,
+          "true_gap": 30.32461676878802,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 51,
+      "reached_and_aligned_tick": 51,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.304131316071997,
+        8.956845327418506,
+        7.219409456482641,
+        7.067455867726919,
+        7.444018358818295,
+        6.064070044780778,
+        7.444008267841239,
+        5.31934439857361,
+        6.491888409927474,
+        8.221486115138926,
+        6.1346228579188375,
+        8.493619232609678
+      ]
+    },
+    {
+      "seed": 615,
+      "target_gap": 38.0,
+      "arm": "front",
+      "physics_steps": 82,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          0.01706180285268763,
+          257.25301385345796
+        ],
+        "angle": 1.5902669766889463,
+        "speed": 0.3522403340677326,
+        "bomb": [
+          0.01706180285268763,
+          257.25301385345796
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 31,
+      "actual_bomb_gap": 38.74698614654204,
+      "true_minimum_gap": 37.628833656102756,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 30,
+          "lidar_gap": 36.93954941036804,
+          "true_gap": 38.74698614654204,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 51,
+      "reached_and_aligned_tick": 51,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        6.699662864183026,
+        6.420389976347781,
+        7.863798447127233,
+        7.659825138426784,
+        6.156415989487812,
+        7.320622744240286,
+        6.712541038672921,
+        7.038107641673886,
+        7.207837426807817,
+        7.3368798899525345,
+        6.184091476944944,
+        7.122574450918312
+      ]
+    },
+    {
+      "seed": 615,
+      "target_gap": 38.0,
+      "arm": "side",
+      "physics_steps": 83,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          0.007722081783560896,
+          257.3642008201851
+        ],
+        "angle": 3.1179072657221996,
+        "speed": 0.2309224340490877,
+        "bomb": [
+          0.007722081783560896,
+          257.3642008201851
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 33,
+      "actual_bomb_gap": 38.63579917981491,
+      "true_minimum_gap": 36.894621898429875,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 32,
+          "lidar_gap": 39.30059226632373,
+          "true_gap": 38.63579917981491,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.205489711260334,
+        5.722704176382022,
+        6.4407207241341204,
+        6.794554616004915,
+        6.5568284066150655,
+        7.6062626025446285,
+        7.974109345819887,
+        8.123847586648655,
+        6.696559493989273,
+        7.754805209585304,
+        8.857222068222587,
+        230.57713257132454
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 38.0,
+      "arm": "front",
+      "physics_steps": 83,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.32757720026921466,
+          257.3761541382432
+        ],
+        "angle": 1.620170883313893,
+        "speed": 0.33980370666965326,
+        "bomb": [
+          -0.32757720026921466,
+          257.3761541382432
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 31,
+      "actual_bomb_gap": 38.62384586175682,
+      "true_minimum_gap": 29.540271025737184,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 30,
+          "lidar_gap": 38.532681249336775,
+          "true_gap": 38.62384586175682,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 52,
+      "reached_and_aligned_tick": 52,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        6.4810554028719745,
+        7.769689815354474,
+        7.483899984716802,
+        7.240224818430845,
+        9.096238107241607,
+        7.586470513663242,
+        7.968062984425151,
+        6.407855039330481,
+        7.406730845343981,
+        7.087120281352228,
+        7.628711360882792,
+        6.63486725377523
+      ]
+    },
+    {
+      "seed": 616,
+      "target_gap": 38.0,
+      "arm": "side",
+      "physics_steps": 82,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.32260305289793184,
+          257.80053672620545
+        ],
+        "angle": -3.1033475550587077,
+        "speed": 0.3108315593453517,
+        "bomb": [
+          -0.32260305289793184,
+          257.80053672620545
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 32,
+      "actual_bomb_gap": 38.19946327379455,
+      "true_minimum_gap": 32.259343313225315,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 31,
+          "lidar_gap": 38.4589231677228,
+          "true_gap": 38.19946327379455,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        7.954308467221387,
+        7.742375049948126,
+        7.030844132147734,
+        9.712356195606208,
+        7.427313863358448,
+        7.7768816227498885,
+        6.720794444771765,
+        7.197071984183703,
+        7.235640751017756,
+        8.485843318890606,
+        7.185835245127311,
+        8.78542458399841
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 38.0,
+      "arm": "front",
+      "physics_steps": 82,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.5817242119508104,
+          257.0965256043766
+        ],
+        "angle": 1.57518302178375,
+        "speed": 0.2837849676291054,
+        "bomb": [
+          -0.5817242119508104,
+          257.0965256043766
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 32,
+      "actual_bomb_gap": 38.90347439562339,
+      "true_minimum_gap": 33.86935921716804,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 31,
+          "lidar_gap": 39.34036732758469,
+          "true_gap": 38.90347439562339,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 13,
+      "reached_exit_tick": 50,
+      "reached_and_aligned_tick": 50,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        6.585752316618094,
+        6.088002015589604,
+        8.263762529017892,
+        7.269774629878462,
+        6.811283192987271,
+        7.418086435042751,
+        6.909949984302003,
+        7.903854092137072,
+        8.485137808689675,
+        6.753011881058622,
+        7.050501393205176,
+        9.745066582363307
+      ]
+    },
+    {
+      "seed": 617,
+      "target_gap": 38.0,
+      "arm": "side",
+      "physics_steps": 79,
+      "sdk_event": {
+        "accepted": true,
+        "center": [
+          -0.5658490342579701,
+          256.54861552692086
+        ],
+        "angle": -3.1280240072067382,
+        "speed": 0.33908004572172207,
+        "bomb": [
+          -0.5658490342579701,
+          256.54861552692086
+        ],
+        "before": 1,
+        "after": 0
+      },
+      "inventory_confirmed": true,
+      "release_tick": 30,
+      "actual_bomb_gap": 39.451384473079145,
+      "true_minimum_gap": 34.138680654580185,
+      "health_loss": 0,
+      "gates": [
+        {
+          "tick": 29,
+          "lidar_gap": 38.91932066315055,
+          "true_gap": 39.451384473079145,
+          "blocks": []
+        }
+      ],
+      "aligned_exit_tick": 1,
+      "reached_exit_tick": 49,
+      "reached_and_aligned_tick": 49,
+      "maximum_bomb_drift": 0.0,
+      "exit_first_lidar_maxima": [
+        8.27126798744321,
+        7.188298245611755,
+        7.193079451944624,
+        8.268168084646506,
+        7.761972661139932,
+        7.364998295115889,
+        8.052170252221888,
+        7.044134255399186,
+        7.2613088760608715,
+        8.327558835522387,
+        7.968773174652658,
+        8.066422702794478
+      ]
+    }
+  ],
+  "summary": {
+    "24.0": {
+      "front": {
+        "confirmed": 1,
+        "tested": 3,
+        "gate_rejections": {
+          "live_exit": 106
+        },
+        "health_loss": 0,
+        "actual_bomb_gap": {
+          "minimum": 25.019031199646292,
+          "median": 25.019031199646292,
+          "maximum": 25.019031199646292,
+          "observed": 1
+        },
+        "release_tick": {
+          "minimum": 48,
+          "median": 48,
+          "maximum": 48,
+          "observed": 1
+        },
+        "aligned_exit_tick": {
+          "minimum": 13,
+          "median": 13,
+          "maximum": 13,
+          "observed": 1
+        },
+        "reached_exit_tick": {
+          "minimum": 48,
+          "median": 48,
+          "maximum": 48,
+          "observed": 1
+        },
+        "reached_and_aligned_tick": {
+          "minimum": 48,
+          "median": 48,
+          "maximum": 48,
+          "observed": 1
+        },
+        "drift": {
+          "minimum": 0.0,
+          "median": 0.0,
+          "maximum": 0.0,
+          "observed": 1
+        }
+      },
+      "side": {
+        "confirmed": 0,
+        "tested": 3,
+        "gate_rejections": {
+          "live_exit": 162
+        },
+        "health_loss": 0,
+        "actual_bomb_gap": null,
+        "release_tick": null,
+        "aligned_exit_tick": null,
+        "reached_exit_tick": null,
+        "reached_and_aligned_tick": null,
+        "drift": null
+      }
+    },
+    "30.0": {
+      "front": {
+        "confirmed": 3,
+        "tested": 3,
+        "gate_rejections": {},
+        "health_loss": 0,
+        "actual_bomb_gap": {
+          "minimum": 30.553582999905586,
+          "median": 30.859611306119746,
+          "maximum": 31.41176738991794,
+          "observed": 3
+        },
+        "release_tick": {
+          "minimum": 39,
+          "median": 40,
+          "maximum": 41,
+          "observed": 3
+        },
+        "aligned_exit_tick": {
+          "minimum": 13,
+          "median": 13,
+          "maximum": 14,
+          "observed": 3
+        },
+        "reached_exit_tick": {
+          "minimum": 49,
+          "median": 50,
+          "maximum": 51,
+          "observed": 3
+        },
+        "reached_and_aligned_tick": {
+          "minimum": 49,
+          "median": 50,
+          "maximum": 51,
+          "observed": 3
+        },
+        "drift": {
+          "minimum": 0.0,
+          "median": 0.0,
+          "maximum": 0.0,
+          "observed": 3
+        }
+      },
+      "side": {
+        "confirmed": 3,
+        "tested": 3,
+        "gate_rejections": {},
+        "health_loss": 0,
+        "actual_bomb_gap": {
+          "minimum": 30.319932945013022,
+          "median": 30.32461676878802,
+          "maximum": 30.34660288588799,
+          "observed": 3
+        },
+        "release_tick": {
+          "minimum": 41,
+          "median": 42,
+          "maximum": 44,
+          "observed": 3
+        },
+        "aligned_exit_tick": {
+          "minimum": 1,
+          "median": 1,
+          "maximum": 1,
+          "observed": 3
+        },
+        "reached_exit_tick": {
+          "minimum": 51,
+          "median": 51,
+          "maximum": 52,
+          "observed": 3
+        },
+        "reached_and_aligned_tick": {
+          "minimum": 51,
+          "median": 51,
+          "maximum": 52,
+          "observed": 3
+        },
+        "drift": {
+          "minimum": 0.0,
+          "median": 0.0,
+          "maximum": 0.0,
+          "observed": 3
+        }
+      }
+    },
+    "38.0": {
+      "front": {
+        "confirmed": 3,
+        "tested": 3,
+        "gate_rejections": {},
+        "health_loss": 0,
+        "actual_bomb_gap": {
+          "minimum": 38.62384586175682,
+          "median": 38.74698614654204,
+          "maximum": 38.90347439562339,
+          "observed": 3
+        },
+        "release_tick": {
+          "minimum": 31,
+          "median": 31,
+          "maximum": 32,
+          "observed": 3
+        },
+        "aligned_exit_tick": {
+          "minimum": 13,
+          "median": 13,
+          "maximum": 13,
+          "observed": 3
+        },
+        "reached_exit_tick": {
+          "minimum": 50,
+          "median": 51,
+          "maximum": 52,
+          "observed": 3
+        },
+        "reached_and_aligned_tick": {
+          "minimum": 50,
+          "median": 51,
+          "maximum": 52,
+          "observed": 3
+        },
+        "drift": {
+          "minimum": 0.0,
+          "median": 0.0,
+          "maximum": 0.0,
+          "observed": 3
+        }
+      },
+      "side": {
+        "confirmed": 3,
+        "tested": 3,
+        "gate_rejections": {},
+        "health_loss": 0,
+        "actual_bomb_gap": {
+          "minimum": 38.19946327379455,
+          "median": 38.63579917981491,
+          "maximum": 39.451384473079145,
+          "observed": 3
+        },
+        "release_tick": {
+          "minimum": 30,
+          "median": 32,
+          "maximum": 33,
+          "observed": 3
+        },
+        "aligned_exit_tick": {
+          "minimum": 1,
+          "median": 1,
+          "maximum": 1,
+          "observed": 3
+        },
+        "reached_exit_tick": {
+          "minimum": 49,
+          "median": 50,
+          "maximum": 50,
+          "observed": 3
+        },
+        "reached_and_aligned_tick": {
+          "minimum": 49,
+          "median": 50,
+          "maximum": 50,
+          "observed": 3
+        },
+        "drift": {
+          "minimum": 0.0,
+          "median": 0.0,
+          "maximum": 0.0,
+          "observed": 3
+        }
+      }
+    }
+  }
+}
