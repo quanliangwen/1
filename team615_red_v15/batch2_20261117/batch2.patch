@@ -1,0 +1,514 @@
+diff --git a/fast_closeout.py b/fast_closeout.py
+index 3260038..8ed46d0 100644
+--- a/fast_closeout.py
++++ b/fast_closeout.py
+@@ -294,9 +294,11 @@ class FastCloseout:
+         relocating=departure is not None and departure.controls_step==step
+         second=getattr(drone,"second_drop",None)
+         site_state=None
++        had_site = False
+         if second is not None and not relocating and phase in ("prepare","drop"):
+             if phase=="prepare":
+                 second.reserve(drone,step,ranges,semantic)
++            had_site = second.plan is not None
+             site_state=second.control(drone,step,command,ranges,semantic)
+         if phase=="prepare":
+             if site_state is not None:
+@@ -310,6 +312,10 @@ class FastCloseout:
+         drone.placement.finish_request(drone,step)
+         if phase=="drop":
+             elapsed=step-self.plan[0]
++            if site_state == "ready":
++                if step % 4 == self.owner % 4 and second.commit(drone, command, step):
++                    self.last_amnesty_attempt = step
++                return True
+             if second is not None and second.wait_for_site(site_state,elapsed):
+                 return True
+             if not relocating and site_state!="ready":
+@@ -317,7 +323,8 @@ class FastCloseout:
+                     second.clear(step,"sdk_fallback")
+                 self.move_remaining(drone,command,step,ranges,semantic)
+                 drone.local_escape.apply(drone,command,step,ranges,semantic)
+-            self.legal_drop_pulse(drone,command,step)
++            if not had_site:
++                self.legal_drop_pulse(drone,command,step)
+             return True
+         # End repeat exploration during the short transaction. Recover normal
+         # flight and the unchanged last-30 fallback if the group could not close.
+diff --git a/placement_preferences.py b/placement_preferences.py
+index 09d7c26..9ad5d39 100644
+--- a/placement_preferences.py
++++ b/placement_preferences.py
+@@ -153,6 +153,8 @@ class PlacementPreferences:
+         accepted=left<count
+         if reason == 'narrow_short_drop':
+             self.maneuvers.confirmed(step, accepted)
++        if reason == "reserved_second":
++            drone.second_drop.finish(step, accepted)
+         if reason in ('local_slot_exit','side_alcove'):
+             self.local_exit.finish(drone,accepted,left)
+         self.audit.append((step,"confirmed" if accepted else "rejected",reason,fixed,request_step,left))
+@@ -315,23 +317,31 @@ class PlacementPreferences:
+             return False
+         return True
+ 
+-    def _protected_turn(self, drone, step, ranges, angles, semantic):
+-        if self.deep.near_neck(drone.pose, step):
++    def _known_protected_turn(self, point, step):
++        if self.deep.near_neck(point, step):
+             return "neck"
+-        if self.deep.here(drone.pose, 68.):
++        if self.deep.here(point, 68.):
+             return "neck_exit"
+-        if any(math.dist(drone.pose, bend[1:3]) <= 80.
++        if any(math.dist(point, bend[1:3]) <= 80.
+                for reports in self.turn_reports.values() for bend in reports):
+             return "shared_bend"
++        remembered = self.last_visible_turn
++        if remembered is not None and step - remembered[0] <= 140 and math.dist(point, remembered[1]) <= 72.:
++            return "recent_bend"
++        return None
++
++    def _protected_turn(self, drone, step, ranges, angles, semantic):
++        known = self._known_protected_turn(drone.pose, step)
++        if known is not None and known != "recent_bend":
++            return known
+         if ranges is None:
+             return None
+         wall_corner = self._visible_corner(drone, ranges, angles, semantic)
+         if wall_corner is not None and math.dist(drone.pose, wall_corner) <= 72.:
+             self.last_visible_turn = step, tuple(map(float, wall_corner))
+             return "wall_corner"
+-        remembered = self.last_visible_turn
+-        if remembered is not None and step - remembered[0] <= 140 and math.dist(drone.pose, remembered[1]) <= 72.:
+-            return "recent_bend"
++        if known is not None:
++            return known
+         direction = 0.
+         if drone.route:
+             dx, dy = np.asarray(drone.route[0], dtype=float) - drone.pose
+@@ -392,8 +402,9 @@ class PlacementPreferences:
+         references = passages.nearby(drone.pose, opening_limit)
+         is_passage = bool(references) or passages.near_recent_narrow(drone.pose, opening_limit)
+         second = getattr(drone,"second_drop",None)
+-        halo_checked = (is_passage and not final and count == drone.initial_inventory-1
+-                        and second is not None and second.recent_at(drone.pose,step))
++        managed_second = second is not None and drone.initial_inventory == 2 and count == 1
++        halo_checked = (is_passage and not final and managed_second and second.recent_at(drone.pose,step))
++        halo_opportunity = False
+         if halo_checked:
+             on_outer_halo = passages.opening_halo_only(
+                 drone.pose,references,opening_limit,passages.LOCAL_RADIUS+23.+SDK_SPACING)
+@@ -408,6 +419,7 @@ class PlacementPreferences:
+                     self.last_visible_turn = remembered
+             if on_outer_halo and live is None and second.on_route_opportunity(drone,step,ranges,semantic):
+                 is_passage = False
++                halo_opportunity = True
+                 second.audit.append((step,"halo_review","outer_clear",len(references)))
+             else:
+                 reason = "transit" if not on_outer_halo else live or "not_opportunity"
+@@ -450,8 +462,9 @@ class PlacementPreferences:
+             self._note_local_rejection(drone.pose, step)
+             return
+         reserved = count < drone.initial_inventory
+-        opportunistic = (reserved and not final and protected is None and second is not None
+-                         and second.on_route_opportunity(drone,step,ranges,semantic))
++        opportunistic = (managed_second and not final and protected is None
++                         and (halo_opportunity or not halo_checked
++                              and second.on_route_opportunity(drone,step,ranges,semantic)))
+         if not final:
+             if not drone.search_roaming.departed:
+                 return
+@@ -460,7 +473,7 @@ class PlacementPreferences:
+                 return
+             if reserved and ((not opportunistic and local is None and not self.deep.here(drone.pose, drone.blast_radius))
+                              or self.last_drop_point is None
+-                             or math.dist(drone.pose, self.last_drop_point) < drone.blast_radius):
++                             or not managed_second and math.dist(drone.pose, self.last_drop_point) < drone.blast_radius):
+                 self.reject("reserve")
+                 return
+         team = getattr(drone,"team_wall",None)
+@@ -477,6 +490,9 @@ class PlacementPreferences:
+             self.reject("deadline_low_gain" if final else "low_gain")
+             return
+         if final:
++            if managed_second and self._block_second(drone, step, ranges, semantic, gain, minimum,
++                                                     authorized=protected is not None):
++                return
+             self.audit.append((step, "coverage_floor_pass", gain, minimum))
+             self.audit.append((step, "coverage_evidence", unweighted, support))
+             if branch:
+@@ -495,11 +511,11 @@ class PlacementPreferences:
+         self.audit.append((step, "route_gain", gain, best_forward))
+         if opportunistic:
+             second.audit.append((step,"on_route_request",tuple(map(float,drone.pose)),gain,best_forward))
+-            self._place_selected(drone,command,step,count,None,"on_route_second")
++            second.request(drone, command, step, "on_route_second")
+             return
+-        if (second is not None and reserved and not branch and local is None
++        if (managed_second and not branch and local is None
+                 and protected is None and second.reserve(drone,step,ranges,semantic)):
+-            if second.control(drone,step,command,ranges,semantic) == "approach":
++            if second.steer_ordinary(drone, step, command, ranges, semantic):
+                 team.reservation = None
+                 return
+         if (team is not None and not protected and (second is None or second.plan is None)
+@@ -511,11 +527,21 @@ class PlacementPreferences:
+                 and protected is None and team.propose(drone,command,step,ranges,angles,semantic,
+                                                           gain,estimate,count)):
+             return
++        if managed_second and self._block_second(drone, step, ranges, semantic, gain, minimum,
++                                                 authorized=protected is not None):
++            return
+         reason = "deep_coverage" if reserved else ("late_coverage" if late else "coverage")
+         if branch:
+             self.audit.append((step, "branch_authorized", self.branch_exit.claim[1], tuple(drone.pose)))
+         self._place_selected(drone,command,step,count,local,"branch_exit" if branch else reason)
+ 
++    def _block_second(self, drone, step, ranges, semantic, gain, minimum, *, authorized):
++        failure = drone.second_drop.current_blocks(drone, step, ranges, semantic, gain, minimum,
++                                                   authorized=authorized)
++        if failure:
++            self.reject("second_" + failure[0])
++        return bool(failure)
++
+     def _place_selected(self, drone, command, step, count, certified, reason):
+         if certified is not None:
+             reason, site = certified
+diff --git a/red_hooks.py b/red_hooks.py
+index b3d50dc..064319e 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -639,7 +639,7 @@ class RedHooks(LBBDRescue):
+         return (step - self.submission_wait_started >= 48 or self.limit - step <= 4
+                 or self.walltime_limit - self.elapsed_walltime <= 1.5)
+ 
+-    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23.):
++    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23., minimum_spacing=None):
+         if not self.grid.pose_fixed or not self.search_roaming.departed:
+             return "position"
+         cell = self.grid.cell(point)
+@@ -657,7 +657,7 @@ class RedHooks(LBBDRescue):
+                     return "disposal"
+         if self.home is not None and math.dist(point, self.home) < 120:
+             return "disposal"
+-        spacing = max(32., self._placement_spacing(step))
++        spacing = max(32., self._placement_spacing(step)) if minimum_spacing is None else minimum_spacing
+         if any(math.dist(point, bomb) < spacing for bomb in self._known_bomb_positions(semantic)):
+             return "spacing"
+         return None
+@@ -994,6 +994,8 @@ class RedHooks(LBBDRescue):
+                       and self.previous_inventory==before-1 and self.previous_inventory>0)
+         self.drop_departure.update(self,step,first_drop)
+         self.drop_departure.steer(self,command,step,ranges,semantic)
++        if self.second_drop.plan is not None:
++            self.placement.finish_request(self, step)
+         self.second_drop.observe_route(self,step,ranges,semantic)
+         if maneuvers.waiting_exit is not None or maneuvers.exit is not None:
+             self.placement.finish_request(self, step)
+@@ -1010,12 +1012,10 @@ class RedHooks(LBBDRescue):
+             self.placement.finish_request(self, step)
+             if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
+                 return command
+-        state = self.second_drop.control(self,step,command,ranges,semantic)
+-        if state == "approach":
++        if self.second_drop.steer_ordinary(self, step, command, ranges, semantic):
+             self.team_wall.reservation = None
+-            self.placement.finish_request(self,step)
+             return command
+-        if state != "ready" and self.team_wall.steer(self,command,step,ranges,semantic):
++        if self.team_wall.steer(self,command,step,ranges,semantic):
+             self.local_escape.apply(self,command,step,ranges,semantic)
+             return command
+ 
+diff --git a/second_drop_site.py b/second_drop_site.py
+index b7cb779..9ef4808 100644
+--- a/second_drop_site.py
++++ b/second_drop_site.py
+@@ -4,9 +4,13 @@ import math
+ 
+ import numpy as np
+ 
++from swarm_rescue.simulation.drone.bomb_deployer import MIN_BOMB_SEPARATION
++from swarm_rescue.solutions.placement_density import observed_bombs, violates_patch
++
+ 
+ class SecondDropSite:
+     SITE_CLEARANCE = 6.
++    SITE_SPACING = max(32., MIN_BOMB_SEPARATION)
+     MAX_STEPS = 30
+     ARRIVAL = 8.
+     FAST_RETRY_AFTER = 8
+@@ -17,6 +21,7 @@ class SecondDropSite:
+ 
+     def __init__(self):
+         self.plan = None
++        self.ready_step = None
+         self.used = False
+         self.retry_at = 0
+         self.audit = []
+@@ -48,12 +53,6 @@ class SecondDropSite:
+             return "no_route"
+         return None
+ 
+-    def eligible(self, drone, step):
+-        return (drone.initial_inventory == 2 and drone.previous_inventory == 1
+-                and drone.pending_drop is None and drone.drop_departure.started is None
+-                and drone.grid.pose_fixed and not drone._odometry_only
+-                and step < drone.limit-30 and drone.walltime_limit-drone.elapsed_walltime > 4.)
+-
+     @classmethod
+     def route_sites(cls, pose, route):
+         previous = np.asarray(pose,dtype=float)
+@@ -87,27 +86,56 @@ class SecondDropSite:
+         return drone._placement_block(point, step, semantic, stationary=stationary,
+                                       minimum_clearance=self.SITE_CLEARANCE)
+ 
+-    def checks(self, drone, step, point, ranges, angles, semantic, current, nominal, gain):
+-        failure = []
++    def protection(self, drone, step, point, ranges, angles, semantic, *, live, allow_outer_halo):
++        placement = drone.placement
++        passages = placement.deep.passages
++        opening_limit = int(.15 * drone.limit)
++        references = passages.nearby(point, opening_limit)
++        if references or passages.near_recent_narrow(point, opening_limit):
++            if not allow_outer_halo or not passages.opening_halo_only(
++                    point, references, opening_limit, passages.LOCAL_RADIUS + 23. + MIN_BOMB_SEPARATION):
++                return "passage"
++        if not live:
++            return placement._known_protected_turn(point, step)
++        remembered = placement.last_visible_turn
++        try:
++            return placement._protected_turn(drone, step, ranges, angles, semantic)
++        finally:
++            placement.last_visible_turn = remembered
++
++    def checks(self, drone, step, point, ranges, angles, semantic, current, nominal, gain,
++               *, live=False, authorized=False, allow_outer_halo=False, density_points=None):
+         if not drone._inside_team_point(point):
+-            return ["bounds"],{}
+-        # Keep the original combined validator authoritative. Record all
+-        # independent reasons as several can apply to the same candidate.
+-        block = self._site_block(drone, point, step, semantic, stationary=False)
++            return ["bounds"], {}
++        failure = []
++        block = drone._placement_block(point, step, semantic, stationary=live,
++                                       minimum_clearance=self.SITE_CLEARANCE,
++                                       minimum_spacing=self.SITE_SPACING)
+         if block:
+             failure.append(block)
+-        cell = drone.grid.cell(point)
+-        mapped = float(drone.grid.clearance[cell])
+-        evidence = int(drone.grid.evidence[cell])
+-        if "clearance" not in failure and (mapped < self.SITE_CLEARANCE or evidence >= 0):
+-            failure.append("clearance")
+-        if not drone.team_wall.corridor_clear(drone,point,ranges,angles,semantic):
++        if not authorized:
++            protected = self.protection(drone, step, point, ranges, angles, semantic, live=live,
++                                        allow_outer_halo=allow_outer_halo)
++            if protected is not None:
++                failure.append("turn_hold_" + protected)
++        if density_points is None:
++            density_points = observed_bombs(drone, semantic)
++        if violates_patch(point, density_points):
++            failure.append("patch_full")
++        if live:
++            if not drone.placement._first_drop_exit_clear(drone, ranges, semantic):
++                failure.append("live_exit")
++        elif not drone.team_wall.corridor_clear(drone, point, ranges, angles, semantic):
+             failure.append("live_corridor")
+         if gain < nominal:
+             failure.append("coverage_floor")
+-        if current is not None and not self.worthwhile(gain,current):
++        if current is not None and not self.worthwhile(gain, current):
+             failure.append("coverage_increment")
+-        return failure,dict(map_clearance=mapped if math.isfinite(mapped) else None,evidence=evidence)
++
++        cell = drone.grid.cell(point)
++        mapped = float(drone.grid.clearance[cell])
++        return failure, dict(map_clearance=mapped if math.isfinite(mapped) else None,
++                             evidence=int(drone.grid.evidence[cell]))
+ 
+     def assess(self, drone, step, ranges, semantic, sites, *, early):
+         if self.survey_coverage is None:
+@@ -118,7 +146,7 @@ class SecondDropSite:
+         angles = drone.lidar_rays_angles()
+         bombs = drone._known_bomb_positions(semantic)
+         claims = drone.team_wall.claims(drone,step)
+-        spacing = max(32.,drone._placement_spacing(step))
++        density_points = observed_bombs(drone, semantic)
+         radius = drone.blast_radius
+ 
+         def measure(point, obstacles):
+@@ -126,7 +154,9 @@ class SecondDropSite:
+ 
+         estimate = (lambda point: measure(point,bombs+claims)) if early else drone.team_wall.query(drone,semantic,step)
+         baseline = None if early else estimate(drone.pose)[0]
+-        floor = float(drone.placement._coverage_minimum(step,drone.limit))
++        floor = drone.placement._coverage_minimum(step, drone.limit)
++        if early:
++            floor = self.opportunity_floor(floor)
+         origin = tuple(map(float,drone.pose))
+         best = None
+         best_rank = None
+@@ -136,12 +166,11 @@ class SecondDropSite:
+             gain = estimate(point) if early else estimate(point)[0]
+             all_walls = measure(point,())
+             after_bombs = measure(point,bombs)
+-            failure,metrics = self.checks(drone,step,point,ranges,angles,semantic,baseline,floor,gain)
+-            distances = [math.dist(point,bomb) for bomb in bombs]
+-            nearest = min(distances,default=None)
+-            if nearest is not None and nearest < spacing and "spacing" not in failure:
+-                failure.append("spacing")
+-            metrics.update(distance=math.dist(origin,point),nearest_bomb=nearest,spacing=spacing,
++            failure,metrics = self.checks(drone, step, point, ranges, angles, semantic,
++                                          baseline, floor, gain, allow_outer_halo=early,
++                                          density_points=density_points)
++            nearest = min((math.dist(point,bomb) for bomb in bombs), default=None)
++            metrics.update(distance=math.dist(origin,point),nearest_bomb=nearest,spacing=self.SITE_SPACING,
+                            gross=all_walls,after_bombs=after_bombs,gain=gain)
+             rows.append((source,point,recorded,failure,metrics))
+             if failure:
+@@ -176,7 +205,7 @@ class SecondDropSite:
+         self.audit.append((step,"survey",origin,floor,rows,len(self.backups)))
+ 
+     def reserve(self, drone, step, ranges, semantic):
+-        if self.used or step < self.retry_at or drone.previous_inventory != 1:
++        if self.plan is not None or self.used or step < self.retry_at or drone.previous_inventory != 1:
+             return False
+         self.retry_at = step+10
+         phase = drone.fast_closeout.phase(step) or "ordinary"
+@@ -201,7 +230,6 @@ class SecondDropSite:
+         self.audit.append((step,"reserve_review",phase,origin,current,floor,rows,len(self.backups)))
+         if best is None:
+             return False
+-        self.used = True
+         self.plan = step,best[1],current,best[0][0]
+         self.audit.append((step,"reserve",best[1],current,best[0][0],origin,best[2],best[3]))
+         return True
+@@ -219,37 +247,61 @@ class SecondDropSite:
+         if (self.plan is not None or drone.fast_closeout.phase(step) is not None
+                 or self.gate(drone,step,ranges) or not self.recent_at(drone.pose,step)):
+             return False
+-        # Recheck the exact current position and speed. This budget-free
+-        # option changes a placement decision, never the flight waypoint.
+-        block=self._site_block(drone, drone.pose, step, semantic, stationary=True)
+-        if block:
+-            self.audit.append((step,"opportunity_block",block))
++        gain = drone.team_wall.query(drone, semantic, step)(drone.pose)[0]
++        floor = self.opportunity_floor(drone.placement._coverage_minimum(step, drone.limit))
++        failure = self.current_blocks(drone, step, ranges, semantic, gain, floor, allow_outer_halo=True)
++        if failure:
++            self.audit.append((step, "opportunity_block", tuple(failure), gain, floor))
++        return not failure
++
++    def current_blocks(self, drone, step, ranges, semantic, gain, floor, *,
++                       baseline=None, authorized=False, allow_outer_halo=False):
++        if ranges is None:
++            return ["no_lidar"]
++        angles = np.asarray(drone.lidar_rays_angles())
++        failure, _ = self.checks(drone, step, drone.pose, np.asarray(ranges), angles, semantic, baseline,
++                                 floor, gain, live=True, authorized=authorized, allow_outer_halo=allow_outer_halo)
++        return failure
++
++    def request(self, drone, command, step, reason):
++        if drone.pending_drop is not None or drone.previous_inventory != 1:
++            return False
++        if step < drone.placement.next_request or step - drone.last_attempt_step < 2:
+             return False
+-        if not drone.placement._first_drop_exit_clear(drone,ranges,semantic):
+-            self.audit.append((step,"opportunity_block","live_exit"))
++        drone.placement.place(drone, command, step, reason, 1)
++        return True
++
++    def commit(self, drone, command, step):
++        if self.plan is None or self.ready_step != step:
+             return False
+-        gain=drone.team_wall.query(drone,semantic,step)(drone.pose)[0]
+-        floor=self.opportunity_floor(drone.placement._coverage_minimum(step,drone.limit))
+-        if gain < floor:
+-            self.audit.append((step,"opportunity_block","coverage",gain,floor))
++        if not self.request(drone, command, step, "reserved_second"):
+             return False
++        self.audit.append((step, "site_drop_request", self.plan[1], tuple(map(float, drone.pose))))
+         return True
+ 
++    def finish(self, step, accepted):
++        self.audit.append((step, "site_drop_result", bool(accepted)))
++        if accepted:
++            self.used = True
++        else:
++            self.retry_at = max(self.retry_at, step + 10)
++        self.clear(step, "stock_confirmed" if accepted else "sdk_rejected")
++
+ 
+     def clear(self, step, reason):
++        self.ready_step = None
+         if self.plan is not None:
+             self.audit.append((step,reason,self.plan[1]))
+             self.plan = None
+ 
+     def control(self, drone, step, command, ranges, semantic):
++        self.ready_step = None
+         if self.plan is None:
+             return None
+         start, target, baseline, _ = self.plan
+-        if not self.eligible(drone,step) or step-start >= self.MAX_STEPS:
+-            self.clear(step,"stock_confirmed" if drone.previous_inventory == 0 else "expired")
+-            return None
+-        if self._site_block(drone, target, step, semantic, stationary=False):
+-            self.clear(step,"target_blocked")
++        gate = self.gate(drone, step, ranges)
++        if gate or step-start >= self.MAX_STEPS:
++            self.clear(step, "stock_confirmed" if drone.previous_inventory == 0 else gate or "expired")
+             return None
+         odom = drone.odometer_values()
+         if odom is None or not np.all(np.isfinite(odom)) or ranges is None:
+@@ -257,24 +309,38 @@ class SecondDropSite:
+             return None
+         distance = math.dist(target,drone.pose)
+         if distance <= self.ARRIVAL:
+-            gain = drone.team_wall.query(drone,semantic,step)(drone.pose)[0]
+-            if (not self.worthwhile(gain,baseline)
+-                    or gain < drone.placement._coverage_minimum(step,drone.limit)
+-                    or self._site_block(drone, drone.pose, step, semantic, stationary=False)):
+-                self.clear(step,"arrival_rejected")
++            gain = drone.team_wall.query(drone, semantic, step)(drone.pose)[0]
++            floor = drone.placement._coverage_minimum(step, drone.limit)
++            failure = self.current_blocks(drone, step, ranges, semantic, gain, floor, baseline=baseline)
++            if failure and failure != ["speed"]:
++                self.audit.append((step, "site_drop_result", "arrival_rejected", tuple(failure)))
++                self.clear(step, "arrival_rejected")
+                 return None
+-            command.update(drone.drive(drone.pose,self._velocity_from_odometry(drone,odom)))
+-            if self._site_block(drone, drone.pose, step, semantic, stationary=True):
++            command.update(drone.drive(drone.pose, self._velocity_from_odometry(drone, odom)))
++            if failure:
+                 return "approach"
+             if not self.audit or self.audit[-1][1] != "arrived":
+                 self.audit.append((step,"arrived",target,tuple(map(float,drone.pose)),gain))
++            self.ready_step = step
+             return "ready"
+-        if not drone.team_wall.corridor_clear(drone,target,ranges,drone.lidar_rays_angles(),semantic):
+-            self.clear(step,"live_corridor_rejected")
++        block = drone._placement_block(target, step, semantic, stationary=False,
++                                       minimum_clearance=self.SITE_CLEARANCE,
++                                       minimum_spacing=self.SITE_SPACING)
++        if block:
++            self.clear(step, "target_blocked")
++            return None
++        if not drone.team_wall.corridor_clear(drone, target, ranges, drone.lidar_rays_angles(), semantic):
++            self.clear(step, "live_corridor_rejected")
+             return None
+         command.update(drone.drive(target,self._velocity_from_odometry(drone,odom)))
+         return "approach"
+ 
++    def steer_ordinary(self, drone, step, command, ranges, semantic):
++        state = self.control(drone, step, command, ranges, semantic)
++        if state == "ready" and step % (2 * drone.team_size) == 2 * drone.identifier:
++            self.commit(drone, command, step)
++        return state is not None
++
+     @staticmethod
+     def _velocity_from_odometry(drone, odom):
+         travel,relative,change = map(float,odom)
