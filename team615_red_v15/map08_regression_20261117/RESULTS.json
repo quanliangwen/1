@@ -1,0 +1,1656 @@
+{
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "sdk_archive_sha256": "9155bc4cdf5e0813cd328d3a56c3b73633ba351c3859e694762ed41376fc6860",
+  "seed": 615,
+  "baseline_commit": "5e9d23265453385ee7ea010f362f9d26a129e9f2",
+  "previous_commits": {
+    "batch1": "258e637f743e52edfed87448c17a057e63455782",
+    "batch2": "5e9d23265453385ee7ea010f362f9d26a129e9f2"
+  },
+  "zip_sha256": {
+    "batch1": "8b60ed981c6851d28b74ef5c3b2a8da8ea8cbe398a348f633bb6b8e6148621fa",
+    "batch2": "06532c808226b4a937fcbc703fe84c46f5591fa5c62dba34e1fffbd5150a36f8",
+    "fixed": "5c463b2a17e376b96eb45ebd63007eed3ad5abde8a7346ecc9c194ee3c07d479"
+  },
+  "source_changes": {
+    "second_drop_site.py": [
+      "450dc10ea2816d6256f0d9b0c29c94ebf6824433f4ad1b9355aeaf82a2d6cd2f",
+      "d1c6e6d45314e6373e92f0958bee342fb4d566acd4a1c9275bf632fd9ece680b"
+    ]
+  },
+  "new_red_rounds": 4,
+  "blue_rounds": 0,
+  "static_check": "PASS",
+  "counterexamples": {
+    "batch2": {
+      "arm": "batch2",
+      "scan_floor": 2.0,
+      "backup_count": 1,
+      "immediate_route_threshold_retained": true,
+      "plan_recovered": false,
+      "status": "PASS"
+    },
+    "repair": {
+      "arm": "repair",
+      "scan_floor": 0.8,
+      "backup_count": 4,
+      "immediate_route_threshold_retained": true,
+      "plan_recovered": true,
+      "ongoing_protection_blocks_actual_drop": true,
+      "protection_cleared_allows_verified_drop": true,
+      "live_exit_loss_cancels_probe": true,
+      "observation_stops_at_existing_expiry": true,
+      "status": "PASS"
+    }
+  },
+  "scores": {
+    "Map07": {
+      "batch1": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 91.17380206040002,
+        "coverage": 43.91713878023546,
+        "time_score": 11.031746031746032,
+        "partial": 55.4735033894217,
+        "steps": 4983,
+        "elapsed_walltime": 168.58365631103516,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 1,
+          "step": 4983,
+          "walltime_seconds": 167.35946702957153,
+          "image_sha256": "010876cdb9436fc7a88d908dde6fb80caeb7d9b0f57041fa3a1f71337fc3273a"
+        },
+        "physical_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 31.57831311225891
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 31.736264944076538
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ],
+            "branch": "short_wall_approach",
+            "inventory_before": 2,
+            "walltime_seconds": 35.14324426651001
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 38.406837701797485
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ],
+            "branch": "narrow_short_drop",
+            "inventory_before": 1,
+            "walltime_seconds": 43.993919372558594
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 45.51335287094116
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 57.15761947631836
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ],
+            "branch": "deep_coverage",
+            "inventory_before": 1,
+            "walltime_seconds": 60.03271985054016
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 67.81205415725708
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 101.58049416542053
+          }
+        ],
+        "last_physical_drop_step": 3388,
+        "health_lost": 4,
+        "drones_at_zero_health": 0,
+        "source": "batch2_paired_baselines"
+      },
+      "batch2": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 91.17380206040002,
+        "coverage": 43.91713878023546,
+        "time_score": 11.031746031746032,
+        "partial": 55.4735033894217,
+        "steps": 4983,
+        "elapsed_walltime": 157.5439350605011,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 1,
+          "step": 4983,
+          "walltime_seconds": 156.70120859146118,
+          "image_sha256": "010876cdb9436fc7a88d908dde6fb80caeb7d9b0f57041fa3a1f71337fc3273a"
+        },
+        "physical_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 27.105640649795532
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 27.28453278541565
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ],
+            "branch": "short_wall_approach",
+            "inventory_before": 2,
+            "walltime_seconds": 30.66567301750183
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 33.77273440361023
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ],
+            "branch": "narrow_short_drop",
+            "inventory_before": 1,
+            "walltime_seconds": 39.80494427680969
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ],
+            "branch": "coverage",
+            "inventory_before": 2,
+            "walltime_seconds": 41.418126821517944
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 53.77368664741516
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ],
+            "branch": "reserved_second",
+            "inventory_before": 1,
+            "walltime_seconds": 57.191585063934326
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 66.04409098625183
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1,
+            "walltime_seconds": 101.44963192939758
+          }
+        ],
+        "last_physical_drop_step": 3388,
+        "health_lost": 4,
+        "drones_at_zero_health": 0,
+        "source": "batch2_paired_baselines"
+      },
+      "fixed": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 91.17380206040002,
+        "coverage": 43.91713878023546,
+        "time_score": 11.031746031746032,
+        "partial": 55.4735033894217,
+        "steps": 4983,
+        "elapsed_walltime": 146.44097328186035,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 1,
+          "step": 4983,
+          "walltime_seconds": 145.59569263458252,
+          "image_sha256": "010876cdb9436fc7a88d908dde6fb80caeb7d9b0f57041fa3a1f71337fc3273a"
+        },
+        "physical_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 3,
+            "step": 1216,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              648.1549430567908,
+              76.06350794822906
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1222,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -77.3412503129523,
+              -81.70754477374254
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 4,
+            "step": 1355,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              773.047632070678,
+              128.30711907255088
+            ],
+            "branch": "short_wall_approach",
+            "inventory_before": 2
+          },
+          {
+            "drone": 0,
+            "step": 1480,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              584.1930345336142,
+              -326.6484210166
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 0,
+            "step": 1640,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              300.52951622510705,
+              -272.5075781568255
+            ],
+            "branch": "narrow_short_drop",
+            "inventory_before": 1
+          },
+          {
+            "drone": 2,
+            "step": 1684,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              192.01565542191665,
+              197.56659235361386
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 2,
+            "step": 2054,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              2.4624656060860843,
+              220.3427323237744
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -329.83103623289486,
+              446.36312377211544
+            ],
+            "branch": "reserved_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 1,
+            "step": 2382,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              282.903598731623,
+              22.02447093313465
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 4,
+            "step": 3388,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              484.0125838311274,
+              -265.4440060341258
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          }
+        ],
+        "last_physical_drop_step": 3388,
+        "health_lost": 4,
+        "drones_at_zero_health": 0,
+        "exit_probe_events": [],
+        "final_drop_site_checks": [
+          {
+            "drone": 3,
+            "step": 2146,
+            "event": "site_drop_request",
+            "source": "second_drop",
+            "values": [
+              [
+                -333.826365215381,
+                444.1050867747005
+              ],
+              [
+                -334.35437333167334,
+                441.91827029303465
+              ]
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2147,
+            "event": "site_drop_result",
+            "source": "second_drop",
+            "values": [
+              true
+            ]
+          }
+        ],
+        "source": "rerun"
+      },
+      "fixed_minus_batch1": {
+        "placed": 0,
+        "last_physical_drop_step": 0,
+        "health_lost": 0,
+        "coverage": 0.0,
+        "map_score": 0.0,
+        "partial": 0.0,
+        "steps": 0,
+        "elapsed_walltime": -22.142683029174805
+      },
+      "fixed_minus_batch2": {
+        "placed": 0,
+        "last_physical_drop_step": 0,
+        "health_lost": 0,
+        "coverage": 0.0,
+        "map_score": 0.0,
+        "partial": 0.0,
+        "steps": 0,
+        "elapsed_walltime": -11.102961778640747
+      }
+    },
+    "Map08": {
+      "batch1": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 79.50186259402288,
+        "coverage": 44.46648630221442,
+        "time_score": 51.746031746031754,
+        "partial": 53.818831732057504,
+        "steps": 3444,
+        "elapsed_walltime": 120.56083488464355,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 119.40763306617737,
+          "image_sha256": "fb7d191e5561432093494c8092b6d9676b6a1b7844b1817cb978389762f9c720"
+        },
+        "physical_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ],
+            "branch": "deep_coverage",
+            "inventory_before": 1
+          }
+        ],
+        "last_physical_drop_step": 2488,
+        "health_lost": 9,
+        "drones_at_zero_health": 0,
+        "exit_probe_events": [],
+        "final_drop_site_checks": [],
+        "source": "rerun",
+        "previous_walltime": 125.54701066017151
+      },
+      "batch2": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 75.56452005325808,
+        "coverage": 37.598009704864765,
+        "time_score": 51.746031746031754,
+        "partial": 50.47646514220517,
+        "steps": 3444,
+        "elapsed_walltime": 119.27036643028259,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 117.61214447021484,
+          "image_sha256": "97b7b52d5d9afe64b6adda66a19d26a02918428494cab9b9d1bc6a6733a78426"
+        },
+        "physical_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2188,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              380.7587732946358,
+              58.0128088598728
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              417.8120864901374,
+              -418.58664689543815
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              70.26434299191189,
+              -501.75677263275423
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              99.86069791770343,
+              -485.55540670007906
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 4,
+            "step": 2188,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              380.7587732946358,
+              58.0128088598728
+            ],
+            "branch": "deep_coverage",
+            "inventory_before": 1
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              417.8120864901374,
+              -418.58664689543815
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              70.26434299191189,
+              -501.75677263275423
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              99.86069791770343,
+              -485.55540670007906
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          }
+        ],
+        "last_physical_drop_step": 2315,
+        "health_lost": 7,
+        "drones_at_zero_health": 0,
+        "exit_probe_events": [],
+        "final_drop_site_checks": [],
+        "source": "rerun",
+        "previous_walltime": 117.11330246925354
+      },
+      "fixed": {
+        "placed": 10,
+        "expected": 10,
+        "map_score": 72.05287033312813,
+        "coverage": 43.95005403680305,
+        "time_score": 51.746031746031754,
+        "partial": 49.99104914852785,
+        "steps": 3444,
+        "elapsed_walltime": 124.87663316726685,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 1,
+          "step": 3444,
+          "walltime_seconds": 123.72709822654724,
+          "image_sha256": "e7a52610b17ba601a69fe309be965da920bbfe89fc0522dcde55685addb87c4c"
+        },
+        "physical_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 3316,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              310.74780483962223,
+              5.434944339749732
+            ]
+          }
+        ],
+        "confirmed_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ],
+            "branch": "coverage",
+            "inventory_before": 2
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ],
+            "branch": "on_route_second",
+            "inventory_before": 1
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          },
+          {
+            "drone": 4,
+            "step": 3316,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              310.74780483962223,
+              5.434944339749732
+            ],
+            "branch": "fast_closeout",
+            "inventory_before": 1
+          }
+        ],
+        "last_physical_drop_step": 3316,
+        "health_lost": 8,
+        "drones_at_zero_health": 0,
+        "exit_probe_events": [
+          {
+            "drone": 4,
+            "step": 2188,
+            "event": "exit_probe",
+            "source": "second_drop",
+            "values": [
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              [
+                2140,
+                [
+                  302.78163390040737,
+                  96.48786075430607
+                ]
+              ]
+            ]
+          }
+        ],
+        "final_drop_site_checks": [],
+        "source": "rerun"
+      },
+      "fixed_minus_batch1": {
+        "placed": 0,
+        "last_physical_drop_step": 828,
+        "health_lost": -1,
+        "coverage": -0.5164322654113676,
+        "map_score": -7.448992260894755,
+        "partial": -3.827782583529654,
+        "steps": 0,
+        "elapsed_walltime": 4.315798282623291
+      },
+      "fixed_minus_batch2": {
+        "placed": 0,
+        "last_physical_drop_step": 1001,
+        "health_lost": 1,
+        "coverage": 6.352044331938288,
+        "map_score": -3.5116497201299524,
+        "partial": -0.48541599367732147,
+        "steps": 0,
+        "elapsed_walltime": 5.606266736984253
+      }
+    }
+  },
+  "initial_map08_probe_trial": {
+    "source": "cancelled observation on live turn protection",
+    "placed": 10,
+    "expected": 10,
+    "map_score": 76.47994868186898,
+    "coverage": 34.30394069732862,
+    "time_score": 41.34920634920635,
+    "partial": 49.235683115320846,
+    "steps": 3837,
+    "elapsed_walltime": 139.34907341003418,
+    "submitted_map": true,
+    "selected_submission": {
+      "drone": 4,
+      "step": 3837,
+      "walltime_seconds": 138.2425022125244,
+      "image_sha256": "1b8bf4f1a25bb1ec0089ae5498eb925a745298f12d3ca78720a516e8cb6652cb"
+    }
+  }
+}

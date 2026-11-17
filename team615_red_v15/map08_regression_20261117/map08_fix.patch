@@ -1,0 +1,166 @@
+diff --git a/second_drop_site.py b/second_drop_site.py
+index 9ef4808..49746d3 100644
+--- a/second_drop_site.py
++++ b/second_drop_site.py
+@@ -26,6 +26,9 @@ class SecondDropSite:
+         self.retry_at = 0
+         self.audit = []
+         self.backups = []
++        self.opportunity_backups = []
++        self.observing_exit = False
++        self.probed_exit = None
+         self.survey_coverage = None
+ 
+     @staticmethod
+@@ -73,14 +76,16 @@ class SecondDropSite:
+             covered += length
+             previous = point
+ 
+-    def keep_backup(self, step, point, gain):
+-        # Refresh a nearby site with the newer observation. Keep spatially
+-        # distinct choices within the same small, expiring list.
+-        self.backups = [row for row in self.backups if step-row[0] <= self.CACHE_STEPS
+-                        and math.dist(point,row[1]) >= self.ARRIVAL]
+-        self.backups.append((step,point,gain))
+-        if len(self.backups) > self.MAX_CACHED:
+-            del self.backups[0]
++    def _remember_site(self, backups, step, point, gain):
++        recent = [row for row in backups if step - row[0] <= self.CACHE_STEPS
++                  and math.dist(point, row[1]) >= self.ARRIVAL]
++        recent.append((step, point, gain))
++        return recent[-self.MAX_CACHED:]
++
++    def keep_backup(self, step, point, gain, *, opportunity=False):
++        self.backups = self._remember_site(self.backups, step, point, gain)
++        if opportunity:
++            self.opportunity_backups = self._remember_site(self.opportunity_backups, step, point, gain)
+ 
+     def _site_block(self, drone, point, step, semantic, *, stationary):
+         return drone._placement_block(point, step, semantic, stationary=stationary,
+@@ -137,7 +142,7 @@ class SecondDropSite:
+         return failure, dict(map_clearance=mapped if math.isfinite(mapped) else None,
+                              evidence=int(drone.grid.evidence[cell]))
+ 
+-    def assess(self, drone, step, ranges, semantic, sites, *, early):
++    def assess(self, drone, step, ranges, semantic, sites, *, early, allow_exit_probe=False):
+         if self.survey_coverage is None:
+             self.survey_coverage = copy(drone.fine_wall_coverage)
+             self.survey_coverage._alignment_cache = {}
+@@ -155,12 +160,12 @@ class SecondDropSite:
+         estimate = (lambda point: measure(point,bombs+claims)) if early else drone.team_wall.query(drone,semantic,step)
+         baseline = None if early else estimate(drone.pose)[0]
+         floor = drone.placement._coverage_minimum(step, drone.limit)
+-        if early:
+-            floor = self.opportunity_floor(floor)
+         origin = tuple(map(float,drone.pose))
+         best = None
+         best_rank = None
+         original = None
++        exit_probe = None
++        exit_rank = None
+         rows = []
+         for source,point,recorded in sites:
+             gain = estimate(point) if early else estimate(point)[0]
+@@ -173,21 +178,31 @@ class SecondDropSite:
+             metrics.update(distance=math.dist(origin,point),nearest_bomb=nearest,spacing=self.SITE_SPACING,
+                            gross=all_walls,after_bombs=after_bombs,gain=gain)
+             rows.append((source,point,recorded,failure,metrics))
+-            if failure:
+-                continue
++            exit_only = failure == ["turn_hold_neck_exit"]
+             if early:
+-                self.keep_backup(step,point,gain)
++                # Survey evidence can be revisited from a better scan. An
++                # immediate placement requires the stricter observation.
++                if not failure or exit_only:
++                    self.keep_backup(step, point, gain,
++                                     opportunity=not failure and gain >= self.opportunity_floor(floor))
++                continue
++            if failure and not (allow_exit_probe and exit_only and source == "backup"):
+                 continue
+             legacy_rank = gain, -metrics["distance"]
++            rank = drone.team_wall.site_rank(point, gain, metrics["distance"], bombs + claims, radius)
++            if exit_only:
++                if exit_rank is None or rank > exit_rank:
++                    exit_rank = rank
++                    exit_probe = legacy_rank, point, source, recorded, True
++                continue
+             if original is None or legacy_rank > original[0]:
+                 original = legacy_rank, point
+-            rank = drone.team_wall.site_rank(point, gain, metrics["distance"], bombs + claims, radius)
+             if best_rank is None or rank > best_rank:
+                 best_rank = rank
+-                best = legacy_rank, point, source, recorded
++                best = legacy_rank, point, source, recorded, False
+         if best is not None and best[1] != original[1]:
+             self.audit.append((step, "site_rank_changed", original[1], best[1], len(bombs) + len(claims)))
+-        return origin,baseline,floor,rows,best
++        return origin, baseline, floor, rows, best or exit_probe
+ 
+     def observe_route(self, drone, step, ranges, semantic):
+         if (self.used or drone.previous_inventory != 1 or drone.fast_closeout.phase(step) is not None
+@@ -226,11 +241,20 @@ class SecondDropSite:
+                     yaw = heading+offset
+                     point = origin[0]+length*math.cos(yaw),origin[1]+length*math.sin(yaw)
+                     sites.append(("current_probe",point,step))
+-        origin,current,floor,rows,best = self.assess(drone,step,ranges,semantic,sites,early=False)
++        deep = drone.placement.deep
++        zone = deep.zone
++        allow_exit_probe = (phase == "ordinary" and zone is not None and zone[0] != self.probed_exit
++                            and not deep.here(origin, 68.))
++        origin,current,floor,rows,best = self.assess(drone, step, ranges, semantic, sites, early=False,
++                                                   allow_exit_probe=allow_exit_probe)
+         self.audit.append((step,"reserve_review",phase,origin,current,floor,rows,len(self.backups)))
+         if best is None:
+             return False
+         self.plan = step,best[1],current,best[0][0]
++        self.observing_exit = best[4]
++        if self.observing_exit:
++            self.probed_exit = zone[0]
++            self.audit.append((step, "exit_probe", best[1], zone))
+         self.audit.append((step,"reserve",best[1],current,best[0][0],origin,best[2],best[3]))
+         return True
+ 
+@@ -241,7 +265,7 @@ class SecondDropSite:
+     def recent_at(self, point, step):
+         return any(0 <= step-stamp <= self.OBSERVE_INTERVAL
+                    and math.dist(point,site) <= self.ARRIVAL
+-                   for stamp,site,_ in self.backups)
++                   for stamp,site,_ in self.opportunity_backups)
+ 
+     def on_route_opportunity(self, drone, step, ranges, semantic):
+         if (self.plan is not None or drone.fast_closeout.phase(step) is not None
+@@ -290,6 +314,7 @@ class SecondDropSite:
+ 
+     def clear(self, step, reason):
+         self.ready_step = None
++        self.observing_exit = False
+         if self.plan is not None:
+             self.audit.append((step,reason,self.plan[1]))
+             self.plan = None
+@@ -309,14 +334,24 @@ class SecondDropSite:
+             return None
+         distance = math.dist(target,drone.pose)
+         if distance <= self.ARRIVAL:
++            if self.observing_exit:
++                angles = np.asarray(drone.lidar_rays_angles())
++                drone.placement.deep.observe(drone, step, np.asarray(ranges), angles, semantic,
++                                             drone.placement.audit)
+             gain = drone.team_wall.query(drone, semantic, step)(drone.pose)[0]
+             floor = drone.placement._coverage_minimum(step, drone.limit)
+             failure = self.current_blocks(drone, step, ranges, semantic, gain, floor, baseline=baseline)
+-            if failure and failure != ["speed"]:
++            turn_protection = ("turn_hold_neck_exit", "turn_hold_live_neck")
++            observe_only = (self.observing_exit and any(reason in turn_protection for reason in failure)
++                            and all(reason in ("speed", *turn_protection) for reason in failure))
++            if failure and failure != ["speed"] and not observe_only:
+                 self.audit.append((step, "site_drop_result", "arrival_rejected", tuple(failure)))
+                 self.clear(step, "arrival_rejected")
+                 return None
+             command.update(drone.drive(drone.pose, self._velocity_from_odometry(drone, odom)))
++            if observe_only:
++                drone.local_escape.apply(drone, command, step, ranges, semantic)
++                return "approach"
+             if failure:
+                 return "approach"
+             if not self.audit or self.audit[-1][1] != "arrived":

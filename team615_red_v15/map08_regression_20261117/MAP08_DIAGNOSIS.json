@@ -1,0 +1,4767 @@
+{
+  "arms": [
+    "batch1",
+    "batch2",
+    "fixed"
+  ],
+  "checkpoints": {
+    "batch1": {
+      "survey": [
+        {
+          "step": 2164,
+          "floor": 0.8,
+          "gain": 1.7890625000000004,
+          "point": [
+            354.4525436865322,
+            75.14069127771683
+          ],
+          "reasons": [],
+          "survives": true,
+          "backups_near": [
+            [
+              2164,
+              [
+                354.4525436865322,
+                75.14069127771683
+              ],
+              1.7890625000000004
+            ]
+          ]
+        },
+        {
+          "step": 2164,
+          "floor": 0.8,
+          "gain": 1.7621875000000005,
+          "point": [
+            362.83988543197245,
+            66.55858789654071
+          ],
+          "reasons": [],
+          "survives": true,
+          "backups_near": [
+            [
+              2164,
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              1.7621875000000005
+            ]
+          ]
+        }
+      ],
+      "reserve": [
+        {
+          "phase": "ordinary",
+          "current": 2.150781249999999,
+          "floor": 0.8,
+          "backups": 11,
+          "site_count": 17,
+          "eligible": [
+            [
+              "backup",
+              [
+                354.4525436865322,
+                75.14069127771683
+              ],
+              2164,
+              [],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 30.56781771152242,
+                "nearest_bomb": 257.12201991961376,
+                "spacing": 114.75,
+                "gross": 3.0368749999999993,
+                "after_bombs": 2.8759375,
+                "gain": 2.8759375
+              }
+            ],
+            [
+              "backup",
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              2164,
+              [],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 18.71867307382625,
+                "nearest_bomb": 268.8377026904278,
+                "spacing": 114.75,
+                "gross": 2.8712499999999994,
+                "after_bombs": 2.8681249999999996,
+                "gain": 2.8681249999999996
+              }
+            ]
+          ],
+          "correct_sites": [
+            [
+              "backup",
+              [
+                354.4525436865322,
+                75.14069127771683
+              ],
+              2164,
+              [],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 30.56781771152242,
+                "nearest_bomb": 257.12201991961376,
+                "spacing": 114.75,
+                "gross": 3.0368749999999993,
+                "after_bombs": 2.8759375,
+                "gain": 2.8759375
+              }
+            ],
+            [
+              "backup",
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              2164,
+              [],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 18.71867307382625,
+                "nearest_bomb": 268.8377026904278,
+                "spacing": 114.75,
+                "gross": 2.8712499999999994,
+                "after_bombs": 2.8681249999999996,
+                "gain": 2.8681249999999996
+              }
+            ]
+          ],
+          "high_probes": [
+            [
+              "current_probe",
+              [
+                388.7500421388953,
+                90.55440684424951
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 35.99999999999999,
+                "nearest_bomb": 279.3494048805836,
+                "spacing": 114.75,
+                "gross": 2.0968749999999994,
+                "after_bombs": 2.0968749999999994,
+                "gain": 2.0968749999999994
+              }
+            ],
+            [
+              "current_probe",
+              [
+                386.15150735094056,
+                81.9377011538021
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 26.999999999999996,
+                "nearest_bomb": 280.9912968045622,
+                "spacing": 114.75,
+                "gross": 2.0640624999999995,
+                "after_bombs": 2.0640624999999995,
+                "gain": 2.0640624999999995
+              }
+            ],
+            [
+              "current_probe",
+              [
+                383.5529725629858,
+                73.32099546335468
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 18.0,
+                "nearest_bomb": 282.91010542694096,
+                "spacing": 114.75,
+                "gross": 1.9765624999999996,
+                "after_bombs": 1.9765624999999996,
+                "gain": 1.9765624999999996
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "batch2": {
+      "survey": [
+        {
+          "step": 2164,
+          "floor": 2.0,
+          "gain": 1.7890625000000004,
+          "point": [
+            354.4525436865322,
+            75.14069127771683
+          ],
+          "reasons": [
+            "turn_hold_neck_exit",
+            "coverage_floor"
+          ],
+          "survives": false,
+          "backups_near": []
+        },
+        {
+          "step": 2164,
+          "floor": 2.0,
+          "gain": 1.7621875000000005,
+          "point": [
+            362.83988543197245,
+            66.55858789654071
+          ],
+          "reasons": [
+            "turn_hold_neck_exit",
+            "coverage_floor"
+          ],
+          "survives": false,
+          "backups_near": []
+        }
+      ],
+      "reserve": [
+        {
+          "phase": "ordinary",
+          "current": 2.150781249999999,
+          "floor": 0.8,
+          "backups": 0,
+          "site_count": 15,
+          "eligible": [],
+          "correct_sites": [],
+          "high_probes": [
+            [
+              "current_probe",
+              [
+                388.7500421388953,
+                90.55440684424951
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 35.99999999999999,
+                "nearest_bomb": 279.3494048805836,
+                "spacing": 32.0,
+                "gross": 2.0968749999999994,
+                "after_bombs": 2.0968749999999994,
+                "gain": 2.0968749999999994
+              }
+            ],
+            [
+              "current_probe",
+              [
+                386.15150735094056,
+                81.9377011538021
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 26.999999999999996,
+                "nearest_bomb": 280.9912968045622,
+                "spacing": 32.0,
+                "gross": 2.0640624999999995,
+                "after_bombs": 2.0640624999999995,
+                "gain": 2.0640624999999995
+              }
+            ],
+            [
+              "current_probe",
+              [
+                383.5529725629858,
+                73.32099546335468
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 18.0,
+                "nearest_bomb": 282.91010542694096,
+                "spacing": 32.0,
+                "gross": 1.9765624999999996,
+                "after_bombs": 1.9765624999999996,
+                "gain": 1.9765624999999996
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "fixed": {
+      "survey": [
+        {
+          "step": 2164,
+          "floor": 0.8,
+          "gain": 1.7890625000000004,
+          "point": [
+            354.4525436865322,
+            75.14069127771683
+          ],
+          "reasons": [
+            "turn_hold_neck_exit"
+          ],
+          "survives": true,
+          "backups_near": [
+            [
+              2164,
+              [
+                354.4525436865322,
+                75.14069127771683
+              ],
+              1.7890625000000004
+            ]
+          ]
+        },
+        {
+          "step": 2164,
+          "floor": 0.8,
+          "gain": 1.7621875000000005,
+          "point": [
+            362.83988543197245,
+            66.55858789654071
+          ],
+          "reasons": [
+            "turn_hold_neck_exit"
+          ],
+          "survives": true,
+          "backups_near": [
+            [
+              2164,
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              1.7621875000000005
+            ]
+          ]
+        }
+      ],
+      "reserve": [
+        {
+          "phase": "ordinary",
+          "current": 2.150781249999999,
+          "floor": 0.8,
+          "backups": 7,
+          "site_count": 17,
+          "eligible": [],
+          "correct_sites": [
+            [
+              "backup",
+              [
+                354.4525436865322,
+                75.14069127771683
+              ],
+              2164,
+              [
+                "turn_hold_neck_exit"
+              ],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 30.56781771152242,
+                "nearest_bomb": 257.12201991961376,
+                "spacing": 32.0,
+                "gross": 3.0368749999999993,
+                "after_bombs": 2.8759375,
+                "gain": 2.8759375
+              }
+            ],
+            [
+              "backup",
+              [
+                362.83988543197245,
+                66.55858789654071
+              ],
+              2164,
+              [
+                "turn_hold_neck_exit"
+              ],
+              {
+                "map_clearance": 44.721359549995796,
+                "evidence": -8,
+                "distance": 18.71867307382625,
+                "nearest_bomb": 268.8377026904278,
+                "spacing": 32.0,
+                "gross": 2.8712499999999994,
+                "after_bombs": 2.8681249999999996,
+                "gain": 2.8681249999999996
+              }
+            ]
+          ],
+          "high_probes": [
+            [
+              "current_probe",
+              [
+                388.7500421388953,
+                90.55440684424951
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 35.99999999999999,
+                "nearest_bomb": 279.3494048805836,
+                "spacing": 32.0,
+                "gross": 2.0968749999999994,
+                "after_bombs": 2.0968749999999994,
+                "gain": 2.0968749999999994
+              }
+            ],
+            [
+              "current_probe",
+              [
+                386.15150735094056,
+                81.9377011538021
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 26.999999999999996,
+                "nearest_bomb": 280.9912968045622,
+                "spacing": 32.0,
+                "gross": 2.0640624999999995,
+                "after_bombs": 2.0640624999999995,
+                "gain": 2.0640624999999995
+              }
+            ],
+            [
+              "current_probe",
+              [
+                383.5529725629858,
+                73.32099546335468
+              ],
+              2188,
+              [
+                "coverage_increment"
+              ],
+              {
+                "map_clearance": 40.0,
+                "evidence": -8,
+                "distance": 18.0,
+                "nearest_bomb": 282.91010542694096,
+                "spacing": 32.0,
+                "gross": 1.9765624999999996,
+                "after_bombs": 1.9765624999999996,
+                "gain": 1.9765624999999996
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "first_differences": {
+    "0": {
+      "physical_xy": {
+        "step": 2191,
+        "variants": {
+          "batch1": [
+            397.5311826160347,
+            -511.5585972002348
+          ],
+          "batch2": [
+            397.5172261700613,
+            -511.4866034601131
+          ]
+        }
+      },
+      "pose": {
+        "step": 2190,
+        "variants": {
+          "batch1": [
+            391.6462656859102,
+            -503.9781170308493
+          ],
+          "batch2": [
+            391.77694953492863,
+            -504.2499000741524
+          ]
+        }
+      },
+      "route": {
+        "step": 2206,
+        "variants": {
+          "batch1": [
+            460.0,
+            -511.0
+          ],
+          "batch2": [
+            480.0,
+            -491.0
+          ]
+        }
+      },
+      "command": {
+        "step": 2190,
+        "variants": {
+          "batch1": {
+            "forward": 0.23952537524609155,
+            "lateral": -0.09392897598433445,
+            "rotation": -0.01171988439223659,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "batch2": {
+            "forward": 0.22068189472851388,
+            "lateral": 0.04339089775934206,
+            "rotation": -0.021516139481232432,
+            "grasper": 0,
+            "place_bomb": 0
+          }
+        }
+      },
+      "closeout_target": {
+        "step": 2300,
+        "variants": {
+          "batch1": [
+            407.3403253142178,
+            -423.9053954725529
+          ],
+          "batch2": [
+            469.46117656491657,
+            -415.1588103742125
+          ]
+        }
+      },
+      "checkpoints": {
+        "batch1": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              386.8357391531387,
+              -512.3271572911996
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              389.51606920667103,
+              -512.1292140267599
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              392.1751172817362,
+              -511.9148754544601
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              394.8479841644772,
+              -511.71020753036333
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              400.2161148512931,
+              -511.3859961795353
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              422.0784869057556,
+              -510.5846592335499
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              470.35125285258624,
+              -504.8109109716948
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              496.36494499717793,
+              -473.86239416200243
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              502.43967849702636,
+              -444.42605919092955
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              464.7470398564608,
+              -416.17328941291186
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              420.7282756913148,
+              -418.1968003982276
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              419.8453647387584,
+              -418.4434150783333
+            ]
+          }
+        ],
+        "batch2": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              386.8357391531387,
+              -512.3271572911996
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              389.51606920667103,
+              -512.1292140267599
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              392.1751172817362,
+              -511.9148754544601
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              394.8479841644772,
+              -511.71020753036333
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              400.1916698562386,
+              -511.28669598034537
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              421.79325636367804,
+              -512.174194803568
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              466.4040860286426,
+              -506.68227464486347
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              496.92532632297326,
+              -465.2612676759436
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              489.09714698990604,
+              -433.65029149641197
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              432.8933545823377,
+              -420.276529732944
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              469.46117656491657,
+              -415.1588103742125
+            ],
+            "physical": [
+              417.8120864901374,
+              -418.58664689543815
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              469.46117656491657,
+              -415.1588103742125
+            ],
+            "physical": [
+              423.53587859614737,
+              -419.7165335565315
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              469.46117656491657,
+              -415.1588103742125
+            ],
+            "physical": [
+              424.02359802650767,
+              -419.81625904032376
+            ]
+          }
+        ],
+        "fixed": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              386.8357391531387,
+              -512.3271572911996
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              389.51606920667103,
+              -512.1292140267599
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              392.1751172817362,
+              -511.9148754544601
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              394.8479841644772,
+              -511.71020753036333
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              400.2161148512931,
+              -511.3859961795353
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              422.0784869057556,
+              -510.5846592335499
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              470.35125285258624,
+              -504.8109109716948
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              496.36494499717793,
+              -473.86239416200243
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              502.43967849702636,
+              -444.42605919092955
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              464.7470398564608,
+              -416.17328941291186
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              420.7282756913148,
+              -418.1968003982276
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "physical": [
+              419.8453647387584,
+              -418.4434150783333
+            ]
+          }
+        ]
+      }
+    },
+    "2": {
+      "physical_xy": {
+        "step": 2191,
+        "variants": {
+          "batch1": [
+            80.53538733386262,
+            -504.7275494777435
+          ],
+          "batch2": [
+            80.55395297120214,
+            -504.7225156108057
+          ]
+        }
+      },
+      "pose": {
+        "step": 2190,
+        "variants": {
+          "batch1": [
+            81.98509405557729,
+            -508.98467182838505
+          ],
+          "batch2": [
+            81.73154418169912,
+            -508.76304489353004
+          ]
+        }
+      },
+      "route": {
+        "step": 2258,
+        "variants": {
+          "batch1": [
+            80.0,
+            -491.0
+          ],
+          "batch2": [
+            80.0,
+            -471.0
+          ]
+        }
+      },
+      "command": {
+        "step": 2190,
+        "variants": {
+          "batch1": {
+            "forward": -0.005519711420399336,
+            "lateral": 0.02728825117967043,
+            "rotation": 0.07543470425551746,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "batch2": {
+            "forward": 0.0039476993121471075,
+            "lateral": -0.007814870587584595,
+            "rotation": 0.05386412624390502,
+            "grasper": 0,
+            "place_bomb": 0
+          }
+        }
+      },
+      "health": {
+        "step": 2203,
+        "variants": {
+          "batch1": 23,
+          "batch2": 24
+        }
+      },
+      "closeout_target": {
+        "step": 2312,
+        "variants": {
+          "batch1": [
+            89.89525015609551,
+            -495.7024885882188
+          ],
+          "batch2": null
+        }
+      },
+      "checkpoints": {
+        "batch1": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.73698049171115,
+              -504.65792269806053
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.70878874694321,
+              -504.6712133257163
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.6546361272274,
+              -504.68967042725535
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.60085393840083,
+              -504.7075992975015
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.49080117194465,
+              -504.73992206324493
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.6442090733826,
+              -504.5807593280362
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              84.34890916642715,
+              -505.9919133455209
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              83.3692088314968,
+              -505.36648672909223
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              85.2628429801042,
+              -498.2437540272268
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              81.64931261250392,
+              -478.3866817227742
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              84.37017814095431,
+              -461.9490194649601
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              89.89525015609551,
+              -495.7024885882188
+            ],
+            "physical": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              89.89525015609551,
+              -495.7024885882188
+            ],
+            "physical": [
+              85.04180041635438,
+              -454.018962850181
+            ]
+          }
+        ],
+        "batch2": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.73698049171115,
+              -504.65792269806053
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.70878874694321,
+              -504.6712133257163
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.6546361272274,
+              -504.68967042725535
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.60085393840083,
+              -504.7075992975015
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.50264532291365,
+              -504.73899312313347
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.314287304453,
+              -504.78893363674536
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.53143639399647,
+              -505.0956611171747
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              76.66890028683135,
+              -505.2555359829474
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              73.62295099073829,
+              -503.37777443358607
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              70.45967977099471,
+              -501.7593318970922
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              70.29088826720034,
+              -501.7624952486575
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              70.26434299191189,
+              -501.75677263275423
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              70.25370331970204,
+              -501.7509934744756
+            ]
+          }
+        ],
+        "fixed": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.73698049171115,
+              -504.65792269806053
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.70878874694321,
+              -504.6712133257163
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.6546361272274,
+              -504.68967042725535
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.60085393840083,
+              -504.7075992975015
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.49080117194465,
+              -504.73992206324493
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.6442090733826,
+              -504.5807593280362
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              84.34890916642715,
+              -505.9919133455209
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              83.3692088314968,
+              -505.36648672909223
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              85.2628429801042,
+              -498.2437540272268
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              81.64931261250392,
+              -478.3866817227742
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              84.37017814095431,
+              -461.9490194649601
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              89.89525015609551,
+              -495.7024885882188
+            ],
+            "physical": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              89.89525015609551,
+              -495.7024885882188
+            ],
+            "physical": [
+              85.04180041635438,
+              -454.018962850181
+            ]
+          }
+        ]
+      }
+    },
+    "3": {
+      "physical_xy": {
+        "step": 2191,
+        "variants": {
+          "batch1": [
+            75.16091157063572,
+            -478.0805056420514
+          ],
+          "batch2": [
+            75.1519141942771,
+            -478.079728249621
+          ]
+        }
+      },
+      "pose": {
+        "step": 2190,
+        "variants": {
+          "batch1": [
+            74.13821028521886,
+            -469.5140037833691
+          ],
+          "batch2": [
+            74.52242959042343,
+            -469.43741734055067
+          ]
+        }
+      },
+      "route": {
+        "step": 2285,
+        "variants": {
+          "batch1": null,
+          "batch2": [
+            80.0,
+            -491.0
+          ]
+        }
+      },
+      "task": {
+        "step": 2285,
+        "variants": {
+          "batch1": null,
+          "batch2": 2136
+        }
+      },
+      "command": {
+        "step": 2190,
+        "variants": {
+          "batch1": {
+            "forward": 0.002749739571938494,
+            "lateral": 0.024969577286867165,
+            "rotation": 0.10703813121635042,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "batch2": {
+            "forward": -0.0013952918356488504,
+            "lateral": 0.008411449742113084,
+            "rotation": 0.09124389476797168,
+            "grasper": 0,
+            "place_bomb": 0
+          }
+        }
+      },
+      "closeout_target": {
+        "step": 2312,
+        "variants": {
+          "batch1": [
+            108.37405637016701,
+            -367.11614451545427
+          ],
+          "batch2": null
+        }
+      },
+      "checkpoints": {
+        "batch1": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.22096737934822,
+              -478.0618003097345
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.17580513380119,
+              -478.07313002145673
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15892638927957,
+              -478.0793486223512
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15275854511178,
+              -478.0805118255137
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.16480817974822,
+              -478.0803355802485
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              74.97267884187319,
+              -478.07233838002736
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.89704206076193,
+              -474.27989214598296
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.25388153643303,
+              -470.3256611222964
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.03379857815311,
+              -454.2841130265203
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              81.57273785946401,
+              -430.10560774199905
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              77.55031435119857,
+              -408.90261944000207
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              108.37405637016701,
+              -367.11614451545427
+            ],
+            "physical": [
+              75.40472421213556,
+              -398.2827587048494
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              108.37405637016701,
+              -367.11614451545427
+            ],
+            "physical": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          }
+        ],
+        "batch2": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.22096737934822,
+              -478.0618003097345
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.17580513380119,
+              -478.07313002145673
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15892638927957,
+              -478.0793486223512
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15275854511178,
+              -478.0805118255137
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.13926759118408,
+              -478.06540988414054
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.02567829843137,
+              -478.004990337629
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.09074208994984,
+              -477.64328135130904
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              90.5598063847531,
+              -471.58900379444566
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              94.40573039730921,
+              -474.98449462914436
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              96.77736434699986,
+              -480.89325703437805
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              98.9124718911426,
+              -483.98542410553017
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              99.73902558697917,
+              -485.3377263530891
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              74.0265031461263,
+              -436.2929350841333
+            ],
+            "physical": [
+              99.86069791770343,
+              -485.55540670007906
+            ]
+          }
+        ],
+        "fixed": [
+          {
+            "step": 2187,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.22096737934822,
+              -478.0618003097345
+            ]
+          },
+          {
+            "step": 2188,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.17580513380119,
+              -478.07313002145673
+            ]
+          },
+          {
+            "step": 2189,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15892638927957,
+              -478.0793486223512
+            ]
+          },
+          {
+            "step": 2190,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.15275854511178,
+              -478.0805118255137
+            ]
+          },
+          {
+            "step": 2192,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              75.16480817974822,
+              -478.0803355802485
+            ]
+          },
+          {
+            "step": 2200,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              74.97267884187319,
+              -478.07233838002736
+            ]
+          },
+          {
+            "step": 2220,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.89704206076193,
+              -474.27989214598296
+            ]
+          },
+          {
+            "step": 2250,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.25388153643303,
+              -470.3256611222964
+            ]
+          },
+          {
+            "step": 2270,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              80.03379857815311,
+              -454.2841130265203
+            ]
+          },
+          {
+            "step": 2295,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              81.57273785946401,
+              -430.10560774199905
+            ]
+          },
+          {
+            "step": 2308,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": null,
+            "physical": [
+              77.55031435119857,
+              -408.90261944000207
+            ]
+          },
+          {
+            "step": 2314,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              108.37405637016701,
+              -367.11614451545427
+            ],
+            "physical": [
+              75.40472421213556,
+              -398.2827587048494
+            ]
+          },
+          {
+            "step": 2315,
+            "peer4_inventory": [
+              2007,
+              1
+            ],
+            "peer4_reservation": null,
+            "peer4_drop": null,
+            "target": [
+              108.37405637016701,
+              -367.11614451545427
+            ],
+            "physical": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          }
+        ]
+      }
+    },
+    "4": {
+      "physical_xy": {
+        "step": 2189,
+        "variants": {
+          "batch1": [
+            380.5616763727789,
+            58.11981196338356
+          ],
+          "batch2": [
+            380.8197271111522,
+            57.96311324181871
+          ]
+        }
+      },
+      "pose": {
+        "step": 2189,
+        "variants": {
+          "batch1": [
+            378.36230294452133,
+            56.239159512042484
+          ],
+          "batch2": [
+            378.71446765081447,
+            56.13931941719843
+          ]
+        }
+      },
+      "route": {
+        "step": 2195,
+        "variants": {
+          "batch1": [
+            440.0,
+            69.0
+          ],
+          "batch2": [
+            400.0,
+            69.0
+          ]
+        }
+      },
+      "command": {
+        "step": 2188,
+        "variants": {
+          "batch1": {
+            "forward": -0.2845618433234811,
+            "lateral": 0.49459861875572836,
+            "rotation": 0.6,
+            "grasper": 0,
+            "place_bomb": 0
+          },
+          "batch2": {
+            "forward": 0.0,
+            "lateral": 0.0,
+            "rotation": 0.0,
+            "grasper": 0,
+            "place_bomb": 1
+          }
+        }
+      },
+      "site_plan": {
+        "step": 2188,
+        "variants": {
+          "batch1": [
+            2188,
+            [
+              362.83988543197245,
+              66.55858789654071
+            ],
+            2.150781249999999,
+            2.8681249999999996
+          ],
+          "batch2": null
+        }
+      },
+      "peer4_inventory": {
+        "step": 2189,
+        "variants": {
+          "batch1": [
+            2189,
+            1
+          ],
+          "batch2": [
+            2189,
+            0
+          ]
+        }
+      },
+      "peer4_drop": {
+        "step": 2189,
+        "variants": {
+          "batch1": null,
+          "batch2": [
+            378.3559029870763,
+            56.087584082459834
+          ]
+        }
+      }
+    }
+  },
+  "coverage": {
+    "actual": {
+      "batch1": 44.46648630221442,
+      "batch2": 37.598009704864765,
+      "fixed": 43.95005403680305
+    },
+    "base_layout_with_only_d4_replaced": 44.359863348541005,
+    "base_layout_with_only_later_three_replaced": 37.70463265853818,
+    "base_layout_with_d4_and_later_three_replaced": 37.598009704864765,
+    "changes": [
+      {
+        "drone": 0,
+        "ordinal": 2,
+        "variants": {
+          "batch1": {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          "batch2": {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              417.8120864901374,
+              -418.58664689543815
+            ]
+          },
+          "fixed": {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          }
+        }
+      },
+      {
+        "drone": 2,
+        "ordinal": 2,
+        "variants": {
+          "batch1": {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          "batch2": {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              70.26434299191189,
+              -501.75677263275423
+            ]
+          },
+          "fixed": {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          }
+        }
+      },
+      {
+        "drone": 3,
+        "ordinal": 2,
+        "variants": {
+          "batch1": {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          "batch2": {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              99.86069791770343,
+              -485.55540670007906
+            ]
+          },
+          "fixed": {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          }
+        }
+      },
+      {
+        "drone": 4,
+        "ordinal": 2,
+        "variants": {
+          "batch1": {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          },
+          "batch2": {
+            "drone": 4,
+            "step": 2188,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              380.7587732946358,
+              58.0128088598728
+            ]
+          },
+          "fixed": {
+            "drone": 4,
+            "step": 3316,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              310.74780483962223,
+              5.434944339749732
+            ]
+          }
+        }
+      }
+    ],
+    "identical_positions": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "repair_positions_identical_to_batch1": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "repair_and_batch1_later_three_match": true
+  },
+  "drone4_semantic_hit_counts": {
+    "batch1": {
+      "2188": {
+        "DRONE": 2
+      },
+      "2189": {
+        "DRONE": 3
+      },
+      "2190": {
+        "DRONE": 3
+      }
+    },
+    "batch2": {
+      "2188": {
+        "DRONE": 2
+      },
+      "2189": {
+        "BOMB": 35
+      },
+      "2190": {
+        "BOMB": 35
+      }
+    },
+    "fixed": {
+      "2188": {
+        "DRONE": 2
+      },
+      "2189": {
+        "DRONE": 3
+      },
+      "2190": {
+        "DRONE": 3
+      }
+    }
+  },
+  "downstream": {
+    "0": {
+      "separation_from_drone4_at_2190": {
+        "batch1": 570.2556186550181,
+        "batch2": 569.8099197450924,
+        "fixed": 570.2556186550181
+      },
+      "any_direct_message_from_drone4": {
+        "batch1": false,
+        "batch2": false,
+        "fixed": false
+      },
+      "observed_own_physics_and_pose": {
+        "physical_xy": {
+          "step": 2191,
+          "variants": {
+            "batch1": [
+              397.5311826160347,
+              -511.5585972002348
+            ],
+            "batch2": [
+              397.5172261700613,
+              -511.4866034601131
+            ]
+          }
+        },
+        "pose": {
+          "step": 2190,
+          "variants": {
+            "batch1": [
+              391.6462656859102,
+              -503.9781170308493
+            ],
+            "batch2": [
+              391.77694953492863,
+              -504.2499000741524
+            ]
+          }
+        },
+        "route": {
+          "step": 2206,
+          "variants": {
+            "batch1": [
+              460.0,
+              -511.0
+            ],
+            "batch2": [
+              480.0,
+              -491.0
+            ]
+          }
+        },
+        "command": {
+          "step": 2190,
+          "variants": {
+            "batch1": {
+              "forward": 0.23952537524609155,
+              "lateral": -0.09392897598433445,
+              "rotation": -0.01171988439223659,
+              "grasper": 0,
+              "place_bomb": 0
+            },
+            "batch2": {
+              "forward": 0.22068189472851388,
+              "lateral": 0.04339089775934206,
+              "rotation": -0.021516139481232432,
+              "grasper": 0,
+              "place_bomb": 0
+            }
+          }
+        },
+        "closeout_target": {
+          "step": 2300,
+          "variants": {
+            "batch1": [
+              407.3403253142178,
+              -423.9053954725529
+            ],
+            "batch2": [
+              469.46117656491657,
+              -415.1588103742125
+            ]
+          }
+        },
+        "checkpoints": {
+          "batch1": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                386.8357391531387,
+                -512.3271572911996
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                389.51606920667103,
+                -512.1292140267599
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                392.1751172817362,
+                -511.9148754544601
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                394.8479841644772,
+                -511.71020753036333
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                400.2161148512931,
+                -511.3859961795353
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                422.0784869057556,
+                -510.5846592335499
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                470.35125285258624,
+                -504.8109109716948
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                496.36494499717793,
+                -473.86239416200243
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                502.43967849702636,
+                -444.42605919092955
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                464.7470398564608,
+                -416.17328941291186
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                431.2351673498616,
+                -415.38638189798957
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                420.7282756913148,
+                -418.1968003982276
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                419.8453647387584,
+                -418.4434150783333
+              ]
+            }
+          ],
+          "batch2": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                386.8357391531387,
+                -512.3271572911996
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                389.51606920667103,
+                -512.1292140267599
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                392.1751172817362,
+                -511.9148754544601
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                394.8479841644772,
+                -511.71020753036333
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                400.1916698562386,
+                -511.28669598034537
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                421.79325636367804,
+                -512.174194803568
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                466.4040860286426,
+                -506.68227464486347
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                496.92532632297326,
+                -465.2612676759436
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                489.09714698990604,
+                -433.65029149641197
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                432.8933545823377,
+                -420.276529732944
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                469.46117656491657,
+                -415.1588103742125
+              ],
+              "physical": [
+                417.8120864901374,
+                -418.58664689543815
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                469.46117656491657,
+                -415.1588103742125
+              ],
+              "physical": [
+                423.53587859614737,
+                -419.7165335565315
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                469.46117656491657,
+                -415.1588103742125
+              ],
+              "physical": [
+                424.02359802650767,
+                -419.81625904032376
+              ]
+            }
+          ],
+          "fixed": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                386.8357391531387,
+                -512.3271572911996
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                389.51606920667103,
+                -512.1292140267599
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                392.1751172817362,
+                -511.9148754544601
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                394.8479841644772,
+                -511.71020753036333
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                400.2161148512931,
+                -511.3859961795353
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                422.0784869057556,
+                -510.5846592335499
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                470.35125285258624,
+                -504.8109109716948
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                496.36494499717793,
+                -473.86239416200243
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                502.43967849702636,
+                -444.42605919092955
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                464.7470398564608,
+                -416.17328941291186
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                431.2351673498616,
+                -415.38638189798957
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                420.7282756913148,
+                -418.1968003982276
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                407.3403253142178,
+                -423.9053954725529
+              ],
+              "physical": [
+                419.8453647387584,
+                -418.4434150783333
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "separation_from_drone4_at_2190": {
+        "batch1": 637.7598570289879,
+        "batch2": 637.7441573226037,
+        "fixed": 637.7598570289879
+      },
+      "any_direct_message_from_drone4": {
+        "batch1": false,
+        "batch2": false,
+        "fixed": false
+      },
+      "observed_own_physics_and_pose": {
+        "physical_xy": {
+          "step": 2191,
+          "variants": {
+            "batch1": [
+              80.53538733386262,
+              -504.7275494777435
+            ],
+            "batch2": [
+              80.55395297120214,
+              -504.7225156108057
+            ]
+          }
+        },
+        "pose": {
+          "step": 2190,
+          "variants": {
+            "batch1": [
+              81.98509405557729,
+              -508.98467182838505
+            ],
+            "batch2": [
+              81.73154418169912,
+              -508.76304489353004
+            ]
+          }
+        },
+        "route": {
+          "step": 2258,
+          "variants": {
+            "batch1": [
+              80.0,
+              -491.0
+            ],
+            "batch2": [
+              80.0,
+              -471.0
+            ]
+          }
+        },
+        "command": {
+          "step": 2190,
+          "variants": {
+            "batch1": {
+              "forward": -0.005519711420399336,
+              "lateral": 0.02728825117967043,
+              "rotation": 0.07543470425551746,
+              "grasper": 0,
+              "place_bomb": 0
+            },
+            "batch2": {
+              "forward": 0.0039476993121471075,
+              "lateral": -0.007814870587584595,
+              "rotation": 0.05386412624390502,
+              "grasper": 0,
+              "place_bomb": 0
+            }
+          }
+        },
+        "health": {
+          "step": 2203,
+          "variants": {
+            "batch1": 23,
+            "batch2": 24
+          }
+        },
+        "closeout_target": {
+          "step": 2312,
+          "variants": {
+            "batch1": [
+              89.89525015609551,
+              -495.7024885882188
+            ],
+            "batch2": null
+          }
+        },
+        "checkpoints": {
+          "batch1": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.73698049171115,
+                -504.65792269806053
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.70878874694321,
+                -504.6712133257163
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.6546361272274,
+                -504.68967042725535
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.60085393840083,
+                -504.7075992975015
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.49080117194465,
+                -504.73992206324493
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.6442090733826,
+                -504.5807593280362
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                84.34890916642715,
+                -505.9919133455209
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                83.3692088314968,
+                -505.36648672909223
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                85.2628429801042,
+                -498.2437540272268
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                81.64931261250392,
+                -478.3866817227742
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                84.37017814095431,
+                -461.9490194649601
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                89.89525015609551,
+                -495.7024885882188
+              ],
+              "physical": [
+                84.96075503143555,
+                -454.1745849309364
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                89.89525015609551,
+                -495.7024885882188
+              ],
+              "physical": [
+                85.04180041635438,
+                -454.018962850181
+              ]
+            }
+          ],
+          "batch2": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.73698049171115,
+                -504.65792269806053
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.70878874694321,
+                -504.6712133257163
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.6546361272274,
+                -504.68967042725535
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.60085393840083,
+                -504.7075992975015
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.50264532291365,
+                -504.73899312313347
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.314287304453,
+                -504.78893363674536
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.53143639399647,
+                -505.0956611171747
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                76.66890028683135,
+                -505.2555359829474
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                73.62295099073829,
+                -503.37777443358607
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                70.45967977099471,
+                -501.7593318970922
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                70.29088826720034,
+                -501.7624952486575
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                70.26434299191189,
+                -501.75677263275423
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                70.25370331970204,
+                -501.7509934744756
+              ]
+            }
+          ],
+          "fixed": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.73698049171115,
+                -504.65792269806053
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.70878874694321,
+                -504.6712133257163
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.6546361272274,
+                -504.68967042725535
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.60085393840083,
+                -504.7075992975015
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.49080117194465,
+                -504.73992206324493
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.6442090733826,
+                -504.5807593280362
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                84.34890916642715,
+                -505.9919133455209
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                83.3692088314968,
+                -505.36648672909223
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                85.2628429801042,
+                -498.2437540272268
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                81.64931261250392,
+                -478.3866817227742
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                84.37017814095431,
+                -461.9490194649601
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                89.89525015609551,
+                -495.7024885882188
+              ],
+              "physical": [
+                84.96075503143555,
+                -454.1745849309364
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                89.89525015609551,
+                -495.7024885882188
+              ],
+              "physical": [
+                85.04180041635438,
+                -454.018962850181
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "separation_from_drone4_at_2190": {
+        "batch1": 617.0529015441589,
+        "batch2": 617.0618525443497,
+        "fixed": 617.0529015441589
+      },
+      "any_direct_message_from_drone4": {
+        "batch1": false,
+        "batch2": false,
+        "fixed": false
+      },
+      "observed_own_physics_and_pose": {
+        "physical_xy": {
+          "step": 2191,
+          "variants": {
+            "batch1": [
+              75.16091157063572,
+              -478.0805056420514
+            ],
+            "batch2": [
+              75.1519141942771,
+              -478.079728249621
+            ]
+          }
+        },
+        "pose": {
+          "step": 2190,
+          "variants": {
+            "batch1": [
+              74.13821028521886,
+              -469.5140037833691
+            ],
+            "batch2": [
+              74.52242959042343,
+              -469.43741734055067
+            ]
+          }
+        },
+        "route": {
+          "step": 2285,
+          "variants": {
+            "batch1": null,
+            "batch2": [
+              80.0,
+              -491.0
+            ]
+          }
+        },
+        "task": {
+          "step": 2285,
+          "variants": {
+            "batch1": null,
+            "batch2": 2136
+          }
+        },
+        "command": {
+          "step": 2190,
+          "variants": {
+            "batch1": {
+              "forward": 0.002749739571938494,
+              "lateral": 0.024969577286867165,
+              "rotation": 0.10703813121635042,
+              "grasper": 0,
+              "place_bomb": 0
+            },
+            "batch2": {
+              "forward": -0.0013952918356488504,
+              "lateral": 0.008411449742113084,
+              "rotation": 0.09124389476797168,
+              "grasper": 0,
+              "place_bomb": 0
+            }
+          }
+        },
+        "closeout_target": {
+          "step": 2312,
+          "variants": {
+            "batch1": [
+              108.37405637016701,
+              -367.11614451545427
+            ],
+            "batch2": null
+          }
+        },
+        "checkpoints": {
+          "batch1": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.22096737934822,
+                -478.0618003097345
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.17580513380119,
+                -478.07313002145673
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15892638927957,
+                -478.0793486223512
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15275854511178,
+                -478.0805118255137
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.16480817974822,
+                -478.0803355802485
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                74.97267884187319,
+                -478.07233838002736
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.89704206076193,
+                -474.27989214598296
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.25388153643303,
+                -470.3256611222964
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.03379857815311,
+                -454.2841130265203
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                81.57273785946401,
+                -430.10560774199905
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                77.55031435119857,
+                -408.90261944000207
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                108.37405637016701,
+                -367.11614451545427
+              ],
+              "physical": [
+                75.40472421213556,
+                -398.2827587048494
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                108.37405637016701,
+                -367.11614451545427
+              ],
+              "physical": [
+                75.46089184220082,
+                -396.48945811292685
+              ]
+            }
+          ],
+          "batch2": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.22096737934822,
+                -478.0618003097345
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.17580513380119,
+                -478.07313002145673
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15892638927957,
+                -478.0793486223512
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15275854511178,
+                -478.0805118255137
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.13926759118408,
+                -478.06540988414054
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.02567829843137,
+                -478.004990337629
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.09074208994984,
+                -477.64328135130904
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                90.5598063847531,
+                -471.58900379444566
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                94.40573039730921,
+                -474.98449462914436
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                96.77736434699986,
+                -480.89325703437805
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                98.9124718911426,
+                -483.98542410553017
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                99.73902558697917,
+                -485.3377263530891
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                74.0265031461263,
+                -436.2929350841333
+              ],
+              "physical": [
+                99.86069791770343,
+                -485.55540670007906
+              ]
+            }
+          ],
+          "fixed": [
+            {
+              "step": 2187,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.22096737934822,
+                -478.0618003097345
+              ]
+            },
+            {
+              "step": 2188,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.17580513380119,
+                -478.07313002145673
+              ]
+            },
+            {
+              "step": 2189,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15892638927957,
+                -478.0793486223512
+              ]
+            },
+            {
+              "step": 2190,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.15275854511178,
+                -478.0805118255137
+              ]
+            },
+            {
+              "step": 2192,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                75.16480817974822,
+                -478.0803355802485
+              ]
+            },
+            {
+              "step": 2200,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                74.97267884187319,
+                -478.07233838002736
+              ]
+            },
+            {
+              "step": 2220,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.89704206076193,
+                -474.27989214598296
+              ]
+            },
+            {
+              "step": 2250,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.25388153643303,
+                -470.3256611222964
+              ]
+            },
+            {
+              "step": 2270,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                80.03379857815311,
+                -454.2841130265203
+              ]
+            },
+            {
+              "step": 2295,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                81.57273785946401,
+                -430.10560774199905
+              ]
+            },
+            {
+              "step": 2308,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": null,
+              "physical": [
+                77.55031435119857,
+                -408.90261944000207
+              ]
+            },
+            {
+              "step": 2314,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                108.37405637016701,
+                -367.11614451545427
+              ],
+              "physical": [
+                75.40472421213556,
+                -398.2827587048494
+              ]
+            },
+            {
+              "step": 2315,
+              "peer4_inventory": [
+                2007,
+                1
+              ],
+              "peer4_reservation": null,
+              "peer4_drop": null,
+              "target": [
+                108.37405637016701,
+                -367.11614451545427
+              ],
+              "physical": [
+                75.46089184220082,
+                -396.48945811292685
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "sdk_shared_noise_source": [
+    "src/swarm_rescue/simulation/ray_sensors/drone_semantic_sensor.py:187-203",
+    "src/swarm_rescue/simulation/utils/utils_noise.py:103-108",
+    "src/swarm_rescue/simulation/drone/drone_sensors.py:99-106"
+  ]
+}
