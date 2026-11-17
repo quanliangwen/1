@@ -1,0 +1,230 @@
+diff --git a/inventory_wait.py b/inventory_wait.py
+new file mode 100644
+index 0000000..5861347
+--- /dev/null
++++ b/inventory_wait.py
+@@ -0,0 +1,147 @@
++"""A one-time brake and radio wait for the empty red lead aircraft."""
++import math
++
++import numpy as np
++
++from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
++from swarm_rescue.solutions.final_map_reconnect import FinalMapReconnect
++from swarm_rescue.solutions.local_escape import LocalEscape
++from swarm_rescue.solutions.placement_maneuvers import speed_and_velocity
++
++
++class InventoryWait:
++    MAX_STEPS = 200
++    BRAKE_STEPS = 8
++    SETTLE_FRAMES = 3
++    START_SPEED = 2.5
++    STOP_SPEED = .5
++    MAX_DRIFT = 8.
++    TRAFFIC_MARGIN = 36.
++
++    def __init__(self):
++        self.started = None
++        self.peer = None
++        self.finished = False
++        self.settled = False
++        self.slow_frames = 0
++        self.drift = np.zeros(2)
++        self.audit = []
++
++    def finish(self, step, reason):
++        if self.started is not None and not self.finished:
++            self.finished = True
++            self.audit.append((step, reason, self.peer))
++
++    @staticmethod
++    def _motion_busy(drone, step):
++        return (drone.mode not in ("search", "explore") or drone.carrying
++                or drone.gap_probe is not None or drone.gap_exit is not None
++                or drone.survey_run is not None or drone.local_escape.active is not None
++                or step < drone.recovery_until or step < drone.carrier_yield_until
++                or drone.blocked_prefix.active(drone) or drone.fast_closeout.phase(step) is not None)
++
++    @classmethod
++    def _safety_block(cls, drone, ranges, semantic, speed, velocity):
++        if ranges is None:
++            return "lidar"
++        if semantic is None:
++            return "traffic_sensor"
++        angles = np.asarray(drone.lidar_rays_angles(), dtype=float)
++        ranges = np.asarray(ranges, dtype=float)
++        if angles.ndim != 1 or ranges.shape != angles.shape or not np.all(np.isfinite(angles)):
++            return "lidar"
++        finite = np.isfinite(ranges)
++        valid = finite & (ranges > 0.)
++        sectors = ((angles % math.tau) / (math.pi / 2.)).astype(int) % 4
++        totals = np.bincount(sectors, minlength=4)
++        coverage = np.bincount(sectors[valid], minlength=4)
++        if np.any(totals == 0) or np.any(coverage < .9 * totals):
++            return "lidar"
++        if np.any(ranges[finite] < LocalEscape.CLEARANCE):
++            return "clearance"
++
++        moving = []
++        for hit in semantic:
++            kind = hit.entity_type.name
++            if kind not in ("DRONE", "BOMB", "DISPOSAL_CENTER"):
++                continue
++            distance, angle = float(hit.distance), float(hit.angle)
++            if not math.isfinite(distance) or not math.isfinite(angle):
++                return "traffic"
++            margin = cls.TRAFFIC_MARGIN if kind == "DRONE" else LocalEscape.CLEARANCE
++            if distance < margin:
++                return "traffic"
++            moving.append((distance * math.cos(angle), distance * math.sin(angle)))
++
++        if speed > cls.START_SPEED:
++            return "speed"
++        if speed > cls.STOP_SPEED:
++            direction = math.atan2(velocity[1], velocity[0]) - drone.heading
++            if not LocalEscape.clearance(direction, angles, ranges, max(8., 6. * speed), moving):
++                return "braking_prefix"
++        return None
++
++    def apply(self, drone, command, step, ranges, semantic):
++        if self.finished or drone.identifier != 0 or step < drone.pre_submit_scan.start(drone):
++            return False
++        if drone.previous_inventory != 0 or drone.pending_drop is not None:
++            self.finish(step, "local_inventory")
++            return False
++        missing = [peer for peer in range(drone.team_size)
++                   if drone.inventory_records.get(peer, (None, None))[1] != 0]
++        if len(missing) != 1:
++            self.finish(step, "confirmed" if not missing else "inventory_changed")
++            return False
++        if drone.grid.pose_fixed or not drone._odometry_only or drone.communicator_is_disabled():
++            self.finish(step, "position_or_radio")
++            return False
++        if self._motion_busy(drone, step):
++            self.finish(step, "motion_override")
++            return False
++        if (step >= DeadlineSubmission.window_start(drone.limit) - FinalMapReconnect.SEND_MARGIN
++                or drone.walltime_limit - drone.elapsed_walltime <= FinalMapReconnect.MIN_WALL_SECONDS):
++            self.finish(step, "budget")
++            return False
++        if self.started is not None and step - self.started >= self.MAX_STEPS:
++            self.finish(step, "timeout")
++            return False
++        if self.peer is not None and missing[0] != self.peer:
++            self.finish(step, "inventory_changed")
++            return False
++
++        motion = speed_and_velocity(drone)
++        if motion is None or not np.all(np.isfinite(motion[1])):
++            self.finish(step, "odometry")
++            return False
++        speed, velocity = abs(motion[0]), motion[1]
++        block = self._safety_block(drone, ranges, semantic, speed, velocity)
++        if block:
++            self.finish(step, block)
++            return False
++
++        if self.started is None:
++            self.started, self.peer = step, missing[0]
++            drone.local_escape.motion.clear()
++            self.audit.append((step, "brake", self.peer))
++        if self.settled:
++            self.drift += velocity
++            if np.linalg.norm(self.drift) > self.MAX_DRIFT:
++                self.finish(step, "drift")
++                return False
++        else:
++            self.slow_frames = self.slow_frames + 1 if speed <= self.STOP_SPEED else 0
++            if self.slow_frames >= self.SETTLE_FRAMES:
++                self.settled = True
++                self.audit.append((step, "parked", self.peer))
++            elif step - self.started >= self.BRAKE_STEPS:
++                self.finish(step, "braking_timeout")
++                return False
++
++        if self.settled and speed <= self.STOP_SPEED:
++            command.update(forward=0., lateral=0., rotation=0., grasper=0)
++        else:
++            command.update(drone.drive(drone.pose, velocity))
++        command["place_bomb"] = 0
++        # Intentional parking must not accumulate the ordinary stall timer.
++        drone.progress_step = step
++        return True
+diff --git a/red_hooks.py b/red_hooks.py
+index 064319e..21af693 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -18,6 +18,7 @@ from swarm_rescue.solutions.second_drop_site import SecondDropSite
+ from swarm_rescue.solutions.team_wall import TeamWall
+ from swarm_rescue.solutions.submission_renderer import SubmissionBearings
+ from swarm_rescue.solutions.final_map_reconnect import FinalMapReconnect
++from swarm_rescue.solutions.inventory_wait import InventoryWait
+ from swarm_rescue.solutions.fine_wall_coverage import FineWallCoverage
+ from swarm_rescue.solutions.lbbd_rescue import LBBDRescue
+ from swarm_rescue.solutions.placement_preferences import PlacementPreferences
+@@ -101,6 +102,7 @@ class RedHooks(LBBDRescue):
+         self.second_drop = SecondDropSite()
+         self.team_wall = TeamWall()
+         self.final_reconnect = FinalMapReconnect()
++        self.inventory_wait = InventoryWait()
+         self.final_submission_versions = {}
+         self.deadline_versions = {}
+         self.prepared_map = None
+@@ -946,14 +948,17 @@ class RedHooks(LBBDRescue):
+         if before is not None and self.previous_inventory < before:
+             self.last_confirmed_drop_step = step
+         if self.submitted or self._force_deadline_submission(step):
++            self.inventory_wait.finish(step, "submission")
+             return CoveragePlacementDrone._empty_command()
+         command = super().control()
+         command["place_bomb"] = 0
+         if self.pose is None:
++            self.inventory_wait.finish(step, "position")
+             return command
+ 
+         ranges = self.lidar_values()
+-        semantic = self.semantic_values() or ()
++        semantic_reading = self.semantic_values()
++        semantic = semantic_reading or ()
+         if ranges is not None and step % 4 == 0:
+             observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
+             fixed = self.grid.pose_fixed and not self._odometry_only
+@@ -1000,22 +1005,28 @@ class RedHooks(LBBDRescue):
+         if maneuvers.waiting_exit is not None or maneuvers.exit is not None:
+             self.placement.finish_request(self, step)
+             if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
++                self.inventory_wait.finish(step, "motion_override")
+                 return command
+         if self.fast_closeout.act(self,step,command,ranges,semantic):
++            self.inventory_wait.finish(step, "motion_override")
+             self.team_wall.reservation=None
+             return command
+         if self.drop_departure.controls_step==step:
++            self.inventory_wait.finish(step, "motion_override")
+             self.team_wall.reservation=None
+             self.placement.finish_request(self,step)
+             return command
+         if maneuvers.approach is not None:
+             self.placement.finish_request(self, step)
+             if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
++                self.inventory_wait.finish(step, "motion_override")
+                 return command
+         if self.second_drop.steer_ordinary(self, step, command, ranges, semantic):
++            self.inventory_wait.finish(step, "motion_override")
+             self.team_wall.reservation = None
+             return command
+         if self.team_wall.steer(self,command,step,ranges,semantic):
++            self.inventory_wait.finish(step, "motion_override")
+             self.local_escape.apply(self,command,step,ranges,semantic)
+             return command
+ 
+@@ -1025,6 +1036,8 @@ class RedHooks(LBBDRescue):
+                 and (step >= self.limit * 9 // 10 or self._all_inventory_empty()
+                      and step >= self.pre_submit_scan.finish(self))):
+             self.final_maps.freeze(step, self.memory)
++        if self.inventory_wait.apply(self, command, step, ranges, semantic_reading):
++            return command
+         if step >= DeadlineSubmission.window_start(self.limit):
+             self._submit_at_deadline(step)
+             if self.submitted:

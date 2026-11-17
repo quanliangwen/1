@@ -1,0 +1,109 @@
+{
+  "status": "COUNTEREXAMPLES_AND_SDK_STATIC_PASS",
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "physics_steps": 0,
+  "full_rounds": 0,
+  "build": {
+    "baseline_commit": "e1561d868400b613e7a7da417f5e72a32b0e7d25",
+    "baseline_sha256": "5c463b2a17e376b96eb45ebd63007eed3ad5abde8a7346ecc9c194ee3c07d479",
+    "candidate_sha256": "0cad0c65622e54740a0e6c2e7d61359fcf2e826efc8293808cedb150fa7770ff",
+    "baseline_members": 51,
+    "candidate_members": 52,
+    "changed_files": {
+      "red_hooks.py": [
+        "a984fb8cc5f6ecf4bb3e8ec8bff41c284b56b55cc6a6e2841a89e6eafdf8ee34",
+        "5c5006c3c1bf768bdeae30248d193acb77bba16ffcc745973d843db10f467a09"
+      ],
+      "inventory_wait.py": [
+        null,
+        "1df49bbc9a1733aa61fbc0d41cfdd6a049955284c6310b86dc1a575034c73ebd"
+      ]
+    },
+    "identical_existing_files": 50
+  },
+  "proposed_thresholds": {
+    "max_wait_steps": 200,
+    "minimum_walltime_seconds": 8,
+    "transmission_reserve_steps": 12,
+    "max_braking_steps": 8,
+    "settle_frames": 3,
+    "max_entry_speed": 2.5,
+    "stop_speed": 0.5,
+    "parking_drift_limit": 8.0,
+    "drone_traffic_margin": 36.0,
+    "lidar_clearance": 23.0
+  },
+  "counterexamples": {
+    "baseline": {
+      "arm": "baseline",
+      "status": "PASS",
+      "physics_steps": 0,
+      "scenarios": {
+        "no_gps_control_at_3240": "normal_navigation"
+      }
+    },
+    "candidate": {
+      "arm": "candidate",
+      "status": "PASS",
+      "physics_steps": 0,
+      "scenarios": {
+        "brake_then_park": {
+          "start": 3240,
+          "parked": 3243,
+          "initial_forward": -0.32727272727272727
+        },
+        "accepted_relay_resumes_submission": {
+          "confirmed": 3417,
+          "normal_submit": 3444,
+          "stale_zero_rejected": true
+        },
+        "timeout_is_one_time": {
+          "last_wait_step": 3439,
+          "exit": 3440,
+          "rearmed": false
+        },
+        "approaching_drone_releases_motion": true,
+        "existing_avoidance_has_priority": true,
+        "fast_closeout_has_priority": true,
+        "blocked_braking_prefix_and_blind_sector_reject": true,
+        "failed_braking_exits": true,
+        "lost_odometry_releases_motion": true,
+        "unknown_inventory_supported_and_drift_cancels": true,
+        "gps_recovery_ends_wait": true,
+        "eight_second_walltime_reserve": true,
+        "late_map_snapshot_precedes_wait": true,
+        "walltime_force_submit_precedes_wait": true,
+        "timestep_force_submit_precedes_wait": true,
+        "second_drop_path_and_other_aircraft_keep_control": true
+      }
+    }
+  },
+  "previous_second_drop_regressions": {
+    "baseline": {
+      "arm": "repair",
+      "scan_floor": 0.8,
+      "backup_count": 4,
+      "immediate_route_threshold_retained": true,
+      "plan_recovered": true,
+      "ongoing_protection_blocks_actual_drop": true,
+      "protection_cleared_allows_verified_drop": true,
+      "live_exit_loss_cancels_probe": true,
+      "observation_stops_at_existing_expiry": true,
+      "status": "PASS"
+    },
+    "candidate": {
+      "arm": "repair",
+      "scan_floor": 0.8,
+      "backup_count": 4,
+      "immediate_route_threshold_retained": true,
+      "plan_recovered": true,
+      "ongoing_protection_blocks_actual_drop": true,
+      "protection_cleared_allows_verified_drop": true,
+      "live_exit_loss_cancels_probe": true,
+      "observation_stops_at_existing_expiry": true,
+      "status": "PASS"
+    }
+  },
+  "injected_confirmation_step": 3417,
+  "validated_physical_braking": false
+}
