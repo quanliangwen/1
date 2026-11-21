@@ -1,0 +1,11 @@
+--- a/deadline_submission.py
++++ b/deadline_submission.py
+@@ -9,7 +9,7 @@
+     SCORE_SLOTS = 22
+     SCORE_MAX = 10000
+     FALLBACK_STEPS = 4
+-    MIN_WALL_MARGIN = 1.5
++    MIN_WALL_MARGIN = 5.0
+     WALL_OVERHEAD = 0.5
+     BACKUP_INTERVAL = 360
+     image: object = None

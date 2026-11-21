@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "submission_zip_sha256": "0aaed704f050073b664d4c0bece9f9ff6500e59edf55c78a7284036f01c167e7",
+  "source_parent_zip_sha256": "e98990cfd9269ab521621bc97d7c9e81e21fa83bb83dafbfefb3943480dd6791",
+  "inherited_groups": 107,
+  "new_long_frame_groups": 14,
+  "total_groups": 121,
+  "physics_steps": 0,
+  "full_matches": 0,
+  "evidence": {
+    "late_frame_counterexamples": [
+      {
+        "before_frame": 178.49,
+        "long_frame_seconds": 1.7054996490478516,
+        "V16_reason": null,
+        "V17_reason": "walltime",
+        "hypothetical_finish_without_submission": 180.19549964904786
+      },
+      {
+        "before_frame": 178.49,
+        "long_frame_seconds": 1.728989601135254,
+        "V16_reason": null,
+        "V17_reason": "walltime",
+        "hypothetical_finish_without_submission": 180.21898960113526
+      },
+      {
+        "before_frame": 178.49,
+        "long_frame_seconds": 1.801851749420166,
+        "V16_reason": null,
+        "V17_reason": "walltime",
+        "hypothetical_finish_without_submission": 180.29185174942018
+      }
+    ],
+    "synthetic_budget": {
+      "trigger": 175.0,
+      "next_work": 1.801851749420166,
+      "closing_work": 1.5,
+      "total": 178.30185174942017
+    },
+    "offline_V15_timestamps_only_not_new_V17_runs": [
+      {
+        "source": "red_20261119_615_team615_red_v15/rounds/round_01_team615_Map09_no_com_zone__no_gps_zone_rd1/run.npz",
+        "first_threshold": {
+          "V16": {
+            "record_index": 5238,
+            "elapsed": 178.5067594051361,
+            "reason": "walltime"
+          },
+          "V17": {
+            "record_index": 5074,
+            "elapsed": 175.00027751922607,
+            "reason": "walltime"
+          }
+        }
+      },
+      {
+        "source": "red_20261119_615_team615_red_v15/rounds/round_02_team615_Map09_no_com_zone__no_gps_zone_rd2/run.npz",
+        "first_threshold": {
+          "V16": {
+            "record_index": 5310,
+            "elapsed": 178.46771883964539,
+            "reason": "walltime"
+          },
+          "V17": {
+            "record_index": 5230,
+            "elapsed": 175.00299715995789,
+            "reason": "walltime"
+          }
+        }
+      }
+    ],
+    "limit": "A frame exceeding the remaining budget before the next check can still overrun; 5 seconds is not an unconditional preemption guarantee."
+  },
+  "V17_map_scores": null,
+  "first_attempt": "Inherited fixtures missing; supplied before successful retry; production ZIP unchanged."
+}
