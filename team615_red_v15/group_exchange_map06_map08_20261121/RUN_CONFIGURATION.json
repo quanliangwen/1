@@ -1,0 +1,27 @@
+{
+  "candidate_zip_sha256": "641685d7bd460f6241abb4e2c0f02527d7324a37d78f6492401d66a4b6a63cda",
+  "baseline_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+  "identical_to_map09_candidate": true,
+  "algorithm_files_changed_in_this_task": [],
+  "maps": [
+    "Map06",
+    "Map08"
+  ],
+  "seed": 615,
+  "new_red_rounds_per_map": 1,
+  "new_red_rounds_total": 2,
+  "blue_rounds": 0,
+  "historical_original_rounds": 2,
+  "serial": true,
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "timestep_limit": 5400,
+  "walltime_limit": 180,
+  "drones": 5,
+  "bombs_per_drone": 2,
+  "zones": [
+    "NO_COM_ZONE",
+    "NO_GPS_ZONE"
+  ],
+  "validation": "Reused 36 synthetic cases and static/environment receipt for byte-identical Map09 candidate; not rerun.",
+  "source_commit": "aa8c14a7021a625378455ab985387dcaec1ec79d"
+}
