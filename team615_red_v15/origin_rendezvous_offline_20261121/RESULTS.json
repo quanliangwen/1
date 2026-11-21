@@ -1,0 +1,3607 @@
+{
+  "status": "COMPLETE",
+  "new_matches": 0,
+  "simulation_steps": 0,
+  "seed": 615,
+  "map_name": "Map08",
+  "baseline_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+  "input_sha256": {
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/official_sdk/results_swarm_rescue/team615_261121_12h09min01s/recordings/team615_Map08_no_com_zone__no_gps_zone_rd1.npz": "6b8b0c0a8085edd0b26783217fda89b6ac3a5a5b5d71c886cec028e2faaf6d39",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/wall_geometry.npz": "94196e6474ead6f4eded0d66b7fc831edf7fdf0165194e39f6e14d9a14017610",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/OFFICIAL_SCORE.json": "f0c1b29480e6710541ceee1f3885f6277be3d9a4b1f64f3ccd0bc7ce51b704b3",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/placement_events.jsonl": "c4e04ded9b6c614cff99fa22e1cd8b0666beb8dfcd2b7406b8ac57ad172057cf"
+  },
+  "alignment_checks": 572,
+  "recording_frame_to_control_step_offset": 3,
+  "assumptions": {
+    "grid_pixels": 2,
+    "nominal_wall_clearance": 23,
+    "radio_radius": 160.0,
+    "collector_drone": 0,
+    "collector_goal": [
+      0,
+      0
+    ],
+    "collector_deadline": 3240,
+    "visitors_deadline": 3420,
+    "collector_settle_steps": 12,
+    "exchange_steps": 24,
+    "speeds_pixels_per_step": [
+      1.5,
+      2.0,
+      2.8
+    ],
+    "collisions_with_other_drones_not_modelled": true,
+    "known_online_maps_not_recorded": true,
+    "full_truth_geometry_used_only_for_offline_static_path_analysis": true
+  },
+  "own_last_drop_confirmations": {
+    "0": 2309,
+    "1": 1693,
+    "2": 2315,
+    "3": 2316,
+    "4": 2489
+  },
+  "origin_clearance_pixels": 96.0,
+  "motion": {
+    "0": {
+      "moving_samples": 2697,
+      "moving_p25": 2.2305638364843285,
+      "moving_median": 2.6673510833164378,
+      "moving_p75": 2.732492333215089,
+      "late_fraction_below_point2": 0.05326231691078562,
+      "late_distance_pixels": 1529.9044531166103
+    },
+    "1": {
+      "moving_samples": 2852,
+      "moving_p25": 2.225483666645235,
+      "moving_median": 2.668043177469392,
+      "moving_p75": 2.7276627838886407,
+      "late_fraction_below_point2": 0.041278295605858856,
+      "late_distance_pixels": 1441.794211333629
+    },
+    "2": {
+      "moving_samples": 1933,
+      "moving_p25": 2.2228153615884323,
+      "moving_median": 2.661396333230475,
+      "moving_p75": 2.7308312020402346,
+      "late_fraction_below_point2": 1.0,
+      "late_distance_pixels": 24.346700266643637
+    },
+    "3": {
+      "moving_samples": 2408,
+      "moving_p25": 1.8488715745577313,
+      "moving_median": 2.649140119482979,
+      "moving_p75": 2.7266842320968436,
+      "late_fraction_below_point2": 0.03062583222370173,
+      "late_distance_pixels": 1656.7925244222733
+    },
+    "4": {
+      "moving_samples": 2183,
+      "moving_p25": 2.5345390539586568,
+      "moving_median": 2.6903988180449234,
+      "moving_p75": 2.7385808233939857,
+      "late_fraction_below_point2": 0.34354194407456723,
+      "late_distance_pixels": 1403.4535879862906
+    }
+  },
+  "snapshots": {
+    "2489": [
+      {
+        "drone": 0,
+        "step": 2489,
+        "position": [
+          216.90057373046875,
+          -148.72103881835938
+        ],
+        "route": {
+          "grid_length_pixels": 395.9848486928648,
+          "route_length_pixels": 385.46978241742886,
+          "start_clearance_pixels": 28.0,
+          "connector_pixels": 5.2045820587591,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              216.9,
+              -148.72
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.295
+        },
+        "required_steps": {
+          "1.5": 269,
+          "2.0": 205,
+          "2.8": 150
+        }
+      },
+      {
+        "drone": 1,
+        "step": 2489,
+        "position": [
+          520.1423950195312,
+          220.06166076660156
+        ],
+        "route": {
+          "grid_length_pixels": 529.4916139153282,
+          "route_length_pixels": 499.0413712406481,
+          "start_clearance_pixels": 66.0,
+          "connector_pixels": 4.271267804795186,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              520.14,
+              220.06
+            ],
+            [
+              548.5,
+              160.5
+            ],
+            [
+              548.5,
+              136.5
+            ],
+            [
+              534.5,
+              124.5
+            ],
+            [
+              230.5,
+              72.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 357,
+          "2.0": 274,
+          "2.8": 203
+        }
+      },
+      {
+        "drone": 2,
+        "step": 2489,
+        "position": [
+          87.77996063232422,
+          -453.1274108886719
+        ],
+        "route": {
+          "grid_length_pixels": 316.13088131030355,
+          "route_length_pixels": 308.3625474252362,
+          "start_clearance_pixels": 35.0,
+          "connector_pixels": 3.846610062841709,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              87.78,
+              -453.13
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 179,
+          "2.8": 135
+        }
+      },
+      {
+        "drone": 3,
+        "step": 2489,
+        "position": [
+          182.57601928710938,
+          -109.30365753173828
+        ],
+        "route": {
+          "grid_length_pixels": 73.93130026300202,
+          "route_length_pixels": 68.73324537993943,
+          "start_clearance_pixels": 54.0,
+          "connector_pixels": 4.333320516555344,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              182.58,
+              -109.3
+            ],
+            [
+              152.5,
+              -47.5
+            ]
+          ],
+          "end_distance_from_origin": 159.7263284496329,
+          "route_sample_fraction_in_no_gps": 1.0
+        },
+        "required_steps": {
+          "1.5": 70,
+          "2.0": 59,
+          "2.8": 49
+        }
+      },
+      {
+        "drone": 4,
+        "step": 2489,
+        "position": [
+          360.7982177734375,
+          51.45047378540039
+        ],
+        "route": {
+          "grid_length_pixels": 229.13517597751115,
+          "route_length_pixels": 215.41723984788518,
+          "start_clearance_pixels": 27.80287742614746,
+          "connector_pixels": 4.424497858856506,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              360.8,
+              51.45
+            ],
+            [
+              254.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 168,
+          "2.0": 132,
+          "2.8": 101
+        }
+      }
+    ],
+    "2700": [
+      {
+        "drone": 0,
+        "step": 2700,
+        "position": [
+          421.0596008300781,
+          86.861328125
+        ],
+        "route": {
+          "grid_length_pixels": 814.8267216944537,
+          "route_length_pixels": 797.1313323935519,
+          "start_clearance_pixels": 53.0,
+          "connector_pixels": 5.134766814916247,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              421.06,
+              86.86
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.375609756097561
+        },
+        "required_steps": {
+          "1.5": 544,
+          "2.0": 411,
+          "2.8": 297
+        }
+      },
+      {
+        "drone": 1,
+        "step": 2700,
+        "position": [
+          593.2006225585938,
+          -6.655709743499756
+        ],
+        "route": {
+          "grid_length_pixels": 494.1391715303292,
+          "route_length_pixels": 479.0595568634502,
+          "start_clearance_pixels": 39.96248245239258,
+          "connector_pixels": 5.203096667257756,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              593.2,
+              -6.66
+            ],
+            [
+              538.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.13877551020408163
+        },
+        "required_steps": {
+          "1.5": 344,
+          "2.0": 264,
+          "2.8": 196
+        }
+      },
+      {
+        "drone": 2,
+        "step": 2700,
+        "position": [
+          89.41011047363281,
+          -452.5777587890625
+        ],
+        "route": {
+          "grid_length_pixels": 316.27137411256206,
+          "route_length_pixels": 307.93119865454963,
+          "start_clearance_pixels": 34.0,
+          "connector_pixels": 5.158675740354069,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              89.41,
+              -452.58
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 2700,
+        "position": [
+          331.1301574707031,
+          -142.7515411376953
+        ],
+        "route": {
+          "grid_length_pixels": 368.22528867599124,
+          "route_length_pixels": 343.6602195950589,
+          "start_clearance_pixels": 54.0,
+          "connector_pixels": 5.2892138129205115,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              331.13,
+              -142.75
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.559322033898305
+        },
+        "required_steps": {
+          "1.5": 254,
+          "2.0": 196,
+          "2.8": 147
+        }
+      },
+      {
+        "drone": 4,
+        "step": 2700,
+        "position": [
+          278.1053161621094,
+          -101.05225372314453
+        ],
+        "route": {
+          "grid_length_pixels": 304.46668904090217,
+          "route_length_pixels": 294.67979136841365,
+          "start_clearance_pixels": 27.0,
+          "connector_pixels": 3.8981465459784546,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              278.11,
+              -101.05
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.48366013071895425
+        },
+        "required_steps": {
+          "1.5": 221,
+          "2.0": 172,
+          "2.8": 130
+        }
+      }
+    ],
+    "2800": [
+      {
+        "drone": 0,
+        "step": 2800,
+        "position": [
+          643.4618530273438,
+          108.22306060791016
+        ],
+        "route": {
+          "grid_length_pixels": 1046.0571691559092,
+          "route_length_pixels": 1020.5125549164513,
+          "start_clearance_pixels": 27.0,
+          "connector_pixels": 5.252515904163647,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              643.46,
+              108.22
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.2950191570881226
+        },
+        "required_steps": {
+          "1.5": 693,
+          "2.0": 523,
+          "2.8": 377
+        }
+      },
+      {
+        "drone": 1,
+        "step": 2800,
+        "position": [
+          609.4806518554688,
+          -272.8329162597656
+        ],
+        "route": {
+          "grid_length_pixels": 746.8026775991858,
+          "route_length_pixels": 708.4521804556675,
+          "start_clearance_pixels": 26.870058059692383,
+          "connector_pixels": 5.155924617460178,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              609.48,
+              -272.83
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7845303867403315
+        },
+        "required_steps": {
+          "1.5": 497,
+          "2.0": 379,
+          "2.8": 278
+        }
+      },
+      {
+        "drone": 2,
+        "step": 2800,
+        "position": [
+          91.27742004394531,
+          -452.2984924316406
+        ],
+        "route": {
+          "grid_length_pixels": 316.8021862393478,
+          "route_length_pixels": 307.7973935925409,
+          "start_clearance_pixels": 32.0,
+          "connector_pixels": 4.861060742393607,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              91.28,
+              -452.3
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 2800,
+        "position": [
+          498.2486267089844,
+          -280.6239013671875
+        ],
+        "route": {
+          "grid_length_pixels": 638.8739454127685,
+          "route_length_pixels": 598.39520091253,
+          "start_clearance_pixels": 55.226806640625,
+          "connector_pixels": 3.913483932058104,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              498.25,
+              -280.62
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.745928338762215
+        },
+        "required_steps": {
+          "1.5": 423,
+          "2.0": 324,
+          "2.8": 238
+        }
+      },
+      {
+        "drone": 4,
+        "step": 2800,
+        "position": [
+          272.48736572265625,
+          -332.4852600097656
+        ],
+        "route": {
+          "grid_length_pixels": 534.8804226061427,
+          "route_length_pixels": 526.2281122402887,
+          "start_clearance_pixels": 19.0,
+          "connector_pixels": 13.140307235965123,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              272.49,
+              -332.49
+            ],
+            [
+              274.5,
+              -319.5
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7074074074074074
+        },
+        "required_steps": {
+          "1.5": 375,
+          "2.0": 288,
+          "2.8": 212
+        }
+      }
+    ],
+    "2900": [
+      {
+        "drone": 0,
+        "step": 2900,
+        "position": [
+          593.866455078125,
+          16.07390022277832
+        ],
+        "route": {
+          "grid_length_pixels": 1006.8953546212526,
+          "route_length_pixels": 988.715396827468,
+          "start_clearance_pixels": 33.0,
+          "connector_pixels": 4.149575872552361,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              593.87,
+              16.07
+            ],
+            [
+              514.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.35502958579881655
+        },
+        "required_steps": {
+          "1.5": 672,
+          "2.0": 507,
+          "2.8": 366
+        }
+      },
+      {
+        "drone": 1,
+        "step": 2900,
+        "position": [
+          596.654541015625,
+          -440.25244140625
+        ],
+        "route": {
+          "grid_length_pixels": 837.5998390199946,
+          "route_length_pixels": 780.7260833805511,
+          "start_clearance_pixels": 31.0,
+          "connector_pixels": 5.218021301973564,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              596.65,
+              -440.25
+            ],
+            [
+              550.5,
+              -335.5
+            ],
+            [
+              406.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7985074626865671
+        },
+        "required_steps": {
+          "1.5": 545,
+          "2.0": 415,
+          "2.8": 303
+        }
+      },
+      {
+        "drone": 2,
+        "step": 2900,
+        "position": [
+          90.6423110961914,
+          -452.3224792480469
+        ],
+        "route": {
+          "grid_length_pixels": 316.38961062566716,
+          "route_length_pixels": 307.7708318814235,
+          "start_clearance_pixels": 32.0,
+          "connector_pixels": 5.276912253459174,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              90.64,
+              -452.32
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 2900,
+        "position": [
+          678.7011108398438,
+          -389.25537109375
+        ],
+        "route": {
+          "grid_length_pixels": 864.248619667115,
+          "route_length_pixels": 802.6679718859563,
+          "start_clearance_pixels": 47.0,
+          "connector_pixels": 4.553093450109028,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              678.7,
+              -389.26
+            ],
+            [
+              384.5,
+              -263.5
+            ],
+            [
+              366.5,
+              -257.5
+            ],
+            [
+              356.5,
+              -227.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.8077858880778589
+        },
+        "required_steps": {
+          "1.5": 560,
+          "2.0": 426,
+          "2.8": 311
+        }
+      },
+      {
+        "drone": 4,
+        "step": 2900,
+        "position": [
+          378.1474609375,
+          -303.21514892578125
+        ],
+        "route": {
+          "grid_length_pixels": 548.053943402426,
+          "route_length_pixels": 510.86879932447147,
+          "start_clearance_pixels": 48.0,
+          "connector_pixels": 4.064044670192732,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              378.15,
+              -303.22
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.6973180076628352
+        },
+        "required_steps": {
+          "1.5": 365,
+          "2.0": 280,
+          "2.8": 207
+        }
+      }
+    ],
+    "3000": [
+      {
+        "drone": 0,
+        "step": 3000,
+        "position": [
+          602.1990966796875,
+          -207.80892944335938
+        ],
+        "route": {
+          "grid_length_pixels": 1229.0521207500067,
+          "route_length_pixels": 1204.1409514518682,
+          "start_clearance_pixels": 25.495098114013672,
+          "connector_pixels": 5.678925003336848,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              602.2,
+              -207.81
+            ],
+            [
+              558.5,
+              -121.5
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              516.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.470873786407767
+        },
+        "required_steps": {
+          "1.5": 815,
+          "2.0": 615,
+          "2.8": 443
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3000,
+        "position": [
+          618.404541015625,
+          -459.5232849121094
+        ],
+        "route": {
+          "grid_length_pixels": 872.0853759774657,
+          "route_length_pixels": 813.0550565025574,
+          "start_clearance_pixels": 20.59126091003418,
+          "connector_pixels": 9.90456838622107,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              618.4,
+              -459.52
+            ],
+            [
+              608.5,
+              -459.5
+            ],
+            [
+              550.5,
+              -335.5
+            ],
+            [
+              406.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.766109785202864
+        },
+        "required_steps": {
+          "1.5": 567,
+          "2.0": 431,
+          "2.8": 315
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3000,
+        "position": [
+          89.83780670166016,
+          -451.982421875
+        ],
+        "route": {
+          "grid_length_pixels": 315.79050048821136,
+          "route_length_pixels": 307.3696929432203,
+          "start_clearance_pixels": 33.0,
+          "connector_pixels": 4.677802116003342,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              89.84,
+              -451.98
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 229,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3000,
+        "position": [
+          581.8442993164062,
+          -328.1549987792969
+        ],
+        "route": {
+          "grid_length_pixels": 742.2270005969456,
+          "route_length_pixels": 690.6412129903046,
+          "start_clearance_pixels": 46.389652252197266,
+          "connector_pixels": 5.384288122325987,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              581.84,
+              -328.15
+            ],
+            [
+              368.5,
+              -259.5
+            ],
+            [
+              356.5,
+              -233.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7774647887323943
+        },
+        "required_steps": {
+          "1.5": 485,
+          "2.0": 370,
+          "2.8": 271
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3000,
+        "position": [
+          417.7489318847656,
+          -206.33140563964844
+        ],
+        "route": {
+          "grid_length_pixels": 599.4493831798277,
+          "route_length_pixels": 561.8284839973531,
+          "start_clearance_pixels": 27.0,
+          "connector_pixels": 5.317348823863467,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              417.75,
+              -206.33
+            ],
+            [
+              414.5,
+              -249.5
+            ],
+            [
+              398.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7328767123287672
+        },
+        "required_steps": {
+          "1.5": 399,
+          "2.0": 305,
+          "2.8": 225
+        }
+      }
+    ],
+    "3100": [
+      {
+        "drone": 0,
+        "step": 3100,
+        "position": [
+          707.8046264648438,
+          -183.87794494628906
+        ],
+        "route": {
+          "grid_length_pixels": 1349.9661363156208,
+          "route_length_pixels": 1320.0306256180427,
+          "start_clearance_pixels": 64.0,
+          "connector_pixels": 3.681252323519116,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              707.8,
+              -183.88
+            ],
+            [
+              626.5,
+              -213.5
+            ],
+            [
+              606.5,
+              -211.5
+            ],
+            [
+              558.5,
+              -147.5
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              516.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.5184094256259205
+        },
+        "required_steps": {
+          "1.5": 893,
+          "2.0": 673,
+          "2.8": 484
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3100,
+        "position": [
+          757.6041870117188,
+          -466.9865417480469
+        ],
+        "route": {
+          "grid_length_pixels": 1013.9823405979105,
+          "route_length_pixels": 969.1572553139796,
+          "start_clearance_pixels": 25.0,
+          "connector_pixels": 5.3162516324271785,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              757.6,
+              -466.99
+            ],
+            [
+              616.5,
+              -465.5
+            ],
+            [
+              556.5,
+              -387.5
+            ],
+            [
+              556.5,
+              -343.5
+            ],
+            [
+              466.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.6593186372745491
+        },
+        "required_steps": {
+          "1.5": 671,
+          "2.0": 509,
+          "2.8": 371
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3100,
+        "position": [
+          88.80445098876953,
+          -451.9794006347656
+        ],
+        "route": {
+          "grid_length_pixels": 315.3216837187986,
+          "route_length_pixels": 307.28994703269353,
+          "start_clearance_pixels": 34.0,
+          "connector_pixels": 5.037412471336803,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              88.8,
+              -451.98
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 229,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3100,
+        "position": [
+          657.965576171875,
+          -196.19200134277344
+        ],
+        "route": {
+          "grid_length_pixels": 765.066679176407,
+          "route_length_pixels": 743.4795893203412,
+          "start_clearance_pixels": 33.734256744384766,
+          "connector_pixels": 3.704197442142396,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              657.97,
+              -196.19
+            ],
+            [
+              630.5,
+              -213.5
+            ],
+            [
+              606.5,
+              -211.5
+            ],
+            [
+              556.5,
+              -145.5
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              532.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.4516971279373368
+        },
+        "required_steps": {
+          "1.5": 520,
+          "2.0": 396,
+          "2.8": 290
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3100,
+        "position": [
+          271.7164306640625,
+          -333.09130859375
+        ],
+        "route": {
+          "grid_length_pixels": 535.6135405975148,
+          "route_length_pixels": 526.9612302316608,
+          "start_clearance_pixels": 18.0,
+          "connector_pixels": 13.873425227337124,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              271.72,
+              -333.09
+            ],
+            [
+              274.5,
+              -319.5
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7074074074074074
+        },
+        "required_steps": {
+          "1.5": 376,
+          "2.0": 288,
+          "2.8": 213
+        }
+      }
+    ],
+    "3200": [
+      {
+        "drone": 0,
+        "step": 3200,
+        "position": [
+          617.8750610351562,
+          -214.74818420410156
+        ],
+        "route": {
+          "grid_length_pixels": 1248.2049876936485,
+          "route_length_pixels": 1216.9021884591693,
+          "start_clearance_pixels": 26.019224166870117,
+          "connector_pixels": 5.518083447993844,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              617.88,
+              -214.75
+            ],
+            [
+              598.5,
+              -205.5
+            ],
+            [
+              556.5,
+              10.5
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              516.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.4768
+        },
+        "required_steps": {
+          "1.5": 824,
+          "2.0": 621,
+          "2.8": 447
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3200,
+        "position": [
+          711.6484985351562,
+          -472.6553955078125
+        ],
+        "route": {
+          "grid_length_pixels": 970.36144948534,
+          "route_length_pixels": 924.1725894195324,
+          "start_clearance_pixels": 22.0,
+          "connector_pixels": 6.038506270364332,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              711.65,
+              -472.66
+            ],
+            [
+              706.5,
+              -469.5
+            ],
+            [
+              616.5,
+              -465.5
+            ],
+            [
+              556.5,
+              -387.5
+            ],
+            [
+              556.5,
+              -343.5
+            ],
+            [
+              466.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.6868475991649269
+        },
+        "required_steps": {
+          "1.5": 641,
+          "2.0": 487,
+          "2.8": 355
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3200,
+        "position": [
+          88.36650085449219,
+          -452.39501953125
+        ],
+        "route": {
+          "grid_length_pixels": 315.52307279468033,
+          "route_length_pixels": 307.6730356607576,
+          "start_clearance_pixels": 35.0,
+          "connector_pixels": 5.238801547218508,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              88.37,
+              -452.4
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3200,
+        "position": [
+          578.363037109375,
+          -104.174560546875
+        ],
+        "route": {
+          "grid_length_pixels": 585.3407969308777,
+          "route_length_pixels": 563.4693129415673,
+          "start_clearance_pixels": 41.0,
+          "connector_pixels": 5.03213906577597,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              578.36,
+              -104.17
+            ],
+            [
+              554.5,
+              44.5
+            ],
+            [
+              530.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.2708333333333333
+        },
+        "required_steps": {
+          "1.5": 400,
+          "2.0": 306,
+          "2.8": 226
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3200,
+        "position": [
+          305.8870544433594,
+          -324.5570983886719
+        ],
+        "route": {
+          "grid_length_pixels": 539.4103914370645,
+          "route_length_pixels": 519.4154303410854,
+          "start_clearance_pixels": 26.0,
+          "connector_pixels": 5.243869195694212,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              305.89,
+              -324.56
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7030075187969925
+        },
+        "required_steps": {
+          "1.5": 371,
+          "2.0": 284,
+          "2.8": 210
+        }
+      }
+    ],
+    "3240": [
+      {
+        "drone": 0,
+        "step": 3240,
+        "position": [
+          577.6631469726562,
+          -159.56887817382812
+        ],
+        "route": {
+          "grid_length_pixels": 1170.4923622675617,
+          "route_length_pixels": 1146.561735537006,
+          "start_clearance_pixels": 41.0,
+          "connector_pixels": 4.231864893100239,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              577.66,
+              -159.57
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              516.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.44293015332197616
+        },
+        "required_steps": {
+          "1.5": 777,
+          "2.0": 586,
+          "2.8": 422
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3240,
+        "position": [
+          642.6339111328125,
+          -470.6011962890625
+        ],
+        "route": {
+          "grid_length_pixels": 900.5549171440199,
+          "route_length_pixels": 839.2107130465837,
+          "start_clearance_pixels": 24.0,
+          "connector_pixels": 6.231973929044163,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              642.63,
+              -470.6
+            ],
+            [
+              610.5,
+              -461.5
+            ],
+            [
+              550.5,
+              -335.5
+            ],
+            [
+              406.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7430555555555556
+        },
+        "required_steps": {
+          "1.5": 584,
+          "2.0": 444,
+          "2.8": 324
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3240,
+        "position": [
+          86.55370330810547,
+          -452.7078552246094
+        ],
+        "route": {
+          "grid_length_pixels": 315.26478523800967,
+          "route_length_pixels": 307.8616853849697,
+          "start_clearance_pixels": 36.0,
+          "connector_pixels": 3.808941115293988,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              86.55,
+              -452.71
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3240,
+        "position": [
+          597.6246337890625,
+          2.847615957260132
+        ],
+        "route": {
+          "grid_length_pixels": 486.571085547001,
+          "route_length_pixels": 473.7397935205718,
+          "start_clearance_pixels": 31.016124725341797,
+          "connector_pixels": 4.806583559183372,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              597.62,
+              2.85
+            ],
+            [
+              534.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.1322314049586777
+        },
+        "required_steps": {
+          "1.5": 340,
+          "2.0": 261,
+          "2.8": 194
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3240,
+        "position": [
+          411.44439697265625,
+          -315.2732849121094
+        ],
+        "route": {
+          "grid_length_pixels": 573.9628339613647,
+          "route_length_pixels": 537.2588598028434,
+          "start_clearance_pixels": 36.0,
+          "connector_pixels": 3.8896741084459174,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              411.44,
+              -315.27
+            ],
+            [
+              356.5,
+              -239.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7163636363636363
+        },
+        "required_steps": {
+          "1.5": 383,
+          "2.0": 293,
+          "2.8": 216
+        }
+      }
+    ],
+    "3300": [
+      {
+        "drone": 0,
+        "step": 3300,
+        "position": [
+          587.8697509765625,
+          -33.98505783081055
+        ],
+        "route": {
+          "grid_length_pixels": 1049.0921917709886,
+          "route_length_pixels": 1023.3129321984479,
+          "start_clearance_pixels": 49.81967544555664,
+          "connector_pixels": 4.689558772796107,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              587.87,
+              -33.99
+            ],
+            [
+              550.5,
+              50.5
+            ],
+            [
+              492.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.37832699619771865
+        },
+        "required_steps": {
+          "1.5": 695,
+          "2.0": 524,
+          "2.8": 378
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3300,
+        "position": [
+          578.012939453125,
+          -400.8525695800781
+        ],
+        "route": {
+          "grid_length_pixels": 790.6041128773454,
+          "route_length_pixels": 739.6577998614148,
+          "start_clearance_pixels": 45.0,
+          "connector_pixels": 3.678139282040226,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              578.01,
+              -400.85
+            ],
+            [
+              552.5,
+              -337.5
+            ],
+            [
+              426.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7958115183246073
+        },
+        "required_steps": {
+          "1.5": 518,
+          "2.0": 394,
+          "2.8": 289
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3300,
+        "position": [
+          86.17608642578125,
+          -452.83428955078125
+        ],
+        "route": {
+          "grid_length_pixels": 315.18770056624845,
+          "route_length_pixels": 307.963494444907,
+          "start_clearance_pixels": 37.0,
+          "connector_pixels": 3.731856443532789,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              86.18,
+              -452.83
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 178,
+          "2.8": 134
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3300,
+        "position": [
+          700.3404541015625,
+          124.3193359375
+        ],
+        "route": {
+          "grid_length_pixels": 579.7298273046995,
+          "route_length_pixels": 555.9086414384344,
+          "start_clearance_pixels": 34.0,
+          "connector_pixels": 4.249596564344341,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              700.34,
+              124.32
+            ],
+            [
+              638.5,
+              108.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 395,
+          "2.0": 302,
+          "2.8": 223
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3300,
+        "position": [
+          572.8077392578125,
+          -305.2931823730469
+        ],
+        "route": {
+          "grid_length_pixels": 723.5676474719477,
+          "route_length_pixels": 675.8991298953505,
+          "start_clearance_pixels": 62.17716598510742,
+          "connector_pixels": 4.6660604942826245,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              572.81,
+              -305.29
+            ],
+            [
+              368.5,
+              -259.5
+            ],
+            [
+              356.5,
+              -233.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7723342939481268
+        },
+        "required_steps": {
+          "1.5": 475,
+          "2.0": 362,
+          "2.8": 266
+        }
+      }
+    ],
+    "3360": [
+      {
+        "drone": 0,
+        "step": 3360,
+        "position": [
+          649.1038208007812,
+          76.28419494628906
+        ],
+        "route": {
+          "grid_length_pixels": 1038.487279895859,
+          "route_length_pixels": 1024.7703127558932,
+          "start_clearance_pixels": 56.0,
+          "connector_pixels": 4.937460640052692,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              649.1,
+              76.28
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.29389312977099236
+        },
+        "required_steps": {
+          "1.5": 696,
+          "2.0": 525,
+          "2.8": 378
+        }
+      },
+      {
+        "drone": 1,
+        "step": 3360,
+        "position": [
+          595.1214599609375,
+          -273.5679626464844
+        ],
+        "route": {
+          "grid_length_pixels": 732.70979176074,
+          "route_length_pixels": 694.1490140842064,
+          "start_clearance_pixels": 38.587562561035156,
+          "connector_pixels": 5.063038779014348,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              595.12,
+              -273.57
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.780281690140845
+        },
+        "required_steps": {
+          "1.5": 487,
+          "2.0": 372,
+          "2.8": 272
+        }
+      },
+      {
+        "drone": 2,
+        "step": 3360,
+        "position": [
+          86.65135192871094,
+          -452.9034423828125
+        ],
+        "route": {
+          "grid_length_pixels": 315.4822240320502,
+          "route_length_pixels": 308.06322950549924,
+          "start_clearance_pixels": 36.0,
+          "connector_pixels": 4.026379909334525,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              86.65,
+              -452.9
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 230,
+          "2.0": 179,
+          "2.8": 135
+        }
+      },
+      {
+        "drone": 3,
+        "step": 3360,
+        "position": [
+          694.7207641601562,
+          245.94436645507812
+        ],
+        "route": {
+          "grid_length_pixels": 739.0382409391159,
+          "route_length_pixels": 707.67423264772,
+          "start_clearance_pixels": 48.0,
+          "connector_pixels": 3.876769331628069,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              694.72,
+              245.94
+            ],
+            [
+              734.5,
+              168.5
+            ],
+            [
+              732.5,
+              144.5
+            ],
+            [
+              676.5,
+              108.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "required_steps": {
+          "1.5": 496,
+          "2.0": 378,
+          "2.8": 277
+        }
+      },
+      {
+        "drone": 4,
+        "step": 3360,
+        "position": [
+          708.3578491210938,
+          -291.8546447753906
+        ],
+        "route": {
+          "grid_length_pixels": 853.6222599081691,
+          "route_length_pixels": 808.4274785575418,
+          "start_clearance_pixels": 38.0,
+          "connector_pixels": 4.519662803727528,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              708.36,
+              -291.85
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.8106796116504854
+        },
+        "required_steps": {
+          "1.5": 563,
+          "2.0": 429,
+          "2.8": 313
+        }
+      }
+    ]
+  },
+  "latest_departures": {
+    "0": {
+      "1.5": {
+        "depart_step": 2694,
+        "estimated_arrival_step": 3227,
+        "required_steps": 533,
+        "route": {
+          "grid_length_pixels": 798.2706700227909,
+          "route_length_pixels": 780.7373991742278,
+          "start_clearance_pixels": 52.0,
+          "connector_pixels": 4.5787151432534685,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              404.66,
+              86.42
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.38308457711442784
+        },
+        "position": [
+          404.6579284667969,
+          86.4173583984375
+        ],
+        "pre_window_exploration_steps_given_up": 546,
+        "total_original_task_steps_given_up": 726
+      },
+      "2.0": {
+        "depart_step": 2749,
+        "estimated_arrival_step": 3229,
+        "required_steps": 480,
+        "route": {
+          "grid_length_pixels": 958.1572485528625,
+          "route_length_pixels": 934.871820364928,
+          "start_clearance_pixels": 26.4007568359375,
+          "connector_pixels": 6.2398969289083555,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              545.61,
+              132.08
+            ],
+            [
+              430.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.32083333333333336
+        },
+        "position": [
+          545.6123657226562,
+          132.0777130126953
+        ],
+        "pre_window_exploration_steps_given_up": 491,
+        "total_original_task_steps_given_up": 671
+      },
+      "2.8": {
+        "depart_step": 2829,
+        "estimated_arrival_step": 3233,
+        "required_steps": 404,
+        "route": {
+          "grid_length_pixels": 1123.5909935607735,
+          "route_length_pixels": 1097.517046384824,
+          "start_clearance_pixels": 50.21951675415039,
+          "connector_pixels": 4.786340309028089,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              720.64,
+              108.9
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              -17.5
+            ],
+            [
+              152.5,
+              -203.5
+            ],
+            [
+              138.5,
+              -215.5
+            ],
+            [
+              112.5,
+              -215.5
+            ],
+            [
+              76.5,
+              -175.5
+            ],
+            [
+              72.5,
+              -83.5
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "end_distance_from_origin": 0.0,
+          "route_sample_fraction_in_no_gps": 0.275
+        },
+        "position": [
+          720.6384887695312,
+          108.90457153320312
+        ],
+        "pre_window_exploration_steps_given_up": 411,
+        "total_original_task_steps_given_up": 591
+      }
+    },
+    "1": {
+      "1.5": {
+        "depart_step": 2873,
+        "estimated_arrival_step": 3411,
+        "required_steps": 538,
+        "route": {
+          "grid_length_pixels": 826.7259904062618,
+          "route_length_pixels": 770.7748044576973,
+          "start_clearance_pixels": 21.63330841064453,
+          "connector_pixels": 7.3736099397633295,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              609.58,
+              -424.2
+            ],
+            [
+              606.5,
+              -417.5
+            ],
+            [
+              544.5,
+              -329.5
+            ],
+            [
+              366.5,
+              -257.5
+            ],
+            [
+              356.5,
+              -227.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.801007556675063
+        },
+        "position": [
+          609.58154296875,
+          -424.1988220214844
+        ],
+        "pre_window_exploration_steps_given_up": 367,
+        "total_original_task_steps_given_up": 538
+      },
+      "2.0": {
+        "depart_step": 2983,
+        "estimated_arrival_step": 3407,
+        "required_steps": 424,
+        "route": {
+          "grid_length_pixels": 856.7016423236277,
+          "route_length_pixels": 798.3224129276464,
+          "start_clearance_pixels": 27.784887313842773,
+          "connector_pixels": 5.006116106621648,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              603.79,
+              -456.34
+            ],
+            [
+              550.5,
+              -335.5
+            ],
+            [
+              406.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.781021897810219
+        },
+        "position": [
+          603.79052734375,
+          -456.3369140625
+        ],
+        "pre_window_exploration_steps_given_up": 257,
+        "total_original_task_steps_given_up": 424
+      },
+      "2.8": {
+        "depart_step": 3068,
+        "estimated_arrival_step": 3419,
+        "required_steps": 351,
+        "route": {
+          "grid_length_pixels": 959.1338782144752,
+          "route_length_pixels": 914.4738703455946,
+          "start_clearance_pixels": 24.0,
+          "connector_pixels": 6.467789248991895,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              702.93,
+              -466.24
+            ],
+            [
+              616.5,
+              -465.5
+            ],
+            [
+              556.5,
+              -387.5
+            ],
+            [
+              556.5,
+              -343.5
+            ],
+            [
+              466.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.6970338983050848
+        },
+        "position": [
+          702.9254760742188,
+          -466.2386169433594
+        ],
+        "pre_window_exploration_steps_given_up": 172,
+        "total_original_task_steps_given_up": 351
+      }
+    },
+    "2": {
+      "1.5": {
+        "depart_step": 3190,
+        "estimated_arrival_step": 3419,
+        "required_steps": 229,
+        "route": {
+          "grid_length_pixels": 315.31163645677856,
+          "route_length_pixels": 307.200173968537,
+          "start_clearance_pixels": 34.0,
+          "connector_pixels": 5.027365209316739,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              88.97,
+              -451.88
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "position": [
+          88.97297668457031,
+          -451.8770751953125
+        ],
+        "pre_window_exploration_steps_given_up": 50,
+        "total_original_task_steps_given_up": 229
+      },
+      "2.0": {
+        "depart_step": 3240,
+        "estimated_arrival_step": 3418,
+        "required_steps": 178,
+        "route": {
+          "grid_length_pixels": 315.26478523800967,
+          "route_length_pixels": 307.8616853849697,
+          "start_clearance_pixels": 36.0,
+          "connector_pixels": 3.808941115293988,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              86.55,
+              -452.71
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "position": [
+          86.55370330810547,
+          -452.7078552246094
+        ],
+        "pre_window_exploration_steps_given_up": 0,
+        "total_original_task_steps_given_up": 178
+      },
+      "2.8": {
+        "depart_step": 3285,
+        "estimated_arrival_step": 3419,
+        "required_steps": 134,
+        "route": {
+          "grid_length_pixels": 315.158655859149,
+          "route_length_pixels": 307.9853526498225,
+          "start_clearance_pixels": 37.0,
+          "connector_pixels": 3.702811736433296,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              86.05,
+              -452.86
+            ],
+            [
+              66.5,
+              -145.5
+            ]
+          ],
+          "end_distance_from_origin": 159.97656078313472,
+          "route_sample_fraction_in_no_gps": 0.0
+        },
+        "position": [
+          86.04633331298828,
+          -452.8644714355469
+        ],
+        "pre_window_exploration_steps_given_up": 0,
+        "total_original_task_steps_given_up": 134
+      }
+    },
+    "3": {
+      "1.5": {
+        "depart_step": 2881,
+        "estimated_arrival_step": 3409,
+        "required_steps": 528,
+        "route": {
+          "grid_length_pixels": 810.6875633266492,
+          "route_length_pixels": 755.7140226875038,
+          "start_clearance_pixels": 35.0,
+          "connector_pixels": 4.791026982866643,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              631.14,
+              -374.71
+            ],
+            [
+              404.5,
+              -263.5
+            ],
+            [
+              372.5,
+              -261.5
+            ],
+            [
+              356.5,
+              -241.5
+            ],
+            [
+              270.5,
+              68.5
+            ],
+            [
+              256.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7989690721649485
+        },
+        "position": [
+          631.1356201171875,
+          -374.7103576660156
+        ],
+        "pre_window_exploration_steps_given_up": 359,
+        "total_original_task_steps_given_up": 528
+      },
+      "2.0": {
+        "depart_step": 3046,
+        "estimated_arrival_step": 3420,
+        "required_steps": 374,
+        "route": {
+          "grid_length_pixels": 727.1883507514259,
+          "route_length_pixels": 699.6264359620145,
+          "start_clearance_pixels": 25.238859176635742,
+          "connector_pixels": 5.281713139877159,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              607.29,
+              -233.99
+            ],
+            [
+              556.5,
+              -53.5
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              532.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.4117647058823529
+        },
+        "position": [
+          607.2891235351562,
+          -233.9852294921875
+        ],
+        "pre_window_exploration_steps_given_up": 194,
+        "total_original_task_steps_given_up": 374
+      },
+      "2.8": {
+        "depart_step": 3181,
+        "estimated_arrival_step": 3420,
+        "required_steps": 239,
+        "route": {
+          "grid_length_pixels": 621.9947278156726,
+          "route_length_pixels": 600.9617390523952,
+          "start_clearance_pixels": 42.0,
+          "connector_pixels": 4.514497075317076,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              577.12,
+              -141.18
+            ],
+            [
+              556.5,
+              42.5
+            ],
+            [
+              532.5,
+              62.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.31596091205211724
+        },
+        "position": [
+          577.1195678710938,
+          -141.1767578125
+        ],
+        "pre_window_exploration_steps_given_up": 59,
+        "total_original_task_steps_given_up": 239
+      }
+    },
+    "4": {
+      "1.5": {
+        "depart_step": 3049,
+        "estimated_arrival_step": 3417,
+        "required_steps": 368,
+        "route": {
+          "grid_length_pixels": 532.6111338457531,
+          "route_length_pixels": 514.7772568670993,
+          "start_clearance_pixels": 31.0,
+          "connector_pixels": 4.929892978621459,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              298.94,
+              -320.41
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.6996197718631179
+        },
+        "position": [
+          298.9376220703125,
+          -320.4104309082031
+        ],
+        "pre_window_exploration_steps_given_up": 191,
+        "total_original_task_steps_given_up": 368
+      },
+      "2.0": {
+        "depart_step": 3129,
+        "estimated_arrival_step": 3417,
+        "required_steps": 288,
+        "route": {
+          "grid_length_pixels": 535.0094479127044,
+          "route_length_pixels": 526.3571375468506,
+          "start_clearance_pixels": 18.0,
+          "connector_pixels": 15.269332542526891,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              269.33,
+              -331.87
+            ],
+            [
+              274.5,
+              -317.5
+            ],
+            [
+              274.5,
+              62.5
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7074074074074074
+        },
+        "position": [
+          269.3260498046875,
+          -331.86602783203125
+        ],
+        "pre_window_exploration_steps_given_up": 111,
+        "total_original_task_steps_given_up": 288
+      },
+      "2.8": {
+        "depart_step": 3209,
+        "estimated_arrival_step": 3419,
+        "required_steps": 210,
+        "route": {
+          "grid_length_pixels": 546.1294364607324,
+          "route_length_pixels": 518.4960959827484,
+          "start_clearance_pixels": 29.0,
+          "connector_pixels": 4.8502158471540975,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              327.41,
+              -322.26
+            ],
+            [
+              272.5,
+              64.5
+            ],
+            [
+              258.5,
+              74.5
+            ],
+            [
+              234.5,
+              74.5
+            ],
+            [
+              152.5,
+              46.5
+            ]
+          ],
+          "end_distance_from_origin": 159.43180360266894,
+          "route_sample_fraction_in_no_gps": 0.7056603773584905
+        },
+        "position": [
+          327.4052734375,
+          -322.2649841308594
+        ],
+        "pre_window_exploration_steps_given_up": 31,
+        "total_original_task_steps_given_up": 210
+      }
+    }
+  },
+  "clearance18_at3240": [
+    {
+      "drone": 0,
+      "route": {
+        "grid_length_pixels": 1147.462925016039,
+        "route_length_pixels": 1106.1879455846479,
+        "start_clearance_pixels": 41.0,
+        "connector_pixels": 4.231864893100239,
+        "checked_grid_min_clearance_pixels": 18.0,
+        "waypoints": [
+          [
+            577.66,
+            -159.57
+          ],
+          [
+            550.5,
+            42.5
+          ],
+          [
+            504.5,
+            70.5
+          ],
+          [
+            234.5,
+            68.5
+          ],
+          [
+            148.5,
+            -61.5
+          ],
+          [
+            146.5,
+            -203.5
+          ],
+          [
+            132.5,
+            -211.5
+          ],
+          [
+            110.5,
+            -209.5
+          ],
+          [
+            68.5,
+            -113.5
+          ],
+          [
+            68.5,
+            -85.5
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "end_distance_from_origin": 0.0,
+        "route_sample_fraction_in_no_gps": 0.45422535211267606
+      },
+      "required_steps": {
+        "1.5": 750,
+        "2.0": 566,
+        "2.8": 408
+      }
+    },
+    {
+      "drone": 1,
+      "route": {
+        "grid_length_pixels": 878.7431455190002,
+        "route_length_pixels": 818.4840310624902,
+        "start_clearance_pixels": 24.0,
+        "connector_pixels": 4.278066680293348,
+        "checked_grid_min_clearance_pixels": 18.0,
+        "waypoints": [
+          [
+            642.63,
+            -470.6
+          ],
+          [
+            612.5,
+            -455.5
+          ],
+          [
+            544.5,
+            -335.5
+          ],
+          [
+            370.5,
+            -253.5
+          ],
+          [
+            358.5,
+            -217.5
+          ],
+          [
+            266.5,
+            64.5
+          ],
+          [
+            252.5,
+            70.5
+          ],
+          [
+            148.5,
+            58.5
+          ]
+        ],
+        "end_distance_from_origin": 159.6073306587138,
+        "route_sample_fraction_in_no_gps": 0.7517899761336515
+      },
+      "required_steps": {
+        "1.5": 570,
+        "2.0": 434,
+        "2.8": 317
+      }
+    },
+    {
+      "drone": 2,
+      "route": {
+        "grid_length_pixels": 315.26478523800967,
+        "route_length_pixels": 307.8616853849697,
+        "start_clearance_pixels": 36.0,
+        "connector_pixels": 3.808941115293988,
+        "checked_grid_min_clearance_pixels": 19.0,
+        "waypoints": [
+          [
+            86.55,
+            -452.71
+          ],
+          [
+            66.5,
+            -145.5
+          ]
+        ],
+        "end_distance_from_origin": 159.97656078313472,
+        "route_sample_fraction_in_no_gps": 0.0
+      },
+      "required_steps": {
+        "1.5": 230,
+        "2.0": 178,
+        "2.8": 134
+      }
+    },
+    {
+      "drone": 3,
+      "route": {
+        "grid_length_pixels": 481.69310254368315,
+        "route_length_pixels": 468.089716641788,
+        "start_clearance_pixels": 31.016124725341797,
+        "connector_pixels": 5.384444678581295,
+        "checked_grid_min_clearance_pixels": 19.0,
+        "waypoints": [
+          [
+            597.62,
+            2.85
+          ],
+          [
+            536.5,
+            52.5
+          ],
+          [
+            238.5,
+            70.5
+          ],
+          [
+            148.5,
+            58.5
+          ]
+        ],
+        "end_distance_from_origin": 159.6073306587138,
+        "route_sample_fraction_in_no_gps": 0.14644351464435146
+      },
+      "required_steps": {
+        "1.5": 337,
+        "2.0": 259,
+        "2.8": 192
+      }
+    },
+    {
+      "drone": 4,
+      "route": {
+        "grid_length_pixels": 564.9922712128875,
+        "route_length_pixels": 529.2162709436175,
+        "start_clearance_pixels": 36.0,
+        "connector_pixels": 3.8896741084459174,
+        "checked_grid_min_clearance_pixels": 19.0,
+        "waypoints": [
+          [
+            411.44,
+            -315.27
+          ],
+          [
+            358.5,
+            -233.5
+          ],
+          [
+            266.5,
+            64.5
+          ],
+          [
+            252.5,
+            70.5
+          ],
+          [
+            148.5,
+            58.5
+          ]
+        ],
+        "end_distance_from_origin": 159.6073306587138,
+        "route_sample_fraction_in_no_gps": 0.7296296296296296
+      },
+      "required_steps": {
+        "1.5": 377,
+        "2.0": 289,
+        "2.8": 214
+      }
+    }
+  ],
+  "zero_to_radio_at3240": {
+    "route": {
+      "grid_length_pixels": 640.540522758202,
+      "route_length_pixels": 619.305316358026,
+      "start_clearance_pixels": 41.0,
+      "connector_pixels": 4.231864893100239,
+      "checked_grid_min_clearance_pixels": 23.0,
+      "waypoints": [
+        [
+          577.66,
+          -159.57
+        ],
+        [
+          556.5,
+          42.5
+        ],
+        [
+          532.5,
+          62.5
+        ],
+        [
+          234.5,
+          74.5
+        ],
+        [
+          152.5,
+          46.5
+        ]
+      ],
+      "end_distance_from_origin": 159.43180360266894,
+      "route_sample_fraction_in_no_gps": 0.33544303797468356
+    },
+    "required_steps": {
+      "1.5": 437,
+      "2.0": 334,
+      "2.8": 246
+    }
+  },
+  "interpretation_notes": [
+    "latest_departures are feasible approximate departure examples from a 5-step scan, not proven exact last opportunities.",
+    "estimated_arrival_step includes settle/exchange reserve; it means ready time or exchange completion time.",
+    "original task time displaced is not a measured loss of newly explored area.",
+    "visitors end at radius <=160 while SDK radio is strict distance <180; hub must be at origin for this contact guarantee.",
+    "23px clearance is checked on route body; a short start connector may retain existing 18px-or-greater clearance.",
+    "Routes are static geometric candidates. No control, dynamic collision, communication or new match simulation was run."
+  ]
+}
