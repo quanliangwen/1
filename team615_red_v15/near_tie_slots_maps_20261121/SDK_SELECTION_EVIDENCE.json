@@ -1,0 +1,22 @@
+{
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "read_only": true,
+  "selection": "Launcher takes the first drone with a non-None submission in map drone order; it does not score all simultaneous submissions and pick the best.",
+  "termination": "GUI runs all drivable drone controls for the frame, then terminates if any submitted. Multiple submissions in the same step are possible.",
+  "files": [
+    {
+      "path": "src/swarm_rescue/launcher.py",
+      "sha256": "dd8f1080e23fcee6a1eb0eac0c3669c03559a66dddaabad53c3f7c862f0a35c9",
+      "first_line": 494,
+      "last_line": 503,
+      "excerpt": "                print(f\"\\t\\tbombs file written: {placed_bombs_path}\")\n\n            submitted_grid = None\n            for d in the_map.drones:\n                submitted_grid = getattr(d, \"_exploration_map_submission\", None)\n                if submitted_grid is not None:\n                    break\n\n            if submitted_grid is not None:\n                exploration_path = exploration_map_output_path("
+    },
+    {
+      "path": "src/swarm_rescue/simulation/gui_map/gui_sr.py",
+      "sha256": "b42cd1472944728825e606e2ea96b653016432c9fa8af9e4f06b578a11701749",
+      "first_line": 367,
+      "last_line": 389,
+      "excerpt": "        self._messages = self.collect_all_messages(drivable_drones)\n\n        # COMPUTE COMMANDS\n        for i, drone in enumerate(drivable_drones):\n            drone.elapsed_walltime = self._elapsed_walltime\n            drone.elapsed_timestep = self._elapsed_timestep\n            command = run_control(drone)\n            if self._use_keyboard and i == 0:\n                command = self._keyboardController.control()\n\n            self._drones_commands[drone] = command\n\n        # Early termination for red-team map submission.\n        # We end the round before the next physics step is applied.\n        exploration_submitted = any(\n            getattr(drone, \"_exploration_map_submission\", None) is not None\n            for drone in drivable_drones\n        )\n        if exploration_submitted:\n            self._terminate = True\n        else:\n            if drivable_drones:\n                drivable_drones[0].display()"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "sdk_files_checked": 225,
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "executable": "/home/junhao/quan/parallel_test_solver/match/.venv/bin/python",
+  "numerical_packages": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "opencv-contrib-python": "4.11.0.86",
+    "scipy": "1.17.1"
+  },
+  "paths": {
+    "numpy": "/home/junhao/quan/parallel_test_solver/match/.venv/lib/python3.11/site-packages/numpy/__init__.py",
+    "numpy.random.mtrand": "/home/junhao/quan/parallel_test_solver/match/.venv/lib/python3.11/site-packages/numpy/random/mtrand.cpython-311-x86_64-linux-gnu.so",
+    "pandas": "/home/junhao/quan/parallel_test_solver/match/.venv/lib/python3.11/site-packages/pandas/__init__.py",
+    "cv2": "/home/junhao/quan/parallel_test_solver/match/.venv/lib/python3.11/site-packages/cv2/__init__.py"
+  },
+  "candidate_scenario_groups": 89,
+  "static_submission_check": "PASS",
+  "candidate_zip_sha256": "f2c1059afc5218bd19cea9995679492b8c2211fd2eae42d0f77caa9abbbab318",
+  "static_alias_role": "Same-byte internal static-check alias, not a competition release.",
+  "physics_steps": 0,
+  "physics_step_attempts": 0,
+  "full_matches": 0,
+  "map_objects_created": 0
+}
