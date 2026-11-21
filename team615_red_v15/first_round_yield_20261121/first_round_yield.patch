@@ -1,0 +1,38 @@
+diff --git a/group_exchange.py b/group_exchange.py
+index cacc5e6..68841f5 100644
+--- a/group_exchange.py
++++ b/group_exchange.py
+@@ -21,6 +21,7 @@ class ReturnIntent:
+ class GroupExchange:
+     ACTIVE = {'RETURN_LOCAL','LOCAL_EXCHANGE','COURIER_TO_C','INTERGROUP_EXCHANGE','DELIVERED_HOLD'}
+     SUBMISSION_SLOT_STEPS = 6
++    MIN_FINAL_SNAPSHOTS = 2
+ 
+     def __init__(self, owner, team_size, limit, size):
+         self.owner,self.team_size,self.limit=int(owner),team_size,limit
+@@ -209,8 +210,17 @@ class GroupExchange:
+                 and not self.expired(drone,step)):return False
+         if (drone.previous_inventory!=0 or drone.pending_drop is not None
+                 or not drone._all_inventory_empty()):return False
++        if self.yield_first_round(drone,step):return False
+         return drone._prefer_own_submission(step)
+ 
++    def yield_first_round(self, drone, step):
++        if (drone.walltime_limit-drone.elapsed_walltime<PreSubmitScan.MIN_WALLTIME_LEFT
++                or step>=DeadlineSubmission.window_start(drone.limit)):return False
++        start=self.finish_floor(drone)
++        end=start+self.team_size*self.SUBMISSION_SLOT_STEPS
++        return (start<=step<end
++                and len(drone.final_maps.snapshots)<self.MIN_FINAL_SNAPSHOTS)
++
+     def submission_slot(self, drone, step):
+         # All aircraft use the same absolute round clock, even when separated.
+         width=self.SUBMISSION_SLOT_STEPS
+@@ -381,6 +391,7 @@ class GroupExchange:
+         if self.choice is not None and step>=self.choice['lease_end']:
+             self.audit.append((step,'choice_lease_expired',self.choice['key']))
+             self.choice=None;self.choice_acks=set()
++        if self.yield_first_round(drone,step):return False
+         if not self.in_submission_slot(drone,step):return False
+         # Reuse the original quality bids and bounded yielding, not local F1
+         # values computed against different aircraft's reference evidence.
