@@ -1,0 +1,3583 @@
+diff --git a/exchange_plan.py b/exchange_plan.py
+new file mode 100644
+index 0000000..e8aa9c3
+--- /dev/null
++++ b/exchange_plan.py
+@@ -0,0 +1,175 @@
++"""Onboard contact history and an acknowledged common return region."""
++import math
++import numpy as np
++
++
++def inside(drone, point):
++    try:
++        return len(point) == 2 and all(math.isfinite(float(x)) and abs(float(x)) < n/2
++                                       for x, n in zip(point, drone.size_area))
++    except (TypeError, ValueError):
++        return False
++
++
++def known_segment(drone, a, b):
++    grid = drone.grid
++    for p in np.linspace(a, b, max(2, 1+math.ceil(math.dist(a, b)/4))):
++        c = grid.cell(p)
++        if grid.evidence[c] >= 0 or (grid.clearance[c] < 23 and not
++                (grid.tight[c] and grid.clearance[c] >= grid.HULL_CLEARANCE)):
++            return False
++    return True
++
++
++class ExchangePlan:
++    STABLE = 40
++
++    def __init__(self, owner, team_size, limit):
++        self.owner, self.team_size, self.limit = int(owner), team_size, limit
++        self.epoch = ('group-return-v1', int(limit), int(team_size))
++        self.root = None
++        self.acks = set()
++        self.launch = None
++        self.trail = []
++        self.trail_cells = {}
++        self.edges = {}
++        self.direct = {}
++        self.branch_group = (self.owner,)
++        self.local_region = None
++        self.pending_group = None
++        self.pending_since = None
++        self.audit = []
++        self.last_observed = -1
++        self.root_tail = None
++
++    def remember(self, drone):
++        p = tuple(map(float, drone.pose))
++        if self.trail and math.dist(p, self.trail[-1]) < 12:
++            return
++        key = tuple(round(x/8) for x in p)
++        candidates = []
++        for dx in (-1, 0, 1):
++            for dy in (-1, 0, 1):
++                i = self.trail_cells.get((key[0]+dx, key[1]+dy))
++                if i is not None and math.dist(p, self.trail[i]) <= 8 and known_segment(drone, p, self.trail[i]):
++                    candidates.append(i)
++        if candidates:
++            self.trail = self.trail[:min(candidates)+1]
++            self.trail_cells = {tuple(round(x/8) for x in q): i for i,q in enumerate(self.trail)}
++        self.trail.append(p)
++        self.trail_cells[key] = len(self.trail)-1
++
++    def gate_index(self, point, radius=155):
++        near = [i for i,p in enumerate(self.trail) if math.dist(p, point) <= radius]
++        return min(near, key=lambda i: math.dist(self.trail[i], point)) if near else None
++
++    def reachable_root(self):
++        return self.root is not None and self.gate_index(self.root[1:]) is not None
++
++    def committed(self):
++        return self.root is not None and len(self.acks) == self.team_size and self.owner in self.acks
++
++    def observe(self, drone, step, record_trail=True):
++        if drone.pose is None or not inside(drone, drone.pose) or step == self.last_observed:
++            return
++        self.last_observed = step
++        if self.launch is None:
++            self.launch = tuple(map(float, drone.pose))
++        if record_trail:
++            self.remember(drone)
++        # A small early metadata proposal, never a fixed collector/submitting role.
++        if (self.owner == 0 and self.root is None and 30 <= step < self.limit*3//5
++                and math.dist(self.launch, drone.pose) >= 80
++                and drone.grid.pose_fixed and not drone._odometry_only
++                and not drone.communicator_is_disabled()):
++            c = drone.grid.cell(drone.pose)
++            if drone.grid.evidence[c] < 0 and drone.grid.clearance[c] >= 23:
++                self.root = (int(step), *map(float, drone.pose))
++                self.audit.append((step, 'root_proposed', self.root))
++        if self.owner not in self.acks and self.reachable_root():
++            gate=self.trail[self.gate_index(self.root[1:])]
++            root=self.root[1:]
++            # A shared parent area must support mutual radio contact even when
++            # drone 0 is not its courier. Aim within 80px, not opposite 155px edges.
++            if math.dist(gate,root)<=80:
++                tail=[]
++            elif known_segment(drone,gate,root):
++                tail=[tuple(root)]
++            else:
++                tail=list(drone.grid.route(gate,root))
++                if not tail or math.dist(tail[-1],root)>80:tail=None
++            if tail is not None:
++                self.root_tail=list(map(tuple,tail));self.acks.add(self.owner)
++                self.audit.append((step, 'root_accepted', self.root))
++        # Remember the last stable connected branch while still exploring.
++        if step < min(1600, self.limit*3//10):
++            group = {self.owner}
++            changed = True
++            while changed:
++                changed = False
++                for (a,b), event in self.edges.items():
++                    if 0 <= step-event[0] <= self.STABLE and (a in group or b in group):
++                        before = len(group); group.update((a,b)); changed |= len(group) != before
++            group = tuple(sorted(group))
++            if group != self.pending_group:
++                self.pending_group, self.pending_since = group, step
++            if (1 < len(group) < self.team_size and step-self.pending_since >= self.STABLE):
++                events = [(v[0],k,v[1]) for k,v in self.edges.items()
++                          if set(k).issubset(group) and v[1] is not None]
++                if events:
++                    event = max(events)
++                    region = event[2]
++                    if group != self.branch_group or region != self.local_region:
++                        self.branch_group, self.local_region = group, region
++                        self.audit.append((step, 'local_branch', group, region))
++
++    def receive(self, drone, message, body, step):
++        peer = message.get('id')
++        if type(peer) is not int or peer == self.owner or not 0 <= peer < self.team_size:
++            return
++        state = next((s for s in message.get('states', ()) if s.get('id') == peer), {})
++        stamp = body.get('step', state.get('step'))
++        if not isinstance(stamp, (int, np.integer)) or not 0 <= step-int(stamp) <= 12:
++            return
++        point = body.get('point', state.get('point'))
++        if not inside(drone, point):
++            return
++        fixed = bool(body.get('fixed', False))
++        self.direct[peer] = (step, tuple(map(float, point)))
++        pair = tuple(sorted((self.owner, peer)))
++        own_fixed = drone.grid.pose_fixed and not drone._odometry_only
++        if self.owner < peer and own_fixed and drone.pose is not None:
++            region = tuple(map(float, drone.pose))
++        elif peer < self.owner and fixed:
++            region = tuple(map(float, point))
++        else:
++            region = None
++        self.edges[pair] = (int(stamp), region)
++        if not body or tuple(body.get('epoch', ())) != self.epoch:
++            return
++        root = body.get('root')
++        if (self.root is None and isinstance(root, (tuple,list)) and len(root) == 3
++                and type(root[0]) is int and 0 <= root[0] <= step and inside(drone,root[1:])):
++            self.root = tuple(root)
++            self.audit.append((step, 'root_received', peer, self.root))
++        if root is not None and self.root == tuple(root):
++            for owner in body.get('acks', ()):
++                if type(owner) is int and 0 <= owner < self.team_size:
++                    self.acks.add(owner)
++        for key, event in body.get('edges', {}).items():
++            if (not isinstance(key,tuple) or len(key) != 2 or not all(type(i) is int and
++                    0 <= i < self.team_size for i in key) or key[0] >= key[1]):
++                continue
++            if not isinstance(event,(tuple,list)) or len(event) != 2:
++                continue
++            ts, p = event
++            if type(ts) is not int or not 0 <= ts <= step or (p is not None and not inside(drone,p)):
++                continue
++            if ts > self.edges.get(key,(-1,None))[0]:
++                self.edges[key] = (ts, None if p is None else tuple(p))
++
++    def message(self, drone):
++        return dict(epoch=self.epoch,root=self.root,acks=tuple(sorted(self.acks)),
++                    edges=dict(self.edges),step=int(drone.elapsed_timestep),
++                    point=None if drone.pose is None else tuple(map(float,drone.pose)),
++                    fixed=bool(drone.grid.pose_fixed and not drone._odometry_only))
+diff --git a/fast_closeout.py b/fast_closeout.py
+index 3260038..9590399 100644
+--- a/fast_closeout.py
++++ b/fast_closeout.py
+@@ -1,329 +1,332 @@
+-"""Score-aware search closeout, with a bounded SDK-authoritative drop window."""
+-from collections import deque
+-import math
+-
+-import numpy as np
+-from scipy.ndimage import binary_dilation
+-from swarm_rescue.simulation.drone.bomb_deployer import MIN_BOMB_SEPARATION
+-from swarm_rescue.solutions.final_map_relay import FinalMaps
+-from swarm_rescue.solutions.isolated_closeout import IsolatedCloseout
+-
+-
+-class FastCloseout:
+-    OBSERVATION_STEPS = 100
+-    DROP_STEPS = 24
+-    HANDOFF_STEPS = 48
+-    ANNOUNCE_STEPS = 8
+-
+-    def __init__(self, owner, team_size):
+-        self.owner = int(owner)
+-        self.team_size = team_size
+-        self.history = deque(maxlen=3)
+-        self.advice = {}
+-        self.plan = None
+-        self.done = False
+-        self.maps = FinalMaps(owner, team_size)
+-        self.bids = {}
+-        self.vote = None
+-        self.audit = []
+-        self.target = None
+-        self.last_drop_target_step = -100
+-        self.last_amnesty_attempt = -100
+-        self.isolated = IsolatedCloseout()
+-
+-    @staticmethod
+-    def score_time(step, limit):
+-        return 100.*max(0.,min(1.,(limit-step)/(.70*limit)))
+-
+-    @classmethod
+-    def worth_closing(cls, step, limit, windows, wall_tiles, fraction, frontier_gain, has_overview):
+-        if len(windows)!=2 or not has_overview:
+-            return None
+-        # The count is a score proxy with an upper estimate from the faster
+-        # of two windows. Prefer a nearby substantial reachable frontier.
+-        predicted_map = 200.*max(windows)/max(100,wall_tiles)
+-        speed_gain = .10*(cls.score_time(step+cls.HANDOFF_STEPS,limit)
+-                          -cls.score_time(step+cls.HANDOFF_STEPS+2*cls.OBSERVATION_STEPS,limit))
+-        low_progress = max(windows)<=max(2.,.003*wall_tiles)
+-        decision=(fraction>=.95 or low_progress) and .5*predicted_map<speed_gain and frontier_gain<.12
+-        return bool(decision),float(predicted_map),float(speed_gain)
+-
+-    def sample(self, drone, step):
+-        if self.plan is not None or self.done or step<.30*drone.limit or step%100!=self.owner:
+-            return
+-        grid=drone.grid
+-        evidence=grid.evidence
+-        stable=evidence>=6
+-        covered=(evidence<0) & (grid.searched>0)
+-        if self.history:
+-            earlier_free,earlier_walls=self.history[-1][1:3]
+-            changed=(np.count_nonzero(stable & ~binary_dilation(earlier_walls))
+-                     + .25*np.count_nonzero(covered & ~binary_dilation(earlier_free)))
+-            covered = covered | earlier_free
+-            stable = stable | earlier_walls
+-        else:
+-            changed=0
+-        self.history.append((step,covered.copy(),stable.copy(),float(changed)))
+-        if len(self.history)<3 or self.history[-1][0]-self.history[0][0]!=200:
+-            return
+-        wall_tiles=int(np.count_nonzero(stable))
+-        costs,work,_=grid.search_work(drone.pose)
+-        frontier=grid.frontier_gain()
+-        gain=max((float(frontier[cell]) for cell,cost in costs.items() if cost<=145. and work[cell]),default=0.)
+-        reachable=sum(bool(covered[cell]) for cell in costs)
+-        candidates=np.count_nonzero(binary_dilation(covered)&(evidence==0)&~grid.blocked)
+-        fraction=reachable/max(1,len(costs)+candidates)
+-        overview=float(drone.memory.free.mean())>=.43 and wall_tiles>=42 and drone.search_roaming.departed
+-        decision=self.worth_closing(step,drone.limit,[row[3] for row in list(self.history)[1:]],
+-                                    wall_tiles,fraction,gain,overview)
+-        if decision is not None:
+-            ready,predicted_map,time_gain=decision
+-            self.advice[self.owner]=(step,ready)
+-            self.audit.append((step,"benefit_review",ready,predicted_map,time_gain,float(fraction),gain))
+-
+-    def initiate(self, drone, step):
+-        if self.plan is not None or self.done or step+self.ANNOUNCE_STEPS+self.HANDOFF_STEPS>=drone.limit-30:
+-            return
+-        ready=self.fresh_ready(step)
+-        if self.owner not in ready or len(ready)<2:
+-            return
+-        if step - self.advice[self.owner][0] > 4:
+-            return
+-        # Restrict origination to positively observed shared progress. Other
+-        # aircraft can receive this proposal without losing track of stock.
+-        active_recent={i:(tick,ok) for i,(tick,ok) in self.advice.items() if 0<=step-tick<=100}
+-        if any(not ok for tick,ok in active_recent.values()):
+-            return
+-        self.plan=(step+self.ANNOUNCE_STEPS,self.owner)
+-        self.audit.append((step,"planned",self.plan,tuple(sorted(ready))))
+-
+-    def fresh_ready(self, step):
+-        return {owner for owner,(tick,ready) in self.advice.items() if ready and 0<=step-tick<=100}
+-
+-    def packet(self, step):
+-        own=self.advice.get(self.owner)
+-        if self.plan is None or self.isolated.started:
+-            return own,None,None,None,None
+-        p=self.plan
+-        return own,p,(self.maps.mask,self.maps.outgoing(step)),self.bids.get(self.owner),self.vote
+-
+-    def receive(self, drone, msg):
+-        sender=msg["id"]
+-        report=msg.get("red_fast_closeout")
+-        if (report is None or type(sender) is not int or sender==self.owner or not 0<=sender<self.team_size):
+-            return
+-        result,plan,tiles,bid,vote=report
+-        step=int(drone.elapsed_timestep)
+-        self.isolated.last_real_contact=step
+-        if self.isolated.started:
+-            return
+-        if (isinstance(result,tuple) and len(result)==2 and type(result[0]) is int
+-                and type(result[1]) is bool and 0<=step-result[0]<=100
+-                and result[0]>self.advice.get(sender,(-1,False))[0]):
+-            self.advice[sender]=result
+-        if (self.done or not isinstance(plan,tuple) or len(plan)!=2
+-                or any(type(x) is not int for x in plan)):
+-            return
+-        start,owner=plan
+-        if not (0<=owner<self.team_size and .30*drone.limit<=start<drone.limit-30-self.HANDOFF_STEPS
+-                and step-self.DROP_STEPS<start<=step+self.ANNOUNCE_STEPS):
+-            # Within an existing plan keep exchanging final data after drop
+-            # closes. A late plan cannot open a second drop window.
+-            if plan!=self.plan:
+-                return
+-        if self.plan is None or step<self.plan[0] and plan<self.plan:
+-            self.plan=plan
+-            self.audit.append((step,"adopted",plan,sender))
+-        if plan!=self.plan:
+-            return
+-        if tiles is not None:
+-            mask, snapshot=tiles
+-            if snapshot is not None and snapshot[1]<start+self.DROP_STEPS:
+-                snapshot=None
+-            self.maps.receive(sender,step,mask,snapshot)
+-        if (isinstance(bid,tuple) and len(bid)==3 and all(type(x) is int for x in bid)
+-                and start+self.DROP_STEPS<=bid[0]<=step
+-                and 0<=bid[1]<=10000 and 0<=bid[2]<1<<self.team_size):
+-            self.bids[sender]=bid
+-        if owner==sender and type(vote) is int and 0<=vote<self.team_size:
+-            self.vote=vote
+-
+-    def phase(self, step):
+-        if self.plan is None or self.done:
+-            return None
+-        start,_=self.plan
+-        if step<start:
+-            return "prepare"
+-        if step<start+self.DROP_STEPS:
+-            return "drop"
+-        return "relay" if step<=start+self.HANDOFF_STEPS else None
+-
+-    def legal_drop_pulse(self, drone, command, step):
+-        count=drone.previous_inventory
+-        if (self.phase(step)!="drop" or not count or drone.pending_drop is not None
+-                or step%4!=self.owner%4 or step>=drone.limit
+-                or drone.elapsed_walltime>=drone.walltime_limit
+-                or step-self.last_amnesty_attempt<2):
+-            return
+-        # No placement-policy gate. The official SDK checks the actual
+-        # physical minimum spacing, disposal-center overlap and inventory.
+-        command.update(grasper=0,place_bomb=1)
+-        drone.pending_drop=(count,drone.pose.copy(),step)
+-        drone.last_attempt_step=step
+-        drone.placement.request=(step,"fast_closeout",bool(drone.grid.pose_fixed),count)
+-        drone.placement.audit.append((step,"request","fast_closeout",bool(drone.grid.pose_fixed),count))
+-        self.last_amnesty_attempt=step
+-
+-    def _choose_departure(self, drone, ranges, semantic):
+-        angles=np.asarray(drone.lidar_rays_angles())
+-        moving=[]
+-        bombs=[np.asarray(point) for point in drone.drop_records.values()]
+-        for hit in semantic:
+-            kind=hit.entity_type.name
+-            if kind not in ("BOMB","DRONE","DISPOSAL_CENTER") or not math.isfinite(hit.distance):
+-                continue
+-            relative=hit.distance*np.array((math.cos(hit.angle),math.sin(hit.angle)))
+-            moving.append(relative)
+-            if kind=="BOMB":
+-                yaw=drone.heading+hit.angle
+-                bombs.append(drone.pose+(hit.distance+12.)*np.array((math.cos(yaw),math.sin(yaw))))
+-        fav=None
+-        estimate=drone.team_wall.query(drone,semantic,int(drone.elapsed_timestep))
+-        lengths=(44.,30.,18.) if self.isolated.started else (44.,)
+-        for length in lengths:
+-            for direction in np.linspace(-math.pi,math.pi,24,endpoint=False):
+-                if not drone.local_escape.clearance(direction,angles,ranges,length,moving):
+-                    continue
+-                yaw=direction+drone.heading
+-                target=drone.pose+length*np.array((math.cos(yaw),math.sin(yaw)))
+-                terminal=min((math.dist(target,b) for b in bombs),default=100.)
+-                if terminal<MIN_BOMB_SEPARATION:
+-                    continue
+-                rank=estimate(target)[0],terminal
+-                if fav is None or rank>fav:
+-                    best,fav=target,rank
+-            if fav is not None:
+-                return best
+-        return None
+-
+-    def move_remaining(self, drone, command, step, ranges, semantic):
+-        if not drone.previous_inventory or ranges is None:
+-            return
+-        odom=drone.odometer_values()
+-        if odom is None or not np.all(np.isfinite(odom)):
+-            return
+-        ranges=np.asarray(ranges,dtype=float)
+-        # Keep the old guarded motion if no useful short departure is visible.
+-        if (self.target is None or math.dist(drone.pose,self.target)<8.
+-                or step-self.last_drop_target_step>=12):
+-            self.target=self._choose_departure(drone,ranges,semantic)
+-            self.last_drop_target_step=step
+-        if self.target is None:
+-            return
+-        aim=np.subtract(self.target,drone.pose)
+-        local=math.atan2(aim[1],aim[0])-drone.heading
+-        moving=[(h.distance*math.cos(h.angle),h.distance*math.sin(h.angle))
+-                for h in semantic if h.entity_type.name in ("BOMB","DRONE","DISPOSAL_CENTER")]
+-        if not drone.local_escape.clearance(local,np.asarray(drone.lidar_rays_angles()),
+-                                             ranges,min(32.,np.linalg.norm(aim)),moving):
+-            self.target=None
+-            return
+-        yaw=drone.heading-float(odom[2])+float(odom[1])
+-        velocity=float(odom[0])*np.array((math.cos(yaw),math.sin(yaw)))
+-        command.update(drone.drive(self.target,velocity))
+-
+-    def submit(self, drone, step):
+-        start,turn=self.plan
+-        if not drone._all_inventory_empty() or drone.pending_drop is not None:
+-            return False
+-        self.maps.freeze(step,drone.memory)
+-        self.bids[self.owner]=(step,self.maps.rank(drone.map_quality or 0),self.maps.mask)
+-        if turn==self.owner and self.vote is None and step>=start+self.DROP_STEPS+12:
+-            fresh={owner:bid for owner,bid in self.bids.items() if step-bid[0]<=12}
+-            # A complete fusion may proceed as soon as bids arrive. Otherwise
+-            # give missing real snapshots and confirmations a bounded chance.
+-            best=max(fresh,key=lambda i:(fresh[i][1],-i))
+-            if fresh[best][2].bit_count()==self.team_size or step>=start+self.HANDOFF_STEPS-6:
+-                self.vote=best
+-                self.audit.append((step,"elected",best,fresh[best]))
+-        if self.vote!=self.owner:
+-            return False
+-        # Use the submissions renderer and its verified live memory, adding
+-        # the fast-final advice through the existing FinalMaps implementation.
+-        original=drone.final_maps
+-        drone.final_maps=self.maps
+-        try:
+-            image,cache,versions=drone._submission_image(step)
+-        finally:
+-            drone.final_maps=original
+-        if not image.any():
+-            return False
+-        drone.submit_exploration_map(image.astype(np.uint8))
+-        drone.submitted_cache=cache
+-        drone.final_submission_versions=versions
+-        drone.submission_elected_rank=self.bids[self.owner][1]
+-        drone.submitted=True
+-        drone.red_submission_step=step
+-        self.audit.append((step,"submitted",len(versions)))
+-        return True
+-
+-    def act(self, drone, step, command, ranges, semantic):
+-        self.sample(drone,step)
+-        self.initiate(drone,step)
+-        self.isolated.track(drone,step)
+-        if (self.plan is None and not self.done and
+-                step+self.ANNOUNCE_STEPS+self.DROP_STEPS<drone.limit-30
+-                and drone.walltime_limit-drone.elapsed_walltime>3.):
+-            reason=self.isolated.ready(drone,step,self.advice.get(self.owner))
+-            if reason is not None:
+-                self.plan=(step+self.ANNOUNCE_STEPS,self.owner)
+-                self.isolated.started=True
+-                self.audit.append((step,"isolated_closeout",self.plan,reason,self.isolated.last_real_contact))
+-        phase=self.phase(step)
+-        if phase is None:
+-            if self.plan is not None and not self.done:
+-                self.audit.append((step,"expired",drone.previous_inventory,drone._all_inventory_empty()))
+-                self.done=True
+-            return False
+-        if self.isolated.started and phase=="relay":
+-            drone.placement.finish_request(drone,step)
+-            self.audit.append((step,"isolated_window_complete",drone.previous_inventory))
+-            self.done=True
+-            return False
+-        departure=getattr(drone,"drop_departure",None)
+-        relocating=departure is not None and departure.controls_step==step
+-        second=getattr(drone,"second_drop",None)
+-        site_state=None
+-        if second is not None and not relocating and phase in ("prepare","drop"):
+-            if phase=="prepare":
+-                second.reserve(drone,step,ranges,semantic)
+-            site_state=second.control(drone,step,command,ranges,semantic)
+-        if phase=="prepare":
+-            if site_state is not None:
+-                return True
+-            if self.isolated.started:
+-                if not relocating:
+-                    self.move_remaining(drone,command,step,ranges,semantic)
+-                    drone.local_escape.apply(drone,command,step,ranges,semantic)
+-                return True
+-            return False
+-        drone.placement.finish_request(drone,step)
+-        if phase=="drop":
+-            elapsed=step-self.plan[0]
+-            if second is not None and second.wait_for_site(site_state,elapsed):
+-                return True
+-            if not relocating and site_state!="ready":
+-                if second is not None:
+-                    second.clear(step,"sdk_fallback")
+-                self.move_remaining(drone,command,step,ranges,semantic)
+-                drone.local_escape.apply(drone,command,step,ranges,semantic)
+-            self.legal_drop_pulse(drone,command,step)
+-            return True
+-        # End repeat exploration during the short transaction. Recover normal
+-        # flight and the unchanged last-30 fallback if the group could not close.
+-        if not relocating:
+-            command.update(forward=0.,lateral=0.,rotation=0.,grasper=0,place_bomb=0)
+-        if drone.previous_inventory==0 and drone.pending_drop is None:
+-            self.maps.freeze(step,drone.memory)
+-        self.submit(drone,step)
+-        return True
++"""Score-aware search closeout, with a bounded SDK-authoritative drop window."""
++from collections import deque
++import math
++
++import numpy as np
++from scipy.ndimage import binary_dilation
++from swarm_rescue.simulation.drone.bomb_deployer import MIN_BOMB_SEPARATION
++from swarm_rescue.solutions.final_map_relay import FinalMaps
++from swarm_rescue.solutions.isolated_closeout import IsolatedCloseout
++
++
++class FastCloseout:
++    OBSERVATION_STEPS = 100
++    DROP_STEPS = 24
++    HANDOFF_STEPS = 48
++    ANNOUNCE_STEPS = 8
++
++    def __init__(self, owner, team_size):
++        self.owner = int(owner)
++        self.team_size = team_size
++        self.history = deque(maxlen=3)
++        self.advice = {}
++        self.plan = None
++        self.done = False
++        self.maps = FinalMaps(owner, team_size)
++        self.bids = {}
++        self.vote = None
++        self.audit = []
++        self.target = None
++        self.last_drop_target_step = -100
++        self.last_amnesty_attempt = -100
++        self.isolated = IsolatedCloseout()
++
++    @staticmethod
++    def score_time(step, limit):
++        return 100.*max(0.,min(1.,(limit-step)/(.70*limit)))
++
++    @classmethod
++    def worth_closing(cls, step, limit, windows, wall_tiles, fraction, frontier_gain, has_overview):
++        if len(windows)!=2 or not has_overview:
++            return None
++        # The count is a score proxy with an upper estimate from the faster
++        # of two windows. Prefer a nearby substantial reachable frontier.
++        predicted_map = 200.*max(windows)/max(100,wall_tiles)
++        speed_gain = .10*(cls.score_time(step+cls.HANDOFF_STEPS,limit)
++                          -cls.score_time(step+cls.HANDOFF_STEPS+2*cls.OBSERVATION_STEPS,limit))
++        low_progress = max(windows)<=max(2.,.003*wall_tiles)
++        decision=(fraction>=.95 or low_progress) and .5*predicted_map<speed_gain and frontier_gain<.12
++        return bool(decision),float(predicted_map),float(speed_gain)
++
++    def sample(self, drone, step):
++        if self.plan is not None or self.done or step<.30*drone.limit or step%100!=self.owner:
++            return
++        grid=drone.grid
++        evidence=grid.evidence
++        stable=evidence>=6
++        covered=(evidence<0) & (grid.searched>0)
++        if self.history:
++            earlier_free,earlier_walls=self.history[-1][1:3]
++            changed=(np.count_nonzero(stable & ~binary_dilation(earlier_walls))
++                     + .25*np.count_nonzero(covered & ~binary_dilation(earlier_free)))
++            covered = covered | earlier_free
++            stable = stable | earlier_walls
++        else:
++            changed=0
++        self.history.append((step,covered.copy(),stable.copy(),float(changed)))
++        if len(self.history)<3 or self.history[-1][0]-self.history[0][0]!=200:
++            return
++        wall_tiles=int(np.count_nonzero(stable))
++        costs,work,_=grid.search_work(drone.pose)
++        frontier=grid.frontier_gain()
++        gain=max((float(frontier[cell]) for cell,cost in costs.items() if cost<=145. and work[cell]),default=0.)
++        reachable=sum(bool(covered[cell]) for cell in costs)
++        candidates=np.count_nonzero(binary_dilation(covered)&(evidence==0)&~grid.blocked)
++        fraction=reachable/max(1,len(costs)+candidates)
++        overview=float(drone.memory.free.mean())>=.43 and wall_tiles>=42 and drone.search_roaming.departed
++        decision=self.worth_closing(step,drone.limit,[row[3] for row in list(self.history)[1:]],
++                                    wall_tiles,fraction,gain,overview)
++        if decision is not None:
++            ready,predicted_map,time_gain=decision
++            self.advice[self.owner]=(step,ready)
++            self.audit.append((step,"benefit_review",ready,predicted_map,time_gain,float(fraction),gain))
++
++    def initiate(self, drone, step):
++        if self.plan is not None or self.done or step+self.ANNOUNCE_STEPS+self.HANDOFF_STEPS>=drone.limit-30:
++            return
++        ready=self.fresh_ready(step)
++        if self.owner not in ready or len(ready)<2:
++            return
++        if step - self.advice[self.owner][0] > 4:
++            return
++        # Restrict origination to positively observed shared progress. Other
++        # aircraft can receive this proposal without losing track of stock.
++        active_recent={i:(tick,ok) for i,(tick,ok) in self.advice.items() if 0<=step-tick<=100}
++        if any(not ok for tick,ok in active_recent.values()):
++            return
++        self.plan=(step+self.ANNOUNCE_STEPS,self.owner)
++        self.audit.append((step,"planned",self.plan,tuple(sorted(ready))))
++
++    def fresh_ready(self, step):
++        return {owner for owner,(tick,ready) in self.advice.items() if ready and 0<=step-tick<=100}
++
++    def packet(self, step):
++        own=self.advice.get(self.owner)
++        if self.plan is None or self.isolated.started:
++            return own,None,None,None,None
++        p=self.plan
++        return own,p,(self.maps.mask,self.maps.outgoing(step)),self.bids.get(self.owner),self.vote
++
++    def receive(self, drone, msg):
++        sender=msg["id"]
++        report=msg.get("red_fast_closeout")
++        if (report is None or type(sender) is not int or sender==self.owner or not 0<=sender<self.team_size):
++            return
++        result,plan,tiles,bid,vote=report
++        step=int(drone.elapsed_timestep)
++        self.isolated.last_real_contact=step
++        if self.isolated.started:
++            return
++        if (isinstance(result,tuple) and len(result)==2 and type(result[0]) is int
++                and type(result[1]) is bool and 0<=step-result[0]<=100
++                and result[0]>self.advice.get(sender,(-1,False))[0]):
++            self.advice[sender]=result
++        if (self.done or not isinstance(plan,tuple) or len(plan)!=2
++                or any(type(x) is not int for x in plan)):
++            return
++        start,owner=plan
++        if not (0<=owner<self.team_size and .30*drone.limit<=start<drone.limit-30-self.HANDOFF_STEPS
++                and step-self.DROP_STEPS<start<=step+self.ANNOUNCE_STEPS):
++            # Within an existing plan keep exchanging final data after drop
++            # closes. A late plan cannot open a second drop window.
++            if plan!=self.plan:
++                return
++        if self.plan is None or step<self.plan[0] and plan<self.plan:
++            self.plan=plan
++            self.audit.append((step,"adopted",plan,sender))
++        if plan!=self.plan:
++            return
++        if tiles is not None:
++            mask, snapshot=tiles
++            if snapshot is not None and snapshot[1]<start+self.DROP_STEPS:
++                snapshot=None
++            self.maps.receive(sender,step,mask,snapshot)
++        if (isinstance(bid,tuple) and len(bid)==3 and all(type(x) is int for x in bid)
++                and start+self.DROP_STEPS<=bid[0]<=step
++                and 0<=bid[1]<=10000 and 0<=bid[2]<1<<self.team_size):
++            self.bids[sender]=bid
++        if owner==sender and type(vote) is int and 0<=vote<self.team_size:
++            self.vote=vote
++
++    def phase(self, step):
++        if self.plan is None or self.done:
++            return None
++        start,_=self.plan
++        if step<start:
++            return "prepare"
++        if step<start+self.DROP_STEPS:
++            return "drop"
++        return "relay" if step<=start+self.HANDOFF_STEPS else None
++
++    def legal_drop_pulse(self, drone, command, step):
++        count=drone.previous_inventory
++        if (self.phase(step)!="drop" or not count or drone.pending_drop is not None
++                or step%4!=self.owner%4 or step>=drone.limit
++                or drone.elapsed_walltime>=drone.walltime_limit
++                or step-self.last_amnesty_attempt<2):
++            return
++        # No placement-policy gate. The official SDK checks the actual
++        # physical minimum spacing, disposal-center overlap and inventory.
++        command.update(grasper=0,place_bomb=1)
++        drone.pending_drop=(count,drone.pose.copy(),step)
++        drone.last_attempt_step=step
++        drone.placement.request=(step,"fast_closeout",bool(drone.grid.pose_fixed),count)
++        drone.placement.audit.append((step,"request","fast_closeout",bool(drone.grid.pose_fixed),count))
++        self.last_amnesty_attempt=step
++
++    def _choose_departure(self, drone, ranges, semantic):
++        angles=np.asarray(drone.lidar_rays_angles())
++        moving=[]
++        bombs=[np.asarray(point) for point in drone.drop_records.values()]
++        for hit in semantic:
++            kind=hit.entity_type.name
++            if kind not in ("BOMB","DRONE","DISPOSAL_CENTER") or not math.isfinite(hit.distance):
++                continue
++            relative=hit.distance*np.array((math.cos(hit.angle),math.sin(hit.angle)))
++            moving.append(relative)
++            if kind=="BOMB":
++                yaw=drone.heading+hit.angle
++                bombs.append(drone.pose+(hit.distance+12.)*np.array((math.cos(yaw),math.sin(yaw))))
++        fav=None
++        estimate=drone.team_wall.query(drone,semantic,int(drone.elapsed_timestep))
++        lengths=(44.,30.,18.) if self.isolated.started else (44.,)
++        for length in lengths:
++            for direction in np.linspace(-math.pi,math.pi,24,endpoint=False):
++                if not drone.local_escape.clearance(direction,angles,ranges,length,moving):
++                    continue
++                yaw=direction+drone.heading
++                target=drone.pose+length*np.array((math.cos(yaw),math.sin(yaw)))
++                terminal=min((math.dist(target,b) for b in bombs),default=100.)
++                if terminal<MIN_BOMB_SEPARATION:
++                    continue
++                rank=estimate(target)[0],terminal
++                if fav is None or rank>fav:
++                    best,fav=target,rank
++            if fav is not None:
++                return best
++        return None
++
++    def move_remaining(self, drone, command, step, ranges, semantic):
++        if not drone.previous_inventory or ranges is None:
++            return
++        odom=drone.odometer_values()
++        if odom is None or not np.all(np.isfinite(odom)):
++            return
++        ranges=np.asarray(ranges,dtype=float)
++        # Keep the old guarded motion if no useful short departure is visible.
++        if (self.target is None or math.dist(drone.pose,self.target)<8.
++                or step-self.last_drop_target_step>=12):
++            self.target=self._choose_departure(drone,ranges,semantic)
++            self.last_drop_target_step=step
++        if self.target is None:
++            return
++        aim=np.subtract(self.target,drone.pose)
++        local=math.atan2(aim[1],aim[0])-drone.heading
++        moving=[(h.distance*math.cos(h.angle),h.distance*math.sin(h.angle))
++                for h in semantic if h.entity_type.name in ("BOMB","DRONE","DISPOSAL_CENTER")]
++        if not drone.local_escape.clearance(local,np.asarray(drone.lidar_rays_angles()),
++                                             ranges,min(32.,np.linalg.norm(aim)),moving):
++            self.target=None
++            return
++        yaw=drone.heading-float(odom[2])+float(odom[1])
++        velocity=float(odom[0])*np.array((math.cos(yaw),math.sin(yaw)))
++        command.update(drone.drive(self.target,velocity))
++
++    def submit(self, drone, step):
++        group = getattr(drone, "group_exchange", None)
++        if group is not None and not group.ordinary_submit_allowed(drone, step, "fast_closeout"):
++            return False
++        start,turn=self.plan
++        if not drone._all_inventory_empty() or drone.pending_drop is not None:
++            return False
++        self.maps.freeze(step,drone.memory)
++        self.bids[self.owner]=(step,self.maps.rank(drone.map_quality or 0),self.maps.mask)
++        if turn==self.owner and self.vote is None and step>=start+self.DROP_STEPS+12:
++            fresh={owner:bid for owner,bid in self.bids.items() if step-bid[0]<=12}
++            # A complete fusion may proceed as soon as bids arrive. Otherwise
++            # give missing real snapshots and confirmations a bounded chance.
++            best=max(fresh,key=lambda i:(fresh[i][1],-i))
++            if fresh[best][2].bit_count()==self.team_size or step>=start+self.HANDOFF_STEPS-6:
++                self.vote=best
++                self.audit.append((step,"elected",best,fresh[best]))
++        if self.vote!=self.owner:
++            return False
++        # Use the submissions renderer and its verified live memory, adding
++        # the fast-final advice through the existing FinalMaps implementation.
++        original=drone.final_maps
++        drone.final_maps=self.maps
++        try:
++            image,cache,versions=drone._submission_image(step)
++        finally:
++            drone.final_maps=original
++        if not image.any():
++            return False
++        drone.submit_exploration_map(image.astype(np.uint8))
++        drone.submitted_cache=cache
++        drone.final_submission_versions=versions
++        drone.submission_elected_rank=self.bids[self.owner][1]
++        drone.submitted=True
++        drone.red_submission_step=step
++        self.audit.append((step,"submitted",len(versions)))
++        return True
++
++    def act(self, drone, step, command, ranges, semantic):
++        self.sample(drone,step)
++        self.initiate(drone,step)
++        self.isolated.track(drone,step)
++        if (self.plan is None and not self.done and
++                step+self.ANNOUNCE_STEPS+self.DROP_STEPS<drone.limit-30
++                and drone.walltime_limit-drone.elapsed_walltime>3.):
++            reason=self.isolated.ready(drone,step,self.advice.get(self.owner))
++            if reason is not None:
++                self.plan=(step+self.ANNOUNCE_STEPS,self.owner)
++                self.isolated.started=True
++                self.audit.append((step,"isolated_closeout",self.plan,reason,self.isolated.last_real_contact))
++        phase=self.phase(step)
++        if phase is None:
++            if self.plan is not None and not self.done:
++                self.audit.append((step,"expired",drone.previous_inventory,drone._all_inventory_empty()))
++                self.done=True
++            return False
++        if self.isolated.started and phase=="relay":
++            drone.placement.finish_request(drone,step)
++            self.audit.append((step,"isolated_window_complete",drone.previous_inventory))
++            self.done=True
++            return False
++        departure=getattr(drone,"drop_departure",None)
++        relocating=departure is not None and departure.controls_step==step
++        second=getattr(drone,"second_drop",None)
++        site_state=None
++        if second is not None and not relocating and phase in ("prepare","drop"):
++            if phase=="prepare":
++                second.reserve(drone,step,ranges,semantic)
++            site_state=second.control(drone,step,command,ranges,semantic)
++        if phase=="prepare":
++            if site_state is not None:
++                return True
++            if self.isolated.started:
++                if not relocating:
++                    self.move_remaining(drone,command,step,ranges,semantic)
++                    drone.local_escape.apply(drone,command,step,ranges,semantic)
++                return True
++            return False
++        drone.placement.finish_request(drone,step)
++        if phase=="drop":
++            elapsed=step-self.plan[0]
++            if second is not None and second.wait_for_site(site_state,elapsed):
++                return True
++            if not relocating and site_state!="ready":
++                if second is not None:
++                    second.clear(step,"sdk_fallback")
++                self.move_remaining(drone,command,step,ranges,semantic)
++                drone.local_escape.apply(drone,command,step,ranges,semantic)
++            self.legal_drop_pulse(drone,command,step)
++            return True
++        # End repeat exploration during the short transaction. Recover normal
++        # flight and the unchanged last-30 fallback if the group could not close.
++        if not relocating:
++            command.update(forward=0.,lateral=0.,rotation=0.,grasper=0,place_bomb=0)
++        if drone.previous_inventory==0 and drone.pending_drop is None:
++            self.maps.freeze(step,drone.memory)
++        self.submit(drone,step)
++        return True
+diff --git a/group_exchange.py b/group_exchange.py
+new file mode 100644
+index 0000000..b92cf51
+--- /dev/null
++++ b/group_exchange.py
+@@ -0,0 +1,337 @@
++"""One return mission: local branch exchange, shared parent exchange, submit."""
++from dataclasses import dataclass
++import math
++import numpy as np
++from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
++from swarm_rescue.solutions.partial_map_submit import provisional_map
++from swarm_rescue.solutions.exchange_plan import ExchangePlan, inside, known_segment
++from swarm_rescue.solutions.map_candidates import MapCandidates
++
++
++@dataclass(frozen=True)
++class ReturnIntent:
++    target: tuple
++    route: tuple
++    group: tuple
++    eta: int
++
++
++class GroupExchange:
++    ACTIVE = {'RETURN_LOCAL','LOCAL_EXCHANGE','COURIER_TO_C','INTERGROUP_EXCHANGE','DELIVERED_HOLD'}
++
++    def __init__(self, owner, team_size, limit, size):
++        self.owner,self.team_size,self.limit=int(owner),team_size,limit
++        self.plan=ExchangePlan(owner,team_size,limit)
++        self.candidates=MapCandidates(owner,self.plan.epoch,*map(int,size))
++        self.phase='OBSERVE'
++        self.started_step=None
++        self.complete_step=None
++        self.route=[]
++        self.detour=[]
++        self.target=None
++        self.group=(self.owner,)
++        self.peer_status={}
++        self.audit=[]
++        self.choice=None
++        self.choice_step=None
++        self.choice_acks=set()
++        self.next_plan=0
++        self.blocked_since=None
++        self.last_gate=None
++        self.hold=None
++        self.role=None
++        self.releases=0
++        self.best_installed=None
++        self.selection_attempted=False
++        self.original_messenger_state=None
++
++    @property
++    def owns_navigation(self):
++        return self.phase in self.ACTIVE
++
++    def start(self):return self.limit*3//5
++
++    def cutoff(self):
++        return min(self.limit*85//100,DeadlineSubmission.window_start(self.limit)-12)
++
++    def expired(self, drone, step):
++        return step>=self.cutoff() or drone.walltime_limit-drone.elapsed_walltime<=8
++
++    def gate(self, step, reason):
++        if reason != self.last_gate:
++            self.last_gate=reason;self.audit.append((step,'return_preflight',reason))
++
++    def observe(self, drone, step):
++        self.plan.observe(drone,step,record_trail=self.phase=='OBSERVE')
++        # A late finisher may hand over at an actual contact even when a full
++        # return detour cannot fit. This never acquires/cancels navigation.
++        if (self.plan.committed() and self.start()<=step and not self.expired(drone,step)
++                and drone.previous_inventory==0 and drone.pending_drop is None
++                and drone.placement.maneuvers.exit is None
++                and drone.placement.maneuvers.waiting_exit is None):
++            self.candidates.freeze_local(drone,step)
++            self.candidates.build_local_image(drone,step)
++        if self.owns_navigation and self.expired(drone,step):
++            self.release(drone,'EXPIRED')
++            self.audit.append((step,'coord_cutoff','released_navigation_and_submit_gate'))
++
++    def release(self, drone, phase):
++        self.phase=phase;self.releases+=1;self.role=None
++        if self.original_messenger_state is not None and drone.messenger.state=='DONE':
++            drone.messenger.state=self.original_messenger_state
++
++    def prepare_return(self, drone, step):
++        # Read-only with respect to all original controller/mission state.
++        if self.phase!='OBSERVE' or step<self.start():return None
++        if self.expired(drone,step):self.gate(step,'budget');return None
++        if drone.previous_inventory!=0 or drone.pending_drop is not None:
++            self.gate(step,'stock_or_pending');return None
++        maneuvers=drone.placement.maneuvers
++        if (maneuvers.exit is not None or maneuvers.waiting_exit is not None
++                or drone.drop_departure.controls_step==step):
++            self.gate(step,'placement_escape');return None
++        if not self.plan.committed():self.gate(step,'no_shared_root');return None
++        if not self.plan.reachable_root():self.gate(step,'no_root_trail_gate');return None
++        group=self.plan.branch_group
++        target=self.plan.local_region if len(group)>1 else self.plan.root[1:]
++        index=self.plan.gate_index(target) if target is not None else None
++        if index is None:
++            target=self.plan.root[1:];index=self.plan.gate_index(target);group=(self.owner,)
++        route=list(reversed(self.plan.trail[index:]))
++        while route and math.dist(drone.pose,route[0])<=8:route.pop(0)
++        # A radio area may be reached without crowding the marker itself.
++        point=tuple(self.plan.trail[index])
++        if route and not known_segment(drone,drone.pose,route[0]):
++            connection=list(drone.grid.route(drone.pose,route[0]))
++            if not connection:self.gate(step,'no_safe_join');return None
++            route=connection+route
++            while route and math.dist(drone.pose,route[0])<=8:route.pop(0)
++            if route and not known_segment(drone,drone.pose,route[0]):
++                self.gate(step,'unsafe_join');return None
++        length=sum(math.dist(a,b) for a,b in zip([tuple(drone.pose)]+route,route))
++        eta=math.ceil(length/2)+40
++        if step+eta>=self.cutoff():self.gate(step,'insufficient_route_budget');return None
++        self.gate(step,'ready')
++        return ReturnIntent(point,tuple(map(tuple,route)),tuple(group),eta)
++
++    def commit_return(self, drone, intent, step):
++        assert self.phase=='OBSERVE' and self.plan.committed()
++        self.phase='RETURN_LOCAL';self.started_step=step
++        self.target,self.route,self.group=intent.target,list(intent.route),intent.group
++        drone.route=[];drone.search_task=None
++        self.original_messenger_state=drone.messenger.state
++        if drone.messenger.state!='DONE':
++            drone.messenger.state='DONE';drone.messenger.audit.append((step,'group_return_handoff'))
++        self.candidates.freeze_local(drone,step)
++        self.audit.append((step,'return_owned',self.group,self.target,intent.eta,self.plan.root))
++
++    def receive(self, drone, message, step):
++        body=message.get('red_group_exchange')
++        if not isinstance(body,dict):return
++        self.plan.receive(drone,message,body,step)
++        peer=message.get('id')
++        if (type(peer) is not int or peer==self.owner or not 0<=peer<self.team_size
++                or tuple(body.get('epoch',()))!=self.plan.epoch):return
++        ts=body.get('step')
++        if type(ts) is not int or not 0<=step-ts<=12:return
++        have=set()
++        for row in body.get('receipts',()):
++            if isinstance(row,tuple) and len(row)==4 and row[0] in ('snapshot','image'):
++                have.add(row)
++                kind,owner,version,checksum=row
++                store=self.candidates.snapshots if kind=='snapshot' else self.candidates.images
++                item=store.get(owner)
++                if item is not None and (item['version'],item['digest'])==(version,checksum):
++                    key=(peer,*row)
++                    if key not in self.candidates.receipts:
++                        self.candidates.receipts[key]=step
++                        self.audit.append((step,'payload_acked',peer,*row))
++        self.peer_status[peer]=dict(step=step,have=have,phase=body.get('phase'),
++                                    eta=body.get('eta',100000),role=body.get('role'),
++                                    group=tuple(body.get('group',())),point=body.get('point'))
++        self.candidates.receive(drone,peer,body.get('payload'),step)
++        choice=body.get('choice')
++        if isinstance(choice,dict) and self.valid_choice(choice,step):
++            proposer=choice['proposer']
++            if self.choice is None or proposer < self.choice['proposer']:
++                self.choice=dict(choice);self.choice_step=step;self.choice_acks=set()
++                self.audit.append((step,'choice_received',peer,choice))
++        if self.choice is not None:
++            key=self.choice['key']
++            if body.get('choice_ack')==key and body.get('choice')==self.choice:
++                self.choice_acks.add(peer)
++            owner=self.choice['image_owner']
++            data=self.candidates.images.get(owner)
++            if data is not None and data['digest']==self.choice['image_digest']:
++                self.choice_acks.add(self.owner)
++
++    def fresh(self, step):
++        return {i:p for i,p in self.peer_status.items() if 0<=step-p['step']<=12}
++
++    def eta_root(self, drone):
++        if not self.plan.reachable_root() or drone.pose is None:return 100000
++        i=self.plan.gate_index(self.plan.root[1:])
++        near=min(range(len(self.plan.trail)),key=lambda j:math.dist(drone.pose,self.plan.trail[j]))
++        lo,hi=sorted((i,near))
++        length=math.dist(drone.pose,self.plan.trail[near])+sum(math.dist(a,b) for a,b in
++                   zip(self.plan.trail[lo:hi],self.plan.trail[lo+1:hi+1]))
++        length+=max(0.,math.dist(self.plan.trail[i],self.plan.root[1:])-80.)
++        return int(math.ceil(length/2))+40
++
++    def message(self, drone, step):
++        body=self.plan.message(drone)
++        body.update(phase=self.phase,group=self.group,role=self.role,
++                    eta=self.eta_root(drone) if self.owns_navigation else 100000,
++                    manifest=self.candidates.manifest(),receipts=self.candidates.manifest(),
++                    choice=self.choice,score_table=self.candidates.score_table,
++                    choice_ack=(self.choice['key'] if self.choice is not None
++                        and self.owner in self.choice_acks else None),payload=None)
++        if self.owner in self.candidates.snapshots and not self.expired(drone,step):
++            body['payload']=self.candidates.payload(step,[p['have'] for p in self.fresh(step).values()])
++        return body
++
++    def ordinary_submit_allowed(self, drone, step, path='ordinary'):
++        return not (self.plan.committed() and self.start()<=step<self.cutoff()
++                    and not self.expired(drone,step) and self.phase not in ('ABORT','EXPIRED','SUBMITTED'))
++
++    def complete(self, group=None):
++        owners=set(range(self.team_size)) if group is None else set(group)
++        return owners.issubset(self.candidates.snapshots) and owners.issubset(self.candidates.images)
++
++    def go_root(self, drone, step):
++        i=self.plan.gate_index(self.plan.root[1:])
++        near=min(range(len(self.plan.trail)),key=lambda j:math.dist(drone.pose,self.plan.trail[j]))
++        if near>=i:route=list(reversed(self.plan.trail[i:near+1]))
++        else:route=list(self.plan.trail[near:i+1])
++        root=self.plan.root[1:]
++        if math.dist(route[-1],root)>80:
++            if known_segment(drone,route[-1],root):route.append(tuple(root))
++            else:
++                tail=list(drone.grid.route(route[-1],root))
++                if not tail or math.dist(tail[-1],root)>80:
++                    self.release(drone,'ABORT');self.audit.append((step,'route_abort','no_C_radio_area_join'));return
++                route.extend(map(tuple,tail))
++        self.route=route;self.detour=[];self.target=tuple(route[-1])
++        self.phase='COURIER_TO_C';self.role='courier'
++        self.audit.append((step,'courier_to_C',self.target,self.eta_root(drone),self.candidates.manifest()))
++
++    def tick_navigation(self, drone, step, command, ranges, semantic):
++        if not self.owns_navigation:return False
++        self.candidates.build_local_image(drone,step)
++        if self.phase=='LOCAL_EXCHANGE':
++            local_done=self.complete(self.group)
++            leave_at=self.cutoff()-self.eta_root(drone)-40
++            if local_done or step>=leave_at:
++                fresh=self.fresh(step)
++                wanted=set(self.group)
++                eligible=[(self.eta_root(drone),self.owner)]
++                for i,p in fresh.items():
++                    have_snap={r[1] for r in p['have'] if r[0]=='snapshot'}
++                    have_image={r[1] for r in p['have'] if r[0]=='image'}
++                    if i in wanted and wanted.issubset(have_snap&have_image):
++                        eligible.append((p['eta'],i))
++                # A courier already announced in actual contact owns the lease.
++                announced=[i for i,p in fresh.items() if i in wanted and p['role']=='courier']
++                courier=min(announced) if announced else min(eligible)[1]
++                if courier==self.owner:self.go_root(drone,step)
++                else:
++                    self.phase='DELIVERED_HOLD';self.role='delivered';self.hold=tuple(drone.pose)
++                    self.audit.append((step,'delivered_hold',courier))
++        while self.route and math.dist(drone.pose,self.route[0])<=8:self.route.pop(0)
++        while self.detour and math.dist(drone.pose,self.detour[0])<=8:self.detour.pop(0)
++        if self.phase in ('RETURN_LOCAL','COURIER_TO_C') and not self.route:
++            self.phase='LOCAL_EXCHANGE' if self.phase=='RETURN_LOCAL' else 'INTERGROUP_EXCHANGE'
++            self.hold=tuple(drone.pose)
++            self.audit.append((step,'region_arrival',self.phase,self.target))
++        target=self.detour[0] if self.detour else self.route[0] if self.route else self.hold or tuple(drone.pose)
++        if not known_segment(drone,drone.pose,target):
++            if self.blocked_since is None:self.blocked_since=step
++            if step>=self.next_plan:
++                self.next_plan=step+20
++                self.detour=[tuple(p) for p in drone.grid.route(drone.pose,target) if math.dist(drone.pose,p)>8]
++            if not self.detour or not known_segment(drone,drone.pose,self.detour[0]):
++                if step-self.blocked_since>=40:
++                    self.release(drone,'ABORT')
++                    self.audit.append((step,'route_abort','no_safe_join'));return False
++                target=tuple(drone.pose)
++            else:target=self.detour[0]
++        else:self.blocked_since=None
++        command.update(drone.drive(target,drone.measured_velocity(),ignore_own_bombs=True))
++        command['place_bomb']=0
++        drone.local_escape.apply(drone,command,step,ranges,semantic)
++        return True
++
++    def valid_choice(self, choice, step):
++        fields=('proposer','executor','backup','image_owner','image_digest','reference_digest','key','lease_end','created')
++        if not all(k in choice for k in fields):return False
++        from swarm_rescue.solutions.map_candidates import digest
++        return (choice['key']==digest({k:v for k,v in choice.items() if k!='key'})
++                and all(type(choice[k]) is int and 0<=choice[k]<self.team_size for k in ('proposer','executor','backup'))
++                and type(choice['image_owner']) is int and 0<=choice['image_owner']<=self.team_size
++                and type(choice['created']) is int and self.start()<=choice['created']<=step
++                and choice['lease_end']==self.cutoff()
++                and all(isinstance(choice[k],str) and len(choice[k])==64 for k in ('image_digest','reference_digest','key')))
++
++    def try_submit(self, drone, step, score_fn):
++        if self.owner not in self.candidates.snapshots or drone.previous_inventory!=0 or drone.pending_drop is not None:
++            return False
++        if not drone._all_inventory_empty():return False
++        if provisional_map(step,drone.map_quality,drone.map_revision,drone.walltime_limit-drone.elapsed_walltime):
++            return False
++        if self.expired(drone,step) and self.choice is None and self.candidates.images:
++            # Bounded coordination: compare only actually held images, no new fit.
++            holders=[i for i,p in self.fresh(step).items() if any(r[0]=='image' for r in p['have'])]
++            if min([self.owner]+holders)!=self.owner:return False
++            selected=self.candidates.choose(drone,step,score_fn,fusion=False)
++            self.candidates.install(drone,selected['owner'],step)
++            image,cache,versions=drone.group_best_image
++            if not image.any():return False
++            drone.submit_exploration_map(image.astype(np.uint8,copy=False))
++            drone.submitted_cache=cache;drone.final_submission_versions=versions
++            drone.red_submission_step=step;drone.submitted=True;self.phase='SUBMITTED'
++            self.audit.append((step,'soft_cutoff_submit',selected,sorted(self.candidates.snapshots)))
++            return True
++        if self.choice is None and self.complete() and not self.selection_attempted:
++            # One scorer in the current actually connected set of full holders.
++            full=set(range(self.team_size))
++            peers=[]
++            for i,p in self.fresh(step).items():
++                snap={r[1] for r in p['have'] if r[0]=='snapshot'}
++                imgs={r[1] for r in p['have'] if r[0]=='image'}
++                if full.issubset(snap&imgs):peers.append(i)
++            if min([self.owner]+peers)!=self.owner:return False
++            self.selection_attempted=True
++            selected=self.candidates.choose(drone,step,score_fn)
++            if selected is None:return False
++            owner=selected['owner']
++            holders=[self.owner]+[i for i,p in self.fresh(step).items() if
++                      ('image',owner,selected['version'],selected['digest']) in p['have']]
++            executor=owner if owner in holders else min(holders)
++            from swarm_rescue.solutions.map_candidates import digest
++            backup=min((i for i in holders if i!=executor),default=executor)
++            choice=dict(proposer=self.owner,executor=executor,backup=backup,image_owner=owner,
++                        image_digest=selected['digest'],reference_digest=self.candidates.reference_digest,
++                        lease_end=self.cutoff(),created=step)
++            choice['key']=digest(choice)
++            self.choice=choice;self.choice_step=step;self.choice_acks={self.owner}
++            self.complete_step=step
++            self.audit.append((step,'choice_proposed',choice))
++        if self.choice is None:return False
++        owner=self.choice['image_owner'];data=self.candidates.images.get(owner)
++        if data is None or data['digest']!=self.choice['image_digest']:return False
++        if self.best_installed!=data['digest']:
++            self.candidates.install(drone,owner,step);self.best_installed=data['digest']
++        self.choice_acks.add(self.owner)
++        executor=self.choice['executor']
++        if self.expired(drone,step) and self.owner==self.choice['backup']:
++            executor=self.owner
++        if self.owner!=executor or self.owner not in self.choice_acks:return False
++        if step-self.choice['created']<2:return False
++        image,cache,versions=drone.group_best_image
++        if not image.any():return False
++        drone.submit_exploration_map(image.astype(np.uint8,copy=False))
++        drone.submitted_cache=cache;drone.final_submission_versions=versions
++        drone.red_submission_step=step;drone.submitted=True
++        self.phase='SUBMITTED'
++        self.audit.append((step,'submitted',self.choice))
++        return True
+diff --git a/map_candidates.py b/map_candidates.py
+new file mode 100644
+index 0000000..cd49ecb
+--- /dev/null
++++ b/map_candidates.py
+@@ -0,0 +1,175 @@
++"""Immutable epoch snapshots, actual payload receipts and common-reference ranking."""
++import hashlib
++import numpy as np
++from swarm_rescue.solutions.greedy_mapping import MapMemory
++from swarm_rescue.solutions.submission_renderer import SubmissionBearings
++
++
++def digest(value):
++    h = hashlib.sha256()
++    def add(v):
++        if isinstance(v,np.ndarray):
++            h.update(str((v.dtype.str,v.shape)).encode());h.update(v.tobytes(order='C'))
++        elif isinstance(v,dict):
++            for k in sorted(v,key=repr): add(k);add(v[k])
++        elif isinstance(v,(tuple,list)):
++            h.update(b'[')
++            for x in v: add(x)
++            h.update(b']')
++        else:
++            h.update(repr(v).encode());h.update(b';')
++    add(value)
++    return h.hexdigest()
++
++
++def frozen(value):
++    if isinstance(value,np.ndarray):
++        a=value.copy();a.flags.writeable=False;return a
++    if isinstance(value,dict):return {k:frozen(v) for k,v in value.items()}
++    if isinstance(value,(tuple,list)):return tuple(frozen(x) for x in value)
++    return value
++
++
++class MapCandidates:
++    def __init__(self, owner, epoch, width, height):
++        self.owner,self.epoch,self.width,self.height = int(owner),epoch,int(width),int(height)
++        self.snapshots = {}
++        self.images = {}
++        self.receipts = {}
++        self.audit = []
++        self.local_version = None
++        self.best = None
++        self.score_table = None
++        self.reference_digest = None
++        self.fusion_built = False
++        self.last_payload = -10
++        self.cursor = 0
++
++    def freeze_local(self, drone, step):
++        if self.owner in self.snapshots:
++            return
++        self.local_version = int(step)
++        data = dict(epoch=self.epoch,owner=self.owner,version=int(step),
++                    memory=frozen(drone.memory.packet()),bearings=frozen(drone.submission_bearings.bits),
++                    inventory=frozen(drone.inventory_records))
++        data['digest']=digest(data)
++        self.snapshots[self.owner]=data
++        self.audit.append((step,'snapshot_frozen',self.owner,data['digest']))
++
++    def context(self, snapshot):
++        memory=MapMemory(self.width,self.height);memory.merge(snapshot['memory'])
++        bearing=SubmissionBearings(self.width,self.height);bearing.bits=np.array(snapshot['bearings'],copy=True)
++        return memory,bearing
++
++    def build_local_image(self, drone, step):
++        if self.owner in self.images or self.owner not in self.snapshots:
++            return
++        if step % drone.team_size != self.owner or drone.walltime_limit-drone.elapsed_walltime <= 8:
++            return
++        memory,bearing=self.context(self.snapshots[self.owner])
++        self.add_image(self.owner,self.local_version,bearing.render(memory),
++                       {self.owner:self.snapshots[self.owner]['digest']},step)
++
++    def add_image(self, owner, version, bitmap, sources, step):
++        data=dict(epoch=self.epoch,owner=int(owner),version=int(version),
++                  packed=frozen(np.packbits(np.asarray(bitmap,dtype=bool).ravel())),
++                  sources=dict(sources))
++        data['digest']=digest(data)
++        self.images[int(owner)]=data
++        self.audit.append((step,'image_built',owner,data['digest']))
++
++    def image(self, owner):
++        return np.unpackbits(self.images[owner]['packed'])[:self.width*self.height].reshape(self.height,self.width).astype(np.uint8)
++
++    def manifest(self):
++        return tuple((kind,owner,data['version'],data['digest'])
++                     for kind,store in (('snapshot',self.snapshots),('image',self.images))
++                     for owner,data in sorted(store.items()))
++
++    def receive(self, drone, peer, payload, step):
++        if not isinstance(payload,tuple) or len(payload) != 2:
++            return False
++        kind,data=payload
++        if kind not in ('snapshot','image') or not isinstance(data,dict):return False
++        owner,version=data.get('owner'),data.get('version')
++        if (type(owner) is not int or not 0 <= owner <= drone.team_size or
++                type(version) is not int or not 0 <= version <= step or
++                tuple(data.get('epoch',())) != self.epoch):return False
++        if kind=='snapshot' and owner==drone.team_size:return False
++        store=self.snapshots if kind=='snapshot' else self.images
++        old=store.get(owner)
++        if old is not None:
++            return old['version']==version and old['digest']==data.get('digest')
++        if data.get('digest') != digest({k:v for k,v in data.items() if k!='digest'}):
++            self.audit.append((step,'payload_rejected',peer,kind,owner,'digest'));return False
++        if kind=='snapshot':
++            packet,bits=data.get('memory'),data.get('bearings')
++            if not isinstance(packet,tuple) or len(packet)!=4:return False
++            ids,values,free,visits=packet
++            if (not isinstance(ids,np.ndarray) or ids.ndim!=1 or ids.dtype.kind not in 'iu'
++                    or not isinstance(values,np.ndarray) or values.dtype!=np.uint8 or values.shape!=ids.shape
++                    or (ids.size and (ids.min()<0 or ids.max()>=drone.memory.hits.size))
++                    or not isinstance(free,np.ndarray) or free.dtype!=np.uint8 or free.ndim!=1
++                    or free.size!=(drone.memory.free.size+7)//8
++                    or not isinstance(visits,np.ndarray) or visits.dtype!=np.uint8 or visits.shape!=drone.memory.shape
++                    or not isinstance(bits,np.ndarray) or bits.dtype!=np.uint8
++                    or bits.shape!=drone.submission_bearings.bits.shape):return False
++            # Validated actual payload, not a peer's claim that a source exists.
++            saved=frozen(data)
++            drone.memory.merge(saved['memory'])
++            drone.submission_bearings.bits |= saved['bearings']
++            drone._receive_team_coordination({'id':peer,'red_inventory':saved['inventory']},step)
++        else:
++            packed=data.get('packed')
++            if (not isinstance(packed,np.ndarray) or packed.dtype!=np.uint8 or packed.ndim!=1
++                    or packed.size!=(self.width*self.height+7)//8 or not isinstance(data.get('sources'),dict)):
++                return False
++            saved=frozen(data)
++        store[owner]=saved
++        self.audit.append((step,'payload_stored',peer,kind,owner,version,data['digest']))
++        return True
++
++    def payload(self, step, peer_manifests):
++        if step-self.last_payload < 2 or not peer_manifests:return None
++        missing=[]
++        for item in self.manifest():
++            if any(item not in have for have in peer_manifests):missing.append(item)
++        if not missing:return None
++        self.cursor %= len(missing)
++        kind,owner,_,_=missing[self.cursor];self.cursor+=1;self.last_payload=step
++        data=(self.snapshots if kind=='snapshot' else self.images)[owner]
++        return kind,data
++
++    def choose(self, drone, step, score_fn, fusion=True):
++        if not self.images:return None
++        memory=MapMemory(self.width,self.height);memory.merge(drone.memory.packet())
++        bearing=SubmissionBearings(self.width,self.height);bearing.bits=drone.submission_bearings.bits.copy()
++        for data in self.snapshots.values():
++            memory.merge(data['memory']);bearing.bits |= data['bearings']
++        if fusion and not self.fusion_built and drone.walltime_limit-drone.elapsed_walltime > 8:
++            self.fusion_built=True
++            self.add_image(drone.team_size,step,bearing.render(memory),
++                           {i:d['digest'] for i,d in self.snapshots.items()},step)
++        hits=memory.hits>=3
++        self.reference_digest=digest(hits)
++        table=[]
++        for owner,data in sorted(self.images.items()):
++            bitmap=self.image(owner).astype(bool)
++            # Same downsample and stable-hit reference for every candidate.
++            reduced=bitmap[::2,::2][:hits.shape[0],:hits.shape[1]]
++            score=score_fn(reduced,hits)
++            table.append(dict(owner=owner,version=data['version'],digest=data['digest'],**score))
++        best=max(table,key=lambda x:(x['score'],x['version'],-x['owner'],x['digest']))
++        self.score_table=table;self.best=best
++        self.audit.append((step,'map_selected',self.reference_digest,table,best['digest']))
++        return best
++
++    def install(self, drone, owner, step):
++        image=self.image(owner);data=self.images[owner]
++        versions={i:d['version'] for i,d in self.snapshots.items()}
++        cache=('group-return-v1',owner,data['version'],data['digest'])
++        drone.group_best_image=(image,cache,versions)
++        deadline=drone.deadline_submission
++        deadline.image=image;deadline.cache=cache;deadline.remember(step,image)
++        drone.deadline_versions=versions.copy()
++        return image,cache,versions
+diff --git a/red_hooks.py b/red_hooks.py
+index 6d2eb32..e2dbc06 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -1,1088 +1,1119 @@
+-"""Attach the red inventory and scoring APIs to R295's search controller."""
+-import hashlib
+-import math
+-from collections import deque
+-
+-import cv2
+-import numpy as np
+-
+-from swarm_rescue.solutions.coverage_placement import CoveragePlacementDrone, marginal_coverage
+-from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
+-from swarm_rescue.solutions.pre_submit_scan import PreSubmitScan
+-from swarm_rescue.solutions.partial_map_submit import provisional_map
+-from swarm_rescue.solutions.greedy_mapping import MapMemory
+-from swarm_rescue.solutions.final_map_relay import FinalMaps
+-from swarm_rescue.solutions.fast_closeout import FastCloseout
+-from swarm_rescue.solutions.drop_departure import DropDeparture
+-from swarm_rescue.solutions.closeout_departure import CloseoutDeparture, DEPARTING, FORCING
+-from swarm_rescue.solutions.messenger_run import MessengerRun
+-from swarm_rescue.solutions.second_drop_site import SecondDropSite
+-from swarm_rescue.solutions.team_wall import TeamWall
+-from swarm_rescue.solutions.submission_renderer import SubmissionBearings
+-from swarm_rescue.solutions.final_map_reconnect import FinalMapReconnect
+-from swarm_rescue.solutions.fine_wall_coverage import FineWallCoverage
+-from swarm_rescue.solutions.lbbd_rescue import LBBDRescue
+-from swarm_rescue.solutions.placement_preferences import PlacementPreferences
+-from swarm_rescue.solutions.local_escape import LocalEscape
+-from swarm_rescue.solutions.blocked_prefix import BlockedPrefix
+-from swarm_rescue.solutions.search_reconnect import SearchReconnect
+-from swarm_rescue.solutions.escape_exit_route import active_shortcut_guard, choose_exit, shortcut_allowed
+-from swarm_rescue.solutions.two_stage_exploration import SearchTask
+-
+-
+-def _map_cache_digest(owner, version, estimate, packed):
+-    header = f"{owner}:{version}:{estimate}:".encode("ascii")
+-    return hashlib.sha256(header + packed).hexdigest()
+-
+-
+-def cached_eligible(step, sent, received):
+-    return 0 <= received-sent <= 480 and 0 <= step-received <= 240
+-
+-def local_score(bitmap, hits):
+-    # Assess predicted walls only against stable lidar evidence in the same frame.
+-    # A one-cell (two-pixel) tolerance allows raster quantization.
+-    k=np.ones((3,3), np.uint8)
+-    hit_band=cv2.dilate(hits.astype(np.uint8),k)>0
+-    map_band=cv2.dilate(bitmap.astype(np.uint8),k)>0
+-    precision=np.count_nonzero(bitmap & hit_band)/max(1,np.count_nonzero(bitmap))
+-    recall=np.count_nonzero(hits & map_band)/max(1,np.count_nonzero(hits))
+-    dice=2*precision*recall/max(1e-12,precision+recall)
+-    return dict(precision=precision,recall=recall,score=dice)
+-
+-
+-def _live_prefix_open(pose, point, hits):
+-    delta = np.asarray(point, dtype=float) - pose
+-    length = np.linalg.norm(delta)
+-    if length <= 1e-6:
+-        return True
+-    axis = delta / length
+-    along = hits @ axis
+-    side = np.abs(hits[:, 0] * axis[1] - hits[:, 1] * axis[0])
+-    return not np.any((along > 0.) & (along < 26.) & (side < 23.))
+-
+-
+-class RedHooks(LBBDRescue):
+-    mapping_time_search = True
+-    _sync_placement = CoveragePlacementDrone._sync_placement
+-    _all_inventory_empty = CoveragePlacementDrone._all_inventory_empty
+-    _known_bomb_positions = CoveragePlacementDrone._known_bomb_positions
+-    _placement_spacing = CoveragePlacementDrone._placement_spacing
+-
+-    def __init__(self, **kwargs):
+-        super().__init__(**kwargs)
+-        self.team_size = self.limits.number_drones
+-        self.limit = self.limits.max_timestep_limit
+-        self.walltime_limit = self.limits.max_walltime_limit
+-        self.memory = MapMemory(*map(int, self.size_area))
+-        self.red_shadow_map = self.memory
+-        self.submission_bearings = SubmissionBearings(self.memory.width,self.memory.height)
+-        self.fine_wall_coverage = FineWallCoverage(self.memory, int(self.identifier), self.team_size)
+-        self.wall_source_packet = None
+-        self.blast_radius = round(.12 * min(self.size_area))
+-        self.initial_inventory = self.previous_inventory = self.pending_drop = None
+-        self.placement_goal = self.coverage = None
+-        self.last_coverage_step = self.last_attempt_step = -100
+-        self.drop_records = {}
+-        self.drop_hints = ()
+-        self.drop_hint_revision = -1
+-        self.team_exchange_audit = []
+-        self.grid.capture_scan_cells = True
+-        self.peer_scan_progress = {}
+-        self.own_scan_progress = deque(maxlen=8)
+-        self.own_scan_step = -1
+-        self.overlap_audit = []
+-        self.midflight_last_task = None
+-        self.midflight_review_audit = []
+-        self.midflight_peer_sweep = {}
+-        self.inventory_records = {}
+-        self.submitted = False
+-        self.red_packet = None
+-        self.final_maps = FinalMaps(int(self.identifier), self.team_size)
+-        self.fast_closeout = FastCloseout(self.identifier,self.team_size)
+-        self.drop_departure = DropDeparture()
+-        self.closeout = CloseoutDeparture()
+-        self.messenger = MessengerRun()
+-        self.second_drop = SecondDropSite()
+-        self.team_wall = TeamWall()
+-        self.final_reconnect = FinalMapReconnect()
+-        self.final_submission_versions = {}
+-        self.deadline_versions = {}
+-        self.prepared_map = None
+-        self.received_maps = {}
+-        self.cache_received_steps = {}
+-        self.map_cache_acks = {}
+-        self.last_map_offer = -45
+-        self.map_cache_audit = []
+-        self.submitted_cache = None
+-        self.relay_cache = None
+-        self.relay_attempts = 0
+-        self.last_relay_attempt = -45
+-        self.relay_audit = []
+-        self.map_bids = {}
+-        self.own_sent_bids = deque(maxlen=16)
+-        self.last_eligible_bid_comparison = {}
+-        self.submission_priority_audit = None
+-        self.deadline_submission = DeadlineSubmission()
+-        self.pre_submit_scan = PreSubmitScan()
+-        self.deadline_submission_event = None
+-        self.map_quality = None
+-        self.submission_elected_rank = None
+-        self.submission_wait_started = None
+-        self.submission_wait_for = None
+-        self.map_revision = {}
+-        self.last_confirmed_drop_step = None
+-        self.red_submission_step = None
+-        self.local_check_task = None
+-        self.local_check_until = 0
+-        self.local_check_audit = []
+-        self.recovery_audit = []
+-        self.sector_recovery_audit = []
+-        self.empty_recovery_audit = []
+-        self.progress_odometry = deque(maxlen=15)
+-        self.progress_odometry_step = None
+-        self.progress_veto_audit = []
+-        self.first_ready_to_submit_step = None
+-        self.placement = PlacementPreferences()
+-        self.local_escape = LocalEscape()
+-        self.blocked_prefix = BlockedPrefix()
+-        self.search_reconnect = SearchReconnect()
+-
+-    # Red aircraft place bombs. The inherited rescue dispatcher would
+-    # treat those same bombs as pickup targets once they appear.
+-    def assign_early(self, hits):
+-        return
+-
+-    def assign_local(self, hits=()):
+-        return
+-
+-    def coordinate(self):
+-        return
+-
+-    def receive(self):
+-        super().receive()
+-        for _, message in self.communicator.received_messages:
+-            if not isinstance(message, dict) or message.get("kind") != "two-stage":
+-                continue
+-            self.search_reconnect.record_contact(self)
+-            self.pre_submit_scan.on_message(int(self.elapsed_timestep))
+-            self._receive_team_coordination(message, int(self.elapsed_timestep))
+-            self.placement.receive(self, message)
+-            self.placement.branch_exit.receive(self, message)
+-            self.placement.local_exit.receive(self, message)
+-            self.placement.deep.passages.receive(self, message["id"], message)
+-            self._receive_scan_progress(message)
+-            self.fast_closeout.receive(self,message)
+-            self.team_wall.receive(self,message)
+-            self.submission_bearings.receive(message['id'],message.get('red_submission_bearings'))
+-            bid = message.get("red_map_bid")
+-            sender = message["id"]
+-            if (type(sender) is int and 0 <= sender < self.team_size
+-                    and isinstance(bid, tuple) and len(bid) == 3):
+-                stamp, score, ready = bid
+-                if (type(stamp) is int and 0 <= stamp <= int(self.elapsed_timestep)
+-                        and type(score) is int and 0 <= score <= 10000 and type(ready) is bool
+-                        and stamp > self.map_bids.get(sender, (-1, 0, False))[0]):
+-                    self.map_bids[sender] = bid
+-                    # Compare estimates from the same transmission step. Once
+-                    # separated, a new local score must not change that ordering.
+-                    if ready and stamp < DeadlineSubmission.window_start(self.limit):
+-                        own = next((sent for sent in reversed(self.own_sent_bids)
+-                                    if sent[0] == stamp and sent[2]), None)
+-                        if own is not None:
+-                            self.last_eligible_bid_comparison[sender] = stamp, score, own[1]
+-            self._receive_cached_map(sender, message, int(self.elapsed_timestep))
+-            self.final_maps.receive(sender, int(self.elapsed_timestep),
+-                                    message.get("red_final_have"), message.get("red_final_map"))
+-            self.final_reconnect.record(self, message, int(self.elapsed_timestep))
+-            packet = message.get("red_map")
+-            owner = message["id"]
+-            if packet is not None and packet[0] > self.map_revision.get(owner, -1):
+-                self.memory.merge(packet[1])
+-                self.fine_wall_coverage.merge_direct(owner, message.get("red_wall_sources"))
+-                self.map_revision[owner] = packet[0]
+-
+-    def define_message_for_all(self):
+-        message = super().define_message_for_all()
+-        if message is None:
+-            return None
+-        step = int(self.elapsed_timestep)
+-        bid = self._own_map_bid(step)
+-        if bid is not None and bid[2] and step < DeadlineSubmission.window_start(self.limit):
+-            self.own_sent_bids.append(bid)
+-        offer = self._cached_map_offer(step)
+-        verified_drops = {k:p for k,p in self.drop_records.items()
+-                          if k not in self.placement.unlocalized_drops}
+-        return dict(message, red_map_offer=offer, red_map_relay=self._relay_map_offer(step),
+-                    red_turns=tuple(self.placement.local_turns),
+-                    red_branch_claim=self.placement.branch_exit.claim,
+-                    red_local_exit=self.placement.local_exit.packet(self, step),
+-                    red_fast_closeout=self.fast_closeout.packet(step),
+-                    red_wall_reservation=self.second_drop.packet(step) or self.team_wall.packet(step),
+-                    red_submission_bearings=self.submission_bearings.packet(step,self.red_packet[0] if self.red_packet is not None else None),
+-                    red_branch_acks=self.placement.branch_exit.acknowledgments(self, step),
+-                    red_passages=dict(self.placement.deep.passages.reports),
+-                    red_map_ack={owner: item[:3] for owner, item in self.received_maps.items()},
+-                    red_inventory=dict(self.inventory_records),
+-                    direct_scan_progress=self._advertise_scan_progress(step),
+-                    direct_latest_sweep=self.own_scan_progress[-1] if self.own_scan_progress else None,
+-                    red_drops=verified_drops, red_map=self.red_packet,
+-                    red_wall_sources=self.wall_source_packet,
+-                    drop_hints=(self.drop_hint_revision, self.drop_hints),
+-                     red_final_have=self.final_maps.mask,
+-                     red_final_map=self.final_maps.outgoing(step), red_map_bid=bid)
+-
+-    def _receive_team_coordination(self, message, step):
+-        sender = message["id"]
+-        if type(sender) is not int or sender == self.identifier or not 0 <= sender < self.team_size:
+-            return
+-        for owner, record in message.get("red_inventory", {}).items():
+-            stamp, count = record
+-            previous = self.inventory_records.get(owner, (-1, None))
+-            if (0 <= owner < self.team_size and owner != self.identifier
+-                    and previous[0] < stamp <= step and 0 <= count <= self.initial_inventory
+-                    and (previous[1] is None or count <= previous[1])):
+-                self.inventory_records[owner] = record
+-                if count != previous[1]:
+-                    self.team_exchange_audit.append(("stock", step, sender, owner, count))
+-        for key, point in message.get("red_drops", {}).items():
+-            owner, ordinal = key
+-            if (key not in self.drop_records and owner != self.identifier
+-                    and 0 <= owner < self.team_size and 1 <= ordinal <= self.initial_inventory
+-                    and self._inside_team_point(point)):
+-                self.drop_records[key] = np.asarray(point, dtype=float)
+-                self.last_coverage_step = -100
+-                self.team_exchange_audit.append(("drop", step, sender, owner, ordinal))
+-        hints = message.get("drop_hints")
+-        if self.identifier != 0 and hints is not None:
+-            stamp, points = hints
+-            if self.drop_hint_revision < stamp <= step and len(points) <= 2:
+-                if all(self._inside_team_point(point) and math.isfinite(gain) and gain > 0
+-                       for point, gain in points):
+-                    self.drop_hint_revision, self.drop_hints = stamp, points
+-                    self.team_exchange_audit.append(("hints", step, sender, stamp, len(points)))
+-
+-    def _inside_team_point(self, point):
+-        return (len(point) == 2 and all(math.isfinite(x) and abs(x) < limit / 2
+-                                       for x, limit in zip(point, self.size_area)))
+-
+-    def placement_gain_query(self, semantic):
+-        bombs = self._known_bomb_positions(semantic)
+-
+-        def query(point):
+-            return self.fine_wall_coverage.measure(self.memory, point, bombs, self.blast_radius,
+-                                                   step=self.elapsed_timestep)
+-
+-        return query
+-
+-    def _update_drop_hints(self, step, semantic):
+-        if (self.identifier != 0 or not self.grid.pose_fixed or self.frontier_egress.released is None
+-                or step % 60 or self.communicator_is_disabled()):
+-            return
+-        known_bombs = self._known_bomb_positions(semantic)
+-        coverage = marginal_coverage(self.memory, known_bombs, self.blast_radius)
+-        hints = []
+-        route_costs, _ = self.grid.tree(self.pose)
+-        walkable = self.grid.walkable()
+-        for cell, cost in sorted(route_costs.items(), key=lambda item: item[1]):
+-            if cost > 240:
+-                break
+-            point = tuple(self.grid.point(cell))
+-            if not (cost >= 20 and walkable[cell] and self._inside_team_point(point)):
+-                continue
+-            if self._placement_block(point, step, semantic, stationary=False) is not None:
+-                continue
+-            gain = float(coverage[self.memory.world_to_cell(point)])
+-            if gain >= .30:
+-                hints.append((gain, point))
+-        selected = []
+-        for gain, point in sorted(hints, reverse=True):
+-            if all(math.dist(point, old) >= 64 for old, _ in selected):
+-                selected.append((point, round(gain, 4)))
+-                if len(selected) == 2:
+-                    break
+-        self.drop_hints = tuple(selected)
+-        self.drop_hint_revision = step
+-        if selected:
+-            self.team_exchange_audit.append(("hint_offer", step, self.drop_hints))
+-
+-    def _advertise_scan_progress(self, step):
+-        # The scan mask contains current local ray hits on both new and revisited cells.
+-        if (self.frontier_egress.released is None or not self.grid.pose_fixed or
+-                self.search_task is None or self.search_paused or self.carrying or self.queue or
+-                self.goal != self.search_task.point or step < self.recovery_until):
+-            self.own_scan_progress.clear()
+-            return None
+-        if (step != self.own_scan_step and step % 5 == self.identifier % 5
+-                and self.semantic_values() is not None and self.lidar_values() is not None
+-                and self.grid.last_scan_cells):
+-            self.own_scan_progress.append((step, self.grid.last_scan_cells))
+-            self.own_scan_step = step
+-        if not self.own_scan_progress or step - self.own_scan_progress[-1][0] > 12:
+-            return None
+-        cells = frozenset(cell for stamp, packet in self.own_scan_progress if step - stamp <= 40 for cell in packet)
+-        return self.own_scan_progress[-1][0], self.search_task.started, cells
+-
+-    def _receive_scan_progress(self, message):
+-        sender = message["id"]
+-        if sender == self.identifier:
+-            return
+-        proof = message.get("direct_scan_progress")
+-        own_state = next((state for state in message["states"] if state["id"] == sender), None)
+-        if (proof is None or own_state is None or own_state["search"] is None or
+-                proof[1] != own_state["search"][0] or not 0 <= own_state["step"] - proof[0] <= 12):
+-            self.peer_scan_progress.pop(sender, None)
+-        else:
+-            self.peer_scan_progress[sender] = proof
+-        sweep = message.get('direct_latest_sweep')
+-        if (proof is not None and sender in self.peer_scan_progress and sweep is not None and
+-                sweep[0] == proof[0] and own_state['step'] >= sweep[0]):
+-            self.midflight_peer_sweep[sender] = (sweep[0], proof[1], frozenset(sweep[1]))
+-        else:
+-            self.midflight_peer_sweep.pop(sender, None)
+-
+-    def _rank_redundant_search(self, assigned, blocks, gain, costs, claims):
+-        step = int(self.elapsed_timestep)
+-        sweeps = {peer: proof[2] for peer, proof in self.peer_scan_progress.items()
+-                  if peer in claims and claims[peer][0] == proof[1] and 0 <= step - proof[0] <= 12}
+-        ranks = {point: self._mapping_search_rank(blocks[point], gain, costs[self.grid.cell(point)], point)
+-                 for point in assigned}
+-        original = min(ranks, key=ranks.get)
+-        if not sweeps or len(ranks) < 2 or not self.grid.pose_fixed or self.communicator_is_disabled():
+-            return original
+-        footprint = blocks[original]
+-        close = self.grid.close_scan_cells()
+-        settled = {c for c in footprint if self.grid.evidence[c] < 0 and self.grid.searched[c] > int(close[c])}
+-        overlaps = [(peer, len(settled & sweep)) for peer, sweep in sweeps.items()]
+-        peer, duplicate = max(overlaps, key=lambda item: item[1])
+-        selected, tested = original, []
+-        original_new = None
+-        if duplicate >= 2 and 2 * duplicate >= len(footprint):
+-            original_new = self._frontier_novel_cells(original, close)
+-            hits = self._tail_live_hits()
+-            budget = costs[self.grid.cell(original)] + 40
+-            deadline_safe = step + self.SEARCH_REVIEW < self.limit and self.elapsed_walltime + 5 < self.walltime_limit
+-            if hits is not None and deadline_safe:
+-                for point in sorted(ranks, key=ranks.get):
+-                    if point == original or costs[self.grid.cell(point)] > budget:
+-                        continue
+-                    new = self._frontier_novel_cells(point, close)
+-                    if new < original_new + 2:
+-                        tested.append((point, new, 'novelty'))
+-                        continue
+-                    route = self.search_route(point)
+-                    if not self._local_check_route(point, route, hits):
+-                        tested.append((point, new, 'route'))
+-                        continue
+-                    tested.append((point, new, 'selected'))
+-                    selected = point
+-                    break
+-        self.overlap_audit.append((step, tuple(sorted(sweeps)), len(ranks), original, selected,
+-                                   (peer, duplicate, len(footprint), original_new, tested)))
+-        return selected
+-
+-    def _frontier_novel_cells(self, point, close):
+-        # A cell counts only if the approach-side line stays inside known free space.
+-        grid = self.grid
+-        r, c = grid.cell(point)
+-        count = 0
+-        for row in range(max(0, r - 4), min(grid.evidence.shape[0], r + 5)):
+-            for col in range(max(0, c - 4), min(grid.evidence.shape[1], c + 5)):
+-                cell = row, col
+-                evidence = grid.evidence[cell]
+-                if evidence >= 3 or grid.blocked[cell] or (evidence < 0 and grid.searched[cell] > int(close[cell])):
+-                    continue
+-                end = grid.point(cell)
+-                distance = math.dist(point, end)
+-                if distance > 75:
+-                    continue
+-                line = np.linspace(point, end, max(2, math.ceil(distance / 10) + 1))
+-                if all(grid.evidence[inner] < 0 for sample in line[:-1]
+-                       if (inner := grid.cell(sample)) != cell):
+-                    count += 1
+-        return count
+-
+-    def _review_transit_frontier(self, step):
+-        task = self.search_task
+-        if (task is None or task is self.midflight_last_task or step % 3 != self.identifier % 3
+-                or not 5 <= step - task.started <= 70 or not self.route or self.goal != task.point
+-                or self.search_paused or task.handoff is not None or task.return_check_until
+-                or self.local_check_task == task.started or self.carrying or self.queue
+-                or self.pending_drop is not None or self.gap_probe is not None or self.survey_run is not None
+-                or step < self.recovery_until or self.frontier_egress.released is None
+-                or not self.grid.pose_fixed or self.communicator_is_disabled()
+-                or step >= .72 * self.limit or self.elapsed_walltime >= .74 * self.walltime_limit
+-                or self.reached_search_point(task.point)):
+-            return
+-        # Proof must be from a fresh actual scan of the goal's immediate footprint,
+-        # while this very goal still has an active route. No intention is treated as observation.
+-        original = task.point
+-        centre = self.grid.cell(original)
+-        peers = self.fresh_states(age=12)
+-        evidence = []
+-        for peer, (stamp, started, cells) in self.midflight_peer_sweep.items():
+-            state = peers.get(peer)
+-            if (state is None or state['search'] is None or state['search'][0] != started
+-                    or not task.started < stamp <= step or step - stamp > 8):
+-                continue
+-            adjacent = {cell for cell in task.cells.intersection(cells)
+-                        if max(abs(cell[0]-centre[0]), abs(cell[1]-centre[1])) <= 1}
+-            if centre in adjacent or len(adjacent) >= 2:
+-                evidence.append((peer, stamp, len(adjacent)))
+-        if not evidence:
+-            return
+-        self.midflight_last_task = task
+-        review = dict(step=step, task=task.started, original=original, evidence=evidence,
+-                      selected=None, tested=[])
+-        self.midflight_review_audit.append(review)
+-        hits = self._tail_live_hits()
+-        if hits is None:
+-            return
+-        close = self.grid.close_scan_cells()
+-        original_new = self._frontier_novel_cells(original, close)
+-        review['original_new'] = original_new
+-        costs, work, _ = self.grid.search_work(self.pose)
+-        for state in peers.values():
+-            for cell in state.get('opening_cells', ()):
+-                work[cell] = False
+-        for cell in task.cells:
+-            work[cell] = False
+-        cap = min(140., self.search_distance(original) + 40.)
+-        walkable = self.grid.walkable()
+-        nearby = sorted((cost, cell) for cell, cost in costs.items()
+-                        if cost <= cap and work[cell] and walkable[cell]
+-                        and self.grid.clearance[cell] >= 23 and self.grid.evidence[cell] < 0)
+-        for cost, cell in nearby[:14]:
+-            point = tuple(self.grid.point(cell))
+-            if self.reached_search_point(point):
+-                continue
+-            new = self._frontier_novel_cells(point, close)
+-            if new < original_new + 2:
+-                review['tested'].append((point, new, 'novelty'))
+-                continue
+-            route = self.search_route(point)
+-            if not self._local_check_route(point, route, hits):
+-                review['tested'].append((point, new, 'route'))
+-                continue
+-            length = math.dist(self.pose, route[0]) + sum(math.dist(a, b) for a,b in zip(route,route[1:]))
+-            if length > cap:
+-                review['tested'].append((point, new, 'distance'))
+-                continue
+-            review['tested'].append((point, new, 'selected'))
+-            cells = frozenset(c for c in costs if work[c] and
+-                              max(abs(c[0]-cell[0]), abs(c[1]-cell[1])) <= 1)
+-            replacement = SearchTask(cells, point, step, self.search_steps, self.grid.local_coverage(cells))
+-            self.search_task = self.midflight_last_task = replacement
+-            self.goal, self.route = point, list(route)
+-            replacement.remaining = length
+-            replacement.motion = tuple(self.motion_pose if self.motion_pose is not None else self.pose)
+-            self.next_explore = step + self.SEARCH_REVIEW
+-            review.update(selected=point, new_cells=new, route_length=length)
+-            return
+-
+-    def _render_submission(self, memory=None):
+-        if memory is None:
+-            memory = self.memory
+-        return self.submission_bearings.render(memory)
+-
+-    def _submission_image(self, step):
+-        if self.final_maps.snapshots:
+-            memory, versions = self.final_maps.fuse(self.memory)
+-            image = self._render_submission(memory)
+-            if image.any():
+-                return image, None, versions
+-        image = self._render_submission()
+-        selected = self._select_submission_cache(step, image)
+-        if selected is None:
+-            return image, None, {}
+-        owner, (version, estimate, digest, packed) = selected
+-        shape = self.memory.height, self.memory.width
+-        image = np.unpackbits(np.frombuffer(packed, np.uint8), count=math.prod(shape)).reshape(shape)
+-        return image, (owner, version, estimate, digest), {}
+-
+-    def _prepare_map_cache(self, step):
+-        if (self.previous_inventory != 0 or self.pending_drop is not None
+-                or self.map_quality is None or self.limit - step <= 48
+-                or self.walltime_limit - self.elapsed_walltime <= 3.
+-                or (self.prepared_map is not None and step - self.prepared_map[0] < 360)):
+-            return
+-        image = self._render_submission()
+-        if image.any():
+-            packed = np.packbits(image.reshape(-1) != 0).tobytes()
+-            digest = _map_cache_digest(int(self.identifier), step, self.map_quality, packed)
+-            self.prepared_map = (step, self.map_quality, digest, packed)
+-            return image
+-        return None
+-
+-    def _cached_map_offer(self, step):
+-        prepared = self.prepared_map
+-        if (prepared is None or step - prepared[0] > 480
+-                or step - self.last_map_offer < 45 or self.communicator_is_disabled()):
+-            return None
+-        if not any(0 <= step - stamp <= 64 and self.map_cache_acks.get(peer) != prepared[:3]
+-                   for peer, (stamp, _, _) in self.map_bids.items()):
+-            # A receiving aircraft can still carry inventory. A recent actual
+-            # map message is enough as a contact witness.
+-            if not any(0 <= step - stamp <= 64 and self.map_cache_acks.get(peer) != prepared[:3]
+-                       for peer, stamp in self.map_revision.items()):
+-                return None
+-        self.last_map_offer = step
+-        return prepared
+-
+-    def _relay_map_offer(self, step):
+-        if (self.identifier != 2 or self.limit - step > 720 or self.communicator_is_disabled()
+-                or self.relay_attempts >= 3 or step - self.last_relay_attempt < 45):
+-            return None
+-        # A recently received bid from the destination witnesses a contact.
+-        peer = self.map_bids.get(1)
+-        if peer is None or not 0 <= step - peer[0] <= 64:
+-            return None
+-        offer = self.received_maps.get(0)
+-        if offer is None or not 0 <= step - offer[0] <= 480:
+-            return None
+-        self.relay_cache = offer
+-        self.relay_attempts += 1
+-        self.last_relay_attempt = step
+-        self.relay_audit.append(("sent", step, 0, *offer[:3]))
+-        return 1, 0, offer
+-
+-    def _receive_cached_map(self, sender, message, step):
+-        if type(sender) is not int or sender == self.identifier or not 0 <= sender < self.team_size:
+-            return
+-        ack = message.get("red_map_ack")
+-        if (self.prepared_map is not None and isinstance(ack, dict)
+-                and ack.get(int(self.identifier)) == self.prepared_map[:3]):
+-            self.map_cache_acks[sender] = self.prepared_map[:3]
+-        if (self.identifier == 2 and sender == 1 and self.relay_cache is not None
+-                and isinstance(ack, dict) and ack.get(0) == self.relay_cache[:3]
+-                and self.received_maps.get(0) == self.relay_cache):
+-            self.relay_attempts = 3
+-        offer = message.get("red_map_offer")
+-        self._store_cached_map(sender, offer, step)
+-        relay = message.get("red_map_relay")
+-        if (self.identifier == 1 and sender == 2 and isinstance(relay, tuple)
+-                and len(relay) == 3 and relay[:2] == (1, 0)
+-                and self._store_cached_map(0, relay[2], step)):
+-            self.relay_audit.append(("received", step, 0, *relay[2][:3]))
+-
+-    def _store_cached_map(self, sender, offer, step):
+-        if not isinstance(offer, tuple) or len(offer) != 4:
+-            return
+-        version, estimate, digest, packed = offer
+-        size = self.memory.height * self.memory.width
+-        old = self.received_maps.get(sender)
+-        if (type(version) is not int or not 0 <= version <= step or step - version > 480
+-                or (old is not None and version <= old[0])
+-                or type(estimate) is not int or not 0 <= estimate <= 10000
+-                or type(digest) is not str or type(packed) is not bytes
+-                or len(packed) != (size + 7) // 8 or not any(packed)
+-                or _map_cache_digest(sender, version, estimate, packed) != digest):
+-            return
+-        self.received_maps[sender] = offer
+-        self.cache_received_steps[sender] = step
+-        self.map_cache_audit.append((step, sender, version, estimate, digest))
+-        return True
+-
+-    def _select_submission_cache(self, step, own_image):
+-        hits = self.memory.hits >= 3
+-        if not hits.any():
+-            return None
+-        shape = (self.memory.height, self.memory.width)
+-        stride = self.memory.FINE
+-        own_score = local_score(own_image[::stride, ::stride] != 0, hits)["score"]
+-        best = None
+-        best_rank = (own_score, 0, 0)
+-        for sender, item in self.received_maps.items():
+-            if not cached_eligible(step, item[0], self.cache_received_steps[sender]):
+-                continue
+-            image = np.unpackbits(np.frombuffer(item[3],np.uint8),
+-                                  count=math.prod(shape)).reshape(shape)
+-            rank = (local_score(image[::stride, ::stride] != 0, hits)["score"], item[0], -sender)
+-            if rank[0] > own_score and rank > best_rank:
+-                best_rank = rank
+-                best = sender, item
+-        return best
+-
+-    def _own_map_bid(self, step):
+-        if step >= DeadlineSubmission.window_start(self.limit):
+-            score = self.deadline_submission.score
+-            return (step, score, True) if score is not None and self.previous_inventory == 0 and self.pending_drop is None else None
+-        if self.map_quality is None or self.previous_inventory != 0 or self.pending_drop is not None:
+-            return None
+-        return step, self.final_maps.rank(self.map_quality), self.first_ready_to_submit_step is not None
+-
+-    def _prefer_own_submission(self, step):
+-        owner = int(self.identifier)
+-        own_bid = self._own_map_bid(step)
+-        if own_bid is None:
+-            return False
+-        own = (own_bid[1], -owner)
+-        fresh = [(score, -peer, ready) for peer, (stamp, score, ready) in self.map_bids.items()
+-                 if 0 <= step - stamp <= 32]
+-        if any(ready and (score, peer) > own for score, peer, ready in fresh):
+-            return False
+-        best = max([(score, peer) for score, peer, _ in fresh] + [own])
+-        # When eligible peers separate, give a verified higher-ranked peer
+-        # one limited chance. The absolute window prevents repeated elections.
+-        if best == own:
+-            known_higher = [(other_score,-peer,stamp,own_score)
+-                            for peer,(stamp,other_score,own_score) in self.last_eligible_bid_comparison.items()
+-                            if step-stamp > 32 and self.map_bids[peer][0] == stamp
+-                            and (other_score,-peer) > (own_score,-owner)]
+-            if known_higher and step < self.pre_submit_scan.finish(self) + 48 and self.walltime_limit-self.elapsed_walltime > 1.5:
+-                if self.submission_priority_audit is None:
+-                    score, peer, stamp, own_score = max(known_higher)
+-                    self.submission_priority_audit = dict(step=step, preferred=-peer, agreed_step=stamp,
+-                                                          self_estimate=own_score, peer_estimate=score)
+-                return False
+-            return True
+-        # Keep broadcasting the verified inventory while the better aircraft
+-        # has a bounded opportunity to receive it and become eligible.
+-        if self.submission_wait_started is None:
+-            self.submission_wait_started = step
+-            self.submission_wait_for = -best[1]
+-        return (step - self.submission_wait_started >= 48 or self.limit - step <= 4
+-                or self.walltime_limit - self.elapsed_walltime <= 1.5)
+-
+-    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23.):
+-        if not self.grid.pose_fixed or not self.search_roaming.departed:
+-            return "position"
+-        cell = self.grid.cell(point)
+-        if self.grid.evidence[cell] >= 0 or self.grid.clearance[cell] < minimum_clearance:
+-            return "clearance"
+-        if stationary:
+-            odom = self.odometer_values()
+-            if odom is None or not np.isfinite(odom[0]) or odom[0] > 2.5:
+-                return "speed"
+-        for hit in semantic:
+-            if getattr(hit.entity_type, "name", "") == "DISPOSAL_CENTER":
+-                angle = self.heading + hit.angle
+-                location = self.pose + hit.distance * np.array([math.cos(angle), math.sin(angle)])
+-                if math.dist(point, location) < 120:
+-                    return "disposal"
+-        if self.home is not None and math.dist(point, self.home) < 120:
+-            return "disposal"
+-        spacing = max(32., self._placement_spacing(step))
+-        if any(math.dist(point, bomb) < spacing for bomb in self._known_bomb_positions(semantic)):
+-            return "spacing"
+-        return None
+-
+-    def _tail_live_hits(self):
+-        ranges = self.lidar_values()
+-        if ranges is None:
+-            return None
+-        ranges = np.asarray(ranges, dtype=float)
+-        valid = np.isfinite(ranges) & (ranges > 0.)
+-        if not valid.any():
+-            return None
+-        bearings = np.asarray(self.lidar_rays_angles())[valid] + self.heading
+-        return ranges[valid, None] * np.column_stack((np.cos(bearings), np.sin(bearings)))
+-
+-    def waypoint(self):
+-        point = super().waypoint()
+-        point = choose_exit(self, self.local_escape, point)
+-        if active_shortcut_guard(self, self.local_escape) is not None:
+-            return point
+-        point = self.blocked_prefix.update(self, point)
+-        point = self.search_reconnect.waypoint(self,self.blocked_prefix,point)
+-        return self.final_reconnect.waypoint(self, point)
+-
+-    def _search_waypoint_reached(self, point):
+-        view = self.blocked_prefix.view
+-        reconnect = self.search_reconnect.task
+-        if reconnect is not None and reconnect is self.search_task and tuple(point)==reconnect.point:
+-            return math.dist(self.pose,point) <= 10.
+-        if view.task is not None and view.active(self,self.search_task) and tuple(point) == view.task.point:
+-            return math.dist(self.pose,point) <= 10.
+-        if self.blocked_prefix.active(self) and tuple(point) == self.blocked_prefix.first:
+-            return False
+-        guard = active_shortcut_guard(self, self.local_escape)
+-        if guard is not None and tuple(point) == guard[1]:
+-            return False
+-        return self.reached_search_point(point)
+-
+-    def _search_shortcut_allowed(self, point):
+-        view = self.blocked_prefix.view
+-        return (shortcut_allowed(self, self.local_escape, point)
+-                and self.blocked_prefix.allows_waypoint(self, point)
+-                and bool(view.guarded_route(self,[point],self.blocked_prefix.outside)))
+-
+-    def _tail_prefix(self, route):
+-        return next((p for p in route if not self.reached_search_point(p)), None)
+-
+-    def _progress_pose_changed(self, target, step):
+-        changed = super()._progress_pose_changed(target, step)
+-        if (not changed or self.progress_pose is None or len(self.progress_odometry) != 15
+-                or math.dist(self.pose, target) < 20):
+-            return changed
+-        dx = sum(v[0] for v in self.progress_odometry)
+-        dy = sum(v[1] for v in self.progress_odometry)
+-        if math.hypot(dx, dy) >= 2:
+-            return True
+-        self.progress_veto_audit.append((step, tuple(self.pose)))
+-        return False
+-
+-    def _observe_progress_motion(self):
+-        step = int(self.elapsed_timestep)
+-        if self.progress_odometry_step == step:
+-            return
+-        if self.progress_odometry_step != step - 1:
+-            self.progress_odometry.clear()
+-        self.progress_odometry_step = step
+-        if (not self.grid.pose_fixed or self.frontier_egress.released is None or self.gap_probe is not None
+-                or self.mode not in ("explore", "search") or not self.carried_bombs_count()):
+-            self.progress_odometry.clear()
+-            return
+-        odom = self.odometer_values()
+-        if odom is None or not np.all(np.isfinite(odom)):
+-            self.progress_odometry.clear()
+-            return
+-        travel, relative, turn = map(float, odom)
+-        yaw = self.heading - turn + relative
+-        self.progress_odometry.append((travel * math.cos(yaw), travel * math.sin(yaw)))
+-
+-    def recover(self, goal, ranges, force=False):
+-        self._observe_progress_motion()
+-        previous_until = self.recovery_until
+-        target = super().recover(goal, ranges, force=force)
+-        if (self.recovery_until == previous_until or self.frontier_egress.released is None
+-                or self.mode not in ("search", "explore") or self.gap_probe is not None
+-                or not self.carried_bombs_count()):
+-            return target
+-        hits = self._tail_live_hits()
+-        if hits is None:
+-            return target
+-        if math.dist(self.pose, target) >= 16 and _live_prefix_open(self.pose, target, hits):
+-            return target
+-        relative = np.asarray(ranges, dtype=float)
+-        bearings = np.asarray(self.lidar_rays_angles()) + self.heading
+-        finite = np.isfinite(relative) & (relative >= 62)
+-        desired = math.atan2(goal[1] - self.pose[1], goal[0] - self.pose[0])
+-        score = np.where(finite, relative + 35 * np.cos(bearings - desired), -np.inf)
+-        primary = [bearings[index] for index in np.argsort(-score)[:24] if finite[index]]
+-        candidates = [(angle, False) for angle in primary]
+-        if self.grid.pose_fixed:
+-            # Test a small fixed set only after every inherited ray choice
+-            # fails. The observed grid and full live tube still veto motion.
+-            sectors = desired + np.array([0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 6,
+-                                           -6, 7, -7, 8, -8, 9, -9, 10, -10, 11, -11, 12]) * (math.pi / 12)
+-            candidates.extend((angle, True) for angle in sectors)
+-        for angle, sector in candidates:
+-            if sector:
+-                aligned = np.cos(bearings - angle) >= math.cos(math.pi / 24)
+-                if not np.any(finite & aligned):
+-                    continue
+-            point = tuple(self.pose + 30 * np.array([math.cos(angle), math.sin(angle)]))
+-            axis = (np.asarray(point) - self.pose) / 30
+-            along = hits @ axis
+-            side = np.abs(hits[:, 0] * axis[1] - hits[:, 1] * axis[0])
+-            if np.any((along > 0) & (along <= 56) & (side < 23)):
+-                continue
+-            cells = {self.grid.cell(q) for q in np.linspace(self.pose, point, 16)}
+-            cells.discard(self.grid.cell(self.pose))
+-            if (not cells or any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23 for c in cells)
+-                    or not _live_prefix_open(self.pose, point, hits)
+-                    or not self.search_roaming.allows(self.pose, point, [point])):
+-                continue
+-            if sector:
+-                self.sector_recovery_audit.append((int(self.elapsed_timestep), tuple(self.pose), point))
+-            self.recovery_point = point
+-            self.recovery_audit.append((int(self.elapsed_timestep), tuple(self.pose), tuple(target), point))
+-            return point
+-        if self.grid.pose_fixed and math.dist(self.pose, target) < 1e-6:
+-            step = int(self.elapsed_timestep)
+-            old_next = tuple(self.route[0]) if self.route else None
+-            self.empty_recovery_audit.append((step, tuple(self.pose), old_next))
+-            self.recovery_until = previous_until
+-            self.next_explore = min(self.next_explore, step + 1)
+-            # Let the normal search replan on its next tick. This tick still
+-            # emits the original hold command and passes the live guard.
+-        return target
+-
+-    def _local_check_route(self, point, route, hits):
+-        if not route or not self.search_roaming.allows(self.pose, point, route):
+-            return False
+-        length = math.dist(self.pose, route[0]) + sum(math.dist(a, b) for a, b in zip(route, route[1:]))
+-        if length > 140:
+-            return False
+-        here = self.grid.cell(self.pose)
+-        if any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23
+-               for c in map(self.grid.cell, route) if c != here):
+-            return False
+-        prefix = self._tail_prefix(route)
+-        return prefix is not None and _live_prefix_open(self.pose, prefix, hits)
+-
+-    def search_route(self, point):
+-        route = super().search_route(point)
+-        return self.blocked_prefix.view.guarded_route(self,route,self.blocked_prefix.outside)
+-
+-    def continue_search(self, task, costs, work, pending, resumed):
+-        view = self.blocked_prefix.view
+-        if task is self.search_reconnect.task:
+-            return self.search_reconnect.continue_task(self,self.blocked_prefix,task)
+-        if task is view.task:
+-            point = task.point
+-            if not view.active(self,task) or math.dist(self.pose,point) <= 10.:
+-                reached = math.dist(self.pose,point) <= 10.
+-                if reached:
+-                    view.observed = view.center
+-                self.blocked_prefix.audit.append((int(self.elapsed_timestep),"view_reached" if reached else "view_expired",view.center,point))
+-                view.task = None
+-                return "completed"
+-            here = self.grid.cell(self.pose)
+-            if (not self.route or any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23.
+-                                      for p in self.route[:3] if (c := self.grid.cell(p)) != here)):
+-                view.task = None
+-                return "unavailable"
+-            return None
+-        if self.route and not view.guarded_route(self,self.route,self.blocked_prefix.outside):
+-            self.route = []
+-            return "unavailable"
+-        result = super().continue_search(task, costs, work, pending, resumed)
+-        step = int(self.elapsed_timestep)
+-        active = self.local_check_task == task.started
+-        if active and (self.reached_search_point(task.point) or step >= self.local_check_until):
+-            return "completed"
+-        if result != "completed":
+-            return result
+-        if (self.frontier_egress.released is None or not self.grid.pose_fixed
+-                or self.gap_probe is not None or step < self.recovery_until
+-                or step >= .72 * self.limit or self.elapsed_walltime >= .74 * self.walltime_limit):
+-            return result
+-        hits = self._tail_live_hits()
+-        if hits is None:
+-            return result
+-        if active:
+-            return None if self._local_check_route(task.point, self.route, hits) else result
+-        if self.reached_search_point(task.point) or self.grid.cell(task.point) in costs:
+-            return result
+-        close = self.grid.close_scan_cells()
+-        if not any(self.grid.searched[c] > close[c] and self.grid.searched_here[c] <= close[c] for c in task.cells):
+-            return result
+-        candidates = []
+-        for cell, cost in costs.items():
+-            if cost > 140 or self.grid.evidence[cell] >= 0 or self.grid.clearance[cell] < 23:
+-                continue
+-            point = tuple(self.grid.point(cell))
+-            offset = math.dist(point, task.point)
+-            if offset <= 80 and math.dist(point, self.pose) > 28:
+-                candidates.append((offset, cost, point))
+-        for _, _, point in sorted(candidates)[:8]:
+-            route = list(self.search_route(point))
+-            if not self._local_check_route(point, route, hits):
+-                continue
+-            task.point = self.goal = point
+-            self.route = route
+-            self.local_check_task = task.started
+-            self.local_check_until = step + 2 * self.SEARCH_REVIEW
+-            self.local_check_audit.append((step, task.started, point, self.search_distance(point)))
+-            return None
+-        return result
+-
+-    def _force_deadline_submission(self, step):
+-        deadline = self.deadline_submission
+-        reason = deadline.fallback_reason(step, self.limit, self.elapsed_walltime, self.walltime_limit)
+-        if reason is None:
+-            return False
+-
+-        if deadline.image is not None:
+-            image, cache, versions = deadline.image, deadline.cache, self.deadline_versions.copy()
+-        elif deadline.backup_image is not None:
+-            image, cache, versions = deadline.backup_image, None, {}
+-        else:
+-            image, cache, versions = self._submission_image(step)
+-            if not image.any():
+-                return False
+-
+-        # Submission ends the SDK round before its next physics tick. Stock
+-        # has already been synchronized, so only completed drops count here.
+-        self.submit_exploration_map(image.astype(np.uint8, copy=False))
+-        self.submitted_cache = cache
+-        self.final_submission_versions = versions
+-        self.submission_elected_rank = deadline.score
+-        self.red_submission_step = step
+-        self.submitted = True
+-        self.deadline_submission_event = dict(
+-            step=step, fallback=reason, remaining_steps=self.limit-step,
+-            remaining_walltime=self.walltime_limit-self.elapsed_walltime,
+-            local_inventory=self.previous_inventory, team_confirmed=self._all_inventory_empty(),
+-            backup_step=deadline.backup_step if image is deadline.backup_image else None,
+-        )
+-        return True
+-
+-    def _submit_at_deadline(self, step):
+-        deadline = self.deadline_submission
+-        clear = self.previous_inventory == 0 and self.pending_drop is None
+-        if not clear:
+-            return
+-        refresh = (len(self.final_maps.snapshots) > len(self.deadline_versions)
+-                   and self.walltime_limit - self.elapsed_walltime > 3
+-                   and step % 4 == int(self.identifier) % 4)
+-        if deadline.score is None or refresh:
+-            image, cache, versions = self._submission_image(step)
+-            if not image.any():
+-                return
+-            deadline.image = image.astype(np.uint8)
+-            deadline.cache = cache
+-            self.deadline_versions = versions
+-            deadline.score = self.final_maps.rank(self.map_quality or 0)
+-        own = deadline.score, -int(self.identifier)
+-        peers = DeadlineSubmission.peer_ranks(step,self.limit,self.map_bids)
+-        if not DeadlineSubmission.submit_due(step,self.limit,own,peers):
+-            return
+-        self.submit_exploration_map(deadline.image)
+-        self.submitted_cache = deadline.cache
+-        self.final_submission_versions = self.deadline_versions.copy()
+-        self.submission_elected_rank = deadline.score
+-        self.red_submission_step = step
+-        self.submitted = True
+-        self.deadline_submission_event = dict(step=step,local_estimate=deadline.score,
+-            in_window_peer_estimates={-peer: score for score,peer in peers},
+-            slot=DeadlineSubmission.slot(self.limit,deadline.score),
+-            team_confirmed=self._all_inventory_empty())
+-
+-    def _submission_window_open(self, step):
+-        return step >= self.limit * 3 // 5 or self.elapsed_walltime >= .85 * self.walltime_limit
+-
+-    def control(self):
+-        step = int(self.elapsed_timestep)
+-        before = self.previous_inventory
+-        self._sync_placement(step)
+-        if before is not None and self.previous_inventory < before:
+-            self.last_confirmed_drop_step = step
+-        if self.submitted or self._force_deadline_submission(step):
+-            return CoveragePlacementDrone._empty_command()
+-        command = super().control()
+-        command["place_bomb"] = 0
+-        if self.pose is None:
+-            return command
+-
+-        # Final-window fallback: track every frame, and once the closeout state
+-        # machine takes over a stalled bomb-carrying drone, it owns the command
+-        # so the ordinary branches cannot override its deterministic departure.
+-        wall_left = self.walltime_limit - self.elapsed_walltime
+-        steps_left = self.limit - step
+-        self.closeout.tick(self, step, command, wall_left, steps_left)
+-        if self.closeout.state in (DEPARTING, FORCING):
+-            return command
+-
+-        # Dedicated messenger: once active it owns navigation so the ordinary
+-        # exploration/placement branches cannot override its tour.
+-        if self.messenger.tick(self, step, command, steps_left):
+-            return command
+-
+-        ranges = self.lidar_values()
+-        semantic = self.semantic_values() or ()
+-        if ranges is not None and step % 4 == 0:
+-            observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
+-            fixed = self.grid.pose_fixed and not self._odometry_only
+-            self.fine_wall_coverage.observe(observations, fixed)
+-            self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
+-                                             np.asarray(self.lidar_rays_angles()),semantic)
+-        refresh = self.pre_submit_scan.refresh_due(self,step)
+-        if refresh or step % 45 == self.identifier:
+-            self.red_packet = step, self.memory.packet()
+-            self.wall_source_packet = self.fine_wall_coverage.packet()
+-            if refresh:
+-                self.pre_submit_scan.refreshed.append(step)
+-            _, wall_evidence, _, _ = self.red_packet[1]
+-            # Lightweight version of the existing observed-area and stable-wall
+-            # estimate. Ground-truth map and official score are unavailable in flight.
+-            known = self.memory.free.mean()
+-            stable = min(1., np.count_nonzero(wall_evidence >= 3) / (.018 * self.memory.hits.size))
+-            self.map_quality = round(10000 * (.90 * known + .10 * stable))
+-            prepared_image = self._prepare_map_cache(step)
+-            deadline = self.deadline_submission
+-            if prepared_image is not None:
+-                deadline.remember(step, prepared_image)
+-            elif (deadline.backup_due(step) and self.walltime_limit - self.elapsed_walltime > 3.
+-                  and np.any(wall_evidence >= 3)):
+-                image = self._render_submission()
+-                if image.any():
+-                    deadline.remember(step, image)
+-        self._update_drop_hints(step, semantic)
+-        maneuvers = self.placement.maneuvers
+-        if self.previous_inventory or maneuvers.exit is not None or maneuvers.waiting_exit is not None:
+-            maneuvers.remember(self, step)
+-        if step >= self.placement._ordinary_start_step(self.limit) and self.search_roaming.departed:
+-            self.placement.local_exit.observe(self,step,ranges,semantic,self.placement.audit)
+-            if self.previous_inventory:
+-                self.placement.branch_exit.observe(self, self.placement.deep.passages, step, self.placement.audit)
+-
+-        first_drop = (before is not None and before==self.initial_inventory
+-                      and self.previous_inventory==before-1 and self.previous_inventory>0)
+-        self.drop_departure.update(self,step,first_drop)
+-        self.drop_departure.steer(self,command,step,ranges,semantic)
+-        self.second_drop.observe_route(self,step,ranges,semantic)
+-        if maneuvers.waiting_exit is not None or maneuvers.exit is not None:
+-            self.placement.finish_request(self, step)
+-            if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
+-                return command
+-        if self.fast_closeout.act(self,step,command,ranges,semantic):
+-            self.team_wall.reservation=None
+-            return command
+-        if self.drop_departure.controls_step==step:
+-            self.team_wall.reservation=None
+-            self.placement.finish_request(self,step)
+-            return command
+-        if maneuvers.approach is not None:
+-            self.placement.finish_request(self, step)
+-            if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
+-                return command
+-        state = self.second_drop.control(self,step,command,ranges,semantic)
+-        if state == "approach":
+-            self.team_wall.reservation = None
+-            self.placement.finish_request(self,step)
+-            return command
+-        if state != "ready" and self.team_wall.steer(self,command,step,ranges,semantic):
+-            self.local_escape.apply(self,command,step,ranges,semantic)
+-            return command
+-
+-        # Freeze the closing submission snapshot after this aircraft is empty.
+-        # R483's ordinary live map packets continue feeding its existing rules.
+-        if (self.previous_inventory == 0 and self.pending_drop is None
+-                and (step >= self.limit * 9 // 10 or self._all_inventory_empty()
+-                     and step >= self.pre_submit_scan.finish(self))):
+-            self.final_maps.freeze(step, self.memory)
+-        if step >= DeadlineSubmission.window_start(self.limit):
+-            self._submit_at_deadline(step)
+-            if self.submitted:
+-                return command
+-            if not self._all_inventory_empty():
+-                self.placement.update(self,command,step,ranges,semantic)
+-            self.local_escape.apply(self,command,step,ranges,semantic)
+-            return command
+-
+-        if self._all_inventory_empty():
+-            latest = max(stamp for stamp, _ in self.inventory_records.values() if stamp <= step)
+-            # Requests are processed on a physics tick. Empty inventory can
+-            # only be observed on a later tick, including the local last drop.
+-            if self.pending_drop is None and latest <= step:
+-                if self.first_ready_to_submit_step is None:
+-                    self.first_ready_to_submit_step = step
+-                if not self._submission_window_open(step):
+-                    return command
+-                if self.pre_submit_scan.waiting(self,step):
+-                    self.pre_submit_scan.record_wait(self,step)
+-                    return command
+-                self.pre_submit_scan.record_finish(self,step)
+-                if self.final_maps.waiting(step, DeadlineSubmission.window_start(self.limit),
+-                                           self.walltime_limit - self.elapsed_walltime):
+-                    return command
+-                if not self._prefer_own_submission(step):
+-                    return command
+-                if provisional_map(step, self.map_quality, self.map_revision,
+-                                   self.walltime_limit-self.elapsed_walltime):
+-                    return command
+-                image, cache, versions = self._submission_image(step)
+-                if image.any():
+-                    self.submit_exploration_map(image.astype(np.uint8))
+-                    self.submitted_cache = cache
+-                    self.final_submission_versions = versions
+-                    self.submission_elected_rank = self.final_maps.rank(self.map_quality or 0)
+-                    self.red_submission_step = step
+-                    self.submitted = True
+-        else:
+-            self.placement.update(self,command,step,ranges,semantic)
+-        self.local_escape.apply(self,command,step,ranges,semantic)
+-        return command
+-
++"""Attach the red inventory and scoring APIs to R295's search controller."""
++import hashlib
++import math
++from collections import deque
++
++import cv2
++import numpy as np
++
++from swarm_rescue.solutions.coverage_placement import CoveragePlacementDrone, marginal_coverage
++from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
++from swarm_rescue.solutions.pre_submit_scan import PreSubmitScan
++from swarm_rescue.solutions.partial_map_submit import provisional_map
++from swarm_rescue.solutions.greedy_mapping import MapMemory
++from swarm_rescue.solutions.final_map_relay import FinalMaps
++from swarm_rescue.solutions.fast_closeout import FastCloseout
++from swarm_rescue.solutions.drop_departure import DropDeparture
++from swarm_rescue.solutions.closeout_departure import CloseoutDeparture, DEPARTING, FORCING
++from swarm_rescue.solutions.messenger_run import MessengerRun
++from swarm_rescue.solutions.second_drop_site import SecondDropSite
++from swarm_rescue.solutions.team_wall import TeamWall
++from swarm_rescue.solutions.submission_renderer import SubmissionBearings
++from swarm_rescue.solutions.final_map_reconnect import FinalMapReconnect
++from swarm_rescue.solutions.fine_wall_coverage import FineWallCoverage
++from swarm_rescue.solutions.lbbd_rescue import LBBDRescue
++from swarm_rescue.solutions.placement_preferences import PlacementPreferences
++from swarm_rescue.solutions.local_escape import LocalEscape
++from swarm_rescue.solutions.blocked_prefix import BlockedPrefix
++from swarm_rescue.solutions.search_reconnect import SearchReconnect
++from swarm_rescue.solutions.escape_exit_route import active_shortcut_guard, choose_exit, shortcut_allowed
++from swarm_rescue.solutions.two_stage_exploration import SearchTask
++from swarm_rescue.solutions.group_exchange import GroupExchange
++
++ENABLE_GROUP_EXCHANGE = True
++
++
++def _map_cache_digest(owner, version, estimate, packed):
++    header = f"{owner}:{version}:{estimate}:".encode("ascii")
++    return hashlib.sha256(header + packed).hexdigest()
++
++
++def cached_eligible(step, sent, received):
++    return 0 <= received-sent <= 480 and 0 <= step-received <= 240
++
++def local_score(bitmap, hits):
++    # Assess predicted walls only against stable lidar evidence in the same frame.
++    # A one-cell (two-pixel) tolerance allows raster quantization.
++    k=np.ones((3,3), np.uint8)
++    hit_band=cv2.dilate(hits.astype(np.uint8),k)>0
++    map_band=cv2.dilate(bitmap.astype(np.uint8),k)>0
++    precision=np.count_nonzero(bitmap & hit_band)/max(1,np.count_nonzero(bitmap))
++    recall=np.count_nonzero(hits & map_band)/max(1,np.count_nonzero(hits))
++    dice=2*precision*recall/max(1e-12,precision+recall)
++    return dict(precision=precision,recall=recall,score=dice)
++
++
++def _live_prefix_open(pose, point, hits):
++    delta = np.asarray(point, dtype=float) - pose
++    length = np.linalg.norm(delta)
++    if length <= 1e-6:
++        return True
++    axis = delta / length
++    along = hits @ axis
++    side = np.abs(hits[:, 0] * axis[1] - hits[:, 1] * axis[0])
++    return not np.any((along > 0.) & (along < 26.) & (side < 23.))
++
++
++class RedHooks(LBBDRescue):
++    mapping_time_search = True
++    _sync_placement = CoveragePlacementDrone._sync_placement
++    _all_inventory_empty = CoveragePlacementDrone._all_inventory_empty
++    _known_bomb_positions = CoveragePlacementDrone._known_bomb_positions
++    _placement_spacing = CoveragePlacementDrone._placement_spacing
++
++    def __init__(self, **kwargs):
++        super().__init__(**kwargs)
++        self.team_size = self.limits.number_drones
++        self.limit = self.limits.max_timestep_limit
++        self.walltime_limit = self.limits.max_walltime_limit
++        self.memory = MapMemory(*map(int, self.size_area))
++        self.red_shadow_map = self.memory
++        self.submission_bearings = SubmissionBearings(self.memory.width,self.memory.height)
++        self.fine_wall_coverage = FineWallCoverage(self.memory, int(self.identifier), self.team_size)
++        self.wall_source_packet = None
++        self.blast_radius = round(.12 * min(self.size_area))
++        self.initial_inventory = self.previous_inventory = self.pending_drop = None
++        self.placement_goal = self.coverage = None
++        self.last_coverage_step = self.last_attempt_step = -100
++        self.drop_records = {}
++        self.drop_hints = ()
++        self.drop_hint_revision = -1
++        self.team_exchange_audit = []
++        self.grid.capture_scan_cells = True
++        self.peer_scan_progress = {}
++        self.own_scan_progress = deque(maxlen=8)
++        self.own_scan_step = -1
++        self.overlap_audit = []
++        self.midflight_last_task = None
++        self.midflight_review_audit = []
++        self.midflight_peer_sweep = {}
++        self.inventory_records = {}
++        self.submitted = False
++        self.red_packet = None
++        self.final_maps = FinalMaps(int(self.identifier), self.team_size)
++        self.fast_closeout = FastCloseout(self.identifier,self.team_size)
++        self.drop_departure = DropDeparture()
++        self.closeout = CloseoutDeparture()
++        self.messenger = MessengerRun()
++        self.second_drop = SecondDropSite()
++        self.team_wall = TeamWall()
++        self.final_reconnect = FinalMapReconnect()
++        self.final_submission_versions = {}
++        self.deadline_versions = {}
++        self.prepared_map = None
++        self.received_maps = {}
++        self.cache_received_steps = {}
++        self.map_cache_acks = {}
++        self.last_map_offer = -45
++        self.map_cache_audit = []
++        self.submitted_cache = None
++        self.relay_cache = None
++        self.relay_attempts = 0
++        self.last_relay_attempt = -45
++        self.relay_audit = []
++        self.map_bids = {}
++        self.own_sent_bids = deque(maxlen=16)
++        self.last_eligible_bid_comparison = {}
++        self.submission_priority_audit = None
++        self.deadline_submission = DeadlineSubmission()
++        self.pre_submit_scan = PreSubmitScan()
++        self.deadline_submission_event = None
++        self.map_quality = None
++        self.submission_elected_rank = None
++        self.submission_wait_started = None
++        self.submission_wait_for = None
++        self.map_revision = {}
++        self.last_confirmed_drop_step = None
++        self.red_submission_step = None
++        self.local_check_task = None
++        self.local_check_until = 0
++        self.local_check_audit = []
++        self.recovery_audit = []
++        self.sector_recovery_audit = []
++        self.empty_recovery_audit = []
++        self.progress_odometry = deque(maxlen=15)
++        self.progress_odometry_step = None
++        self.progress_veto_audit = []
++        self.first_ready_to_submit_step = None
++        self.placement = PlacementPreferences()
++        self.local_escape = LocalEscape()
++        self.blocked_prefix = BlockedPrefix()
++        self.search_reconnect = SearchReconnect()
++        self.group_best_image = None
++        self.group_exchange = GroupExchange(self.identifier, self.team_size, self.limit, self.size_area) if ENABLE_GROUP_EXCHANGE else None
++
++    # Red aircraft place bombs. The inherited rescue dispatcher would
++    # treat those same bombs as pickup targets once they appear.
++    def assign_early(self, hits):
++        return
++
++    def assign_local(self, hits=()):
++        return
++
++    def coordinate(self):
++        return
++
++    def explore(self):
++        if self.group_exchange is not None and self.group_exchange.owns_navigation:
++            return CoveragePlacementDrone._empty_command()
++        return super().explore()
++
++    def receive(self):
++        super().receive()
++        for _, message in self.communicator.received_messages:
++            if not isinstance(message, dict) or message.get("kind") != "two-stage":
++                continue
++            self.search_reconnect.record_contact(self)
++            self.pre_submit_scan.on_message(int(self.elapsed_timestep))
++            self._receive_team_coordination(message, int(self.elapsed_timestep))
++            self.placement.receive(self, message)
++            self.placement.branch_exit.receive(self, message)
++            self.placement.local_exit.receive(self, message)
++            self.placement.deep.passages.receive(self, message["id"], message)
++            self._receive_scan_progress(message)
++            self.fast_closeout.receive(self,message)
++            self.team_wall.receive(self,message)
++            self.submission_bearings.receive(message['id'],message.get('red_submission_bearings'))
++            bid = message.get("red_map_bid")
++            sender = message["id"]
++            if (type(sender) is int and 0 <= sender < self.team_size
++                    and isinstance(bid, tuple) and len(bid) == 3):
++                stamp, score, ready = bid
++                if (type(stamp) is int and 0 <= stamp <= int(self.elapsed_timestep)
++                        and type(score) is int and 0 <= score <= 10000 and type(ready) is bool
++                        and stamp > self.map_bids.get(sender, (-1, 0, False))[0]):
++                    self.map_bids[sender] = bid
++                    # Compare estimates from the same transmission step. Once
++                    # separated, a new local score must not change that ordering.
++                    if ready and stamp < DeadlineSubmission.window_start(self.limit):
++                        own = next((sent for sent in reversed(self.own_sent_bids)
++                                    if sent[0] == stamp and sent[2]), None)
++                        if own is not None:
++                            self.last_eligible_bid_comparison[sender] = stamp, score, own[1]
++            self._receive_cached_map(sender, message, int(self.elapsed_timestep))
++            self.final_maps.receive(sender, int(self.elapsed_timestep),
++                                    message.get("red_final_have"), message.get("red_final_map"))
++            self.final_reconnect.record(self, message, int(self.elapsed_timestep))
++            packet = message.get("red_map")
++            owner = message["id"]
++            if packet is not None and packet[0] > self.map_revision.get(owner, -1):
++                self.memory.merge(packet[1])
++                self.fine_wall_coverage.merge_direct(owner, message.get("red_wall_sources"))
++                self.map_revision[owner] = packet[0]
++            if self.group_exchange is not None:
++                self.group_exchange.receive(self, message, int(self.elapsed_timestep))
++
++    def define_message_for_all(self):
++        message = super().define_message_for_all()
++        if message is None:
++            return None
++        step = int(self.elapsed_timestep)
++        bid = self._own_map_bid(step)
++        if bid is not None and bid[2] and step < DeadlineSubmission.window_start(self.limit):
++            self.own_sent_bids.append(bid)
++        offer = self._cached_map_offer(step)
++        verified_drops = {k:p for k,p in self.drop_records.items()
++                          if k not in self.placement.unlocalized_drops}
++        return dict(message, red_group_exchange=(self.group_exchange.message(self, step) if self.group_exchange is not None else None),
++                    red_map_offer=offer, red_map_relay=self._relay_map_offer(step),
++                    red_turns=tuple(self.placement.local_turns),
++                    red_branch_claim=self.placement.branch_exit.claim,
++                    red_local_exit=self.placement.local_exit.packet(self, step),
++                    red_fast_closeout=self.fast_closeout.packet(step),
++                    red_wall_reservation=self.second_drop.packet(step) or self.team_wall.packet(step),
++                    red_submission_bearings=self.submission_bearings.packet(step,self.red_packet[0] if self.red_packet is not None else None),
++                    red_branch_acks=self.placement.branch_exit.acknowledgments(self, step),
++                    red_passages=dict(self.placement.deep.passages.reports),
++                    red_map_ack={owner: item[:3] for owner, item in self.received_maps.items()},
++                    red_inventory=dict(self.inventory_records),
++                    direct_scan_progress=self._advertise_scan_progress(step),
++                    direct_latest_sweep=self.own_scan_progress[-1] if self.own_scan_progress else None,
++                    red_drops=verified_drops, red_map=self.red_packet,
++                    red_wall_sources=self.wall_source_packet,
++                    drop_hints=(self.drop_hint_revision, self.drop_hints),
++                     red_final_have=self.final_maps.mask,
++                     red_final_map=self.final_maps.outgoing(step), red_map_bid=bid)
++
++    def _receive_team_coordination(self, message, step):
++        sender = message["id"]
++        if type(sender) is not int or sender == self.identifier or not 0 <= sender < self.team_size:
++            return
++        for owner, record in message.get("red_inventory", {}).items():
++            stamp, count = record
++            previous = self.inventory_records.get(owner, (-1, None))
++            if (0 <= owner < self.team_size and owner != self.identifier
++                    and previous[0] < stamp <= step and 0 <= count <= self.initial_inventory
++                    and (previous[1] is None or count <= previous[1])):
++                self.inventory_records[owner] = record
++                if count != previous[1]:
++                    self.team_exchange_audit.append(("stock", step, sender, owner, count))
++        for key, point in message.get("red_drops", {}).items():
++            owner, ordinal = key
++            if (key not in self.drop_records and owner != self.identifier
++                    and 0 <= owner < self.team_size and 1 <= ordinal <= self.initial_inventory
++                    and self._inside_team_point(point)):
++                self.drop_records[key] = np.asarray(point, dtype=float)
++                self.last_coverage_step = -100
++                self.team_exchange_audit.append(("drop", step, sender, owner, ordinal))
++        hints = message.get("drop_hints")
++        if self.identifier != 0 and hints is not None:
++            stamp, points = hints
++            if self.drop_hint_revision < stamp <= step and len(points) <= 2:
++                if all(self._inside_team_point(point) and math.isfinite(gain) and gain > 0
++                       for point, gain in points):
++                    self.drop_hint_revision, self.drop_hints = stamp, points
++                    self.team_exchange_audit.append(("hints", step, sender, stamp, len(points)))
++
++    def _inside_team_point(self, point):
++        return (len(point) == 2 and all(math.isfinite(x) and abs(x) < limit / 2
++                                       for x, limit in zip(point, self.size_area)))
++
++    def placement_gain_query(self, semantic):
++        bombs = self._known_bomb_positions(semantic)
++
++        def query(point):
++            return self.fine_wall_coverage.measure(self.memory, point, bombs, self.blast_radius,
++                                                   step=self.elapsed_timestep)
++
++        return query
++
++    def _update_drop_hints(self, step, semantic):
++        if (self.identifier != 0 or not self.grid.pose_fixed or self.frontier_egress.released is None
++                or step % 60 or self.communicator_is_disabled()):
++            return
++        known_bombs = self._known_bomb_positions(semantic)
++        coverage = marginal_coverage(self.memory, known_bombs, self.blast_radius)
++        hints = []
++        route_costs, _ = self.grid.tree(self.pose)
++        walkable = self.grid.walkable()
++        for cell, cost in sorted(route_costs.items(), key=lambda item: item[1]):
++            if cost > 240:
++                break
++            point = tuple(self.grid.point(cell))
++            if not (cost >= 20 and walkable[cell] and self._inside_team_point(point)):
++                continue
++            if self._placement_block(point, step, semantic, stationary=False) is not None:
++                continue
++            gain = float(coverage[self.memory.world_to_cell(point)])
++            if gain >= .30:
++                hints.append((gain, point))
++        selected = []
++        for gain, point in sorted(hints, reverse=True):
++            if all(math.dist(point, old) >= 64 for old, _ in selected):
++                selected.append((point, round(gain, 4)))
++                if len(selected) == 2:
++                    break
++        self.drop_hints = tuple(selected)
++        self.drop_hint_revision = step
++        if selected:
++            self.team_exchange_audit.append(("hint_offer", step, self.drop_hints))
++
++    def _advertise_scan_progress(self, step):
++        # The scan mask contains current local ray hits on both new and revisited cells.
++        if (self.frontier_egress.released is None or not self.grid.pose_fixed or
++                self.search_task is None or self.search_paused or self.carrying or self.queue or
++                self.goal != self.search_task.point or step < self.recovery_until):
++            self.own_scan_progress.clear()
++            return None
++        if (step != self.own_scan_step and step % 5 == self.identifier % 5
++                and self.semantic_values() is not None and self.lidar_values() is not None
++                and self.grid.last_scan_cells):
++            self.own_scan_progress.append((step, self.grid.last_scan_cells))
++            self.own_scan_step = step
++        if not self.own_scan_progress or step - self.own_scan_progress[-1][0] > 12:
++            return None
++        cells = frozenset(cell for stamp, packet in self.own_scan_progress if step - stamp <= 40 for cell in packet)
++        return self.own_scan_progress[-1][0], self.search_task.started, cells
++
++    def _receive_scan_progress(self, message):
++        sender = message["id"]
++        if sender == self.identifier:
++            return
++        proof = message.get("direct_scan_progress")
++        own_state = next((state for state in message["states"] if state["id"] == sender), None)
++        if (proof is None or own_state is None or own_state["search"] is None or
++                proof[1] != own_state["search"][0] or not 0 <= own_state["step"] - proof[0] <= 12):
++            self.peer_scan_progress.pop(sender, None)
++        else:
++            self.peer_scan_progress[sender] = proof
++        sweep = message.get('direct_latest_sweep')
++        if (proof is not None and sender in self.peer_scan_progress and sweep is not None and
++                sweep[0] == proof[0] and own_state['step'] >= sweep[0]):
++            self.midflight_peer_sweep[sender] = (sweep[0], proof[1], frozenset(sweep[1]))
++        else:
++            self.midflight_peer_sweep.pop(sender, None)
++
++    def _rank_redundant_search(self, assigned, blocks, gain, costs, claims):
++        step = int(self.elapsed_timestep)
++        sweeps = {peer: proof[2] for peer, proof in self.peer_scan_progress.items()
++                  if peer in claims and claims[peer][0] == proof[1] and 0 <= step - proof[0] <= 12}
++        ranks = {point: self._mapping_search_rank(blocks[point], gain, costs[self.grid.cell(point)], point)
++                 for point in assigned}
++        original = min(ranks, key=ranks.get)
++        if not sweeps or len(ranks) < 2 or not self.grid.pose_fixed or self.communicator_is_disabled():
++            return original
++        footprint = blocks[original]
++        close = self.grid.close_scan_cells()
++        settled = {c for c in footprint if self.grid.evidence[c] < 0 and self.grid.searched[c] > int(close[c])}
++        overlaps = [(peer, len(settled & sweep)) for peer, sweep in sweeps.items()]
++        peer, duplicate = max(overlaps, key=lambda item: item[1])
++        selected, tested = original, []
++        original_new = None
++        if duplicate >= 2 and 2 * duplicate >= len(footprint):
++            original_new = self._frontier_novel_cells(original, close)
++            hits = self._tail_live_hits()
++            budget = costs[self.grid.cell(original)] + 40
++            deadline_safe = step + self.SEARCH_REVIEW < self.limit and self.elapsed_walltime + 5 < self.walltime_limit
++            if hits is not None and deadline_safe:
++                for point in sorted(ranks, key=ranks.get):
++                    if point == original or costs[self.grid.cell(point)] > budget:
++                        continue
++                    new = self._frontier_novel_cells(point, close)
++                    if new < original_new + 2:
++                        tested.append((point, new, 'novelty'))
++                        continue
++                    route = self.search_route(point)
++                    if not self._local_check_route(point, route, hits):
++                        tested.append((point, new, 'route'))
++                        continue
++                    tested.append((point, new, 'selected'))
++                    selected = point
++                    break
++        self.overlap_audit.append((step, tuple(sorted(sweeps)), len(ranks), original, selected,
++                                   (peer, duplicate, len(footprint), original_new, tested)))
++        return selected
++
++    def _frontier_novel_cells(self, point, close):
++        # A cell counts only if the approach-side line stays inside known free space.
++        grid = self.grid
++        r, c = grid.cell(point)
++        count = 0
++        for row in range(max(0, r - 4), min(grid.evidence.shape[0], r + 5)):
++            for col in range(max(0, c - 4), min(grid.evidence.shape[1], c + 5)):
++                cell = row, col
++                evidence = grid.evidence[cell]
++                if evidence >= 3 or grid.blocked[cell] or (evidence < 0 and grid.searched[cell] > int(close[cell])):
++                    continue
++                end = grid.point(cell)
++                distance = math.dist(point, end)
++                if distance > 75:
++                    continue
++                line = np.linspace(point, end, max(2, math.ceil(distance / 10) + 1))
++                if all(grid.evidence[inner] < 0 for sample in line[:-1]
++                       if (inner := grid.cell(sample)) != cell):
++                    count += 1
++        return count
++
++    def _review_transit_frontier(self, step):
++        task = self.search_task
++        if (task is None or task is self.midflight_last_task or step % 3 != self.identifier % 3
++                or not 5 <= step - task.started <= 70 or not self.route or self.goal != task.point
++                or self.search_paused or task.handoff is not None or task.return_check_until
++                or self.local_check_task == task.started or self.carrying or self.queue
++                or self.pending_drop is not None or self.gap_probe is not None or self.survey_run is not None
++                or step < self.recovery_until or self.frontier_egress.released is None
++                or not self.grid.pose_fixed or self.communicator_is_disabled()
++                or step >= .72 * self.limit or self.elapsed_walltime >= .74 * self.walltime_limit
++                or self.reached_search_point(task.point)):
++            return
++        # Proof must be from a fresh actual scan of the goal's immediate footprint,
++        # while this very goal still has an active route. No intention is treated as observation.
++        original = task.point
++        centre = self.grid.cell(original)
++        peers = self.fresh_states(age=12)
++        evidence = []
++        for peer, (stamp, started, cells) in self.midflight_peer_sweep.items():
++            state = peers.get(peer)
++            if (state is None or state['search'] is None or state['search'][0] != started
++                    or not task.started < stamp <= step or step - stamp > 8):
++                continue
++            adjacent = {cell for cell in task.cells.intersection(cells)
++                        if max(abs(cell[0]-centre[0]), abs(cell[1]-centre[1])) <= 1}
++            if centre in adjacent or len(adjacent) >= 2:
++                evidence.append((peer, stamp, len(adjacent)))
++        if not evidence:
++            return
++        self.midflight_last_task = task
++        review = dict(step=step, task=task.started, original=original, evidence=evidence,
++                      selected=None, tested=[])
++        self.midflight_review_audit.append(review)
++        hits = self._tail_live_hits()
++        if hits is None:
++            return
++        close = self.grid.close_scan_cells()
++        original_new = self._frontier_novel_cells(original, close)
++        review['original_new'] = original_new
++        costs, work, _ = self.grid.search_work(self.pose)
++        for state in peers.values():
++            for cell in state.get('opening_cells', ()):
++                work[cell] = False
++        for cell in task.cells:
++            work[cell] = False
++        cap = min(140., self.search_distance(original) + 40.)
++        walkable = self.grid.walkable()
++        nearby = sorted((cost, cell) for cell, cost in costs.items()
++                        if cost <= cap and work[cell] and walkable[cell]
++                        and self.grid.clearance[cell] >= 23 and self.grid.evidence[cell] < 0)
++        for cost, cell in nearby[:14]:
++            point = tuple(self.grid.point(cell))
++            if self.reached_search_point(point):
++                continue
++            new = self._frontier_novel_cells(point, close)
++            if new < original_new + 2:
++                review['tested'].append((point, new, 'novelty'))
++                continue
++            route = self.search_route(point)
++            if not self._local_check_route(point, route, hits):
++                review['tested'].append((point, new, 'route'))
++                continue
++            length = math.dist(self.pose, route[0]) + sum(math.dist(a, b) for a,b in zip(route,route[1:]))
++            if length > cap:
++                review['tested'].append((point, new, 'distance'))
++                continue
++            review['tested'].append((point, new, 'selected'))
++            cells = frozenset(c for c in costs if work[c] and
++                              max(abs(c[0]-cell[0]), abs(c[1]-cell[1])) <= 1)
++            replacement = SearchTask(cells, point, step, self.search_steps, self.grid.local_coverage(cells))
++            self.search_task = self.midflight_last_task = replacement
++            self.goal, self.route = point, list(route)
++            replacement.remaining = length
++            replacement.motion = tuple(self.motion_pose if self.motion_pose is not None else self.pose)
++            self.next_explore = step + self.SEARCH_REVIEW
++            review.update(selected=point, new_cells=new, route_length=length)
++            return
++
++    def _render_submission(self, memory=None):
++        if memory is None:
++            memory = self.memory
++        return self.submission_bearings.render(memory)
++
++    def _submission_image(self, step):
++        if self.group_best_image is not None:
++            return self.group_best_image
++        if self.final_maps.snapshots:
++            memory, versions = self.final_maps.fuse(self.memory)
++            image = self._render_submission(memory)
++            if image.any():
++                return image, None, versions
++        image = self._render_submission()
++        selected = self._select_submission_cache(step, image)
++        if selected is None:
++            return image, None, {}
++        owner, (version, estimate, digest, packed) = selected
++        shape = self.memory.height, self.memory.width
++        image = np.unpackbits(np.frombuffer(packed, np.uint8), count=math.prod(shape)).reshape(shape)
++        return image, (owner, version, estimate, digest), {}
++
++    def _prepare_map_cache(self, step):
++        if (self.previous_inventory != 0 or self.pending_drop is not None
++                or self.map_quality is None or self.limit - step <= 48
++                or self.walltime_limit - self.elapsed_walltime <= 3.
++                or (self.prepared_map is not None and step - self.prepared_map[0] < 360)):
++            return
++        image = self._render_submission()
++        if image.any():
++            packed = np.packbits(image.reshape(-1) != 0).tobytes()
++            digest = _map_cache_digest(int(self.identifier), step, self.map_quality, packed)
++            self.prepared_map = (step, self.map_quality, digest, packed)
++            return image
++        return None
++
++    def _cached_map_offer(self, step):
++        prepared = self.prepared_map
++        if (prepared is None or step - prepared[0] > 480
++                or step - self.last_map_offer < 45 or self.communicator_is_disabled()):
++            return None
++        if not any(0 <= step - stamp <= 64 and self.map_cache_acks.get(peer) != prepared[:3]
++                   for peer, (stamp, _, _) in self.map_bids.items()):
++            # A receiving aircraft can still carry inventory. A recent actual
++            # map message is enough as a contact witness.
++            if not any(0 <= step - stamp <= 64 and self.map_cache_acks.get(peer) != prepared[:3]
++                       for peer, stamp in self.map_revision.items()):
++                return None
++        self.last_map_offer = step
++        return prepared
++
++    def _relay_map_offer(self, step):
++        if (self.identifier != 2 or self.limit - step > 720 or self.communicator_is_disabled()
++                or self.relay_attempts >= 3 or step - self.last_relay_attempt < 45):
++            return None
++        # A recently received bid from the destination witnesses a contact.
++        peer = self.map_bids.get(1)
++        if peer is None or not 0 <= step - peer[0] <= 64:
++            return None
++        offer = self.received_maps.get(0)
++        if offer is None or not 0 <= step - offer[0] <= 480:
++            return None
++        self.relay_cache = offer
++        self.relay_attempts += 1
++        self.last_relay_attempt = step
++        self.relay_audit.append(("sent", step, 0, *offer[:3]))
++        return 1, 0, offer
++
++    def _receive_cached_map(self, sender, message, step):
++        if type(sender) is not int or sender == self.identifier or not 0 <= sender < self.team_size:
++            return
++        ack = message.get("red_map_ack")
++        if (self.prepared_map is not None and isinstance(ack, dict)
++                and ack.get(int(self.identifier)) == self.prepared_map[:3]):
++            self.map_cache_acks[sender] = self.prepared_map[:3]
++        if (self.identifier == 2 and sender == 1 and self.relay_cache is not None
++                and isinstance(ack, dict) and ack.get(0) == self.relay_cache[:3]
++                and self.received_maps.get(0) == self.relay_cache):
++            self.relay_attempts = 3
++        offer = message.get("red_map_offer")
++        self._store_cached_map(sender, offer, step)
++        relay = message.get("red_map_relay")
++        if (self.identifier == 1 and sender == 2 and isinstance(relay, tuple)
++                and len(relay) == 3 and relay[:2] == (1, 0)
++                and self._store_cached_map(0, relay[2], step)):
++            self.relay_audit.append(("received", step, 0, *relay[2][:3]))
++
++    def _store_cached_map(self, sender, offer, step):
++        if not isinstance(offer, tuple) or len(offer) != 4:
++            return
++        version, estimate, digest, packed = offer
++        size = self.memory.height * self.memory.width
++        old = self.received_maps.get(sender)
++        if (type(version) is not int or not 0 <= version <= step or step - version > 480
++                or (old is not None and version <= old[0])
++                or type(estimate) is not int or not 0 <= estimate <= 10000
++                or type(digest) is not str or type(packed) is not bytes
++                or len(packed) != (size + 7) // 8 or not any(packed)
++                or _map_cache_digest(sender, version, estimate, packed) != digest):
++            return
++        self.received_maps[sender] = offer
++        self.cache_received_steps[sender] = step
++        self.map_cache_audit.append((step, sender, version, estimate, digest))
++        return True
++
++    def _select_submission_cache(self, step, own_image):
++        hits = self.memory.hits >= 3
++        if not hits.any():
++            return None
++        shape = (self.memory.height, self.memory.width)
++        stride = self.memory.FINE
++        own_score = local_score(own_image[::stride, ::stride] != 0, hits)["score"]
++        best = None
++        best_rank = (own_score, 0, 0)
++        for sender, item in self.received_maps.items():
++            if not cached_eligible(step, item[0], self.cache_received_steps[sender]):
++                continue
++            image = np.unpackbits(np.frombuffer(item[3],np.uint8),
++                                  count=math.prod(shape)).reshape(shape)
++            rank = (local_score(image[::stride, ::stride] != 0, hits)["score"], item[0], -sender)
++            if rank[0] > own_score and rank > best_rank:
++                best_rank = rank
++                best = sender, item
++        return best
++
++    def _own_map_bid(self, step):
++        if step >= DeadlineSubmission.window_start(self.limit):
++            score = self.deadline_submission.score
++            return (step, score, True) if score is not None and self.previous_inventory == 0 and self.pending_drop is None else None
++        if self.map_quality is None or self.previous_inventory != 0 or self.pending_drop is not None:
++            return None
++        return step, self.final_maps.rank(self.map_quality), self.first_ready_to_submit_step is not None
++
++    def _prefer_own_submission(self, step):
++        owner = int(self.identifier)
++        own_bid = self._own_map_bid(step)
++        if own_bid is None:
++            return False
++        own = (own_bid[1], -owner)
++        fresh = [(score, -peer, ready) for peer, (stamp, score, ready) in self.map_bids.items()
++                 if 0 <= step - stamp <= 32]
++        if any(ready and (score, peer) > own for score, peer, ready in fresh):
++            return False
++        best = max([(score, peer) for score, peer, _ in fresh] + [own])
++        # When eligible peers separate, give a verified higher-ranked peer
++        # one limited chance. The absolute window prevents repeated elections.
++        if best == own:
++            known_higher = [(other_score,-peer,stamp,own_score)
++                            for peer,(stamp,other_score,own_score) in self.last_eligible_bid_comparison.items()
++                            if step-stamp > 32 and self.map_bids[peer][0] == stamp
++                            and (other_score,-peer) > (own_score,-owner)]
++            if known_higher and step < self.pre_submit_scan.finish(self) + 48 and self.walltime_limit-self.elapsed_walltime > 1.5:
++                if self.submission_priority_audit is None:
++                    score, peer, stamp, own_score = max(known_higher)
++                    self.submission_priority_audit = dict(step=step, preferred=-peer, agreed_step=stamp,
++                                                          self_estimate=own_score, peer_estimate=score)
++                return False
++            return True
++        # Keep broadcasting the verified inventory while the better aircraft
++        # has a bounded opportunity to receive it and become eligible.
++        if self.submission_wait_started is None:
++            self.submission_wait_started = step
++            self.submission_wait_for = -best[1]
++        return (step - self.submission_wait_started >= 48 or self.limit - step <= 4
++                or self.walltime_limit - self.elapsed_walltime <= 1.5)
++
++    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23.):
++        if not self.grid.pose_fixed or not self.search_roaming.departed:
++            return "position"
++        cell = self.grid.cell(point)
++        if self.grid.evidence[cell] >= 0 or self.grid.clearance[cell] < minimum_clearance:
++            return "clearance"
++        if stationary:
++            odom = self.odometer_values()
++            if odom is None or not np.isfinite(odom[0]) or odom[0] > 2.5:
++                return "speed"
++        for hit in semantic:
++            if getattr(hit.entity_type, "name", "") == "DISPOSAL_CENTER":
++                angle = self.heading + hit.angle
++                location = self.pose + hit.distance * np.array([math.cos(angle), math.sin(angle)])
++                if math.dist(point, location) < 120:
++                    return "disposal"
++        if self.home is not None and math.dist(point, self.home) < 120:
++            return "disposal"
++        spacing = max(32., self._placement_spacing(step))
++        if any(math.dist(point, bomb) < spacing for bomb in self._known_bomb_positions(semantic)):
++            return "spacing"
++        return None
++
++    def _tail_live_hits(self):
++        ranges = self.lidar_values()
++        if ranges is None:
++            return None
++        ranges = np.asarray(ranges, dtype=float)
++        valid = np.isfinite(ranges) & (ranges > 0.)
++        if not valid.any():
++            return None
++        bearings = np.asarray(self.lidar_rays_angles())[valid] + self.heading
++        return ranges[valid, None] * np.column_stack((np.cos(bearings), np.sin(bearings)))
++
++    def waypoint(self):
++        point = super().waypoint()
++        point = choose_exit(self, self.local_escape, point)
++        if active_shortcut_guard(self, self.local_escape) is not None:
++            return point
++        point = self.blocked_prefix.update(self, point)
++        point = self.search_reconnect.waypoint(self,self.blocked_prefix,point)
++        return self.final_reconnect.waypoint(self, point)
++
++    def _search_waypoint_reached(self, point):
++        view = self.blocked_prefix.view
++        reconnect = self.search_reconnect.task
++        if reconnect is not None and reconnect is self.search_task and tuple(point)==reconnect.point:
++            return math.dist(self.pose,point) <= 10.
++        if view.task is not None and view.active(self,self.search_task) and tuple(point) == view.task.point:
++            return math.dist(self.pose,point) <= 10.
++        if self.blocked_prefix.active(self) and tuple(point) == self.blocked_prefix.first:
++            return False
++        guard = active_shortcut_guard(self, self.local_escape)
++        if guard is not None and tuple(point) == guard[1]:
++            return False
++        return self.reached_search_point(point)
++
++    def _search_shortcut_allowed(self, point):
++        view = self.blocked_prefix.view
++        return (shortcut_allowed(self, self.local_escape, point)
++                and self.blocked_prefix.allows_waypoint(self, point)
++                and bool(view.guarded_route(self,[point],self.blocked_prefix.outside)))
++
++    def _tail_prefix(self, route):
++        return next((p for p in route if not self.reached_search_point(p)), None)
++
++    def _progress_pose_changed(self, target, step):
++        changed = super()._progress_pose_changed(target, step)
++        if (not changed or self.progress_pose is None or len(self.progress_odometry) != 15
++                or math.dist(self.pose, target) < 20):
++            return changed
++        dx = sum(v[0] for v in self.progress_odometry)
++        dy = sum(v[1] for v in self.progress_odometry)
++        if math.hypot(dx, dy) >= 2:
++            return True
++        self.progress_veto_audit.append((step, tuple(self.pose)))
++        return False
++
++    def _observe_progress_motion(self):
++        step = int(self.elapsed_timestep)
++        if self.progress_odometry_step == step:
++            return
++        if self.progress_odometry_step != step - 1:
++            self.progress_odometry.clear()
++        self.progress_odometry_step = step
++        if (not self.grid.pose_fixed or self.frontier_egress.released is None or self.gap_probe is not None
++                or self.mode not in ("explore", "search") or not self.carried_bombs_count()):
++            self.progress_odometry.clear()
++            return
++        odom = self.odometer_values()
++        if odom is None or not np.all(np.isfinite(odom)):
++            self.progress_odometry.clear()
++            return
++        travel, relative, turn = map(float, odom)
++        yaw = self.heading - turn + relative
++        self.progress_odometry.append((travel * math.cos(yaw), travel * math.sin(yaw)))
++
++    def recover(self, goal, ranges, force=False):
++        self._observe_progress_motion()
++        previous_until = self.recovery_until
++        target = super().recover(goal, ranges, force=force)
++        if (self.recovery_until == previous_until or self.frontier_egress.released is None
++                or self.mode not in ("search", "explore") or self.gap_probe is not None
++                or not self.carried_bombs_count()):
++            return target
++        hits = self._tail_live_hits()
++        if hits is None:
++            return target
++        if math.dist(self.pose, target) >= 16 and _live_prefix_open(self.pose, target, hits):
++            return target
++        relative = np.asarray(ranges, dtype=float)
++        bearings = np.asarray(self.lidar_rays_angles()) + self.heading
++        finite = np.isfinite(relative) & (relative >= 62)
++        desired = math.atan2(goal[1] - self.pose[1], goal[0] - self.pose[0])
++        score = np.where(finite, relative + 35 * np.cos(bearings - desired), -np.inf)
++        primary = [bearings[index] for index in np.argsort(-score)[:24] if finite[index]]
++        candidates = [(angle, False) for angle in primary]
++        if self.grid.pose_fixed:
++            # Test a small fixed set only after every inherited ray choice
++            # fails. The observed grid and full live tube still veto motion.
++            sectors = desired + np.array([0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 6,
++                                           -6, 7, -7, 8, -8, 9, -9, 10, -10, 11, -11, 12]) * (math.pi / 12)
++            candidates.extend((angle, True) for angle in sectors)
++        for angle, sector in candidates:
++            if sector:
++                aligned = np.cos(bearings - angle) >= math.cos(math.pi / 24)
++                if not np.any(finite & aligned):
++                    continue
++            point = tuple(self.pose + 30 * np.array([math.cos(angle), math.sin(angle)]))
++            axis = (np.asarray(point) - self.pose) / 30
++            along = hits @ axis
++            side = np.abs(hits[:, 0] * axis[1] - hits[:, 1] * axis[0])
++            if np.any((along > 0) & (along <= 56) & (side < 23)):
++                continue
++            cells = {self.grid.cell(q) for q in np.linspace(self.pose, point, 16)}
++            cells.discard(self.grid.cell(self.pose))
++            if (not cells or any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23 for c in cells)
++                    or not _live_prefix_open(self.pose, point, hits)
++                    or not self.search_roaming.allows(self.pose, point, [point])):
++                continue
++            if sector:
++                self.sector_recovery_audit.append((int(self.elapsed_timestep), tuple(self.pose), point))
++            self.recovery_point = point
++            self.recovery_audit.append((int(self.elapsed_timestep), tuple(self.pose), tuple(target), point))
++            return point
++        if self.grid.pose_fixed and math.dist(self.pose, target) < 1e-6:
++            step = int(self.elapsed_timestep)
++            old_next = tuple(self.route[0]) if self.route else None
++            self.empty_recovery_audit.append((step, tuple(self.pose), old_next))
++            self.recovery_until = previous_until
++            self.next_explore = min(self.next_explore, step + 1)
++            # Let the normal search replan on its next tick. This tick still
++            # emits the original hold command and passes the live guard.
++        return target
++
++    def _local_check_route(self, point, route, hits):
++        if not route or not self.search_roaming.allows(self.pose, point, route):
++            return False
++        length = math.dist(self.pose, route[0]) + sum(math.dist(a, b) for a, b in zip(route, route[1:]))
++        if length > 140:
++            return False
++        here = self.grid.cell(self.pose)
++        if any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23
++               for c in map(self.grid.cell, route) if c != here):
++            return False
++        prefix = self._tail_prefix(route)
++        return prefix is not None and _live_prefix_open(self.pose, prefix, hits)
++
++    def search_route(self, point):
++        route = super().search_route(point)
++        return self.blocked_prefix.view.guarded_route(self,route,self.blocked_prefix.outside)
++
++    def continue_search(self, task, costs, work, pending, resumed):
++        view = self.blocked_prefix.view
++        if task is self.search_reconnect.task:
++            return self.search_reconnect.continue_task(self,self.blocked_prefix,task)
++        if task is view.task:
++            point = task.point
++            if not view.active(self,task) or math.dist(self.pose,point) <= 10.:
++                reached = math.dist(self.pose,point) <= 10.
++                if reached:
++                    view.observed = view.center
++                self.blocked_prefix.audit.append((int(self.elapsed_timestep),"view_reached" if reached else "view_expired",view.center,point))
++                view.task = None
++                return "completed"
++            here = self.grid.cell(self.pose)
++            if (not self.route or any(self.grid.evidence[c] >= 0 or self.grid.clearance[c] < 23.
++                                      for p in self.route[:3] if (c := self.grid.cell(p)) != here)):
++                view.task = None
++                return "unavailable"
++            return None
++        if self.route and not view.guarded_route(self,self.route,self.blocked_prefix.outside):
++            self.route = []
++            return "unavailable"
++        result = super().continue_search(task, costs, work, pending, resumed)
++        step = int(self.elapsed_timestep)
++        active = self.local_check_task == task.started
++        if active and (self.reached_search_point(task.point) or step >= self.local_check_until):
++            return "completed"
++        if result != "completed":
++            return result
++        if (self.frontier_egress.released is None or not self.grid.pose_fixed
++                or self.gap_probe is not None or step < self.recovery_until
++                or step >= .72 * self.limit or self.elapsed_walltime >= .74 * self.walltime_limit):
++            return result
++        hits = self._tail_live_hits()
++        if hits is None:
++            return result
++        if active:
++            return None if self._local_check_route(task.point, self.route, hits) else result
++        if self.reached_search_point(task.point) or self.grid.cell(task.point) in costs:
++            return result
++        close = self.grid.close_scan_cells()
++        if not any(self.grid.searched[c] > close[c] and self.grid.searched_here[c] <= close[c] for c in task.cells):
++            return result
++        candidates = []
++        for cell, cost in costs.items():
++            if cost > 140 or self.grid.evidence[cell] >= 0 or self.grid.clearance[cell] < 23:
++                continue
++            point = tuple(self.grid.point(cell))
++            offset = math.dist(point, task.point)
++            if offset <= 80 and math.dist(point, self.pose) > 28:
++                candidates.append((offset, cost, point))
++        for _, _, point in sorted(candidates)[:8]:
++            route = list(self.search_route(point))
++            if not self._local_check_route(point, route, hits):
++                continue
++            task.point = self.goal = point
++            self.route = route
++            self.local_check_task = task.started
++            self.local_check_until = step + 2 * self.SEARCH_REVIEW
++            self.local_check_audit.append((step, task.started, point, self.search_distance(point)))
++            return None
++        return result
++
++    def _force_deadline_submission(self, step):
++        deadline = self.deadline_submission
++        reason = deadline.fallback_reason(step, self.limit, self.elapsed_walltime, self.walltime_limit)
++        if reason is None:
++            return False
++
++        if deadline.image is not None:
++            image, cache, versions = deadline.image, deadline.cache, self.deadline_versions.copy()
++        elif deadline.backup_image is not None:
++            image, cache, versions = deadline.backup_image, None, {}
++        else:
++            image, cache, versions = self._submission_image(step)
++            if not image.any():
++                return False
++
++        # Submission ends the SDK round before its next physics tick. Stock
++        # has already been synchronized, so only completed drops count here.
++        self.submit_exploration_map(image.astype(np.uint8, copy=False))
++        self.submitted_cache = cache
++        self.final_submission_versions = versions
++        self.submission_elected_rank = deadline.score
++        self.red_submission_step = step
++        self.submitted = True
++        self.deadline_submission_event = dict(
++            step=step, fallback=reason, remaining_steps=self.limit-step,
++            remaining_walltime=self.walltime_limit-self.elapsed_walltime,
++            local_inventory=self.previous_inventory, team_confirmed=self._all_inventory_empty(),
++            backup_step=deadline.backup_step if image is deadline.backup_image else None,
++        )
++        return True
++
++    def _submit_at_deadline(self, step):
++        deadline = self.deadline_submission
++        clear = self.previous_inventory == 0 and self.pending_drop is None
++        if not clear:
++            return
++        refresh = (len(self.final_maps.snapshots) > len(self.deadline_versions)
++                   and self.walltime_limit - self.elapsed_walltime > 3
++                   and step % 4 == int(self.identifier) % 4)
++        if deadline.score is None or refresh:
++            image, cache, versions = self._submission_image(step)
++            if not image.any():
++                return
++            deadline.image = image.astype(np.uint8)
++            deadline.cache = cache
++            self.deadline_versions = versions
++            deadline.score = self.final_maps.rank(self.map_quality or 0)
++        own = deadline.score, -int(self.identifier)
++        peers = DeadlineSubmission.peer_ranks(step,self.limit,self.map_bids)
++        if not DeadlineSubmission.submit_due(step,self.limit,own,peers):
++            return
++        self.submit_exploration_map(deadline.image)
++        self.submitted_cache = deadline.cache
++        self.final_submission_versions = self.deadline_versions.copy()
++        self.submission_elected_rank = deadline.score
++        self.red_submission_step = step
++        self.submitted = True
++        self.deadline_submission_event = dict(step=step,local_estimate=deadline.score,
++            in_window_peer_estimates={-peer: score for score,peer in peers},
++            slot=DeadlineSubmission.slot(self.limit,deadline.score),
++            team_confirmed=self._all_inventory_empty())
++
++    def _submission_window_open(self, step):
++        return step >= self.limit * 3 // 5 or self.elapsed_walltime >= .85 * self.walltime_limit
++
++    def control(self):
++        step = int(self.elapsed_timestep)
++        before = self.previous_inventory
++        self._sync_placement(step)
++        if before is not None and self.previous_inventory < before:
++            self.last_confirmed_drop_step = step
++        if self.submitted or self._force_deadline_submission(step):
++            return CoveragePlacementDrone._empty_command()
++        command = super().control()
++        command["place_bomb"] = 0
++        if self.pose is None:
++            return command
++
++        # Final-window fallback: track every frame, and once the closeout state
++        # machine takes over a stalled bomb-carrying drone, it owns the command
++        # so the ordinary branches cannot override its deterministic departure.
++        wall_left = self.walltime_limit - self.elapsed_walltime
++        steps_left = self.limit - step
++        if self.group_exchange is not None:
++            self.group_exchange.observe(self, step)
++        self.closeout.tick(self, step, command, wall_left, steps_left)
++        if self.closeout.state in (DEPARTING, FORCING):
++            return command
++
++        # Dedicated messenger: once active it owns navigation so the ordinary
++        # exploration/placement branches cannot override its tour.
++        if self.group_exchange is not None:
++            intent = self.group_exchange.prepare_return(self, step)
++            if intent is not None:
++                self.group_exchange.commit_return(self, intent, step)
++            if self.group_exchange.candidates.snapshots and self.group_exchange.try_submit(self, step, local_score):
++                return command
++        if (not (self.group_exchange is not None and self.group_exchange.owns_navigation)
++                and self.messenger.tick(self, step, command, steps_left)):
++            return command
++
++        ranges = self.lidar_values()
++        semantic = self.semantic_values() or ()
++        if ranges is not None and step % 4 == 0:
++            observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
++            fixed = self.grid.pose_fixed and not self._odometry_only
++            self.fine_wall_coverage.observe(observations, fixed)
++            self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
++                                             np.asarray(self.lidar_rays_angles()),semantic)
++        refresh = self.pre_submit_scan.refresh_due(self,step)
++        if refresh or step % 45 == self.identifier:
++            self.red_packet = step, self.memory.packet()
++            self.wall_source_packet = self.fine_wall_coverage.packet()
++            if refresh:
++                self.pre_submit_scan.refreshed.append(step)
++            _, wall_evidence, _, _ = self.red_packet[1]
++            # Lightweight version of the existing observed-area and stable-wall
++            # estimate. Ground-truth map and official score are unavailable in flight.
++            known = self.memory.free.mean()
++            stable = min(1., np.count_nonzero(wall_evidence >= 3) / (.018 * self.memory.hits.size))
++            self.map_quality = round(10000 * (.90 * known + .10 * stable))
++            prepared_image = self._prepare_map_cache(step)
++            deadline = self.deadline_submission
++            if prepared_image is not None:
++                deadline.remember(step, prepared_image)
++            elif (deadline.backup_due(step) and self.walltime_limit - self.elapsed_walltime > 3.
++                  and np.any(wall_evidence >= 3)):
++                image = self._render_submission()
++                if image.any():
++                    deadline.remember(step, image)
++        if self.group_exchange is not None and self.group_exchange.candidates.snapshots:
++            if self.group_exchange.tick_navigation(self, step, command, ranges, semantic):
++                return command
++
++        self._update_drop_hints(step, semantic)
++        maneuvers = self.placement.maneuvers
++        if self.previous_inventory or maneuvers.exit is not None or maneuvers.waiting_exit is not None:
++            maneuvers.remember(self, step)
++        if step >= self.placement._ordinary_start_step(self.limit) and self.search_roaming.departed:
++            self.placement.local_exit.observe(self,step,ranges,semantic,self.placement.audit)
++            if self.previous_inventory:
++                self.placement.branch_exit.observe(self, self.placement.deep.passages, step, self.placement.audit)
++
++        first_drop = (before is not None and before==self.initial_inventory
++                      and self.previous_inventory==before-1 and self.previous_inventory>0)
++        self.drop_departure.update(self,step,first_drop)
++        self.drop_departure.steer(self,command,step,ranges,semantic)
++        self.second_drop.observe_route(self,step,ranges,semantic)
++        if maneuvers.waiting_exit is not None or maneuvers.exit is not None:
++            self.placement.finish_request(self, step)
++            if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
++                return command
++        if self.fast_closeout.act(self,step,command,ranges,semantic):
++            self.team_wall.reservation=None
++            return command
++        if self.drop_departure.controls_step==step:
++            self.team_wall.reservation=None
++            self.placement.finish_request(self,step)
++            return command
++        if maneuvers.approach is not None:
++            self.placement.finish_request(self, step)
++            if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
++                return command
++        state = self.second_drop.control(self,step,command,ranges,semantic)
++        if state == "approach":
++            self.team_wall.reservation = None
++            self.placement.finish_request(self,step)
++            return command
++        if state != "ready" and self.team_wall.steer(self,command,step,ranges,semantic):
++            self.local_escape.apply(self,command,step,ranges,semantic)
++            return command
++
++        # Freeze the closing submission snapshot after this aircraft is empty.
++        # R483's ordinary live map packets continue feeding its existing rules.
++        if (self.previous_inventory == 0 and self.pending_drop is None
++                and (step >= self.limit * 9 // 10 or self._all_inventory_empty()
++                     and step >= self.pre_submit_scan.finish(self))):
++            self.final_maps.freeze(step, self.memory)
++        if step >= DeadlineSubmission.window_start(self.limit):
++            self._submit_at_deadline(step)
++            if self.submitted:
++                return command
++            if not self._all_inventory_empty():
++                self.placement.update(self,command,step,ranges,semantic)
++            self.local_escape.apply(self,command,step,ranges,semantic)
++            return command
++
++        if self._all_inventory_empty():
++            latest = max(stamp for stamp, _ in self.inventory_records.values() if stamp <= step)
++            # Requests are processed on a physics tick. Empty inventory can
++            # only be observed on a later tick, including the local last drop.
++            if self.pending_drop is None and latest <= step:
++                if self.first_ready_to_submit_step is None:
++                    self.first_ready_to_submit_step = step
++                if (self.group_exchange is not None
++                        and not self.group_exchange.ordinary_submit_allowed(self, step)):
++                    return command
++                if not self._submission_window_open(step):
++                    return command
++                if self.pre_submit_scan.waiting(self,step):
++                    self.pre_submit_scan.record_wait(self,step)
++                    return command
++                self.pre_submit_scan.record_finish(self,step)
++                if self.final_maps.waiting(step, DeadlineSubmission.window_start(self.limit),
++                                           self.walltime_limit - self.elapsed_walltime):
++                    return command
++                if not self._prefer_own_submission(step):
++                    return command
++                if provisional_map(step, self.map_quality, self.map_revision,
++                                   self.walltime_limit-self.elapsed_walltime):
++                    return command
++                image, cache, versions = self._submission_image(step)
++                if image.any():
++                    self.submit_exploration_map(image.astype(np.uint8))
++                    self.submitted_cache = cache
++                    self.final_submission_versions = versions
++                    self.submission_elected_rank = self.final_maps.rank(self.map_quality or 0)
++                    self.red_submission_step = step
++                    self.submitted = True
++        else:
++            self.placement.update(self,command,step,ranges,semantic)
++        self.local_escape.apply(self,command,step,ranges,semantic)
++        return command
++

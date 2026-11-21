@@ -1,0 +1,53 @@
+{
+  "simulation_steps": 0,
+  "status": "GEOMETRY_ONLY",
+  "root_true_position_proxy": [
+    604.030517578125,
+    -285.6084899902344
+  ],
+  "root_proxy_step": 78,
+  "rows": [
+    {
+      "drone": 0,
+      "earliest_return": 3240,
+      "optimistic_trace_length_px": 2025.6607796852159,
+      "optimistic_steps": 1053,
+      "steps_to_soft_cutoff": 1350,
+      "optimistic_arrival": 4293
+    },
+    {
+      "drone": 1,
+      "earliest_return": 4027,
+      "optimistic_trace_length_px": 2444.3169786349595,
+      "optimistic_steps": 1263,
+      "steps_to_soft_cutoff": 563,
+      "optimistic_arrival": 5290
+    },
+    {
+      "drone": 2,
+      "earliest_return": 3240,
+      "optimistic_trace_length_px": 1421.648801653227,
+      "optimistic_steps": 751,
+      "steps_to_soft_cutoff": 1350,
+      "optimistic_arrival": 3991
+    },
+    {
+      "drone": 3,
+      "earliest_return": 3277,
+      "optimistic_trace_length_px": 2456.664555345138,
+      "optimistic_steps": 1269,
+      "steps_to_soft_cutoff": 1313,
+      "optimistic_arrival": 4546
+    },
+    {
+      "drone": 4,
+      "earliest_return": 3240,
+      "optimistic_trace_length_px": 2015.104779875809,
+      "optimistic_steps": 1048,
+      "steps_to_soft_cutoff": 1350,
+      "optimistic_arrival": 4288
+    }
+  ],
+  "limitation": "Existing original true-position trace only; optimistic short loop erasure without onboard known-segment certification. Not candidate routes, not proof of communication or collision-free joins. Actual local A/B may be closer than this root-only estimate.",
+  "unit_validation_sha256": "cfdc882fb31372a358d84b17effd6b71e41c5b4e8af2d58d72b0b74e704d53d3"
+}
