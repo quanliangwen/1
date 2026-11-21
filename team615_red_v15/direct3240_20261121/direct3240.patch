@@ -1,0 +1,47 @@
+diff --git a/red_hooks.py b/red_hooks.py
+index 6d2eb32..94ffef8 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -943,6 +943,33 @@ class RedHooks(LBBDRescue):
+     def _submission_window_open(self, step):
+         return step >= self.limit * 3 // 5 or self.elapsed_walltime >= .85 * self.walltime_limit
+ 
++    def _try_target_submission(self, step):
++        if (self.submitted or int(self.identifier) != 0 or step < self.limit * 3 // 5
++                or self.previous_inventory != 0 or self.pending_drop is not None
++                or not self._all_inventory_empty()
++                or any(not 0 <= self.inventory_records[peer][0] <= step
++                       for peer in range(self.team_size))):
++            return False
++        if provisional_map(step, self.map_quality, self.map_revision,
++                           self.walltime_limit-self.elapsed_walltime):
++            return False
++        # Submit current evidence without selecting an older prepared bitmap.
++        versions = {}
++        if self.final_maps.snapshots:
++            memory, versions = self.final_maps.fuse(self.memory)
++            image = self._render_submission(memory)
++        else:
++            image = self._render_submission()
++        if not image.any():
++            return False
++        self.submit_exploration_map(image.astype(np.uint8, copy=False))
++        self.submitted_cache = None
++        self.final_submission_versions = versions
++        self.submission_elected_rank = self.final_maps.rank(self.map_quality or 0)
++        self.red_submission_step = step
++        self.submitted = True
++        return True
++
+     def control(self):
+         step = int(self.elapsed_timestep)
+         before = self.previous_inventory
+@@ -1061,6 +1088,8 @@ class RedHooks(LBBDRescue):
+                     self.first_ready_to_submit_step = step
+                 if not self._submission_window_open(step):
+                     return command
++                if self._try_target_submission(step):
++                    return command
+                 if self.pre_submit_scan.waiting(self,step):
+                     self.pre_submit_scan.record_wait(self,step)
+                     return command
