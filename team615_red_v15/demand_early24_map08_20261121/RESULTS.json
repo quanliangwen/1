@@ -1,0 +1,670 @@
+{
+  "seed": 615,
+  "map_name": "Map08",
+  "new_red_rounds": 1,
+  "historical_red_rounds": 1,
+  "blue_rounds": 0,
+  "controller_source_changed_in_this_task": false,
+  "build": {
+    "original_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+    "candidate_zip_sha256": "411365532021c8bf0539aa4d97f7e61dcd3145631ada4e1ea0c363f013784ce5",
+    "changed_files": [
+      "messenger_run.py",
+      "red_hooks.py"
+    ],
+    "unchanged_files": 51,
+    "member_count": 53,
+    "original_files": {
+      "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+      "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+      "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+      "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+      "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+      "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+      "deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+      "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+      "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+      "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+      "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+      "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+      "fast_closeout.py": "d58d8332f786a86b0786825fcd491d2021dc5d7382f0ac13e4dd3bad33651634",
+      "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+      "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+      "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+      "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+      "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+      "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+      "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+      "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+      "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+      "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+      "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+      "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+      "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+      "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+      "messenger_run.py": "2b8876821584783ea41a0cb984043c0c3b8a30111e5612fb86531ed1c284c859",
+      "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+      "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+      "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+      "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+      "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+      "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+      "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+      "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+      "red_hooks.py": "1eca31e4c41a5ec1b2e54f732be63d22853c591bb53af0c097a92ce85966fd6c",
+      "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+      "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+      "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+      "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+      "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+      "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+      "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+      "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+      "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+      "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+      "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+      "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+      "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+      "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+      "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+      "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+    },
+    "candidate_files": {
+      "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+      "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+      "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+      "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+      "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+      "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+      "deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+      "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+      "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+      "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+      "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+      "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+      "fast_closeout.py": "d58d8332f786a86b0786825fcd491d2021dc5d7382f0ac13e4dd3bad33651634",
+      "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+      "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+      "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+      "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+      "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+      "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+      "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+      "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+      "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+      "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+      "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+      "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+      "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+      "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+      "messenger_run.py": "14d185b96146e7924845a39121a4e6cf0ad7af51e1849121a6490c8094021a01",
+      "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+      "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+      "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+      "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+      "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+      "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+      "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+      "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+      "red_hooks.py": "f50c6ade72ca20ddd9a5f58e17d214377ac7972b893ccd43dcff6ed1cbc9db53",
+      "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+      "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+      "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+      "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+      "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+      "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+      "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+      "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+      "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+      "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+      "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+      "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+      "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+      "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+      "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+      "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+    },
+    "compile": "PASS",
+    "patch_apply_check": "PASS",
+    "red_hooks_control_only_added_early_call": true,
+    "preserved_messenger_navigation_methods": [
+      "_can_activate",
+      "_alive_peers",
+      "_peer_point",
+      "_roll_exit_goal",
+      "_clear_exit",
+      "_tick_exit_zone"
+    ],
+    "package_role": "internal test ZIP; modified source and patch delivery, not competition release"
+  },
+  "observation_binding": {
+    "original_observer_sha256": "d1ddb299d5a7bff686188f483fd6626142236a30ea846b7f59fdca74d4a0dcb5",
+    "observer_sha256": "e86a3166e4dd8bba563bce4f25de22c2bc74d61b148e55389370fcc5ccc0d096",
+    "changes_only_after_match": true,
+    "controller_source_changed": false
+  },
+  "runs": {
+    "original": {
+      "source_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+      "map_score": 80.22956635015312,
+      "partial_score_out_of_80": 54.18268361012262,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.746031746031754,
+      "exploration_percent": 98.03741153488475,
+      "missed_wall_pixels": 14241,
+      "charged_misdraw_pixels": 55554,
+      "map_breakdown": {
+        "s_time": 0.27028850052091813,
+        "s_map": 0.8022956635015313,
+        "credit": 0.8526569548483218,
+        "penalty": 0.05036129134679055,
+        "wall_pixels": 96652,
+        "wall_hits": 82411,
+        "wall_hit_rate": 0.8526569548483218,
+        "wall_available": true,
+        "interior_pixels": 112654,
+        "interior_hits": 16714,
+        "interior_hit_rate": 0.1483657926039022,
+        "interior_available": true,
+        "predicted_pixels": 294705,
+        "exact_pixels": 99125,
+        "dead_zone_pixels": 140026,
+        "charged_pixels": 55554,
+        "capped_pixels": 9413,
+        "total_charge": 24337.59765625,
+        "truth_pixels": 209306,
+        "surface_pixels": 96652
+      },
+      "submission_step": 3444,
+      "selected_submission": {
+        "drone": 0,
+        "step": 3444,
+        "walltime_seconds": 130.1625199317932,
+        "image_sha256": "58574816975810bf4ffe1c9918ee56bce36267479a5fb137dda633da7b387cc2"
+      },
+      "placed": 10,
+      "official_bomb_layout": [
+        {
+          "x": -62.48680434384124,
+          "y": 126.0384570644275,
+          "theta": 0.0
+        },
+        {
+          "x": -371.84056809437453,
+          "y": -325.9435083627755,
+          "theta": 0.0
+        },
+        {
+          "x": -383.93613816453984,
+          "y": -195.4624415409219,
+          "theta": 0.0
+        },
+        {
+          "x": -706.7226161764866,
+          "y": -177.84838001323521,
+          "theta": 0.0
+        },
+        {
+          "x": -181.12532515050873,
+          "y": -156.4885712480484,
+          "theta": 0.0
+        },
+        {
+          "x": 142.30439103865308,
+          "y": 208.82534295391218,
+          "theta": 4.440892098500626e-16
+        },
+        {
+          "x": 431.2351673498616,
+          "y": -415.38638189798957,
+          "theta": -5.298477212534181e-10
+        },
+        {
+          "x": 84.96075503143555,
+          "y": -454.1745849309364,
+          "theta": 3.1704905367746505e-10
+        },
+        {
+          "x": 75.46089184220082,
+          "y": -396.48945811292685,
+          "theta": 4.0542325052683736e-10
+        },
+        {
+          "x": 359.83534087806714,
+          "y": 49.25253881856971,
+          "theta": 5.866928720621445e-09
+        }
+      ],
+      "total_health_lost": 14,
+      "final_health": {
+        "0": 24,
+        "1": 23,
+        "2": 23,
+        "3": 24,
+        "4": 17
+      },
+      "elapsed_walltime_seconds": 131.34806990623474,
+      "leader_first_confirmed_empty_steps": {
+        "0": 2309,
+        "1": 2082,
+        "3": 2385,
+        "2": 2385,
+        "4": 2538
+      },
+      "leader_empty_report_receipts": [
+        [
+          "stock",
+          2082,
+          2,
+          1,
+          0
+        ],
+        [
+          "stock",
+          2385,
+          3,
+          3,
+          0
+        ],
+        [
+          "stock",
+          2385,
+          3,
+          2,
+          0
+        ],
+        [
+          "stock",
+          2538,
+          4,
+          4,
+          0
+        ]
+      ],
+      "leader_team_clear_step": 2538,
+      "early_submission_event": null,
+      "legacy_target_visits": [
+        [
+          2490,
+          "target_picked",
+          1
+        ],
+        [
+          2503,
+          "target_picked",
+          0
+        ],
+        [
+          2570,
+          "target_picked",
+          3
+        ],
+        [
+          2592,
+          "target_picked",
+          2
+        ],
+        [
+          2867,
+          "target_picked",
+          3
+        ],
+        [
+          2888,
+          "target_picked",
+          1
+        ],
+        [
+          2919,
+          "target_picked",
+          0
+        ],
+        [
+          2946,
+          "target_picked",
+          2
+        ]
+      ],
+      "legacy_second_rounds": 1,
+      "delivery_tasks": [],
+      "delivery_without_new_fact_count": null,
+      "target0_visits": 2,
+      "trips_to0_started_after_leader_clear": 1,
+      "messenger_active_intervals": [
+        [
+          2489,
+          3176
+        ]
+      ],
+      "messenger_active_steps_after_leader_clear": 638,
+      "messenger_total_recorded_distance_pixels": 6926.664713010605,
+      "messenger_audit": [
+        [
+          2489,
+          "messenger_enter",
+          [
+            364.37782253967146,
+            60.028145477042905
+          ]
+        ],
+        [
+          2490,
+          "target_picked",
+          1
+        ],
+        [
+          2490,
+          "contact",
+          1,
+          60.6
+        ],
+        [
+          2502,
+          "exchange_complete",
+          1
+        ],
+        [
+          2503,
+          "target_picked",
+          0
+        ],
+        [
+          2557,
+          "contact",
+          0,
+          180.0
+        ],
+        [
+          2569,
+          "exchange_complete",
+          0
+        ],
+        [
+          2570,
+          "target_picked",
+          3
+        ],
+        [
+          2579,
+          "contact",
+          3,
+          179.7
+        ],
+        [
+          2591,
+          "exchange_complete",
+          3
+        ],
+        [
+          2592,
+          "target_picked",
+          2
+        ],
+        [
+          2866,
+          "target_unreachable",
+          2
+        ],
+        [
+          2867,
+          "second_round"
+        ],
+        [
+          2867,
+          "target_picked",
+          3
+        ],
+        [
+          2875,
+          "contact",
+          3,
+          179.2
+        ],
+        [
+          2887,
+          "exchange_complete",
+          3
+        ],
+        [
+          2888,
+          "target_picked",
+          1
+        ],
+        [
+          2906,
+          "contact",
+          1,
+          176.4
+        ],
+        [
+          2918,
+          "exchange_complete",
+          1
+        ],
+        [
+          2919,
+          "target_picked",
+          0
+        ],
+        [
+          2933,
+          "contact",
+          0,
+          173.7
+        ],
+        [
+          2945,
+          "exchange_complete",
+          0
+        ],
+        [
+          2946,
+          "target_picked",
+          2
+        ],
+        [
+          3175,
+          "target_unreachable",
+          2
+        ],
+        [
+          3176,
+          "messenger_done",
+          6
+        ]
+      ],
+      "messenger_final_receiver_empty": null,
+      "messenger_final_attempted_empty": null,
+      "deadline_events": {
+        "0": null,
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+      }
+    },
+    "candidate": {
+      "source_zip_sha256": "411365532021c8bf0539aa4d97f7e61dcd3145631ada4e1ea0c363f013784ce5",
+      "map_score": 68.00802892561715,
+      "partial_score_out_of_80": 49.89995722589697,
+      "wall_score": 44.46648630221442,
+      "time_score": 70.02645502645503,
+      "exploration_percent": 95.85731843994897,
+      "missed_wall_pixels": 28022,
+      "charged_misdraw_pixels": 34585,
+      "map_breakdown": {
+        "s_time": 0.44289082288742065,
+        "s_map": 0.6800802892561716,
+        "credit": 0.7100732524934817,
+        "penalty": 0.029992963237310145,
+        "wall_pixels": 96652,
+        "wall_hits": 68630,
+        "wall_hit_rate": 0.7100732524934817,
+        "wall_available": true,
+        "interior_pixels": 112654,
+        "interior_hits": 16456,
+        "interior_hit_rate": 0.14607559429758374,
+        "interior_available": true,
+        "predicted_pixels": 229065,
+        "exact_pixels": 85086,
+        "dead_zone_pixels": 109394,
+        "charged_pixels": 34585,
+        "capped_pixels": 5310,
+        "total_charge": 14494.3994140625,
+        "truth_pixels": 209306,
+        "surface_pixels": 96652
+      },
+      "submission_step": 2753,
+      "selected_submission": {
+        "drone": 0,
+        "step": 2753,
+        "walltime_seconds": 99.34019446372986,
+        "image_sha256": "b2089e4146c790dea9f73d39a3eb868f35b3ac4dbc40f569a4a85ecd9998c48c"
+      },
+      "placed": 10,
+      "official_bomb_layout": [
+        {
+          "x": -62.48680434384124,
+          "y": 126.0384570644275,
+          "theta": -1.3855583347321954e-13
+        },
+        {
+          "x": -371.84056809437453,
+          "y": -325.9435083627755,
+          "theta": 1.092459456231154e-13
+        },
+        {
+          "x": -383.93613816453984,
+          "y": -195.4624415409219,
+          "theta": -1.2878587085651816e-14
+        },
+        {
+          "x": -706.7226161764866,
+          "y": -177.84838001323521,
+          "theta": 4.631850458736153e-13
+        },
+        {
+          "x": -181.12532515050873,
+          "y": -156.4885712480484,
+          "theta": -5.373479439185758e-13
+        },
+        {
+          "x": 142.30439103865308,
+          "y": 208.82534295391218,
+          "theta": 5.05234964975898e-10
+        },
+        {
+          "x": 431.2351673498616,
+          "y": -415.38638189798957,
+          "theta": -0.00044449749046426845
+        },
+        {
+          "x": 84.96075503143555,
+          "y": -454.1745849309364,
+          "theta": 0.000265977398711037
+        },
+        {
+          "x": 75.46089184220082,
+          "y": -396.48945811292685,
+          "theta": 0.00034011584108206705
+        },
+        {
+          "x": 359.83534087806714,
+          "y": 49.25253881856971,
+          "theta": 0.00492185794206268
+        }
+      ],
+      "total_health_lost": 7,
+      "final_health": {
+        "0": 24,
+        "1": 23,
+        "2": 23,
+        "3": 24,
+        "4": 24
+      },
+      "elapsed_walltime_seconds": 100.27965188026428,
+      "leader_first_confirmed_empty_steps": {
+        "0": 2309,
+        "1": 2082,
+        "3": 2385,
+        "2": 2385,
+        "4": 2729
+      },
+      "leader_empty_report_receipts": [
+        [
+          "stock",
+          2082,
+          2,
+          1,
+          0
+        ],
+        [
+          "stock",
+          2385,
+          3,
+          3,
+          0
+        ],
+        [
+          "stock",
+          2385,
+          3,
+          2,
+          0
+        ],
+        [
+          "stock",
+          2729,
+          3,
+          4,
+          0
+        ]
+      ],
+      "leader_team_clear_step": 2729,
+      "early_submission_event": {
+        "ready_step": 2729,
+        "step": 2753,
+        "collection_steps": 24
+      },
+      "legacy_target_visits": [],
+      "legacy_second_rounds": 0,
+      "delivery_tasks": [],
+      "delivery_without_new_fact_count": null,
+      "target0_visits": 0,
+      "trips_to0_started_after_leader_clear": 0,
+      "messenger_active_intervals": [],
+      "messenger_active_steps_after_leader_clear": 0,
+      "messenger_total_recorded_distance_pixels": 5754.237999804127,
+      "messenger_audit": [],
+      "messenger_final_receiver_empty": [],
+      "messenger_final_attempted_empty": [],
+      "deadline_events": {
+        "0": null,
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+      }
+    }
+  },
+  "candidate_minus_original": {
+    "map_score": -12.221537424535967,
+    "partial_score_out_of_80": -4.282726384225654,
+    "wall_score": 0.0,
+    "time_score": 18.28042328042327,
+    "exploration_percent": -2.180093094935785,
+    "missed_wall_pixels": 13781,
+    "charged_misdraw_pixels": -20969,
+    "submission_step": -691,
+    "placed": 0,
+    "total_health_lost": -7,
+    "elapsed_walltime_seconds": -31.06841802597046
+  },
+  "official_bomb_layouts_identical": false,
+  "official_bomb_positions_identical": true,
+  "notes": [
+    "原版无载荷字段，不能把所有走访都追认成无效；分别统计走访、第二轮及0号已清零后的赴0行程。",
+    "清零后仍处于信使阶段的步数是行为统计，不等于这些步数全部无价值。",
+    "未重复启动原版，没有其他地图的新仿真；墙钟为历史原版与本次候选各一局。"
+  ]
+}
