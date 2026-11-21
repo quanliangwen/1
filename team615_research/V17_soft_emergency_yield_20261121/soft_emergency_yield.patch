@@ -1,0 +1,12 @@
+--- a/group_exchange.py
++++ b/group_exchange.py
+@@ -214,8 +214,7 @@
+         return drone._prefer_own_submission(step)
+ 
+     def yield_first_round(self, drone, step):
+-        if (drone.walltime_limit-drone.elapsed_walltime<PreSubmitScan.MIN_WALLTIME_LEFT
+-                or step>=DeadlineSubmission.window_start(drone.limit)):return False
++        if step>=DeadlineSubmission.window_start(drone.limit):return False
+         start=self.finish_floor(drone)
+         end=start+self.team_size*self.SUBMISSION_SLOT_STEPS
+         return (start<=step<end
