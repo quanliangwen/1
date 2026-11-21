@@ -1,0 +1,32 @@
+{
+  "status": "DESIGN_ONLY",
+  "date": "2026-11-21",
+  "baseline_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+  "sdk_commit": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "algorithm_files_changed": false,
+  "new_simulation_rounds": 0,
+  "files": {
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\red_hooks.py": "1eca31e4c41a5ec1b2e54f732be63d22853c591bb53af0c097a92ce85966fd6c",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\fast_closeout.py": "d58d8332f786a86b0786825fcd491d2021dc5d7382f0ac13e4dd3bad33651634",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+    "E:\\codex\\team615_messenger_batch1_20261121\\baseline\\rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+    "E:\\codex\\team615_return60_firstsplit_20261121\\candidate\\return_exchange.py": "a74b017a3ee4a97029345cdb4dc1fd4815ec5b9971a647ffde6ea786b4921d82",
+    "E:\\codex\\team615_return60_map09_20261121\\delivery\\RESULTS.json": "ad588c124d56816d802f62128078f79083f00cee9c762f51c676476519175d49",
+    "E:\\codex\\team615_direct3240_map08_20261121\\delivery\\RESULTS.json": "33fd38909c626fa320f49c809233c95f954786aa1a39d61e4d0184a725dadfd0"
+  },
+  "reference_hashes_rechecked": true,
+  "baseline_all_53_members_byte_identical": true,
+  "document_checks": {
+    "utf8": true,
+    "balanced_fences": true,
+    "numbered_sections": 15,
+    "table_structure_checked": 8,
+    "test_cases": 36
+  },
+  "validation_scope": "Document QA and reference hash checks only; no algorithm tests or simulations executed."
+}
