@@ -1,0 +1,1466 @@
+{
+  "seed": 615,
+  "map_name": "Map08",
+  "sdk": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "new_red_rounds": 1,
+  "historical_red_rounds": 2,
+  "blue_rounds": 0,
+  "source_changed_in_this_task": false,
+  "new_candidate_build": {
+    "parent_zip_sha256": "658dbb9e1fc19fd9afd76e8cfde7dd815476eed06dbbe30df62dac61e5dd8b42",
+    "candidate_zip_sha256": "2cbd4b56519659a13b38e75fa85eb689c2a5c2bdefc74d447ecc9b2fcb6a7e0e",
+    "changed_files": [
+      "red_hooks.py"
+    ],
+    "unchanged_files": 52,
+    "member_count": 53,
+    "parent_files": {
+      "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+      "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+      "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+      "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+      "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+      "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+      "deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+      "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+      "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+      "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+      "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+      "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+      "fast_closeout.py": "d58d8332f786a86b0786825fcd491d2021dc5d7382f0ac13e4dd3bad33651634",
+      "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+      "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+      "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+      "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+      "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+      "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+      "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+      "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+      "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+      "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+      "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+      "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+      "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+      "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+      "messenger_run.py": "9cfbf4c66e848f7ca215f322a4d1b06934ad1fbeaf9f87b2cb30ae5f515278dd",
+      "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+      "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+      "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+      "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+      "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+      "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+      "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+      "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+      "red_hooks.py": "342dbbcf0c09835618c06e1fa58e3bb27f87c186f6b5898f09ef7159211015fb",
+      "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+      "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+      "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+      "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+      "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+      "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+      "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+      "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+      "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+      "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+      "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+      "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+      "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+      "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+      "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+      "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+    },
+    "candidate_files": {
+      "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+      "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+      "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+      "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+      "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+      "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+      "deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+      "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+      "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+      "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+      "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+      "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+      "fast_closeout.py": "d58d8332f786a86b0786825fcd491d2021dc5d7382f0ac13e4dd3bad33651634",
+      "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+      "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+      "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+      "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+      "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+      "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+      "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+      "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+      "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+      "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+      "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+      "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+      "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+      "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+      "messenger_run.py": "9cfbf4c66e848f7ca215f322a4d1b06934ad1fbeaf9f87b2cb30ae5f515278dd",
+      "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+      "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+      "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+      "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+      "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+      "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+      "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+      "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+      "red_hooks.py": "5a2de446cd9a4f78dbcda54e79cbd4f6563f6d22ae7b09f4a4f60979cf9139ac",
+      "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+      "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+      "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+      "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+      "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+      "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+      "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+      "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+      "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+      "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+      "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+      "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+      "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+      "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+      "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+      "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+    },
+    "compile": "PASS",
+    "patch_apply_check": "PASS",
+    "control_before_scan_unchanged": true,
+    "control_after_scan_unchanged": true,
+    "preserved_control_suffix_sha256": "518c583974e128915cec08891a4d1092d8b48f602d55b29c2ae31128886f01c5",
+    "package_role": "internal test input; source patch delivery, not competition release"
+  },
+  "runs": {
+    "original": {
+      "source_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+      "map_score": 80.22956635015312,
+      "partial_score_out_of_80": 54.18268361012262,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.746031746031754,
+      "wall_surface_pixels": 96652,
+      "wall_hits": 82411,
+      "missed_wall_pixels": 14241,
+      "charged_misdraw_pixels": 55554,
+      "misdraw_total_charge": 24337.59765625,
+      "misdraw_penalty": 0.05036129134679055,
+      "predicted_wall_pixels": 294705,
+      "map_breakdown": {
+        "s_time": 0.27028850052091813,
+        "s_map": 0.8022956635015313,
+        "credit": 0.8526569548483218,
+        "penalty": 0.05036129134679055,
+        "wall_pixels": 96652,
+        "wall_hits": 82411,
+        "wall_hit_rate": 0.8526569548483218,
+        "wall_available": true,
+        "interior_pixels": 112654,
+        "interior_hits": 16714,
+        "interior_hit_rate": 0.1483657926039022,
+        "interior_available": true,
+        "predicted_pixels": 294705,
+        "exact_pixels": 99125,
+        "dead_zone_pixels": 140026,
+        "charged_pixels": 55554,
+        "capped_pixels": 9413,
+        "total_charge": 24337.59765625,
+        "truth_pixels": 209306,
+        "surface_pixels": 96652
+      },
+      "exploration_percent": 98.03741153488475,
+      "first_payload_ack_step": null,
+      "first_payload_ack_to0_step": null,
+      "first_all_empty_payload_ack_to0_step": null,
+      "legacy_unverified_exchange_to0_steps": [
+        2569,
+        2945
+      ],
+      "selected_submission": {
+        "drone": 0,
+        "step": 3444,
+        "walltime_seconds": 130.1625199317932,
+        "image_sha256": "58574816975810bf4ffe1c9918ee56bce36267479a5fb137dda633da7b387cc2"
+      },
+      "submission_step": 3444,
+      "placed": 10,
+      "total_health_lost": 14,
+      "final_health": {
+        "0": 24,
+        "1": 23,
+        "2": 23,
+        "3": 24,
+        "4": 17
+      },
+      "elapsed_walltime_seconds": 131.34806990623474,
+      "observed_placement_events": [
+        {
+          "drone": 0,
+          "step": 1220,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -62.48680434384124,
+            126.0384570644275
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 1236,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -371.84056809437453,
+            -325.9435083627755
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1272,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -383.93613816453984,
+            -195.4624415409219
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 1274,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -706.7226161764866,
+            -177.84838001323521
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 1348,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -181.12532515050873,
+            -156.4885712480484
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1692,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            142.30439103865308,
+            208.82534295391218
+          ]
+        },
+        {
+          "drone": 0,
+          "step": 2308,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            431.2351673498616,
+            -415.38638189798957
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 2314,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            84.96075503143555,
+            -454.1745849309364
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 2315,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            75.46089184220082,
+            -396.48945811292685
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 2488,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            359.83534087806714,
+            49.25253881856971
+          ]
+        }
+      ],
+      "official_bomb_layout": [
+        {
+          "x": -62.48680434384124,
+          "y": 126.0384570644275,
+          "theta": 0.0
+        },
+        {
+          "x": -371.84056809437453,
+          "y": -325.9435083627755,
+          "theta": 0.0
+        },
+        {
+          "x": -383.93613816453984,
+          "y": -195.4624415409219,
+          "theta": 0.0
+        },
+        {
+          "x": -706.7226161764866,
+          "y": -177.84838001323521,
+          "theta": 0.0
+        },
+        {
+          "x": -181.12532515050873,
+          "y": -156.4885712480484,
+          "theta": 0.0
+        },
+        {
+          "x": 142.30439103865308,
+          "y": 208.82534295391218,
+          "theta": 4.440892098500626e-16
+        },
+        {
+          "x": 431.2351673498616,
+          "y": -415.38638189798957,
+          "theta": -5.298477212534181e-10
+        },
+        {
+          "x": 84.96075503143555,
+          "y": -454.1745849309364,
+          "theta": 3.1704905367746505e-10
+        },
+        {
+          "x": 75.46089184220082,
+          "y": -396.48945811292685,
+          "theta": 4.0542325052683736e-10
+        },
+        {
+          "x": 359.83534087806714,
+          "y": 49.25253881856971,
+          "theta": 5.866928720621445e-09
+        }
+      ],
+      "last_drop_step": 2488,
+      "messenger_audit": [
+        [
+          2489,
+          "messenger_enter",
+          [
+            364.37782253967146,
+            60.028145477042905
+          ]
+        ],
+        [
+          2490,
+          "target_picked",
+          1
+        ],
+        [
+          2490,
+          "contact",
+          1,
+          60.6
+        ],
+        [
+          2502,
+          "exchange_complete",
+          1
+        ],
+        [
+          2503,
+          "target_picked",
+          0
+        ],
+        [
+          2557,
+          "contact",
+          0,
+          180.0
+        ],
+        [
+          2569,
+          "exchange_complete",
+          0
+        ],
+        [
+          2570,
+          "target_picked",
+          3
+        ],
+        [
+          2579,
+          "contact",
+          3,
+          179.7
+        ],
+        [
+          2591,
+          "exchange_complete",
+          3
+        ],
+        [
+          2592,
+          "target_picked",
+          2
+        ],
+        [
+          2866,
+          "target_unreachable",
+          2
+        ],
+        [
+          2867,
+          "second_round"
+        ],
+        [
+          2867,
+          "target_picked",
+          3
+        ],
+        [
+          2875,
+          "contact",
+          3,
+          179.2
+        ],
+        [
+          2887,
+          "exchange_complete",
+          3
+        ],
+        [
+          2888,
+          "target_picked",
+          1
+        ],
+        [
+          2906,
+          "contact",
+          1,
+          176.4
+        ],
+        [
+          2918,
+          "exchange_complete",
+          1
+        ],
+        [
+          2919,
+          "target_picked",
+          0
+        ],
+        [
+          2933,
+          "contact",
+          0,
+          173.7
+        ],
+        [
+          2945,
+          "exchange_complete",
+          0
+        ],
+        [
+          2946,
+          "target_picked",
+          2
+        ],
+        [
+          3175,
+          "target_unreachable",
+          2
+        ],
+        [
+          3176,
+          "messenger_done",
+          6
+        ]
+      ],
+      "active_messenger_refresh_steps": [],
+      "deadline_events": {
+        "0": null,
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+      }
+    },
+    "batch1": {
+      "source_zip_sha256": "658dbb9e1fc19fd9afd76e8cfde7dd815476eed06dbbe30df62dac61e5dd8b42",
+      "map_score": 73.07523867845465,
+      "partial_score_out_of_80": 50.60551977427339,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.746031746031754,
+      "wall_surface_pixels": 96652,
+      "wall_hits": 76705,
+      "missed_wall_pixels": 19947,
+      "charged_misdraw_pixels": 66374,
+      "misdraw_total_charge": 30381.6015625,
+      "misdraw_penalty": 0.06286802458821339,
+      "predicted_wall_pixels": 290940,
+      "map_breakdown": {
+        "s_time": 0.26902474429872303,
+        "s_map": 0.7307523867845466,
+        "credit": 0.79362041137276,
+        "penalty": 0.06286802458821339,
+        "wall_pixels": 96652,
+        "wall_hits": 76705,
+        "wall_hit_rate": 0.79362041137276,
+        "wall_available": true,
+        "interior_pixels": 112654,
+        "interior_hits": 16401,
+        "interior_hit_rate": 0.14558737372840733,
+        "interior_available": true,
+        "predicted_pixels": 290940,
+        "exact_pixels": 93106,
+        "dead_zone_pixels": 131460,
+        "charged_pixels": 66374,
+        "capped_pixels": 9777,
+        "total_charge": 30381.6015625,
+        "truth_pixels": 209306,
+        "surface_pixels": 96652
+      },
+      "exploration_percent": 97.26297442197253,
+      "first_payload_ack_step": 2623,
+      "first_payload_ack_to0_step": 2623,
+      "first_all_empty_payload_ack_to0_step": 2623,
+      "legacy_unverified_exchange_to0_steps": [],
+      "selected_submission": {
+        "drone": 0,
+        "step": 3444,
+        "walltime_seconds": 130.39569973945618,
+        "image_sha256": "0156b19d48627e973e40279b46655a7aad1bb085c81b9200ed94669a69130479"
+      },
+      "submission_step": 3444,
+      "placed": 10,
+      "total_health_lost": 17,
+      "final_health": {
+        "0": 22,
+        "1": 23,
+        "2": 23,
+        "3": 23,
+        "4": 17
+      },
+      "elapsed_walltime_seconds": 131.57554602622986,
+      "observed_placement_events": [
+        {
+          "drone": 0,
+          "step": 1220,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -62.48680434384124,
+            126.0384570644275
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 1236,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -371.84056809437453,
+            -325.9435083627755
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1272,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -383.93613816453984,
+            -195.4624415409219
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 1274,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -706.7226161764866,
+            -177.84838001323521
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 1348,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -181.12532515050873,
+            -156.4885712480484
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1692,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            142.30439103865308,
+            208.82534295391218
+          ]
+        },
+        {
+          "drone": 0,
+          "step": 2308,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            431.2351673498616,
+            -415.38638189798957
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 2314,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            84.96075503143555,
+            -454.1745849309364
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 2315,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            75.46089184220082,
+            -396.48945811292685
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 2488,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            359.83534087806714,
+            49.25253881856971
+          ]
+        }
+      ],
+      "official_bomb_layout": [
+        {
+          "x": -62.48680434384124,
+          "y": 126.0384570644275,
+          "theta": 0.0
+        },
+        {
+          "x": -371.84056809437453,
+          "y": -325.9435083627755,
+          "theta": 0.0
+        },
+        {
+          "x": -383.93613816453984,
+          "y": -195.4624415409219,
+          "theta": 0.0
+        },
+        {
+          "x": -706.7226161764866,
+          "y": -177.84838001323521,
+          "theta": 0.0
+        },
+        {
+          "x": -181.12532515050873,
+          "y": -156.4885712480484,
+          "theta": 0.0
+        },
+        {
+          "x": 142.30439103865308,
+          "y": 208.82534295391218,
+          "theta": 4.440892098500626e-16
+        },
+        {
+          "x": 431.2351673498616,
+          "y": -415.38638189798957,
+          "theta": -5.298477212534181e-10
+        },
+        {
+          "x": 84.96075503143555,
+          "y": -454.1745849309364,
+          "theta": 3.1704905367746505e-10
+        },
+        {
+          "x": 75.46089184220082,
+          "y": -396.48945811292685,
+          "theta": 4.0542325052683736e-10
+        },
+        {
+          "x": 359.83534087806714,
+          "y": 49.25253881856971,
+          "theta": 5.866928720621445e-09
+        }
+      ],
+      "last_drop_step": 2488,
+      "messenger_audit": [
+        [
+          2489,
+          "messenger_enter",
+          [
+            364.37782253967146,
+            60.028145477042905
+          ]
+        ],
+        [
+          2490,
+          "target_picked",
+          1
+        ],
+        [
+          2544,
+          "new_empty_report",
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          2610,
+          "target_unreachable",
+          1
+        ],
+        [
+          2611,
+          "redelivery",
+          0,
+          [
+            2,
+            3
+          ],
+          2811
+        ],
+        [
+          2611,
+          "target_picked",
+          0
+        ],
+        [
+          2611,
+          "contact",
+          0,
+          182.2
+        ],
+        [
+          2623,
+          "payload_ack",
+          0,
+          2612,
+          2610,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2623,
+          "exchange_complete",
+          0
+        ],
+        [
+          2624,
+          "target_picked",
+          3
+        ],
+        [
+          2624,
+          "contact",
+          3,
+          94.4
+        ],
+        [
+          2636,
+          "payload_ack",
+          3,
+          2625,
+          2613,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2636,
+          "exchange_complete",
+          3
+        ],
+        [
+          2637,
+          "target_picked",
+          2
+        ],
+        [
+          2855,
+          "target_unreachable",
+          2
+        ],
+        [
+          2856,
+          "second_round"
+        ],
+        [
+          2856,
+          "target_picked",
+          3
+        ],
+        [
+          2856,
+          "contact",
+          3,
+          153.4
+        ],
+        [
+          2879,
+          "payload_ack",
+          3,
+          2857,
+          2838,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2879,
+          "exchange_complete",
+          3
+        ],
+        [
+          2880,
+          "target_picked",
+          0
+        ],
+        [
+          2894,
+          "contact",
+          0,
+          172.8
+        ],
+        [
+          2906,
+          "payload_ack",
+          0,
+          2895,
+          2880,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2906,
+          "exchange_complete",
+          0
+        ],
+        [
+          2907,
+          "target_picked",
+          1
+        ],
+        [
+          2911,
+          "contact",
+          1,
+          151.2
+        ],
+        [
+          2923,
+          "payload_ack",
+          1,
+          2912,
+          2881,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2923,
+          "exchange_complete",
+          1
+        ],
+        [
+          2924,
+          "target_picked",
+          2
+        ],
+        [
+          3155,
+          "target_unreachable",
+          2
+        ],
+        [
+          3156,
+          "messenger_done",
+          5
+        ]
+      ],
+      "active_messenger_refresh_steps": [
+        2524,
+        2569,
+        2612,
+        2614,
+        2625,
+        2659,
+        2704,
+        2749,
+        2794,
+        2839,
+        2857,
+        2884,
+        2895,
+        2912,
+        2929,
+        2974,
+        3019,
+        3064,
+        3109,
+        3154
+      ],
+      "deadline_events": {
+        "0": null,
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+      }
+    },
+    "pose_guard": {
+      "source_zip_sha256": "2cbd4b56519659a13b38e75fa85eb689c2a5c2bdefc74d447ecc9b2fcb6a7e0e",
+      "map_score": 73.53099748323883,
+      "partial_score_out_of_80": 50.83339917666548,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.746031746031754,
+      "wall_surface_pixels": 96652,
+      "wall_hits": 76783,
+      "missed_wall_pixels": 19869,
+      "charged_misdraw_pixels": 64007,
+      "misdraw_total_charge": 28569.1015625,
+      "misdraw_penalty": 0.05911745553635724,
+      "predicted_wall_pixels": 287961,
+      "map_breakdown": {
+        "s_time": 0.09448898103502061,
+        "s_map": 0.7353099748323884,
+        "credit": 0.7944274303687456,
+        "penalty": 0.05911745553635724,
+        "wall_pixels": 96652,
+        "wall_hits": 76783,
+        "wall_hit_rate": 0.7944274303687456,
+        "wall_available": true,
+        "interior_pixels": 112654,
+        "interior_hits": 16008,
+        "interior_hit_rate": 0.1420988158432013,
+        "interior_available": true,
+        "predicted_pixels": 287961,
+        "exact_pixels": 92791,
+        "dead_zone_pixels": 131163,
+        "charged_pixels": 64007,
+        "capped_pixels": 8613,
+        "total_charge": 28569.1015625,
+        "truth_pixels": 209306,
+        "surface_pixels": 96652
+      },
+      "exploration_percent": 97.26297442197253,
+      "first_payload_ack_step": 2623,
+      "first_payload_ack_to0_step": 2623,
+      "first_all_empty_payload_ack_to0_step": 2623,
+      "legacy_unverified_exchange_to0_steps": [],
+      "selected_submission": {
+        "drone": 0,
+        "step": 3444,
+        "walltime_seconds": 161.6341781616211,
+        "image_sha256": "1fdd671e9e92fa4d4f71a7db275ee7b13f0dbdaf0fb239f462e09caac27c5c21"
+      },
+      "submission_step": 3444,
+      "placed": 10,
+      "total_health_lost": 17,
+      "final_health": {
+        "0": 22,
+        "1": 23,
+        "2": 23,
+        "3": 23,
+        "4": 17
+      },
+      "elapsed_walltime_seconds": 162.9919834136963,
+      "observed_placement_events": [
+        {
+          "drone": 0,
+          "step": 1220,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -62.48680434384124,
+            126.0384570644275
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 1236,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -371.84056809437453,
+            -325.9435083627755
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1272,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -383.93613816453984,
+            -195.4624415409219
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 1274,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -706.7226161764866,
+            -177.84838001323521
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 1348,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            -181.12532515050873,
+            -156.4885712480484
+          ]
+        },
+        {
+          "drone": 1,
+          "step": 1692,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            142.30439103865308,
+            208.82534295391218
+          ]
+        },
+        {
+          "drone": 0,
+          "step": 2308,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            431.2351673498616,
+            -415.38638189798957
+          ]
+        },
+        {
+          "drone": 2,
+          "step": 2314,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            84.96075503143555,
+            -454.1745849309364
+          ]
+        },
+        {
+          "drone": 3,
+          "step": 2315,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            75.46089184220082,
+            -396.48945811292685
+          ]
+        },
+        {
+          "drone": 4,
+          "step": 2488,
+          "event": "sdk_placement",
+          "accepted": true,
+          "physical_xy": [
+            359.83534087806714,
+            49.25253881856971
+          ]
+        }
+      ],
+      "official_bomb_layout": [
+        {
+          "x": -62.48680434384124,
+          "y": 126.0384570644275,
+          "theta": 0.0
+        },
+        {
+          "x": -371.84056809437453,
+          "y": -325.9435083627755,
+          "theta": 0.0
+        },
+        {
+          "x": -383.93613816453984,
+          "y": -195.4624415409219,
+          "theta": 0.0
+        },
+        {
+          "x": -706.7226161764866,
+          "y": -177.84838001323521,
+          "theta": 0.0
+        },
+        {
+          "x": -181.12532515050873,
+          "y": -156.4885712480484,
+          "theta": 0.0
+        },
+        {
+          "x": 142.30439103865308,
+          "y": 208.82534295391218,
+          "theta": 4.440892098500626e-16
+        },
+        {
+          "x": 431.2351673498616,
+          "y": -415.38638189798957,
+          "theta": -5.298477212534181e-10
+        },
+        {
+          "x": 84.96075503143555,
+          "y": -454.1745849309364,
+          "theta": 3.1704905367746505e-10
+        },
+        {
+          "x": 75.46089184220082,
+          "y": -396.48945811292685,
+          "theta": 4.0542325052683736e-10
+        },
+        {
+          "x": 359.83534087806714,
+          "y": 49.25253881856971,
+          "theta": 5.866928720621445e-09
+        }
+      ],
+      "last_drop_step": 2488,
+      "messenger_audit": [
+        [
+          2489,
+          "messenger_enter",
+          [
+            364.37782253967146,
+            60.028145477042905
+          ]
+        ],
+        [
+          2490,
+          "target_picked",
+          1
+        ],
+        [
+          2544,
+          "new_empty_report",
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          2610,
+          "target_unreachable",
+          1
+        ],
+        [
+          2611,
+          "redelivery",
+          0,
+          [
+            2,
+            3
+          ],
+          2811
+        ],
+        [
+          2611,
+          "target_picked",
+          0
+        ],
+        [
+          2611,
+          "contact",
+          0,
+          182.2
+        ],
+        [
+          2623,
+          "payload_ack",
+          0,
+          2612,
+          2610,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2623,
+          "exchange_complete",
+          0
+        ],
+        [
+          2624,
+          "target_picked",
+          3
+        ],
+        [
+          2624,
+          "contact",
+          3,
+          94.4
+        ],
+        [
+          2636,
+          "payload_ack",
+          3,
+          2625,
+          2613,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2636,
+          "exchange_complete",
+          3
+        ],
+        [
+          2637,
+          "target_picked",
+          2
+        ],
+        [
+          2855,
+          "target_unreachable",
+          2
+        ],
+        [
+          2856,
+          "second_round"
+        ],
+        [
+          2856,
+          "target_picked",
+          3
+        ],
+        [
+          2856,
+          "contact",
+          3,
+          153.4
+        ],
+        [
+          2879,
+          "payload_ack",
+          3,
+          2857,
+          2838,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2879,
+          "exchange_complete",
+          3
+        ],
+        [
+          2880,
+          "target_picked",
+          0
+        ],
+        [
+          2894,
+          "contact",
+          0,
+          172.8
+        ],
+        [
+          2906,
+          "payload_ack",
+          0,
+          2895,
+          2880,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2906,
+          "exchange_complete",
+          0
+        ],
+        [
+          2907,
+          "target_picked",
+          1
+        ],
+        [
+          2911,
+          "contact",
+          1,
+          151.2
+        ],
+        [
+          2923,
+          "payload_ack",
+          1,
+          2912,
+          2881,
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2923,
+          "exchange_complete",
+          1
+        ],
+        [
+          2924,
+          "target_picked",
+          2
+        ],
+        [
+          3155,
+          "target_unreachable",
+          2
+        ],
+        [
+          3156,
+          "messenger_done",
+          5
+        ]
+      ],
+      "active_messenger_refresh_steps": [
+        2524,
+        2569,
+        2612,
+        2614,
+        2625,
+        2659,
+        2704,
+        2749,
+        2794,
+        2839,
+        2857,
+        2884,
+        2895,
+        2912,
+        2929,
+        2974,
+        3019,
+        3064,
+        3109,
+        3154
+      ],
+      "deadline_events": {
+        "0": null,
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+      }
+    }
+  },
+  "pose_guard_minus": {
+    "original": {
+      "missed_wall_pixels": 5628,
+      "charged_misdraw_pixels": 8453,
+      "map_score": -6.698568866914286,
+      "partial_score_out_of_80": -3.349284433457143,
+      "exploration_percent": -0.7744371129122243,
+      "submission_step": 0,
+      "placed": 0,
+      "total_health_lost": 3,
+      "elapsed_walltime_seconds": 31.643913507461548,
+      "misdraw_penalty": 0.008756164189566693,
+      "wall_score": 0.0,
+      "time_score": 0.0
+    },
+    "batch1": {
+      "missed_wall_pixels": -78,
+      "charged_misdraw_pixels": -2367,
+      "map_score": 0.45575880478418185,
+      "partial_score_out_of_80": 0.22787940239209092,
+      "exploration_percent": 0.0,
+      "submission_step": 0,
+      "placed": 0,
+      "total_health_lost": 0,
+      "elapsed_walltime_seconds": 31.41643738746643,
+      "misdraw_penalty": -0.0037505690518561466,
+      "wall_score": 0.0,
+      "time_score": 0.0
+    }
+  },
+  "placements_identical": {
+    "original": true,
+    "batch1": true
+  },
+  "raw_placement_event_logs_identical": {
+    "original": true,
+    "batch1": true
+  },
+  "recorded_trajectory_comparison_to_batch1": {
+    "drone_state_arrays_identical": true,
+    "bomb_state_arrays_identical": true,
+    "recorded_frames": 3443,
+    "walltime_delta_at_frame_2160": 17.232803344726562,
+    "walltime_delta_at_frame_2488": 20.35955810546875
+  },
+  "definitions": {
+    "missed_wall_pixels": "truth wall surface pixels not hit by submission",
+    "charged_misdraw_pixels": "predicted pixels farther than 10px from any truth wall",
+    "payload_ack": "fresh direct peer receipt acknowledging outbound map version and pinned empty inventory IDs",
+    "elapsed_walltime_seconds": "SDK round elapsed including post-submission cleanup"
+  }
+}
