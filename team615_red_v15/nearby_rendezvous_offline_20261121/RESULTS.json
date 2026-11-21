@@ -1,0 +1,4541 @@
+{
+  "new_matches": 0,
+  "simulation_steps": 0,
+  "seed": 615,
+  "map": "Map08",
+  "alignment_checks": 572,
+  "input_sha256": {
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/official_sdk/results_swarm_rescue/team615_261121_12h09min01s/recordings/team615_Map08_no_com_zone__no_gps_zone_rd1.npz": "6b8b0c0a8085edd0b26783217fda89b6ac3a5a5b5d71c886cec028e2faaf6d39",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/wall_geometry.npz": "94196e6474ead6f4eded0d66b7fc831edf7fdf0165194e39f6e14d9a14017610",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/OFFICIAL_SCORE.json": "f0c1b29480e6710541ceee1f3885f6277be3d9a4b1f64f3ccd0bc7ce51b704b3",
+    "/home/quanliangwen/isolated_test/team615_messenger_batch1_32QMQI/Map08_baseline/placement_events.jsonl": "c4e04ded9b6c614cff99fa22e1cd8b0666beb8dfcd2b7406b8ac57ad172057cf"
+  },
+  "baseline_zip_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+  "nominal_speed": 2.0,
+  "radio_planning_radius": 160.0,
+  "wall_clearance": 23.0,
+  "notes": [
+    "Truth-map static geometry only; no controller, physics, new trajectories or score predictions.",
+    "Departure examples sampled every 5 steps and are not proofs of the unique optimal schedule.",
+    "24-step communication and 12-step hub settling reserves are assumptions, not observed communication tests.",
+    "Short start connectors may retain existing 18px clearance; route bodies checked at 23px.",
+    "NoGPS navigation uncertainty, drone collisions, congestion, online map visibility not modelled."
+  ],
+  "own_last_drop_confirmations": {
+    "0": 2309,
+    "1": 1693,
+    "2": 2315,
+    "3": 2316,
+    "4": 2489
+  },
+  "candidates": {
+    "origin": {
+      "center": [
+        0,
+        0
+      ],
+      "clearance": 96.0,
+      "gps_margin": 127.0,
+      "at3240": [
+        {
+          "drone": 0,
+          "position": [
+            577.6631469726562,
+            -159.56887817382812
+          ],
+          "route": {
+            "grid_length_pixels": 1170.4923622675617,
+            "route_length_pixels": 1146.561735537006,
+            "start_clearance_pixels": 41.0,
+            "connector_pixels": 4.231864893100239,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                577.66,
+                -159.57
+              ],
+              [
+                556.5,
+                42.5
+              ],
+              [
+                516.5,
+                74.5
+              ],
+              [
+                234.5,
+                74.5
+              ],
+              [
+                152.5,
+                -17.5
+              ],
+              [
+                152.5,
+                -203.5
+              ],
+              [
+                138.5,
+                -215.5
+              ],
+              [
+                112.5,
+                -215.5
+              ],
+              [
+                76.5,
+                -175.5
+              ],
+              [
+                72.5,
+                -83.5
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "end_distance_from_origin": 0.0,
+            "route_sample_fraction_in_no_gps": 0.44293015332197616,
+            "end_distance_from_hub": 0.0
+          },
+          "required_steps": {
+            "1.5": 777,
+            "2.0": 586,
+            "2.8": 422
+          }
+        },
+        {
+          "drone": 1,
+          "position": [
+            642.6339111328125,
+            -470.6011962890625
+          ],
+          "route": {
+            "grid_length_pixels": 900.5549171440199,
+            "route_length_pixels": 839.2107130465837,
+            "start_clearance_pixels": 24.0,
+            "connector_pixels": 6.231973929044163,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                642.63,
+                -470.6
+              ],
+              [
+                610.5,
+                -461.5
+              ],
+              [
+                550.5,
+                -335.5
+              ],
+              [
+                406.5,
+                -263.5
+              ],
+              [
+                372.5,
+                -261.5
+              ],
+              [
+                356.5,
+                -241.5
+              ],
+              [
+                270.5,
+                68.5
+              ],
+              [
+                256.5,
+                74.5
+              ],
+              [
+                234.5,
+                74.5
+              ],
+              [
+                152.5,
+                46.5
+              ]
+            ],
+            "end_distance_from_origin": 159.43180360266894,
+            "route_sample_fraction_in_no_gps": 0.7430555555555556,
+            "end_distance_from_hub": 159.43180360266894
+          },
+          "required_steps": {
+            "1.5": 584,
+            "2.0": 444,
+            "2.8": 324
+          }
+        },
+        {
+          "drone": 2,
+          "position": [
+            86.55370330810547,
+            -452.7078552246094
+          ],
+          "route": {
+            "grid_length_pixels": 315.26478523800967,
+            "route_length_pixels": 307.8616853849697,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.808941115293988,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                86.55,
+                -452.71
+              ],
+              [
+                66.5,
+                -145.5
+              ]
+            ],
+            "end_distance_from_origin": 159.97656078313472,
+            "route_sample_fraction_in_no_gps": 0.0,
+            "end_distance_from_hub": 159.97656078313472
+          },
+          "required_steps": {
+            "1.5": 230,
+            "2.0": 178,
+            "2.8": 134
+          }
+        },
+        {
+          "drone": 3,
+          "position": [
+            597.6246337890625,
+            2.847615957260132
+          ],
+          "route": {
+            "grid_length_pixels": 486.571085547001,
+            "route_length_pixels": 473.7397935205718,
+            "start_clearance_pixels": 31.016124725341797,
+            "connector_pixels": 4.806583559183372,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                597.62,
+                2.85
+              ],
+              [
+                534.5,
+                62.5
+              ],
+              [
+                234.5,
+                74.5
+              ],
+              [
+                152.5,
+                46.5
+              ]
+            ],
+            "end_distance_from_origin": 159.43180360266894,
+            "route_sample_fraction_in_no_gps": 0.1322314049586777,
+            "end_distance_from_hub": 159.43180360266894
+          },
+          "required_steps": {
+            "1.5": 340,
+            "2.0": 261,
+            "2.8": 194
+          }
+        },
+        {
+          "drone": 4,
+          "position": [
+            411.44439697265625,
+            -315.2732849121094
+          ],
+          "route": {
+            "grid_length_pixels": 573.9628339613647,
+            "route_length_pixels": 537.2588598028434,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.8896741084459174,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                411.44,
+                -315.27
+              ],
+              [
+                356.5,
+                -239.5
+              ],
+              [
+                270.5,
+                68.5
+              ],
+              [
+                256.5,
+                74.5
+              ],
+              [
+                234.5,
+                74.5
+              ],
+              [
+                152.5,
+                46.5
+              ]
+            ],
+            "end_distance_from_origin": 159.43180360266894,
+            "route_sample_fraction_in_no_gps": 0.7163636363636363,
+            "end_distance_from_hub": 159.43180360266894
+          },
+          "required_steps": {
+            "1.5": 383,
+            "2.0": 293,
+            "2.8": 216
+          }
+        }
+      ],
+      "schedules": {
+        "same_window": {
+          "hub_ready_by": 3240,
+          "exchange_by": 3420,
+          "rows": [
+            {
+              "depart_step": 2750,
+              "required_steps": 482,
+              "ready_or_exchange_done": 3232,
+              "position": [
+                547.5099487304688,
+                134.03903198242188
+              ],
+              "route": {
+                "grid_length_pixels": 961.3916950988572,
+                "route_length_pixels": 939.4141180609531,
+                "start_clearance_pixels": 26.925823211669922,
+                "connector_pixels": 4.645916350156915,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    547.51,
+                    134.04
+                  ],
+                  [
+                    446.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    -17.5
+                  ],
+                  [
+                    152.5,
+                    -203.5
+                  ],
+                  [
+                    138.5,
+                    -215.5
+                  ],
+                  [
+                    112.5,
+                    -215.5
+                  ],
+                  [
+                    76.5,
+                    -175.5
+                  ],
+                  [
+                    72.5,
+                    -83.5
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "end_distance_from_origin": 0.0,
+                "route_sample_fraction_in_no_gps": 0.31950207468879666,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 670,
+              "before3240": 490
+            },
+            {
+              "depart_step": 2990,
+              "required_steps": 429,
+              "ready_or_exchange_done": 3419,
+              "position": [
+                615.3047485351562,
+                -460.6904296875
+              ],
+              "route": {
+                "grid_length_pixels": 867.6963544254804,
+                "route_length_pixels": 808.8570736075376,
+                "start_clearance_pixels": 23.021728515625,
+                "connector_pixels": 7.515546834235848,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    615.3,
+                    -460.69
+                  ],
+                  [
+                    608.5,
+                    -457.5
+                  ],
+                  [
+                    550.5,
+                    -335.5
+                  ],
+                  [
+                    406.5,
+                    -263.5
+                  ],
+                  [
+                    372.5,
+                    -261.5
+                  ],
+                  [
+                    356.5,
+                    -241.5
+                  ],
+                  [
+                    270.5,
+                    68.5
+                  ],
+                  [
+                    256.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.7697841726618705,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 429,
+              "before3240": 250
+            },
+            {
+              "depart_step": 3240,
+              "required_steps": 178,
+              "ready_or_exchange_done": 3418,
+              "position": [
+                86.55370330810547,
+                -452.7078552246094
+              ],
+              "route": {
+                "grid_length_pixels": 315.26478523800967,
+                "route_length_pixels": 307.8616853849697,
+                "start_clearance_pixels": 36.0,
+                "connector_pixels": 3.808941115293988,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    86.55,
+                    -452.71
+                  ],
+                  [
+                    66.5,
+                    -145.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.97656078313472,
+                "route_sample_fraction_in_no_gps": 0.0,
+                "end_distance_from_hub": 159.97656078313472
+              },
+              "original_task_steps_displaced": 178,
+              "before3240": 0
+            },
+            {
+              "depart_step": 3045,
+              "required_steps": 375,
+              "ready_or_exchange_done": 3420,
+              "position": [
+                606.549560546875,
+                -235.4315643310547
+              ],
+              "route": {
+                "grid_length_pixels": 728.1823171642941,
+                "route_length_pixels": 700.2321469419995,
+                "start_clearance_pixels": 24.698177337646484,
+                "connector_pixels": 6.275679552745407,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    606.55,
+                    -235.43
+                  ],
+                  [
+                    556.5,
+                    -35.5
+                  ],
+                  [
+                    556.5,
+                    42.5
+                  ],
+                  [
+                    532.5,
+                    62.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.4134078212290503,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 375,
+              "before3240": 195
+            },
+            {
+              "depart_step": 3130,
+              "required_steps": 288,
+              "ready_or_exchange_done": 3418,
+              "position": [
+                269.2911682128906,
+                -331.84814453125
+              ],
+              "route": {
+                "grid_length_pixels": 535.0044915472783,
+                "route_length_pixels": 526.3521811814244,
+                "start_clearance_pixels": 18.0,
+                "connector_pixels": 15.264376177100731,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    269.29,
+                    -331.85
+                  ],
+                  [
+                    274.5,
+                    -317.5
+                  ],
+                  [
+                    274.5,
+                    62.5
+                  ],
+                  [
+                    260.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.7074074074074074,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 288,
+              "before3240": 110
+            }
+          ],
+          "total_task_steps_displaced": 1940,
+          "nonidle_task_steps_displaced": 1762
+        },
+        "minimal_late_host": {
+          "hub_ready_by": 3340,
+          "exchange_by": 3400,
+          "rows": [
+            {
+              "depart_step": 2805,
+              "required_steps": 529,
+              "ready_or_exchange_done": 3334,
+              "position": [
+                655.42138671875,
+                106.59989929199219
+              ],
+              "route": {
+                "grid_length_pixels": 1057.326891905386,
+                "route_length_pixels": 1032.3062509438773,
+                "start_clearance_pixels": 29.120439529418945,
+                "connector_pixels": 5.350665778386666,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    655.42,
+                    106.6
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    -17.5
+                  ],
+                  [
+                    152.5,
+                    -203.5
+                  ],
+                  [
+                    138.5,
+                    -215.5
+                  ],
+                  [
+                    112.5,
+                    -215.5
+                  ],
+                  [
+                    76.5,
+                    -175.5
+                  ],
+                  [
+                    72.5,
+                    -83.5
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "end_distance_from_origin": 0.0,
+                "route_sample_fraction_in_no_gps": 0.2916666666666667,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 595,
+              "before3240": 435
+            },
+            {
+              "depart_step": 2975,
+              "required_steps": 420,
+              "ready_or_exchange_done": 3395,
+              "position": [
+                592.368896484375,
+                -449.9681396484375
+              ],
+              "route": {
+                "grid_length_pixels": 845.568210931466,
+                "route_length_pixels": 790.6866138335306,
+                "start_clearance_pixels": 36.878177642822266,
+                "connector_pixels": 4.843247462937282,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    592.37,
+                    -449.97
+                  ],
+                  [
+                    552.5,
+                    -337.5
+                  ],
+                  [
+                    426.5,
+                    -263.5
+                  ],
+                  [
+                    372.5,
+                    -261.5
+                  ],
+                  [
+                    356.5,
+                    -241.5
+                  ],
+                  [
+                    270.5,
+                    68.5
+                  ],
+                  [
+                    256.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.7886977886977887,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 420,
+              "before3240": 265
+            },
+            {
+              "depart_step": 3220,
+              "required_steps": 179,
+              "ready_or_exchange_done": 3399,
+              "position": [
+                87.69791412353516,
+                -452.8885498046875
+              ],
+              "route": {
+                "grid_length_pixels": 315.87833135077295,
+                "route_length_pixels": 308.11860072741086,
+                "start_clearance_pixels": 35.0,
+                "connector_pixels": 3.594060103311114,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    87.7,
+                    -452.89
+                  ],
+                  [
+                    66.5,
+                    -145.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.97656078313472,
+                "route_sample_fraction_in_no_gps": 0.0,
+                "end_distance_from_hub": 159.97656078313472
+              },
+              "original_task_steps_displaced": 179,
+              "before3240": 20
+            },
+            {
+              "depart_step": 3025,
+              "required_steps": 369,
+              "ready_or_exchange_done": 3394,
+              "position": [
+                590.2291259765625,
+                -270.5359191894531
+              ],
+              "route": {
+                "grid_length_pixels": 726.6886629374093,
+                "route_length_pixels": 689.1172453013879,
+                "start_clearance_pixels": 41.62931823730469,
+                "connector_pixels": 3.8703370804298736,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    590.23,
+                    -270.54
+                  ],
+                  [
+                    372.5,
+                    -261.5
+                  ],
+                  [
+                    356.5,
+                    -241.5
+                  ],
+                  [
+                    270.5,
+                    68.5
+                  ],
+                  [
+                    256.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.7784090909090909,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 369,
+              "before3240": 215
+            },
+            {
+              "depart_step": 3110,
+              "required_steps": 288,
+              "ready_or_exchange_done": 3398,
+              "position": [
+                270.477294921875,
+                -332.4561462402344
+              ],
+              "route": {
+                "grid_length_pixels": 535.2278029478907,
+                "route_length_pixels": 526.5754925820368,
+                "start_clearance_pixels": 19.0,
+                "connector_pixels": 15.487687577713126,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    270.48,
+                    -332.46
+                  ],
+                  [
+                    274.5,
+                    -317.5
+                  ],
+                  [
+                    274.5,
+                    62.5
+                  ],
+                  [
+                    260.5,
+                    74.5
+                  ],
+                  [
+                    234.5,
+                    74.5
+                  ],
+                  [
+                    152.5,
+                    46.5
+                  ]
+                ],
+                "end_distance_from_origin": 159.43180360266894,
+                "route_sample_fraction_in_no_gps": 0.7074074074074074,
+                "end_distance_from_hub": 159.43180360266894
+              },
+              "original_task_steps_displaced": 288,
+              "before3240": 130
+            }
+          ],
+          "total_task_steps_displaced": 1851,
+          "nonidle_task_steps_displaced": 1672
+        }
+      }
+    },
+    "middle": {
+      "center": [
+        460,
+        80
+      ],
+      "clearance": 46.0,
+      "gps_margin": 34.5,
+      "at3240": [
+        {
+          "drone": 0,
+          "position": [
+            577.6631469726562,
+            -159.56887817382812
+          ],
+          "route": {
+            "grid_length_pixels": 324.13493116717996,
+            "route_length_pixels": 312.8975774041291,
+            "start_clearance_pixels": 41.0,
+            "connector_pixels": 4.231864893100239,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                577.66,
+                -159.57
+              ],
+              [
+                556.5,
+                42.5
+              ],
+              [
+                508.5,
+                80.5
+              ],
+              [
+                460.0,
+                80.0
+              ]
+            ],
+            "end_distance_from_origin": 466.9047011971501,
+            "route_sample_fraction_in_no_gps": 0.6583850931677019,
+            "end_distance_from_hub": 0.0
+          },
+          "required_steps": {
+            "1.5": 221,
+            "2.0": 169,
+            "2.8": 124
+          }
+        },
+        {
+          "drone": 1,
+          "position": [
+            642.6339111328125,
+            -470.6011962890625
+          ],
+          "route": {
+            "grid_length_pixels": 471.9132147961761,
+            "route_length_pixels": 451.6147539944718,
+            "start_clearance_pixels": 24.0,
+            "connector_pixels": 6.231973929044163,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                642.63,
+                -470.6
+              ],
+              [
+                610.5,
+                -461.5
+              ],
+              [
+                602.5,
+                -441.5
+              ],
+              [
+                556.5,
+                -47.5
+              ]
+            ],
+            "end_distance_from_origin": 558.5234999532249,
+            "route_sample_fraction_in_no_gps": 0.8521739130434782,
+            "end_distance_from_hub": 159.9015322002888
+          },
+          "required_steps": {
+            "1.5": 326,
+            "2.0": 250,
+            "2.8": 186
+          }
+        },
+        {
+          "drone": 2,
+          "position": [
+            86.55370330810547,
+            -452.7078552246094
+          ],
+          "route": {
+            "grid_length_pixels": 655.398873176354,
+            "route_length_pixels": 618.4025963084828,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.752120194627733,
+            "checked_grid_min_clearance_pixels": 24.0,
+            "waypoints": [
+              [
+                86.55,
+                -452.71
+              ],
+              [
+                100.5,
+                -319.5
+              ],
+              [
+                154.5,
+                -193.5
+              ],
+              [
+                224.5,
+                66.5
+              ],
+              [
+                238.5,
+                74.5
+              ],
+              [
+                300.5,
+                74.5
+              ]
+            ],
+            "end_distance_from_origin": 309.5973191098398,
+            "route_sample_fraction_in_no_gps": 0.509493670886076,
+            "end_distance_from_hub": 159.594799414016
+          },
+          "required_steps": {
+            "1.5": 437,
+            "2.0": 334,
+            "2.8": 245
+          }
+        },
+        {
+          "drone": 3,
+          "position": [
+            597.6246337890625,
+            2.847615957260132
+          ],
+          "route": {
+            "grid_length_pixels": 0.0,
+            "route_length_pixels": 0.0,
+            "start_clearance_pixels": 31.016124725341797,
+            "connector_pixels": 0.0,
+            "checked_grid_min_clearance_pixels": 31.016124725341797,
+            "waypoints": [
+              [
+                597.6246337890625,
+                2.847615957260132
+              ],
+              [
+                597.6246337890625,
+                2.847615957260132
+              ]
+            ],
+            "end_distance_from_origin": 597.6314180397071,
+            "route_sample_fraction_in_no_gps": null,
+            "already_in_contact": true
+          },
+          "required_steps": {
+            "1.5": 24,
+            "2.0": 24,
+            "2.8": 24
+          }
+        },
+        {
+          "drone": 4,
+          "position": [
+            411.44439697265625,
+            -315.2732849121094
+          ],
+          "route": {
+            "grid_length_pixels": 287.57091497557786,
+            "route_length_pixels": 282.02398750559877,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.8896741084459174,
+            "checked_grid_min_clearance_pixels": 24.351591110229492,
+            "waypoints": [
+              [
+                411.44,
+                -315.27
+              ],
+              [
+                360.5,
+                -245.5
+              ],
+              [
+                362.5,
+                -65.5
+              ],
+              [
+                372.5,
+                -53.5
+              ]
+            ],
+            "end_distance_from_origin": 376.32233523935304,
+            "route_sample_fraction_in_no_gps": 1.0,
+            "end_distance_from_hub": 159.61986091962365
+          },
+          "required_steps": {
+            "1.5": 213,
+            "2.0": 166,
+            "2.8": 125
+          }
+        }
+      ],
+      "schedules": {
+        "same_window": {
+          "hub_ready_by": 3240,
+          "exchange_by": 3420,
+          "rows": [
+            {
+              "depart_step": 3025,
+              "required_steps": 215,
+              "ready_or_exchange_done": 3240,
+              "position": [
+                638.832275390625,
+                -208.2586669921875
+              ],
+              "route": {
+                "grid_length_pixels": 424.5685240536274,
+                "route_length_pixels": 404.13334672322327,
+                "start_clearance_pixels": 23.600847244262695,
+                "connector_pixels": 5.410623783608488,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    638.83,
+                    -208.26
+                  ],
+                  [
+                    628.5,
+                    -213.5
+                  ],
+                  [
+                    606.5,
+                    -211.5
+                  ],
+                  [
+                    590.5,
+                    -191.5
+                  ],
+                  [
+                    554.5,
+                    44.5
+                  ],
+                  [
+                    504.5,
+                    80.5
+                  ],
+                  [
+                    460.0,
+                    80.0
+                  ]
+                ],
+                "end_distance_from_origin": 466.9047011971501,
+                "route_sample_fraction_in_no_gps": 0.7393364928909952,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 395,
+              "before3240": 215
+            },
+            {
+              "depart_step": 3105,
+              "required_steps": 312,
+              "ready_or_exchange_done": 3417,
+              "position": [
+                765.9105834960938,
+                -468.2292175292969
+              ],
+              "route": {
+                "grid_length_pixels": 594.0843405853213,
+                "route_length_pixels": 574.8753289499607,
+                "start_clearance_pixels": 26.0,
+                "connector_pixels": 6.059953967681884,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    765.91,
+                    -468.23
+                  ],
+                  [
+                    616.5,
+                    -465.5
+                  ],
+                  [
+                    602.5,
+                    -447.5
+                  ],
+                  [
+                    556.5,
+                    -47.5
+                  ]
+                ],
+                "end_distance_from_origin": 558.5234999532249,
+                "route_sample_fraction_in_no_gps": 0.6712328767123288,
+                "end_distance_from_hub": 159.9015322002888
+              },
+              "original_task_steps_displaced": 312,
+              "before3240": 135
+            },
+            {
+              "depart_step": 3085,
+              "required_steps": 333,
+              "ready_or_exchange_done": 3418,
+              "position": [
+                89.17044830322266,
+                -452.2625732421875
+              ],
+              "route": {
+                "grid_length_pixels": 653.7630009324125,
+                "route_length_pixels": 617.7117827218538,
+                "start_clearance_pixels": 34.0,
+                "connector_pixels": 4.9446750754325475,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    89.17,
+                    -452.26
+                  ],
+                  [
+                    100.5,
+                    -319.5
+                  ],
+                  [
+                    154.5,
+                    -193.5
+                  ],
+                  [
+                    224.5,
+                    66.5
+                  ],
+                  [
+                    238.5,
+                    74.5
+                  ],
+                  [
+                    300.5,
+                    74.5
+                  ]
+                ],
+                "end_distance_from_origin": 309.5973191098398,
+                "route_sample_fraction_in_no_gps": 0.509493670886076,
+                "end_distance_from_hub": 159.594799414016
+              },
+              "original_task_steps_displaced": 333,
+              "before3240": 155
+            },
+            {
+              "depart_step": 3320,
+              "required_steps": 94,
+              "ready_or_exchange_done": 3414,
+              "position": [
+                739.27880859375,
+                157.49583435058594
+              ],
+              "route": {
+                "grid_length_pixels": 145.62471730244303,
+                "route_length_pixels": 139.15043928488353,
+                "start_clearance_pixels": 29.017236709594727,
+                "connector_pixels": 5.056174807519343,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    739.28,
+                    157.5
+                  ],
+                  [
+                    716.5,
+                    128.5
+                  ],
+                  [
+                    646.5,
+                    110.5
+                  ],
+                  [
+                    616.5,
+                    110.5
+                  ]
+                ],
+                "end_distance_from_origin": 626.3245963555958,
+                "route_sample_fraction_in_no_gps": 0.0,
+                "end_distance_from_hub": 159.44434765773292
+              },
+              "original_task_steps_displaced": 94,
+              "before3240": 0
+            },
+            {
+              "depart_step": 3245,
+              "required_steps": 170,
+              "ready_or_exchange_done": 3415,
+              "position": [
+                425.2663269042969,
+                -314.6228332519531
+              ],
+              "route": {
+                "grid_length_pixels": 293.63732183748095,
+                "route_length_pixels": 290.9060925300626,
+                "start_clearance_pixels": 36.0,
+                "connector_pixels": 2.9855182218717675,
+                "checked_grid_min_clearance_pixels": 24.351591110229492,
+                "waypoints": [
+                  [
+                    425.27,
+                    -314.62
+                  ],
+                  [
+                    360.5,
+                    -247.5
+                  ],
+                  [
+                    362.5,
+                    -65.5
+                  ],
+                  [
+                    372.5,
+                    -53.5
+                  ]
+                ],
+                "end_distance_from_origin": 376.32233523935304,
+                "route_sample_fraction_in_no_gps": 1.0,
+                "end_distance_from_hub": 159.61986091962365
+              },
+              "original_task_steps_displaced": 170,
+              "before3240": 0
+            }
+          ],
+          "total_task_steps_displaced": 1304,
+          "nonidle_task_steps_displaced": 971
+        },
+        "minimal_late_host": {
+          "hub_ready_by": 3340,
+          "exchange_by": 3400,
+          "rows": [
+            {
+              "depart_step": 3070,
+              "required_steps": 267,
+              "ready_or_exchange_done": 3337,
+              "position": [
+                736.851806640625,
+                -170.96759033203125
+              ],
+              "route": {
+                "grid_length_pixels": 537.9330250506955,
+                "route_length_pixels": 508.9483748131441,
+                "start_clearance_pixels": 77.0,
+                "connector_pixels": 5.035009410498598,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    736.85,
+                    -170.97
+                  ],
+                  [
+                    628.5,
+                    -213.5
+                  ],
+                  [
+                    606.5,
+                    -211.5
+                  ],
+                  [
+                    590.5,
+                    -191.5
+                  ],
+                  [
+                    554.5,
+                    44.5
+                  ],
+                  [
+                    504.5,
+                    80.5
+                  ],
+                  [
+                    460.0,
+                    80.0
+                  ]
+                ],
+                "end_distance_from_origin": 466.9047011971501,
+                "route_sample_fraction_in_no_gps": 0.7916666666666666,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 330,
+              "before3240": 170
+            },
+            {
+              "depart_step": 3095,
+              "required_steps": 303,
+              "ready_or_exchange_done": 3398,
+              "position": [
+                748.7626342773438,
+                -466.61468505859375
+              ],
+              "route": {
+                "grid_length_pixels": 576.3854487043993,
+                "route_length_pixels": 557.7071521975199,
+                "start_clearance_pixels": 25.0,
+                "connector_pixels": 6.361062086759807,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    748.76,
+                    -466.61
+                  ],
+                  [
+                    616.5,
+                    -465.5
+                  ],
+                  [
+                    602.5,
+                    -447.5
+                  ],
+                  [
+                    556.5,
+                    -47.5
+                  ]
+                ],
+                "end_distance_from_origin": 558.5234999532249,
+                "route_sample_fraction_in_no_gps": 0.6901408450704225,
+                "end_distance_from_hub": 159.9015322002888
+              },
+              "original_task_steps_displaced": 303,
+              "before3240": 145
+            },
+            {
+              "depart_step": 3065,
+              "required_steps": 333,
+              "ready_or_exchange_done": 3398,
+              "position": [
+                89.20196533203125,
+                -452.2129211425781
+              ],
+              "route": {
+                "grid_length_pixels": 653.7067325192176,
+                "route_length_pixels": 617.6596333805544,
+                "start_clearance_pixels": 34.0,
+                "connector_pixels": 4.888406662237569,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    89.2,
+                    -452.21
+                  ],
+                  [
+                    100.5,
+                    -319.5
+                  ],
+                  [
+                    154.5,
+                    -193.5
+                  ],
+                  [
+                    224.5,
+                    66.5
+                  ],
+                  [
+                    238.5,
+                    74.5
+                  ],
+                  [
+                    300.5,
+                    74.5
+                  ]
+                ],
+                "end_distance_from_origin": 309.5973191098398,
+                "route_sample_fraction_in_no_gps": 0.509493670886076,
+                "end_distance_from_hub": 159.594799414016
+              },
+              "original_task_steps_displaced": 333,
+              "before3240": 175
+            },
+            {
+              "depart_step": 3310,
+              "required_steps": 81,
+              "ready_or_exchange_done": 3391,
+              "position": [
+                723.413818359375,
+                138.16256713867188
+              ],
+              "route": {
+                "grid_length_pixels": 118.06974760263262,
+                "route_length_pixels": 112.25854820537808,
+                "start_clearance_pixels": 23.853721618652344,
+                "connector_pixels": 6.128622105678397,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    723.41,
+                    138.16
+                  ],
+                  [
+                    654.5,
+                    110.5
+                  ],
+                  [
+                    616.5,
+                    110.5
+                  ]
+                ],
+                "end_distance_from_origin": 626.3245963555958,
+                "route_sample_fraction_in_no_gps": 0.0,
+                "end_distance_from_hub": 159.44434765773292
+              },
+              "original_task_steps_displaced": 81,
+              "before3240": 0
+            },
+            {
+              "depart_step": 3235,
+              "required_steps": 162,
+              "ready_or_exchange_done": 3397,
+              "position": [
+                397.7600402832031,
+                -316.52496337890625
+              ],
+              "route": {
+                "grid_length_pixels": 283.0627874984264,
+                "route_length_pixels": 275.61317113385877,
+                "start_clearance_pixels": 34.0,
+                "connector_pixels": 5.180536504517995,
+                "checked_grid_min_clearance_pixels": 24.351591110229492,
+                "waypoints": [
+                  [
+                    397.76,
+                    -316.52
+                  ],
+                  [
+                    360.5,
+                    -243.5
+                  ],
+                  [
+                    362.5,
+                    -65.5
+                  ],
+                  [
+                    372.5,
+                    -53.5
+                  ]
+                ],
+                "end_distance_from_origin": 376.32233523935304,
+                "route_sample_fraction_in_no_gps": 1.0,
+                "end_distance_from_hub": 159.61986091962365
+              },
+              "original_task_steps_displaced": 162,
+              "before3240": 5
+            }
+          ],
+          "total_task_steps_displaced": 1209,
+          "nonidle_task_steps_displaced": 876
+        }
+      }
+    },
+    "east": {
+      "center": [
+        780,
+        -180
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "at3240": [
+        {
+          "drone": 0,
+          "position": [
+            577.6631469726562,
+            -159.56887817382812
+          ],
+          "route": {
+            "grid_length_pixels": 254.40755674981813,
+            "route_length_pixels": 237.18661849751905,
+            "start_clearance_pixels": 41.0,
+            "connector_pixels": 4.019209101499858,
+            "checked_grid_min_clearance_pixels": 23.76972770690918,
+            "waypoints": [
+              [
+                577.66,
+                -159.57
+              ],
+              [
+                602.5,
+                -209.5
+              ],
+              [
+                622.5,
+                -213.5
+              ],
+              [
+                780.0,
+                -180.0
+              ]
+            ],
+            "end_distance_from_origin": 800.49984384758,
+            "route_sample_fraction_in_no_gps": 0.8780487804878049,
+            "end_distance_from_hub": 0.0
+          },
+          "required_steps": {
+            "1.5": 171,
+            "2.0": 131,
+            "2.8": 97
+          }
+        },
+        {
+          "drone": 1,
+          "position": [
+            642.6339111328125,
+            -470.6011962890625
+          ],
+          "route": {
+            "grid_length_pixels": 246.25636054668365,
+            "route_length_pixels": 240.57060162165203,
+            "start_clearance_pixels": 24.0,
+            "connector_pixels": 6.231973929044163,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                642.63,
+                -470.6
+              ],
+              [
+                610.5,
+                -461.5
+              ],
+              [
+                604.5,
+                -447.5
+              ],
+              [
+                604.5,
+                -323.5
+              ],
+              [
+                654.5,
+                -277.5
+              ]
+            ],
+            "end_distance_from_origin": 710.8983752970603,
+            "route_sample_fraction_in_no_gps": 0.736,
+            "end_distance_from_hub": 158.92293729981208
+          },
+          "required_steps": {
+            "1.5": 185,
+            "2.0": 145,
+            "2.8": 110
+          }
+        },
+        {
+          "drone": 2,
+          "position": [
+            86.55370330810547,
+            -452.7078552246094
+          ],
+          "route": {
+            "grid_length_pixels": 1099.104500661126,
+            "route_length_pixels": 1054.4211986428909,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.752120194627733,
+            "checked_grid_min_clearance_pixels": 24.0,
+            "waypoints": [
+              [
+                86.55,
+                -452.71
+              ],
+              [
+                100.5,
+                -319.5
+              ],
+              [
+                220.5,
+                -37.5
+              ],
+              [
+                222.5,
+                64.5
+              ],
+              [
+                238.5,
+                74.5
+              ],
+              [
+                500.5,
+                62.5
+              ],
+              [
+                542.5,
+                56.5
+              ],
+              [
+                652.5,
+                -39.5
+              ],
+              [
+                694.5,
+                -45.5
+              ]
+            ],
+            "end_distance_from_origin": 695.9888648534544,
+            "route_sample_fraction_in_no_gps": 0.4648148148148148,
+            "end_distance_from_hub": 159.3753431368855
+          },
+          "required_steps": {
+            "1.5": 727,
+            "2.0": 552,
+            "2.8": 401
+          }
+        },
+        {
+          "drone": 3,
+          "position": [
+            597.6246337890625,
+            2.847615957260132
+          ],
+          "route": {
+            "grid_length_pixels": 116.76583565925446,
+            "route_length_pixels": 108.7059005861965,
+            "start_clearance_pixels": 31.016124725341797,
+            "connector_pixels": 3.7120117900921974,
+            "checked_grid_min_clearance_pixels": 25.0,
+            "waypoints": [
+              [
+                597.62,
+                2.85
+              ],
+              [
+                690.5,
+                -45.5
+              ],
+              [
+                694.5,
+                -45.5
+              ]
+            ],
+            "end_distance_from_origin": 695.9888648534544,
+            "route_sample_fraction_in_no_gps": 1.0,
+            "end_distance_from_hub": 159.3753431368855
+          },
+          "required_steps": {
+            "1.5": 97,
+            "2.0": 79,
+            "2.8": 63
+          }
+        },
+        {
+          "drone": 4,
+          "position": [
+            411.44439697265625,
+            -315.2732849121094
+          ],
+          "route": {
+            "grid_length_pixels": 252.6368004169599,
+            "route_length_pixels": 233.98065825603715,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 5.357579803381564,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                411.44,
+                -315.27
+              ],
+              [
+                624.5,
+                -223.5
+              ],
+              [
+                626.5,
+                -223.5
+              ]
+            ],
+            "end_distance_from_origin": 665.1725340090344,
+            "route_sample_fraction_in_no_gps": 1.0,
+            "end_distance_from_hub": 159.54466459270895
+          },
+          "required_steps": {
+            "1.5": 180,
+            "2.0": 141,
+            "2.8": 108
+          }
+        }
+      ],
+      "schedules": {
+        "same_window": {
+          "hub_ready_by": 3240,
+          "exchange_by": 3420,
+          "rows": [
+            {
+              "depart_step": 3150,
+              "required_steps": 87,
+              "ready_or_exchange_done": 3237,
+              "position": [
+                635.0248413085938,
+                -214.4649200439453
+              ],
+              "route": {
+                "grid_length_pixels": 160.3499032590116,
+                "route_length_pixels": 149.01552721523342,
+                "start_clearance_pixels": 26.925823211669922,
+                "connector_pixels": 5.5595353571399135,
+                "checked_grid_min_clearance_pixels": 27.58622932434082,
+                "waypoints": [
+                  [
+                    635.02,
+                    -214.46
+                  ],
+                  [
+                    780.0,
+                    -180.0
+                  ]
+                ],
+                "end_distance_from_origin": 800.49984384758,
+                "route_sample_fraction_in_no_gps": 0.7894736842105263,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 270,
+              "before3240": 90
+            },
+            {
+              "depart_step": 3380,
+              "required_steps": 40,
+              "ready_or_exchange_done": 3420,
+              "position": [
+                598.6138916015625,
+                -236.08529663085938
+              ],
+              "route": {
+                "grid_length_pixels": 32.80964000551136,
+                "route_length_pixels": 30.78333370724067,
+                "start_clearance_pixels": 31.38471031188965,
+                "connector_pixels": 4.667504381780407,
+                "checked_grid_min_clearance_pixels": 25.079872131347656,
+                "waypoints": [
+                  [
+                    598.61,
+                    -236.09
+                  ],
+                  [
+                    624.5,
+                    -223.5
+                  ],
+                  [
+                    626.5,
+                    -223.5
+                  ]
+                ],
+                "end_distance_from_origin": 665.1725340090344,
+                "route_sample_fraction_in_no_gps": 1.0,
+                "end_distance_from_hub": 159.54466459270895
+              },
+              "original_task_steps_displaced": 40,
+              "before3240": 0
+            },
+            {
+              "depart_step": 2865,
+              "required_steps": 551,
+              "ready_or_exchange_done": 3416,
+              "position": [
+                90.62361145019531,
+                -452.07940673828125
+              ],
+              "route": {
+                "grid_length_pixels": 1096.6444452974167,
+                "route_length_pixels": 1053.4320384084058,
+                "start_clearance_pixels": 32.0,
+                "connector_pixels": 4.948919080410778,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    90.62,
+                    -452.08
+                  ],
+                  [
+                    100.5,
+                    -319.5
+                  ],
+                  [
+                    220.5,
+                    -37.5
+                  ],
+                  [
+                    222.5,
+                    64.5
+                  ],
+                  [
+                    238.5,
+                    74.5
+                  ],
+                  [
+                    500.5,
+                    62.5
+                  ],
+                  [
+                    542.5,
+                    56.5
+                  ],
+                  [
+                    652.5,
+                    -39.5
+                  ],
+                  [
+                    694.5,
+                    -45.5
+                  ]
+                ],
+                "end_distance_from_origin": 695.9888648534544,
+                "route_sample_fraction_in_no_gps": 0.4648148148148148,
+                "end_distance_from_hub": 159.3753431368855
+              },
+              "original_task_steps_displaced": 551,
+              "before3240": 375
+            },
+            {
+              "depart_step": 3280,
+              "required_steps": 131,
+              "ready_or_exchange_done": 3411,
+              "position": [
+                656.9906616210938,
+                90.89720153808594
+              ],
+              "route": {
+                "grid_length_pixels": 222.47494671115405,
+                "route_length_pixels": 213.47388719155452,
+                "start_clearance_pixels": 45.12205505371094,
+                "connector_pixels": 5.053590473844777,
+                "checked_grid_min_clearance_pixels": 24.698177337646484,
+                "waypoints": [
+                  [
+                    656.99,
+                    90.9
+                  ],
+                  [
+                    602.5,
+                    28.5
+                  ],
+                  [
+                    604.5,
+                    0.5
+                  ],
+                  [
+                    670.5,
+                    -41.5
+                  ],
+                  [
+                    694.5,
+                    -45.5
+                  ]
+                ],
+                "end_distance_from_origin": 695.9888648534544,
+                "route_sample_fraction_in_no_gps": 0.7280701754385965,
+                "end_distance_from_hub": 159.3753431368855
+              },
+              "original_task_steps_displaced": 131,
+              "before3240": 0
+            },
+            {
+              "depart_step": 3395,
+              "required_steps": 24,
+              "ready_or_exchange_done": 3419,
+              "position": [
+                764.5520629882812,
+                -305.1003723144531
+              ],
+              "route": {
+                "grid_length_pixels": 0.0,
+                "route_length_pixels": 0.0,
+                "start_clearance_pixels": 29.0,
+                "connector_pixels": 0.0,
+                "checked_grid_min_clearance_pixels": 29.0,
+                "waypoints": [
+                  [
+                    764.5520629882812,
+                    -305.1003723144531
+                  ],
+                  [
+                    764.5520629882812,
+                    -305.1003723144531
+                  ]
+                ],
+                "end_distance_from_origin": 823.1804748693052,
+                "route_sample_fraction_in_no_gps": null,
+                "already_in_contact": true
+              },
+              "original_task_steps_displaced": 24,
+              "before3240": 0
+            }
+          ],
+          "total_task_steps_displaced": 1016,
+          "nonidle_task_steps_displaced": 465
+        },
+        "minimal_late_host": {
+          "hub_ready_by": 3340,
+          "exchange_by": 3400,
+          "rows": [
+            {
+              "depart_step": 3220,
+              "required_steps": 113,
+              "ready_or_exchange_done": 3333,
+              "position": [
+                590.2862548828125,
+                -194.06903076171875
+              ],
+              "route": {
+                "grid_length_pixels": 214.67252044120366,
+                "route_length_pixels": 201.0736365299692,
+                "start_clearance_pixels": 29.42787742614746,
+                "connector_pixels": 4.083162666108677,
+                "checked_grid_min_clearance_pixels": 23.76972770690918,
+                "waypoints": [
+                  [
+                    590.29,
+                    -194.07
+                  ],
+                  [
+                    610.5,
+                    -213.5
+                  ],
+                  [
+                    638.5,
+                    -211.5
+                  ],
+                  [
+                    780.0,
+                    -180.0
+                  ]
+                ],
+                "end_distance_from_origin": 800.49984384758,
+                "route_sample_fraction_in_no_gps": 0.8584905660377359,
+                "end_distance_from_hub": 0.0
+              },
+              "original_task_steps_displaced": 180,
+              "before3240": 20
+            },
+            {
+              "depart_step": 3335,
+              "required_steps": 65,
+              "ready_or_exchange_done": 3400,
+              "position": [
+                588.3424682617188,
+                -325.0599365234375
+              ],
+              "route": {
+                "grid_length_pixels": 85.49437249652476,
+                "route_length_pixels": 81.47862644776909,
+                "start_clearance_pixels": 41.0,
+                "connector_pixels": 4.440548627362411,
+                "checked_grid_min_clearance_pixels": 23.0,
+                "waypoints": [
+                  [
+                    588.34,
+                    -325.06
+                  ],
+                  [
+                    654.5,
+                    -277.5
+                  ]
+                ],
+                "end_distance_from_origin": 710.8983752970603,
+                "route_sample_fraction_in_no_gps": 1.0,
+                "end_distance_from_hub": 158.92293729981208
+              },
+              "original_task_steps_displaced": 65,
+              "before3240": 0
+            },
+            {
+              "depart_step": 2845,
+              "required_steps": 551,
+              "ready_or_exchange_done": 3396,
+              "position": [
+                90.97748565673828,
+                -452.0056457519531
+              ],
+              "route": {
+                "grid_length_pixels": 1096.4514586773685,
+                "route_length_pixels": 1053.3326468018133,
+                "start_clearance_pixels": 32.0,
+                "connector_pixels": 4.755932460362627,
+                "checked_grid_min_clearance_pixels": 24.0,
+                "waypoints": [
+                  [
+                    90.98,
+                    -452.01
+                  ],
+                  [
+                    100.5,
+                    -319.5
+                  ],
+                  [
+                    220.5,
+                    -37.5
+                  ],
+                  [
+                    222.5,
+                    64.5
+                  ],
+                  [
+                    238.5,
+                    74.5
+                  ],
+                  [
+                    500.5,
+                    62.5
+                  ],
+                  [
+                    542.5,
+                    56.5
+                  ],
+                  [
+                    652.5,
+                    -39.5
+                  ],
+                  [
+                    694.5,
+                    -45.5
+                  ]
+                ],
+                "end_distance_from_origin": 695.9888648534544,
+                "route_sample_fraction_in_no_gps": 0.4648148148148148,
+                "end_distance_from_hub": 159.3753431368855
+              },
+              "original_task_steps_displaced": 551,
+              "before3240": 395
+            },
+            {
+              "depart_step": 3275,
+              "required_steps": 124,
+              "ready_or_exchange_done": 3399,
+              "position": [
+                646.6896362304688,
+                81.38379669189453
+              ],
+              "route": {
+                "grid_length_pixels": 208.63141427127997,
+                "route_length_pixels": 199.5488518428981,
+                "start_clearance_pixels": 54.0,
+                "connector_pixels": 5.352193657701612,
+                "checked_grid_min_clearance_pixels": 24.698177337646484,
+                "waypoints": [
+                  [
+                    646.69,
+                    81.38
+                  ],
+                  [
+                    602.5,
+                    28.5
+                  ],
+                  [
+                    604.5,
+                    0.5
+                  ],
+                  [
+                    670.5,
+                    -41.5
+                  ],
+                  [
+                    694.5,
+                    -45.5
+                  ]
+                ],
+                "end_distance_from_origin": 695.9888648534544,
+                "route_sample_fraction_in_no_gps": 0.7757009345794392,
+                "end_distance_from_hub": 159.3753431368855
+              },
+              "original_task_steps_displaced": 124,
+              "before3240": 0
+            },
+            {
+              "depart_step": 3375,
+              "required_steps": 24,
+              "ready_or_exchange_done": 3399,
+              "position": [
+                737.477294921875,
+                -291.4064025878906
+              ],
+              "route": {
+                "grid_length_pixels": 0.0,
+                "route_length_pixels": 0.0,
+                "start_clearance_pixels": 37.0,
+                "connector_pixels": 0.0,
+                "checked_grid_min_clearance_pixels": 37.0,
+                "waypoints": [
+                  [
+                    737.477294921875,
+                    -291.4064025878906
+                  ],
+                  [
+                    737.477294921875,
+                    -291.4064025878906
+                  ]
+                ],
+                "end_distance_from_origin": 792.9630836265343,
+                "route_sample_fraction_in_no_gps": null,
+                "already_in_contact": true
+              },
+              "original_task_steps_displaced": 24,
+              "before3240": 0
+            }
+          ],
+          "total_task_steps_displaced": 944,
+          "nonidle_task_steps_displaced": 393
+        }
+      }
+    },
+    "east_north": {
+      "center": [
+        780,
+        -160
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "at3240": [
+        {
+          "drone": 0,
+          "position": [
+            577.6631469726562,
+            -159.56887817382812
+          ],
+          "route": {
+            "grid_length_pixels": 262.69182799728003,
+            "route_length_pixels": 242.62437500180746,
+            "start_clearance_pixels": 41.0,
+            "connector_pixels": 4.019209101499858,
+            "checked_grid_min_clearance_pixels": 23.76972770690918,
+            "waypoints": [
+              [
+                577.66,
+                -159.57
+              ],
+              [
+                602.5,
+                -209.5
+              ],
+              [
+                622.5,
+                -213.5
+              ],
+              [
+                640.5,
+                -209.5
+              ],
+              [
+                780.0,
+                -160.0
+              ]
+            ],
+            "end_distance_from_origin": 796.2411694957754,
+            "route_sample_fraction_in_no_gps": 0.875,
+            "end_distance_from_hub": 0.0
+          },
+          "required_steps": {
+            "1.5": 174,
+            "2.0": 134,
+            "2.8": 99
+          }
+        },
+        {
+          "drone": 1,
+          "position": [
+            642.6339111328125,
+            -470.6011962890625
+          ],
+          "route": {
+            "grid_length_pixels": 264.25636054668365,
+            "route_length_pixels": 257.27977640038756,
+            "start_clearance_pixels": 24.0,
+            "connector_pixels": 6.231973929044163,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                642.63,
+                -470.6
+              ],
+              [
+                610.5,
+                -461.5
+              ],
+              [
+                604.5,
+                -447.5
+              ],
+              [
+                604.5,
+                -323.5
+              ],
+              [
+                650.5,
+                -281.5
+              ],
+              [
+                672.5,
+                -277.5
+              ]
+            ],
+            "end_distance_from_origin": 727.5042955199646,
+            "route_sample_fraction_in_no_gps": 0.7573529411764706,
+            "end_distance_from_hub": 159.25608308632985
+          },
+          "required_steps": {
+            "1.5": 196,
+            "2.0": 153,
+            "2.8": 116
+          }
+        },
+        {
+          "drone": 2,
+          "position": [
+            86.55370330810547,
+            -452.7078552246094
+          ],
+          "route": {
+            "grid_length_pixels": 1073.1045006611262,
+            "route_length_pixels": 1028.945889760345,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 3.752120194627733,
+            "checked_grid_min_clearance_pixels": 24.0,
+            "waypoints": [
+              [
+                86.55,
+                -452.71
+              ],
+              [
+                100.5,
+                -319.5
+              ],
+              [
+                220.5,
+                -37.5
+              ],
+              [
+                222.5,
+                64.5
+              ],
+              [
+                238.5,
+                74.5
+              ],
+              [
+                472.5,
+                62.5
+              ],
+              [
+                542.5,
+                56.5
+              ],
+              [
+                652.5,
+                -39.5
+              ],
+              [
+                668.5,
+                -45.5
+              ]
+            ],
+            "end_distance_from_origin": 670.0466401676827,
+            "route_sample_fraction_in_no_gps": 0.45161290322580644,
+            "end_distance_from_hub": 159.82021148778398
+          },
+          "required_steps": {
+            "1.5": 710,
+            "2.0": 539,
+            "2.8": 392
+          }
+        },
+        {
+          "drone": 3,
+          "position": [
+            597.6246337890625,
+            2.847615957260132
+          ],
+          "route": {
+            "grid_length_pixels": 90.76583565925453,
+            "route_length_pixels": 85.79516014487773,
+            "start_clearance_pixels": 31.016124725341797,
+            "connector_pixels": 3.7120117900921974,
+            "checked_grid_min_clearance_pixels": 25.0,
+            "waypoints": [
+              [
+                597.62,
+                2.85
+              ],
+              [
+                668.5,
+                -45.5
+              ]
+            ],
+            "end_distance_from_origin": 670.0466401676827,
+            "route_sample_fraction_in_no_gps": 1.0,
+            "end_distance_from_hub": 159.82021148778398
+          },
+          "required_steps": {
+            "1.5": 82,
+            "2.0": 67,
+            "2.8": 55
+          }
+        },
+        {
+          "drone": 4,
+          "position": [
+            411.44439697265625,
+            -315.2732849121094
+          ],
+          "route": {
+            "grid_length_pixels": 259.4652275417061,
+            "route_length_pixels": 240.44568883524073,
+            "start_clearance_pixels": 36.0,
+            "connector_pixels": 5.357579803381564,
+            "checked_grid_min_clearance_pixels": 23.0,
+            "waypoints": [
+              [
+                411.44,
+                -315.27
+              ],
+              [
+                628.5,
+                -221.5
+              ],
+              [
+                632.5,
+                -221.5
+              ]
+            ],
+            "end_distance_from_origin": 670.1630398641811,
+            "route_sample_fraction_in_no_gps": 1.0,
+            "end_distance_from_hub": 159.80769693603622
+          },
+          "required_steps": {
+            "1.5": 185,
+            "2.0": 145,
+            "2.8": 110
+          }
+        }
+      ]
+    }
+  },
+  "coarse_search": [
+    {
+      "center": [
+        0,
+        0
+      ],
+      "clearance": 96.0,
+      "gps_margin": 127.0,
+      "grid_lengths": [
+        1169.7852554863753,
+        900.5549171440199,
+        315.26478523800967,
+        486.571085547001,
+        573.9628339613647
+      ],
+      "nominal_needs": [
+        597,
+        475,
+        182,
+        268,
+        311
+      ],
+      "total": 1833,
+      "nonidle_total": 1651,
+      "max_need": 597,
+      "max_nonidle_need": 597
+    },
+    {
+      "center": [
+        90,
+        -220
+      ],
+      "clearance": 43.27817153930664,
+      "gps_margin": 37.0,
+      "grid_lengths": [
+        929.8786178748264,
+        989.608741013183,
+        73.20813211101569,
+        575.6249094161633,
+        663.0166578305278
+      ],
+      "nominal_needs": [
+        477,
+        519,
+        61,
+        312,
+        356
+      ],
+      "total": 1725,
+      "nonidle_total": 1664,
+      "max_need": 519,
+      "max_nonidle_need": 519
+    },
+    {
+      "center": [
+        90,
+        -140
+      ],
+      "clearance": 33.0,
+      "gps_margin": 37.0,
+      "grid_lengths": [
+        992.5060348727959,
+        909.9518867636899,
+        153.2081321110157,
+        495.968055166671,
+        583.3598035810347
+      ],
+      "nominal_needs": [
+        509,
+        479,
+        101,
+        272,
+        316
+      ],
+      "total": 1677,
+      "nonidle_total": 1576,
+      "max_need": 509,
+      "max_nonidle_need": 509
+    },
+    {
+      "center": [
+        180,
+        80
+      ],
+      "clearance": 51.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        603.4278243859939,
+        649.986374649096,
+        399.89425581835866,
+        282.3456888025844,
+        323.39429146644085
+      ],
+      "nominal_needs": [
+        314,
+        349,
+        224,
+        166,
+        186
+      ],
+      "total": 1239,
+      "nonidle_total": 1015,
+      "max_need": 349,
+      "max_nonidle_need": 349
+    },
+    {
+      "center": [
+        180,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        611.7120956334558,
+        669.9863746490961,
+        419.89425581835866,
+        286.34568880258445,
+        343.394291466441
+      ],
+      "nominal_needs": [
+        318,
+        359,
+        234,
+        168,
+        196
+      ],
+      "total": 1275,
+      "nonidle_total": 1041,
+      "max_need": 359,
+      "max_nonidle_need": 359
+    },
+    {
+      "center": [
+        220,
+        80
+      ],
+      "clearance": 38.28837966918945,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        563.4278243859939,
+        627.8442390253648,
+        414.74706956074414,
+        242.34568880258416,
+        301.2521558427097
+      ],
+      "nominal_needs": [
+        294,
+        338,
+        232,
+        146,
+        175
+      ],
+      "total": 1185,
+      "nonidle_total": 953,
+      "max_need": 338,
+      "max_nonidle_need": 338
+    },
+    {
+      "center": [
+        220,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        571.7120956334558,
+        647.844239025365,
+        434.74706956074414,
+        246.34568880258416,
+        321.2521558427099
+      ],
+      "nominal_needs": [
+        298,
+        348,
+        242,
+        148,
+        185
+      ],
+      "total": 1221,
+      "nonidle_total": 979,
+      "max_need": 348,
+      "max_nonidle_need": 348
+    },
+    {
+      "center": [
+        260,
+        80
+      ],
+      "clearance": 30.364452362060547,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        523.4278243859939,
+        611.275696530441,
+        431.3156120556678,
+        202.34568880258416,
+        284.68361334778587
+      ],
+      "nominal_needs": [
+        274,
+        330,
+        240,
+        126,
+        167
+      ],
+      "total": 1137,
+      "nonidle_total": 897,
+      "max_need": 330,
+      "max_nonidle_need": 330
+    },
+    {
+      "center": [
+        260,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        531.7120956334558,
+        631.2756965304411,
+        451.315612055668,
+        206.34568880258416,
+        304.68361334778604
+      ],
+      "nominal_needs": [
+        278,
+        340,
+        250,
+        128,
+        177
+      ],
+      "total": 1173,
+      "nonidle_total": 923,
+      "max_need": 340,
+      "max_nonidle_need": 340
+    },
+    {
+      "center": [
+        300,
+        80
+      ],
+      "clearance": 56.93856430053711,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        483.4278243859938,
+        594.849289659248,
+        449.5998833031298,
+        162.34568880258416,
+        268.2572064765929
+      ],
+      "nominal_needs": [
+        254,
+        322,
+        249,
+        106,
+        159
+      ],
+      "total": 1090,
+      "nonidle_total": 841,
+      "max_need": 322,
+      "max_nonidle_need": 322
+    },
+    {
+      "center": [
+        300,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        491.7120956334557,
+        614.8492896592483,
+        469.59988330313,
+        166.34568880258416,
+        288.2572064765931
+      ],
+      "nominal_needs": [
+        258,
+        332,
+        259,
+        108,
+        169
+      ],
+      "total": 1126,
+      "nonidle_total": 867,
+      "max_need": 332,
+      "max_nonidle_need": 332
+    },
+    {
+      "center": [
+        340,
+        80
+      ],
+      "clearance": 62.96824645996094,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        443.42782438599346,
+        585.1924354097556,
+        482.42831042787634,
+        122.34568880258422,
+        258.60035222710053
+      ],
+      "nominal_needs": [
+        234,
+        317,
+        266,
+        86,
+        154
+      ],
+      "total": 1057,
+      "nonidle_total": 791,
+      "max_need": 317,
+      "max_nonidle_need": 317
+    },
+    {
+      "center": [
+        340,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        451.71209563345536,
+        605.1924354097557,
+        502.4283104278765,
+        126.3456888025842,
+        278.60035222710064
+      ],
+      "nominal_needs": [
+        238,
+        327,
+        276,
+        88,
+        164
+      ],
+      "total": 1093,
+      "nonidle_total": 817,
+      "max_need": 327,
+      "max_nonidle_need": 327
+    },
+    {
+      "center": [
+        380,
+        80
+      ],
+      "clearance": 46.097721099853516,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        403.4278243859934,
+        585.1924354097556,
+        568.4283104278768,
+        82.3456888025843,
+        258.60035222710053
+      ],
+      "nominal_needs": [
+        214,
+        317,
+        309,
+        66,
+        154
+      ],
+      "total": 1060,
+      "nonidle_total": 751,
+      "max_need": 317,
+      "max_nonidle_need": 317
+    },
+    {
+      "center": [
+        380,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        411.71209563345525,
+        591.7122046693996,
+        575.256737552623,
+        86.34568880258429,
+        278.60035222710064
+      ],
+      "nominal_needs": [
+        218,
+        320,
+        312,
+        68,
+        164
+      ],
+      "total": 1082,
+      "nonidle_total": 770,
+      "max_need": 320,
+      "max_nonidle_need": 320
+    },
+    {
+      "center": [
+        420,
+        80
+      ],
+      "clearance": 46.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        363.4278243859934,
+        517.9132147961761,
+        615.398873176354,
+        36.01186167655082,
+        268.6003522271006
+      ],
+      "nominal_needs": [
+        194,
+        283,
+        332,
+        43,
+        159
+      ],
+      "total": 1011,
+      "nonidle_total": 679,
+      "max_need": 332,
+      "max_nonidle_need": 283
+    },
+    {
+      "center": [
+        420,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        371.71209563345525,
+        537.9132147961761,
+        617.398873176354,
+        44.98242442502797,
+        288.2572064765931
+      ],
+      "nominal_needs": [
+        198,
+        293,
+        333,
+        47,
+        169
+      ],
+      "total": 1040,
+      "nonidle_total": 707,
+      "max_need": 333,
+      "max_nonidle_need": 293
+    },
+    {
+      "center": [
+        460,
+        80
+      ],
+      "clearance": 46.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        323.4278243859934,
+        471.9132147961761,
+        655.398873176354,
+        0.9418613788625976,
+        287.57091497557786
+      ],
+      "nominal_needs": [
+        174,
+        260,
+        352,
+        25,
+        168
+      ],
+      "total": 979,
+      "nonidle_total": 627,
+      "max_need": 352,
+      "max_nonidle_need": 260
+    },
+    {
+      "center": [
+        460,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        331.7120956334553,
+        491.9132147961761,
+        657.398873176354,
+        9.191498409864458,
+        305.3699048488014
+      ],
+      "nominal_needs": [
+        178,
+        270,
+        353,
+        29,
+        177
+      ],
+      "total": 1007,
+      "nonidle_total": 654,
+      "max_need": 353,
+      "max_nonidle_need": 270
+    },
+    {
+      "center": [
+        500,
+        80
+      ],
+      "clearance": 46.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        283.4278243859935,
+        449.7710791724451,
+        695.398873176354,
+        0.9418613788625976,
+        313.02675909829384
+      ],
+      "nominal_needs": [
+        154,
+        249,
+        372,
+        25,
+        181
+      ],
+      "total": 981,
+      "nonidle_total": 609,
+      "max_need": 372,
+      "max_nonidle_need": 249
+    },
+    {
+      "center": [
+        500,
+        100
+      ],
+      "clearance": 48.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        291.7120956334554,
+        469.7710791724451,
+        697.398873176354,
+        0.9418613788625976,
+        327.9973218467712
+      ],
+      "nominal_needs": [
+        158,
+        259,
+        373,
+        25,
+        188
+      ],
+      "total": 1003,
+      "nonidle_total": 630,
+      "max_need": 373,
+      "max_nonidle_need": 259
+    },
+    {
+      "center": [
+        540,
+        80
+      ],
+      "clearance": 47.29693603515625,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        255.14355313853162,
+        433.8299536754909,
+        735.398873176354,
+        0.9418613788625976,
+        342.13945747050224
+      ],
+      "nominal_needs": [
+        140,
+        241,
+        392,
+        25,
+        196
+      ],
+      "total": 994,
+      "nonidle_total": 602,
+      "max_need": 392,
+      "max_nonidle_need": 241
+    },
+    {
+      "center": [
+        540,
+        100
+      ],
+      "clearance": 50.28916549682617,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        275.1435531385316,
+        453.8299536754909,
+        737.398873176354,
+        0.9418613788625976,
+        355.453165969487
+      ],
+      "nominal_needs": [
+        150,
+        251,
+        393,
+        25,
+        202
+      ],
+      "total": 1021,
+      "nonidle_total": 628,
+      "max_need": 393,
+      "max_nonidle_need": 251
+    },
+    {
+      "center": [
+        540,
+        120
+      ],
+      "clearance": 31.764760971069336,
+      "gps_margin": 74.5,
+      "grid_lengths": [
+        295.14355313853156,
+        473.8299536754909,
+        742.2273003011003,
+        0.9418613788625976,
+        369.59530159321787
+      ],
+      "nominal_needs": [
+        160,
+        261,
+        396,
+        25,
+        209
+      ],
+      "total": 1051,
+      "nonidle_total": 655,
+      "max_need": 396,
+      "max_nonidle_need": 261
+    },
+    {
+      "center": [
+        580,
+        80
+      ],
+      "clearance": 67.89698028564453,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        240.96019200154635,
+        425.00152655074476,
+        775.3988731763544,
+        0.9418613788625976,
+        342.69567492000573
+      ],
+      "nominal_needs": [
+        133,
+        237,
+        412,
+        25,
+        196
+      ],
+      "total": 1003,
+      "nonidle_total": 591,
+      "max_need": 412,
+      "max_nonidle_need": 237
+    },
+    {
+      "center": [
+        580,
+        100
+      ],
+      "clearance": 70.32780456542969,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        260.9601920015463,
+        445.00152655074476,
+        777.3988731763544,
+        0.9418613788625976,
+        362.6956749200059
+      ],
+      "nominal_needs": [
+        143,
+        247,
+        413,
+        25,
+        206
+      ],
+      "total": 1034,
+      "nonidle_total": 621,
+      "max_need": 413,
+      "max_nonidle_need": 247
+    },
+    {
+      "center": [
+        580,
+        120
+      ],
+      "clearance": 61.717098236083984,
+      "gps_margin": 74.5,
+      "grid_lengths": [
+        280.9601920015463,
+        465.00152655074476,
+        782.2273003011006,
+        0.9418613788625976,
+        382.6956749200061
+      ],
+      "nominal_needs": [
+        153,
+        257,
+        416,
+        25,
+        216
+      ],
+      "total": 1067,
+      "nonidle_total": 651,
+      "max_need": 416,
+      "max_nonidle_need": 257
+    },
+    {
+      "center": [
+        620,
+        80
+      ],
+      "clearance": 58.872745513916016,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        257.52873449647007,
+        426.1730994259986,
+        815.3988731763548,
+        0.9418613788625976,
+        353.524102044752
+      ],
+      "nominal_needs": [
+        141,
+        238,
+        432,
+        25,
+        201
+      ],
+      "total": 1037,
+      "nonidle_total": 605,
+      "max_need": 432,
+      "max_nonidle_need": 238
+    },
+    {
+      "center": [
+        620,
+        100
+      ],
+      "clearance": 40.8166618347168,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        277.52873449647,
+        446.1730994259986,
+        817.3988731763548,
+        0.9418613788625976,
+        373.5241020447522
+      ],
+      "nominal_needs": [
+        151,
+        248,
+        433,
+        25,
+        211
+      ],
+      "total": 1068,
+      "nonidle_total": 635,
+      "max_need": 433,
+      "max_nonidle_need": 248
+    },
+    {
+      "center": [
+        660,
+        80
+      ],
+      "clearance": 56.51548385620117,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        279.95514136766286,
+        438.1730994259986,
+        855.3988731763551,
+        0.9418613788625976,
+        370.4357902901835
+      ],
+      "nominal_needs": [
+        152,
+        244,
+        452,
+        25,
+        210
+      ],
+      "total": 1083,
+      "nonidle_total": 631,
+      "max_need": 452,
+      "max_nonidle_need": 244
+    },
+    {
+      "center": [
+        660,
+        100
+      ],
+      "clearance": 37.336307525634766,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        294.0972769913938,
+        457.8299536754909,
+        857.3988731763551,
+        0.9418613788625976,
+        390.0926445396761
+      ],
+      "nominal_needs": [
+        160,
+        253,
+        453,
+        25,
+        220
+      ],
+      "total": 1111,
+      "nonidle_total": 658,
+      "max_need": 453,
+      "max_nonidle_need": 253
+    },
+    {
+      "center": [
+        700,
+        80
+      ],
+      "clearance": 60.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        319.9551413676628,
+        459.1436621744757,
+        895.3988731763551,
+        0.9418613788625976,
+        391.4063530386608
+      ],
+      "nominal_needs": [
+        172,
+        254,
+        472,
+        25,
+        220
+      ],
+      "total": 1143,
+      "nonidle_total": 671,
+      "max_need": 472,
+      "max_nonidle_need": 254
+    },
+    {
+      "center": [
+        700,
+        100
+      ],
+      "clearance": 58.0,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        328.2394126151247,
+        476.11422492295287,
+        897.3988731763551,
+        0.9418613788625976,
+        408.37691578713816
+      ],
+      "nominal_needs": [
+        177,
+        263,
+        473,
+        25,
+        229
+      ],
+      "total": 1167,
+      "nonidle_total": 694,
+      "max_need": 473,
+      "max_nonidle_need": 263
+    },
+    {
+      "center": [
+        700,
+        120
+      ],
+      "clearance": 38.0,
+      "gps_margin": 74.5,
+      "grid_lengths": [
+        336.5236838625866,
+        495.08478767143,
+        902.2273003011013,
+        0.9418613788625976,
+        427.3474785356155
+      ],
+      "nominal_needs": [
+        181,
+        272,
+        476,
+        25,
+        238
+      ],
+      "total": 1192,
+      "nonidle_total": 716,
+      "max_need": 476,
+      "max_nonidle_need": 272
+    },
+    {
+      "center": [
+        740,
+        80
+      ],
+      "clearance": 60.0,
+      "gps_margin": 34.5,
+      "grid_lengths": [
+        359.95514136766275,
+        486.59950629719145,
+        935.3988731763551,
+        2.8963024187302944,
+        418.86219716137686
+      ],
+      "nominal_needs": [
+        192,
+        268,
+        492,
+        26,
+        234
+      ],
+      "total": 1212,
+      "nonidle_total": 720,
+      "max_need": 492,
+      "max_nonidle_need": 268
+    },
+    {
+      "center": [
+        740,
+        100
+      ],
+      "clearance": 65.29930877685547,
+      "gps_margin": 54.5,
+      "grid_lengths": [
+        368.23941261512465,
+        500.7416419209224,
+        937.3988731763551,
+        17.412673094819176,
+        433.0043327851079
+      ],
+      "nominal_needs": [
+        197,
+        275,
+        493,
+        33,
+        241
+      ],
+      "total": 1239,
+      "nonidle_total": 746,
+      "max_need": 493,
+      "max_nonidle_need": 275
+    },
+    {
+      "center": [
+        740,
+        120
+      ],
+      "clearance": 48.41487503051758,
+      "gps_margin": 74.5,
+      "grid_lengths": [
+        376.5236838625865,
+        515.7122046693996,
+        942.2273003011013,
+        34.24110021956536,
+        447.974895533585
+      ],
+      "nominal_needs": [
+        201,
+        282,
+        496,
+        42,
+        248
+      ],
+      "total": 1269,
+      "nonidle_total": 773,
+      "max_need": 496,
+      "max_nonidle_need": 282
+    },
+    {
+      "center": [
+        780,
+        -300
+      ],
+      "clearance": 34.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        308.04359571913926,
+        132.59950629719128,
+        1240.6780937899337,
+        260.43184544717656,
+        210.18600692812774
+      ],
+      "nominal_needs": [
+        167,
+        91,
+        645,
+        155,
+        130
+      ],
+      "total": 1188,
+      "nonidle_total": 543,
+      "max_need": 645,
+      "max_nonidle_need": 167
+    },
+    {
+      "center": [
+        780,
+        80
+      ],
+      "clearance": 44.0,
+      "gps_margin": 45.069390943299865,
+      "grid_lengths": [
+        399.95514136766275,
+        517.7122046693995,
+        975.3988731763551,
+        55.854147413823156,
+        449.974895533585
+      ],
+      "nominal_needs": [
+        212,
+        283,
+        512,
+        52,
+        249
+      ],
+      "total": 1308,
+      "nonidle_total": 796,
+      "max_need": 512,
+      "max_nonidle_need": 283
+    },
+    {
+      "center": [
+        780,
+        200
+      ],
+      "clearance": 36.878177642822266,
+      "gps_margin": 157.19812339846808,
+      "grid_lengths": [
+        454.3470603534495,
+        624.3396216673692,
+        1018.3105614217864,
+        116.26548683720486,
+        556.6023125315545
+      ],
+      "nominal_needs": [
+        240,
+        337,
+        534,
+        83,
+        303
+      ],
+      "total": 1497,
+      "nonidle_total": 963,
+      "max_need": 534,
+      "max_nonidle_need": 337
+    }
+  ],
+  "east_search": [
+    {
+      "center": [
+        780,
+        -400
+      ],
+      "clearance": 36.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        399.8425855923625,
+        0.9087245469811784,
+        1295.5552941499598,
+        336.8582523183694,
+        232.83469280941293
+      ],
+      "nominal_needs": [
+        212,
+        25,
+        672,
+        193,
+        141
+      ],
+      "total": 1243,
+      "nonidle_total": 571,
+      "max_need": 672,
+      "max_nonidle_need": 212
+    },
+    {
+      "center": [
+        780,
+        -380
+      ],
+      "clearance": 40.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        391.5583143449007,
+        4.956214437681863,
+        1285.1877617818127,
+        326.37297094413077,
+        227.01443405287392
+      ],
+      "nominal_needs": [
+        208,
+        27,
+        667,
+        188,
+        138
+      ],
+      "total": 1228,
+      "nonidle_total": 561,
+      "max_need": 667,
+      "max_nonidle_need": 208
+    },
+    {
+      "center": [
+        780,
+        -300
+      ],
+      "clearance": 34.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        308.04359571913926,
+        132.59950629719128,
+        1240.6780937899337,
+        260.43184544717656,
+        210.18600692812774
+      ],
+      "nominal_needs": [
+        167,
+        91,
+        645,
+        155,
+        130
+      ],
+      "total": 1188,
+      "nonidle_total": 543,
+      "max_need": 645,
+      "max_nonidle_need": 167
+    },
+    {
+      "center": [
+        780,
+        -200
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        245.41617872116973,
+        233.7710791724451,
+        1143.104500661126,
+        160.76583565925444,
+        244.26926804881288
+      ],
+      "nominal_needs": [
+        135,
+        141,
+        596,
+        105,
+        147
+      ],
+      "total": 1124,
+      "nonidle_total": 528,
+      "max_need": 596,
+      "max_nonidle_need": 147
+    },
+    {
+      "center": [
+        780,
+        -180
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        253.70044996863157,
+        246.25636054668365,
+        1099.104500661126,
+        116.76583565925446,
+        252.6368004169599
+      ],
+      "nominal_needs": [
+        139,
+        148,
+        574,
+        83,
+        151
+      ],
+      "total": 1095,
+      "nonidle_total": 521,
+      "max_need": 574,
+      "max_nonidle_need": 151
+    },
+    {
+      "center": [
+        780,
+        -160
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        261.9847212160935,
+        264.25636054668365,
+        1073.1045006611262,
+        90.76583565925453,
+        259.4652275417061
+      ],
+      "nominal_needs": [
+        143,
+        157,
+        561,
+        70,
+        154
+      ],
+      "total": 1085,
+      "nonidle_total": 524,
+      "max_need": 561,
+      "max_nonidle_need": 157
+    },
+    {
+      "center": [
+        780,
+        -140
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        270.26899246355526,
+        290.25636054668365,
+        1056.27607353638,
+        73.93740853450838,
+        268.77893604069084
+      ],
+      "nominal_needs": [
+        148,
+        170,
+        553,
+        61,
+        159
+      ],
+      "total": 1091,
+      "nonidle_total": 538,
+      "max_need": 553,
+      "max_nonidle_need": 170
+    },
+    {
+      "center": [
+        780,
+        -120
+      ],
+      "clearance": 44.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        278.55326371101717,
+        317.6289435487143,
+        1044.6192192868875,
+        62.280554285016024,
+        279.26421741492936
+      ],
+      "nominal_needs": [
+        152,
+        183,
+        547,
+        56,
+        164
+      ],
+      "total": 1102,
+      "nonidle_total": 555,
+      "max_need": 547,
+      "max_nonidle_need": 183
+    },
+    {
+      "center": [
+        780,
+        -40
+      ],
+      "clearance": 30.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        299.87188024697764,
+        372.1974860436381,
+        1011.8252800475478,
+        31.511001663315533,
+        333.83275990985317
+      ],
+      "nominal_needs": [
+        162,
+        211,
+        530,
+        40,
+        191
+      ],
+      "total": 1134,
+      "nonidle_total": 604,
+      "max_need": 530,
+      "max_nonidle_need": 211
+    },
+    {
+      "center": [
+        780,
+        -20
+      ],
+      "clearance": 34.0,
+      "gps_margin": 29.0,
+      "grid_lengths": [
+        308.1561514944395,
+        388.339621667369,
+        1000.9968529228016,
+        27.85414741382315,
+        349.9748955335841
+      ],
+      "nominal_needs": [
+        167,
+        219,
+        525,
+        38,
+        199
+      ],
+      "total": 1148,
+      "nonidle_total": 623,
+      "max_need": 525,
+      "max_nonidle_need": 219
+    },
+    {
+      "center": [
+        780,
+        60
+      ],
+      "clearance": 40.0,
+      "gps_margin": 32.42298567374695,
+      "grid_lengths": [
+        391.67087012020096,
+        484.3640082850083,
+        976.2273003011013,
+        43.854147413823156,
+        438.6611870346003
+      ],
+      "nominal_needs": [
+        208,
+        267,
+        513,
+        46,
+        244
+      ],
+      "total": 1278,
+      "nonidle_total": 765,
+      "max_need": 513,
+      "max_nonidle_need": 267
+    },
+    {
+      "center": [
+        780,
+        80
+      ],
+      "clearance": 44.0,
+      "gps_margin": 45.069390943299865,
+      "grid_lengths": [
+        399.95514136766275,
+        517.7122046693995,
+        975.3988731763551,
+        55.854147413823156,
+        449.974895533585
+      ],
+      "nominal_needs": [
+        212,
+        283,
+        512,
+        52,
+        249
+      ],
+      "total": 1308,
+      "nonidle_total": 796,
+      "max_need": 512,
+      "max_nonidle_need": 283
+    },
+    {
+      "center": [
+        780,
+        100
+      ],
+      "clearance": 44.0,
+      "gps_margin": 61.735322142190206,
+      "grid_lengths": [
+        408.23941261512465,
+        533.7122046693995,
+        977.3988731763551,
+        64.38323584329633,
+        465.974895533585
+      ],
+      "nominal_needs": [
+        217,
+        291,
+        513,
+        57,
+        257
+      ],
+      "total": 1335,
+      "nonidle_total": 822,
+      "max_need": 513,
+      "max_nonidle_need": 291
+    },
+    {
+      "center": [
+        780,
+        120
+      ],
+      "clearance": 38.832977294921875,
+      "gps_margin": 79.94529379519473,
+      "grid_lengths": [
+        416.52368386258644,
+        555.7122046693995,
+        982.2273003011013,
+        72.18222571651965,
+        487.9748955335849
+      ],
+      "nominal_needs": [
+        221,
+        302,
+        516,
+        61,
+        268
+      ],
+      "total": 1368,
+      "nonidle_total": 852,
+      "max_need": 516,
+      "max_nonidle_need": 302
+    },
+    {
+      "center": [
+        780,
+        200
+      ],
+      "clearance": 36.878177642822266,
+      "gps_margin": 157.19812339846808,
+      "grid_lengths": [
+        454.3470603534495,
+        624.3396216673692,
+        1018.3105614217864,
+        116.26548683720486,
+        556.6023125315545
+      ],
+      "nominal_needs": [
+        240,
+        337,
+        534,
+        83,
+        303
+      ],
+      "total": 1497,
+      "nonidle_total": 963,
+      "max_need": 534,
+      "max_nonidle_need": 337
+    },
+    {
+      "center": [
+        780,
+        220
+      ],
+      "clearance": 44.0,
+      "gps_margin": 176.89332943895877,
+      "grid_lengths": [
+        474.34706035344965,
+        638.4817572911,
+        1033.1389885465323,
+        130.40762246093578,
+        570.7444481552855
+      ],
+      "nominal_needs": [
+        250,
+        344,
+        541,
+        90,
+        310
+      ],
+      "total": 1535,
+      "nonidle_total": 994,
+      "max_need": 541,
+      "max_nonidle_need": 344
+    },
+    {
+      "center": [
+        790,
+        -380
+      ],
+      "clearance": 34.0,
+      "gps_margin": 39.0,
+      "grid_lengths": [
+        401.5583143449007,
+        14.796980707046188,
+        1295.1877617818127,
+        334.8582523183694,
+        237.01443405287392
+      ],
+      "nominal_needs": [
+        213,
+        32,
+        672,
+        192,
+        143
+      ],
+      "total": 1252,
+      "nonidle_total": 580,
+      "max_need": 672,
+      "max_nonidle_need": 213
+    },
+    {
+      "center": [
+        790,
+        -300
+      ],
+      "clearance": 34.0,
+      "gps_margin": 39.0,
+      "grid_lengths": [
+        318.04359571913926,
+        141.08478767142984,
+        1250.6780937899337,
+        270.4318454471765,
+        221.01443405287392
+      ],
+      "nominal_needs": [
+        172,
+        95,
+        650,
+        160,
+        135
+      ],
+      "total": 1212,
+      "nonidle_total": 562,
+      "max_need": 650,
+      "max_nonidle_need": 172
+    },
+    {
+      "center": [
+        790,
+        -180
+      ],
+      "clearance": 34.0,
+      "gps_margin": 39.0,
+      "grid_lengths": [
+        263.7004499686316,
+        256.25636054668365,
+        1109.104500661126,
+        126.76583565925445,
+        262.6368004169599
+      ],
+      "nominal_needs": [
+        144,
+        153,
+        579,
+        88,
+        156
+      ],
+      "total": 1120,
+      "nonidle_total": 541,
+      "max_need": 579,
+      "max_nonidle_need": 156
+    },
+    {
+      "center": [
+        790,
+        -140
+      ],
+      "clearance": 34.0,
+      "gps_margin": 39.0,
+      "grid_lengths": [
+        280.26899246355526,
+        300.2563605466837,
+        1066.27607353638,
+        83.93740853450836,
+        278.0926445396756
+      ],
+      "nominal_needs": [
+        153,
+        175,
+        558,
+        66,
+        164
+      ],
+      "total": 1116,
+      "nonidle_total": 558,
+      "max_need": 558,
+      "max_nonidle_need": 175
+    },
+    {
+      "center": [
+        790,
+        -20
+      ],
+      "clearance": 34.0,
+      "gps_margin": 39.0,
+      "grid_lengths": [
+        318.1561514944395,
+        393.99647591686136,
+        1010.9968529228016,
+        37.854147413823156,
+        355.63174978307643
+      ],
+      "nominal_needs": [
+        172,
+        221,
+        530,
+        43,
+        202
+      ],
+      "total": 1168,
+      "nonidle_total": 638,
+      "max_need": 530,
+      "max_nonidle_need": 221
+    },
+    {
+      "center": [
+        790,
+        60
+      ],
+      "clearance": 34.0,
+      "gps_margin": 41.608292442733095,
+      "grid_lengths": [
+        401.67087012020096,
+        494.3640082850083,
+        986.2273003011013,
+        53.854147413823156,
+        447.974895533585
+      ],
+      "nominal_needs": [
+        213,
+        272,
+        518,
+        51,
+        248
+      ],
+      "total": 1302,
+      "nonidle_total": 784,
+      "max_need": 518,
+      "max_nonidle_need": 272
+    },
+    {
+      "center": [
+        790,
+        100
+      ],
+      "clearance": 34.0,
+      "gps_margin": 67.01678894127949,
+      "grid_lengths": [
+        418.23941261512465,
+        543.7122046693995,
+        987.3988731763551,
+        74.38323584329632,
+        475.97489553358497
+      ],
+      "nominal_needs": [
+        222,
+        296,
+        518,
+        62,
+        262
+      ],
+      "total": 1360,
+      "nonidle_total": 842,
+      "max_need": 518,
+      "max_nonidle_need": 296
+    },
+    {
+      "center": [
+        790,
+        220
+      ],
+      "clearance": 34.0,
+      "gps_margin": 178.80506144961333,
+      "grid_lengths": [
+        478.4891959771806,
+        646.1386115405925,
+        1039.624269920771,
+        138.06447671042812,
+        578.4013024047778
+      ],
+      "nominal_needs": [
+        252,
+        348,
+        544,
+        94,
+        314
+      ],
+      "total": 1552,
+      "nonidle_total": 1008,
+      "max_need": 544,
+      "max_nonidle_need": 348
+    }
+  ],
+  "east_late_host_speed_sensitivity": {
+    "1.5": [
+      {
+        "depart_step": 3205,
+        "required_steps": 127,
+        "ready_or_exchange_done": 3332,
+        "position": [
+          610.96728515625,
+          -211.71949768066406
+        ],
+        "route": {
+          "grid_length_pixels": 184.60252086367615,
+          "route_length_pixels": 172.4973783568583,
+          "start_clearance_pixels": 24.351591110229492,
+          "connector_pixels": 5.81215296180445,
+          "checked_grid_min_clearance_pixels": 23.76972770690918,
+          "waypoints": [
+            [
+              610.97,
+              -211.72
+            ],
+            [
+              638.5,
+              -211.5
+            ],
+            [
+              780.0,
+              -180.0
+            ]
+          ],
+          "end_distance_from_origin": 800.49984384758,
+          "route_sample_fraction_in_no_gps": 0.8314606741573034,
+          "end_distance_from_hub": 0.0
+        },
+        "original_task_steps_displaced": 195
+      },
+      {
+        "depart_step": 3115,
+        "required_steps": 279,
+        "ready_or_exchange_done": 3394,
+        "position": [
+          783.28369140625,
+          -472.4839172363281
+        ],
+        "route": {
+          "grid_length_pixels": 387.6624240016488,
+          "route_length_pixels": 381.310089914557,
+          "start_clearance_pixels": 23.76972770690918,
+          "connector_pixels": 5.6380373840092775,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              783.28,
+              -472.48
+            ],
+            [
+              616.5,
+              -465.5
+            ],
+            [
+              604.5,
+              -451.5
+            ],
+            [
+              604.5,
+              -323.5
+            ],
+            [
+              654.5,
+              -277.5
+            ]
+          ],
+          "end_distance_from_origin": 710.8983752970603,
+          "route_sample_fraction_in_no_gps": 0.46938775510204084,
+          "end_distance_from_hub": 158.92293729981208
+        },
+        "original_task_steps_displaced": 279
+      },
+      {
+        "depart_step": 2670,
+        "required_steps": 727,
+        "ready_or_exchange_done": 3397,
+        "position": [
+          88.49073028564453,
+          -452.8457336425781
+        ],
+        "route": {
+          "grid_length_pixels": 1098.4266573264408,
+          "route_length_pixels": 1054.3706998861935,
+          "start_clearance_pixels": 35.0,
+          "connector_pixels": 3.902703984688718,
+          "checked_grid_min_clearance_pixels": 24.0,
+          "waypoints": [
+            [
+              88.49,
+              -452.85
+            ],
+            [
+              100.5,
+              -319.5
+            ],
+            [
+              220.5,
+              -37.5
+            ],
+            [
+              222.5,
+              64.5
+            ],
+            [
+              238.5,
+              74.5
+            ],
+            [
+              500.5,
+              62.5
+            ],
+            [
+              542.5,
+              56.5
+            ],
+            [
+              652.5,
+              -39.5
+            ],
+            [
+              694.5,
+              -45.5
+            ]
+          ],
+          "end_distance_from_origin": 695.9888648534544,
+          "route_sample_fraction_in_no_gps": 0.4648148148148148,
+          "end_distance_from_hub": 159.3753431368855
+        },
+        "original_task_steps_displaced": 727
+      },
+      {
+        "depart_step": 3260,
+        "required_steps": 130,
+        "ready_or_exchange_done": 3390,
+        "position": [
+          617.4864501953125,
+          52.35484313964844
+        ],
+        "route": {
+          "grid_length_pixels": 167.6602984966625,
+          "route_length_pixels": 158.2751277615025,
+          "start_clearance_pixels": 33.52610778808594,
+          "connector_pixels": 3.9790576295307276,
+          "checked_grid_min_clearance_pixels": 24.698177337646484,
+          "waypoints": [
+            [
+              617.49,
+              52.35
+            ],
+            [
+              602.5,
+              24.5
+            ],
+            [
+              604.5,
+              0.5
+            ],
+            [
+              670.5,
+              -41.5
+            ],
+            [
+              694.5,
+              -45.5
+            ]
+          ],
+          "end_distance_from_origin": 695.9888648534544,
+          "route_sample_fraction_in_no_gps": 0.9534883720930233,
+          "end_distance_from_hub": 159.3753431368855
+        },
+        "original_task_steps_displaced": 130
+      },
+      {
+        "depart_step": 3375,
+        "required_steps": 24,
+        "ready_or_exchange_done": 3399,
+        "position": [
+          737.477294921875,
+          -291.4064025878906
+        ],
+        "route": {
+          "grid_length_pixels": 0.0,
+          "route_length_pixels": 0.0,
+          "start_clearance_pixels": 37.0,
+          "connector_pixels": 0.0,
+          "checked_grid_min_clearance_pixels": 37.0,
+          "waypoints": [
+            [
+              737.477294921875,
+              -291.4064025878906
+            ],
+            [
+              737.477294921875,
+              -291.4064025878906
+            ]
+          ],
+          "end_distance_from_origin": 792.9630836265343,
+          "route_sample_fraction_in_no_gps": null,
+          "already_in_contact": true
+        },
+        "original_task_steps_displaced": 24
+      }
+    ],
+    "2.8": [
+      {
+        "depart_step": 3240,
+        "required_steps": 97,
+        "ready_or_exchange_done": 3337,
+        "position": [
+          577.6631469726562,
+          -159.56887817382812
+        ],
+        "route": {
+          "grid_length_pixels": 254.40755674981813,
+          "route_length_pixels": 237.18661849751905,
+          "start_clearance_pixels": 41.0,
+          "connector_pixels": 4.019209101499858,
+          "checked_grid_min_clearance_pixels": 23.76972770690918,
+          "waypoints": [
+            [
+              577.66,
+              -159.57
+            ],
+            [
+              602.5,
+              -209.5
+            ],
+            [
+              622.5,
+              -213.5
+            ],
+            [
+              780.0,
+              -180.0
+            ]
+          ],
+          "end_distance_from_origin": 800.49984384758,
+          "route_sample_fraction_in_no_gps": 0.8780487804878049,
+          "end_distance_from_hub": 0.0
+        },
+        "original_task_steps_displaced": 160
+      },
+      {
+        "depart_step": 3350,
+        "required_steps": 47,
+        "ready_or_exchange_done": 3397,
+        "position": [
+          592.7589111328125,
+          -293.1410217285156
+        ],
+        "route": {
+          "grid_length_pixels": 67.88417019062116,
+          "route_length_pixels": 63.69147207607814,
+          "start_clearance_pixels": 52.40229034423828,
+          "connector_pixels": 4.085180317397834,
+          "checked_grid_min_clearance_pixels": 23.0,
+          "waypoints": [
+            [
+              592.76,
+              -293.14
+            ],
+            [
+              654.5,
+              -277.5
+            ]
+          ],
+          "end_distance_from_origin": 710.8983752970603,
+          "route_sample_fraction_in_no_gps": 1.0,
+          "end_distance_from_hub": 158.92293729981208
+        },
+        "original_task_steps_displaced": 47
+      },
+      {
+        "depart_step": 2995,
+        "required_steps": 401,
+        "ready_or_exchange_done": 3396,
+        "position": [
+          89.74089813232422,
+          -452.01202392578125
+        ],
+        "route": {
+          "grid_length_pixels": 1096.984288172609,
+          "route_length_pixels": 1053.4333645568368,
+          "start_clearance_pixels": 33.0,
+          "connector_pixels": 5.288761955603071,
+          "checked_grid_min_clearance_pixels": 24.0,
+          "waypoints": [
+            [
+              89.74,
+              -452.01
+            ],
+            [
+              100.5,
+              -319.5
+            ],
+            [
+              220.5,
+              -37.5
+            ],
+            [
+              222.5,
+              64.5
+            ],
+            [
+              238.5,
+              74.5
+            ],
+            [
+              500.5,
+              62.5
+            ],
+            [
+              542.5,
+              56.5
+            ],
+            [
+              652.5,
+              -39.5
+            ],
+            [
+              694.5,
+              -45.5
+            ]
+          ],
+          "end_distance_from_origin": 695.9888648534544,
+          "route_sample_fraction_in_no_gps": 0.4648148148148148,
+          "end_distance_from_hub": 159.3753431368855
+        },
+        "original_task_steps_displaced": 401
+      },
+      {
+        "depart_step": 3285,
+        "required_steps": 106,
+        "ready_or_exchange_done": 3391,
+        "position": [
+          667.6475219726562,
+          100.16889190673828
+        ],
+        "route": {
+          "grid_length_pixels": 236.23608007776193,
+          "route_length_pixels": 227.48646754612295,
+          "start_clearance_pixels": 40.8166618347168,
+          "connector_pixels": 3.844161091975537,
+          "checked_grid_min_clearance_pixels": 24.698177337646484,
+          "waypoints": [
+            [
+              667.65,
+              100.17
+            ],
+            [
+              602.5,
+              28.5
+            ],
+            [
+              604.5,
+              0.5
+            ],
+            [
+              670.5,
+              -41.5
+            ],
+            [
+              694.5,
+              -45.5
+            ]
+          ],
+          "end_distance_from_origin": 695.9888648534544,
+          "route_sample_fraction_in_no_gps": 0.6859504132231405,
+          "end_distance_from_hub": 159.3753431368855
+        },
+        "original_task_steps_displaced": 106
+      },
+      {
+        "depart_step": 3375,
+        "required_steps": 24,
+        "ready_or_exchange_done": 3399,
+        "position": [
+          737.477294921875,
+          -291.4064025878906
+        ],
+        "route": {
+          "grid_length_pixels": 0.0,
+          "route_length_pixels": 0.0,
+          "start_clearance_pixels": 37.0,
+          "connector_pixels": 0.0,
+          "checked_grid_min_clearance_pixels": 37.0,
+          "waypoints": [
+            [
+              737.477294921875,
+              -291.4064025878906
+            ],
+            [
+              737.477294921875,
+              -291.4064025878906
+            ]
+          ],
+          "end_distance_from_origin": 792.9630836265343,
+          "route_sample_fraction_in_no_gps": null,
+          "already_in_contact": true
+        },
+        "original_task_steps_displaced": 24
+      }
+    ]
+  },
+  "selection": "Recommend east (780,-180) among scanned static candidates; not a global optimality claim. Prioritize less diversion of moving drones; drone2 was nearly stationary.",
+  "communication_goal": "Drone0 collecting visitor packets; full final-map synchronization across every pair is not assumed.",
+  "baseline_submission_window_note": "Original pre_submit_scan waits until3420; final_maps adds its existing waiting. Meeting completion around3400 does not by itself change original submission timing.",
+  "previous_report_comparison": "Original earlier 1935 drone-step estimate used a different5-step sampling phase. Current same_window origin estimate1940 differs by5steps. Fair same-deadline late-host comparisons here:1851 vs1209 vs944.",
+  "if_all_depart_at3240": {
+    "origin": {
+      "hub_ready": 3826,
+      "visitors": [
+        {
+          "drone": 1,
+          "arrive_contact_zone": 3660,
+          "wait_for_hub": 166,
+          "exchange_done": 3850
+        },
+        {
+          "drone": 2,
+          "arrive_contact_zone": 3394,
+          "wait_for_hub": 432,
+          "exchange_done": 3850
+        },
+        {
+          "drone": 3,
+          "arrive_contact_zone": 3477,
+          "wait_for_hub": 349,
+          "exchange_done": 3850
+        },
+        {
+          "drone": 4,
+          "arrive_contact_zone": 3509,
+          "wait_for_hub": 317,
+          "exchange_done": 3850
+        }
+      ]
+    },
+    "middle": {
+      "hub_ready": 3409,
+      "visitors": [
+        {
+          "drone": 1,
+          "arrive_contact_zone": 3466,
+          "wait_for_hub": 0,
+          "exchange_done": 3490
+        },
+        {
+          "drone": 2,
+          "arrive_contact_zone": 3550,
+          "wait_for_hub": 0,
+          "exchange_done": 3574
+        },
+        {
+          "drone": 3,
+          "arrive_contact_zone": 3240,
+          "wait_for_hub": 169,
+          "exchange_done": 3433
+        },
+        {
+          "drone": 4,
+          "arrive_contact_zone": 3382,
+          "wait_for_hub": 27,
+          "exchange_done": 3433
+        }
+      ]
+    },
+    "east": {
+      "hub_ready": 3371,
+      "visitors": [
+        {
+          "drone": 1,
+          "arrive_contact_zone": 3361,
+          "wait_for_hub": 10,
+          "exchange_done": 3395
+        },
+        {
+          "drone": 2,
+          "arrive_contact_zone": 3768,
+          "wait_for_hub": 0,
+          "exchange_done": 3792
+        },
+        {
+          "drone": 3,
+          "arrive_contact_zone": 3295,
+          "wait_for_hub": 76,
+          "exchange_done": 3395
+        },
+        {
+          "drone": 4,
+          "arrive_contact_zone": 3357,
+          "wait_for_hub": 14,
+          "exchange_done": 3395
+        }
+      ]
+    },
+    "east_north": {
+      "hub_ready": 3374,
+      "visitors": [
+        {
+          "drone": 1,
+          "arrive_contact_zone": 3369,
+          "wait_for_hub": 5,
+          "exchange_done": 3398
+        },
+        {
+          "drone": 2,
+          "arrive_contact_zone": 3755,
+          "wait_for_hub": 0,
+          "exchange_done": 3779
+        },
+        {
+          "drone": 3,
+          "arrive_contact_zone": 3283,
+          "wait_for_hub": 91,
+          "exchange_done": 3398
+        },
+        {
+          "drone": 4,
+          "arrive_contact_zone": 3361,
+          "wait_for_hub": 13,
+          "exchange_done": 3398
+        }
+      ]
+    }
+  }
+}
