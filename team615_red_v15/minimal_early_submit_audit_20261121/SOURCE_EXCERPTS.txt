@@ -1,0 +1,419 @@
+=== red_hooks.py:161-203 ===
+161:     def receive(self):
+162:         super().receive()
+163:         for _, message in self.communicator.received_messages:
+164:             if not isinstance(message, dict) or message.get("kind") != "two-stage":
+165:                 continue
+166:             self.search_reconnect.record_contact(self)
+167:             self.pre_submit_scan.on_message(int(self.elapsed_timestep))
+168:             self._receive_team_coordination(message, int(self.elapsed_timestep))
+169:             self.placement.receive(self, message)
+170:             self.placement.branch_exit.receive(self, message)
+171:             self.placement.local_exit.receive(self, message)
+172:             self.placement.deep.passages.receive(self, message["id"], message)
+173:             self._receive_scan_progress(message)
+174:             self.fast_closeout.receive(self,message)
+175:             self.team_wall.receive(self,message)
+176:             self.submission_bearings.receive(message['id'],message.get('red_submission_bearings'))
+177:             bid = message.get("red_map_bid")
+178:             sender = message["id"]
+179:             if (type(sender) is int and 0 <= sender < self.team_size
+180:                     and isinstance(bid, tuple) and len(bid) == 3):
+181:                 stamp, score, ready = bid
+182:                 if (type(stamp) is int and 0 <= stamp <= int(self.elapsed_timestep)
+183:                         and type(score) is int and 0 <= score <= 10000 and type(ready) is bool
+184:                         and stamp > self.map_bids.get(sender, (-1, 0, False))[0]):
+185:                     self.map_bids[sender] = bid
+186:                     # Compare estimates from the same transmission step. Once
+187:                     # separated, a new local score must not change that ordering.
+188:                     if ready and stamp < DeadlineSubmission.window_start(self.limit):
+189:                         own = next((sent for sent in reversed(self.own_sent_bids)
+190:                                     if sent[0] == stamp and sent[2]), None)
+191:                         if own is not None:
+192:                             self.last_eligible_bid_comparison[sender] = stamp, score, own[1]
+193:             self._receive_cached_map(sender, message, int(self.elapsed_timestep))
+194:             self.final_maps.receive(sender, int(self.elapsed_timestep),
+195:                                     message.get("red_final_have"), message.get("red_final_map"))
+196:             self.final_reconnect.record(self, message, int(self.elapsed_timestep))
+197:             packet = message.get("red_map")
+198:             owner = message["id"]
+199:             if packet is not None and packet[0] > self.map_revision.get(owner, -1):
+200:                 self.memory.merge(packet[1])
+201:                 self.fine_wall_coverage.merge_direct(owner, message.get("red_wall_sources"))
+202:                 self.map_revision[owner] = packet[0]
+203: 
+=== red_hooks.py:487-504 ===
+487:     def _submission_image(self, step):
+488:         if self.final_maps.snapshots:
+489:             memory, versions = self.final_maps.fuse(self.memory)
+490:             image = self._render_submission(memory)
+491:             if image.any():
+492:                 return image, None, versions
+493:         image = self._render_submission()
+494:         selected = self._select_submission_cache(step, image)
+495:         if selected is None:
+496:             return image, None, {}
+497:         owner, (version, estimate, digest, packed) = selected
+498:         shape = self.memory.height, self.memory.width
+499:         image = np.unpackbits(np.frombuffer(packed, np.uint8), count=math.prod(shape)).reshape(shape)
+500:         return image, (owner, version, estimate, digest), {}
+501: 
+502:     def _prepare_map_cache(self, step):
+503:         if (self.previous_inventory != 0 or self.pending_drop is not None
+504:                 or self.map_quality is None or self.limit - step <= 48
+=== red_hooks.py:613-644 ===
+613:     def _prefer_own_submission(self, step):
+614:         owner = int(self.identifier)
+615:         own_bid = self._own_map_bid(step)
+616:         if own_bid is None:
+617:             return False
+618:         own = (own_bid[1], -owner)
+619:         fresh = [(score, -peer, ready) for peer, (stamp, score, ready) in self.map_bids.items()
+620:                  if 0 <= step - stamp <= 32]
+621:         if any(ready and (score, peer) > own for score, peer, ready in fresh):
+622:             return False
+623:         best = max([(score, peer) for score, peer, _ in fresh] + [own])
+624:         # When eligible peers separate, give a verified higher-ranked peer
+625:         # one limited chance. The absolute window prevents repeated elections.
+626:         if best == own:
+627:             known_higher = [(other_score,-peer,stamp,own_score)
+628:                             for peer,(stamp,other_score,own_score) in self.last_eligible_bid_comparison.items()
+629:                             if step-stamp > 32 and self.map_bids[peer][0] == stamp
+630:                             and (other_score,-peer) > (own_score,-owner)]
+631:             if known_higher and step < self.pre_submit_scan.finish(self) + 48 and self.walltime_limit-self.elapsed_walltime > 1.5:
+632:                 if self.submission_priority_audit is None:
+633:                     score, peer, stamp, own_score = max(known_higher)
+634:                     self.submission_priority_audit = dict(step=step, preferred=-peer, agreed_step=stamp,
+635:                                                           self_estimate=own_score, peer_estimate=score)
+636:                 return False
+637:             return True
+638:         # Keep broadcasting the verified inventory while the better aircraft
+639:         # has a bounded opportunity to receive it and become eligible.
+640:         if self.submission_wait_started is None:
+641:             self.submission_wait_started = step
+642:             self.submission_wait_for = -best[1]
+643:         return (step - self.submission_wait_started >= 48 or self.limit - step <= 4
+644:                 or self.walltime_limit - self.elapsed_walltime <= 1.5)
+=== red_hooks.py:943-973 ===
+943:     def _submission_window_open(self, step):
+944:         return step >= self.limit * 3 // 5 or self.elapsed_walltime >= .85 * self.walltime_limit
+945: 
+946:     def control(self):
+947:         step = int(self.elapsed_timestep)
+948:         before = self.previous_inventory
+949:         self._sync_placement(step)
+950:         if before is not None and self.previous_inventory < before:
+951:             self.last_confirmed_drop_step = step
+952:         if self.submitted or self._force_deadline_submission(step):
+953:             return CoveragePlacementDrone._empty_command()
+954:         command = super().control()
+955:         command["place_bomb"] = 0
+956:         if self.pose is None:
+957:             return command
+958: 
+959:         # Final-window fallback: track every frame, and once the closeout state
+960:         # machine takes over a stalled bomb-carrying drone, it owns the command
+961:         # so the ordinary branches cannot override its deterministic departure.
+962:         wall_left = self.walltime_limit - self.elapsed_walltime
+963:         steps_left = self.limit - step
+964:         self.closeout.tick(self, step, command, wall_left, steps_left)
+965:         if self.closeout.state in (DEPARTING, FORCING):
+966:             return command
+967: 
+968:         # Dedicated messenger: once active it owns navigation so the ordinary
+969:         # exploration/placement branches cannot override its tour.
+970:         if self.messenger.tick(self, step, command, steps_left):
+971:             return command
+972: 
+973:         ranges = self.lidar_values()
+=== red_hooks.py:976-991 ===
+976:             observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
+977:             fixed = self.grid.pose_fixed and not self._odometry_only
+978:             self.fine_wall_coverage.observe(observations, fixed)
+979:             self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
+980:                                              np.asarray(self.lidar_rays_angles()),semantic)
+981:         refresh = self.pre_submit_scan.refresh_due(self,step)
+982:         if refresh or step % 45 == self.identifier:
+983:             self.red_packet = step, self.memory.packet()
+984:             self.wall_source_packet = self.fine_wall_coverage.packet()
+985:             if refresh:
+986:                 self.pre_submit_scan.refreshed.append(step)
+987:             _, wall_evidence, _, _ = self.red_packet[1]
+988:             # Lightweight version of the existing observed-area and stable-wall
+989:             # estimate. Ground-truth map and official score are unavailable in flight.
+990:             known = self.memory.free.mean()
+991:             stable = min(1., np.count_nonzero(wall_evidence >= 3) / (.018 * self.memory.hits.size))
+=== red_hooks.py:1039-1087 ===
+1039: 
+1040:         # Freeze the closing submission snapshot after this aircraft is empty.
+1041:         # R483's ordinary live map packets continue feeding its existing rules.
+1042:         if (self.previous_inventory == 0 and self.pending_drop is None
+1043:                 and (step >= self.limit * 9 // 10 or self._all_inventory_empty()
+1044:                      and step >= self.pre_submit_scan.finish(self))):
+1045:             self.final_maps.freeze(step, self.memory)
+1046:         if step >= DeadlineSubmission.window_start(self.limit):
+1047:             self._submit_at_deadline(step)
+1048:             if self.submitted:
+1049:                 return command
+1050:             if not self._all_inventory_empty():
+1051:                 self.placement.update(self,command,step,ranges,semantic)
+1052:             self.local_escape.apply(self,command,step,ranges,semantic)
+1053:             return command
+1054: 
+1055:         if self._all_inventory_empty():
+1056:             latest = max(stamp for stamp, _ in self.inventory_records.values() if stamp <= step)
+1057:             # Requests are processed on a physics tick. Empty inventory can
+1058:             # only be observed on a later tick, including the local last drop.
+1059:             if self.pending_drop is None and latest <= step:
+1060:                 if self.first_ready_to_submit_step is None:
+1061:                     self.first_ready_to_submit_step = step
+1062:                 if not self._submission_window_open(step):
+1063:                     return command
+1064:                 if self.pre_submit_scan.waiting(self,step):
+1065:                     self.pre_submit_scan.record_wait(self,step)
+1066:                     return command
+1067:                 self.pre_submit_scan.record_finish(self,step)
+1068:                 if self.final_maps.waiting(step, DeadlineSubmission.window_start(self.limit),
+1069:                                            self.walltime_limit - self.elapsed_walltime):
+1070:                     return command
+1071:                 if not self._prefer_own_submission(step):
+1072:                     return command
+1073:                 if provisional_map(step, self.map_quality, self.map_revision,
+1074:                                    self.walltime_limit-self.elapsed_walltime):
+1075:                     return command
+1076:                 image, cache, versions = self._submission_image(step)
+1077:                 if image.any():
+1078:                     self.submit_exploration_map(image.astype(np.uint8))
+1079:                     self.submitted_cache = cache
+1080:                     self.final_submission_versions = versions
+1081:                     self.submission_elected_rank = self.final_maps.rank(self.map_quality or 0)
+1082:                     self.red_submission_step = step
+1083:                     self.submitted = True
+1084:         else:
+1085:             self.placement.update(self,command,step,ranges,semantic)
+1086:         self.local_escape.apply(self,command,step,ranges,semantic)
+1087:         return command
+=== greedy_mapping.py:93-112 ===
+93:     def packet(self):
+94:         ids = np.flatnonzero(self.hits.ravel() >= 2).astype(np.int32)
+95:         return (ids, self.hits.ravel()[ids].copy(), np.packbits(self.free.ravel()), self.visits.copy())
+96: 
+97:     def merge(self, packet):
+98:         ids, values, packed_free, visits = packet
+99:         ids = np.asarray(ids)
+100:         values = np.asarray(values)
+101:         if ids.ndim != 1 or values.shape != ids.shape or np.asarray(visits).shape != self.shape:
+102:             return
+103:         if len(ids) and (int(ids.min()) < 0 or int(ids.max()) >= self.hits.size):
+104:             return
+105:         free = np.unpackbits(np.asarray(packed_free, dtype=np.uint8))
+106:         if len(free) < self.free.size:
+107:             return
+108:         # Idempotent max-union avoids inventing evidence through repeated gossip.
+109:         flat = self.hits.ravel()
+110:         flat[ids] = np.maximum(flat[ids], values)
+111:         self.free |= free[:self.free.size].reshape(self.shape).astype(bool)
+112:         self.visits = np.maximum(self.visits, np.asarray(visits, dtype=np.uint8))
+=== pre_submit_scan.py:4-43 ===
+4: class PreSubmitScan:
+5:     STEPS = 180
+6:     MIN_WALLTIME_LEFT = 12.
+7: 
+8:     def __init__(self):
+9:         self.refresh_step = -1
+10:         self.refreshed = []
+11:         self.wait_started = None
+12:         self.audit = []
+13: 
+14:     @staticmethod
+15:     def start(drone):
+16:         return drone.limit * 3 // 5
+17: 
+18:     def finish(self, drone):
+19:         return min(self.start(drone) + self.STEPS, drone.limit-30)
+20: 
+21:     def waiting(self, drone, step):
+22:         return (self.start(drone) <= step < self.finish(drone)
+23:                 and drone.walltime_limit-drone.elapsed_walltime >= self.MIN_WALLTIME_LEFT)
+24: 
+25:     def on_message(self, step):
+26:         self.refresh_step = step
+27: 
+28:     def refresh_due(self, drone, step):
+29:         if (not self.waiting(drone,step) or drone.previous_inventory != 0
+30:                 or drone.communicator_is_disabled() or step-self.refresh_step > 2
+31:                 or self.refresh_step < self.start(drone)):
+32:             return False
+33:         packet = drone.red_packet
+34:         return packet is None or step-packet[0] >= 12
+35: 
+36:     def record_wait(self, drone, step):
+37:         if self.wait_started is None:
+38:             self.wait_started = step
+39:             self.audit.append((step,"begin",int(drone.map_quality or 0)))
+40: 
+41:     def record_finish(self, drone, step):
+42:         if self.wait_started is not None and len(self.audit)==1:
+43:             self.audit.append((step,"submit_window",int(drone.map_quality or 0)))
+=== final_map_relay.py:4-75 ===
+4: 
+5: class FinalMaps:
+6:     CONTACT_TTL = 12
+7:     SEND_INTERVAL = 3
+8:     COLLECTION_STEPS = 24
+9: 
+10:     def __init__(self, owner, team_size):
+11:         self.owner = owner
+12:         self.team_size = team_size
+13:         self.snapshots = {}
+14:         self.peers = {}
+15:         self.last_sent = {}
+16:         self.received = []
+17:         self.collection_start = None
+18: 
+19:     @property
+20:     def mask(self):
+21:         return sum(1 << owner for owner in self.snapshots)
+22: 
+23:     def freeze(self, step, memory):
+24:         if self.owner not in self.snapshots:
+25:             self.snapshots[self.owner] = (self.owner, step, True, memory.packet())
+26: 
+27:     def receive(self, sender, step, mask, snapshot):
+28:         if type(sender) is not int or not 0 <= sender < self.team_size or sender == self.owner:
+29:             return
+30:         if type(mask) is not int or not 0 <= mask < 1 << self.team_size:
+31:             return
+32:         self.peers[sender] = step, mask
+33:         if not isinstance(snapshot, tuple) or len(snapshot) != 4:
+34:             return
+35:         owner, version, final, evidence = snapshot
+36:         if (type(owner) is not int or not 0 <= owner < self.team_size or owner == self.owner
+37:                 or type(version) is not int or not 0 <= version <= step or final is not True
+38:                 or not isinstance(evidence, tuple) or len(evidence) != 4
+39:                 or owner in self.snapshots or not mask & (1 << owner)):
+40:             return
+41:         self.snapshots[owner] = snapshot
+42:         self.received.append((step, sender, owner, version))
+43: 
+44:     def outgoing(self, step):
+45:         if step % self.SEND_INTERVAL != self.owner % self.SEND_INTERVAL:
+46:             return None
+47:         near = [mask for stamp, mask in self.peers.values() if step - stamp <= self.CONTACT_TTL]
+48:         missing = [owner for owner in self.snapshots if any(not mask & (1 << owner) for mask in near)]
+49:         if not missing:
+50:             return None
+51:         owner = min(missing, key=lambda peer: (self.last_sent.get(peer, -1), peer != self.owner, peer))
+52:         self.last_sent[owner] = step
+53:         return self.snapshots[owner]
+54: 
+55:     def waiting(self, step, deadline_start, wall_left):
+56:         if len(self.snapshots) == self.team_size or step >= deadline_start or wall_left <= 12:
+57:             return False
+58:         if self.collection_start is None:
+59:             self.collection_start = step
+60:         return step - self.collection_start < self.COLLECTION_STEPS
+61: 
+62:     def rank(self, estimate):
+63:         # Compare final-source counts before the ordinary map estimate.
+64:         return len(self.snapshots) * 1600 + estimate * 1500 // 10000
+65: 
+66:     def fuse(self, memory):
+67:         merged = copy(memory)
+68:         merged.hits = memory.hits.copy()
+69:         merged.free = memory.free.copy()
+70:         merged.visits = memory.visits.copy()
+71:         versions = {}
+72:         for owner, (_, version, _, evidence) in sorted(self.snapshots.items()):
+73:             merged.merge(evidence)
+74:             versions[owner] = version
+75:         return merged, versions
+=== partial_map_submit.py:1-6 ===
+1: """Avoid freezing a demonstrably partial map until the fallback can compare alternatives."""
+2: 
+3: def provisional_map(step, estimate, peer_revisions, wall_seconds_left):
+4:     if estimate is None or estimate >= 5000 or wall_seconds_left <= 12.:
+5:         return False
+6:     return not any(0 <= step - stamp < 600 for stamp in peer_revisions.values())
+=== deadline_submission.py:9-50 ===
+9:     SCORE_SLOTS = 22
+10:     SCORE_MAX = 10000
+11:     FALLBACK_STEPS = 4
+12:     MIN_WALL_MARGIN = 1.5
+13:     WALL_OVERHEAD = 0.5
+14:     BACKUP_INTERVAL = 360
+15:     image: object = None
+16:     score: int | None = None
+17:     cache: tuple | None = None
+18:     backup_image: object = None
+19:     backup_step: int = -1
+20:     observed_step: int | None = None
+21:     observed_walltime: float | None = None
+22:     recent_step_seconds: float = 0.0
+23: 
+24:     def fallback_reason(self, step, limit, elapsed_walltime, walltime_limit):
+25:         if self.observed_step is not None and step > self.observed_step:
+26:             seconds = (elapsed_walltime - self.observed_walltime) / (step - self.observed_step)
+27:             self.recent_step_seconds = 0.8 * self.recent_step_seconds + 0.2 * max(0.0, seconds)
+28:         self.observed_step = step
+29:         self.observed_walltime = elapsed_walltime
+30: 
+31:         seconds_per_step = max(self.recent_step_seconds, elapsed_walltime / max(1, step))
+32:         wall_margin = max(self.MIN_WALL_MARGIN, self.WALL_OVERHEAD + self.FALLBACK_STEPS * seconds_per_step)
+33:         if walltime_limit - elapsed_walltime <= wall_margin:
+34:             return "walltime"
+35:         if limit - step <= self.FALLBACK_STEPS:
+36:             return "timestep"
+37:         return None
+38: 
+39:     def backup_due(self, step):
+40:         return self.backup_image is None or step - self.backup_step >= self.BACKUP_INTERVAL
+41: 
+42:     def remember(self, step, image):
+43:         self.backup_step = step
+44:         self.backup_image = image
+45: 
+46:     @classmethod
+47:     def window_start(cls, limit):
+48:         return limit-cls.WINDOW+1
+49: 
+50:     @classmethod
+=== submission_renderer.py:23-43 ===
+23:     def packet(self, step, map_revision):
+24:         if map_revision is None:
+25:             return None
+26:         if self.revision != map_revision:
+27:             ids = np.flatnonzero(self.bits.ravel()).astype(np.int32)
+28:             self.wire = map_revision, ids, self.bits.ravel()[ids].copy()
+29:             self.revision = map_revision
+30:         return self.wire
+31: 
+32:     def receive(self, sender, packet):
+33:         if not isinstance(packet, tuple) or len(packet) != 3:
+34:             return
+35:         step, ids, values = packet
+36:         if (type(step) is not int or step <= self.received.get(sender, -1)
+37:                 or not isinstance(ids, np.ndarray) or not isinstance(values, np.ndarray)
+38:                 or ids.ndim != 1 or values.shape != ids.shape or ids.dtype.kind not in "iu"
+39:                 or values.dtype != np.uint8 or ids.size > self.bits.size
+40:                 or (ids.size and (int(ids.min()) < 0 or int(ids.max()) >= self.bits.size))):
+41:             return
+42:         np.bitwise_or.at(self.bits.ravel(),ids,values)
+43:         self.received[sender] = step
+=== coverage_placement.py:108-123 ===
+108:                 self.pending_drop = None
+109:                 self.placement_goal = None
+110:                 self.waypoints = []
+111:                 self.last_plan_step = -100
+112:         self.previous_inventory = inventory
+113:         self.inventory_records[int(self.identifier or 0)] = (step, inventory)
+114: 
+115:     def _all_inventory_empty(self):
+116:         return all(peer in self.inventory_records and self.inventory_records[peer][1] == 0
+117:                    for peer in range(self.team_size))
+118: 
+119:     def _is_returning(self, step):
+120:         return int(self.carried_bombs_count()) == 0 and super()._is_returning(step)
+121: 
+122:     def _submission_due(self, step):
+123:         if self._all_inventory_empty():
