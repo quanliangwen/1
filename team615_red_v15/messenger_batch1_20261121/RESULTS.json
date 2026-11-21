@@ -1,0 +1,2972 @@
+{
+  "sdk": "6557940dc18549ffc7a945db887da5b05b7ed2f1",
+  "sdk_archive_sha256": "9155bc4cdf5e0813cd328d3a56c3b73633ba351c3859e694762ed41376fc6860",
+  "seed": 615,
+  "new_red_rounds": 6,
+  "blue_rounds": 0,
+  "layout_evaluations": 0,
+  "input_name": "潜力1.1：信使+滚动.zip",
+  "build": {
+    "baseline_sha256": "c3021a3eb48031e82bfac9306654b48ca09f168d6f65b13349cf12f783104c7c",
+    "candidate_sha256": "658dbb9e1fc19fd9afd76e8cfde7dd815476eed06dbbe30df62dac61e5dd8b42",
+    "member_count": 53,
+    "changed": {
+      "messenger_run.py": [
+        "2b8876821584783ea41a0cb984043c0c3b8a30111e5612fb86531ed1c284c859",
+        "9cfbf4c66e848f7ca215f322a4d1b06934ad1fbeaf9f87b2cb30ae5f515278dd"
+      ],
+      "red_hooks.py": [
+        "1eca31e4c41a5ec1b2e54f732be63d22853c591bb53af0c097a92ce85966fd6c",
+        "342dbbcf0c09835618c06e1fa58e3bb27f87c186f6b5898f09ef7159211015fb"
+      ]
+    }
+  },
+  "changes": [
+    "fresh direct messages and payload acknowledgements",
+    "map and submission-backup refresh during messenger navigation",
+    "bounded delivery to drone 0 after a newly received empty report"
+  ],
+  "counterexamples": {
+    "baseline": {
+      "arm": "baseline",
+      "status": "PASS",
+      "physics_steps": 0,
+      "scenarios": {
+        "nearby_without_receipt": "baseline falsely reports exchange complete",
+        "active_messenger_refresh": "baseline returns before refresh",
+        "dual_deadline_submission_precedes_messenger": true
+      }
+    },
+    "candidate": {
+      "arm": "candidate",
+      "status": "PASS",
+      "physics_steps": 0,
+      "scenarios": {
+        "nearby_without_receipt": true,
+        "stale_or_relayed_state_rejected": true,
+        "bidirectional_map_and_empty_ack_required": true,
+        "unacknowledged_exchange_has_90_step_bound": true,
+        "stale_nearby_point_wait_is_reachable_and_bounded": true,
+        "late_empty_wakes_once_and_budget_exits_even_in_no_com": true,
+        "redelivery_respects_walltime_and_step_reserves": true,
+        "new_empty_revisits_already_visited_receiver": true,
+        "fixed_identity_activation_and_empty_requirement_retained": true,
+        "active_messenger_refreshes_map_and_submission_backup": true,
+        "dual_deadline_submission_precedes_messenger": true
+      }
+    }
+  },
+  "scores": {
+    "Map06": {
+      "baseline": {
+        "trajectory_exploration_percent": 99.37443067768163,
+        "partial_score_out_of_80": 55.038587644075825,
+        "map_score": 89.34366341227519,
+        "wall_score": 42.984573340484765,
+        "time_score": 17.6984126984127,
+        "map_breakdown": {
+          "s_time": 0.007686858707004123,
+          "s_map": 0.893436634122752,
+          "credit": 0.9129548306148055,
+          "penalty": 0.019518196492053535,
+          "wall_pixels": 95640,
+          "wall_hits": 87315,
+          "wall_hit_rate": 0.9129548306148055,
+          "wall_available": true,
+          "interior_pixels": 48619,
+          "interior_hits": 28081,
+          "interior_hit_rate": 0.5775725539398178,
+          "interior_available": true,
+          "predicted_pixels": 252644,
+          "exact_pixels": 115396,
+          "dead_zone_pixels": 118335,
+          "charged_pixels": 18913,
+          "capped_pixels": 6486,
+          "total_charge": 9333.6015625,
+          "truth_pixels": 144259,
+          "surface_pixels": 95640
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.42984573340484766,
+          "coverage_fraction": 0.2668349934796482,
+          "blast_radius": 132,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 530452,
+          "destroyed_wall_pixels": 35185,
+          "destroyed_boundary_pixels": 3051,
+          "destroyed_interior_pixels": 32134,
+          "total_boundary_pixels": 36231,
+          "total_interior_pixels": 108028,
+          "total_wall_pixels": 144259,
+          "covered_wall_pixels": 35185,
+          "weighted_destroyed": 33659.5,
+          "weighted_total": 126143.5,
+          "theoretical_optimum": 78306.0,
+          "theoretical_optimum_fraction": 0.6207692033279558
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 4731,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 4731,
+          "walltime_seconds": 178.51377940177917,
+          "image_sha256": "3b956360faf9af076298c0368d0c28df7ee634c6fa41037cd522786f6537ce7a"
+        },
+        "elapsed_walltime_seconds": 178.61636543273926,
+        "final_health": {
+          "0": 21,
+          "1": 22,
+          "2": 24,
+          "3": 25,
+          "4": 25
+        },
+        "total_health_lost": 8,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 3956,
+        "sdk_rejected_attempts": 6,
+        "actual_drops": [
+          {
+            "drone": 1,
+            "step": 1252,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              79.34560054322088,
+              -157.02437395251857
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1294,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -120.36908306371635,
+              -429.7109785120144
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              569.2059763263471,
+              -225.56085286060417
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1414,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              168.71921281559668,
+              -413.27242731993664
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1506,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              345.2524528665559,
+              -46.555720517320566
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1570,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -749.6520503838884,
+              411.8526908216159
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2020,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -254.53458665084125,
+              -57.64862484135155
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2080,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -440.2197473507886,
+              -48.19964290200751
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2392,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              538.4898730317209,
+              437.08861777550703
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 3956,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              251.42307747194403,
+              246.57578067235175
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2160,
+            "messenger_enter",
+            [
+              -584.9506561418985,
+              27.390115967043403
+            ]
+          ],
+          [
+            2161,
+            "zone_exit_start",
+            -3.0934
+          ],
+          [
+            2365,
+            "zone_exit_turn",
+            -2.0462
+          ],
+          [
+            2639,
+            "zone_exit_turn",
+            -0.999
+          ],
+          [
+            2829,
+            "zone_exit_turn",
+            0.0482
+          ],
+          [
+            2986,
+            "zone_exit_turn",
+            1.0954
+          ],
+          [
+            3240,
+            "zone_exit_turn",
+            2.1426
+          ],
+          [
+            3357,
+            "zone_exit",
+            [
+              -820.1087040022996,
+              216.45079924041886
+            ]
+          ],
+          [
+            3357,
+            "target_picked",
+            0
+          ],
+          [
+            3475,
+            "contact",
+            0,
+            179.6
+          ],
+          [
+            3487,
+            "exchange_complete",
+            0
+          ],
+          [
+            3488,
+            "target_picked",
+            3
+          ],
+          [
+            3862,
+            "contact",
+            3,
+            178.4
+          ],
+          [
+            3874,
+            "exchange_complete",
+            3
+          ],
+          [
+            3875,
+            "target_picked",
+            1
+          ],
+          [
+            3897,
+            "contact",
+            1,
+            178.6
+          ],
+          [
+            3909,
+            "exchange_complete",
+            1
+          ],
+          [
+            3910,
+            "target_picked",
+            2
+          ],
+          [
+            3912,
+            "contact",
+            2,
+            179.2
+          ],
+          [
+            3924,
+            "exchange_complete",
+            2
+          ],
+          [
+            3925,
+            "messenger_done",
+            4
+          ]
+        ],
+        "active_messenger_map_refresh_count": 0,
+        "active_messenger_map_refresh_steps": [],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              4731,
+              0
+            ],
+            "1": [
+              2782,
+              0
+            ],
+            "2": [
+              2397,
+              0
+            ],
+            "3": [
+              2678,
+              1
+            ],
+            "4": [
+              1791,
+              1
+            ]
+          },
+          "1": {
+            "1": [
+              4731,
+              0
+            ],
+            "0": [
+              2782,
+              0
+            ],
+            "2": [
+              2397,
+              0
+            ],
+            "3": [
+              2678,
+              1
+            ],
+            "4": [
+              1791,
+              1
+            ]
+          },
+          "2": {
+            "2": [
+              4731,
+              0
+            ],
+            "0": [
+              899,
+              2
+            ],
+            "1": [
+              2397,
+              0
+            ],
+            "3": [
+              1928,
+              1
+            ],
+            "4": [
+              1791,
+              1
+            ]
+          },
+          "3": {
+            "3": [
+              4731,
+              0
+            ],
+            "0": [
+              2678,
+              0
+            ],
+            "1": [
+              1928,
+              1
+            ],
+            "2": [
+              1926,
+              0
+            ],
+            "4": [
+              4142,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              4731,
+              0
+            ],
+            "0": [
+              2678,
+              0
+            ],
+            "1": [
+              1928,
+              1
+            ],
+            "2": [
+              1926,
+              0
+            ],
+            "3": [
+              4142,
+              0
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": {
+            "step": 4731,
+            "fallback": "walltime",
+            "remaining_steps": 669,
+            "remaining_walltime": 1.4862205982208252,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4635
+          },
+          "1": {
+            "step": 4731,
+            "fallback": "walltime",
+            "remaining_steps": 669,
+            "remaining_walltime": 1.4862205982208252,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4591
+          },
+          "2": {
+            "step": 4731,
+            "fallback": "walltime",
+            "remaining_steps": 669,
+            "remaining_walltime": 1.4862205982208252,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4682
+          },
+          "3": {
+            "step": 4731,
+            "fallback": "walltime",
+            "remaining_steps": 669,
+            "remaining_walltime": 1.4862205982208252,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4683
+          },
+          "4": {
+            "step": 4731,
+            "fallback": "walltime",
+            "remaining_steps": 669,
+            "remaining_walltime": 1.4862205982208252,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4324
+          }
+        }
+      },
+      "candidate": {
+        "trajectory_exploration_percent": 99.37443067768163,
+        "partial_score_out_of_80": 55.43132103836027,
+        "map_score": 89.33243437303953,
+        "wall_score": 43.64033407401732,
+        "time_score": 20.37037037037037,
+        "map_breakdown": {
+          "s_time": 0.017338563336266412,
+          "s_map": 0.8933243437303953,
+          "credit": 0.9132789627770808,
+          "penalty": 0.01995461904668549,
+          "wall_pixels": 95640,
+          "wall_hits": 87346,
+          "wall_hit_rate": 0.9132789627770808,
+          "wall_available": true,
+          "interior_pixels": 48619,
+          "interior_hits": 27461,
+          "interior_hit_rate": 0.5648203377280487,
+          "interior_available": true,
+          "predicted_pixels": 272912,
+          "exact_pixels": 114807,
+          "dead_zone_pixels": 135755,
+          "charged_pixels": 22350,
+          "capped_pixels": 6116,
+          "total_charge": 9542.298828125,
+          "truth_pixels": 144259,
+          "surface_pixels": 95640
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.4364033407401732,
+          "coverage_fraction": 0.27090575416093576,
+          "blast_radius": 132,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 497737,
+          "destroyed_wall_pixels": 36022,
+          "destroyed_boundary_pixels": 3698,
+          "destroyed_interior_pixels": 32324,
+          "total_boundary_pixels": 36231,
+          "total_interior_pixels": 108028,
+          "total_wall_pixels": 144259,
+          "covered_wall_pixels": 36022,
+          "weighted_destroyed": 34173.0,
+          "weighted_total": 126143.5,
+          "theoretical_optimum": 78306.0,
+          "theoretical_optimum_fraction": 0.6207692033279558
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 4630,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 1,
+          "step": 4630,
+          "walltime_seconds": 174.5477912425995,
+          "image_sha256": "37d6c51df0d01b737f598bb25b62514ca2a006d68c16924541fd9021fa0b595c"
+        },
+        "elapsed_walltime_seconds": 176.87905859947205,
+        "final_health": {
+          "0": 25,
+          "1": 25,
+          "2": 24,
+          "3": 25,
+          "4": 25
+        },
+        "total_health_lost": 1,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 3886,
+        "sdk_rejected_attempts": 6,
+        "actual_drops": [
+          {
+            "drone": 1,
+            "step": 1252,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              79.34560054322088,
+              -157.02437395251857
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1294,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -120.36908306371635,
+              -429.7109785120144
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              569.2059763263471,
+              -225.56085286060417
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1414,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              168.71921281559668,
+              -413.27242731993664
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1506,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              345.2524528665559,
+              -46.555720517320566
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 1570,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -749.6520503838884,
+              411.8526908216159
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2020,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -254.53458665084125,
+              -57.64862484135155
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2080,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -440.2197473507886,
+              -48.19964290200751
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 2392,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              538.4898730317209,
+              437.08861777550703
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 3886,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              446.6186746533395,
+              438.07963684104743
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2160,
+            "messenger_enter",
+            [
+              -584.9506561418985,
+              27.390115967043403
+            ]
+          ],
+          [
+            2161,
+            "zone_exit_start",
+            -3.0934
+          ],
+          [
+            2365,
+            "zone_exit_turn",
+            -2.0462
+          ],
+          [
+            2639,
+            "zone_exit_turn",
+            -0.999
+          ],
+          [
+            2829,
+            "zone_exit_turn",
+            0.0482
+          ],
+          [
+            2986,
+            "zone_exit_turn",
+            1.0954
+          ],
+          [
+            3240,
+            "zone_exit_turn",
+            2.1426
+          ],
+          [
+            3357,
+            "zone_exit",
+            [
+              -820.1087040022996,
+              216.45079924041886
+            ]
+          ],
+          [
+            3357,
+            "target_picked",
+            0
+          ],
+          [
+            3716,
+            "target_unreachable",
+            0
+          ],
+          [
+            3717,
+            "target_picked",
+            3
+          ],
+          [
+            4005,
+            "new_empty_report",
+            [
+              0,
+              3
+            ]
+          ],
+          [
+            4005,
+            "contact",
+            3,
+            184.5
+          ],
+          [
+            4017,
+            "payload_ack",
+            3,
+            4006,
+            4008,
+            [
+              0,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            4017,
+            "exchange_complete",
+            3
+          ],
+          [
+            4018,
+            "redelivery",
+            0,
+            [
+              3
+            ],
+            4218
+          ],
+          [
+            4018,
+            "target_picked",
+            0
+          ],
+          [
+            4198,
+            "peer_skipped",
+            0
+          ],
+          [
+            4199,
+            "target_picked",
+            1
+          ],
+          [
+            4357,
+            "peer_skipped",
+            1
+          ],
+          [
+            4358,
+            "target_picked",
+            2
+          ],
+          [
+            4497,
+            "peer_skipped",
+            2
+          ],
+          [
+            4498,
+            "messenger_done",
+            1
+          ],
+          [
+            4630,
+            "new_empty_report",
+            [
+              1
+            ]
+          ]
+        ],
+        "active_messenger_map_refresh_count": 53,
+        "active_messenger_map_refresh_steps": [
+          2164,
+          2209,
+          2254,
+          2299,
+          2344,
+          2389,
+          2434,
+          2479,
+          2524,
+          2569,
+          2614,
+          2659,
+          2704,
+          2749,
+          2794,
+          2839,
+          2884,
+          2929,
+          2974,
+          3019,
+          3064,
+          3109,
+          3154,
+          3199,
+          3244,
+          3289,
+          3334,
+          3379,
+          3424,
+          3469,
+          3514,
+          3559,
+          3604,
+          3649,
+          3694,
+          3739,
+          3784,
+          3829,
+          3874,
+          3919,
+          3964,
+          4006,
+          4009,
+          4054,
+          4099,
+          4144,
+          4189,
+          4234,
+          4279,
+          4324,
+          4369,
+          4414,
+          4459
+        ],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              4630,
+              0
+            ],
+            "1": [
+              2782,
+              0
+            ],
+            "2": [
+              2397,
+              0
+            ],
+            "3": [
+              2678,
+              1
+            ],
+            "4": [
+              1791,
+              1
+            ]
+          },
+          "1": {
+            "1": [
+              4630,
+              0
+            ],
+            "0": [
+              2782,
+              0
+            ],
+            "2": [
+              2397,
+              0
+            ],
+            "3": [
+              4108,
+              0
+            ],
+            "4": [
+              4628,
+              0
+            ]
+          },
+          "2": {
+            "2": [
+              4630,
+              0
+            ],
+            "0": [
+              899,
+              2
+            ],
+            "1": [
+              2397,
+              0
+            ],
+            "3": [
+              1928,
+              1
+            ],
+            "4": [
+              1791,
+              1
+            ]
+          },
+          "3": {
+            "3": [
+              4630,
+              0
+            ],
+            "0": [
+              2678,
+              0
+            ],
+            "1": [
+              1928,
+              1
+            ],
+            "2": [
+              1926,
+              0
+            ],
+            "4": [
+              4108,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              4630,
+              0
+            ],
+            "0": [
+              2782,
+              0
+            ],
+            "1": [
+              4628,
+              0
+            ],
+            "2": [
+              2397,
+              0
+            ],
+            "3": [
+              4108,
+              0
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        }
+      }
+    },
+    "Map08": {
+      "baseline": {
+        "trajectory_exploration_percent": 98.03741153488475,
+        "partial_score_out_of_80": 54.18268361012262,
+        "map_score": 80.22956635015312,
+        "wall_score": 44.46648630221442,
+        "time_score": 51.746031746031754,
+        "map_breakdown": {
+          "s_time": 0.27028850052091813,
+          "s_map": 0.8022956635015313,
+          "credit": 0.8526569548483218,
+          "penalty": 0.05036129134679055,
+          "wall_pixels": 96652,
+          "wall_hits": 82411,
+          "wall_hit_rate": 0.8526569548483218,
+          "wall_available": true,
+          "interior_pixels": 112654,
+          "interior_hits": 16714,
+          "interior_hit_rate": 0.1483657926039022,
+          "interior_available": true,
+          "predicted_pixels": 294705,
+          "exact_pixels": 99125,
+          "dead_zone_pixels": 140026,
+          "charged_pixels": 55554,
+          "capped_pixels": 9413,
+          "total_charge": 24337.59765625,
+          "truth_pixels": 209306,
+          "surface_pixels": 96652
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.4446648630221442,
+          "coverage_fraction": 0.32045528795264167,
+          "blast_radius": 135,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 490495,
+          "destroyed_wall_pixels": 62256,
+          "destroyed_boundary_pixels": 1901,
+          "destroyed_interior_pixels": 60355,
+          "total_boundary_pixels": 35997,
+          "total_interior_pixels": 173309,
+          "total_wall_pixels": 209306,
+          "covered_wall_pixels": 62256,
+          "weighted_destroyed": 61305.5,
+          "weighted_total": 191307.5,
+          "theoretical_optimum": 137869.0,
+          "theoretical_optimum_fraction": 0.7206669890098402
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 3444,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 130.1625199317932,
+          "image_sha256": "58574816975810bf4ffe1c9918ee56bce36267479a5fb137dda633da7b387cc2"
+        },
+        "elapsed_walltime_seconds": 131.34806990623474,
+        "final_health": {
+          "0": 24,
+          "1": 23,
+          "2": 23,
+          "3": 24,
+          "4": 17
+        },
+        "total_health_lost": 14,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 2488,
+        "sdk_rejected_attempts": 0,
+        "actual_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2489,
+            "messenger_enter",
+            [
+              364.37782253967146,
+              60.028145477042905
+            ]
+          ],
+          [
+            2490,
+            "target_picked",
+            1
+          ],
+          [
+            2490,
+            "contact",
+            1,
+            60.6
+          ],
+          [
+            2502,
+            "exchange_complete",
+            1
+          ],
+          [
+            2503,
+            "target_picked",
+            0
+          ],
+          [
+            2557,
+            "contact",
+            0,
+            180.0
+          ],
+          [
+            2569,
+            "exchange_complete",
+            0
+          ],
+          [
+            2570,
+            "target_picked",
+            3
+          ],
+          [
+            2579,
+            "contact",
+            3,
+            179.7
+          ],
+          [
+            2591,
+            "exchange_complete",
+            3
+          ],
+          [
+            2592,
+            "target_picked",
+            2
+          ],
+          [
+            2866,
+            "target_unreachable",
+            2
+          ],
+          [
+            2867,
+            "second_round"
+          ],
+          [
+            2867,
+            "target_picked",
+            3
+          ],
+          [
+            2875,
+            "contact",
+            3,
+            179.2
+          ],
+          [
+            2887,
+            "exchange_complete",
+            3
+          ],
+          [
+            2888,
+            "target_picked",
+            1
+          ],
+          [
+            2906,
+            "contact",
+            1,
+            176.4
+          ],
+          [
+            2918,
+            "exchange_complete",
+            1
+          ],
+          [
+            2919,
+            "target_picked",
+            0
+          ],
+          [
+            2933,
+            "contact",
+            0,
+            173.7
+          ],
+          [
+            2945,
+            "exchange_complete",
+            0
+          ],
+          [
+            2946,
+            "target_picked",
+            2
+          ],
+          [
+            3175,
+            "target_unreachable",
+            2
+          ],
+          [
+            3176,
+            "messenger_done",
+            6
+          ]
+        ],
+        "active_messenger_map_refresh_count": 0,
+        "active_messenger_map_refresh_steps": [],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              3444,
+              0
+            ],
+            "1": [
+              3442,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3359,
+              0
+            ],
+            "4": [
+              3440,
+              0
+            ]
+          },
+          "1": {
+            "1": [
+              3444,
+              0
+            ],
+            "0": [
+              3442,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3359,
+              0
+            ],
+            "4": [
+              3442,
+              0
+            ]
+          },
+          "2": {
+            "2": [
+              3444,
+              0
+            ],
+            "0": [
+              2419,
+              0
+            ],
+            "1": [
+              2009,
+              0
+            ],
+            "3": [
+              2420,
+              0
+            ],
+            "4": [
+              2007,
+              1
+            ]
+          },
+          "3": {
+            "3": [
+              3444,
+              0
+            ],
+            "0": [
+              3359,
+              0
+            ],
+            "1": [
+              3015,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "4": [
+              3014,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              3444,
+              0
+            ],
+            "0": [
+              3440,
+              0
+            ],
+            "1": [
+              3442,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3359,
+              0
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        }
+      },
+      "candidate": {
+        "trajectory_exploration_percent": 97.26297442197253,
+        "partial_score_out_of_80": 50.60551977427339,
+        "map_score": 73.07523867845465,
+        "wall_score": 44.46648630221442,
+        "time_score": 51.746031746031754,
+        "map_breakdown": {
+          "s_time": 0.26902474429872303,
+          "s_map": 0.7307523867845466,
+          "credit": 0.79362041137276,
+          "penalty": 0.06286802458821339,
+          "wall_pixels": 96652,
+          "wall_hits": 76705,
+          "wall_hit_rate": 0.79362041137276,
+          "wall_available": true,
+          "interior_pixels": 112654,
+          "interior_hits": 16401,
+          "interior_hit_rate": 0.14558737372840733,
+          "interior_available": true,
+          "predicted_pixels": 290940,
+          "exact_pixels": 93106,
+          "dead_zone_pixels": 131460,
+          "charged_pixels": 66374,
+          "capped_pixels": 9777,
+          "total_charge": 30381.6015625,
+          "truth_pixels": 209306,
+          "surface_pixels": 96652
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.4446648630221442,
+          "coverage_fraction": 0.32045528795264167,
+          "blast_radius": 135,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 490495,
+          "destroyed_wall_pixels": 62256,
+          "destroyed_boundary_pixels": 1901,
+          "destroyed_interior_pixels": 60355,
+          "total_boundary_pixels": 35997,
+          "total_interior_pixels": 173309,
+          "total_wall_pixels": 209306,
+          "covered_wall_pixels": 62256,
+          "weighted_destroyed": 61305.5,
+          "weighted_total": 191307.5,
+          "theoretical_optimum": 137869.0,
+          "theoretical_optimum_fraction": 0.7206669890098402
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 3444,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 3444,
+          "walltime_seconds": 130.39569973945618,
+          "image_sha256": "0156b19d48627e973e40279b46655a7aad1bb085c81b9200ed94669a69130479"
+        },
+        "elapsed_walltime_seconds": 131.57554602622986,
+        "final_health": {
+          "0": 22,
+          "1": 23,
+          "2": 23,
+          "3": 23,
+          "4": 17
+        },
+        "total_health_lost": 17,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 2488,
+        "sdk_rejected_attempts": 0,
+        "actual_drops": [
+          {
+            "drone": 0,
+            "step": 1220,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -62.48680434384124,
+              126.0384570644275
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1236,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -371.84056809437453,
+              -325.9435083627755
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1272,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -383.93613816453984,
+              -195.4624415409219
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1274,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -706.7226161764866,
+              -177.84838001323521
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1348,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -181.12532515050873,
+              -156.4885712480484
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1692,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              142.30439103865308,
+              208.82534295391218
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2308,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              431.2351673498616,
+              -415.38638189798957
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2314,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              84.96075503143555,
+              -454.1745849309364
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 2315,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              75.46089184220082,
+              -396.48945811292685
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 2488,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              359.83534087806714,
+              49.25253881856971
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2489,
+            "messenger_enter",
+            [
+              364.37782253967146,
+              60.028145477042905
+            ]
+          ],
+          [
+            2490,
+            "target_picked",
+            1
+          ],
+          [
+            2544,
+            "new_empty_report",
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          [
+            2610,
+            "target_unreachable",
+            1
+          ],
+          [
+            2611,
+            "redelivery",
+            0,
+            [
+              2,
+              3
+            ],
+            2811
+          ],
+          [
+            2611,
+            "target_picked",
+            0
+          ],
+          [
+            2611,
+            "contact",
+            0,
+            182.2
+          ],
+          [
+            2623,
+            "payload_ack",
+            0,
+            2612,
+            2610,
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            2623,
+            "exchange_complete",
+            0
+          ],
+          [
+            2624,
+            "target_picked",
+            3
+          ],
+          [
+            2624,
+            "contact",
+            3,
+            94.4
+          ],
+          [
+            2636,
+            "payload_ack",
+            3,
+            2625,
+            2613,
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            2636,
+            "exchange_complete",
+            3
+          ],
+          [
+            2637,
+            "target_picked",
+            2
+          ],
+          [
+            2855,
+            "target_unreachable",
+            2
+          ],
+          [
+            2856,
+            "second_round"
+          ],
+          [
+            2856,
+            "target_picked",
+            3
+          ],
+          [
+            2856,
+            "contact",
+            3,
+            153.4
+          ],
+          [
+            2879,
+            "payload_ack",
+            3,
+            2857,
+            2838,
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            2879,
+            "exchange_complete",
+            3
+          ],
+          [
+            2880,
+            "target_picked",
+            0
+          ],
+          [
+            2894,
+            "contact",
+            0,
+            172.8
+          ],
+          [
+            2906,
+            "payload_ack",
+            0,
+            2895,
+            2880,
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            2906,
+            "exchange_complete",
+            0
+          ],
+          [
+            2907,
+            "target_picked",
+            1
+          ],
+          [
+            2911,
+            "contact",
+            1,
+            151.2
+          ],
+          [
+            2923,
+            "payload_ack",
+            1,
+            2912,
+            2881,
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          [
+            2923,
+            "exchange_complete",
+            1
+          ],
+          [
+            2924,
+            "target_picked",
+            2
+          ],
+          [
+            3155,
+            "target_unreachable",
+            2
+          ],
+          [
+            3156,
+            "messenger_done",
+            5
+          ]
+        ],
+        "active_messenger_map_refresh_count": 20,
+        "active_messenger_map_refresh_steps": [
+          2524,
+          2569,
+          2612,
+          2614,
+          2625,
+          2659,
+          2704,
+          2749,
+          2794,
+          2839,
+          2857,
+          2884,
+          2895,
+          2912,
+          2929,
+          2974,
+          3019,
+          3064,
+          3109,
+          3154
+        ],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              3444,
+              0
+            ],
+            "1": [
+              3442,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3440,
+              0
+            ],
+            "4": [
+              3442,
+              0
+            ]
+          },
+          "1": {
+            "1": [
+              3444,
+              0
+            ],
+            "0": [
+              3442,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3438,
+              0
+            ],
+            "4": [
+              3440,
+              0
+            ]
+          },
+          "2": {
+            "2": [
+              3444,
+              0
+            ],
+            "0": [
+              2419,
+              0
+            ],
+            "1": [
+              2009,
+              0
+            ],
+            "3": [
+              2420,
+              0
+            ],
+            "4": [
+              2007,
+              1
+            ]
+          },
+          "3": {
+            "3": [
+              3444,
+              0
+            ],
+            "0": [
+              3440,
+              0
+            ],
+            "1": [
+              3438,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "4": [
+              3442,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              3444,
+              0
+            ],
+            "0": [
+              3442,
+              0
+            ],
+            "1": [
+              3440,
+              0
+            ],
+            "2": [
+              2420,
+              0
+            ],
+            "3": [
+              3442,
+              0
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        }
+      }
+    },
+    "Map09": {
+      "baseline": {
+        "trajectory_exploration_percent": 92.0482711721324,
+        "partial_score_out_of_80": 37.45896815318916,
+        "map_score": 57.088076239047766,
+        "wall_score": 32.93443852811476,
+        "time_score": 23.28042328042328,
+        "map_breakdown": {
+          "s_time": 0.007776314682430691,
+          "s_map": 0.5708807623904777,
+          "credit": 0.6191001461791636,
+          "penalty": 0.04821938378868591,
+          "wall_pixels": 111507,
+          "wall_hits": 69034,
+          "wall_hit_rate": 0.6191001461791636,
+          "wall_available": true,
+          "interior_pixels": 22843,
+          "interior_hits": 14409,
+          "interior_hit_rate": 0.6307840476294707,
+          "interior_available": true,
+          "predicted_pixels": 245999,
+          "exact_pixels": 83443,
+          "dead_zone_pixels": 111030,
+          "charged_pixels": 51526,
+          "capped_pixels": 13948,
+          "total_charge": 26883.994140625,
+          "truth_pixels": 134350,
+          "surface_pixels": 111507
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.3293443852811476,
+          "coverage_fraction": 0.15485075429412093,
+          "blast_radius": 132,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 376988,
+          "destroyed_wall_pixels": 19634,
+          "destroyed_boundary_pixels": 3270,
+          "destroyed_interior_pixels": 16364,
+          "total_boundary_pixels": 36231,
+          "total_interior_pixels": 98119,
+          "total_wall_pixels": 134350,
+          "covered_wall_pixels": 19634,
+          "weighted_destroyed": 17999.0,
+          "weighted_total": 116234.5,
+          "theoretical_optimum": 54651.0,
+          "theoretical_optimum_fraction": 0.4701788195415303
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 4520,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 4520,
+          "walltime_seconds": 178.50687384605408,
+          "image_sha256": "3662687bfa2083a0f20212cd387b537e7cfa6054c5fa711448d0b1a220a036bf"
+        },
+        "elapsed_walltime_seconds": 178.60026335716248,
+        "final_health": {
+          "0": 24,
+          "1": 24,
+          "2": 24,
+          "3": 24,
+          "4": 25
+        },
+        "total_health_lost": 4,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 4026,
+        "sdk_rejected_attempts": 12,
+        "actual_drops": [
+          {
+            "drone": 0,
+            "step": 1230,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              239.89115390460066,
+              73.86635924699272
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1434,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              360.04064085137003,
+              -347.7957589645059
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1548,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              477.65441487370197,
+              -423.2778235243954
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1732,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -194.00496872313937,
+              -460.6640921991087
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1911,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              397.9115976550885,
+              264.25414839006964
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1912,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              523.3873405246047,
+              -409.4783528570513
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2028,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              268.6496386240605,
+              39.12458434597419
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2030,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -168.9070104971254,
+              -129.3399260986701
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 3276,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -715.4723141210321,
+              -480.89137790894694
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 4026,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -208.89738742585433,
+              -440.2293326287292
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2160,
+            "messenger_enter",
+            [
+              481.2493359972909,
+              -458.2857373787391
+            ]
+          ],
+          [
+            2161,
+            "target_picked",
+            2
+          ],
+          [
+            2161,
+            "contact",
+            2,
+            169.9
+          ],
+          [
+            2173,
+            "exchange_complete",
+            2
+          ],
+          [
+            2174,
+            "target_picked",
+            0
+          ],
+          [
+            2185,
+            "contact",
+            0,
+            179.5
+          ],
+          [
+            2197,
+            "exchange_complete",
+            0
+          ],
+          [
+            2198,
+            "target_picked",
+            3
+          ],
+          [
+            2218,
+            "contact",
+            3,
+            179.4
+          ],
+          [
+            2230,
+            "exchange_complete",
+            3
+          ],
+          [
+            2231,
+            "target_picked",
+            1
+          ],
+          [
+            2460,
+            "target_unreachable",
+            1
+          ],
+          [
+            2461,
+            "second_round"
+          ],
+          [
+            2461,
+            "target_picked",
+            3
+          ],
+          [
+            2461,
+            "contact",
+            3,
+            130.7
+          ],
+          [
+            2473,
+            "exchange_complete",
+            3
+          ],
+          [
+            2474,
+            "target_picked",
+            0
+          ],
+          [
+            2489,
+            "contact",
+            0,
+            178.6
+          ],
+          [
+            2501,
+            "exchange_complete",
+            0
+          ],
+          [
+            2502,
+            "target_picked",
+            2
+          ],
+          [
+            2508,
+            "contact",
+            2,
+            178.6
+          ],
+          [
+            2520,
+            "exchange_complete",
+            2
+          ],
+          [
+            2521,
+            "target_picked",
+            1
+          ],
+          [
+            2706,
+            "target_unreachable",
+            1
+          ],
+          [
+            2707,
+            "messenger_done",
+            6
+          ]
+        ],
+        "active_messenger_map_refresh_count": 0,
+        "active_messenger_map_refresh_steps": [],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              4520,
+              0
+            ],
+            "1": [
+              599,
+              2
+            ],
+            "2": [
+              1898,
+              1
+            ],
+            "3": [
+              2645,
+              1
+            ],
+            "4": [
+              1777,
+              1
+            ]
+          },
+          "1": {
+            "1": [
+              4520,
+              0
+            ],
+            "0": [
+              1898,
+              1
+            ],
+            "2": [
+              2832,
+              0
+            ],
+            "3": [
+              1505,
+              2
+            ],
+            "4": [
+              1777,
+              1
+            ]
+          },
+          "2": {
+            "2": [
+              4520,
+              0
+            ],
+            "0": [
+              2645,
+              0
+            ],
+            "1": [
+              2832,
+              1
+            ],
+            "3": [
+              2804,
+              1
+            ],
+            "4": [
+              2974,
+              0
+            ]
+          },
+          "3": {
+            "3": [
+              4520,
+              0
+            ],
+            "0": [
+              2645,
+              0
+            ],
+            "1": [
+              599,
+              2
+            ],
+            "2": [
+              1898,
+              1
+            ],
+            "4": [
+              2804,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              4520,
+              0
+            ],
+            "0": [
+              2645,
+              0
+            ],
+            "1": [
+              2832,
+              1
+            ],
+            "2": [
+              2974,
+              0
+            ],
+            "3": [
+              2804,
+              1
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": {
+            "step": 4520,
+            "fallback": "walltime",
+            "remaining_steps": 880,
+            "remaining_walltime": 1.4931261539459229,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4230
+          },
+          "1": {
+            "step": 4520,
+            "fallback": "walltime",
+            "remaining_steps": 880,
+            "remaining_walltime": 1.4931261539459229,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4411
+          },
+          "2": {
+            "step": 4520,
+            "fallback": "walltime",
+            "remaining_steps": 880,
+            "remaining_walltime": 1.4931261539459229,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4232
+          },
+          "3": {
+            "step": 4520,
+            "fallback": "walltime",
+            "remaining_steps": 880,
+            "remaining_walltime": 1.4931261539459229,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4368
+          },
+          "4": {
+            "step": 4520,
+            "fallback": "walltime",
+            "remaining_steps": 880,
+            "remaining_walltime": 1.4931261539459229,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4189
+          }
+        }
+      },
+      "candidate": {
+        "trajectory_exploration_percent": 91.00816048962938,
+        "partial_score_out_of_80": 37.0809901286848,
+        "map_score": 54.07423763194239,
+        "wall_score": 40.867504711716165,
+        "time_score": 18.703703703703702,
+        "map_breakdown": {
+          "s_time": 0.007571521070268419,
+          "s_map": 0.5407423763194239,
+          "credit": 0.6010654039656703,
+          "penalty": 0.060323027646246426,
+          "wall_pixels": 111507,
+          "wall_hits": 67023,
+          "wall_hit_rate": 0.6010654039656703,
+          "wall_available": true,
+          "interior_pixels": 22843,
+          "interior_hits": 13881,
+          "interior_hit_rate": 0.6076697456551241,
+          "interior_available": true,
+          "predicted_pixels": 249456,
+          "exact_pixels": 80904,
+          "dead_zone_pixels": 108890,
+          "charged_pixels": 59662,
+          "capped_pixels": 19706,
+          "total_charge": 33632.19921875,
+          "truth_pixels": 134350,
+          "surface_pixels": 111507
+        },
+        "wall_breakdown": {
+          "score_fraction": 0.4086750471171616,
+          "coverage_fraction": 0.19215035122962631,
+          "blast_radius": 132,
+          "blast_radius_ratio": 0.12,
+          "boundary_wall_weight": 0.5,
+          "n_bombs": 10,
+          "reference_n_bombs": 10,
+          "blast_pixels": 428917,
+          "destroyed_wall_pixels": 23928,
+          "destroyed_boundary_pixels": 3187,
+          "destroyed_interior_pixels": 20741,
+          "total_boundary_pixels": 36231,
+          "total_interior_pixels": 98119,
+          "total_wall_pixels": 134350,
+          "covered_wall_pixels": 23928,
+          "weighted_destroyed": 22334.5,
+          "weighted_total": 116234.5,
+          "theoretical_optimum": 54651.0,
+          "theoretical_optimum_fraction": 0.4701788195415303
+        },
+        "placed": 10,
+        "expected": 10,
+        "steps": 4693,
+        "submitted_map": true,
+        "selected_submission": {
+          "drone": 0,
+          "step": 4693,
+          "walltime_seconds": 178.5318717956543,
+          "image_sha256": "42eb5eb6aaf503368461188b27f2fac69b4f705ceb9dd8945d4f9324ca0adcac"
+        },
+        "elapsed_walltime_seconds": 178.63712620735168,
+        "final_health": {
+          "0": 25,
+          "1": 24,
+          "2": 25,
+          "3": 24,
+          "4": 23
+        },
+        "total_health_lost": 4,
+        "destroyed_drones": 0,
+        "last_physical_drop_step": 4186,
+        "sdk_rejected_attempts": 11,
+        "actual_drops": [
+          {
+            "drone": 0,
+            "step": 1230,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              239.89115390460066,
+              73.86635924699272
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 1434,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              360.04064085137003,
+              -347.7957589645059
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1548,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              477.65441487370197,
+              -423.2778235243954
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 1732,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -194.00496872313937,
+              -460.6640921991087
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 1911,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              397.9115976550885,
+              264.25414839006964
+            ]
+          },
+          {
+            "drone": 4,
+            "step": 1912,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              523.3873405246047,
+              -409.4783528570513
+            ]
+          },
+          {
+            "drone": 0,
+            "step": 2028,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              268.6496386240605,
+              39.12458434597419
+            ]
+          },
+          {
+            "drone": 2,
+            "step": 2030,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -168.9070104971254,
+              -129.3399260986701
+            ]
+          },
+          {
+            "drone": 3,
+            "step": 3206,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -763.112797519838,
+              -387.895524066377
+            ]
+          },
+          {
+            "drone": 1,
+            "step": 4186,
+            "event": "sdk_placement",
+            "accepted": true,
+            "physical_xy": [
+              -115.09469873239382,
+              287.7317347912262
+            ]
+          }
+        ],
+        "messenger_audit": [
+          [
+            2160,
+            "messenger_enter",
+            [
+              481.2493359972909,
+              -458.2857373787391
+            ]
+          ],
+          [
+            2161,
+            "target_picked",
+            2
+          ],
+          [
+            2345,
+            "peer_skipped",
+            2
+          ],
+          [
+            2346,
+            "target_picked",
+            0
+          ],
+          [
+            2484,
+            "peer_skipped",
+            0
+          ],
+          [
+            2485,
+            "target_picked",
+            3
+          ],
+          [
+            2652,
+            "peer_skipped",
+            3
+          ],
+          [
+            2653,
+            "target_picked",
+            1
+          ],
+          [
+            2835,
+            "target_unreachable",
+            1
+          ],
+          [
+            2836,
+            "second_round"
+          ],
+          [
+            2836,
+            "target_picked",
+            2
+          ],
+          [
+            2956,
+            "target_unreachable",
+            2
+          ],
+          [
+            2957,
+            "target_picked",
+            3
+          ],
+          [
+            3024,
+            "new_empty_report",
+            [
+              2
+            ]
+          ],
+          [
+            3096,
+            "target_unreachable",
+            3
+          ],
+          [
+            3097,
+            "redelivery",
+            0,
+            [
+              2
+            ],
+            3297
+          ],
+          [
+            3097,
+            "target_picked",
+            0
+          ],
+          [
+            3297,
+            "redelivery_cutoff",
+            0
+          ],
+          [
+            3297,
+            "target_picked",
+            1
+          ],
+          [
+            3553,
+            "peer_skipped",
+            1
+          ],
+          [
+            3554,
+            "messenger_done",
+            0
+          ]
+        ],
+        "active_messenger_map_refresh_count": 31,
+        "active_messenger_map_refresh_steps": [
+          2164,
+          2209,
+          2254,
+          2299,
+          2344,
+          2389,
+          2434,
+          2479,
+          2524,
+          2569,
+          2614,
+          2659,
+          2704,
+          2749,
+          2794,
+          2839,
+          2884,
+          2929,
+          2974,
+          3019,
+          3064,
+          3109,
+          3154,
+          3199,
+          3244,
+          3289,
+          3334,
+          3379,
+          3424,
+          3469,
+          3514
+        ],
+        "final_inventory_records": {
+          "0": {
+            "0": [
+              4693,
+              0
+            ],
+            "1": [
+              3249,
+              1
+            ],
+            "2": [
+              4667,
+              0
+            ],
+            "3": [
+              2809,
+              1
+            ],
+            "4": [
+              3115,
+              0
+            ]
+          },
+          "1": {
+            "1": [
+              4693,
+              0
+            ],
+            "0": [
+              2659,
+              0
+            ],
+            "2": [
+              3249,
+              0
+            ],
+            "3": [
+              2809,
+              1
+            ],
+            "4": [
+              3115,
+              0
+            ]
+          },
+          "2": {
+            "2": [
+              4693,
+              0
+            ],
+            "0": [
+              4667,
+              0
+            ],
+            "1": [
+              3249,
+              1
+            ],
+            "3": [
+              2809,
+              1
+            ],
+            "4": [
+              3115,
+              0
+            ]
+          },
+          "3": {
+            "3": [
+              4693,
+              0
+            ],
+            "0": [
+              2659,
+              0
+            ],
+            "1": [
+              599,
+              2
+            ],
+            "2": [
+              1898,
+              1
+            ],
+            "4": [
+              2809,
+              0
+            ]
+          },
+          "4": {
+            "4": [
+              4693,
+              0
+            ],
+            "0": [
+              2659,
+              0
+            ],
+            "1": [
+              3115,
+              1
+            ],
+            "2": [
+              3113,
+              0
+            ],
+            "3": [
+              2809,
+              1
+            ]
+          }
+        },
+        "deadline_events": {
+          "0": {
+            "step": 4693,
+            "fallback": "walltime",
+            "remaining_steps": 707,
+            "remaining_walltime": 1.4681282043457031,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4590
+          },
+          "1": {
+            "step": 4693,
+            "fallback": "walltime",
+            "remaining_steps": 707,
+            "remaining_walltime": 1.4681282043457031,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4591
+          },
+          "2": {
+            "step": 4693,
+            "fallback": "walltime",
+            "remaining_steps": 707,
+            "remaining_walltime": 1.4681282043457031,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4592
+          },
+          "3": {
+            "step": 4693,
+            "fallback": "walltime",
+            "remaining_steps": 707,
+            "remaining_walltime": 1.4681282043457031,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4323
+          },
+          "4": {
+            "step": 4693,
+            "fallback": "walltime",
+            "remaining_steps": 707,
+            "remaining_walltime": 1.4681282043457031,
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "backup_step": 4459
+          }
+        }
+      }
+    }
+  },
+  "candidate_minus_baseline": {
+    "Map06": {
+      "trajectory_exploration_percent": 0.0,
+      "partial_score_out_of_80": 0.3927333942844413,
+      "map_score": -0.011229039235658433,
+      "wall_score": 0.6557607335325528,
+      "time_score": 2.6719576719576708,
+      "placed": 0,
+      "steps": -101,
+      "total_health_lost": -7,
+      "elapsed_walltime_seconds": -1.737306833267212
+    },
+    "Map08": {
+      "trajectory_exploration_percent": -0.7744371129122243,
+      "partial_score_out_of_80": -3.577163835849234,
+      "map_score": -7.154327671698468,
+      "wall_score": 0.0,
+      "time_score": 0.0,
+      "placed": 0,
+      "steps": 0,
+      "total_health_lost": 3,
+      "elapsed_walltime_seconds": 0.2274761199951172
+    },
+    "Map09": {
+      "trajectory_exploration_percent": -1.0401106825030269,
+      "partial_score_out_of_80": -0.37797802450435825,
+      "map_score": -3.0138386071053773,
+      "wall_score": 7.9330661836014045,
+      "time_score": -4.576719576719576,
+      "placed": 0,
+      "steps": 173,
+      "total_health_lost": 0,
+      "elapsed_walltime_seconds": 0.036862850189208984
+    }
+  },
+  "experimental_parameters": {
+    "minimum_exchange_steps": 12,
+    "exchange_timeout_steps": 90,
+    "redelivery_max_steps": 200,
+    "redelivery_walltime_reserve_seconds": 8,
+    "redelivery_deadline_send_margin_steps": 12
+  }
+}

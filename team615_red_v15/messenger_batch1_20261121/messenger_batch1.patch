@@ -1,0 +1,442 @@
+diff --git a/messenger_run.py b/messenger_run.py
+index f25715e..bf9f56e 100644
+--- a/messenger_run.py
++++ b/messenger_run.py
+@@ -1,36 +1,33 @@
+-"""Dedicated single-hop messenger.
+-
+-One drone (the lowest-cost, earliest-empty aircraft) stops primary exploration
+-after it has dropped its own bombs and actively flies to each teammate in turn.
+-Closing to within the communication range lets the ordinary message channel
+-exchange live map/final-map evidence; the drone then relays what it has already
+-collected to the next peer. No ground-truth map, fixed coordinates, or private
+-peer state are read: targets come solely from teammates' broadcast states, and
+-the standard drive() lidar brake is used for navigation.
+-"""
++"""Bounded messenger tours with direct contact and payload acknowledgements."""
+ import math
+ from collections import deque
+ 
+ import numpy as np
+ 
++from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
++from swarm_rescue.solutions.final_map_reconnect import FinalMapReconnect
++
+ IDLE, ACTIVE, DONE = "IDLE", "ACTIVE", "DONE"
+ APPROACH, HOLD, EXIT_ZONE = "APPROACH", "HOLD", "EXIT_ZONE"
+ 
+ 
+ class MessengerRun:
+     MESSENGER_ID = 4
+-    START_FRAC = 40                 # percent of step limit before activation
++    DELIVERY_RECEIVER = 0
++    START_FRAC = 40
+     COMM_RANGE = 180
+-    EXCHANGE_HOLD = 12              # frames held inside the contact circle
+-    WAIT_PEER_FRAMES = 120          # wait at a stale last-known position
+-    ARRIVE_TOL = 25.0               # considered arrived at last-known point
+-    SECOND_ROUND_MIN_STEPS = 1500   # need this much budget to run another tour
+-    STALE_STEPS = 60                # a peer state older than this may be in NoCom
+-    APPROACH_STALL_WINDOW = 120     # no-progress window before giving up a target
+-    APPROACH_STALL_MOVE = 15.0      # below this displacement it is a local minimum
+-    EXIT_LOOKAHEAD = 150.0          # rolling goal distance; direction is held
+-    EXIT_TURN_ANGLE = math.pi / 3   # sweep to the next heading only on a stall
+-    EXIT_MAX_ATTEMPTS = 6           # bounded sweeps cover the full circle
++    EXCHANGE_HOLD = 12
++    EXCHANGE_TIMEOUT = 90
++    DIRECT_TTL = 3
++    WAIT_PEER_FRAMES = 120
++    ARRIVE_TOL = 25.0
++    SECOND_ROUND_MIN_STEPS = 1500
++    STALE_STEPS = 60
++    APPROACH_STALL_WINDOW = 120
++    APPROACH_STALL_MOVE = 15.0
++    EXIT_LOOKAHEAD = 150.0
++    EXIT_TURN_ANGLE = math.pi / 3
++    EXIT_MAX_ATTEMPTS = 6
+ 
+     def __init__(self):
+         self.state = IDLE
+@@ -43,13 +40,53 @@ class MessengerRun:
+         self.audit = []
+         self.contacts = 0
+         self.approach_poses = deque(maxlen=self.APPROACH_STALL_WINDOW + 1)
+-        # NoCom departure sub-state
+         self.exit_dir = None
+         self.exit_goal = None
+         self.exit_attempts = 0
+         self.exit_poses = deque(maxlen=self.APPROACH_STALL_WINDOW + 1)
++        self.receipts = {}
++        self.contact_step = None
++        self.exchange_version = None
++        self.exchange_empty = set()
++        self.known_empty = set()
++        self.pending_delivery = set()
++        self.delivery_only = False
++        self.delivery_until = None
++        self.delivery_attempts = 0
++
++    def receive(self, drone, message, step):
++        """Record only a fresh message originating from the named peer."""
++        sender = message.get("id")
++        if (type(sender) is not int or sender == drone.identifier
++                or not 0 <= sender < drone.team_size):
++            return
++        own_state = next((state for state in message.get("states", ())
++                          if isinstance(state, dict) and state.get("id") == sender), None)
++        stamp = None if own_state is None else own_state.get("step")
++        previous = self.receipts.get(sender)
++        if (type(stamp) is not int or not 0 <= step - stamp <= self.DIRECT_TTL
++                or previous is not None and stamp <= previous["sent_step"]):
++            return
++        seen = {}
++        for owner, version in message.get("red_map_seen", {}).items():
++            if (type(owner) is int and 0 <= owner < drone.team_size
++                    and type(version) is int and 0 <= version <= stamp):
++                seen[owner] = version
++        empty = set()
++        for owner, record in message.get("red_inventory", {}).items():
++            if (type(owner) is int and 0 <= owner < drone.team_size
++                    and isinstance(record, (tuple, list)) and len(record) == 2
++                    and type(record[0]) is int and 0 <= record[0] <= stamp and record[1] == 0):
++                empty.add(owner)
++        packet = message.get("red_map")
++        version = None
++        if (isinstance(packet, tuple) and len(packet) == 2
++                and type(packet[0]) is int and 0 <= packet[0] <= stamp
++                and drone.map_revision.get(sender, -1) >= packet[0]):
++            version = packet[0]
++        self.receipts[sender] = dict(sent_step=stamp, received_step=step,
++                                     seen=seen, empty=empty, map_version=version)
+ 
+-    # -- activation ----------------------------------------------------------
+     def _can_activate(self, drone, step):
+         if int(drone.identifier) != self.MESSENGER_ID:
+             return False
+@@ -59,35 +96,57 @@ class MessengerRun:
+         return step >= drone.limit * self.START_FRAC // 100
+ 
+     def _alive_peers(self, drone):
+-        out = []
+-        for peer, st in drone.states.items():
+-            if (isinstance(peer, int) and peer != int(drone.identifier)
+-                    and isinstance(st, dict) and st.get("health", 0) > 0):
+-                out.append(peer)
+-        return out
++        return [peer for peer, state in drone.states.items()
++                if (type(peer) is int and peer != int(drone.identifier)
++                    and isinstance(state, dict) and state.get("health", 0) > 0)]
+ 
+     def _peer_point(self, drone, peer):
+-        st = drone.states.get(peer)
+-        if not st or "point" not in st:
++        state = drone.states.get(peer)
++        if not state or "point" not in state:
+             return None
+-        return np.asarray(st["point"], dtype=float)
++        return np.asarray(state["point"], dtype=float)
++
++    def _delivery_budget(self, drone, step):
++        return min(FinalMapReconnect.MAX_STEPS,
++                   DeadlineSubmission.window_start(drone.limit) - step
++                   - FinalMapReconnect.SEND_MARGIN)
++
++    def _delivery_allowed(self, drone, step):
++        return (self.delivery_attempts < drone.team_size - 1
++                and self._delivery_budget(drone, step) > 0
++                and drone.walltime_limit - drone.elapsed_walltime > FinalMapReconnect.MIN_WALL_SECONDS)
++
++    def _track_empty(self, drone, step):
++        empty = {peer for peer, record in drone.inventory_records.items() if record[1] == 0}
++        new = empty - self.known_empty
++        self.known_empty = empty
++        if (self.state != IDLE and new and drone.identifier == self.MESSENGER_ID):
++            self.pending_delivery.update(new - {self.DELIVERY_RECEIVER})
++            if self.pending_delivery:
++                self.audit.append((step, "new_empty_report", tuple(sorted(new))))
+ 
+     def _pick_target(self, drone, step):
+-        pose = np.asarray(drone.pose, dtype=float)
+-        candidates = [p for p in self._alive_peers(drone) if p not in self.visited]
+-        if not candidates:
++        peers = self._alive_peers(drone)
++        if (self.pending_delivery and self.DELIVERY_RECEIVER in peers
++                and self._delivery_allowed(drone, step)):
++            self.delivery_attempts += 1
++            self.delivery_until = step + self._delivery_budget(drone, step)
++            self.audit.append((step, "redelivery", self.DELIVERY_RECEIVER,
++                               tuple(sorted(self.pending_delivery)), self.delivery_until))
++            self.pending_delivery.clear()
++            return self.DELIVERY_RECEIVER
++        if self.delivery_only:
+             return None
+-        def dist(p):
+-            pt = self._peer_point(drone, p)
+-            return float("inf") if pt is None else float(np.linalg.norm(pt - pose))
+-        return min(candidates, key=dist)
++        candidates = [peer for peer in peers if peer not in self.visited]
++        pose = np.asarray(drone.pose, dtype=float)
++        def distance(peer):
++            point = self._peer_point(drone, peer)
++            return float("inf") if point is None else float(np.linalg.norm(point - pose))
++        return min(candidates, key=distance, default=None)
+ 
+-    # -- NoCom departure ------------------------------------------------------
+     def _roll_exit_goal(self, drone):
+-        # The goal always sits ahead of the current pose, so the chosen
+-        # direction is held continuously instead of being reset at a waypoint.
+-        p = np.asarray(drone.pose, dtype=float)
+-        self.exit_goal = p + self.EXIT_LOOKAHEAD * np.array(
++        position = np.asarray(drone.pose, dtype=float)
++        self.exit_goal = position + self.EXIT_LOOKAHEAD * np.array(
+             (math.cos(self.exit_dir), math.sin(self.exit_dir)))
+ 
+     def _clear_exit(self):
+@@ -106,54 +165,101 @@ class MessengerRun:
+             self.audit.append((step, "zone_exit_start", round(self.exit_dir, 4)))
+         pose = np.asarray(drone.pose, dtype=float)
+         self.exit_poses.append((step, pose.copy()))
+-        # Hold the current direction with a rolling goal; the local planner
+-        # keeps pushing toward it until the communicator comes back.
+         self._roll_exit_goal(drone)
+-        # Own bombs do not block the body; filter their returns like elsewhere.
+         command.update(drone.drive(tuple(self.exit_goal), drone.measured_velocity(),
+                                    ignore_own_bombs=True))
+-        stalled = False
+         if len(self.exit_poses) >= 2:
+-            f_step, f_pose = self.exit_poses[0]
+-            l_step, l_pose = self.exit_poses[-1]
+-            stalled = (l_step - f_step >= self.APPROACH_STALL_WINDOW and
+-                       np.linalg.norm(l_pose - f_pose) < self.APPROACH_STALL_MOVE)
+-        # Only a genuine stall (a wall the local planner cannot round) changes
+-        # the heading; merely travelling a long distance never resets it.
+-        if stalled:
+-            self.exit_attempts += 1
+-            if self.exit_attempts > self.EXIT_MAX_ATTEMPTS:
+-                self.audit.append((step, "zone_exit_giveup"))
+-                self._clear_exit()
+-                return
+-            self.exit_dir += self.EXIT_TURN_ANGLE
+-            self.exit_poses.clear()
+-            self.audit.append((step, "zone_exit_turn", round(self.exit_dir, 4)))
++            first_step, first_pose = self.exit_poses[0]
++            last_step, last_pose = self.exit_poses[-1]
++            if (last_step - first_step >= self.APPROACH_STALL_WINDOW
++                    and np.linalg.norm(last_pose - first_pose) < self.APPROACH_STALL_MOVE):
++                self.exit_attempts += 1
++                if self.exit_attempts > self.EXIT_MAX_ATTEMPTS:
++                    self.audit.append((step, "zone_exit_giveup"))
++                    self._clear_exit()
++                    return
++                self.exit_dir += self.EXIT_TURN_ANGLE
++                self.exit_poses.clear()
++                self.audit.append((step, "zone_exit_turn", round(self.exit_dir, 4)))
++
++    def refresh_due(self, drone):
++        packet = drone.red_packet
++        return (self.state == ACTIVE and self.phase == HOLD
++                and self.contact_step is not None and self.exchange_version is None
++                and (packet is None or packet[0] < self.contact_step))
++
++    def _finish_target(self, step, reason):
++        self.audit.append((step, reason, self.target))
++        self.visited.add(self.target)
++        self.target = None
++        self.phase = APPROACH
++        self.contact_step = None
++        self.exchange_version = None
++        self.exchange_empty.clear()
++        self.delivery_until = None
++
++    def _live_receipt(self, step):
++        receipt = self.receipts.get(self.target)
++        if receipt is None or not 0 <= step - receipt["received_step"] <= self.DIRECT_TTL:
++            return None
++        return receipt
++
++    def _hold(self, drone, command, step, point):
++        packet = drone.red_packet
++        if (self.exchange_version is None and packet is not None
++                and packet[0] >= self.contact_step):
++            self.exchange_version = packet[0]
++            self.exchange_empty = {
++                peer for peer, record in drone.inventory_records.items() if record[1] == 0}
++        command.update(drone.drive(tuple(point), drone.measured_velocity(), ignore_own_bombs=True))
++        self.hold_left = max(0, self.EXCHANGE_HOLD - (step - self.contact_step))
++        receipt = self._live_receipt(step)
++        acknowledged = (receipt is not None and self.exchange_version is not None
++                        and receipt["map_version"] is not None
++                        and receipt["seen"].get(int(drone.identifier), -1) >= self.exchange_version
++                        and self.exchange_empty <= receipt["empty"])
++        if self.hold_left == 0 and acknowledged:
++            if self.target == self.DELIVERY_RECEIVER:
++                self.pending_delivery.difference_update(self.exchange_empty)
++            self.audit.append((step, "payload_ack", self.target, self.exchange_version,
++                               receipt["map_version"], tuple(sorted(self.exchange_empty))))
++            self._finish_target(step, "exchange_complete")
++        elif step - self.contact_step >= self.EXCHANGE_TIMEOUT:
++            self._finish_target(step, "exchange_timeout")
+ 
+-    # -- per-frame tick ------------------------------------------------------
+     def tick(self, drone, step, command, steps_left):
+-        if self.state == DONE:
++        if int(drone.identifier) != self.MESSENGER_ID:
+             return False
++        self._track_empty(drone, step)
++        if self.state == DONE:
++            if not self.pending_delivery or not self._delivery_allowed(drone, step):
++                return False
++            self.state = ACTIVE
++            self.delivery_only = True
++            self.audit.append((step, "messenger_resume"))
+         if self.state == IDLE:
+             if self._can_activate(drone, step):
+                 self.state = ACTIVE
+-                self.audit.append((step, "messenger_enter",
+-                                   tuple(map(float, drone.pose))))
++                self.audit.append((step, "messenger_enter", tuple(map(float, drone.pose))))
+             return False
+-
+-        # NoCom: no peer can be contacted until the drone leaves the zone.
++        if (self.delivery_until is not None
++                and (step >= self.delivery_until or
++                     drone.walltime_limit - drone.elapsed_walltime <= FinalMapReconnect.MIN_WALL_SECONDS)):
++            self._finish_target(step, "redelivery_cutoff")
++            if self.delivery_only:
++                self.state = DONE
++                return False
+         if drone.communicator_is_disabled():
+             self._tick_exit_zone(drone, step, command)
+             return True
+         if self.phase == EXIT_ZONE:
+             self._clear_exit()
+             self.audit.append((step, "zone_exit", tuple(map(float, drone.pose))))
+-
+         if self.target is None:
+             target = self._pick_target(drone, step)
+             if target is None:
+-                # A full tour is complete. Run another round if budget allows.
+-                if (self.round == 0 and steps_left >= self.SECOND_ROUND_MIN_STEPS):
++                if (not self.delivery_only and self.round == 0
++                        and steps_left >= self.SECOND_ROUND_MIN_STEPS):
+                     self.round += 1
+                     self.visited.clear()
+                     self.audit.append((step, "second_round"))
+@@ -167,51 +273,34 @@ class MessengerRun:
+             self.wait_start = None
+             self.approach_poses.clear()
+             self.audit.append((step, "target_picked", target))
+-
+         point = self._peer_point(drone, self.target)
+         if point is None:
+-            self.visited.add(self.target)
+-            self.target = None
++            self._finish_target(step, "peer_missing")
+             return True
+         pose = np.asarray(drone.pose, dtype=float)
+         gap = float(np.linalg.norm(point - pose))
+-
+         if self.phase == APPROACH:
+-            if gap < self.COMM_RANGE:
++            if self._live_receipt(step) is not None:
+                 self.phase = HOLD
+-                self.hold_left = self.EXCHANGE_HOLD
++                self.contact_step = step
++                self.exchange_version = None
+                 self.contacts += 1
+                 self.audit.append((step, "contact", self.target, round(gap, 1)))
+             else:
+                 command.update(drone.drive(tuple(point), drone.measured_velocity(),
+-                           ignore_own_bombs=True))
+-                # At a stale last-known point without contact: wait, then skip.
++                                           ignore_own_bombs=True))
+                 if gap < self.ARRIVE_TOL:
+                     if self.wait_start is None:
+                         self.wait_start = step
+                     elif step - self.wait_start >= self.WAIT_PEER_FRAMES:
+-                        self.audit.append((step, "peer_skipped", self.target))
+-                        self.visited.add(self.target)
+-                        self.target = None
+-                # Local minimum: still far from the goal but barely moving over
+-                # a sliding window. Give up this target instead of idling.
++                        self._finish_target(step, "peer_skipped")
+                 if self.target is not None:
+                     self.approach_poses.append((step, pose.copy()))
+-                    if len(self.approach_poses) >= 2:
+-                        f_step, f_pose = self.approach_poses[0]
+-                        l_step, l_pose = self.approach_poses[-1]
+-                        if (l_step - f_step >= self.APPROACH_STALL_WINDOW and
+-                                np.linalg.norm(l_pose - f_pose) < self.APPROACH_STALL_MOVE):
+-                            self.audit.append((step, "target_unreachable", self.target))
+-                            self.visited.add(self.target)
+-                            self.target = None
+-        else:  # HOLD
+-            self.hold_left -= 1
+-            # Stay close while the message channel exchanges evidence.
+-            command.update(drone.drive(tuple(point), drone.measured_velocity(),
+-                           ignore_own_bombs=True))
+-            if self.hold_left <= 0:
+-                self.visited.add(self.target)
+-                self.audit.append((step, "exchange_complete", self.target))
+-                self.target = None
++                    first_step, first_pose = self.approach_poses[0]
++                    if (step - first_step >= self.APPROACH_STALL_WINDOW
++                            and np.linalg.norm(pose - first_pose) < self.APPROACH_STALL_MOVE):
++                        self._finish_target(step, "target_unreachable")
++        else:
++            self._hold(drone, command, step, point)
+         return True
++
+diff --git a/red_hooks.py b/red_hooks.py
+index 6d2eb32..f996797 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -200,6 +200,7 @@ class RedHooks(LBBDRescue):
+                 self.memory.merge(packet[1])
+                 self.fine_wall_coverage.merge_direct(owner, message.get("red_wall_sources"))
+                 self.map_revision[owner] = packet[0]
++            self.messenger.receive(self, message, int(self.elapsed_timestep))
+ 
+     def define_message_for_all(self):
+         message = super().define_message_for_all()
+@@ -222,6 +223,7 @@ class RedHooks(LBBDRescue):
+                     red_branch_acks=self.placement.branch_exit.acknowledgments(self, step),
+                     red_passages=dict(self.placement.deep.passages.reports),
+                     red_map_ack={owner: item[:3] for owner, item in self.received_maps.items()},
++                    red_map_seen=dict(self.map_revision),
+                     red_inventory=dict(self.inventory_records),
+                     direct_scan_progress=self._advertise_scan_progress(step),
+                     direct_latest_sweep=self.own_scan_progress[-1] if self.own_scan_progress else None,
+@@ -965,11 +967,6 @@ class RedHooks(LBBDRescue):
+         if self.closeout.state in (DEPARTING, FORCING):
+             return command
+ 
+-        # Dedicated messenger: once active it owns navigation so the ordinary
+-        # exploration/placement branches cannot override its tour.
+-        if self.messenger.tick(self, step, command, steps_left):
+-            return command
+-
+         ranges = self.lidar_values()
+         semantic = self.semantic_values() or ()
+         if ranges is not None and step % 4 == 0:
+@@ -978,7 +975,8 @@ class RedHooks(LBBDRescue):
+             self.fine_wall_coverage.observe(observations, fixed)
+             self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
+                                              np.asarray(self.lidar_rays_angles()),semantic)
+-        refresh = self.pre_submit_scan.refresh_due(self,step)
++        refresh = (self.pre_submit_scan.refresh_due(self,step)
++                   or self.messenger.refresh_due(self))
+         if refresh or step % 45 == self.identifier:
+             self.red_packet = step, self.memory.packet()
+             self.wall_source_packet = self.fine_wall_coverage.packet()
+@@ -1000,6 +998,10 @@ class RedHooks(LBBDRescue):
+                 if image.any():
+                     deadline.remember(step, image)
+         self._update_drop_hints(step, semantic)
++        # Keep map packets and submission backups current during the tour.
++        # The messenger still owns its navigation command.
++        if self.messenger.tick(self, step, command, steps_left):
++            return command
+         maneuvers = self.placement.maneuvers
+         if self.previous_inventory or maneuvers.exit is not None or maneuvers.waiting_exit is not None:
+             maneuvers.remember(self, step)
