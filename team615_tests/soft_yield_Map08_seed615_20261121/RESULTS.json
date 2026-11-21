@@ -1,0 +1,1341 @@
+{
+  "status": "COMPLETE",
+  "map": "Map08",
+  "seed": 615,
+  "new_red_rounds": 1,
+  "other_maps_run": 0,
+  "algorithm_changes": false,
+  "arms": {
+    "V16": {
+      "partial_score_out_of_80": 52.641343831149655,
+      "map_score": 77.18921483453524,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.53439153439153,
+      "submission_drone": 1,
+      "submission_step": 3452,
+      "submission_walltime_seconds": 128.32501888275146,
+      "final_walltime_seconds": 128.3956217765808,
+      "remaining_walltime_at_finish": 51.60437822341919,
+      "placed": 10,
+      "expected": 10,
+      "exploration_percent": 98.01814754248696,
+      "selected_map_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4",
+      "all_submissions": [
+        {
+          "drone": 1,
+          "step": 3452,
+          "walltime_seconds": 128.32501888275146,
+          "image_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4"
+        }
+      ],
+      "submission_mode": "ordinary",
+      "deadline_event": null,
+      "selected_cache": {
+        "owner": 5,
+        "version": 3444,
+        "digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+        "precision": 0.9226319595083152,
+        "recall": 0.9786472651436156,
+        "score": 0.9498144535526688
+      },
+      "missed_wall_pixels": 17507,
+      "charged_misdraw_pixels": 49559,
+      "total_health_lost": 16,
+      "drone_0": {
+        "final_snapshots": 1,
+        "yielding_at_end": true,
+        "ready_at_end": true,
+        "ordinary_selection": true,
+        "slot": [
+          1,
+          3450,
+          3456
+        ],
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              91.42171324356003,
+              -140.05699542109244
+            ],
+            877,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3240,
+            "available_candidates_compared",
+            1,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3242,
+            "available_candidates_compared",
+            2,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3243,
+            "payload_acked",
+            3,
+            "snapshot",
+            3,
+            3240,
+            "02b78dfed28d9f4df02ca60db3a58a4b21d8a6e0aca040fe4e62707daf995889"
+          ],
+          [
+            3244,
+            "payload_acked",
+            3,
+            "snapshot",
+            0,
+            3240,
+            "6d02bd719dc47827bd8e470533b77be07215aa77eb617ede281b0331105d8518"
+          ],
+          [
+            3246,
+            "payload_acked",
+            3,
+            "image",
+            0,
+            3240,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe"
+          ],
+          [
+            3246,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3247,
+            "payload_acked",
+            3,
+            "image",
+            3,
+            3240,
+            "07c1941f6f9b34533820eb4ad214eb960f41bbd2ae325ef5b379dce64dcbc417"
+          ],
+          [
+            3420,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "55b3b72a88946838ba3fd4e85558104b593c6d39d3e0437a1f7addb7130ddb17",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ]
+        ],
+        "deadline_event": null,
+        "submitted": false
+      },
+      "drone_1": {
+        "final_snapshots": 2,
+        "ready_at_end": true,
+        "cached_image_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4",
+        "cache": {
+          "owner": 5,
+          "version": 3444,
+          "digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+          "precision": 0.9226319595083152,
+          "recall": 0.9786472651436156,
+          "score": 0.9498144535526688
+        },
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              42.03403873119068,
+              -223.98656758272284
+            ],
+            1113,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3241,
+            "available_candidates_compared",
+            1,
+            2,
+            5,
+            "2a5c017bbd0f58d6121d2f3c5540300bfb0d986ba1b0c181f9e297889d7d2425",
+            true
+          ],
+          [
+            3274,
+            "available_candidates_compared",
+            2,
+            2,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3275,
+            "payload_acked",
+            4,
+            "snapshot",
+            4,
+            3240,
+            "5a1f123e447becab35e0c09cf245ead4b1a1bdbf36feff209c03b54b66933881"
+          ],
+          [
+            3276,
+            "payload_acked",
+            4,
+            "snapshot",
+            1,
+            3240,
+            "710f2cbd0e58d33b7c10451015de2921590b901638ee7629878710840f801693"
+          ],
+          [
+            3276,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3277,
+            "payload_acked",
+            4,
+            "image",
+            4,
+            3240,
+            "6f06656ec029c84d0b382f291520a42abdd62db8cf79b71fc4ce6686abccdf47"
+          ],
+          [
+            3278,
+            "payload_acked",
+            4,
+            "image",
+            1,
+            3240,
+            "c5317a688349692f2d9005e95b83995853d46f3aaae20d9119e97bfe847145ba"
+          ],
+          [
+            3336,
+            "route_abort",
+            "no_safe_join"
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            4,
+            5,
+            "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ],
+          [
+            3450,
+            "choice_proposed",
+            {
+              "proposer": 1,
+              "executor": 1,
+              "backup": 1,
+              "image_owner": 5,
+              "image_digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+              "reference_digest": "1c2043f047dd5ede2b4d69302301aee5587562a9b0ae9a72004ca10501b5358e",
+              "created": 3450,
+              "lease_end": 3456,
+              "key": "8a5c2f7cc36a51007ce7c3fccf1f24a63dacf9fdf841c3bb5515e84f00a57971"
+            }
+          ],
+          [
+            3452,
+            "submitted",
+            {
+              "proposer": 1,
+              "executor": 1,
+              "backup": 1,
+              "image_owner": 5,
+              "image_digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+              "reference_digest": "1c2043f047dd5ede2b4d69302301aee5587562a9b0ae9a72004ca10501b5358e",
+              "created": 3450,
+              "lease_end": 3456,
+              "key": "8a5c2f7cc36a51007ce7c3fccf1f24a63dacf9fdf841c3bb5515e84f00a57971"
+            }
+          ]
+        ],
+        "submitted": true
+      }
+    },
+    "V17": {
+      "partial_score_out_of_80": 50.66560455980092,
+      "map_score": 73.20069925480072,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.71957671957672,
+      "submission_drone": 0,
+      "submission_step": 3445,
+      "submission_walltime_seconds": 172.37391233444214,
+      "final_walltime_seconds": 172.4821755886078,
+      "remaining_walltime_at_finish": 7.517824411392212,
+      "placed": 10,
+      "expected": 10,
+      "exploration_percent": 98.01814754248696,
+      "selected_map_sha256": "a06fa9c57d155de93474369d98e12ab9082da4c95dfb400f713e54dcf867dc0c",
+      "all_submissions": [
+        {
+          "drone": 0,
+          "step": 3445,
+          "walltime_seconds": 172.37391233444214,
+          "image_sha256": "a06fa9c57d155de93474369d98e12ab9082da4c95dfb400f713e54dcf867dc0c"
+        }
+      ],
+      "submission_mode": "soft_cutoff",
+      "deadline_event": null,
+      "selected_cache": {
+        "owner": 5,
+        "version": 3444,
+        "digest": "55b3b72a88946838ba3fd4e85558104b593c6d39d3e0437a1f7addb7130ddb17",
+        "precision": 0.9210988659958473,
+        "recall": 0.981465115723601,
+        "score": 0.9503243137089931
+      },
+      "missed_wall_pixels": 21375,
+      "charged_misdraw_pixels": 52399,
+      "total_health_lost": 16,
+      "drone_0": {
+        "final_snapshots": 1,
+        "yielding_at_end": false,
+        "ready_at_end": true,
+        "ordinary_selection": true,
+        "slot": [
+          0,
+          3444,
+          3450
+        ],
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              91.42171324356003,
+              -140.05699542109244
+            ],
+            877,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3240,
+            "available_candidates_compared",
+            1,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3242,
+            "available_candidates_compared",
+            2,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3243,
+            "payload_acked",
+            3,
+            "snapshot",
+            3,
+            3240,
+            "02b78dfed28d9f4df02ca60db3a58a4b21d8a6e0aca040fe4e62707daf995889"
+          ],
+          [
+            3244,
+            "payload_acked",
+            3,
+            "snapshot",
+            0,
+            3240,
+            "6d02bd719dc47827bd8e470533b77be07215aa77eb617ede281b0331105d8518"
+          ],
+          [
+            3246,
+            "payload_acked",
+            3,
+            "image",
+            0,
+            3240,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe"
+          ],
+          [
+            3246,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3247,
+            "payload_acked",
+            3,
+            "image",
+            3,
+            3240,
+            "07c1941f6f9b34533820eb4ad214eb960f41bbd2ae325ef5b379dce64dcbc417"
+          ],
+          [
+            3420,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "55b3b72a88946838ba3fd4e85558104b593c6d39d3e0437a1f7addb7130ddb17",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ],
+          [
+            3445,
+            "coord_cutoff",
+            "released_navigation_and_submit_gate"
+          ],
+          [
+            3445,
+            "soft_cutoff_submit",
+            {
+              "owner": 5,
+              "version": 3444,
+              "digest": "55b3b72a88946838ba3fd4e85558104b593c6d39d3e0437a1f7addb7130ddb17",
+              "precision": 0.9210988659958473,
+              "recall": 0.981465115723601,
+              "score": 0.9503243137089931
+            },
+            [
+              0,
+              3
+            ]
+          ]
+        ],
+        "deadline_event": null,
+        "submitted": true
+      },
+      "drone_1": {
+        "final_snapshots": 2,
+        "ready_at_end": true,
+        "cached_image_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4",
+        "cache": {
+          "owner": 5,
+          "version": 3444,
+          "digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+          "precision": 0.9226319595083152,
+          "recall": 0.9786472651436156,
+          "score": 0.9498144535526688
+        },
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              42.03403873119068,
+              -223.98656758272284
+            ],
+            1113,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3241,
+            "available_candidates_compared",
+            1,
+            2,
+            5,
+            "2a5c017bbd0f58d6121d2f3c5540300bfb0d986ba1b0c181f9e297889d7d2425",
+            true
+          ],
+          [
+            3274,
+            "available_candidates_compared",
+            2,
+            2,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3275,
+            "payload_acked",
+            4,
+            "snapshot",
+            4,
+            3240,
+            "5a1f123e447becab35e0c09cf245ead4b1a1bdbf36feff209c03b54b66933881"
+          ],
+          [
+            3276,
+            "payload_acked",
+            4,
+            "snapshot",
+            1,
+            3240,
+            "710f2cbd0e58d33b7c10451015de2921590b901638ee7629878710840f801693"
+          ],
+          [
+            3276,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3277,
+            "payload_acked",
+            4,
+            "image",
+            4,
+            3240,
+            "6f06656ec029c84d0b382f291520a42abdd62db8cf79b71fc4ce6686abccdf47"
+          ],
+          [
+            3278,
+            "payload_acked",
+            4,
+            "image",
+            1,
+            3240,
+            "c5317a688349692f2d9005e95b83995853d46f3aaae20d9119e97bfe847145ba"
+          ],
+          [
+            3336,
+            "route_abort",
+            "no_safe_join"
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            4,
+            5,
+            "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ]
+        ],
+        "submitted": false
+      }
+    },
+    "candidate": {
+      "partial_score_out_of_80": 52.641343831149655,
+      "map_score": 77.18921483453524,
+      "wall_score": 44.46648630221442,
+      "time_score": 51.53439153439153,
+      "submission_drone": 1,
+      "submission_step": 3452,
+      "submission_walltime_seconds": 154.2607548236847,
+      "final_walltime_seconds": 154.37879514694214,
+      "remaining_walltime_at_finish": 25.62120485305786,
+      "placed": 10,
+      "expected": 10,
+      "exploration_percent": 98.01814754248696,
+      "selected_map_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4",
+      "all_submissions": [
+        {
+          "drone": 1,
+          "step": 3452,
+          "walltime_seconds": 154.2607548236847,
+          "image_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4"
+        }
+      ],
+      "submission_mode": "ordinary",
+      "deadline_event": null,
+      "selected_cache": {
+        "owner": 5,
+        "version": 3444,
+        "digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+        "precision": 0.9226319595083152,
+        "recall": 0.9786472651436156,
+        "score": 0.9498144535526688
+      },
+      "missed_wall_pixels": 17507,
+      "charged_misdraw_pixels": 49559,
+      "total_health_lost": 16,
+      "drone_0": {
+        "final_snapshots": 1,
+        "yielding_at_end": true,
+        "ready_at_end": true,
+        "ordinary_selection": true,
+        "slot": [
+          1,
+          3450,
+          3456
+        ],
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              91.42171324356003,
+              -140.05699542109244
+            ],
+            877,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3240,
+            "available_candidates_compared",
+            1,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3242,
+            "available_candidates_compared",
+            2,
+            2,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3243,
+            "payload_acked",
+            3,
+            "snapshot",
+            3,
+            3240,
+            "02b78dfed28d9f4df02ca60db3a58a4b21d8a6e0aca040fe4e62707daf995889"
+          ],
+          [
+            3244,
+            "payload_acked",
+            3,
+            "snapshot",
+            0,
+            3240,
+            "6d02bd719dc47827bd8e470533b77be07215aa77eb617ede281b0331105d8518"
+          ],
+          [
+            3246,
+            "payload_acked",
+            3,
+            "image",
+            0,
+            3240,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe"
+          ],
+          [
+            3246,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3247,
+            "payload_acked",
+            3,
+            "image",
+            3,
+            3240,
+            "07c1941f6f9b34533820eb4ad214eb960f41bbd2ae325ef5b379dce64dcbc417"
+          ],
+          [
+            3420,
+            "available_candidates_compared",
+            2,
+            3,
+            0,
+            "e0224b23f66005fdfad7d682a64abbd8245f4e064b288cc15c6450b993482fbe",
+            true
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "55b3b72a88946838ba3fd4e85558104b593c6d39d3e0437a1f7addb7130ddb17",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ]
+        ],
+        "deadline_event": null,
+        "submitted": false
+      },
+      "drone_1": {
+        "final_snapshots": 2,
+        "ready_at_end": true,
+        "cached_image_sha256": "a2b13dd8af95eb2165a021c903a0885ec0abd73641c09739deed482d008169c4",
+        "cache": {
+          "owner": 5,
+          "version": 3444,
+          "digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+          "precision": 0.9226319595083152,
+          "recall": 0.9786472651436156,
+          "score": 0.9498144535526688
+        },
+        "audit": [
+          [
+            3240,
+            "return_preflight",
+            "ready"
+          ],
+          [
+            3240,
+            "return_owned",
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              42.03403873119068,
+              -223.98656758272284
+            ],
+            1113,
+            [
+              90,
+              472.1331666511777,
+              436.6883657335191
+            ]
+          ],
+          [
+            3241,
+            "available_candidates_compared",
+            1,
+            2,
+            5,
+            "2a5c017bbd0f58d6121d2f3c5540300bfb0d986ba1b0c181f9e297889d7d2425",
+            true
+          ],
+          [
+            3274,
+            "available_candidates_compared",
+            2,
+            2,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3275,
+            "payload_acked",
+            4,
+            "snapshot",
+            4,
+            3240,
+            "5a1f123e447becab35e0c09cf245ead4b1a1bdbf36feff209c03b54b66933881"
+          ],
+          [
+            3276,
+            "payload_acked",
+            4,
+            "snapshot",
+            1,
+            3240,
+            "710f2cbd0e58d33b7c10451015de2921590b901638ee7629878710840f801693"
+          ],
+          [
+            3276,
+            "available_candidates_compared",
+            2,
+            3,
+            5,
+            "f690d391044dfb311af90e43d0302a6800aa033608400bf45b42e85cf3b6ca6f",
+            true
+          ],
+          [
+            3277,
+            "payload_acked",
+            4,
+            "image",
+            4,
+            3240,
+            "6f06656ec029c84d0b382f291520a42abdd62db8cf79b71fc4ce6686abccdf47"
+          ],
+          [
+            3278,
+            "payload_acked",
+            4,
+            "image",
+            1,
+            3240,
+            "c5317a688349692f2d9005e95b83995853d46f3aaae20d9119e97bfe847145ba"
+          ],
+          [
+            3336,
+            "route_abort",
+            "no_safe_join"
+          ],
+          [
+            3444,
+            "available_candidates_compared",
+            2,
+            4,
+            5,
+            "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+            true
+          ],
+          [
+            3444,
+            "finish_candidate_refreshed",
+            true
+          ],
+          [
+            3450,
+            "choice_proposed",
+            {
+              "proposer": 1,
+              "executor": 1,
+              "backup": 1,
+              "image_owner": 5,
+              "image_digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+              "reference_digest": "1c2043f047dd5ede2b4d69302301aee5587562a9b0ae9a72004ca10501b5358e",
+              "created": 3450,
+              "lease_end": 3456,
+              "key": "8a5c2f7cc36a51007ce7c3fccf1f24a63dacf9fdf841c3bb5515e84f00a57971"
+            }
+          ],
+          [
+            3452,
+            "submitted",
+            {
+              "proposer": 1,
+              "executor": 1,
+              "backup": 1,
+              "image_owner": 5,
+              "image_digest": "506fe6904bf2231ed4db060a3c413f035ebea77f345b518c4471b06f0357d3ba",
+              "reference_digest": "1c2043f047dd5ede2b4d69302301aee5587562a9b0ae9a72004ca10501b5358e",
+              "created": 3450,
+              "lease_end": 3456,
+              "key": "8a5c2f7cc36a51007ce7c3fccf1f24a63dacf9fdf841c3bb5515e84f00a57971"
+            }
+          ]
+        ],
+        "submitted": true
+      }
+    }
+  },
+  "candidate_minus": {
+    "V16": {
+      "partial_score_out_of_80": 0.0,
+      "map_score": 0.0,
+      "wall_score": 0.0,
+      "time_score": 0.0,
+      "submission_step": 0,
+      "submission_walltime_seconds": 25.935735940933228,
+      "final_walltime_seconds": 25.983173370361328,
+      "placed": 0,
+      "exploration_percent": 0.0,
+      "missed_wall_pixels": 0,
+      "charged_misdraw_pixels": 0,
+      "total_health_lost": 0
+    },
+    "V17": {
+      "partial_score_out_of_80": 1.9757392713487363,
+      "map_score": 3.9885155797345107,
+      "wall_score": 0.0,
+      "time_score": -0.18518518518519045,
+      "submission_step": 7,
+      "submission_walltime_seconds": -18.113157510757446,
+      "final_walltime_seconds": -18.10338044166565,
+      "placed": 0,
+      "exploration_percent": 0.0,
+      "missed_wall_pixels": -3868,
+      "charged_misdraw_pixels": -2840,
+      "total_health_lost": 0
+    }
+  },
+  "score_delta_components": {
+    "V16": {
+      "map": 0.0,
+      "wall": 0.0,
+      "time": 0.0
+    },
+    "V17": {
+      "map": 1.9942577898672553,
+      "wall": 0.0,
+      "time": -0.018518518518519045
+    }
+  },
+  "outcome": {
+    "zero_ordinary_ready": true,
+    "zero_guard_yielding_at_end": true,
+    "zero_submitted": false,
+    "one_submitted": true,
+    "one_holds_bitmap_identical_to_V16": true,
+    "actual_selected_bitmap_identical_to_V16": true,
+    "actual_selected_bitmap_identical_to_V17": false,
+    "low_walltime_yield_condition_exercised": false,
+    "soft_cutoff_exit_used": false,
+    "hard_fallback_used": false
+  },
+  "offline_recorded_timing": {
+    "V16": {
+      "recorded_frames": 3451,
+      "sampled_record_indices_walltime": {
+        "999": 24.57321047782898,
+        "1999": 57.69711089134216,
+        "2999": 94.99653768539429,
+        "3238": 107.22221159934998,
+        "3240": 110.91412377357483,
+        "3441": 124.28989911079407,
+        "3442": 128.14468097686768,
+        "3443": 128.16762351989746,
+        "3448": 128.29444408416748
+      },
+      "largest_recorded_intervals": [
+        [
+          3.8547818660736084,
+          3442,
+          124.28989911079407,
+          128.14468097686768
+        ],
+        [
+          2.005704402923584,
+          3240,
+          108.90841937065125,
+          110.91412377357483
+        ],
+        [
+          1.7584965229034424,
+          3238,
+          105.46371507644653,
+          107.22221159934998
+        ],
+        [
+          1.7508835792541504,
+          3242,
+          112.65221667289734,
+          114.40310025215149
+        ],
+        [
+          1.7380928993225098,
+          3241,
+          110.91412377357483,
+          112.65221667289734
+        ]
+      ]
+    },
+    "V17": {
+      "recorded_frames": 3444,
+      "sampled_record_indices_walltime": {
+        "999": 33.17671871185303,
+        "1999": 78.5481116771698,
+        "2999": 128.30011534690857,
+        "3238": 145.00385212898254,
+        "3240": 149.86419773101807,
+        "3441": 166.7546191215515,
+        "3442": 172.37391233444214,
+        "3443": 172.39264273643494
+      },
+      "largest_recorded_intervals": [
+        [
+          5.619293212890625,
+          3442,
+          166.7546191215515,
+          172.37391233444214
+        ],
+        [
+          2.7203121185302734,
+          3240,
+          147.1438856124878,
+          149.86419773101807
+        ],
+        [
+          2.2294750213623047,
+          3238,
+          142.77437710762024,
+          145.00385212898254
+        ],
+        [
+          2.2177035808563232,
+          3241,
+          149.86419773101807,
+          152.0819013118744
+        ],
+        [
+          2.1779263019561768,
+          3272,
+          155.22600293159485,
+          157.40392923355103
+        ]
+      ]
+    },
+    "candidate": {
+      "recorded_frames": 3451,
+      "sampled_record_indices_walltime": {
+        "999": 30.993287801742554,
+        "1999": 67.67753386497498,
+        "2999": 113.06215310096741,
+        "3238": 128.11557483673096,
+        "3240": 132.67784142494202,
+        "3441": 148.9144365787506,
+        "3442": 154.05375027656555,
+        "3443": 154.0798056125641,
+        "3448": 154.22647404670715
+      },
+      "largest_recorded_intervals": [
+        [
+          5.139313697814941,
+          3442,
+          148.9144365787506,
+          154.05375027656555
+        ],
+        [
+          2.4902660846710205,
+          3240,
+          130.187575340271,
+          132.67784142494202
+        ],
+        [
+          2.168393850326538,
+          3238,
+          125.94718098640442,
+          128.11557483673096
+        ],
+        [
+          2.1352880001068115,
+          3272,
+          137.76283288002014,
+          139.89812088012695
+        ],
+        [
+          2.0836198329925537,
+          3242,
+          134.75421237945557,
+          136.83783221244812
+        ]
+      ]
+    }
+  },
+  "source_binding": {
+    "status": "PASS",
+    "candidate_zip_sha256": "3b7053616c45ee965bfca5f4d9ba08fbbcc1f167f9a8a9e4faa5ec1e6d8a30ed",
+    "V17_zip_sha256": "0aaed704f050073b664d4c0bece9f9ff6500e59edf55c78a7284036f01c167e7",
+    "V16_zip_sha256": "e98990cfd9269ab521621bc97d7c9e81e21fa83bb83dafbfefb3943480dd6791",
+    "candidate_runtime_source": {
+      "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+      "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+      "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+      "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+      "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+      "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+      "deadline_submission.py": "619259b465b3ba7d4046602fe672c52731592fe135139c92c299ee460dade3af",
+      "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+      "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+      "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+      "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+      "exchange_plan.py": "2fe2a9b5ae5a78ea755c4ca030ad7bc066f639e87572c92de254226a8f398ab0",
+      "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+      "fast_closeout.py": "a7fa506a48c7262870bd0515518def34542aa2d6fa67e1ca74044e4d4f716697",
+      "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+      "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+      "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+      "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+      "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+      "group_exchange.py": "f86ecb588323bfdcb654dc5c395a332059f51c085098b8c6d06c17fb489046c6",
+      "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+      "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+      "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+      "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+      "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+      "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+      "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+      "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+      "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+      "map_candidates.py": "ee3d45e9cab5e183fbdd66758a41ad7ef6814e70821c7d8024c84e6ae4bb8f48",
+      "messenger_run.py": "2b8876821584783ea41a0cb984043c0c3b8a30111e5612fb86531ed1c284c859",
+      "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+      "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+      "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+      "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+      "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+      "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+      "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+      "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+      "red_hooks.py": "82972d30cb7f051a4fada596088a609d0dd89cce071ded17c40e9312e51dacf2",
+      "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+      "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+      "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+      "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+      "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+      "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+      "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+      "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+      "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+      "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+      "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+      "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+      "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+      "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+      "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+      "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+    },
+    "historical_runtime_sources": {
+      "V16": {
+        "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+        "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+        "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+        "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+        "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+        "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+        "deadline_submission.py": "22045d32ac744624192520021e5740682cfbdea2e4d1a9050101c15b5b2ab3bf",
+        "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+        "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+        "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+        "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+        "exchange_plan.py": "2fe2a9b5ae5a78ea755c4ca030ad7bc066f639e87572c92de254226a8f398ab0",
+        "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+        "fast_closeout.py": "a7fa506a48c7262870bd0515518def34542aa2d6fa67e1ca74044e4d4f716697",
+        "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+        "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+        "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+        "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+        "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+        "group_exchange.py": "c24ee4b2ed56ab7832f77577c663937df066e73703c24fe625aa324632c06c7f",
+        "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+        "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+        "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+        "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+        "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+        "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+        "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+        "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+        "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+        "map_candidates.py": "ee3d45e9cab5e183fbdd66758a41ad7ef6814e70821c7d8024c84e6ae4bb8f48",
+        "messenger_run.py": "2b8876821584783ea41a0cb984043c0c3b8a30111e5612fb86531ed1c284c859",
+        "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+        "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+        "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+        "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+        "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+        "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+        "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+        "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+        "red_hooks.py": "82972d30cb7f051a4fada596088a609d0dd89cce071ded17c40e9312e51dacf2",
+        "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+        "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+        "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+        "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+        "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+        "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+        "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+        "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+        "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+        "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+        "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+        "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+        "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+        "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+        "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+        "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+      },
+      "V17": {
+        "bearing_core.py": "91f2709ffee34ba05acafba283469ddf429e30dd75cf68d3d9fc1dcedd22e020",
+        "blocked_prefix.py": "e927a5157bc8353846122913088bb1eb5fecb63b86a4963d1bfd11ed6e8ec1a1",
+        "boundary_anchor.py": "1473302eb2201fce85886dd48501680a52b6459c912f7700df45479e548c42f6",
+        "branch_exit.py": "507167c2508b76f74019574e72198771b822ae7dbb7463d0de053f334f51e27b",
+        "closeout_departure.py": "45b9f7bd1ed20d9df765d6cc6638606661bc4fb10456b5a3a5382a3174bc3f9a",
+        "coverage_placement.py": "b3984d5919b7529c177bd4ff6ad80c89b9ee0f83e2f3eb4baf74ad3b653b0700",
+        "deadline_submission.py": "619259b465b3ba7d4046602fe672c52731592fe135139c92c299ee460dade3af",
+        "deep_placement.py": "e78153f8451aedb8c14fbdeab6f1c442a22c7afaf9ea719e9d5398528129c4c3",
+        "drop_departure.py": "cd3bfa50b2202005464c3fc67c1a231a5aa77a3d71166a880635da1acc8a6979",
+        "egress_gate.py": "53be534cd611d0d2418bde2503b24e09553edba89ec8c4e952f2abdd23bc0629",
+        "escape_exit_route.py": "d7d1102710af583e1f22782e41f1ceff5ed18f50afb1713785812e6ff5da3df3",
+        "exchange_plan.py": "2fe2a9b5ae5a78ea755c4ca030ad7bc066f639e87572c92de254226a8f398ab0",
+        "exploration_phase.py": "ec1c60d12bc614b80f0641609f6863585a3605b7e818e493a3d977505d7f65ff",
+        "fast_closeout.py": "a7fa506a48c7262870bd0515518def34542aa2d6fa67e1ca74044e4d4f716697",
+        "final_map_reconnect.py": "db35d8d0176b5890c70c3acbc5f6895d43dcbdfe173ae4105fd89d45b023387e",
+        "final_map_relay.py": "a5c9e01307cf823aacb7f9e30d34787709744fdd3a48eb96db32255c83e8bef1",
+        "fine_wall_coverage.py": "c142bd4670f3803e5b9fa51806d31dfa30cf671abb66c2636a1d7c07b09a1d94",
+        "frontier_audit.py": "a04a40b424b33b53e1b0bb96b332514527f83ab4a0b1f836f4daca181d52491e",
+        "greedy_mapping.py": "37f4c23d0c3a257f030d858c364389a77c8df23baffe6d007ec5b07ee1c1b923",
+        "group_exchange.py": "c24ee4b2ed56ab7832f77577c663937df066e73703c24fe625aa324632c06c7f",
+        "in_block_frontier.py": "0e821ae14acd52f6f9cfd201f8b6d79ed9e5be523f996071c288973919007551",
+        "isolated_closeout.py": "a21eef8978a1ab9e52bdcba25e8d04fd96e754d5a008f92d1f818585fcc9ac15",
+        "lbbd_dispatch.py": "1165614c55b689c10ba3954dc16597c4783eec11e8fd2f46f50585147ca1ed06",
+        "lbbd_rescue.py": "09543d81d525e88565f0c55a324dc5f28f79ff059a715e68531c9125880f6cd9",
+        "line_regularization.py": "fa1098478d2a3b424b3ee6f096fdcef3b570c1eadac5ddcac7d71b5b3353e158",
+        "loaded_progress.py": "6f43520f040990231e45ecbd5b23a19310ef9dfc7670677339330abe14c33b0a",
+        "local_escape.py": "3102ea1fa4520501ed4e778c941fc7b79f7c77d0fcfac0f8080a180ef26320a2",
+        "local_exit_amnesty.py": "9d1d233e38685500c8acd31cca7498bdba8ce28563a8f7f6673f0c1a82729da0",
+        "local_wall_alignment.py": "a785f07a281ae65c89d4f992c650278c92f3b216882b9c59af6c9fe0a961f225",
+        "map_candidates.py": "ee3d45e9cab5e183fbdd66758a41ad7ef6814e70821c7d8024c84e6ae4bb8f48",
+        "messenger_run.py": "2b8876821584783ea41a0cb984043c0c3b8a30111e5612fb86531ed1c284c859",
+        "my_drone_eval.py": "f7d7d94e4a716d62ede6f18cb91e22bbfa3af2c503bf1b4af25ec054d2be3451",
+        "opening_pair.py": "e2c2010b5752cd6212a108c9154dc5a7ca4d410092452b80f8e03080a4954144",
+        "partial_map_submit.py": "d7a99962f8357f690f64584ce15df4f3551f2b1a806e37f6eb14786567163aa7",
+        "passage_ledger.py": "f9919df47c0fd1d4ff693c6e30925c41e79c4d57e7ce7e4c9e9900bc061452c2",
+        "placement_density.py": "2ac472ef9b8a191d0700f12e0ab576138aa21ac731ef3a5a0eada6d9e9b24a04",
+        "placement_maneuvers.py": "64b55d9585366b53888a0c7ba83b77cb678412e40d9430dd2a4d25589ce1fa23",
+        "placement_preferences.py": "9291df87a755ef5ca78a581fd6b680dae3ca984e3b632f83078c0084326963de",
+        "pre_submit_scan.py": "51e5121f4f316eb4beaf9b2a4e021c84fbdfc8c37eebce7748d3f4b4fd025b3e",
+        "red_hooks.py": "82972d30cb7f051a4fada596088a609d0dd89cce071ded17c40e9312e51dacf2",
+        "req.txt": "3f7c2eadeafc629abd51067c517d60b6c6a64d9b4dad3fe4c93fd28a5685b30b",
+        "rescue_shared.py": "9f23f098d0aa25c094a23f3751a41fa18464bb77c04aaf0a3999959126ec02ee",
+        "rolling_rescue.py": "c955c972ceee11bae906462cf5276e60b1c1e43bbdb03366cbeff33fce7abb8c",
+        "scan_geometry.py": "5214a2b08ccd0c21aad5a32738ffd64fca508117b975861b5748e767a65e12e0",
+        "search_reconnect.py": "1015f848f6862333cb4964edbae0d25c53aeff43db6fc0c905db0350f351f132",
+        "search_roaming.py": "dbf5ed32e200b5da524ebf01a68a669e316383c57ce13f259a3a9e79f6a9f8c6",
+        "second_drop_site.py": "ea0bcb00f347efef397ade3a2b50264e74c5a3392629b91753a0423d9ff6aa9b",
+        "submission_renderer.py": "127478eb5a0a9bafff348f4d50d86c763f998e289947a6715d7c42e7a6fab39b",
+        "submission_wall_fill.py": "5e0d14ff05af2dca71bff8bef3d7a849161163abb5a1dbde8081632fdb693b40",
+        "team_info.yml": "a1291990ea86c1c03ebc5d1f8a7ee21ed6d4431444a73128a8f136d63981d120",
+        "team_wall.py": "c9b5626b5471c1d9638e895c6468de05a75a942914ba2b5e90ab75cebab3f2a1",
+        "two_stage_dispatch.py": "10aa8fbcbc35206c9476c33804aaba017f399a5d72a73896a54f65aca753774f",
+        "two_stage_exploration.py": "1b48e2e1e6f3d458ef924e736b2e29c7d6ec3295ae4c3be86ff76cde0a8c6f7e",
+        "two_stage_paths.py": "cccfa84539988b7078095ce5726bccdb775bd6a0595e55c7b01b5737aa430fbb",
+        "two_stage_rescue.py": "8962bd48832dda9906c90e2ca61a40dc57530d4eec1ad87a92cb347957ceb048",
+        "wall_view.py": "11c58240ae9b2bd5d537139c7d819418ad015f3dfcbd62c7116d55a99374bb20"
+      }
+    },
+    "post_run_source_check": {
+      "status": "PASS",
+      "source_members": 56,
+      "input_unchanged": true,
+      "runtime_unchanged": true
+    },
+    "observer_byte_identical_to_V16_V17": true,
+    "config_byte_identical_to_V16_V17": true,
+    "matched_sdk_seed_spawns_zones_limits": true,
+    "new_red_rounds": 1,
+    "new_historical_rounds": 0,
+    "blue_rounds": 0,
+    "other_maps_run": 0,
+    "official_scores_sha256": {
+      "V16": "2a02ff71efee8a33b3362feefe0ff9d1bf39e12ead0873abe253ee72c5e48326",
+      "V17": "50110f6df107b90ca3baee60646a77f9e1b26456b1f9bcc19d405d214a57e8d4",
+      "candidate": "2fda70d6672ed27b8ab1dba7594ba27b8b57161f65d92834b20f2c49b6c6c57d"
+    }
+  },
+  "score_scope": "Red subtotal out of 80; no blue bomb-difficulty calibration or official website score.",
+  "timing_scope": "One current candidate run versus historical V17/V16, not a newly matched timing cohort. Submission uses SDK sampled walltime; final walltime includes closing work. Replay record indices are not asserted controller steps."
+}
