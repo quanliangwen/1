@@ -1,0 +1,39 @@
+diff --git a/red_hooks.py b/red_hooks.py
+index f996797..9314153 100644
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -15,7 +15,7 @@ from swarm_rescue.solutions.final_map_relay import FinalMaps
+ from swarm_rescue.solutions.fast_closeout import FastCloseout
+ from swarm_rescue.solutions.drop_departure import DropDeparture
+ from swarm_rescue.solutions.closeout_departure import CloseoutDeparture, DEPARTING, FORCING
+-from swarm_rescue.solutions.messenger_run import MessengerRun
++from swarm_rescue.solutions.messenger_run import MessengerRun, ACTIVE
+ from swarm_rescue.solutions.second_drop_site import SecondDropSite
+ from swarm_rescue.solutions.team_wall import TeamWall
+ from swarm_rescue.solutions.submission_renderer import SubmissionBearings
+@@ -970,11 +970,21 @@ class RedHooks(LBBDRescue):
+         ranges = self.lidar_values()
+         semantic = self.semantic_values() or ()
+         if ranges is not None and step % 4 == 0:
+-            observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
+             fixed = self.grid.pose_fixed and not self._odometry_only
+-            self.fine_wall_coverage.observe(observations, fixed)
+-            self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
+-                                             np.asarray(self.lidar_rays_angles()),semantic)
++            unreliable_messenger = (int(self.identifier) == MessengerRun.MESSENGER_ID
++                                    and self.messenger.state == ACTIVE and not fixed)
++            # Preserve free-space and visit updates used by existing navigation.
++            # Restore only wall hits before any packet or submission is prepared.
++            prior_hits = self.memory.hits.copy() if unreliable_messenger else None
++            try:
++                observations = self.memory.observe(self.pose, self.heading, ranges, self.lidar_rays_angles(), semantic)
++            finally:
++                if prior_hits is not None:
++                    self.memory.hits[...] = prior_hits
++            if not unreliable_messenger:
++                self.fine_wall_coverage.observe(observations, fixed)
++                self.submission_bearings.observe(self.memory,self.pose,self.heading,np.asarray(ranges),
++                                                 np.asarray(self.lidar_rays_angles()),semantic)
+         refresh = (self.pre_submit_scan.refresh_due(self,step)
+                    or self.messenger.refresh_due(self))
+         if refresh or step % 45 == self.identifier:
