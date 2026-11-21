@@ -1,0 +1,181 @@
+diff --git a/group_exchange.py b/group_exchange.py
+index dce9e44..cacc5e6 100644
+--- a/group_exchange.py
++++ b/group_exchange.py
+@@ -20,6 +20,7 @@ class ReturnIntent:
+ 
+ class GroupExchange:
+     ACTIVE = {'RETURN_LOCAL','LOCAL_EXCHANGE','COURIER_TO_C','INTERGROUP_EXCHANGE','DELIVERED_HOLD'}
++    SUBMISSION_SLOT_STEPS = 6
+ 
+     def __init__(self, owner, team_size, limit, size):
+         self.owner,self.team_size,self.limit=int(owner),team_size,limit
+@@ -50,6 +51,7 @@ class GroupExchange:
+         self.last_comparison_step=None
+         self.submission_ready=False
+         self.finish_refresh_step=None
++        self.ordinary_selection=False
+ 
+     @property
+     def owns_navigation(self):
+@@ -158,7 +160,7 @@ class GroupExchange:
+                                     submission_ready=body.get('submission_ready') is True)
+         self.candidates.receive(drone,peer,body.get('payload'),step)
+         choice=body.get('choice')
+-        if isinstance(choice,dict) and self.valid_choice(choice,step):
++        if isinstance(choice,dict) and self.valid_choice(choice,step,drone):
+             proposer=choice['proposer']
+             if (self.choice is None or step>=self.choice['lease_end']
+                     or proposer<self.choice['proposer']
+@@ -202,8 +204,28 @@ class GroupExchange:
+ 
+     def ordinary_submit_allowed(self, drone, step, path='ordinary'):
+         if not self.can_finish(drone,step):return False
+-        return not (self.plan.committed() and self.start()<=step<self.cutoff()
+-                    and not self.expired(drone,step))
++        if not self.in_submission_slot(drone,step):return False
++        if (self.plan.committed() and self.start()<=step<self.cutoff()
++                and not self.expired(drone,step)):return False
++        if (drone.previous_inventory!=0 or drone.pending_drop is not None
++                or not drone._all_inventory_empty()):return False
++        return drone._prefer_own_submission(step)
++
++    def submission_slot(self, drone, step):
++        # All aircraft use the same absolute round clock, even when separated.
++        width=self.SUBMISSION_SLOT_STEPS
++        index=(step-self.finish_floor(drone))//width
++        start=self.finish_floor(drone)+index*width
++        return index%self.team_size,start,start+width
++
++    def in_submission_slot(self, drone, step):
++        return self.submission_slot(drone,step)[0]==self.owner
++
++    def choice_in_slot(self, drone, choice, step):
++        owner,_,end=self.submission_slot(drone,choice['created'])
++        return (owner==choice['proposer']==choice['executor']
++                and choice['created']+2<choice['lease_end']<=end
++                and step<choice['lease_end'])
+ 
+     def finish_floor(self, drone):
+         return min(drone.pre_submit_scan.finish(drone)+FinalMaps.COLLECTION_STEPS,
+@@ -281,7 +303,7 @@ class GroupExchange:
+         drone.local_escape.apply(drone,command,step,ranges,semantic)
+         return True
+ 
+-    def valid_choice(self, choice, step):
++    def valid_choice(self, choice, step, drone):
+         fields=('proposer','executor','backup','image_owner','image_digest','reference_digest','key','lease_end','created')
+         if not all(k in choice for k in fields):return False
+         from swarm_rescue.solutions.map_candidates import digest
+@@ -291,13 +313,15 @@ class GroupExchange:
+                 and type(choice['created']) is int and self.start()<=choice['created']<=step
+                 and type(choice['lease_end']) is int
+                 and choice['created']+2<=choice['lease_end']<=min(choice['created']+12,self.cutoff())
+-                and all(isinstance(choice[k],str) and len(choice[k])==64 for k in ('image_digest','reference_digest','key')))
++                and all(isinstance(choice[k],str) and len(choice[k])==64 for k in ('image_digest','reference_digest','key'))
++                and self.choice_in_slot(drone,choice,step))
+ 
+     def refresh_comparison(self, drone, step, score_fn):
+         signature=self.candidates.input_signature()
+         if signature==self.compared_signature or not self.candidates.images:
+             return
+-        selected=self.candidates.choose(drone,step,score_fn,fusion=not self.expired(drone,step))
++        selected=self.candidates.choose(drone,step,score_fn,fusion=not self.expired(drone,step),
++                                        ordinary=self.ordinary_selection)
+         self.compared_signature=signature
+         self.last_comparison_step=step
+         if selected is None:return
+@@ -347,15 +371,21 @@ class GroupExchange:
+                            drone.walltime_limit-drone.elapsed_walltime):return False
+         if self.candidates.best is None or drone.group_best_image is None:return False
+         if not self.can_finish(drone,step):return False
++        if not self.ordinary_selection:
++            self.ordinary_selection=True;self.compared_signature=None
+         self.refresh_for_finish(drone,step,score_fn)
++        self.refresh_comparison(drone,step,score_fn)
+         self.submission_ready=True
++        if drone.first_ready_to_submit_step is None:
++            drone.first_ready_to_submit_step=step
+         if self.choice is not None and step>=self.choice['lease_end']:
+             self.audit.append((step,'choice_lease_expired',self.choice['key']))
+             self.choice=None;self.choice_acks=set()
+-        fresh=self.fresh(step)
+-        ready=[i for i,p in fresh.items() if p.get('submission_ready',False)]
++        if not self.in_submission_slot(drone,step):return False
++        # Reuse the original quality bids and bounded yielding, not local F1
++        # values computed against different aircraft's reference evidence.
++        if not drone._prefer_own_submission(step):return False
+         if self.expired(drone,step):
+-            if min([self.owner]+ready)!=self.owner:return False
+             image,cache,versions=drone.group_best_image
+             if not image.any():return False
+             drone.submit_exploration_map(image.astype(np.uint8,copy=False))
+@@ -365,10 +395,11 @@ class GroupExchange:
+                                sorted(self.candidates.snapshots)))
+             return True
+         if self.choice is None:
+-            if min([self.owner]+ready)!=self.owner:return False
+             # A brief flush of newly stored candidates, not a five-source wait.
+             if self.last_comparison_step is None or step-self.last_comparison_step<2:return False
+-            if self.cutoff()-step<2:return False
++            _,_,slot_end=self.submission_slot(drone,step)
++            lease_end=min(step+12,self.cutoff(),slot_end)
++            if lease_end-step<=2:return False
+             selected=self.candidates.best
+             from swarm_rescue.solutions.map_candidates import digest
+             # The scorer actually holds the selected bytes and is confirmed
+@@ -376,12 +407,13 @@ class GroupExchange:
+             choice=dict(proposer=self.owner,executor=self.owner,backup=self.owner,
+                         image_owner=selected['owner'],image_digest=selected['digest'],
+                         reference_digest=self.candidates.reference_digest,
+-                        created=step,lease_end=min(step+12,self.cutoff()))
++                        created=step,lease_end=lease_end)
+             choice['key']=digest(choice)
+             self.choice=choice;self.choice_step=step;self.choice_acks={self.owner}
+             self.complete_step=step
+             self.audit.append((step,'choice_proposed',choice))
+         if self.choice['executor']!=self.owner:return False
++        if not self.valid_choice(self.choice,step,drone):return False
+         owner=self.choice['image_owner'];data=self.candidates.images.get(owner)
+         if data is None or data['digest']!=self.choice['image_digest']:return False
+         if self.best_installed!=data['digest']:
+diff --git a/map_candidates.py b/map_candidates.py
+index 2bdf5da..58d772b 100644
+--- a/map_candidates.py
++++ b/map_candidates.py
+@@ -31,6 +31,8 @@ def frozen(value):
+ 
+ 
+ class MapCandidates:
++    ORDINARY_NEAR_TIE = 0.003
++
+     def __init__(self, owner, epoch, width, height):
+         self.owner,self.epoch,self.width,self.height = int(owner),epoch,int(width),int(height)
+         self.snapshots = {}
+@@ -176,7 +178,16 @@ class MapCandidates:
+         data=(self.snapshots if kind=='snapshot' else self.images)[owner]
+         return kind,data
+ 
+-    def choose(self, drone, step, score_fn, fusion=True):
++    @classmethod
++    def select_candidate(cls, table, ordinary=False):
++        if not table:return None
++        if ordinary:
++            highest=max(x['score'] for x in table)
++            near=[x for x in table if x['score']>=highest-cls.ORDINARY_NEAR_TIE]
++            return max(near,key=lambda x:(x['version'],x['score'],-x['owner'],x['digest']))
++        return max(table,key=lambda x:(x['score'],x['version'],-x['owner'],x['digest']))
++
++    def choose(self, drone, step, score_fn, fusion=True, ordinary=False):
+         if not self.images:return None
+         memory=MapMemory(self.width,self.height);memory.merge(drone.memory.packet())
+         bearing=SubmissionBearings(self.width,self.height);bearing.bits=drone.submission_bearings.bits.copy()
+@@ -213,7 +224,7 @@ class MapCandidates:
+             score=score_fn(reduced,hits)
+             table.append(dict(owner=owner,version=data['version'],digest=data['digest'],**score))
+         if not table:return None
+-        best=max(table,key=lambda x:(x['score'],x['version'],-x['owner'],x['digest']))
++        best=self.select_candidate(table,ordinary=ordinary)
+         self.score_table=table;self.best=best
+         self.audit.append((step,'map_selected',self.reference_digest,table,best['digest']))
+         return best
