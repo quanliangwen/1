@@ -1,0 +1,11 @@
+--- return40/group_exchange.py
++++ return50/group_exchange.py
+@@ -64,7 +64,7 @@
+ 
+     def start(self):return self.limit*3//5
+ 
+-    def return_start(self):return self.limit*2//5
++    def return_start(self):return self.limit//2
+ 
+     def cutoff(self):
+         return min(self.limit*85//100,DeadlineSubmission.window_start(self.limit)-12)
