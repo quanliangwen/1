@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "total_checks": 269,
+  "recovery_checks": 75,
+  "existing_regression_checks": 194,
+  "categories": [
+    {
+      "name": "1_trigger_and_normal_departure",
+      "status": "PASS",
+      "checks": 19
+    },
+    {
+      "name": "2_once_and_absolute_limits",
+      "status": "PASS",
+      "checks": 20
+    },
+    {
+      "name": "3_own_bomb_wall_and_unknown",
+      "status": "PASS",
+      "checks": 12
+    },
+    {
+      "name": "4_live_safety_exit",
+      "status": "PASS",
+      "checks": 13
+    },
+    {
+      "name": "5_control_and_actual_confirmation",
+      "status": "PASS",
+      "checks": 5
+    },
+    {
+      "name": "6_deadlines_and_scope",
+      "status": "PASS",
+      "checks": 6
+    }
+  ],
+  "candidate_zip_sha256": "6207ff8df49e435dc988119f98c130673da3dc123620ef4d20f39afc170c2a23",
+  "baseline_zip_sha256": "e69ea77adb25b9ecbb8bd3a38f34f2241c35ad788c147aff67bc6d83e7c227e8",
+  "changed_files": [
+    "drop_departure.py",
+    "red_hooks.py"
+  ],
+  "unchanged_files": 54,
+  "V16_remains_competition_baseline": true,
+  "V16_zip_sha256": "e98990cfd9269ab521621bc97d7c9e81e21fa83bb83dafbfefb3943480dd6791",
+  "full_matches": 0,
+  "physics_steps": 0,
+  "SDK_rounds": 0,
+  "research_candidate_not_submission_release": true,
+  "remote_source_hashes_verified": true
+}

@@ -1,0 +1,24 @@
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+Traceback (most recent call last):
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 258, in <module>
+    category(label,fn)
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 25, in category
+    start=len(checks);fn();categories.append(dict(name=name,status='PASS',checks=len(checks)-start))
+                      ^^^^
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 100, in trigger_cases
+    check('moving_trace_not_a_stall',not tick(d,r)[0] and not r.recovery_used)
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 22, in check
+    assert ok,name
+           ^^
+AssertionError: moving_trace_not_a_stall

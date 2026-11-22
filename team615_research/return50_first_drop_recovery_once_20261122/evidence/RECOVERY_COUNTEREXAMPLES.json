@@ -1,0 +1,343 @@
+{
+  "status": "PASS",
+  "total_checks": 75,
+  "categories": [
+    {
+      "name": "1_trigger_and_normal_departure",
+      "status": "PASS",
+      "checks": 19
+    },
+    {
+      "name": "2_once_and_absolute_limits",
+      "status": "PASS",
+      "checks": 20
+    },
+    {
+      "name": "3_own_bomb_wall_and_unknown",
+      "status": "PASS",
+      "checks": 12
+    },
+    {
+      "name": "4_live_safety_exit",
+      "status": "PASS",
+      "checks": 13
+    },
+    {
+      "name": "5_control_and_actual_confirmation",
+      "status": "PASS",
+      "checks": 5
+    },
+    {
+      "name": "6_deadlines_and_scope",
+      "status": "PASS",
+      "checks": 6
+    }
+  ],
+  "checks": [
+    {
+      "name": "confirmed_failed_stalled_departure_recovers",
+      "status": "PASS"
+    },
+    {
+      "name": "recovery_never_pulses",
+      "status": "PASS"
+    },
+    {
+      "name": "original_departure_window_still_62_steps",
+      "status": "PASS"
+    },
+    {
+      "name": "normal_departure_not_marked_failed",
+      "status": "PASS"
+    },
+    {
+      "name": "normal_departure_no_recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_not_failed",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_original_active",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_no_first_record",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_29_samples",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_already_32px_away",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_pending_request",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_no_pre_drop_evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_less_than_6_seconds",
+      "status": "PASS"
+    },
+    {
+      "name": "trigger_reject_wrong_inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "moving_trace_not_a_stall",
+      "status": "PASS"
+    },
+    {
+      "name": "SDK_rejection_not_first_drop_confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "unreliable_first_release_not_used_pending_fixed_flag",
+      "status": "PASS"
+    },
+    {
+      "name": "unreliable_first_release_not_used_record_marked_unlocalized",
+      "status": "PASS"
+    },
+    {
+      "name": "under_32px_can_recover",
+      "status": "PASS"
+    },
+    {
+      "name": "62_step_cap",
+      "status": "PASS"
+    },
+    {
+      "name": "absolute_start_not_extended",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_63",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_64",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_65",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_66",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_67",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_68",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_69",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_70",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_71",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_72",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_73",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_timeout_74",
+      "status": "PASS"
+    },
+    {
+      "name": "3_second_cap",
+      "status": "PASS"
+    },
+    {
+      "name": "20_step_no_progress_exit",
+      "status": "PASS"
+    },
+    {
+      "name": "no_restart_after_stall_exit",
+      "status": "PASS"
+    },
+    {
+      "name": "36px_reliable_separation_exits",
+      "status": "PASS"
+    },
+    {
+      "name": "separation_is_not_inventory_confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "missed_control_frame_exits",
+      "status": "PASS"
+    },
+    {
+      "name": "overlapping_own_bomb_recognized",
+      "status": "PASS"
+    },
+    {
+      "name": "own_bomb_no_longer_blocks_certified_tube",
+      "status": "PASS"
+    },
+    {
+      "name": "geometry_alone_cannot_remove_returns",
+      "status": "PASS"
+    },
+    {
+      "name": "unidentified_near_returns_still_block",
+      "status": "PASS"
+    },
+    {
+      "name": "masked_rays_without_prior_are_not_free",
+      "status": "PASS"
+    },
+    {
+      "name": "near_wall_in_prior_not_erased_by_bomb_filter",
+      "status": "PASS"
+    },
+    {
+      "name": "unsafe_initial_attempt_consumed_once",
+      "status": "PASS"
+    },
+    {
+      "name": "nearby_wall_ray_outside_bomb_surface_not_removed",
+      "status": "PASS"
+    },
+    {
+      "name": "live_wall_blocks_recovery_direction",
+      "status": "PASS"
+    },
+    {
+      "name": "other_bomb_stays_an_obstacle",
+      "status": "PASS"
+    },
+    {
+      "name": "ambiguous_shared_surface_not_ignored",
+      "status": "PASS"
+    },
+    {
+      "name": "all_missing_current_rays_cannot_use_old_scan_to_move",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_GPS_lost",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_odometry_only",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_nan_heading",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_GPS_jump",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_nan_odometry",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_odom_jump",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_pending",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_stock_disagreement",
+      "status": "PASS"
+    },
+    {
+      "name": "active_recheck_empty",
+      "status": "PASS"
+    },
+    {
+      "name": "new_wall_aborts_and_brakes_current_frame",
+      "status": "PASS"
+    },
+    {
+      "name": "new_drone_aborts_with_no_pulse",
+      "status": "PASS"
+    },
+    {
+      "name": "new_unknown_forward_sector_aborts",
+      "status": "PASS"
+    },
+    {
+      "name": "route_and_actual_drop_records_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "full_control_recovery_owns_command_before_fast_closeout",
+      "status": "PASS"
+    },
+    {
+      "name": "common_mapping_and_messenger_still_run",
+      "status": "PASS"
+    },
+    {
+      "name": "recovery_does_not_claim_completion_in_full_control",
+      "status": "PASS"
+    },
+    {
+      "name": "rejected_second_pulse_not_counted",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_stock_reduction_confirms_second",
+      "status": "PASS"
+    },
+    {
+      "name": "hard_wall_preempts_recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "hard_steps_preempts_recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "no_recovery_crosses_93pct_budget_start",
+      "status": "PASS"
+    },
+    {
+      "name": "hard_and_budget_constants_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "source_hashes_match_frozen_candidate",
+      "status": "PASS"
+    },
+    {
+      "name": "only_two_source_files_changed",
+      "status": "PASS"
+    }
+  ],
+  "candidate_zip_sha256": "6207ff8df49e435dc988119f98c130673da3dc123620ef4d20f39afc170c2a23",
+  "full_matches": 0,
+  "physics_steps": 0,
+  "SDK_rounds": 0,
+  "V16_remains_competition_baseline": true
+}

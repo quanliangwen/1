@@ -1,0 +1,13 @@
+[placement] drone=4 step=3249 inventory=0 position=(0.0,0.0)
+Traceback (most recent call last):
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_finish.py", line 330, in <module>
+    ('完整控制入口与兜底保留',control_integration)]:category(name,fn)
+                                                    ^^^^^^^^^^^^^^^^^
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_finish.py", line 37, in category
+    n=len(checks);fn();categories.append(dict(name=name,checks=len(checks)-n,status='PASS'))
+                  ^^^^
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_finish.py", line 320, in control_integration
+    result=d.control()
+           ^^^^^^^^^^^
+  File "<real_control_ast>", line 1104, in control
+AttributeError: 'types.SimpleNamespace' object has no attribute 'observe_recovery'

@@ -1,0 +1,24 @@
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+Traceback (most recent call last):
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 258, in <module>
+    category(label,fn)
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 25, in category
+    start=len(checks);fn();categories.append(dict(name=name,status='PASS',checks=len(checks)-start))
+                      ^^^^
+  File "/home/quanliangwen/team615_first_drop_recovery_once_20261122/verify_recovery.py", line 116, in bounded_cases
+    if i<62:assert took,(i,r.audit[-4:],d.pose.tolist())
+                   ^^^^
+AssertionError: (36, [(1063, 'departure_ended', 0.0), (1064, 'recovery_started'), (1064, 'recovery_path', 0.0, 36.0), (1099, 'recovery_obstacle_exit')], [12.2, 0.0])

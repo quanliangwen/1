@@ -1,0 +1,50 @@
+[placement] drone=4 step=3249 inventory=0 position=(0.0,0.0)
+{
+  "status": "PASS",
+  "categories": [
+    {
+      "name": "末弹适用范围与安全复核",
+      "checks": 34,
+      "status": "PASS"
+    },
+    {
+      "name": "刹停到点与实投确认",
+      "checks": 13,
+      "status": "PASS"
+    },
+    {
+      "name": "旧确认补齐与真实交接回执",
+      "checks": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "交互后提前交图与等待分离",
+      "checks": 18,
+      "status": "PASS"
+    },
+    {
+      "name": "选图竞价与共享时间槽",
+      "checks": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "一次返航重试及原安全路线",
+      "checks": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "完整控制入口与兜底保留",
+      "checks": 3,
+      "status": "PASS"
+    }
+  ],
+  "total_checks": 95,
+  "candidate_zip_sha256": "b93331188b2bcad079eebd9719acf3826f91a6ebc3e2fc2a3d9f3d2654e7d830",
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "numpy": "1.26.4",
+  "sdk_src": "/home/junhao/quan/parallel_test_solver/match/solver_study/framework_screen_20261016/best87_independent_20261025/P407_P398_semifinal_three_maps_20261110/official_sdk/src",
+  "full_matches": 0,
+  "physics_steps": 0,
+  "SDK_rounds": 0,
+  "V16_remains_competition_baseline": true
+}

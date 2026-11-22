@@ -1,0 +1,28 @@
+{
+  "interpreter": "/home/junhao/quan/parallel_test_solver/match/.venv/bin/python",
+  "python": "3.11.17",
+  "results": [
+    {
+      "script": "verify_recovery.py",
+      "exit_code": 0,
+      "log": "verify_recovery.py.attempt7.log"
+    },
+    {
+      "script": "verify_finish.py",
+      "exit_code": 0,
+      "log": "verify_finish.py.attempt4.log"
+    },
+    {
+      "script": "verify_budget_regression.py",
+      "exit_code": 0,
+      "log": "verify_budget_regression.py.attempt3.log"
+    },
+    {
+      "script": "verify_return50.py",
+      "exit_code": 0,
+      "log": "verify_return50.py.attempt3.log"
+    }
+  ],
+  "full_matches": 0,
+  "physics_steps": 0
+}

@@ -1,0 +1,84 @@
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1067 inventory=0 position=(40.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+[placement] drone=4 step=1001 inventory=1 position=(0.0,0.0)
+{
+  "status": "PASS",
+  "total_checks": 73,
+  "categories": [
+    {
+      "name": "1_trigger_and_normal_departure",
+      "status": "PASS",
+      "checks": 17
+    },
+    {
+      "name": "2_once_and_absolute_limits",
+      "status": "PASS",
+      "checks": 20
+    },
+    {
+      "name": "3_own_bomb_wall_and_unknown",
+      "status": "PASS",
+      "checks": 12
+    },
+    {
+      "name": "4_live_safety_exit",
+      "status": "PASS",
+      "checks": 13
+    },
+    {
+      "name": "5_control_and_actual_confirmation",
+      "status": "PASS",
+      "checks": 5
+    },
+    {
+      "name": "6_deadlines_and_scope",
+      "status": "PASS",
+      "checks": 6
+    }
+  ],
+  "candidate_zip_sha256": "66998e3a60513c4a717682d19bddb8e3939fdee631f6e1c168f99e17ef0bc276",
+  "full_matches": 0,
+  "physics_steps": 0,
+  "SDK_rounds": 0,
+  "V16_remains_competition_baseline": true
+}
