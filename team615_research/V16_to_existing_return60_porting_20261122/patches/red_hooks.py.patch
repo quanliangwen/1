@@ -1,0 +1,165 @@
+--- a/red_hooks.py
++++ b/red_hooks.py
+@@ -7,7 +7,7 @@
+ import numpy as np
+ 
+ from swarm_rescue.solutions.coverage_placement import CoveragePlacementDrone, marginal_coverage
+-from swarm_rescue.solutions.deadline_submission import DeadlineSubmission
++from swarm_rescue.solutions.deadline_submission import BudgetSubmission, DeadlineSubmission
+ from swarm_rescue.solutions.pre_submit_scan import PreSubmitScan
+ from swarm_rescue.solutions.partial_map_submit import provisional_map
+ from swarm_rescue.solutions.greedy_mapping import MapMemory
+@@ -126,6 +126,9 @@
+         self.last_eligible_bid_comparison = {}
+         self.submission_priority_audit = None
+         self.deadline_submission = DeadlineSubmission()
++        self.budget_submission = BudgetSubmission()
++        self.budget_submission_event = None
++        self.budget_submission_audit = []
+         self.pre_submit_scan = PreSubmitScan()
+         self.deadline_submission_event = None
+         self.map_quality = None
+@@ -623,6 +626,13 @@
+             return (step, score, True) if score is not None and self.previous_inventory == 0 and self.pending_drop is None else None
+         if self.map_quality is None or self.previous_inventory != 0 or self.pending_drop is not None:
+             return None
++        if self.budget_submission.active(step, self.limit):
++            reason, _, _ = self._budget_submission_gate(step)
++            if reason is None:
++                if self.budget_submission.score is None:
++                    self.budget_submission.score = self.final_maps.rank(self.map_quality)
++                return step, self.budget_submission.score, True
++            return step, self.final_maps.rank(self.map_quality), False
+         return step, self.final_maps.rank(self.map_quality), self.first_ready_to_submit_step is not None
+ 
+     def _prefer_own_submission(self, step):
+@@ -658,7 +668,7 @@
+         return (step - self.submission_wait_started >= 48 or self.limit - step <= 4
+                 or self.walltime_limit - self.elapsed_walltime <= 1.5)
+ 
+-    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23.):
++    def _placement_block(self, point, step, semantic, *, stationary, minimum_clearance=23., minimum_spacing=None):
+         if not self.grid.pose_fixed or not self.search_roaming.departed:
+             return "position"
+         cell = self.grid.cell(point)
+@@ -676,7 +686,7 @@
+                     return "disposal"
+         if self.home is not None and math.dist(point, self.home) < 120:
+             return "disposal"
+-        spacing = max(32., self._placement_spacing(step))
++        spacing = max(32., self._placement_spacing(step)) if minimum_spacing is None else max(32.,minimum_spacing)
+         if any(math.dist(point, bomb) < spacing for bomb in self._known_bomb_positions(semantic)):
+             return "spacing"
+         return None
+@@ -893,6 +903,67 @@
+             return None
+         return result
+ 
++    def _budget_submission_candidate(self):
++        # Read cached bytes only. No scan, fusion, fitting or forced refresh.
++        deadline = self.deadline_submission
++        candidates = [(self.group_best_image, 'group_cache')]
++        if deadline.backup_image is not None:
++            candidates.append(((deadline.backup_image, None, {}), 'backup_cache'))
++        if deadline.image is not None:
++            candidates.append(((deadline.image, deadline.cache, self.deadline_versions), 'deadline_cache'))
++        for candidate, source in candidates:
++            if candidate is not None and candidate[0] is not None and candidate[0].any():
++                return candidate, source
++        return None, None
++
++    def _budget_submission_gate(self, step):
++        budget = self.budget_submission
++        if not budget.active(step, self.limit):
++            return 'outside_window', (), ()
++        if (self.previous_inventory != 0 or self.pending_drop is not None
++                or int(self.carried_bombs_count()) != 0):
++            return 'local_stock_or_pending', (), ()
++        unknown, carrying = budget.stock_status(
++            step, int(self.identifier), self.team_size, self.inventory_records)
++        if carrying:
++            return 'fresh_peer_stock', unknown, carrying
++        if self.map_quality is None:
++            return 'no_estimate', unknown, ()
++        if self._budget_submission_candidate()[0] is None:
++            return 'no_cached_image', unknown, ()
++        return None, unknown, ()
++
++    def _try_budget_submission(self, step):
++        budget = self.budget_submission
++        if not budget.active(step, self.limit):
++            return False
++        reason, unknown, carrying = self._budget_submission_gate(step)
++        gate = reason, unknown, carrying
++        if gate != budget.last_gate:
++            self.budget_submission_audit.append((step, 'gate', reason, unknown, carrying))
++            budget.last_gate = gate
++        if reason is not None:
++            return False
++        if budget.score is None:
++            budget.score = self.final_maps.rank(self.map_quality)
++        own = budget.score, -int(self.identifier)
++        peers = budget.peer_ranks(step, self.limit, self.map_bids)
++        if not budget.submit_due(step, self.limit, own, peers):
++            return False
++        (image, cache, versions), source = self._budget_submission_candidate()
++        self.submit_exploration_map(image.astype(np.uint8, copy=False))
++        self.submitted_cache = cache
++        self.final_submission_versions = dict(versions)
++        self.submission_elected_rank = budget.score
++        self.red_submission_step = step
++        self.submitted = True
++        self.budget_submission_event = dict(
++            step=step, reason='step_budget', window=budget.window(self.limit),
++            local_inventory=self.previous_inventory, team_confirmed=self._all_inventory_empty(),
++            unconfirmed_peers=unknown, inventory_records=dict(self.inventory_records),
++            image_source=source, in_window_peer_estimates={-peer: score for score, peer in peers})
++        return True
++
+     def _force_deadline_submission(self, step):
+         deadline = self.deadline_submission
+         reason = deadline.fallback_reason(step, self.limit, self.elapsed_walltime, self.walltime_limit)
+@@ -965,6 +1036,8 @@
+         if before is not None and self.previous_inventory < before:
+             self.last_confirmed_drop_step = step
+         if self.submitted or self._force_deadline_submission(step):
++            return CoveragePlacementDrone._empty_command()
++        if self._try_budget_submission(step):
+             return CoveragePlacementDrone._empty_command()
+         command = super().control()
+         command["place_bomb"] = 0
+@@ -1059,6 +1132,9 @@
+             self.team_wall.reservation=None
+             self.placement.finish_request(self,step)
+             return command
++        if self.placement.complete_last(self,command,step,ranges,semantic):
++            self.local_escape.apply(self,command,step,ranges,semantic)
++            return command
+         if maneuvers.approach is not None:
+             self.placement.finish_request(self, step)
+             if maneuvers.advance(self.placement, self, command, step, ranges, semantic):
+@@ -1099,17 +1175,19 @@
+                     return command
+                 if not self._submission_window_open(step):
+                     return command
+-                if self.pre_submit_scan.waiting(self,step):
++                exchange_ready = (self.group_exchange is not None
++                                  and self.group_exchange.exchange_finish_ready(self,step))
++                if not exchange_ready and self.pre_submit_scan.waiting(self,step):
+                     self.pre_submit_scan.record_wait(self,step)
+                     return command
+                 self.pre_submit_scan.record_finish(self,step)
+-                if self.final_maps.waiting(step, DeadlineSubmission.window_start(self.limit),
+-                                           self.walltime_limit - self.elapsed_walltime):
++                if not exchange_ready and self.final_maps.waiting(step, DeadlineSubmission.window_start(self.limit),
++                                                                  self.walltime_limit - self.elapsed_walltime):
+                     return command
+                 if not self._prefer_own_submission(step):
+                     return command
+-                if provisional_map(step, self.map_quality, self.map_revision,
+-                                   self.walltime_limit-self.elapsed_walltime):
++                if not exchange_ready and provisional_map(step, self.map_quality, self.map_revision,
++                                                          self.walltime_limit-self.elapsed_walltime):
+                     return command
+                 image, cache, versions = self._submission_image(step)
+                 if image.any():

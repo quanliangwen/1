@@ -1,0 +1,13 @@
+--- a/placement_preferences.py
++++ b/placement_preferences.py
+@@ -176,6 +176,10 @@
+         drone.pending_drop=(count,drone.pose.copy(),step)
+         drone.last_attempt_step=step
+         self.audit.append((step,"request",reason,bool(drone.grid.pose_fixed),count))
++
++    def complete_last(self, drone, command, step, ranges, semantic):
++        self.finish_request(drone, step)
++        return drone.second_drop.complete_last(drone, step, command, ranges, semantic)
+ 
+     @staticmethod
+     def _first_drop_exit_clear(drone, ranges, semantic):

@@ -1,0 +1,10 @@
+{
+  "source_zip_sha256": "6207ff8df49e435dc988119f98c130673da3dc123620ef4d20f39afc170c2a23",
+  "target_zip_sha256": "c4b8513084ce114e6aae04b42489c995e73955ec545a64c5f9d999190004a562",
+  "changed_files": [
+    "drop_departure.py",
+    "group_exchange.py",
+    "red_hooks.py"
+  ],
+  "description": "Revert recovery-only first-departure additions and restore return60 start semantics; reference patch, not automatically applied"
+}

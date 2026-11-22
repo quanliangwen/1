@@ -1,0 +1,163 @@
+--- a/group_exchange.py
++++ b/group_exchange.py
+@@ -53,6 +53,10 @@
+         self.submission_ready=False
+         self.finish_refresh_step=None
+         self.ordinary_selection=False
++        self.peer_zero_receipts={}
++        self.confirmation_retry_used=False
++        self.aborted_step=None
++        self.early_finish_started=None
+ 
+     @property
+     def owns_navigation(self):
+@@ -86,12 +90,15 @@
+ 
+     def release(self, drone, phase):
+         self.phase=phase;self.releases+=1;self.role=None
++        if phase=='ABORT':self.aborted_step=int(drone.elapsed_timestep)
+         if self.original_messenger_state is not None and drone.messenger.state=='DONE':
+             drone.messenger.state=self.original_messenger_state
+ 
+     def prepare_return(self, drone, step):
+-        # Read-only with respect to all original controller/mission state.
+-        if self.phase!='OBSERVE' or step<self.start():return None
++        retry=(self.phase=='ABORT' and not self.confirmation_retry_used
++               and self.aborted_step is not None and step>=self.aborted_step+20
++               and not drone._all_inventory_empty())
++        if (self.phase!='OBSERVE' and not retry) or step<self.start():return None
+         if self.expired(drone,step):self.gate(step,'budget');return None
+         if drone.previous_inventory!=0 or drone.pending_drop is not None:
+             self.gate(step,'stock_or_pending');return None
+@@ -101,6 +108,11 @@
+             self.gate(step,'placement_escape');return None
+         if not self.plan.committed():self.gate(step,'no_shared_root');return None
+         if not self.plan.reachable_root():self.gate(step,'no_root_trail_gate');return None
++        if retry:
++            # A single preflight attempt, even if the original safety checks
++            # reject it. No new target, planner or repeated delivery loop.
++            self.confirmation_retry_used=True
++            self.audit.append((step,'confirmation_return_retry'))
+         group=self.plan.branch_group
+         target=self.plan.local_region if len(group)>1 else self.plan.root[1:]
+         index=self.plan.gate_index(target) if target is not None else None
+@@ -124,7 +136,7 @@
+         return ReturnIntent(point,tuple(map(tuple,route)),tuple(group),eta)
+ 
+     def commit_return(self, drone, intent, step):
+-        assert self.phase=='OBSERVE' and self.plan.committed()
++        assert (self.phase=='OBSERVE' or self.phase=='ABORT' and self.confirmation_retry_used) and self.plan.committed()
+         self.phase='RETURN_LOCAL';self.started_step=step
+         self.target,self.route,self.group=intent.target,list(intent.route),intent.group
+         drone.route=[];drone.search_task=None
+@@ -143,6 +155,19 @@
+                 or tuple(body.get('epoch',()))!=self.plan.epoch):return
+         ts=body.get('step')
+         if type(ts) is not int or not 0<=step-ts<=12:return
++        # The existing live inventory field is also an acknowledgement that
++        # this peer actually holds the origin's zero record. Never clear a
++        # positive/missing record, and never restamp an origin during relay.
++        zeros=set()
++        inventory=message.get('red_inventory',{})
++        if isinstance(inventory,dict):
++            for owner,record in inventory.items():
++                if (type(owner) is int and 0<=owner<self.team_size
++                        and isinstance(record,(tuple,list)) and len(record)==2
++                        and type(record[0]) is int and 0<=record[0]<=ts
++                        and type(record[1]) is int and record[1]==0):
++                    zeros.add(owner)
++        self.peer_zero_receipts[peer]=(step,frozenset(zeros))
+         have=set()
+         for row in body.get('receipts',()):
+             if isinstance(row,tuple) and len(row)==4 and row[0] in ('snapshot','image'):
+@@ -204,9 +229,10 @@
+         return body
+ 
+     def ordinary_submit_allowed(self, drone, step, path='ordinary'):
++        early=self.exchange_finish_ready(drone,step)
+         if not self.can_finish(drone,step):return False
+         if not self.in_submission_slot(drone,step):return False
+-        if (self.plan.committed() and self.start()<=step<self.cutoff()
++        if (not early and self.plan.committed() and self.start()<=step<self.cutoff()
+                 and not self.expired(drone,step)):return False
+         if (drone.previous_inventory!=0 or drone.pending_drop is not None
+                 or not drone._all_inventory_empty()):return False
+@@ -216,7 +242,7 @@
+     def yield_first_round(self, drone, step):
+         if (drone.walltime_limit-drone.elapsed_walltime<PreSubmitScan.MIN_WALLTIME_LEFT
+                 or step>=DeadlineSubmission.window_start(drone.limit)):return False
+-        start=self.finish_floor(drone)
++        start=self.early_finish_started if self.early_finish_started is not None else self.finish_floor(drone)
+         end=start+self.team_size*self.SUBMISSION_SLOT_STEPS
+         return (start<=step<end
+                 and len(drone.final_maps.snapshots)<self.MIN_FINAL_SNAPSHOTS)
+@@ -244,7 +270,50 @@
+     def can_finish(self, drone, step):
+         # Absolute existing 180+24-step allowance; no per-message timer.
+         return (step>=self.finish_floor(drone)
++                or self.early_finish_started is not None
++                and step>=self.early_finish_started+FinalMaps.COLLECTION_STEPS
++                and self._confirmed_empty(drone,step,range(self.team_size))
++                and drone.previous_inventory==0 and drone.pending_drop is None
++                and drone.carried_bombs_count()==0
+                 or drone.walltime_limit-drone.elapsed_walltime<PreSubmitScan.MIN_WALLTIME_LEFT)
++
++    @staticmethod
++    def _confirmed_empty(drone, step, owners):
++        return all(owner in drone.inventory_records
++                   and 0<=drone.inventory_records[owner][0]<=step
++                   and drone.inventory_records[owner][1]==0 for owner in owners)
++
++    def _exchange_acked(self, drone, step, owners, *, all_zero=False):
++        owners=set(owners)
++        if not self.complete(owners):return False
++        if not self._confirmed_empty(drone,step,owners):return False
++        if len(owners)==1 and not all_zero:return True
++        required=set(range(self.team_size)) if all_zero else owners
++        for peer,p in self.fresh(step).items():
++            if peer==self.owner or peer not in owners:continue
++            stamp,zeros=self.peer_zero_receipts.get(peer,(-100,frozenset()))
++            if not 0<=step-stamp<=12 or not required.issubset(zeros):continue
++            wanted={(kind,owner,item['version'],item['digest'])
++                    for kind,store in [('snapshot',self.candidates.snapshots),('image',self.candidates.images)]
++                    for owner,item in store.items() if owner in owners}
++            if wanted.issubset(p['have']):return True
++        return False
++
++    def exchange_finish_ready(self, drone, step):
++        if (step<self.start() or drone.previous_inventory!=0 or drone.pending_drop is not None
++                or drone.carried_bombs_count()!=0
++                or not self._confirmed_empty(drone,step,range(self.team_size))):return False
++        if self.early_finish_started is not None:return True
++        if self.candidates.best is None or drone.group_best_image is None:return False
++        if not drone.group_best_image[0].any():return False
++        # Require an actual two-way exchange, not a phase label, a manifest
++        # alone, or all five maps. Immutable payload receipts remain usable.
++        for peer in self.fresh(step):
++            if self._exchange_acked(drone,step,{self.owner,peer},all_zero=True):
++                self.early_finish_started=step
++                self.audit.append((step,'exchange_finish_ready',peer,FinalMaps.COLLECTION_STEPS))
++                return True
++        return False
+ 
+     def complete(self, group=None):
+         owners=set(range(self.team_size)) if group is None else set(group)
+@@ -271,7 +340,7 @@
+         if not self.owns_navigation:return False
+         self.candidates.build_local_image(drone,step)
+         if self.phase=='LOCAL_EXCHANGE':
+-            local_done=self.complete(self.group)
++            local_done=self._exchange_acked(drone,step,self.group)
+             leave_at=self.cutoff()-self.eta_root(drone)-40
+             if local_done or step>=leave_at:
+                 fresh=self.fresh(step)
+@@ -377,7 +446,8 @@
+         self.refresh_comparison(drone,step,score_fn)
+         if not drone._all_inventory_empty():return False
+         if not drone._submission_window_open(step):return False
+-        if provisional_map(step,drone.map_quality,drone.map_revision,
++        early=self.exchange_finish_ready(drone,step)
++        if not early and provisional_map(step,drone.map_quality,drone.map_revision,
+                            drone.walltime_limit-drone.elapsed_walltime):return False
+         if self.candidates.best is None or drone.group_best_image is None:return False
+         if not self.can_finish(drone,step):return False

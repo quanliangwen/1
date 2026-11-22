@@ -1,0 +1,194 @@
+{
+  "deadline_submission.py": [
+    {
+      "method": "BudgetSubmission.active",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 87
+    },
+    {
+      "method": "BudgetSubmission.peer_ranks",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 113
+    },
+    {
+      "method": "BudgetSubmission.stock_status",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 93
+    },
+    {
+      "method": "BudgetSubmission.submit_due",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 117
+    },
+    {
+      "method": "BudgetSubmission.window",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 82
+    }
+  ],
+  "group_exchange.py": [
+    {
+      "method": "GroupExchange.__init__",
+      "change": "CHANGED",
+      "V16_line": 26,
+      "return60_line": 26
+    },
+    {
+      "method": "GroupExchange._confirmed_empty",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 281
+    },
+    {
+      "method": "GroupExchange._exchange_acked",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 286
+    },
+    {
+      "method": "GroupExchange.can_finish",
+      "change": "CHANGED",
+      "V16_line": 244,
+      "return60_line": 270
+    },
+    {
+      "method": "GroupExchange.commit_return",
+      "change": "CHANGED",
+      "V16_line": 126,
+      "return60_line": 138
+    },
+    {
+      "method": "GroupExchange.exchange_finish_ready",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 302
+    },
+    {
+      "method": "GroupExchange.ordinary_submit_allowed",
+      "change": "CHANGED",
+      "V16_line": 206,
+      "return60_line": 231
+    },
+    {
+      "method": "GroupExchange.prepare_return",
+      "change": "CHANGED",
+      "V16_line": 92,
+      "return60_line": 97
+    },
+    {
+      "method": "GroupExchange.receive",
+      "change": "CHANGED",
+      "V16_line": 137,
+      "return60_line": 149
+    },
+    {
+      "method": "GroupExchange.release",
+      "change": "CHANGED",
+      "V16_line": 87,
+      "return60_line": 91
+    },
+    {
+      "method": "GroupExchange.tick_navigation",
+      "change": "CHANGED",
+      "V16_line": 270,
+      "return60_line": 339
+    },
+    {
+      "method": "GroupExchange.try_submit",
+      "change": "CHANGED",
+      "V16_line": 370,
+      "return60_line": 439
+    },
+    {
+      "method": "GroupExchange.yield_first_round",
+      "change": "CHANGED",
+      "V16_line": 216,
+      "return60_line": 242
+    }
+  ],
+  "line_regularization.py": [
+    {
+      "method": "regularized_walls",
+      "change": "CHANGED",
+      "V16_line": 34,
+      "return60_line": 34
+    }
+  ],
+  "placement_preferences.py": [
+    {
+      "method": "PlacementPreferences.complete_last",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 180
+    }
+  ],
+  "red_hooks.py": [
+    {
+      "method": "RedHooks.__init__",
+      "change": "CHANGED",
+      "V16_line": 74,
+      "return60_line": 74
+    },
+    {
+      "method": "RedHooks._budget_submission_candidate",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 906
+    },
+    {
+      "method": "RedHooks._budget_submission_gate",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 919
+    },
+    {
+      "method": "RedHooks._own_map_bid",
+      "change": "CHANGED",
+      "V16_line": 620,
+      "return60_line": 623
+    },
+    {
+      "method": "RedHooks._placement_block",
+      "change": "CHANGED",
+      "V16_line": 661,
+      "return60_line": 671
+    },
+    {
+      "method": "RedHooks._try_budget_submission",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 936
+    },
+    {
+      "method": "RedHooks.control",
+      "change": "CHANGED",
+      "V16_line": 961,
+      "return60_line": 1032
+    }
+  ],
+  "second_drop_site.py": [
+    {
+      "method": "SecondDropSite.__init__",
+      "change": "CHANGED",
+      "V16_line": 18,
+      "return60_line": 18
+    },
+    {
+      "method": "SecondDropSite.complete_last",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 72
+    },
+    {
+      "method": "SecondDropSite.completion_checks",
+      "change": "ADDED",
+      "V16_line": null,
+      "return60_line": 28
+    }
+  ]
+}

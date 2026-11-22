@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "same_return_ratio_60": true,
+  "changed_files": [
+    "deadline_submission.py",
+    "group_exchange.py",
+    "line_regularization.py",
+    "placement_preferences.py",
+    "red_hooks.py",
+    "second_drop_site.py"
+  ],
+  "unchanged_files": 50,
+  "DeadlineSubmission_AST_identical": true,
+  "hard_submission_methods_AST_identical": true,
+  "inventory_and_message_methods_AST_identical": true,
+  "first_departure_and_navigation_files_identical": true,
+  "candidate_and_V16_archives_unchanged": true,
+  "algorithm_changes": 0,
+  "new_matches": 0,
+  "destination_code_not_provided": true,
+  "validation": "Archive/AST/hash comparison and read-only preflight utility checks only; no target integration test"
+}

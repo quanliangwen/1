@@ -1,0 +1,583 @@
+{
+  "status": "PASS",
+  "read_only_examples": [
+    {
+      "directory": "E:\\codex\\team615_V16_to_existing_return60_porting_20261122\\preflight_V16_fixture",
+      "read_only": true,
+      "files_written": 0,
+      "classification": "EXACT_V16",
+      "files": [
+        {
+          "file": "bearing_core.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "blocked_prefix.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "boundary_anchor.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "branch_exit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "closeout_departure.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "coverage_placement.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "deadline_submission.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "deep_placement.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "drop_departure.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "egress_gate.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "escape_exit_route.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "exchange_plan.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "exploration_phase.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "fast_closeout.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "final_map_reconnect.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "final_map_relay.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "fine_wall_coverage.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "frontier_audit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "greedy_mapping.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "group_exchange.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "in_block_frontier.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "isolated_closeout.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "lbbd_dispatch.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "lbbd_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "line_regularization.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "loaded_progress.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_escape.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_exit_amnesty.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_wall_alignment.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "map_candidates.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "messenger_run.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "my_drone_eval.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "opening_pair.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "partial_map_submit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "passage_ledger.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_density.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_maneuvers.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_preferences.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "pre_submit_scan.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "red_hooks.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "req.txt",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "rescue_shared.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "rolling_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "scan_geometry.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "search_reconnect.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "search_roaming.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "second_drop_site.py",
+          "changed_by_migration": true,
+          "state": "EXACT_V16"
+        },
+        {
+          "file": "submission_renderer.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "submission_wall_fill.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "team_info.yml",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "team_wall.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_dispatch.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_exploration.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_paths.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "wall_view.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        }
+      ]
+    },
+    {
+      "directory": "E:\\codex\\team615_V16_to_existing_return60_porting_20261122\\delivery\\source60_reference",
+      "read_only": true,
+      "files_written": 0,
+      "classification": "EXACT_RETURN60",
+      "files": [
+        {
+          "file": "bearing_core.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "blocked_prefix.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "boundary_anchor.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "branch_exit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "closeout_departure.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "coverage_placement.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "deadline_submission.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "deep_placement.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "drop_departure.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "egress_gate.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "escape_exit_route.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "exchange_plan.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "exploration_phase.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "fast_closeout.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "final_map_reconnect.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "final_map_relay.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "fine_wall_coverage.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "frontier_audit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "greedy_mapping.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "group_exchange.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "in_block_frontier.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "isolated_closeout.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "lbbd_dispatch.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "lbbd_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "line_regularization.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "loaded_progress.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_escape.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_exit_amnesty.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "local_wall_alignment.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "map_candidates.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "messenger_run.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "my_drone_eval.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "opening_pair.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "partial_map_submit.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "passage_ledger.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_density.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_maneuvers.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "placement_preferences.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "pre_submit_scan.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "red_hooks.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "req.txt",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "rescue_shared.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "rolling_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "scan_geometry.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "search_reconnect.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "search_roaming.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "second_drop_site.py",
+          "changed_by_migration": true,
+          "state": "EXACT_RETURN60"
+        },
+        {
+          "file": "submission_renderer.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "submission_wall_fill.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "team_info.yml",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "team_wall.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_dispatch.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_exploration.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_paths.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "two_stage_rescue.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        },
+        {
+          "file": "wall_view.py",
+          "changed_by_migration": false,
+          "state": "UNCHANGED_SHARED"
+        }
+      ]
+    }
+  ],
+  "algorithm_executions": 0,
+  "simulations": 0
+}

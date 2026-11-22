@@ -1,0 +1,104 @@
+--- a/second_drop_site.py
++++ b/second_drop_site.py
+@@ -22,6 +22,101 @@
+         self.audit = []
+         self.backups = []
+         self.survey_coverage = None
++        self.completion_plan = None
++        self.completion_retry_at = 0
++
++    def completion_checks(self, drone, step, ranges, semantic, *, stationary):
++        """One validator for the current-point last-bomb completion branch."""
++        if step < drone.limit * 3 // 5:
++            return "early", None
++        if drone.carried_bombs_count() != 1 or drone.placement.last_drop_point is None:
++            return "unconfirmed_inventory", None
++        gate = self.gate(drone, step, ranges)
++        if gate:
++            return gate, None
++        point = drone.pose
++        if not drone._inside_team_point(point):
++            return "bounds", None
++        ranges = np.asarray(ranges, dtype=float)
++        angles = np.asarray(drone.lidar_rays_angles(), dtype=float)
++        odom = drone.odometer_values()
++        if (odom is None or len(odom) != 3 or not np.all(np.isfinite(odom))
++                or ranges.ndim != 1 or angles.shape != ranges.shape
++                or not np.all(np.isfinite(angles))
++                or np.count_nonzero(np.isfinite(ranges) & (ranges > 0.)) < 3):
++            return "sensor", None
++        block = drone._placement_block(point, step, semantic, stationary=stationary,
++                                       minimum_clearance=self.SITE_CLEARANCE,
++                                       minimum_spacing=32.)
++        if block:
++            return block, None
++        if not drone.placement._spaced_from_bombs(drone, semantic, False):
++            return "spacing", None
++        # Historical passage ownership is a preference here. Current narrow
++        # geometry and the existing physical exit test remain authoritative.
++        delta = np.subtract(drone.route[0], point)
++        direction = math.atan2(delta[1], delta[0]) - drone.heading
++        movable = drone.memory.semantic_mask(ranges, angles, semantic)
++        if drone.placement.deep.narrow(ranges, angles, direction, movable):
++            return "live_neck", None
++        if not drone.placement._first_drop_exit_clear(drone, ranges, semantic):
++            return "live_exit", None
++        gain, unweighted, support = drone.team_wall.query(drone, semantic, step)(point)
++        support = np.asarray(support, dtype=float)
++        if (not all(math.isfinite(float(v)) for v in (gain, unweighted))
++                or support.shape != (3,) or not np.all(np.isfinite(support))
++                or gain <= 1.e-6 or unweighted <= 0. or np.any(support < 0.) or support.sum() <= 0.):
++            return "no_gain", None
++        return None, (float(gain), float(unweighted), tuple(map(float, support)))
++
++    def complete_last(self, drone, step, command, ranges, semantic):
++        # This only brakes at a visited current point; it never installs or
++        # changes an exploration waypoint. Selection, braking and the pulse
++        # all use completion_checks with the same spacing/quality policy.
++        if (step < drone.limit*3//5 or drone.initial_inventory != 2
++                or drone.previous_inventory != 1 or drone.carried_bombs_count() != 1
++                or drone.pending_drop is not None or drone.placement.last_drop_point is None):
++            self.completion_plan = None
++            return False
++        if self.completion_plan is not None:
++            start, point = self.completion_plan
++            if step-start >= self.MAX_STEPS or math.dist(point, drone.pose) > self.ARRIVAL:
++                self.audit.append((step, "completion_expired", start))
++                self.completion_plan = None
++                self.completion_retry_at = step+10
++                return False
++        elif (step < self.completion_retry_at or step < drone.placement.next_request
++              or step-drone.last_attempt_step < 2
++              or step % (2*drone.team_size) != 2*drone.identifier):
++            return False
++        reason, evidence = self.completion_checks(drone, step, ranges, semantic, stationary=False)
++        if reason:
++            if self.completion_plan is not None or step >= drone.limit*3//5:
++                self.audit.append((step, "completion_rejected", reason))
++            self.completion_plan = None
++            self.completion_retry_at = step+10
++            return False
++        if self.completion_plan is None:
++            self.completion_plan = step, tuple(map(float, drone.pose))
++            self.clear(step, "completion_superseded")
++            drone.placement.maneuvers.approach = None
++            drone.team_wall.reservation = None
++            self.audit.append((step, "completion_started", self.completion_plan[1], evidence))
++        reason, evidence = self.completion_checks(drone, step, ranges, semantic, stationary=True)
++        if reason == "speed":
++            command.update(drone.drive(drone.pose, self._velocity_from_odometry(drone, drone.odometer_values())))
++            command.update(grasper=0, place_bomb=0)
++            return True
++        if reason:
++            self.audit.append((step, "completion_rejected", reason))
++            self.completion_plan = None
++            self.completion_retry_at = step+10
++            return False
++        self.audit.append((step, "completion_review", tuple(map(float, drone.pose)), evidence))
++        drone.placement.place(drone, command, step, "last_bomb_completion", 1)
++        self.completion_plan = None
++        self.completion_retry_at = step+10
++        return True
+ 
+     @staticmethod
+     def worthwhile(gain, current):

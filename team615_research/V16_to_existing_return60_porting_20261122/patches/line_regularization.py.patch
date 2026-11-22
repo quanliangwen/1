@@ -1,0 +1,37 @@
+--- a/line_regularization.py
++++ b/line_regularization.py
+@@ -68,6 +68,10 @@
+         return output
+     rows, cols = np.nonzero(hits >= 2)
+     points = np.column_stack((cols, rows)).astype(float)
++    # nonzero() is row-major: each image row occupies a contiguous point range.
++    row_offsets = np.empty(hits.shape[0] + 1, dtype=np.intp)
++    row_offsets[0] = 0
++    np.cumsum(np.bincount(rows, minlength=hits.shape[0]), out=row_offsets[1:])
+     weights = np.sqrt(np.minimum(hits[rows, cols].astype(float), 12))
+     accepted = []
+     for x1, y1, x2, y2 in np.asarray(proposals).reshape(-1, 4):
+@@ -80,10 +84,19 @@
+         # point order and exact dot products for every possible support point.
+         # The extra pixel absorbs floating arithmetic at the coarse bound.
+         margin=float(fit_band)+9.
+-        subset=np.flatnonzero((points[:,0]>=min(x1,x2)-margin) &
+-            (points[:,0]<=max(x1,x2)+margin) &
+-            (points[:,1]>=min(y1,y2)-margin) &
+-            (points[:,1]<=max(y1,y2)+margin))
++        lower_y, upper_y = min(y1,y2)-margin, max(y1,y2)+margin
++        if math.isfinite(lower_y) and math.isfinite(upper_y):
++            first_row = min(hits.shape[0], max(0, math.floor(lower_y)))
++            last_row = min(hits.shape[0], max(0, math.ceil(upper_y) + 1))
++            row_start, row_stop = row_offsets[first_row], row_offsets[last_row]
++        else:
++            # Preserve the original comparison semantics for nonfinite options.
++            row_start, row_stop = 0, len(points)
++        local_points = points[row_start:row_stop]
++        subset=row_start+np.flatnonzero((local_points[:,0]>=min(x1,x2)-margin) &
++            (local_points[:,0]<=max(x1,x2)+margin) &
++            (local_points[:,1]>=min(y1,y2)-margin) &
++            (local_points[:,1]<=max(y1,y2)+margin))
+         delta = points[subset]-start
+         along, across = delta @ tangent, delta @ normal
+         ids = subset[np.flatnonzero((np.abs(across) < fit_band) & (along > -8) & (along < length+8))]
