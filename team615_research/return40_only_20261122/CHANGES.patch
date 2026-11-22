@@ -1,0 +1,20 @@
+--- return60/group_exchange.py
++++ return40/group_exchange.py
+@@ -64,6 +64,8 @@
+ 
+     def start(self):return self.limit*3//5
+ 
++    def return_start(self):return self.limit*2//5
++
+     def cutoff(self):
+         return min(self.limit*85//100,DeadlineSubmission.window_start(self.limit)-12)
+ 
+@@ -98,7 +100,7 @@
+         retry=(self.phase=='ABORT' and not self.confirmation_retry_used
+                and self.aborted_step is not None and step>=self.aborted_step+20
+                and not drone._all_inventory_empty())
+-        if (self.phase!='OBSERVE' and not retry) or step<self.start():return None
++        if (self.phase!='OBSERVE' and not retry) or step<self.return_start():return None
+         if self.expired(drone,step):self.gate(step,'budget');return None
+         if drone.previous_inventory!=0 or drone.pending_drop is not None:
+             self.gate(step,'stock_or_pending');return None
