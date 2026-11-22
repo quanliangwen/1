@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/quanliangwen/isolated_test/team615_rowindex_budget93_20261122/verify_counterexamples.py", line 10, in <module>
+    swarm_rescue.solutions.__path__.insert(0,str(ROOT/'candidate'))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_NamespacePath' object has no attribute 'insert'
