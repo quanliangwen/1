@@ -1,0 +1,624 @@
+{
+  "status": "COMPLETE",
+  "maps": [
+    "Map05",
+    "Map07"
+  ],
+  "seed": 615,
+  "new_red_rounds": 2,
+  "other_maps": 0,
+  "baseline_reruns": 0,
+  "algorithm_changes": false,
+  "V16_remains_competition_baseline": true,
+  "results": {
+    "Map05": {
+      "status": "COMPLETE",
+      "map": "Map05",
+      "seed": 615,
+      "new_red_rounds": 1,
+      "algorithm_changes": false,
+      "V16_remains_competition_baseline": true,
+      "native_limits": {
+        "steps": 7200,
+        "wall_seconds": 240
+      },
+      "result": {
+        "score_out_of_80": 57.707981202918376,
+        "map_score": 93.12882437748243,
+        "wall_score": 50.78728951533022,
+        "time_score": 9.86111111111111,
+        "exploration_percent": 100.0,
+        "submission_drone": 1,
+        "submission_step": 6703,
+        "submission_walltime_seconds": 227.2943239212036,
+        "final_walltime_seconds": 227.42134809494019,
+        "steps": 6703,
+        "submitted_map": true,
+        "placed": 10,
+        "expected": 10,
+        "all_submissions": [
+          {
+            "drone": 1,
+            "step": 6703,
+            "walltime_seconds": 227.2943239212036,
+            "image_sha256": "e6cb0f68671cb5e7e9cf04274c3484db614737b6446729f3961e9590b12345ca"
+          },
+          {
+            "drone": 3,
+            "step": 6703,
+            "walltime_seconds": 227.2943239212036,
+            "image_sha256": "32a15502ea7208b9ddb5974b8a5e19a790adc905a989d350e10c2140e404f204"
+          }
+        ],
+        "submission_calls": 2,
+        "simultaneous_submission": true,
+        "ending_path": "budget",
+        "map_sha256": "e6cb0f68671cb5e7e9cf04274c3484db614737b6446729f3961e9590b12345ca",
+        "total_health_lost": 10,
+        "missed_wall_pixels": 337,
+        "charged_misdraw_pixels": 58973,
+        "resources": {
+          "cpu_busy_percent": {
+            "count": 232,
+            "minimum": 34.661572052401745,
+            "mean": 34.98151350597845,
+            "median": 34.98304829563918,
+            "p95": 35.115157173980705,
+            "maximum": 35.46953572681558
+          },
+          "load1": {
+            "count": 233,
+            "minimum": 92.81,
+            "mean": 98.04841201716738,
+            "median": 96.67,
+            "p95": 106.94,
+            "maximum": 109.75
+          },
+          "estimated_other_work_cpu_equivalents_in_pool": {
+            "count": 231,
+            "minimum": 0.0,
+            "mean": 2.010366284558345,
+            "median": 2.017294996202278,
+            "p95": 3.0403664077760126,
+            "maximum": 3.9872320249495443
+          },
+          "logical_cpus": [
+            117,
+            119,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126
+          ],
+          "samples": 233
+        },
+        "budget_window": [
+          6696,
+          6725
+        ],
+        "budget_window_entered": true,
+        "budget_event": {
+          "step": 6703,
+          "reason": "step_budget",
+          "window": [
+            6696,
+            6725
+          ],
+          "local_inventory": 0,
+          "team_confirmed": false,
+          "unconfirmed_peers": [
+            0
+          ],
+          "inventory_records": {
+            "1": [
+              6703,
+              0
+            ],
+            "0": [
+              6183,
+              1
+            ],
+            "2": [
+              6700,
+              0
+            ],
+            "3": [
+              6698,
+              0
+            ],
+            "4": [
+              6700,
+              0
+            ]
+          },
+          "image_source": "group_cache",
+          "in_window_peer_estimates": {
+            "2": 7882,
+            "4": 7882
+          }
+        },
+        "budget_events": {
+          "0": null,
+          "1": {
+            "step": 6703,
+            "reason": "step_budget",
+            "window": [
+              6696,
+              6725
+            ],
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "unconfirmed_peers": [
+              0
+            ],
+            "inventory_records": {
+              "1": [
+                6703,
+                0
+              ],
+              "0": [
+                6183,
+                1
+              ],
+              "2": [
+                6700,
+                0
+              ],
+              "3": [
+                6698,
+                0
+              ],
+              "4": [
+                6700,
+                0
+              ]
+            },
+            "image_source": "group_cache",
+            "in_window_peer_estimates": {
+              "2": 7882,
+              "4": 7882
+            }
+          },
+          "2": null,
+          "3": {
+            "step": 6703,
+            "reason": "step_budget",
+            "window": [
+              6696,
+              6725
+            ],
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "unconfirmed_peers": [
+              0
+            ],
+            "inventory_records": {
+              "3": [
+                6703,
+                0
+              ],
+              "0": [
+                6183,
+                1
+              ],
+              "1": [
+                6698,
+                0
+              ],
+              "2": [
+                6698,
+                0
+              ],
+              "4": [
+                6700,
+                0
+              ]
+            },
+            "image_source": "group_cache",
+            "in_window_peer_estimates": {
+              "4": 7882
+            }
+          },
+          "4": null
+        },
+        "budget_audits": {
+          "0": [
+            [
+              6696,
+              "gate",
+              null,
+              [
+                4
+              ],
+              []
+            ]
+          ],
+          "1": [
+            [
+              6696,
+              "gate",
+              null,
+              [
+                0
+              ],
+              []
+            ]
+          ],
+          "2": [
+            [
+              6696,
+              "gate",
+              null,
+              [
+                0
+              ],
+              []
+            ]
+          ],
+          "3": [
+            [
+              6696,
+              "gate",
+              null,
+              [
+                0
+              ],
+              []
+            ]
+          ],
+          "4": [
+            [
+              6696,
+              "gate",
+              null,
+              [
+                0
+              ],
+              []
+            ]
+          ]
+        },
+        "hard_events": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        },
+        "last_confirmations": {
+          "0": 6425,
+          "1": 2113,
+          "2": 3315,
+          "3": 3008,
+          "4": 6541
+        },
+        "actual_final_inventory": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "ordinary_first_ready": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        },
+        "selected_cache": {
+          "owner": 5,
+          "version": 6436,
+          "digest": "b2716604f293e2beb45c8a39add981f324a40ca757064f4d520821d3e1770312",
+          "precision": 0.9743368228478504,
+          "recall": 0.9736020806241873,
+          "score": 0.9739693131674697
+        },
+        "cumulative_time_at_steps": {
+          "1001": 21.51264476776123,
+          "2001": 47.44935393333435,
+          "3001": 79.7450499534607,
+          "4001": 113.24270677566528,
+          "5001": 158.4678647518158,
+          "6001": 200.26235818862915,
+          "6696": 227.15701389312744,
+          "6703": 227.30551671981812
+        }
+      }
+    },
+    "Map07": {
+      "status": "COMPLETE",
+      "map": "Map07",
+      "seed": 615,
+      "new_red_rounds": 1,
+      "algorithm_changes": false,
+      "V16_remains_competition_baseline": true,
+      "native_limits": {
+        "steps": 5400,
+        "wall_seconds": 180
+      },
+      "result": {
+        "score_out_of_80": 53.48240231425732,
+        "map_score": 87.52309991712251,
+        "wall_score": 43.789446963665526,
+        "time_score": 9.62962962962963,
+        "exploration_percent": 99.94289823715978,
+        "submission_drone": 2,
+        "submission_step": 5036,
+        "submission_walltime_seconds": 154.92448091506958,
+        "final_walltime_seconds": 155.02525091171265,
+        "steps": 5036,
+        "submitted_map": true,
+        "placed": 9,
+        "expected": 10,
+        "all_submissions": [
+          {
+            "drone": 2,
+            "step": 5036,
+            "walltime_seconds": 154.92448091506958,
+            "image_sha256": "9d453edc70e9a5f0f7c32255738d8d984e61221ab9fe219c5dcf6419b71c4d22"
+          }
+        ],
+        "submission_calls": 1,
+        "simultaneous_submission": false,
+        "ending_path": "budget",
+        "map_sha256": "9d453edc70e9a5f0f7c32255738d8d984e61221ab9fe219c5dcf6419b71c4d22",
+        "total_health_lost": 0,
+        "missed_wall_pixels": 9977,
+        "charged_misdraw_pixels": 17858,
+        "resources": {
+          "cpu_busy_percent": {
+            "count": 161,
+            "minimum": 34.727527870897326,
+            "mean": 35.098408969909755,
+            "median": 35.04073597629907,
+            "p95": 35.84167709637046,
+            "maximum": 36.124383175374014
+          },
+          "load1": {
+            "count": 162,
+            "minimum": 95.18,
+            "mean": 101.34783950617285,
+            "median": 101.78,
+            "p95": 108.29,
+            "maximum": 109.88
+          },
+          "estimated_other_work_cpu_equivalents_in_pool": {
+            "count": 160,
+            "minimum": 0.0,
+            "mean": 0.11097384384827953,
+            "median": 0.02776799365337379,
+            "p95": 1.0385459200274534,
+            "maximum": 1.1922519568768892
+          },
+          "logical_cpus": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            61,
+            62,
+            63
+          ],
+          "samples": 162
+        },
+        "budget_window": [
+          5022,
+          5051
+        ],
+        "budget_window_entered": true,
+        "budget_event": {
+          "step": 5036,
+          "reason": "step_budget",
+          "window": [
+            5022,
+            5051
+          ],
+          "local_inventory": 0,
+          "team_confirmed": false,
+          "unconfirmed_peers": [
+            4
+          ],
+          "inventory_records": {
+            "2": [
+              5036,
+              0
+            ],
+            "0": [
+              2309,
+              0
+            ],
+            "1": [
+              4407,
+              0
+            ],
+            "3": [
+              5033,
+              0
+            ],
+            "4": [
+              1915,
+              1
+            ]
+          },
+          "image_source": "group_cache",
+          "in_window_peer_estimates": {
+            "3": 4577
+          }
+        },
+        "budget_events": {
+          "0": null,
+          "1": null,
+          "2": {
+            "step": 5036,
+            "reason": "step_budget",
+            "window": [
+              5022,
+              5051
+            ],
+            "local_inventory": 0,
+            "team_confirmed": false,
+            "unconfirmed_peers": [
+              4
+            ],
+            "inventory_records": {
+              "2": [
+                5036,
+                0
+              ],
+              "0": [
+                2309,
+                0
+              ],
+              "1": [
+                4407,
+                0
+              ],
+              "3": [
+                5033,
+                0
+              ],
+              "4": [
+                1915,
+                1
+              ]
+            },
+            "image_source": "group_cache",
+            "in_window_peer_estimates": {
+              "3": 4577
+            }
+          },
+          "3": null,
+          "4": null
+        },
+        "budget_audits": {
+          "0": [
+            [
+              5022,
+              "gate",
+              "fresh_peer_stock",
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                4
+              ]
+            ]
+          ],
+          "1": [
+            [
+              5022,
+              "gate",
+              null,
+              [
+                4
+              ],
+              []
+            ]
+          ],
+          "2": [
+            [
+              5022,
+              "gate",
+              null,
+              [
+                4
+              ],
+              []
+            ]
+          ],
+          "3": [
+            [
+              5022,
+              "gate",
+              null,
+              [
+                4
+              ],
+              []
+            ]
+          ],
+          "4": [
+            [
+              5022,
+              "gate",
+              "local_stock_or_pending",
+              [],
+              []
+            ]
+          ]
+        },
+        "hard_events": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        },
+        "last_confirmations": {
+          "0": 1641,
+          "1": 2383,
+          "2": 2055,
+          "3": 2147,
+          "4": 1356
+        },
+        "actual_final_inventory": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1
+        },
+        "ordinary_first_ready": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null
+        },
+        "selected_cache": {
+          "owner": 5,
+          "version": 4952,
+          "digest": "97139834b95c1bd03e07dc412adda87a9a64b0fd81225ed9e8f8e5b2517f5d1a",
+          "precision": 0.9284961925647092,
+          "recall": 0.9802912030116814,
+          "score": 0.9536909681092852
+        },
+        "cumulative_time_at_steps": {
+          "1001": 23.47191858291626,
+          "2001": 52.920984506607056,
+          "3001": 82.67442059516907,
+          "4001": 116.97588777542114,
+          "5001": 153.86069869995117,
+          "5036": 154.94543027877808
+        }
+      },
+      "observed_risk": {
+        "budget_ended_with_unplaced_bomb": true,
+        "drone_still_carrying": 4,
+        "actual_remaining_inventory": 1,
+        "health": 25,
+        "submitter": 2,
+        "submitter_peer4_record": [
+          1915,
+          1
+        ],
+        "drone_zero_peer4_record": [
+          5034,
+          1
+        ],
+        "submitter_treated_peer4_as_unknown": true,
+        "drone_zero_vetoed_by_recent_stock": true,
+        "drone_four_closeout_audit": [],
+        "submission_walltime": 154.92448091506958,
+        "original_25_second_closeout_time_gate": 155.0,
+        "counterfactual_later_success_not_tested": true
+      }
+    }
+  }
+}
