@@ -1,0 +1,42 @@
+--- V16/bearing_core.py
++++ candidate/bearing_core.py
+@@ -28,21 +28,29 @@
+     ids = rows[valid] * w + cols[valid]
+     sectors = np.floor(np.mod(theta[valid], 2 * math.pi) * (4 / math.pi)).astype(np.int32)
+     bits = np.left_shift(np.uint8(1), sectors.astype(np.uint8)).astype(np.uint8)
+-    result = np.zeros(h * w, np.uint8)
+-    np.bitwise_or.at(result, ids, bits)
+-    nonzero = np.flatnonzero(result)
+-    return nonzero.astype(np.int32), result[nonzero]
++    # Only touched cells are needed; unique() preserves the original ascending IDs.
++    nonzero, inverse = np.unique(ids, return_inverse=True)
++    result = np.zeros(nonzero.size, np.uint8)
++    np.bitwise_or.at(result, inverse, bits)
++    keep_nonzero = result != 0
++    return nonzero[keep_nonzero].astype(np.int32), result[keep_nonzero]
++
++
++# The unchanged sector-pair rule has only 256 possible uint8 inputs.
++_INDEPENDENT_INCIDENCE = np.array([
++    any((value & (1 << first)) and (value & (1 << second))
++        for first in range(8) for second in range(first + 1, 8)
++        if min(second - first, 8 - (second - first)) >= 2)
++    for value in range(256)
++], dtype=bool)
++_INDEPENDENT_INCIDENCE.flags.writeable = False
+ 
+ 
+ def independent_incidence(bits):
+     """Two populated 45 degree bins separated by at least one empty bin."""
+     b = np.asarray(bits, np.uint8)
+-    result = np.zeros(b.shape, bool)
+-    for first in range(8):
+-        for second in range(first + 1, 8):
+-            if min(second - first, 8 - (second - first)) >= 2:
+-                result |= ((b & (1 << first)) != 0) & ((b & (1 << second)) != 0)
+-    return result
++    # asarray keeps the original zero-dimensional ndarray return for scalar input.
++    return np.asarray(_INDEPENDENT_INCIDENCE[b], dtype=bool)
+ 
+ 
+ def fine_any_to_four(mask, shape):

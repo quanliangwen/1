@@ -1,0 +1,115 @@
+EQUIVALENCE PASS 2958 checks
+[
+  {
+    "name": "Map06_181_mixed",
+    "old_median_us": 298.56395000000003,
+    "new_median_us": 97.14288124999999,
+    "speedup": 3.0734516637574005,
+    "reduction_percent": 67.46329178388751
+  },
+  {
+    "name": "Map06_181_duplicate",
+    "old_median_us": 296.17247744360907,
+    "new_median_us": 95.7056992481203,
+    "speedup": 3.0946169326423476,
+    "reduction_percent": 67.6858227765804
+  },
+  {
+    "name": "Map06_360_mixed",
+    "old_median_us": 309.81278125,
+    "new_median_us": 111.724640625,
+    "speedup": 2.773003157735599,
+    "reduction_percent": 63.93801437945032
+  },
+  {
+    "name": "Map06_360_duplicate",
+    "old_median_us": 305.22505384615386,
+    "new_median_us": 107.45034615384617,
+    "speedup": 2.840614895824869,
+    "reduction_percent": 64.79635442770513
+  },
+  {
+    "name": "Map08_181_mixed",
+    "old_median_us": 298.4841917293233,
+    "new_median_us": 97.48851879699248,
+    "speedup": 3.061736863095427,
+    "reduction_percent": 67.33880001075609
+  },
+  {
+    "name": "Map08_181_duplicate",
+    "old_median_us": 295.21362222222217,
+    "new_median_us": 95.45725185185185,
+    "speedup": 3.0926264531519205,
+    "reduction_percent": 67.66502469184962
+  },
+  {
+    "name": "Map08_360_mixed",
+    "old_median_us": 309.61425390625,
+    "new_median_us": 111.58565234375,
+    "speedup": 2.7746779931209655,
+    "reduction_percent": 63.95978191057776
+  },
+  {
+    "name": "Map08_360_duplicate",
+    "old_median_us": 304.4515465116279,
+    "new_median_us": 107.2732519379845,
+    "speedup": 2.838093756005772,
+    "reduction_percent": 64.76508227101831
+  },
+  {
+    "name": "Map09_181_mixed",
+    "old_median_us": 298.56265413533833,
+    "new_median_us": 97.28862406015037,
+    "speedup": 3.0688341727471324,
+    "reduction_percent": 67.41433574741419
+  },
+  {
+    "name": "Map09_181_duplicate",
+    "old_median_us": 295.6514813432836,
+    "new_median_us": 95.68113432835821,
+    "speedup": 3.089966307555132,
+    "reduction_percent": 67.63718757855233
+  },
+  {
+    "name": "Map09_360_mixed",
+    "old_median_us": 309.850703125,
+    "new_median_us": 111.5770546875,
+    "speedup": 2.7770109543831922,
+    "reduction_percent": 63.99005922459128
+  },
+  {
+    "name": "Map09_360_duplicate",
+    "old_median_us": 304.9885775193799,
+    "new_median_us": 107.30135658914728,
+    "speedup": 2.8423552806249157,
+    "reduction_percent": 64.81790975193849
+  },
+  {
+    "name": "Map06_actual_drone0",
+    "old_median_us": 887.643875,
+    "new_median_us": 216.5331590909091,
+    "speedup": 4.099343854431701,
+    "reduction_percent": 75.6058521678067
+  },
+  {
+    "name": "Map08_actual_drone0",
+    "old_median_us": 884.5755888888889,
+    "new_median_us": 214.87487777777778,
+    "speedup": 4.116700835561201,
+    "reduction_percent": 75.70870364536273
+  },
+  {
+    "name": "Map09_actual_drone0",
+    "old_median_us": 888.6818522727273,
+    "new_median_us": 215.31425000000002,
+    "speedup": 4.127371283009495,
+    "reduction_percent": 75.77150366586733
+  },
+  {
+    "name": "scalar",
+    "old_median_us": 99.92143702770781,
+    "new_median_us": 0.8023891687657431,
+    "speedup": 124.52989262231654,
+    "reduction_percent": 99.19697995481866
+  }
+]
