@@ -1,0 +1,46 @@
+The team 'AAA排雷大队' n°615, with 权亮闻、张铮宇、余嘉宁、杨颜翠
+Default team mode: place
+Evaluation Plan (from file: place_map09.yml):
+==================================================
+Config ID: 1
+  Map: Map07
+  Zones: no_com_zone, no_gps_zone
+  Number of Rounds: 1
+  Weight: 1
+  Team mode (scenario): place
+  Number of drones (scenario): 5
+--------------------------------------------------
+Default team mode: place
+Time score: full marks at or before 30% of the timestep limit
+--------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+* Map: Map07, mode: place, special zones: no_com_zone, no_gps_zone, round: 1/1
+[placement] drone=3 step=1217 inventory=1 position=(638.5,78.9)
+[placement] drone=1 step=1223 inventory=1 position=(-70.9,-79.7)
+[placement] drone=4 step=1356 inventory=1 position=(775.9,130.8)
+[placement] drone=0 step=1481 inventory=1 position=(581.9,-324.7)
+[placement] drone=0 step=1641 inventory=0 position=(301.2,-270.7)
+[placement] drone=2 step=1685 inventory=1 position=(191.5,203.1)
+[placement] drone=2 step=2055 inventory=0 position=(4.2,213.6)
+[placement] drone=3 step=2147 inventory=0 position=(-334.4,441.9)
+[placement] drone=1 step=2383 inventory=0 position=(293.3,27.5)
+
+State recording: 5039 frames, 5 drones, 9 bombs -> /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/recordings/team615_Map07_no_com_zone__no_gps_zone_rd1.npz
+count_reachable v3 = 1626920
+		bombs file written: /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/team615_Map07_no_com_zone__no_gps_zone_rd1_bombs.json
+		exploration map file written: /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/team615_Map07_no_com_zone__no_gps_zone_rd1_exploration.json
+		exploration diff image written: /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/team615_Map07_no_com_zone__no_gps_zone_rd1_exploration_diff.png
+		wall destruction image written: /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/team615_Map07_no_com_zone__no_gps_zone_rd1_wall_destruction.png
+	* Round n°1/1 (place mode): 
+		bombs placed: 9/10, inventory remaining: 1, map score: 44.9%, wall score: 43.8%, time score: 9.5%, bomb score: pending, partial round score: 32.2% (max 80.0%), trajectory explor.: 76.5%, walltime elapsed: 143s/180s, elapse timestep: 5040/5400 steps.
+		score breakdown (competition weights): map 44.9 x 50% = 22.5, bomb pending x 20% = n/a, wall 43.8 x 20% = 8.8, time 9.5 x 10% = 1.0, total 32.2/80.0.
+		percentage of drones destroyed: 0.0 %, mean percentage of drones health : 98.4 %.
+		bombs file: /home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s/team615_Map07_no_com_zone__no_gps_zone_rd1_bombs.json
+--------------------------------------------------------------------------------------------
+* Red team (place) aggregation — the competition takes the best round:
+	rounds: 1, best partial round score: 32.2% (Map07, round 1, max possible 80.0%), mean: 32.2%.
+	the bomb-difficulty term (20% of the final score) needs reference blue-team runs against this bomb layout and cannot be produced by a local run, so the competition score for these rounds lies in [32.2, 52.2] under the same best-round rule.
+--------------------------------------------------------------------------------------------
+/home/quanliangwen/isolated_test/team615_recovery_once_Map07_seed615_20261122/Map07/official_sdk/results_swarm_rescue/team615_261122_16h44min50s

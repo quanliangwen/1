@@ -1,0 +1,126 @@
+{
+  "utc": "2026-11-22T07:08:22.098893+00:00",
+  "physical_cores": 8,
+  "logical_cpus": [
+    123,
+    125,
+    126,
+    127,
+    248,
+    249,
+    250,
+    252
+  ],
+  "sibling_cpus_monitored": [
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255
+  ],
+  "socket": 1,
+  "core_topology": [
+    {
+      "socket": 1,
+      "core": 63,
+      "siblings": [
+        127,
+        255
+      ],
+      "assigned_cpu": 127
+    },
+    {
+      "socket": 1,
+      "core": 62,
+      "siblings": [
+        126,
+        254
+      ],
+      "assigned_cpu": 126
+    },
+    {
+      "socket": 1,
+      "core": 61,
+      "siblings": [
+        125,
+        253
+      ],
+      "assigned_cpu": 125
+    },
+    {
+      "socket": 1,
+      "core": 60,
+      "siblings": [
+        124,
+        252
+      ],
+      "assigned_cpu": 252
+    },
+    {
+      "socket": 1,
+      "core": 59,
+      "siblings": [
+        123,
+        251
+      ],
+      "assigned_cpu": 123
+    },
+    {
+      "socket": 1,
+      "core": 58,
+      "siblings": [
+        122,
+        250
+      ],
+      "assigned_cpu": 250
+    },
+    {
+      "socket": 1,
+      "core": 57,
+      "siblings": [
+        121,
+        249
+      ],
+      "assigned_cpu": 249
+    },
+    {
+      "socket": 1,
+      "core": 56,
+      "siblings": [
+        120,
+        248
+      ],
+      "assigned_cpu": 248
+    }
+  ],
+  "maximum_preselection_busy_percent": {
+    "120": 100.0,
+    "121": 100.0,
+    "122": 3.076923076923077,
+    "123": 0.0,
+    "124": 100.0,
+    "125": 0.0,
+    "126": 0.0,
+    "127": 0.0,
+    "248": 0.0,
+    "249": 0.0,
+    "250": 1.0,
+    "251": 0.0,
+    "252": 0.0,
+    "253": 0.4975124378109453,
+    "254": 100.0,
+    "255": 0.5
+  },
+  "note": "Exactly 8 idle assigned logical CPUs from 8 distinct physical cores; SMT sibling threads may be busy. Affinity is not exclusive. Historical reference load differs."
+}

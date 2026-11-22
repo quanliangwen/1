@@ -1,0 +1,126 @@
+{
+  "utc": "2026-11-22T08:05:07.717422+00:00",
+  "physical_cores": 8,
+  "logical_cpus": [
+    58,
+    59,
+    60,
+    184,
+    185,
+    189,
+    190,
+    191
+  ],
+  "sibling_cpus_monitored": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191
+  ],
+  "socket": 0,
+  "core_topology": [
+    {
+      "socket": 0,
+      "core": 63,
+      "siblings": [
+        63,
+        191
+      ],
+      "assigned_cpu": 191
+    },
+    {
+      "socket": 0,
+      "core": 62,
+      "siblings": [
+        62,
+        190
+      ],
+      "assigned_cpu": 190
+    },
+    {
+      "socket": 0,
+      "core": 61,
+      "siblings": [
+        61,
+        189
+      ],
+      "assigned_cpu": 189
+    },
+    {
+      "socket": 0,
+      "core": 60,
+      "siblings": [
+        60,
+        188
+      ],
+      "assigned_cpu": 60
+    },
+    {
+      "socket": 0,
+      "core": 59,
+      "siblings": [
+        59,
+        187
+      ],
+      "assigned_cpu": 59
+    },
+    {
+      "socket": 0,
+      "core": 58,
+      "siblings": [
+        58,
+        186
+      ],
+      "assigned_cpu": 58
+    },
+    {
+      "socket": 0,
+      "core": 57,
+      "siblings": [
+        57,
+        185
+      ],
+      "assigned_cpu": 185
+    },
+    {
+      "socket": 0,
+      "core": 56,
+      "siblings": [
+        56,
+        184
+      ],
+      "assigned_cpu": 184
+    }
+  ],
+  "maximum_preselection_busy_percent": {
+    "56": 100.0,
+    "57": 100.0,
+    "58": 0.0,
+    "59": 0.0,
+    "60": 0.0,
+    "61": 0.5,
+    "62": 100.0,
+    "63": 0.5025125628140703,
+    "184": 0.0,
+    "185": 0.0,
+    "186": 0.0,
+    "187": 0.0,
+    "188": 100.0,
+    "189": 0.0,
+    "190": 0.0,
+    "191": 0.0
+  },
+  "note": "Exactly 8 idle assigned logical CPUs from 8 distinct physical cores; SMT sibling threads may be busy. Affinity is not exclusive. Historical reference load differs."
+}

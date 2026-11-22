@@ -1,0 +1,23 @@
+{
+  "mode": "8_ASSIGNED_CPU_MAP_TEST",
+  "global_load_is_admission_gate": false,
+  "logical_cpus": [
+    121,
+    122,
+    123,
+    124,
+    126,
+    127,
+    248,
+    253
+  ],
+  "physical_cores": 8,
+  "selection_idle_cpu_max_percent": 5,
+  "selection_samples": 3,
+  "selection_interval_seconds": 2,
+  "run_sample_seconds": 1,
+  "sibling_cpu_idle_required": false,
+  "lock": "/home/junhao/quan/parallel_test_solver/match/solver_study/serial_evaluation.lock",
+  "monitor_sha256": "2bde8028a80c344a6a31f2b04dff15894ce7590ad0cef741cd2ad9710e8e6d6b",
+  "retry": false
+}

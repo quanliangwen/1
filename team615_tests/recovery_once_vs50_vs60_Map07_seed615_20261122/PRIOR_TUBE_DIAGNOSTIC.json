@@ -1,0 +1,183 @@
+{
+  "step": 1418,
+  "scan_step": 1355,
+  "analysis": "Pure _prior_free on captured pre-drop scan and position. Heading zero encodes world directions, not an assumed compass reading; live validity proof checks every angular membership-change boundary and interval midpoint and is independent of actual heading.",
+  "rows": [
+    {
+      "turn": 0,
+      "world_direction": -1.6883209497857758,
+      "goal": [
+        770.8531594470841,
+        88.28132240424982
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 1,
+      "world_direction": -1.2956218680870517,
+      "goal": [
+        784.8560471780792,
+        89.38739063175281
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": -1,
+      "world_direction": -2.0810200314845,
+      "goal": [
+        757.4929040906335,
+        92.61812174721898
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 2,
+      "world_direction": -0.9029227863883276,
+      "goal": [
+        797.3697545630681,
+        95.76793756862406
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -2,
+      "world_direction": -2.473719113183224,
+      "goal": [
+        746.8092588757306,
+        101.73755027387718
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 3,
+      "world_direction": -0.5102237046896034,
+      "goal": [
+        806.4891830897263,
+        106.45158278352696
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -3,
+      "world_direction": -2.8664181948819483,
+      "goal": [
+        740.4287119388594,
+        114.25125765886614
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 4,
+      "world_direction": -0.11752462299087929,
+      "goal": [
+        810.8259824326955,
+        119.81183813997755
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -4,
+      "world_direction": -3.2591172765806724,
+      "goal": [
+        739.3226437113564,
+        128.25414538986124
+      ],
+      "minimum_separation_met": true,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 5,
+      "world_direction": 0.27517445870784485,
+      "goal": [
+        809.7199142051925,
+        133.81472587097267
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -5,
+      "world_direction": -3.6518163582793965,
+      "goal": [
+        743.6594430543255,
+        141.61440074631184
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 6,
+      "world_direction": 0.667873540406569,
+      "goal": [
+        803.3393672683212,
+        146.3284332559616
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -6,
+      "world_direction": -4.04451543997812,
+      "goal": [
+        752.7788715809837,
+        152.2980459612147
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 7,
+      "world_direction": 1.0605726221052931,
+      "goal": [
+        792.6557220534183,
+        155.44786178261984
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": false
+    },
+    {
+      "turn": -7,
+      "world_direction": -4.437214521676845,
+      "goal": [
+        765.2925789659727,
+        158.67859289808598
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": true
+    },
+    {
+      "turn": 8,
+      "world_direction": 1.4532717038040173,
+      "goal": [
+        779.2954666969678,
+        159.78466112558897
+      ],
+      "minimum_separation_met": false,
+      "pre_drop_tube_free": true
+    }
+  ],
+  "prior_and_separation_passes": 6,
+  "current_rays": {
+    "total": 181,
+    "positive_finite": 125,
+    "nonpositive_finite": 56,
+    "minimum": -7.619422506991523,
+    "maximum": 8.281997683210122,
+    "semantic_kinds": {
+      "BOMB": 35
+    },
+    "minimum_required_forecast_valid_fraction": 0.9,
+    "maximum_forecast_valid_fraction_any_direction": 0.8484848484848485,
+    "first_live_gate_fails_for_every_direction": true
+  },
+  "new_matches": 0,
+  "physics_steps": 0
+}
