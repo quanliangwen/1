@@ -1,0 +1,1262 @@
+{
+  "status": "COMPLETE",
+  "results": {
+    "Map06": {
+      "log_counts": {
+        "per_drone": {
+          "0": 17,
+          "1": 17,
+          "2": 17,
+          "3": 17,
+          "4": 14
+        },
+        "total": 82,
+        "parts": {
+          "live_or_finish": 70,
+          "frozen_original": 5,
+          "new_fusion": 7
+        },
+        "render_frames": 75,
+        "heavy_render_frames": 48
+      },
+      "per_snapshot": [
+        {
+          "owner": 0,
+          "original_median_seconds": 0.8133553265,
+          "candidate_median_seconds": 0.6519593020000001,
+          "median_paired_saved_seconds": 0.1614242755,
+          "paired_saved_min_seconds": 0.15203763800000003,
+          "paired_saved_max_seconds": 0.17342466700000003,
+          "original_cpu_median_seconds": 0.8129102275,
+          "candidate_cpu_median_seconds": 0.651647476,
+          "system_cpu_busy_percent": 11.358698308458592,
+          "load_average": [
+            28.55,
+            28.48,
+            30.06
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.808984958,
+                "cpu_seconds": 0.808434291
+              },
+              "new": {
+                "wall_seconds": 0.65694732,
+                "cpu_seconds": 0.656555872
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.650072057,
+                "cpu_seconds": 0.64980358
+              },
+              "old": {
+                "wall_seconds": 0.812457996,
+                "cpu_seconds": 0.812007502
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.81983604,
+                "cpu_seconds": 0.819389285
+              },
+              "new": {
+                "wall_seconds": 0.659373428,
+                "cpu_seconds": 0.659005154
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.653846547,
+                "cpu_seconds": 0.653491372
+              },
+              "old": {
+                "wall_seconds": 0.814252657,
+                "cpu_seconds": 0.813812953
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.816639782,
+                "cpu_seconds": 0.816022904
+              },
+              "new": {
+                "wall_seconds": 0.643215115,
+                "cpu_seconds": 0.642930977
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.646244854,
+                "cpu_seconds": 0.645877928
+              },
+              "old": {
+                "wall_seconds": 0.811810289,
+                "cpu_seconds": 0.811367651
+              }
+            }
+          ]
+        },
+        {
+          "owner": 1,
+          "original_median_seconds": 0.767267563,
+          "candidate_median_seconds": 0.6170903595,
+          "median_paired_saved_seconds": 0.152773057,
+          "paired_saved_min_seconds": 0.13017102700000005,
+          "paired_saved_max_seconds": 0.16858909700000002,
+          "original_cpu_median_seconds": 0.7668569199999999,
+          "candidate_cpu_median_seconds": 0.6168341669999999,
+          "system_cpu_busy_percent": 11.354484212110949,
+          "load_average": [
+            28.62,
+            28.5,
+            30.05
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.780185943,
+                "cpu_seconds": 0.7797726
+              },
+              "new": {
+                "wall_seconds": 0.611596846,
+                "cpu_seconds": 0.611237456
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.617170628,
+                "cpu_seconds": 0.616919427
+              },
+              "old": {
+                "wall_seconds": 0.756107214,
+                "cpu_seconds": 0.755683731
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.774082739,
+                "cpu_seconds": 0.773660098
+              },
+              "new": {
+                "wall_seconds": 0.610793334,
+                "cpu_seconds": 0.610521385
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.618195678,
+                "cpu_seconds": 0.617854687
+              },
+              "old": {
+                "wall_seconds": 0.760452387,
+                "cpu_seconds": 0.760053742
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.781448211,
+                "cpu_seconds": 0.781031331
+              },
+              "new": {
+                "wall_seconds": 0.617010091,
+                "cpu_seconds": 0.616748907
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.624181596,
+                "cpu_seconds": 0.62380804
+              },
+              "old": {
+                "wall_seconds": 0.754352623,
+                "cpu_seconds": 0.75395161
+              }
+            }
+          ]
+        },
+        {
+          "owner": 2,
+          "original_median_seconds": 0.610059989,
+          "candidate_median_seconds": 0.509160861,
+          "median_paired_saved_seconds": 0.10116618300000002,
+          "paired_saved_min_seconds": 0.09822888699999999,
+          "paired_saved_max_seconds": 0.10311203199999996,
+          "original_cpu_median_seconds": 0.6097501995,
+          "candidate_cpu_median_seconds": 0.508951171,
+          "system_cpu_busy_percent": 11.353439898516736,
+          "load_average": [
+            28.68,
+            28.52,
+            30.04
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.608530494,
+                "cpu_seconds": 0.608269264
+              },
+              "new": {
+                "wall_seconds": 0.510301607,
+                "cpu_seconds": 0.509996886
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.509163251,
+                "cpu_seconds": 0.508946876
+              },
+              "old": {
+                "wall_seconds": 0.610890987,
+                "cpu_seconds": 0.610526155
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.611256072,
+                "cpu_seconds": 0.610905175
+              },
+              "new": {
+                "wall_seconds": 0.50814404,
+                "cpu_seconds": 0.507928066
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.507628091,
+                "cpu_seconds": 0.507311755
+              },
+              "old": {
+                "wall_seconds": 0.609329415,
+                "cpu_seconds": 0.609062215
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.609789513,
+                "cpu_seconds": 0.609429224
+              },
+              "new": {
+                "wall_seconds": 0.509158471,
+                "cpu_seconds": 0.508955466
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.509770415,
+                "cpu_seconds": 0.509447276
+              },
+              "old": {
+                "wall_seconds": 0.610330465,
+                "cpu_seconds": 0.610071175
+              }
+            }
+          ]
+        },
+        {
+          "owner": 3,
+          "original_median_seconds": 0.709591532,
+          "candidate_median_seconds": 0.585659864,
+          "median_paired_saved_seconds": 0.12449675599999999,
+          "paired_saved_min_seconds": 0.10748605500000008,
+          "paired_saved_max_seconds": 0.13906121100000002,
+          "original_cpu_median_seconds": 0.7091819825,
+          "candidate_cpu_median_seconds": 0.58539657,
+          "system_cpu_busy_percent": 11.351684038289289,
+          "load_average": [
+            28.73,
+            28.53,
+            30.02
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.706289271,
+                "cpu_seconds": 0.705990872
+              },
+              "new": {
+                "wall_seconds": 0.598803216,
+                "cpu_seconds": 0.59847307
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.583070901,
+                "cpu_seconds": 0.582726525
+              },
+              "old": {
+                "wall_seconds": 0.705051402,
+                "cpu_seconds": 0.704745311
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.721562269,
+                "cpu_seconds": 0.721147058
+              },
+              "new": {
+                "wall_seconds": 0.582501058,
+                "cpu_seconds": 0.582170164
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.588248827,
+                "cpu_seconds": 0.587994476
+              },
+              "old": {
+                "wall_seconds": 0.722170613,
+                "cpu_seconds": 0.721792017
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.71005847,
+                "cpu_seconds": 0.709646903
+              },
+              "new": {
+                "wall_seconds": 0.583045459,
+                "cpu_seconds": 0.582798664
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.598396269,
+                "cpu_seconds": 0.598057161
+              },
+              "old": {
+                "wall_seconds": 0.709124594,
+                "cpu_seconds": 0.708717062
+              }
+            }
+          ]
+        },
+        {
+          "owner": 4,
+          "original_median_seconds": 0.557079186,
+          "candidate_median_seconds": 0.4765796795,
+          "median_paired_saved_seconds": 0.07902265749999998,
+          "paired_saved_min_seconds": 0.06901465499999998,
+          "paired_saved_max_seconds": 0.092261549,
+          "original_cpu_median_seconds": 0.5566458999999999,
+          "candidate_cpu_median_seconds": 0.47630072349999997,
+          "system_cpu_busy_percent": 11.35224107368954,
+          "load_average": [
+            28.75,
+            28.54,
+            30.02
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.558858477,
+                "cpu_seconds": 0.558612185
+              },
+              "new": {
+                "wall_seconds": 0.466596928,
+                "cpu_seconds": 0.46632121
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.479310153,
+                "cpu_seconds": 0.478897274
+              },
+              "old": {
+                "wall_seconds": 0.557077826,
+                "cpu_seconds": 0.556538425
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.548031736,
+                "cpu_seconds": 0.54779074
+              },
+              "new": {
+                "wall_seconds": 0.476230201,
+                "cpu_seconds": 0.475948624
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.478941718,
+                "cpu_seconds": 0.478723604
+              },
+              "old": {
+                "wall_seconds": 0.547956373,
+                "cpu_seconds": 0.54764047
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.5572068,
+                "cpu_seconds": 0.556970734
+              },
+              "new": {
+                "wall_seconds": 0.476929158,
+                "cpu_seconds": 0.476652823
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.467426501,
+                "cpu_seconds": 0.46721686
+              },
+              "old": {
+                "wall_seconds": 0.557080546,
+                "cpu_seconds": 0.556753375
+              }
+            }
+          ]
+        }
+      ],
+      "call_count_weighted_saved_seconds": 10.2839418205,
+      "heavy_frames_one_call_minimum_snapshot_saving_scenario_seconds": 3.793087559999999,
+      "offline_one_second_gate_passed": true
+    },
+    "Map08": {
+      "log_counts": {
+        "per_drone": {
+          "0": 15,
+          "1": 14,
+          "2": 13,
+          "3": 14,
+          "4": 12
+        },
+        "total": 68,
+        "parts": {
+          "live_or_finish": 55,
+          "frozen_original": 5,
+          "new_fusion": 8
+        },
+        "render_frames": 58,
+        "heavy_render_frames": 28
+      },
+      "per_snapshot": [
+        {
+          "owner": 0,
+          "original_median_seconds": 0.8598710030000001,
+          "candidate_median_seconds": 0.7003748695,
+          "median_paired_saved_seconds": 0.160325086,
+          "paired_saved_min_seconds": 0.142175473,
+          "paired_saved_max_seconds": 0.1791419150000001,
+          "original_cpu_median_seconds": 0.8594689,
+          "candidate_cpu_median_seconds": 0.699988569,
+          "system_cpu_busy_percent": 11.34916232571912,
+          "load_average": [
+            28.79,
+            28.56,
+            30.01
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.854676131,
+                "cpu_seconds": 0.854206739
+              },
+              "new": {
+                "wall_seconds": 0.712500658,
+                "cpu_seconds": 0.712083833
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.700110744,
+                "cpu_seconds": 0.699708559
+              },
+              "old": {
+                "wall_seconds": 0.852876289,
+                "cpu_seconds": 0.852490818
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.868523622,
+                "cpu_seconds": 0.868054424
+              },
+              "new": {
+                "wall_seconds": 0.700638995,
+                "cpu_seconds": 0.700268579
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.690446779,
+                "cpu_seconds": 0.690077276
+              },
+              "old": {
+                "wall_seconds": 0.869588694,
+                "cpu_seconds": 0.869135494
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.860154749,
+                "cpu_seconds": 0.859791959
+              },
+              "new": {
+                "wall_seconds": 0.6914561,
+                "cpu_seconds": 0.691078166
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.708181224,
+                "cpu_seconds": 0.707804783
+              },
+              "old": {
+                "wall_seconds": 0.859587257,
+                "cpu_seconds": 0.859145841
+              }
+            }
+          ]
+        },
+        {
+          "owner": 1,
+          "original_median_seconds": 0.8388333354999999,
+          "candidate_median_seconds": 0.678718998,
+          "median_paired_saved_seconds": 0.15424566849999993,
+          "paired_saved_min_seconds": 0.14064920299999994,
+          "paired_saved_max_seconds": 0.18469326499999994,
+          "original_cpu_median_seconds": 0.8383843175000001,
+          "candidate_cpu_median_seconds": 0.6783874915,
+          "system_cpu_busy_percent": 11.351235230934476,
+          "load_average": [
+            28.82,
+            28.57,
+            30.0
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.846926522,
+                "cpu_seconds": 0.846474315
+              },
+              "new": {
+                "wall_seconds": 0.662233257,
+                "cpu_seconds": 0.661851315
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.682357728,
+                "cpu_seconds": 0.682065573
+              },
+              "old": {
+                "wall_seconds": 0.834475317,
+                "cpu_seconds": 0.834017831
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.816626608,
+                "cpu_seconds": 0.816186414
+              },
+              "new": {
+                "wall_seconds": 0.671961854,
+                "cpu_seconds": 0.671586478
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.690284953,
+                "cpu_seconds": 0.690004786
+              },
+              "old": {
+                "wall_seconds": 0.830934156,
+                "cpu_seconds": 0.830484999
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.843191354,
+                "cpu_seconds": 0.842750804
+              },
+              "new": {
+                "wall_seconds": 0.675080268,
+                "cpu_seconds": 0.67470941
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.691810173,
+                "cpu_seconds": 0.691527256
+              },
+              "old": {
+                "wall_seconds": 0.848183921,
+                "cpu_seconds": 0.847737166
+              }
+            }
+          ]
+        },
+        {
+          "owner": 2,
+          "original_median_seconds": 0.558748566,
+          "candidate_median_seconds": 0.4881962055,
+          "median_paired_saved_seconds": 0.07085078250000001,
+          "paired_saved_min_seconds": 0.06748036299999999,
+          "paired_saved_max_seconds": 0.073270754,
+          "original_cpu_median_seconds": 0.55845934,
+          "candidate_cpu_median_seconds": 0.48793514800000004,
+          "system_cpu_busy_percent": 11.35201065378919,
+          "load_average": [
+            28.85,
+            28.59,
+            29.98
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.5589728,
+                "cpu_seconds": 0.558625325
+              },
+              "new": {
+                "wall_seconds": 0.488344681,
+                "cpu_seconds": 0.488124398
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.486776739,
+                "cpu_seconds": 0.486480406
+              },
+              "old": {
+                "wall_seconds": 0.558524332,
+                "cpu_seconds": 0.558293355
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.560339135,
+                "cpu_seconds": 0.559959995
+              },
+              "new": {
+                "wall_seconds": 0.487068381,
+                "cpu_seconds": 0.486850967
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.488837351,
+                "cpu_seconds": 0.488540608
+              },
+              "old": {
+                "wall_seconds": 0.556317714,
+                "cpu_seconds": 0.555977674
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.559121176,
+                "cpu_seconds": 0.558812695
+              },
+              "new": {
+                "wall_seconds": 0.48804773,
+                "cpu_seconds": 0.487745898
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.488378782,
+                "cpu_seconds": 0.488173388
+              },
+              "old": {
+                "wall_seconds": 0.55747091,
+                "cpu_seconds": 0.557143803
+              }
+            }
+          ]
+        },
+        {
+          "owner": 3,
+          "original_median_seconds": 0.833826835,
+          "candidate_median_seconds": 0.6736115535,
+          "median_paired_saved_seconds": 0.16064792399999994,
+          "paired_saved_min_seconds": 0.139464366,
+          "paired_saved_max_seconds": 0.17042122699999995,
+          "original_cpu_median_seconds": 0.8333619704999999,
+          "candidate_cpu_median_seconds": 0.673277149,
+          "system_cpu_busy_percent": 11.38653308581249,
+          "load_average": [
+            28.87,
+            28.6,
+            29.97
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.834375942,
+                "cpu_seconds": 0.833902021
+              },
+              "new": {
+                "wall_seconds": 0.675703322,
+                "cpu_seconds": 0.67532279
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.693813362,
+                "cpu_seconds": 0.693523917
+              },
+              "old": {
+                "wall_seconds": 0.833277728,
+                "cpu_seconds": 0.83282192
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.830439785,
+                "cpu_seconds": 0.82997812
+              },
+              "new": {
+                "wall_seconds": 0.683176079,
+                "cpu_seconds": 0.682773203
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.669997244,
+                "cpu_seconds": 0.669700198
+              },
+              "old": {
+                "wall_seconds": 0.832620472,
+                "cpu_seconds": 0.83216042
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.840485355,
+                "cpu_seconds": 0.839910103
+              },
+              "new": {
+                "wall_seconds": 0.670064128,
+                "cpu_seconds": 0.669508138
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.671519785,
+                "cpu_seconds": 0.671231508
+              },
+              "old": {
+                "wall_seconds": 0.836781437,
+                "cpu_seconds": 0.836204232
+              }
+            }
+          ]
+        },
+        {
+          "owner": 4,
+          "original_median_seconds": 0.8272491475,
+          "candidate_median_seconds": 0.6754944725,
+          "median_paired_saved_seconds": 0.15191828199999996,
+          "paired_saved_min_seconds": 0.14602679699999999,
+          "paired_saved_max_seconds": 0.15510447800000005,
+          "original_cpu_median_seconds": 0.826810058,
+          "candidate_cpu_median_seconds": 0.6751061549999999,
+          "system_cpu_busy_percent": 11.354514325343501,
+          "load_average": [
+            28.89,
+            28.62,
+            29.96
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.825723218,
+                "cpu_seconds": 0.825257278
+              },
+              "new": {
+                "wall_seconds": 0.676379458,
+                "cpu_seconds": 0.67610137
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.674717892,
+                "cpu_seconds": 0.674334
+              },
+              "old": {
+                "wall_seconds": 0.82982237,
+                "cpu_seconds": 0.829366909
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.822491258,
+                "cpu_seconds": 0.822044956
+              },
+              "new": {
+                "wall_seconds": 0.676464461,
+                "cpu_seconds": 0.67616627
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.675778583,
+                "cpu_seconds": 0.67540333
+              },
+              "old": {
+                "wall_seconds": 0.82732335,
+                "cpu_seconds": 0.826899438
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.827174945,
+                "cpu_seconds": 0.826720678
+              },
+              "new": {
+                "wall_seconds": 0.674883148,
+                "cpu_seconds": 0.67460267
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.675210362,
+                "cpu_seconds": 0.67480898
+              },
+              "old": {
+                "wall_seconds": 0.828379402,
+                "cpu_seconds": 0.827929098
+              }
+            }
+          ]
+        }
+      ],
+      "call_count_weighted_saved_seconds": 9.557466141499997,
+      "heavy_frames_one_call_minimum_snapshot_saving_scenario_seconds": 1.9838219100000005,
+      "offline_one_second_gate_passed": true
+    },
+    "Map09": {
+      "log_counts": {
+        "per_drone": {
+          "0": 17,
+          "1": 17,
+          "2": 16,
+          "3": 16,
+          "4": 16
+        },
+        "total": 82,
+        "parts": {
+          "live_or_finish": 70,
+          "frozen_original": 5,
+          "new_fusion": 7
+        },
+        "render_frames": 76,
+        "heavy_render_frames": 48
+      },
+      "per_snapshot": [
+        {
+          "owner": 0,
+          "original_median_seconds": 0.6764684355,
+          "candidate_median_seconds": 0.577408457,
+          "median_paired_saved_seconds": 0.09464272800000001,
+          "paired_saved_min_seconds": 0.09100313900000001,
+          "paired_saved_max_seconds": 0.10736963899999996,
+          "original_cpu_median_seconds": 0.67612419,
+          "candidate_cpu_median_seconds": 0.5771142119999999,
+          "system_cpu_busy_percent": 11.354065519801848,
+          "load_average": [
+            28.91,
+            28.63,
+            29.95
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.671329077,
+                "cpu_seconds": 0.670924928
+              },
+              "new": {
+                "wall_seconds": 0.576958305,
+                "cpu_seconds": 0.576698772
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.573064238,
+                "cpu_seconds": 0.572591751
+              },
+              "old": {
+                "wall_seconds": 0.677549414,
+                "cpu_seconds": 0.67724531
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.668861748,
+                "cpu_seconds": 0.668488228
+              },
+              "new": {
+                "wall_seconds": 0.577858609,
+                "cpu_seconds": 0.577529652
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.587909499,
+                "cpu_seconds": 0.587643056
+              },
+              "old": {
+                "wall_seconds": 0.680536413,
+                "cpu_seconds": 0.680136051
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.675387457,
+                "cpu_seconds": 0.67500307
+              },
+              "new": {
+                "wall_seconds": 0.580472773,
+                "cpu_seconds": 0.580223143
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.573383992,
+                "cpu_seconds": 0.573051771
+              },
+              "old": {
+                "wall_seconds": 0.680753631,
+                "cpu_seconds": 0.680470392
+              }
+            }
+          ]
+        },
+        {
+          "owner": 1,
+          "original_median_seconds": 0.703202428,
+          "candidate_median_seconds": 0.5937259850000001,
+          "median_paired_saved_seconds": 0.10735600399999995,
+          "paired_saved_min_seconds": 0.08662513500000002,
+          "paired_saved_max_seconds": 0.13593128600000004,
+          "original_cpu_median_seconds": 0.7028017355,
+          "candidate_cpu_median_seconds": 0.5934236585,
+          "system_cpu_busy_percent": 11.345873526792605,
+          "load_average": [
+            28.92,
+            28.64,
+            29.94
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.7026255,
+                "cpu_seconds": 0.70222881
+              },
+              "new": {
+                "wall_seconds": 0.616000365,
+                "cpu_seconds": 0.615668107
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.592007682,
+                "cpu_seconds": 0.591657948
+              },
+              "old": {
+                "wall_seconds": 0.698384622,
+                "cpu_seconds": 0.698081949
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.700472595,
+                "cpu_seconds": 0.699976969
+              },
+              "new": {
+                "wall_seconds": 0.611697875,
+                "cpu_seconds": 0.611341715
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.590221341,
+                "cpu_seconds": 0.589953677
+              },
+              "old": {
+                "wall_seconds": 0.724260731,
+                "cpu_seconds": 0.723804099
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.703779356,
+                "cpu_seconds": 0.703374661
+              },
+              "new": {
+                "wall_seconds": 0.595444288,
+                "cpu_seconds": 0.595189369
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.591608136,
+                "cpu_seconds": 0.591252928
+              },
+              "old": {
+                "wall_seconds": 0.727539422,
+                "cpu_seconds": 0.727143419
+              }
+            }
+          ]
+        },
+        {
+          "owner": 2,
+          "original_median_seconds": 0.7635001404999999,
+          "candidate_median_seconds": 0.6321541125,
+          "median_paired_saved_seconds": 0.13035989950000004,
+          "paired_saved_min_seconds": 0.11894282899999997,
+          "paired_saved_max_seconds": 0.140191944,
+          "original_cpu_median_seconds": 0.7631205085,
+          "candidate_cpu_median_seconds": 0.6317494770000001,
+          "system_cpu_busy_percent": 11.349939360014927,
+          "load_average": [
+            28.93,
+            28.65,
+            29.94
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.765430418,
+                "cpu_seconds": 0.765002484
+              },
+              "new": {
+                "wall_seconds": 0.630082155,
+                "cpu_seconds": 0.629818803
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.635018512,
+                "cpu_seconds": 0.634642704
+              },
+              "old": {
+                "wall_seconds": 0.753961341,
+                "cpu_seconds": 0.75351668
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.770008799,
+                "cpu_seconds": 0.769514535
+              },
+              "new": {
+                "wall_seconds": 0.629816855,
+                "cpu_seconds": 0.629457302
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.633964679,
+                "cpu_seconds": 0.633524402
+              },
+              "old": {
+                "wall_seconds": 0.759336215,
+                "cpu_seconds": 0.758924273
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.766550341,
+                "cpu_seconds": 0.766218085
+              },
+              "new": {
+                "wall_seconds": 0.630343546,
+                "cpu_seconds": 0.629974552
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.640480979,
+                "cpu_seconds": 0.640110306
+              },
+              "old": {
+                "wall_seconds": 0.761569863,
+                "cpu_seconds": 0.761238533
+              }
+            }
+          ]
+        },
+        {
+          "owner": 3,
+          "original_median_seconds": 0.6336014445,
+          "candidate_median_seconds": 0.542859066,
+          "median_paired_saved_seconds": 0.09104083949999997,
+          "paired_saved_min_seconds": 0.07612598699999995,
+          "paired_saved_max_seconds": 0.11080986699999995,
+          "original_cpu_median_seconds": 0.6332864835,
+          "candidate_cpu_median_seconds": 0.5426198635,
+          "system_cpu_busy_percent": 11.35705225141388,
+          "load_average": [
+            28.94,
+            28.66,
+            29.93
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.638458038,
+                "cpu_seconds": 0.638179685
+              },
+              "new": {
+                "wall_seconds": 0.53288925,
+                "cpu_seconds": 0.532552375
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.548698258,
+                "cpu_seconds": 0.548438541
+              },
+              "old": {
+                "wall_seconds": 0.624824245,
+                "cpu_seconds": 0.624459761
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.642167816,
+                "cpu_seconds": 0.641771537
+              },
+              "new": {
+                "wall_seconds": 0.531357949,
+                "cpu_seconds": 0.531130794
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.549878095,
+                "cpu_seconds": 0.549536122
+              },
+              "old": {
+                "wall_seconds": 0.627106047,
+                "cpu_seconds": 0.626808911
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.641225137,
+                "cpu_seconds": 0.640864027
+              },
+              "new": {
+                "wall_seconds": 0.537019874,
+                "cpu_seconds": 0.536801186
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.550868435,
+                "cpu_seconds": 0.550474632
+              },
+              "old": {
+                "wall_seconds": 0.628744851,
+                "cpu_seconds": 0.628393282
+              }
+            }
+          ]
+        },
+        {
+          "owner": 4,
+          "original_median_seconds": 0.827985674,
+          "candidate_median_seconds": 0.682704392,
+          "median_paired_saved_seconds": 0.14702387649999993,
+          "paired_saved_min_seconds": 0.11705965500000004,
+          "paired_saved_max_seconds": 0.16953164099999996,
+          "original_cpu_median_seconds": 0.8275224035,
+          "candidate_cpu_median_seconds": 0.682329067,
+          "system_cpu_busy_percent": 11.34933732143778,
+          "load_average": [
+            28.95,
+            28.67,
+            29.91
+          ],
+          "samples": [
+            {
+              "old": {
+                "wall_seconds": 0.826489415,
+                "cpu_seconds": 0.826016718
+              },
+              "new": {
+                "wall_seconds": 0.680174566,
+                "cpu_seconds": 0.679795862
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.683659755,
+                "cpu_seconds": 0.683285263
+              },
+              "old": {
+                "wall_seconds": 0.83974067,
+                "cpu_seconds": 0.839295823
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.829481933,
+                "cpu_seconds": 0.829028089
+              },
+              "new": {
+                "wall_seconds": 0.681749029,
+                "cpu_seconds": 0.681372871
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.684740897,
+                "cpu_seconds": 0.684458664
+              },
+              "old": {
+                "wall_seconds": 0.823963073,
+                "cpu_seconds": 0.823373867
+              }
+            },
+            {
+              "old": {
+                "wall_seconds": 0.819508556,
+                "cpu_seconds": 0.819048104
+              },
+              "new": {
+                "wall_seconds": 0.702448901,
+                "cpu_seconds": 0.70206637
+              }
+            },
+            {
+              "new": {
+                "wall_seconds": 0.67524364,
+                "cpu_seconds": 0.67496059
+              },
+              "old": {
+                "wall_seconds": 0.844775281,
+                "cpu_seconds": 0.844312204
+              }
+            }
+          ]
+        }
+      ],
+      "call_count_weighted_saved_seconds": 9.328772291999998,
+      "heavy_frames_one_call_minimum_snapshot_saving_scenario_seconds": 4.369960295999999,
+      "offline_one_second_gate_passed": true
+    }
+  },
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "numpy": "1.26.4",
+  "opencv": "4.11.0",
+  "opencv_threads": 1,
+  "fixed_logical_cpu": 0,
+  "selected_cpu_initial_busy": 0.0,
+  "paired_batches_per_snapshot": 6,
+  "baseline_zip_sha256": "e98990cfd9269ab521621bc97d7c9e81e21fa83bb83dafbfefb3943480dd6791",
+  "candidate_zip_sha256": "1dfbbfd4186063edb908bd7cb1f812a0e8956a69901f28988f632acee2c70784",
+  "gate_seconds_per_game": 1,
+  "decision": "OFFLINE_GATE_PASSED_NO_MATCH_AUTHORIZED",
+  "full_matches": 0,
+  "physics_steps": 0,
+  "method": "Untraced complete V16/candidate renderer; alternating paired batches on the same inherited CPU affinity. Exact frozen snapshots; weighted with per-drone render-call counts from logs. Not an exact historical whole-game timing replay.",
+  "caveat": "Historical live render inputs were not saved for every call. Weighted savings extrapolate frozen-snapshot timings. Heavy-frame scenario counts at most one call per >0.5s render frame and uses the smallest sampled saving; it is a scenario, not a formal lower bound."
+}
