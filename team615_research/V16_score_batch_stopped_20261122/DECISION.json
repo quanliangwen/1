@@ -1,0 +1,16 @@
+{
+  "status": "STOPPED_ROUTE_KEEP_V16",
+  "reason": "All per-game offline weighted savings are below the user-required one-second gate.",
+  "threshold_seconds_per_game": 1.0,
+  "largest_observed_median_paired_saving_seconds": 0.060464986500000005,
+  "baseline": "V16",
+  "baseline_zip_sha256": "e98990cfd9269ab521621bc97d7c9e81e21fa83bb83dafbfefb3943480dd6791",
+  "research_candidate_zip_sha256": "101fb54b8e4d7dcc4d25dd45bc140e8d7b88de8149eac2cb6c77b341b9b09b89",
+  "promote_candidate": false,
+  "full_matches_run": 0,
+  "full_matches_queued": 0,
+  "physics_steps": 0,
+  "fitting_calls": 0,
+  "source_inputs_unchanged": true,
+  "previous_bearing_optimization_included": false
+}

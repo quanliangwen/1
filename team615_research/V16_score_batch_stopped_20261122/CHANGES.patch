@@ -1,0 +1,100 @@
+--- V16/map_candidates.py
++++ candidate/map_candidates.py
+@@ -49,6 +49,7 @@
+         self.live_image = None
+         self.live_version = -1
+         self.fusion_signature = None
++        self._scored_image = None
+ 
+     def input_signature(self):
+         team_size=int(self.epoch[2])
+@@ -116,7 +117,7 @@
+         return True
+ 
+     def image(self, owner):
+-        return np.unpackbits(self.images[owner]['packed'])[:self.width*self.height].reshape(self.height,self.width).astype(np.uint8)
++        return np.unpackbits(self.images[owner]['packed'], count=self.width*self.height).reshape(self.height,self.width)
+ 
+     def manifest(self):
+         return tuple((kind,owner,data['version'],data['digest'])
+@@ -188,6 +189,7 @@
+         return max(table,key=lambda x:(x['score'],x['version'],-x['owner'],x['digest']))
+ 
+     def choose(self, drone, step, score_fn, fusion=True, ordinary=False):
++        self._scored_image = None
+         if not self.images:return None
+         memory=MapMemory(self.width,self.height);memory.merge(drone.memory.packet())
+         bearing=SubmissionBearings(self.width,self.height);bearing.bits=drone.submission_bearings.bits.copy()
+@@ -216,21 +218,35 @@
+         hits=memory.hits>=3
+         self.reference_digest=digest(hits)
+         table=[]
++        decoded={}
++        context={} if getattr(score_fn, '_accepts_score_context', False) else None
+         for owner,data in sorted(self.images.items()):
+-            bitmap=self.image(owner).astype(bool)
++            bitmap=self.image(owner)
+             if not bitmap.any():continue
+             # Same downsample and stable-hit reference for every candidate.
+-            reduced=bitmap[::2,::2][:hits.shape[0],:hits.shape[1]]
+-            score=score_fn(reduced,hits)
++            reduced=bitmap[::2,::2][:hits.shape[0],:hits.shape[1]].astype(bool)
++            decoded[owner]=bitmap
++            score=(score_fn(reduced,hits,context=context) if context is not None
++                   else score_fn(reduced,hits))
+             table.append(dict(owner=owner,version=data['version'],digest=data['digest'],**score))
+         if not table:return None
+         best=self.select_candidate(table,ordinary=ordinary)
+         self.score_table=table;self.best=best
++        data=self.images[best['owner']]
++        self._scored_image=(best['owner'],data['version'],data['digest'],
++                            data['packed'],decoded[best['owner']])
+         self.audit.append((step,'map_selected',self.reference_digest,table,best['digest']))
+         return best
+ 
+     def install(self, drone, owner, step):
+-        image=self.image(owner);data=self.images[owner]
++        data=self.images[owner]
++        staged=self._scored_image
++        self._scored_image=None
++        if (staged is not None and staged[:3]==(owner,data['version'],data['digest'])
++                and staged[3] is data['packed']):
++            image=staged[4]
++        else:
++            image=self.image(owner)
+         versions={i:d['version'] for i,d in self.snapshots.items()}
+         cache=('group-return-v1',owner,data['version'],data['digest'])
+         drone.group_best_image=(image,cache,versions)
+--- V16/red_hooks.py
++++ candidate/red_hooks.py
+@@ -41,16 +41,24 @@
+ def cached_eligible(step, sent, received):
+     return 0 <= received-sent <= 480 and 0 <= step-received <= 240
+ 
+-def local_score(bitmap, hits):
+-    # Assess predicted walls only against stable lidar evidence in the same frame.
+-    # A one-cell (two-pixel) tolerance allows raster quantization.
++def local_score(bitmap, hits, *, context=None):
++    # Context belongs to one choose() call; reference evidence is never cached across rounds.
+     k=np.ones((3,3), np.uint8)
+-    hit_band=cv2.dilate(hits.astype(np.uint8),k)>0
++    if context is None:
++        context={}
++    if context.get('hits') is not hits:
++        context.clear()
++        context.update(hits=hits,hit_band=cv2.dilate(hits.astype(np.uint8),k)>0,
++                       hit_count=np.count_nonzero(hits))
+     map_band=cv2.dilate(bitmap.astype(np.uint8),k)>0
+-    precision=np.count_nonzero(bitmap & hit_band)/max(1,np.count_nonzero(bitmap))
+-    recall=np.count_nonzero(hits & map_band)/max(1,np.count_nonzero(hits))
++    precision=np.count_nonzero(bitmap & context['hit_band'])/max(1,np.count_nonzero(bitmap))
++    recall=np.count_nonzero(hits & map_band)/max(1,context['hit_count'])
+     dice=2*precision*recall/max(1e-12,precision+recall)
+     return dict(precision=precision,recall=recall,score=dice)
++
++
++# Other two-argument scoring callbacks retain their original calling convention.
++local_score._accepts_score_context = True
+ 
+ 
+ def _live_prefix_open(pose, point, hits):
