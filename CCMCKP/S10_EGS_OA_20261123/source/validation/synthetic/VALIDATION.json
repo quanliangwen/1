@@ -1,0 +1,211 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "exhaustive_math",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/egs_math_test",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/tiny_math"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.1924485510098748
+    },
+    {
+      "name": "evaluate_old_safe",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "0,8,16"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.010271967970766127
+    },
+    {
+      "name": "evaluate_new_safe",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "0,8,16"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.006856812979094684
+    },
+    {
+      "name": "independent_fraction_certificate_safe",
+      "status": "PASS",
+      "successes": 27000,
+      "denominator": 27000
+    },
+    {
+      "name": "evaluate_old_unsafe",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "7,15,23"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.005189906980376691
+    },
+    {
+      "name": "evaluate_new_unsafe",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "7,15,23"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.005645077966619283
+    },
+    {
+      "name": "independent_fraction_certificate_unsafe",
+      "status": "PASS",
+      "successes": 0,
+      "denominator": 27000
+    },
+    {
+      "name": "evaluate_old_boundary",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "2,11,20"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.004676452954299748
+    },
+    {
+      "name": "evaluate_new_boundary",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--evaluate",
+        "2,11,20"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.004921625019051135
+    },
+    {
+      "name": "independent_fraction_certificate_boundary",
+      "status": "PASS",
+      "successes": 4320,
+      "denominator": 27000
+    },
+    {
+      "name": "full_original",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--seconds",
+        "30",
+        "--out",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/tests_v1/original"
+      ],
+      "rc": 0,
+      "wall_seconds": 7.651079106959514
+    },
+    {
+      "name": "full_baseline_branch",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--seconds",
+        "30",
+        "--out",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/tests_v1/baseline_branch",
+        "--search-flow",
+        "frontier_mitm"
+      ],
+      "rc": 0,
+      "wall_seconds": 7.114161544013768
+    },
+    {
+      "name": "full_egs_24",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--seconds",
+        "30",
+        "--out",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/tests_v1/egs_24",
+        "--search-flow",
+        "ellipsoid_oa",
+        "--ellipsoid-gamma",
+        "2.4"
+      ],
+      "rc": 0,
+      "wall_seconds": 29.644836989988107
+    },
+    {
+      "name": "full_egs_0",
+      "command": [
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build/ccmckp_s10",
+        "--instance",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/fixtures/LAB_3_8_30_",
+        "--capacity",
+        "1.7",
+        "--seed",
+        "960001",
+        "--seconds",
+        "30",
+        "--out",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/tests_v1/egs_0",
+        "--search-flow",
+        "ellipsoid_oa",
+        "--ellipsoid-gamma",
+        "0"
+      ],
+      "rc": 0,
+      "wall_seconds": 27.718021237989888
+    }
+  ],
+  "error": "baseline branch shortlist"
+}

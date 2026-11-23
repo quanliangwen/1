@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "gurobi": [
+    11,
+    0,
+    3
+  ],
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/source",
+        "-B",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DS10_GUROBI_INCLUDE=/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/validation_deps",
+        "-DS10_GUROBI_LIBRARY=/home/junhao/.local/lib/python3.8/site-packages/gurobipy/.libs/libgurobi110.so",
+        "-DS10_BUILD_EGS_TESTS=ON"
+      ],
+      "rc": 0,
+      "log": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build_0.log"
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build",
+        "--parallel",
+        "2"
+      ],
+      "rc": 0,
+      "log": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/build_1.log"
+    },
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline",
+        "-B",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DS10_GUROBI_INCLUDE=/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/validation_deps",
+        "-DS10_GUROBI_LIBRARY=/home/junhao/.local/lib/python3.8/site-packages/gurobipy/.libs/libgurobi110.so"
+      ],
+      "rc": 0,
+      "log": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build_0.log"
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build",
+        "--parallel",
+        "2"
+      ],
+      "rc": 0,
+      "log": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_oa_validation_20261123/baseline_build_1.log"
+    }
+  ]
+}

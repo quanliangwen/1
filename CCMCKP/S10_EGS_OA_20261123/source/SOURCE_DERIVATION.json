@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "original_zip_sha256": "06aaf2631c9de0e20267d823619dc1a5a167e4967feb733a5dee17ce59d5da23",
+  "unchanged_entire_file_sha256": {
+    "evaluation.cpp": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+    "evaluation.hpp": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+    "report.cpp": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+    "report.hpp": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+    "model.cpp": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+    "model.hpp": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+    "rng.cpp": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+    "rng.hpp": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+    "mip.cpp": "7eb92ddac54271f64fe13bf385d80f50b471f71baeb3fabcdedc5d925bb9aaaf",
+    "mip.hpp": "e4f9ddf98c6f837b13661511c1c2f73612d9eff84760f2277390d0810d08e4e5",
+    "fft.hpp": "ae54f7f123b87fa284cf0195f9192409eb843a3b54314e4983197271f58f1611",
+    "normal.hpp": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+    "partition.hpp": "e04eff2e5b5786b316804170585872a5d1b5cfefd0a6d5f6d09164db0ccfd145",
+    "CASES.json": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a",
+    "BENCHMARK_MANIFEST.json": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d",
+    "third_party/json.hpp": "853b2eb3bf7632c949f4a2dd6fb8a629c5ff25cc0059d29c7d21915dc719487f",
+    "third_party/picosha2.h": "ae5613548dbd3ff1028b136af97d8bb409036566febc5c0fd9b48099f9c55b8d",
+    "third_party/pocketfft_hdronly.h": "bc0095b216ec71fd66686e6b7f4d572c2d1af7f2f44848dde8071426f5d5f16d",
+    "third_party/LICENSE_NUMPY.txt": "c2996b49af9ebf9894f2ed468ae6e883a82ee9c9fe4a9e01f451050f33f4944c",
+    "third_party/LICENSE_SCIPY.txt": "eab8e58dfe58682f1c4fcc4fb5d7dda3bc1cd356dd5660ea02c2be7480ac90fb"
+  },
+  "unchanged_function_lf_sha256": {
+    "Search::Search(": "618f61c9152f068a3aeacc4b3d208a8b60eb7327d5c100ac13b6629a5a63a34a",
+    "double Search::native_check(": "2cd1132666133d5b8be08e0c237cc6dd11c464895f7972a14a6477ce67e998ff",
+    "void Search::init_frontier(": "42b4a29ab1cf20f9c8e9ed2ff1ea82392533f02444e398802153b60a39e57422",
+    "double Search::accept(": "aae974283094b6ddf3a019473230355dbb4794c2339e3b5fc707f6f7920e3ed4",
+    "std::pair<double, double> Search::float_bounds(": "23de77c4332b6cbedfb6c5d554ee81c1569a22b29e07f41b2ea84dcb2bf27f9a",
+    "std::pair<double, Vector> Search::gradients(": "2772530c894f45f7daa5348161d263268f255d67ac4100f8b074b32c620c34a1",
+    "double Search::guide_probability(": "19d58faed6cf4031d2ff2a9b60a951805b3158936795186db151bc8bc5d61665",
+    "void Search::local_search(": "01db8ad32b0e03faba90e7086ada61eb400f7ade9e841f3f386572b9148c6a75",
+    "std::vector<Search::HalfState> Search::prune(": "b84d929945a47ffd6195292089ea1f32796647b1e0591362e4139d3854265fd5",
+    "std::vector<Search::HalfState> Search::build_half(": "b88ac44bb4f974ebab8fe0b57ead5234d9ea916cfea988e51f0efed32849f796",
+    "void Search::matching(": "348660c65fb525208799627716ace7eb35cca8c7ba203292f33acd138ccd07af",
+    "Json Search::shortlist(": "86a5ce86b20887ada82982b11613197ae8c586665efd2c3004b1230cdedbfcf0",
+    "void Search::final_check(": "a78df2206e05ecdd3598e25880bf06168000e38602b348aea4de2240c26ed14e"
+  },
+  "shared_initialization_unchanged": true,
+  "shared_certificate_unchanged": true,
+  "shared_lss_report_unchanged": true,
+  "shared_search_deadline_unchanged": true,
+  "modified_existing_files": [
+    "search.cpp",
+    "search.hpp",
+    "main.cpp",
+    "CMakeLists.txt",
+    "README.md"
+  ],
+  "new_algorithm_files": [
+    "ellipsoid.cpp",
+    "ellipsoid.hpp"
+  ],
+  "baseline_mode": "--search-flow frontier_mitm",
+  "default_search": "ellipsoid_oa",
+  "formal_benchmark_performance_test_completed": false,
+  "validation": "validation/VALIDATION_FINAL.json"
+}

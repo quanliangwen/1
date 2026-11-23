@@ -1,0 +1,39 @@
+EGS椭球引导搜索：数学机制、文献与本题适配
+
+一、与原问题的关系
+最终目标仍为总成本最小，每组恰选一项，候选的接收和最终输出使用原S10原始样本整数证书及LSS流程。椭球不是最终可行性约束。没有添加R(x)<=T；也没有用椭球代理界宣称原问题最优或不可行。
+
+二、椭球风险
+mu、v完全沿用当前Instance定义，D=diag(sqrt(v))。
+U={mu+D*u:||u||_2<=gamma}，其支持函数R(x)=mu'x+gamma*||D'x||_2。
+独立物品情况下，二进制x满足||D'x||_2=sqrt(sum(v_j*x_j))。连续外逼近必须使用凸范数形式，不对凹的sqrt(sum(v_j*x_j))套用不合法的凸函数切线。
+文献：Ryu, J.; Park, S. (2021). Robust solutions for stochastic and distributionally robust chance-constrained binary knapsack problems. arXiv:2105.11875，尤其第2—4节。
+https://arxiv.org/pdf/2105.11875
+本题适配：普通二进制背包改为每组恰选一项；采用支持函数作为候选生成目标，不继承特定分布或已知真矩条件下的概率保证。
+
+三、成本上界与epsilon约束
+以本run原始样本证书接收的搜索最好解为成本上界，求解min R(x)，s.t. c'x<=Cinc-1e-7、一组一项。1e-7沿用原mip()中的严格降本界，不宣称为全局最小成本间距。无起点时以每组最大成本之和作为非约束性上界。
+文献：De Santis, M.; Eichfelder, G.; Patria, D. (2022). On the exactness of the epsilon-constraint method for biobjective nonlinear integer programming. Operations Research Letters 50(3), 356–361. DOI:10.1016/j.orl.2022.04.007。
+https://doi.org/10.1016/j.orl.2022.04.007
+本题适配：只借用epsilon标量化方法，不声称完整Pareto前沿。风险低不代表原概率一定高；不按均值—方差支配关系删除未验收组合。原证书搜索最好解与最终LSS输出最好解不同，分别留存。
+
+四、锥外逼近
+引入t>=0，目标mu'x+gamma*t。初始轴向支撑t>=sqrt(v_j)*x_j。对于锚点xbar，norm=||D'xbar||>0，u=D'xbar/norm，添加t>=u'D'x。本题对角矩阵下，选中物品系数为v_j/norm。
+由Cauchy–Schwarz不等式u'D'x<=||D'x||，割对代理范数上图集合全局有效。范数为零不生成除法割。
+文献：Coey, C.; Lubin, M.; Vielma, J.P. (2020). Outer approximation with conic certificates for mixed-integer convex problems. Mathematical Programming Computation 12, 249–293. DOI:10.1007/s12532-020-00178-3，特别是第2节和附录A.2。
+https://juan-pablo-vielma.github.io/publications/Outer-Approximation-With-Conic.pdf
+本题适配：只实现对角椭球二阶锥的分离式外逼近，不宣称实现完整Pajarito。每次查询5秒；在限时前没有完成锥收敛时，可返回已找到的离散候选，真实风险重算并记录cone_converged=false，最终仍交给原评价器。proxy_optimal仅针对该次未访问代理子问题及数值容差。gamma=0时范数项不参与目标，视为无需锥收敛的均值引导消融。
+
+五、已处理完整组合去重
+每组一项，若当前组合选择集合为Sbar，排除sum_{j in Sbar}x_j<=m-1仅要求下一组合至少改变一个组。原评价返回未接受不等同数学不可行；该式用于避免重复枚举，不作为原问题不可行割，也不推广到物品子集。原接口来不及写入评价缓存时不添加排除并结束本段搜索。
+参考：Codato, G.; Fischetti, M. (2006). Combinatorial Benders' Cuts for Mixed-Integer Linear Programming. Operations Research 54(4), 756–766. DOI:10.1287/opre.1060.0286。仅参考其完整二进制组合排除的基本逻辑，不实现IIS或更强子集割，不称本算法为完整Benders分解。
+https://doi.org/10.1287/opre.1060.0286
+
+六、保持不变与工程参数
+共同init_frontier()、native_check()、float_bounds()、accept()、shortlist()、final_check()及原MITM函数体保持不变；20个完整依赖/输入清单文件逐字节相同，见SOURCE_DERIVATION.json。
+gamma=2.4沿用原S10的工程系数，不是置信半径；每次查询5秒、gamma输入范围0..100、时间片0.1..30秒、输出和时间记录均为本题工程适配，不伪称文献推荐常数。
+原600秒搜索预算和45秒预留保持，原LSS及1000万次真实概率报告在搜索时钟外；未切换到其他历史LSS600版本。没有新原生MC评价器，没有历史热启动，没有恢复自动实验。
+
+七、验证与后续实验
+先用完整枚举检验微型代理问题的风险排序、支撑割、零半径、零方差、完整向量排除、成本界收紧，再检验原代码与显式MITM对照的原始证书/LSS/输出一致性。合成检查不代表40例性能改进。正式性能应固定gamma与预算，3—5例各30次新鲜对照后再决定是否扩展；本次修改不自动启动全量队列。
+可选后续参考：Boukhari, S.; Hifi, M. (2024). Combining local branching and descent method for solving the multiple-choice knapsack problem with setups. International Transactions in Operational Research 31, 29–52. DOI:10.1111/itor.13326。本版未增加局部分支，也未实现其学习或变邻域机制。
