@@ -1,0 +1,100 @@
+EGS椭球引导搜索：三个大算例独立试点
+
+核心结论：本批未形成椭球方案同时改善成本、波动与速度的证据，未扩展全40例。
+LAB50：三版30/30有效，best=avg=197.9864543988，std=0；原S10搜索231.576秒，EGS_2p4为552.693秒。成本无改善且搜索耗时增加。
+APP30：原S10/EGS_2p4/EGS_0有效18/21/18次，全部不足30；官方avg/std为空，不判成本胜负。
+APP50：原S10有效15/30，两个EGS均30/30；有效率配对Holm p=0.0005493164。两个EGS的avg=322.6330496141、std=0，彼此没有成本差异。
+APP50两个EGS主搜索均未改善自身初始化，不能把该例有效率改善全部归功于椭球风险项；gamma0同样达成。
+全部270次主输出的原程序真实概率报告均低于.99；因此不得称为满足真实分布约束的改进版本。
+统计口径：222/270通过冻结原经验样本证书与最终LSS检查；其余48次进程虽rc0，最终LSS值仍<.99，无资源失败、不补跑。
+
+一、完成与有效性：270次终末，原协议独立有效222/270，global_errors=[]
+三版本：原S10_MITM；EGS_2p4（椭球代理评分gamma=2.4引导OA）；EGS_0（相同搜索gamma=0）。
+编号19 LAB_50_10_500_ T63；35 APP_30_10_500_ T58；39 APP_50_10_500_ T91。预先固定，不按结果挑案例。
+每例每版本30次，共270；登记seed960001—960030。每次只从原始数据自生成起点，不读历史解或其他重复结果。
+算法、评价、输入、约束均为此前交付冻结源码；本轮仅扩大测试规模，不调参，不补跑普通失败。
+最终输出固定取RESULT主输出/原LSS第1变体；椭球不作为最终约束。
+
+二、成本结果（未四舍五入值用于统计；展示保留10位）
+编号 | 版本 | 有效/30 | best | avg | sample_std | CV
+19 | S10_MITM | 30/30 | 197.9864543988 | 197.9864543988 | 0.0000000000 | 0.0000000000
+19 | EGS_2p4 | 30/30 | 197.9864543988 | 197.9864543988 | 0.0000000000 | 0.0000000000
+19 | EGS_0 | 30/30 | 197.9864543988 | 197.9864543988 | 0.0000000000 | 0.0000000000
+35 | S10_MITM | 18/30 | 194.0962091132 | null（不足30次有效） | null（不足30次有效） | null（不足30次有效）
+35 | EGS_2p4 | 21/30 | 194.0962091132 | null（不足30次有效） | null（不足30次有效） | null（不足30次有效）
+35 | EGS_0 | 18/30 | 194.0962091132 | null（不足30次有效） | null（不足30次有效） | null（不足30次有效）
+39 | S10_MITM | 15/30 | 322.0997047676 | null（不足30次有效） | null（不足30次有效） | null（不足30次有效）
+39 | EGS_2p4 | 30/30 | 322.6330496141 | 322.6330496141 | 0.0000000000 | 0.0000000000
+39 | EGS_0 | 30/30 | 322.6330496141 | 322.6330496141 | 0.0000000000 | 0.0000000000
+
+三、配对比较
+编号 | 候选 | 参照 | 完整配对 | 均值差 | 相对均值差 | 方向 | 成本Holm p | 有效率Holm p
+19 | EGS_2p4 | S10_MITM | True | 0.0000000000 | 0.0000000000 | 平 | 1.0000000000 | 1.0000000000
+19 | EGS_0 | S10_MITM | True | 0.0000000000 | 0.0000000000 | 平 | 1.0000000000 | 1.0000000000
+19 | EGS_2p4 | EGS_0 | True | 0.0000000000 | 0.0000000000 | 平 | 1.0000000000 | 1.0000000000
+35 | EGS_2p4 | S10_MITM | False | null（不足30次有效） | null（不足30次有效） | 不可评 | null（不足30次有效） | 1.0000000000
+35 | EGS_0 | S10_MITM | False | null（不足30次有效） | null（不足30次有效） | 不可评 | null（不足30次有效） | 1.0000000000
+35 | EGS_2p4 | EGS_0 | False | null（不足30次有效） | null（不足30次有效） | 不可评 | null（不足30次有效） | 1.0000000000
+39 | EGS_2p4 | S10_MITM | False | null（不足30次有效） | null（不足30次有效） | 不可评 | null（不足30次有效） | 0.0005493164
+39 | EGS_0 | S10_MITM | False | null（不足30次有效） | null（不足30次有效） | 不可评 | null（不足30次有效） | 0.0005493164
+39 | EGS_2p4 | EGS_0 | True | 0.0000000000 | 0.0000000000 | 平 | 1.0000000000 | 1.0000000000
+
+四、时间与主搜索贡献
+编号 | 版本 | 最终解首次原始接受均时 | best命中数 | best条件平均时间 | 搜索均时 | 进程总均时 | EGS新增接受总数 | EGS改善总数
+19 | S10_MITM | 29.5193117415 | 30 | 29.5193117415 | 231.5761597055 | 417.9519394209 | 0 | 0
+19 | EGS_2p4 | 34.2414981021 | 30 | 34.2414981021 | 552.6928754593 | 748.1740875551 | 91 | 91
+19 | EGS_0 | 33.4330967146 | 30 | 33.4330967146 | 552.0437036757 | 743.1322222880 | 90 | 90
+35 | S10_MITM | null（不足30次有效） | 18 | 102.9607628899 | null（不足30次有效） | 337.5425270148 | 0 | 0
+35 | EGS_2p4 | null（不足30次有效） | 20 | 85.1194675307 | null（不足30次有效） | 668.6691397026 | 42 | 42
+35 | EGS_0 | null（不足30次有效） | 18 | 8.9273499809 | null（不足30次有效） | 662.7053868472 | 18 | 18
+39 | S10_MITM | null（不足30次有效） | 12 | 265.6013980828 | null（不足30次有效） | 744.9480274178 | 0 | 0
+39 | EGS_2p4 | 15.8103233285 | 30 | 15.8103233285 | 552.7689765505 | 746.8122977590 | 0 | 0
+39 | EGS_0 | 15.9047796796 | 30 | 15.9047796796 | 552.6224410344 | 750.1863411882 | 0 | 0
+
+五、真实概率报告与失败限制
+原口径独立有效不是“真分布保证”：仅表示身份、来源/全部输出SHA、时钟、原始经验样本计数证书、选择成本及原LSS通过。
+原程序真实概率报告仍为报告项，未追加成新验收标准。低于0.99的运行单列，不按该报告挑变体或重新运行。
+19 S10_MITM：真实P报告均值=0.9896510000，>=.99的有效运行0/30。
+19 EGS_2p4：真实P报告均值=0.9896510000，>=.99的有效运行0/30。
+19 EGS_0：真实P报告均值=0.9896510000，>=.99的有效运行0/30。
+35 S10_MITM：真实P报告均值=null（不足30次有效），>=.99的有效运行0/18。
+35 EGS_2p4：真实P报告均值=null（不足30次有效），>=.99的有效运行0/21。
+35 EGS_0：真实P报告均值=null（不足30次有效），>=.99的有效运行0/18。
+39 S10_MITM：真实P报告均值=null（不足30次有效），>=.99的有效运行0/15。
+39 EGS_2p4：真实P报告均值=0.9817656000，>=.99的有效运行0/30。
+39 EGS_0：真实P报告均值=0.9817656000，>=.99的有效运行0/30。
+以下为全部30次原输出的真实概率报告，包含原验收未通过者，仅为观测诊断：
+19 S10_MITM：全30次真实P均报告=0.9896510000，>=.99的报告0/30，最终LSS<.99者0/30。
+19 EGS_2p4：全30次真实P均报告=0.9896510000，>=.99的报告0/30，最终LSS<.99者0/30。
+19 EGS_0：全30次真实P均报告=0.9896510000，>=.99的报告0/30，最终LSS<.99者0/30。
+35 S10_MITM：全30次真实P均报告=0.9892797000，>=.99的报告0/30，最终LSS<.99者12/30。
+35 EGS_2p4：全30次真实P均报告=0.9892824467，>=.99的报告0/30，最终LSS<.99者9/30。
+35 EGS_0：全30次真实P均报告=0.9892797000，>=.99的报告0/30，最终LSS<.99者12/30。
+39 S10_MITM：全30次真实P均报告=0.9812297400，>=.99的报告0/30，最终LSS<.99者15/30。
+39 EGS_2p4：全30次真实P均报告=0.9817656000，>=.99的报告0/30，最终LSS<.99者0/30。
+39 EGS_0：全30次真实P均报告=0.9817656000，>=.99的报告0/30，最终LSS<.99者0/30。
+失败/无效记录：[{"identity": "EGS_0_i35_r03", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989984, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r06", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989953, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r09", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989978, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r11", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.98998, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r15", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989959, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r16", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989904, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r17", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989862, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r21", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989992, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r24", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989989, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r26", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989836, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r27", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989948, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_0_i35_r28", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989923, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r06", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989953, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r07", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989958, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r11", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989916, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r15", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989933, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r16", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.9899, "reported_output_cost_diagnostic_only": 194.38852420046285}, {"identity": "EGS_2p4_i35_r22", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989967, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r23", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989791, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r25", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989936, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "EGS_2p4_i35_r30", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989992, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r03", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989984, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r06", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989953, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r09", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989978, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r11", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.98998, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r15", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989959, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r16", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989904, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r17", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989862, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r21", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989992, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r24", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989989, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r26", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989836, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r27", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989948, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i35_r28", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989923, "reported_output_cost_diagnostic_only": 194.09620911316662}, {"identity": "S10_MITM_i39_r01", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989918, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r04", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989888, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r05", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989941, "reported_output_cost_diagnostic_only": 322.2599615000661}, {"identity": "S10_MITM_i39_r07", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989945, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r09", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989925, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r11", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989997, "reported_output_cost_diagnostic_only": 322.2599615000661}, {"identity": "S10_MITM_i39_r16", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989819, "reported_output_cost_diagnostic_only": 322.47888503778444}, {"identity": "S10_MITM_i39_r20", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989862, "reported_output_cost_diagnostic_only": 322.2599615000661}, {"identity": "S10_MITM_i39_r21", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989953, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r22", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.98994, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r24", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989923, "reported_output_cost_diagnostic_only": 322.2599615000661}, {"identity": "S10_MITM_i39_r25", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989809, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r27", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989962, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r28", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989897, "reported_output_cost_diagnostic_only": 322.0997047676083}, {"identity": "S10_MITM_i39_r29", "rc": 0, "termination_reason": null, "errors": ["AssertionError:"], "failure_detail": null, "diagnosis": "final_original_LSS_probability_below_0.99", "reported_lss_p": 0.989878, "reported_output_cost_diagnostic_only": 322.0997047676083}]
+不足30次独立有效的组，官方avg/std留空；valid-only均值仅诊断，不据缺失组宣称成本胜负；失败不赋假成本。
+
+六、计时与统计口径
+每次搜索预算600秒，原程序共同45秒余量；加载与搜索时钟沿用现有代码，LSS/真实概率报告在搜索时钟后执行。
+整进程保护3600秒，仅给大算例原报告阶段留足时间，不扩展600秒搜索；首重复按原程序报告top10，耗时可能更长。
+最多12并行，单任务6GiB预留、5GiB可用内存余量、极低2GiB保护；同批Gurobi11.0.3，不混用历史Gurobi13成绩。
+搜索均时与整进程均时分开；后者包含后续报告及进程调度。不能将不同计时定义的旧Time直接横比。
+工作簿物理搜索/进程耗时与日志贡献取全部30次原观测，含最终LSS未通过者；质量不完整时不据此判同等有效输出下的加速。正式成本统计仍仅按原独立有效性判定。
+最终选择首次原始接受：最终LSS输出同一选择首次获得原始证书的时刻，非首次LSS准入（本代码未记录）。
+best条件均时仅统计成本与本组30次best相差<=1e-8的有效运行；best不等于已证明全局最优。
+各算法自己的best成本可能不同，不能把best条件时间当作达到同一目标成本的速度比较。
+原LSS源码在入队接受后又复检并覆盖概率字段，主输出仍取成本队首，没有按新的最终复检概率再次过滤。本轮保留原源码行为，故rc0不等于最终LSS>=.99。48次在独立统计时判无效；这与真实概率报告270次均<.99是两个不同现象。
+官方样本std分母n-1=29；成本优平劣采用冻结容差1e-8；统计检验用完整成本，同seed配对。
+三对比×三例共9项均值符号翻转检验，Holm校正；<=20非零差精确枚举，否则99999次随机符号+观测项，固定统计seed。
+失败有效率另做配对精确McNemar及独立9项Holm校正。未显著不代表等效或无用。
+EGS主搜索新增接受/改善与共同初始化区分；仅三例，不宣称全40例提升；没有自动扩展全40例。
+工作簿另列全30次初始化与原始搜索最终成本日志诊断，不冒充最终LSS正式avg。逐次记录保留全部原输出成本与概率，包括48个无效输出。
+
+七、复核与来源
+已对下载证据的2430个不可变输出逐文件SHA256与字节数复核；证据包不含原始大数组/SDK/许可证。
+独立Python读者不导入搜索/证书写者；用Fraction量化及单独GMP算术读者重建整数计数。读者自身50项有限枚举核对通过，无额外原生MC。
+冻结源码：https://github.com/quanliangwen/1/tree/4fadf036407a938aeab96412962f53199428ed47/CCMCKP/S10_EGS_OA_20261123/source
+协议SHA256：5e6149537c897b751c47bfc3050b9f501ba928302745afb68f3183ce1665c4e4
+证据包SHA256：97d89a3486b270105ce5165ec1f1230aff6f3a2feb8a75f9286669776bdcabe9

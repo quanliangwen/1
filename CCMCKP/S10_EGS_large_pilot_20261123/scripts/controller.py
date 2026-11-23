@@ -1,0 +1,161 @@
+"""Frozen real large-case trial; no expansion, retries or algorithm changes."""
+from pathlib import Path
+from datetime import datetime,timezone
+import fcntl
+import hashlib
+import json
+import os
+import signal
+import subprocess
+import time
+
+H=Path(__file__).resolve().parent
+B=H.parent.parent
+assert B==Path('/home/junhao/quan/parallel_test_solver/CCMKCP')
+P=json.loads((H/'PROTOCOL.json').read_text())
+PROTOCOL_BYTES=(H/'PROTOCOL.json').read_bytes()
+def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path,data):
+    temporary=path.with_suffix(path.suffix+'.tmp')
+    with temporary.open('w') as f:
+        json.dump(data,f,ensure_ascii=False,indent=2);f.flush();os.fsync(f.fileno())
+    temporary.replace(path)
+def utc(): return datetime.now(timezone.utc).isoformat()
+def memory():
+    values={s.split(':',1)[0]:int(s.split()[1])*1024 for s in Path('/proc/meminfo').read_text().splitlines()}
+    return values['MemAvailable']
+def rss(pid):
+    try:
+        return int(next(s.split()[1] for s in Path('/proc/%s/status'%pid).read_text().splitlines() if s.startswith('VmRSS:')))*1024
+    except (OSError,StopIteration): return 0
+def command(pid):
+    try:return Path('/proc/%s/cmdline'%pid).read_bytes().split(b'\0')
+    except OSError:return []
+def freeze():
+    if (H/'PROTOCOL.json').read_bytes()!=PROTOCOL_BYTES: raise RuntimeError('Protocol changed during run')
+    for name,expected in P['source_and_binary_pins'].items():
+        if sha(H/name)!=expected: raise RuntimeError('Frozen source mismatch '+name)
+    for name,expected in P['input_pins'].items():
+        if sha(B/name)!=expected: raise RuntimeError('Frozen input mismatch '+name)
+
+lock=(H/'CONTROLLER.lock').open('a+')
+fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+if (H/'LAUNCH.json').exists():raise RuntimeError('Refuse duplicate controller or implicit restart')
+freeze()
+started=time.monotonic()
+registration={'pid':os.getpid(),'utc':utc(),'protocol_sha256':sha(H/'PROTOCOL.json'),
+    'max_workers':P['max_workers'],'tasks':270,'not_resuming_old_tasks':True}
+write(H/'LAUNCH.json',registration)
+
+tasks=[]
+for rep in range(1,31):
+    for case in P['cases']:
+        arms=P['arms']
+        shift=(rep+case['index'])%len(arms)
+        for arm in arms[shift:]+arms[:shift]:
+            tasks.append({'case':case,'rep':rep,'seed':960000+rep,'arm':arm})
+active={}
+done=[]
+stop=False
+resource_events=[]
+def request_stop(signum,frame):
+    global stop
+    stop=True
+signal.signal(signal.SIGTERM,request_stop)
+signal.signal(signal.SIGINT,request_stop)
+def terminate(item,reason):
+    if item.get('termination_at'): return
+    process=item['process']
+    expected=str(item['binary']).encode()
+    if process.poll() is None and expected in command(process.pid):
+        os.killpg(process.pid,signal.SIGTERM)
+        item['termination_reason']=reason
+        item['termination_at']=time.monotonic()
+
+last_state=0
+try:
+    while tasks or active:
+        available=memory()
+        total_rss=0
+        reserve=0
+        for identity,item in list(active.items()):
+            process=item['process']
+            resident=rss(process.pid)
+            item['peak_rss_bytes']=max(item['peak_rss_bytes'],resident)
+            total_rss+=resident
+            reserve+=max(0,P['worker_reserve_bytes']-resident)
+            elapsed=time.monotonic()-item['started']
+            if item.get('termination_at') and process.poll() is None and time.monotonic()-item['termination_at']>8:
+                if str(item['binary']).encode() in command(process.pid): os.killpg(process.pid,signal.SIGKILL)
+            if elapsed>P['process_wall_watchdog_seconds']:
+                terminate(item,'process_wall_watchdog')
+            if resident>P['single_rss_limit_bytes']:
+                terminate(item,'single_rss_limit')
+            rc=process.poll()
+            if rc is not None:
+                item['log'].close()
+                record={k:item[k] for k in ['identity','case_index','instance','capacity','arm','rep','seed','pid','started_utc','peak_rss_bytes']}
+                record.update({'rc':rc,'ended_utc':utc(),'process_wall_seconds':elapsed,
+                    'termination_reason':item.get('termination_reason'),'output_files':{}})
+                for file in item['out'].rglob('*'):
+                    if file.is_file():record['output_files'][file.relative_to(item['out']).as_posix()]={'sha256':sha(file),'bytes':file.stat().st_size}
+                if (item['out']/'RESULT.json').exists():
+                    result=json.loads((item['out']/'RESULT.json').read_text())
+                    record['reported_cost']=result.get('cost');record['reported_lss_probability']=result.get('original_LSS_confidence')
+                write(H/'outcomes'/(identity+'.json'),record)
+                done.append(record)
+                del active[identity]
+        if available<P['emergency_available_bytes'] or total_rss>P['total_own_rss_limit_bytes']:
+            if active:
+                event={'utc':utc(),'available_bytes':available,'own_rss_bytes':total_rss,'pids':[x['pid'] for x in active.values()]}
+                resource_events.append(event);write(H/'RESOURCE_EVENTS.json',resource_events)
+                for item in active.values():terminate(item,'system_memory_protection')
+        if stop:
+            for item in active.values():terminate(item,'requested_stop')
+            if not active:break
+        elif tasks and len(active)<P['max_workers']:
+            needed=P['available_headroom_bytes']+P['worker_reserve_bytes']+reserve
+            disk=os.statvfs(H);free=disk.f_bavail*disk.f_frsize
+            if available>=needed and free>P['minimum_free_disk_bytes']:
+                task=tasks.pop(0)
+                case=task['case'];arm=task['arm'];rep=task['rep']
+                # Identity is reserved once. Existing outputs are never overwritten.
+                identity='%s_i%02d_r%02d'%(arm['name'],case['index'],rep)
+                out=H/'runs'/identity
+                assert not out.exists() and not (H/'outcomes'/(identity+'.json')).exists()
+                binary=H/'bin'/('baseline' if arm['name']=='S10_MITM' else 'candidate')
+                cmd=[str(binary),'--instance',str(B/'benchmark'/case['instance']),'--capacity',str(case['tmax']),
+                    '--seed',str(task['seed']),'--rep',str(rep),'--seconds','600','--out',str(out),
+                    '--manifest',str(H/'candidate/BENCHMARK_MANIFEST.json')]
+                if arm['name']!='S10_MITM':cmd+=['--search-flow','ellipsoid_oa','--ellipsoid-gamma',str(arm['gamma']),'--ellipsoid-slice','5']
+                log=(H/'logs'/(identity+'.log')).open('wb')
+                process=subprocess.Popen(cmd,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,
+                    start_new_session=True,cwd=str(H))
+                item={'identity':identity,'case_index':case['index'],'instance':case['instance'],'capacity':case['tmax'],
+                    'arm':arm['name'],'rep':rep,'seed':task['seed'],'pid':process.pid,'started_utc':utc(),
+                    'started':time.monotonic(),'peak_rss_bytes':0,'process':process,'log':log,'out':out,'binary':binary}
+                active[identity]=item
+                with (H/'DISPATCH.jsonl').open('a') as f:
+                    f.write(json.dumps({k:item[k] for k in ['identity','pid','started_utc','seed']})+'\n')
+        if time.monotonic()-last_state>=10:
+            state={'utc':utc(),'controller_pid':os.getpid(),'phase':'stopping' if stop else 'running',
+                'completed':len(done),'total':270,'pending':len(tasks),'active':len(active),'available_bytes':available,
+                'active_identities':list(active),'elapsed_seconds':time.monotonic()-started}
+            write(H/'STATE.json',state);last_state=time.monotonic()
+        time.sleep(.3)
+    freeze()
+    complete={'utc':utc(),'phase':'stopped' if stop else 'completed','terminal':len(done),'pending':len(tasks),
+        'rc0':sum(r['rc']==0 for r in done),'resource_events':len(resource_events),
+        'all_source_and_input_pins_unchanged':True,'automatic_full40_expansion':False}
+    write(H/'COMPLETED.json',complete);write(H/'STATE.json',dict(complete,controller_pid=os.getpid(),active=0))
+except BaseException as error:
+    for item in active.values():terminate(item,'controller_error')
+    end=time.monotonic()+8
+    while active and time.monotonic()<end:
+        if all(item['process'].poll() is not None for item in active.values()):break
+        time.sleep(.2)
+    for item in active.values():
+        process=item['process']
+        if process.poll() is None and str(item['binary']).encode() in command(process.pid):os.killpg(process.pid,signal.SIGKILL)
+    write(H/'CONTROLLER_ERROR.json',{'utc':utc(),'error':repr(error)})
+    raise
