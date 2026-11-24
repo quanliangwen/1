@@ -1,0 +1,79 @@
+{
+  "scope": "exploratory adaptive revisions, not independent confirmatory validation",
+  "family_size": 12,
+  "incomplete_old_DC_tests_reserved_at_1": true,
+  "tests": [
+    {
+      "trial": "CF",
+      "case": 19,
+      "raw_p": 1.0,
+      "cumulative_holm12": 1
+    },
+    {
+      "trial": "CF",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm12": 4.57763671875e-05
+    },
+    {
+      "trial": "CF",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm12": 0.0001
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 19,
+      "raw_p": null,
+      "cumulative_holm12": null
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 35,
+      "raw_p": null,
+      "cumulative_holm12": null
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 39,
+      "raw_p": null,
+      "cumulative_holm12": null
+    },
+    {
+      "trial": "DC2",
+      "case": 19,
+      "raw_p": 1.0,
+      "cumulative_holm12": 1
+    },
+    {
+      "trial": "DC2",
+      "case": 35,
+      "raw_p": 1.0,
+      "cumulative_holm12": 1
+    },
+    {
+      "trial": "DC2",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm12": 0.0001
+    },
+    {
+      "trial": "CP",
+      "case": 19,
+      "raw_p": 1e-05,
+      "cumulative_holm12": 0.0001
+    },
+    {
+      "trial": "CP",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm12": 4.57763671875e-05
+    },
+    {
+      "trial": "CP",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm12": 0.0001
+    }
+  ]
+}
