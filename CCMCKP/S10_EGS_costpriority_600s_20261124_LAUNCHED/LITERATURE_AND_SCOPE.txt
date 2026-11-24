@@ -1,0 +1,11 @@
+这是启动时的冻结快照，不是完成结果或改善结论。
+新机制仅改主问题目标优先级：成本第一、椭球风险第二，绝对/相对目标退化容差0。若成本解唯一，风险次级的实际作用可能很弱，应如实披露；没有改最终LSS标准。
+Forbes等2024，Combining optimisation and simulation using logic-based Benders decomposition，EJOR312(3):840–854，DOI10.1016/j.ejor.2023.07.032。成本主问题、单调性能逻辑割思想适配，本题CDF占优割另有分位数耦合证明。
+https://pure.tue.nl/ws/portalfiles/portal/352893928/1-s2.0-S037722172300591X-main.pdf
+Gurobi官方多目标文档：严格线性目标层次优先级，多目标ObjBound不可查询，不伪报全局下界。实际服务器Gurobi11的真实MIQCP枚举已通过，记录见VALIDATION。
+https://docs.gurobi.com/projects/optimizer/en/current/features/multiobjective.html
+原椭球风险表达背景Ryu/Park2021：https://arxiv.org/pdf/2105.11875 。当前经验分布不满足一般正态假设，椭球仅引导候选，不套其分布概率等价或总体保障定理。
+规范SOC数值见证背景：https://docs.gurobi.com/projects/optimizer/en/current/concepts/numericguide/tolerances_scaling.html 。本题无硬风险上界时规范提升保持x投影集合的证明独立给出，不能反推旧失败分支。
+原S10评价、0..499、sum<T、原精确/百万抽样、全部负观测和最后完整LSS>=.99均保持；初始解只由本run原始数据生成。所有旧结果与失败不覆盖，不用它们作模型输入。
+实际完整600秒包括启动、所有求解和评价、保存fsync及退出；controller595秒硬保护不能由单独C++协作截止代替。最高60并行只是上限，资源保护仍有效。
+本快照记录运行状态的时间在LAUNCH_HEALTH.captured_utc。它不是实时状态页，不意味着已完成180次或已证实改善。完成后必须核全部覆盖、源SHA、LSS、精确见证与实际全时钟，30全有效才有官方avg/std。

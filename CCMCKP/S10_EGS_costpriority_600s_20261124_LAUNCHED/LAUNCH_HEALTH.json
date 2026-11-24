@@ -1,0 +1,269 @@
+{
+  "captured_utc": "2026-11-24T08:34:00.054119+00:00",
+  "status_at_snapshot": "RUNNING",
+  "not_a_completed_performance_result": true,
+  "controller_pid": 3221286,
+  "ppid": 1,
+  "session": 3221286,
+  "tty": 0,
+  "stdin": "/dev/null",
+  "offline_independent_of_SSH_and_Codex": true,
+  "live_workers": 60,
+  "max_workers": 60,
+  "actual_flow_counts": {
+    "frontier_mitm": 30,
+    "ellipsoid_costpriority": 30
+  },
+  "candidate_runtime_checkpoint": [
+    {
+      "identity": "EGS_CP_TOTAL600_i19_r01",
+      "flow": "ellipsoid_costpriority",
+      "hierarchy_observed": true
+    }
+  ],
+  "terminal_at_snapshot": 0,
+  "pending_at_snapshot": 120,
+  "available_GiB": 81.00933456420898,
+  "worker_ids": [
+    {
+      "pid": 3221287,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221290,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221293,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221296,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221299,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221302,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221305,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221308,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221311,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221314,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221317,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221320,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221323,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221326,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221329,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221332,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221335,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221338,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221341,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221344,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221347,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221351,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221354,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221357,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221360,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221363,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221366,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221369,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221372,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221375,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221378,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221381,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221384,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221387,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221390,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221393,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221396,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221399,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221402,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221405,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221408,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221411,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221414,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221417,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221420,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221423,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221426,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221429,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221432,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221435,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221438,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221441,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221444,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221447,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221450,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221453,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221456,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221459,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3221462,
+      "flow": "ellipsoid_costpriority"
+    },
+    {
+      "pid": 3221465,
+      "flow": "frontier_mitm"
+    }
+  ]
+}
