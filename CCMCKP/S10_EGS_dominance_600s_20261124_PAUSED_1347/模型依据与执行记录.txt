@@ -1,0 +1,53 @@
+EGS-DC-600：原生椭球锥模型与有证明的CDF随机占优排除割
+日期2026-11-24。前一轮EGS-CF-600的180次完整结束，均有效、均<=600秒，最长514.323807秒。
+前一轮LAB50同成本但294.654秒降到99.347秒；APP30与APP50仍平均成本显著较差，未扩展40例。
+前轮原始结果/源码/Excel已上传并独立回读SHA：commit40ccef5f7898d074de61c174e3b84e225786871a，GitHub quanliangwen/1 的CCMCKP/S10_EGS_costfront_600s_20261124。
+
+一、诊断和新机制
+APP分布的尾部不能用均值—方差风险完整排序。前轮在固定风险上界内优先找最便宜候选，仍重复产生大量原生CDF不可行候选，未改善初始化。不能为了好看成本放松LSS。
+本轮取消固定候选风险上界，使用原生凸SOC表示R(x)=mu'x+2.4*||diag(sd)x||2。在改进成本界c'x<=当前内部最好成本-1e-7内，以R(x)为目标生成候选。
+本轮的主要机制是在原公共CDF上界证书证明不可行时，加入基于经验一阶随机占优的分组排除割，避免只排除一个向量后再次检查其更差替代组合。
+未采用新邻域、束宽扫描、半径调参、真实分布概率复验或历史解初始化。gamma保持2.4。原生SOCP仍NonConvex=0、PreMIQCPForm=2，协作及父级总时限保护不变。
+
+二、割的完整证明及适用条件
+每个资源项有相同L个原始经验样本，每组恰选一项，公共CDF搜索机制对应各选中项独立、均匀经验边际的乘积分布。
+对本run向量s及其每组g，定义D_g(s)={j属于组g：对于全部排序位置k，a_j,(k)>=a_sg,(k)}。
+这里排序和比较使用原始十进制字符串转GMP有理数，不能用舍入后double相等来推断占优。
+取彼此独立U_g~Uniform(0,1)，用各项经验分位数函数Q_j。若j_g属于D_g(s)，则Q_jg(U_g)>=Q_sg(U_g)几乎处处；逐组相加可得sum_gQ_jg(U_g)>=sum_gQ_sg(U_g)。
+因此对严格事件sum<T，有P(sum_jg<T)<=P(sum_sg<T)。若已有完整CDF上界证书u_s<.99，则每个这样的替代向量也不满足内部统一经验CDF门槛。
+据此可添加 sum_g sum_{j属于D_g(s)} x_j <= m-1。该行系数全为1，不需要Big-M，排除完整的更差项组合块。
+只能用原生整数CDF证书upper_numerator*100<99*denominator生成割；等号、未决结果、部分计算、浮点猜测或LSS抽样低于.99均不构成此割的证明。
+表中每组包含原项自身，单向量排除是其退化情形。不同割覆盖块可重叠，不能把块大小相加称唯一剪枝数量。
+这个证明针对既有算法内部经验乘积分布搜索判据，不是对未知总体的分布鲁棒覆盖结论。最终仍只按LSS，不要求输出满足椭球容量约束。
+每条割保存s、各D_g、原CDF上下界整数证书、阈值和时钟，独立读者用Fraction重建排序占优关系。不会额外抽样或估算生成分布真实概率。
+
+三、起点、候选与验收
+每个run重新加载原始样本，执行同一原S10公共初始化（均值/方差前沿、原低风险兜底与原CDF候选机制），生成自身起点。
+只能把本run自身初始向量交给本run的MIP start；不得读前轮、旧版本、V48模板或其他重复的解。占优表也只由本run输入构建，并计入总600秒。
+已处理向量仍可加完整向量枚举no-good，但未决向量不能被冒充概率不可行证明。新占优割仅来自上节严格上界证书。
+最终保留原LSS精确或百万抽样分支、严格sum<T、抽样0…L-1（500样本即0—499），最后完整LSS值>=.99才输出。
+不重复抽到通过，不把中断的部分LSS样本均值当概率；无合格解记失败，不补跑或赋假成本。原生负观测和所有LSS完整评价保留。
+
+四、完整600秒共同政策
+两臂同一个二进制，共享启动前父级CLOCK_MONOTONIC。总时限包括加载/输入SHA/初始化/占优构造/原生模型和全部评分/LSS/全部保存fsync/进程退出。
+430秒触发协作搜索截止（非抢占算子在检查点退出，阶段记录可小幅延迟），590秒触发LSS截止，父级在595秒硬终止挂起进程，留5秒系统余量。600秒不是必须跑满。
+真实完整进程wall由独立wait线程记录；超过600秒一律预算失败，不能clip为600秒。完成标记在所有输出fsync后写入。该政策与前轮已经验证的代码相同。
+max60，5GiB可用内存余量，动态派发。无资源强制扩容，不清理历史结果。
+
+五、文献依据和适配边界
+Forbes, Harris, Jansen, van der Schoot, Taimre (2024), Combining optimisation and simulation using logic-based Benders decomposition, European Journal of Operational Research312(3),840–854，DOI10.1016/j.ejor.2023.07.032。
+原始发表版：https://pure.tue.nl/ws/portalfiles/portal/352893928/1-s2.0-S037722172300591X-main.pdf
+采用其第2—3节“主问题+性能子问题、借单调性构造逻辑可行性割”的原则。原文是资源分配/排班，不直接等于本题；本题上节分位数耦合与one-hot割有独立证明，不声称照搬其具体排班割或完整实现其算法。
+Ryu & Park (2021), Robust solutions for stochastic and distributionally robust chance-constrained binary knapsack problems：https://arxiv.org/pdf/2105.11875。
+采用独立资源对角椭球支持函数/SOC表达，不把其正态等价结论套用于当前经验混合尾部分布。椭球仅用于候选风险目标。
+Coey, Lubin, Vielma (2020), Outer approximation with conic certificates for mixed-integer convex problems：https://juan-pablo-vielma.github.io/publications/Outer-Approximation-With-Conic.pdf。
+采用凸锥混合整数建模背景，实际用Gurobi原生分解SOC，不声称实现Pajarito或全部论文割。
+Gurobi官方：https://docs.gurobi.com/projects/optimizer/en/current/reference/parameters.html#premiqcpform ，#timelimit。
+说明旋转锥预处理与普通TimeLimit可能延迟返回，因此必须有整个管线的独立硬保护。
+
+六、正式试验登记
+编号19 LAB_50_10_500_ T63、35 APP_30_10_500_ T58、39 APP_50_10_500_ T91。
+新鲜S10_TOTAL600与EGS_DC_TOTAL600每例各30，合计180，seed960001…960030，同seed配对；不混入前轮成绩。
+仅3例，不自动扩展40例。完整30次独立有效才正式avg和sample_std，否则null；有效率另检。best为观察到的有效最小值，不称全局最优。
+成本3项两侧配对均值符号翻转+Holm3，失败有效率另McNemar+Holm3；速度以含所有阶段的真实进程wall描述，不能只报代理模型时间。
+如果候选没有可靠改善，完整报告退化与限制，不把低std但停在更贵起点当成功。

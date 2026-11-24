@@ -1,0 +1,106 @@
+from pathlib import Path
+import subprocess,sys,hashlib,json,tarfile,zipfile,shutil
+R=Path(__file__).resolve().parent
+remote='''from pathlib import Path
+import json,hashlib,tarfile
+B=Path('/home/junhao/quan/parallel_test_solver/CCMKCP');H=B/'work/egs_dominance_600s_20261124';assert Path.cwd()==B
+pause=json.loads((H/'USER_PAUSE_RECEIPT.json').read_text());assert pause['status']=='PAUSED' and not pause['remaining_workers'] and not pause['controller_live']
+P=json.loads((H/'PROTOCOL.json').read_text())
+for n,h in P['source_and_binary_pins'].items():assert hashlib.sha256((H/n).read_bytes()).hexdigest()==h,n
+files=[p for p in H.rglob('*') if p.is_file() and (p.relative_to(H).parts[0] in ['runs','outcomes','source'] or (p.parent==H and p.suffix in ['.json','.jsonl','.log','.txt','.py']))]
+archive=H/'PAUSED_COMPACT_EVIDENCE.tar.gz'
+with tarfile.open(archive,'w:gz') as t:
+ for p in files:t.add(p,arcname=p.relative_to(H).as_posix())
+print(json.dumps({'files':len(files),'archive_bytes':archive.stat().st_size,'sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
+ 'pause_receipt':pause,'all_source_pins_unchanged':True}))
+'''
+(R/'collect_pause_remote.py').write_text(remote,encoding='utf-8')
+p=subprocess.run([sys.executable,'-X','utf8','E:/codex/S10_EGS_OA_20261123/remote.py',str(R/'collect_pause_remote.py')],check=True,capture_output=True)
+receipt=json.loads(p.stdout);(R/'PAUSE_COLLECTION_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf-8')
+archive=R/'PAUSED_COMPACT_EVIDENCE.tar.gz'
+subprocess.run(['scp','-o','BatchMode=yes','-o','ConnectTimeout=15',
+ 'junhao@10.112.162.60:/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_dominance_600s_20261124/PAUSED_COMPACT_EVIDENCE.tar.gz',str(archive)],check=True)
+assert hashlib.sha256(archive.read_bytes()).hexdigest()==receipt['sha256']
+with tarfile.open(archive) as t:
+ assert all(not Path(m.name).is_absolute() and '..' not in Path(m.name).parts for m in t.getmembers())
+ t.extractall(R/'paused_evidence',filter='data')
+E=R/'paused_evidence';D=R/'pause_delivery';D.mkdir(exist_ok=True)
+checked=0
+for f in (E/'outcomes').glob('*.json'):
+ o=json.loads(f.read_text())
+ for n,v in o['output_files'].items():
+  p=E/'runs'/o['identity']/n
+  assert p.stat().st_size==v['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==v['sha256'];checked+=1
+shutil.copyfile(archive,D/'暂停时完整源码与紧凑证据.tar.gz')
+for n in ['USER_PAUSE_RECEIPT.json','PROTOCOL.json','STATE.json','COMPLETED.json','LAUNCH.json','VALIDATION.json']:
+ shutil.copyfile(E/n,D/n)
+shutil.copyfile(R/'DESIGN_AND_DIAGNOSIS.txt',D/'模型依据与执行记录.txt')
+memory='''暂停工作记忆（2026-11-24 北京时间13:47:57）
+
+最新用户指令：“暂停运行，保留记忆”。这是最高优先级。当前已PAUSED，禁止自动恢复、启动新实验或继续修改算法；仅用户再次明确要求继续才推进。
+服务器当前controller PID3206266已退出，全部worker已停止；读取真实/proc命令行确认，无残留本轮worker。没有用旧PID重新启动。
+暂停时第二轮登记180次：自然终末67次（66次rc0、1次候选一致性检查失败）；60次由用户暂停中止；53次从未启动。人为中止不计作算法失败，也不能给虚假成本或补跑。
+来源/输入冻结仍保持。源码、输出、LSS完整trace、失败与部分检查点、逐文件SHA和未启动清单全部保留。
+
+本任务目标与约束
+用户要求解释椭球avg更差及耗时长的原因，依据文献改进；统一最终仅LSS>=.99，不再计算生成分布真实概率。每run从原始数据自行初始化，不读取旧解、V48或别的重复结果。
+测试固定三例：19 LAB_50_10_500_ T63、35 APP_30_10_500_ T58、39 APP_50_10_500_ T91。各版本每例30，最高60并行。每run完整实际总时限600秒。
+过去643秒是旧代码只限制搜索、LSS后处理和保存另计，是真实超时，不是可接受误差。现两臂统一从Popen前开始计时，包括加载/初始化/全部模型和评分/LSS/全部保存fsync/退出。430秒协作搜索截止、590秒LSS截止、595秒父级硬保护，不clip。协作搜索阶段可在非抢占计算检查点后略超过430，但全进程不允许超过600。
+抽样已修正为全部索引0—499。LSS仍原精确/百万抽样与严格sum<T，保留原复检顺序及所有负观测，按每个向量最后一次完整LSS结果验收；中断LSS不返回部分概率，不抽样到通过。
+
+第一轮 EGS-CF-600 已全部完成并交付
+GitHub：https://github.com/quanliangwen/1/tree/40ccef5f7898d074de61c174e3b84e225786871a/CCMCKP/S10_EGS_costfront_600s_20261124
+提交40ccef5f7898d074de61c174e3b84e225786871a，32个远端文件已独立fetch回读并SHA核验。
+180/180独立有效，540变体均最后LSS>=.99，最高60并行，0资源终止；最长实际进程514.323807秒。
+LAB50：两版avg197.9864543988/std0；S10均时294.653783秒，CF99.346796秒。
+APP30：S10 avg194.2040656747/std.1441745674，CF avg194.3903873195/std.0001311673；CF显著较差，Holm3 p.0000114441；均时241.989232→471.740929秒。
+APP50：S10 avg322.2080537304/std.1562788009，CF avg322.6330496141/std0；CF显著较差，Holm3 p.00002；均时512.328812→507.836476秒。
+不能称CF整体改进成功，不扩40例。CF模型在本run风险上界内最小成本，用原生SOC；详细代码/Excel/证据/文献已发布。
+
+旧版诊断
+旧APP30两版30次均找到原始最低候选194.0962091132，但最终LSS筛选后S10有11次、椭球15次选更贵解，avg差不能全部归咎主搜索。未显著不等效。
+旧APP50椭球30次全停在初始322.6330496141，3,068次查询无锥收敛、无改善；S10原始候选322.0997047676，13次最终选更贵合格解。较高成本std0不是优势。
+原手工外逼近耗时、风险目标不是成本目标、均值方差丢失尾部形状，三方面都要区分。旧搜索外LSS调用约157—180次，另增约50—94秒。
+
+第二轮 EGS-DC-600 暂停现场
+LOCAL=E:/codex/S10_EGS_dominance_600s_20261124
+SERVER=/home/junhao/quan/parallel_test_solver/CCMKCP/work/egs_dominance_600s_20261124
+所有服务器操作只在BASE=/home/junhao/quan/parallel_test_solver/CCMKCP范围。SSH junhao@10.112.162.60。
+通过E:/codex/S10_EGS_OA_20261123/remote.py将本地remote脚本SSH stdin执行，不能本地直接运行Linux/proc脚本。
+Python=C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe -X utf8。
+protocol SHA59bac59e7c550a05a29fe985e1ab1f5e916b4d6a61a9ea45b580fd32b12b443d。
+binary SHA2b6b012016864a8970bef6e4ccb98f63b7530d9ee74389c4eb134d57dc225e55。
+来源/输入1306 pins由PROTOCOL登记，已核对未变。两臂S10_TOTAL600与EGS_DC_TOTAL600，各3×30，共180。
+唯一普通失败：EGS_DC_TOTAL600_i39_r04，seed960004，约197.922500秒，rc1，FAILED=SOC candidate violates checked proposal constraints。其错误只含合并检查，未记录具体是辅助锥变量/成本/已排除向量哪一分支，不能猜测或归咎资源。该失败不补跑、不覆盖；尚未修正代码。
+其它60条termination_reason=requested_stop系本次人工暂停，不等于算法不可行或数值失败。USER_PAUSE_RECEIPT.json含全部身份；53未启动也在其中。
+
+DC机制和文献
+主模型取消硬风险上界，在改进成本界内最小化原生椭球风险mu'x+2.4t，SOC使用连续提升和PreMIQCPForm2、NonConvex0。
+额外仅从原整数CDF完整上界<.99的证书生成经验随机占优割。每组D_g含所有排序原始十进制样本逐点>=被证不可行项的替代。用GMP有理数精确比较，不用double舍入。
+独立分位数耦合证明：所有替代资源逐组不小于原资源，所以sum<T的概率不更高。割sum_g sum_{j in D_g} x_j<=m-1。不得用LSS抽样失败、未决或部分证书加此割。最终仍只LSS验收。
+Forbes等(2024) Combining optimisation and simulation using logic-based Benders decomposition，EJOR312:840–854，DOI10.1016/j.ejor.2023.07.032；采用单调性能产生逻辑可行性割原则，本题割另有上述证明，不套排班公式。
+原文：https://pure.tue.nl/ws/portalfiles/portal/352893928/1-s2.0-S037722172300591X-main.pdf
+原生椭球表达依据Ryu/Park2021：https://arxiv.org/pdf/2105.11875 。锥求解背景Coey/Lubin/Vielma2020：https://juan-pablo-vielma.github.io/publications/Outer-Approximation-With-Conic.pdf 。不能对当前经验尾部套正态等价或全局概率保证。
+新检查全部通过：64原始样本精确组合、32割覆盖、3条比单向量排除更强、12原生风险枚举查询、精确十进制舍入边界、零方差；两流程30秒端到端LSS通过。没有额外真实概率MC。正式结果尚未独立统计，rc0不能当科学有效。
+
+恢复时的限制与待办（仅用户明确继续后）
+不能直接重启原controller：它拒绝已有LAUNCH，且用户暂停后不是可恢复的进程内存状态。53未启动身份可在明确授权和登记显式接续后处理；60人为中止与1普通失败不可隐式补跑选优。不能为了凑30次有效而覆盖。
+先确认用户要接续未启动身份、检查失败实现，还是另立新实验。当前暂停优先于一切旧的持续迭代/监控授权。
+独立audit_remote.py已准备，使用Python Fraction重建FOSD和核证书/时钟/来源/LSS；但当前脚本要求180自然终末，暂停后不能直接用它宣称全30统计。需要另行按暂停状态做覆盖/中止报告，不能把人为中止计算法失败。
+完整30有效才官方avg/std，否则null；best仅有效观测最小成本。两轮各3项配对成本测试/Holm3，并前瞻登记累计6项Holm，保留探索性迭代说明。不能混前轮成绩或把不显著说等效。
+当前没有取得整体优于S10的可靠椭球版本，不能把启动/预检/低std当成功，未启动全40例。
+默认交付GitHub quanliangwen/1 下CCMCKP任务目录，上传后独立回读SHA；临时工作只在E:/codex，不额外建立永久本地交付副本。
+不主动spawn子代理。不使用自动化继续监控或恢复。全部源代码和证据保留，不删除。
+'''
+(R/'恢复工作记忆.txt').write_text(memory,encoding='utf-8');(D/'恢复工作记忆.txt').write_text(memory,encoding='utf-8')
+(R/'CURRENT_STATUS.json').write_text(json.dumps({'status':'PAUSED','user_instruction':'暂停运行，保留记忆','controller_live':False,'workers_live':0,
+ 'natural_terminal':67,'natural_rc0':66,'natural_nonzero':1,'user_interrupted':60,'never_started':53,
+ 'automatic_resume_forbidden':True,'resume_requires_explicit_user_instruction':True},ensure_ascii=False,indent=2),encoding='utf-8')
+shutil.copyfile(R/'CURRENT_STATUS.json',D/'CURRENT_STATUS.json')
+for n in ['pause_remote.py','collect_pause.py','audit_remote.py']:
+ (D/'scripts').mkdir(exist_ok=True);shutil.copyfile(R/n,D/'scripts'/n)
+manifest={p.relative_to(D).as_posix():{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in D.rglob('*') if p.is_file() and p.name!='CHECKSUMS_SHA256.json'}
+(D/'CHECKSUMS_SHA256.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+(R/'PAUSE_DELIVERY_VERIFIED.json').write_text(json.dumps({'status':'PASS','paused':True,'no_live_workers':True,'source_unchanged':True,
+ 'output_files_verified':checked,'files':manifest},ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps({'status':'PAUSED_SNAPSHOT_VERIFIED','outputs_sha_checked':checked,'payload_files':len(manifest)+1,'archive_sha256':receipt['sha256']},ensure_ascii=False))
