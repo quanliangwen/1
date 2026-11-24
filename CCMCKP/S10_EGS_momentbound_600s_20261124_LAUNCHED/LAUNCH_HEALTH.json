@@ -1,0 +1,271 @@
+{
+  "captured_utc": "2026-11-24T10:39:40.492310+00:00",
+  "status_at_snapshot": "RUNNING",
+  "not_a_completed_performance_result": true,
+  "controller_pid": 3229469,
+  "ppid": 1,
+  "session": 3229469,
+  "tty": 0,
+  "stdin": "/dev/null",
+  "offline_independent_of_SSH_and_Codex": true,
+  "live_workers": 60,
+  "max_workers": 60,
+  "actual_flow_counts": {
+    "frontier_mitm": 30,
+    "ellipsoid_momentbound": 30
+  },
+  "candidate_runtime_checkpoint": [
+    {
+      "identity": "EGS_MB_TOTAL600_i35_r03",
+      "flow": "ellipsoid_momentbound",
+      "hierarchy_observed": true,
+      "necessary_mean_rhs": 60.59866051448705,
+      "necessary_row_observed": true
+    }
+  ],
+  "terminal_at_snapshot": 0,
+  "pending_at_snapshot": 120,
+  "available_GiB": 80.47476959228516,
+  "worker_ids": [
+    {
+      "pid": 3229470,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229473,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229476,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229479,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229482,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229485,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229488,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229491,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229494,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229497,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229503,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229506,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229509,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229512,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229515,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229518,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229521,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229524,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229527,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229530,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229533,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229536,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229539,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229542,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229545,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229548,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229551,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229554,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229557,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229560,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229563,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229566,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229570,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229573,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229576,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229579,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229582,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229585,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229588,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229591,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229594,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229597,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229600,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229603,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229606,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229609,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229612,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229615,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229618,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229621,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229624,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229627,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229630,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229633,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229636,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229639,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229642,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229645,
+      "flow": "frontier_mitm"
+    },
+    {
+      "pid": 3229648,
+      "flow": "ellipsoid_momentbound"
+    },
+    {
+      "pid": 3229651,
+      "flow": "frontier_mitm"
+    }
+  ]
+}

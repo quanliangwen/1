@@ -1,0 +1,58 @@
+{
+  "smoke_actual_search_wiring_pass": true,
+  "smoke_moment_rhs": 0.9490168834422172,
+  "formal_run_checkpoints": [
+    {
+      "case": 19,
+      "checkpoint_status": "running",
+      "checkpoint_elapsed": 204.0286685359897,
+      "last_incumbent_event": {
+        "event": "raw_certified_incumbent",
+        "cost": 199.54714521642026,
+        "elapsed": 11.755642342963256,
+        "source": "unconstrained_cost_risk_portfolio"
+      },
+      "model_queries": 39,
+      "modified_seconds_ago": 3.3505072593688965
+    },
+    {
+      "case": 35,
+      "checkpoint_status": "running",
+      "checkpoint_elapsed": 203.11312773893587,
+      "last_incumbent_event": {
+        "event": "raw_certified_incumbent",
+        "cost": 194.39036337179076,
+        "elapsed": 3.760963771957904,
+        "source": "unconstrained_cost_risk_portfolio"
+      },
+      "model_queries": 40,
+      "modified_seconds_ago": 3.6594066619873047
+    },
+    {
+      "case": 39,
+      "checkpoint_status": "running",
+      "checkpoint_elapsed": 199.15095814608503,
+      "last_incumbent_event": {
+        "event": "raw_certified_incumbent",
+        "cost": 322.63304961409597,
+        "elapsed": 14.025537567096762,
+        "source": "unconstrained_cost_risk_portfolio"
+      },
+      "model_queries": 34,
+      "modified_seconds_ago": 7.016023397445679
+    }
+  ],
+  "state": {
+    "utc": "2026-11-24T10:38:20.320683+00:00",
+    "controller_pid": 3229469,
+    "phase": "running",
+    "completed": 0,
+    "total": 180,
+    "pending": 120,
+    "active": 60,
+    "available_bytes": 80938602496,
+    "max_active_observed": 60,
+    "elapsed_seconds": 202.2099379580468
+  },
+  "new_probability_evaluations": 0
+}
