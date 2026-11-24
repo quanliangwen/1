@@ -110,9 +110,9 @@ for o in sorted(outcomes,key=lambda x:(x['case_index'],x['arm'],x['rep'])):
                 assert [Fraction(x) for x in spec['exact_group_max_variances']]==e['group_v'] and Fraction(spec['exact_Vmax'])==e['vmax'],'Vmax_envelope'
                 assert spec['mean_coefficients_rounded_down']==e['coeff'],'mean_coefficient_rounding'
                 cap=Fraction(str(o['capacity']));assert Fraction(spec['capacity_exact'])==cap,'moment_capacity'
-                root=spec['sqrt_Vmax_over99_rounded_up'];rootq=Fraction.from_float(root)
-                assert root>=0 and rootq*rootq>=e['vmax']/99,'sqrt_rounding_upper'
-                if root>0:assert Fraction.from_float(next_float(root,-math.inf))**2<e['vmax']/99,'unexplained_extra_sqrt_relaxation'
+                sqrt_upper=spec['sqrt_Vmax_over99_rounded_up'];rootq=Fraction.from_float(sqrt_upper)
+                assert sqrt_upper>=0 and rootq*rootq>=e['vmax']/99,'sqrt_rounding_upper'
+                if sqrt_upper>0:assert Fraction.from_float(next_float(sqrt_upper,-math.inf))**2<e['vmax']/99,'unexplained_extra_sqrt_relaxation'
                 rhs=spec['rhs_rounded_up'];target=cap+rootq;expected_rhs=float(target)
                 if Fraction.from_float(expected_rhs)<target:expected_rhs=next_float(expected_rhs,math.inf)
                 assert rhs==expected_rhs and Fraction.from_float(rhs)>=target,'rhs_rounding_upper'

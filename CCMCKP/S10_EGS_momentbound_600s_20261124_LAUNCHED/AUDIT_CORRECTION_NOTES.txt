@@ -1,0 +1,2 @@
+独立只读审计修正：moment平方根局部变量使用root，覆盖了本run的Path目录变量，后续读取CSV时触发TypeError(float/str)。已改名sqrt_upper；算法源码、binary、protocol、inputs和run输出完全不变。首次早期检查63条中33条S10已通过、30条候选检查受此检查器错误影响；只重核受影响的30条，不重抽概率、不运行求解器、不重跑任何实验身份。原EARLY_INDEPENDENT_RECORD_AUDIT.json及Git旧版检查器保留，错误不计作算法失败。正式终末应使用修正后的audit_remote.py。
+修正prefix适配时还发现：只重核候选而对照组为空，原全量统计尾部对空列表求均值触发StatisticsError。prefix版本已去掉全部成本统计尾部，严格仅记录核验，不算性能结论；全量180审计每组30，不受该空组问题影响。该异常也未修改或补跑算法。
