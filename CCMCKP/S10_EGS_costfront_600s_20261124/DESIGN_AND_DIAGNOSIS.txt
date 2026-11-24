@@ -1,0 +1,49 @@
+椭球版本诊断与 EGS-CF-600 修改说明
+日期：2026-11-24；所有统计来自已完成180次不可变记录，未重算概率。
+
+一、已经确认的问题
+1. 旧代码把“搜索600秒”与“最终LSS及落盘”分开计时。搜索实际约552秒，之后仍做约157—180次LSS调用；进程总时间因此达到602—646秒。643秒不是600秒的四舍五入，而是真实超时。旧实验保留，但不作为符合完整600秒规则的结果。
+2. APP_50：旧椭球30次全部停在自身初始成本322.6330496141，主搜索零改善；3,068个查询没有一个锥收敛。每次查询最多5秒，弱线性外逼近反复求解和候选排除占用了预算。不能把这些查询说成求出了精确最低椭球风险。
+3. 旧目标为 min(mu'x+2.4*t)，并加 c'x<当前成本。目标优先降低均值—标准差代理，而非直接降低成本。该代理丢失尾部形状，非正态经验分布下不能保证与LSS排序一致。
+4. APP_30最终avg略差，Holm校正后不显著；APP_50显著较差；LAB_50成本相同但更慢。不能称所有算例都退化，也不能把不显著称等效。
+5. 旧LSS重复调用和最终随机拒绝会造成最终输出与原始候选最优值不同。该现象已按“最后一次完整LSS结果”统一处理，不使用真实分布生成器概率。
+详细查询计数、证书时间和搜索以外进程时间见 PREVIOUS_RUN_DIAGNOSIS.json。进程减搜索时间包括LSS、启动与保存，不能全部冒充纯LSS耗时。
+
+二、单次新模型 EGS-CF-600
+原始数据和同一公共初始化不变：每run从原始样本自己生成初始候选，绝不读旧解或其他重复。gamma仍2.4，不按这3例试验结果调半径。
+记 R(x)=mu'x+gamma*sqrt(sum_j variance_j*x_j^2)。公共初始化得到本run原生内部证书候选 x0。
+设候选域上界 B=max(T,R(x0))，固定于该run，不借历史结果。该上界是搜索参数，不是最终验收阈值。
+主模型变为：min c'x；每组恰选一项；mu'x+gamma*t<=B；||diag(sd)x||2<=t；c'x<=本run当前最好内部候选成本-1e-7。
+使用Gurobi原生凸二阶锥混合整数模型，不再在C++外层反复加单个切平面逼近锥。使用连续提升变量u=diag(sd)x，PreMIQCPForm=2分解为旋转锥，避免Gurobi11在变量固定后误拒退化锥。NonConvex=0拒绝误建非凸模型。每次返回向量独立复核整数性、成本界和实际R。
+候选仍走原公共CDF/整数网格证书搜索筛选；已处理向量仅加完整向量no-good，不能把未决候选或代理风险当成概率不可行证明。
+模型继续寻找更便宜候选；候选域穷尽可提前结束。时间用完则保留本run已完成的候选证据。
+最终统一原LSS：原精确/原百万抽样分支，全部L个样本索引0…L-1，严格事件sum<T，P>=.99。椭球可行不等于最终可行；无任何额外“真实概率”计算或验收。
+本法只搜索上述椭球候选子域，不保证涵盖所有LSS可行解；域内最优界不是CCMCKP全局最优界。文献中的正态/矩信息假设不能直接套到当前任意经验分布。
+
+三、完整600秒的共同规则（两臂完全相同）
+进程父级在Popen前记录CLOCK_MONOTONIC，传给子进程；包含启动、加载、输入SHA、初始化、搜索、全部LSS、结果保存及fsync。
+600秒上限不是必须运行满600秒。搜索阶段最迟430秒，预留170秒给LSS及输出；LSS最迟590秒中断未完成调用，留10秒完成保存。
+每个LSS调用要么完整返回原方法的概率，要么记为中断，不返回部分样本概率；不重试以挑选通过值。仍以每个向量最后一次完整LSS结果决定输出，负观测不删除。
+原有重复复检顺序在预算允许时保留；截止时结束未完成复检并使用此前已完成结果，此策略对S10和EGS-CF相同。无任何已完成且通过LSS的候选则失败，不给虚假成本。
+FFT/原生证书/MC循环协作检查阶段deadline；Gurobi回调中止。父级独立线程在总595秒强制终止异常挂起进程，留5秒系统余量，真实进程退出时间单独记录。超过600秒一律判预算失败，绝不把耗时clip为600。
+完成标记在结果文件逐一fsync后写入；父线程wait记录真实退出，避免0.3秒轮询间隔被计为算法用时。
+旧S10结果不能与新600秒结果混为同一试验。新S10对照也必须重新冷启动。
+
+四、文献与适配边界
+De Santis, Eichfelder, Patria (2022), On the exactness of the epsilon-constraint method for biobjective nonlinear integer programming, ORL 50:356–361, DOI10.1016/j.orl.2022.04.007。
+原文：https://iris.uniroma1.it/retrieve/6a1589ae-e78a-41f1-97da-1a4cbff99521/DeSantis_On-the-exactness_2022.pdf
+依据：把一个目标用作约束、另一个目标直接优化。本题选成本为目标、椭球风险为候选域约束。未逐步遍历全部epsilon值，也未证明风险值最小间隔，不能借用论文完整Pareto前沿精确性结论。
+Ryu & Park (2021), Robust solutions for stochastic and distributionally robust chance-constrained binary knapsack problems。
+原文：https://arxiv.org/pdf/2105.11875
+依据：独立资源的对角椭球支持函数及SOC表达。多重选择等式是本题适配；任意经验分布下的LSS仍是最终标准，不套正态等价机会约束。
+Coey, Lubin, Vielma (2020), Outer approximation with conic certificates for mixed-integer convex problems, MPC12:249–293。
+原文：https://juan-pablo-vielma.github.io/publications/Outer-Approximation-With-Conic.pdf
+依据：锥混合整数模型及求解结构。我们调用Gurobi原生SOC，不声称实现Pajarito或复现论文的全部割与分解算法。
+Gurobi官方约束文档：https://docs.gurobi.com/projects/optimizer/en/current/concepts/modeling/constraints.html
+用于核对SOC识别、凸性与数值容差。普通TimeLimit可能在内部步骤结束后才返回，因此必须另有完整管线截止和父级保护。
+
+五、正式试验预先登记
+LAB_50_10_500_ T63、APP_30_10_500_ T58、APP_50_10_500_ T91。S10_TOTAL600和EGS_CF_TOTAL600各30次/例，合计180；seed960001…960030同seed配对。
+最高60并行，按fresh资源准入，保留5GiB。未完成、LSS失败、超时、资源失败均保留不补跑。
+30次全部独立有效才给官方avg和样本std，否则空并披露有效率。best为观察到的最好有效成本，不称全局最优。
+3项成本配对均值符号翻转检验+Holm3；有效率另做配对检验；运行时间用父级真实进程wall。未获改善也完整报告，不自动扩展40例。

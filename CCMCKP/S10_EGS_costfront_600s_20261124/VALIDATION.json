@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "new_checks": [
+    {
+      "name": "new_SOC_and_clock_unit",
+      "rc": 0,
+      "wall_seconds": 0.3349009440280497,
+      "stdout": "{\"status\":\"PASS\",\"SOC_exhaustive_cost_queries\":38,\"cancelled_LSS_has_no_probability\":true,\"no_retry_on_censor\":true,\"last_completed_LSS_retained\":true}\n"
+    },
+    {
+      "name": "integration_frontier_mitm",
+      "rc": 0,
+      "wall_seconds": 1.3080761250457726,
+      "stdout": "{\"status\":\"completed\",\"cost\":3.0,\"elapsed\":1.3052460540202446}\n",
+      "cost": 3.0,
+      "LSS": 0.997929,
+      "total30s_pass": true,
+      "completion": {
+        "elapsed_before_completion_save": 1.3040490780258551,
+        "budget": 30.0,
+        "all_output_files_fsynced": true,
+        "start_includes_process_launch": true,
+        "clock_policy": "launch_to_exit_total_wall"
+      }
+    },
+    {
+      "name": "integration_ellipsoid_costfront",
+      "rc": 0,
+      "wall_seconds": 1.3728399730171077,
+      "stdout": "{\"status\":\"completed\",\"cost\":3.0,\"elapsed\":1.3699650510097854}\n",
+      "cost": 3.0,
+      "LSS": 0.997929,
+      "total30s_pass": true,
+      "completion": {
+        "elapsed_before_completion_save": 1.3687873450107872,
+        "budget": 30.0,
+        "all_output_files_fsynced": true,
+        "start_includes_process_launch": true,
+        "clock_policy": "launch_to_exit_total_wall"
+      }
+    }
+  ],
+  "not_a_benchmark_conclusion": true,
+  "binary_sha256": "06ac545172b6b2a9d16c97716d17f235cb68478c4659973866749bcfa9f1543d",
+  "source_sha256": {
+    "CHECKSUMS_SHA256.json": "ad5667b545bbc2680e444bc6b7a82c2001736e4ee4890d5c60dfd7ce3b76104d",
+    "costfront.hpp": "4387b1cd9963e4ffbcbb872654589da0c2a51d6b7bc474c64f3ab80393b8c52d",
+    "mip.hpp": "e4f9ddf98c6f837b13661511c1c2f73612d9eff84760f2277390d0810d08e4e5",
+    "rng.hpp": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+    "gurobi_budget.hpp": "ac552879cf37382b7e058fc63aca99f6a44c3316c9671a36b94cc6fb4772665e",
+    "fft.hpp": "cf74925904d42124d9a34d8c04f3f6e3f99fe5230ebf72fd4352bbe4260419a1",
+    "search.hpp": "e4854d3a8306483cd46575638c1c14749cf775c550488d5fc7b3b98c5c50d990",
+    "normal.hpp": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+    "report.cpp": "421ce94928302aebe0bfc32e481e210b391ea7c5397229f468d8b8a74079c7bb",
+    "BENCHMARK_MANIFEST.json": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d",
+    "mip.cpp": "cff38d2967250c81d96c8b084bcbf32aea23a259b6aa4c6c6dbb1d57e116d573",
+    "main.cpp": "043939970b4c0d6334beaece0e4b1220d8f01d647b1b7d69ab899e047a3dd24a",
+    "evaluation.hpp": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+    "README.md": "0d310760aae39329fd32566135dcc9b3051db4d5aff1111c1522f9a96a7ef023",
+    "search.cpp": "eac8da11f032d83a4139698b9fc11dbf563c33995e8534333d8439d4f99ba70e",
+    "CMakeLists.txt": "cf83b11b5f27d3e1b2970c31fec9c238dcb660cb2667710a0a74987bb46faaa6",
+    "report.hpp": "65b7318aadd2e697ed50b724d7b6fde4eac6158115304fb91e5553f3cafc9e93",
+    "REVISION_PROVENANCE.json": "bea5e56bb3f2a56ba9a013de94942c40edf68cea0c942aabe0d8693aa395a954",
+    "rng.cpp": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+    "CASES.json": "59c766340c54225d02f99008309e2faaffb73e66ccca0af6b6fe12215eed426a",
+    "costfront.cpp": "429e9b1042566f2df38bc49d092e5851d99827ce6e507f3c8710168a2af2a4d0",
+    "partition.hpp": "e04eff2e5b5786b316804170585872a5d1b5cfefd0a6d5f6d09164db0ccfd145",
+    "model.hpp": "e74f54b129f6436580b4546449d57e1271ecb208ef5757974b2d52384114663c",
+    "evaluation.cpp": "e4fcd7df311196a365940812cebfce73fb313f35f3ef07d11afa82b98c172d97",
+    "ellipsoid.cpp": "911fb854ac284b7bff22e1ec9f483f71c747c358c6a35c505d0ac1a9e6545f6d",
+    "model.cpp": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+    "ellipsoid.hpp": "98518a194341e985c18d22f35f9d29e55722ccc652196b85834b103888e892de",
+    "tests/ellipsoid_test.cpp": "07ab0a9236894c2ac08f40b8ac85658b97848a96d198dd5e0ebec6a19a79472d",
+    "tests/create_fixture.py": "2a8efa81cae503107ec45029ab61af2b3a37d54acb63ef38d98637924feba47c",
+    "tests/costfront_budget_test.cpp": "799e80bb40992c4c3da12da28e9a4572204010ca2da1eb71881e5e435f3c38f6",
+    "tests/lss_fix_test.cpp": "a337a52df25ac88753fc8eab6aff64d0d4c64f3da144d3d8cbc9e46795db0b64",
+    "third_party/json.hpp": "853b2eb3bf7632c949f4a2dd6fb8a629c5ff25cc0059d29c7d21915dc719487f",
+    "third_party/picosha2.h": "ae5613548dbd3ff1028b136af97d8bb409036566febc5c0fd9b48099f9c55b8d",
+    "third_party/LICENSE_NUMPY.txt": "c2996b49af9ebf9894f2ed468ae6e883a82ee9c9fe4a9e01f451050f33f4944c",
+    "third_party/LICENSE_SCIPY.txt": "eab8e58dfe58682f1c4fcc4fb5d7dda3bc1cd356dd5660ea02c2be7480ac90fb",
+    "third_party/pocketfft_hdronly.h": "bc0095b216ec71fd66686e6b7f4d572c2d1af7f2f44848dde8071426f5d5f16d"
+  }
+}
