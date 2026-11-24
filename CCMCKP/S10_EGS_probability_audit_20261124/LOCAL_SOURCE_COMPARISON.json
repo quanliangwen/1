@@ -1,0 +1,76 @@
+{
+  "reference_archive": "E:\\CCMCKP\\10.28\\统一\\S10_Cpp_Gurobi_Unified_Source.zip",
+  "reference_archive_sha256": "06aaf2631c9de0e20267d823619dc1a5a167e4967feb733a5dee17ce59d5da23",
+  "zip_prefix": "S10_Cpp_Gurobi_Unified/",
+  "probability_and_input_files": {
+    "evaluation.cpp": {
+      "original_sha256": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "candidate_sha256": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "byte_identical": true
+    },
+    "evaluation.hpp": {
+      "original_sha256": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+      "candidate_sha256": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+      "byte_identical": true
+    },
+    "report.cpp": {
+      "original_sha256": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "candidate_sha256": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "byte_identical": true
+    },
+    "report.hpp": {
+      "original_sha256": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "candidate_sha256": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "byte_identical": true
+    },
+    "model.cpp": {
+      "original_sha256": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+      "candidate_sha256": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+      "byte_identical": true
+    },
+    "model.hpp": {
+      "original_sha256": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+      "candidate_sha256": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+      "byte_identical": true
+    },
+    "rng.cpp": {
+      "original_sha256": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+      "candidate_sha256": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+      "byte_identical": true
+    },
+    "rng.hpp": {
+      "original_sha256": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+      "candidate_sha256": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+      "byte_identical": true
+    },
+    "normal.hpp": {
+      "original_sha256": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+      "candidate_sha256": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+      "byte_identical": true
+    },
+    "BENCHMARK_MANIFEST.json": {
+      "original_sha256": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d",
+      "candidate_sha256": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d",
+      "byte_identical": true
+    }
+  },
+  "search_acceptance_functions": {
+    "Search::Search(": {
+      "same": true,
+      "sha256": "618f61c9152f068a3aeacc4b3d208a8b60eb7327d5c100ac13b6629a5a63a34a"
+    },
+    "double Search::native_check(": {
+      "same": true,
+      "sha256": "2cd1132666133d5b8be08e0c237cc6dd11c464895f7972a14a6477ce67e998ff"
+    },
+    "double Search::accept(": {
+      "same": true,
+      "sha256": "aae974283094b6ddf3a019473230355dbb4794c2339e3b5fc707f6f7920e3ed4"
+    },
+    "void Search::final_check(": {
+      "same": true,
+      "sha256": "a78df2206e05ecdd3598e25880bf06168000e38602b348aea4de2240c26ed14e"
+    }
+  },
+  "no_algorithm_execution_or_new_MC": true
+}

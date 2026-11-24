@@ -1,0 +1,1241 @@
+{
+  "scope": "existing 270-run batch; read-only, no new probability sampling",
+  "all270_final_selections_had_prior_LSS_admission_ge99": true,
+  "all270_final_selections_had_full_sample_integer_certificate_ge99": true,
+  "final_LSS_below99_count": 48,
+  "realP_report_below99_count": 270,
+  "source_audit_sha256": "139bc6f0c48643eac9d60dbca8705d6aee76e59c21ef7473e610f4c53fe1e04e",
+  "below99_by_case_arm": [
+    {
+      "case_index": 35,
+      "arm": "EGS_0",
+      "count": 12
+    },
+    {
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "count": 9
+    },
+    {
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "count": 12
+    },
+    {
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "count": 15
+    }
+  ],
+  "representative_first_repetitions": [
+    {
+      "identity": "EGS_0_i19_r01",
+      "case_index": 19,
+      "arm": "EGS_0",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9902246172067619,
+      "full_empirical_certificate_upper": 0.9905817918782296,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.99042
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990524
+        }
+      ],
+      "final_LSS_probability": 0.990197,
+      "parametric_MC_probability_report": 0.989651,
+      "realP_draws": 10000000,
+      "result_sha256": "815fc35c82bc08e3411fb55d1c5f025421137c29ab13d9d96f85e8bc607cbc3d",
+      "trace_sha256": "7078c5151c997ca80cb14ccc12ae9d6411495552defeedcbdc43c81a3e605c82"
+    },
+    {
+      "identity": "EGS_2p4_i19_r01",
+      "case_index": 19,
+      "arm": "EGS_2p4",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9902246172067619,
+      "full_empirical_certificate_upper": 0.9905817918782296,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.99042
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990524
+        }
+      ],
+      "final_LSS_probability": 0.990197,
+      "parametric_MC_probability_report": 0.989651,
+      "realP_draws": 10000000,
+      "result_sha256": "f6c7dc1fae9f23d669e7f614eb7fb843ce0bf88971fb6065268f3cfe8950a6c3",
+      "trace_sha256": "78b820747df9c56e6e3ddab314c23c909817f5d15a23b9c2ed17fd2b81a97899"
+    },
+    {
+      "identity": "S10_MITM_i19_r01",
+      "case_index": 19,
+      "arm": "S10_MITM",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9902246172067619,
+      "full_empirical_certificate_upper": 0.9905817918782296,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.99042
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990524
+        }
+      ],
+      "final_LSS_probability": 0.990325,
+      "parametric_MC_probability_report": 0.989651,
+      "realP_draws": 10000000,
+      "result_sha256": "e97ff83df0f849293c69bb45ce6fe9fdb238feacad9db6329db1309cded22f02",
+      "trace_sha256": "29d52793069a6514c8c0f3598b3751b6b6d8e927abb65c0219ac374c99c0ed08"
+    },
+    {
+      "identity": "EGS_0_i35_r01",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990032
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99006
+        }
+      ],
+      "final_LSS_probability": 0.990005,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "de5d0e43bfb4b46e10d808ba8122f76734ef7493aa4c9d8f9244c047ab968867",
+      "trace_sha256": "d41ab3ef41227b2ded865f26a1a47b1e10c491cb547d875f4aac5c5bfa374619"
+    },
+    {
+      "identity": "EGS_2p4_i35_r01",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990032
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99006
+        }
+      ],
+      "final_LSS_probability": 0.990039,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "1dcc14e43ed4202df1ed6d3bb2db75cb8d263975b52591bf2f499bfa6f0f64a6",
+      "trace_sha256": "b19abf606e55934133d2d10c7a168871e5e01a76e320a2a604b8eef2a1003cb0"
+    },
+    {
+      "identity": "S10_MITM_i35_r01",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990032
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99006
+        }
+      ],
+      "final_LSS_probability": 0.990005,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "4b31781d055fc105b4dcca8f6e0872b13c8a0feaa085bf95dc9136d21dcba2b5",
+      "trace_sha256": "d41ab3ef41227b2ded865f26a1a47b1e10c491cb547d875f4aac5c5bfa374619"
+    },
+    {
+      "identity": "EGS_0_i39_r01",
+      "case_index": 39,
+      "arm": "EGS_0",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.990171476160128,
+      "full_empirical_certificate_upper": 0.9903185517820944,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990234
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990273
+        }
+      ],
+      "final_LSS_probability": 0.990058,
+      "parametric_MC_probability_report": 0.9817656,
+      "realP_draws": 10000000,
+      "result_sha256": "9dca9646699353e6dbd837e53234e414ccdf5ca0d45a8388abb0a1988cfa8af1",
+      "trace_sha256": "c12791c8dbbae6ad51291d4746a855a82055a6abe40e303db77bc1e49ca2f60f"
+    },
+    {
+      "identity": "EGS_2p4_i39_r01",
+      "case_index": 39,
+      "arm": "EGS_2p4",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.990171476160128,
+      "full_empirical_certificate_upper": 0.9903185517820944,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990234
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990273
+        }
+      ],
+      "final_LSS_probability": 0.990058,
+      "parametric_MC_probability_report": 0.9817656,
+      "realP_draws": 10000000,
+      "result_sha256": "d08edfa11cf98ca789d9b5090aa98aec9d0c0000848f7f4772682ad8a449196f",
+      "trace_sha256": "c12791c8dbbae6ad51291d4746a855a82055a6abe40e303db77bc1e49ca2f60f"
+    },
+    {
+      "identity": "S10_MITM_i39_r01",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990041
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990032
+        }
+      ],
+      "final_LSS_probability": 0.989918,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "a1a709960dc2036a9f1989817368d18017259b8fe08c14679905e1a8b60969fd",
+      "trace_sha256": "58558f2b350f603fd5132d8540454b373489c5b2585a8c0ee49f264ae9597333"
+    }
+  ],
+  "all_final_LSS_below99_records": [
+    {
+      "identity": "EGS_0_i35_r03",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 3,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990025
+        }
+      ],
+      "final_LSS_probability": 0.989984,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "abe7bd8ecd1bc32b6804fbf5e86fce397d888b26f6aa51778215b4096bd06c0e",
+      "trace_sha256": "074100fa430b046f1a4b839f06d700580ec772db29a0c65fd8a0e11bf662072b"
+    },
+    {
+      "identity": "EGS_0_i35_r06",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 6,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990029
+        }
+      ],
+      "final_LSS_probability": 0.989953,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "8f7dd895820eff2dff0901e48b8064cc2b9e7f35c77039b377dbf626f304b5f4",
+      "trace_sha256": "1fbdb827b3c3063f071b38f905c6ea0a5b3d85fb35e13902b2c6342117ce4302"
+    },
+    {
+      "identity": "EGS_0_i35_r09",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 9,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990119
+        }
+      ],
+      "final_LSS_probability": 0.989978,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "706e2aa88fc71f83ec4cbc88206281c0817e0b02cd0eaf9928041fe615528175",
+      "trace_sha256": "36466449bda397631898cdb093b34ac34af8b7c8edd9233b110c65bb9484c107"
+    },
+    {
+      "identity": "EGS_0_i35_r11",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 11,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990073
+        }
+      ],
+      "final_LSS_probability": 0.98998,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "97aa198f42338c7cb4010d5bb66ec19df3a341742e7c37aef9fb3a77c00bea28",
+      "trace_sha256": "ff25b2b1e7d6fead525d29c0629d082bd665546a810d8e446a84ab12f60a09c2"
+    },
+    {
+      "identity": "EGS_0_i35_r15",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 15,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990137
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99008
+        }
+      ],
+      "final_LSS_probability": 0.989959,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "89e124ae8f249fbcea38b5d29359f97bd249f137aaeade34afeef188706b53ab",
+      "trace_sha256": "3cd75ac33cd8ed110aae04c68d38a62b3913081232ca5dd997efbb9ec4be7091"
+    },
+    {
+      "identity": "EGS_0_i35_r16",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 16,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990034
+        }
+      ],
+      "final_LSS_probability": 0.989904,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "39487c2caee1cef95fc407aa2c3b6454c0636a761349e59367a1fce24299a91b",
+      "trace_sha256": "d7b25a39aaa2fa4e04b099bd29c8c3723738ddefe03fb7a664356548e96c4371"
+    },
+    {
+      "identity": "EGS_0_i35_r17",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 17,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990038
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990108
+        }
+      ],
+      "final_LSS_probability": 0.989862,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "6d4b7c40bb501905fb7ebaa6d64d283a3acd244e0dd530309ef479c63a8f4cad",
+      "trace_sha256": "09dffa84b96385fd5f96b2cf82a6f306fd002d745cd0a85e46bba912166fae1b"
+    },
+    {
+      "identity": "EGS_0_i35_r21",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 21,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990053
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990103
+        }
+      ],
+      "final_LSS_probability": 0.989992,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "496592fccc21441c4a56118eb53bbf2885b299227e03d5da7cbfe2c3890e5d6e",
+      "trace_sha256": "7a9d31bdf7e366bb85c9bae53cb93a352eefa382e514a35ba04f08a1d4b9b3b0"
+    },
+    {
+      "identity": "EGS_0_i35_r24",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 24,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990022
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.9903
+        }
+      ],
+      "final_LSS_probability": 0.989989,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "b839319b6c075ef1bbb073b2da162cde5dcc430c0f9e62ea4eb6d5e7d6f43626",
+      "trace_sha256": "8bc641278cad2a9aef787b4effbb83ea7f88010705259cc6a17ac7f8dfc68563"
+    },
+    {
+      "identity": "EGS_0_i35_r26",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 26,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990069
+        }
+      ],
+      "final_LSS_probability": 0.989836,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "37ad77873383f33848aef1a3131dfff882702892270200f1cd7347045eef8cb0",
+      "trace_sha256": "01116fcf2fca97effeee51d5d28cc7dba8659b13c574dcf188e5d6a3f31e6b19"
+    },
+    {
+      "identity": "EGS_0_i35_r27",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 27,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990106
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990101
+        }
+      ],
+      "final_LSS_probability": 0.989948,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "bd09c6016f4cf9e2b08daf6047fb2a5c135c62f229e807b2fdc9b28cfd4cbcf3",
+      "trace_sha256": "525dc50f9a4058b59a30358cec086f09bff75c3963bf837e6b9a6b997c687643"
+    },
+    {
+      "identity": "EGS_0_i35_r28",
+      "case_index": 35,
+      "arm": "EGS_0",
+      "rep": 28,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990103
+        }
+      ],
+      "final_LSS_probability": 0.989923,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "2d49602d9a5eb347de84831759c55da5328c028db3541f977495487ca7509339",
+      "trace_sha256": "d4fc75452bbb2df7efad15698970c9f344c96267ab7352b60184ab718e1c2713"
+    },
+    {
+      "identity": "EGS_2p4_i35_r06",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 6,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990029
+        }
+      ],
+      "final_LSS_probability": 0.989953,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "a44fddf8bde1d3eb8bc8007dd2240eb758faf0a609392584dc81603aab55e9ec",
+      "trace_sha256": "30ca3d31bfa7b1e99aed5aa5f407826a1059def3ea5e111bbb060339a87be746"
+    },
+    {
+      "identity": "EGS_2p4_i35_r07",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 7,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990176
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990113
+        }
+      ],
+      "final_LSS_probability": 0.989958,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "43d0591ea7fb05a3cc90aa92bdad570c8f3ef284c505aa3c312e36cc13bded5f",
+      "trace_sha256": "cf77ec8c38ba65d405d4ceb6346bfec695fb873d568ed19ac74316cef13e6d5e"
+    },
+    {
+      "identity": "EGS_2p4_i35_r11",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 11,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990073
+        }
+      ],
+      "final_LSS_probability": 0.989916,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "e55c088af01440a56882233664aba1e2f3510d1e9262cc57d69aac0ae03e9396",
+      "trace_sha256": "d98353c99905ba7841f1aa90324bdfa3e46b7992a29d27bd20c39623b619e6af"
+    },
+    {
+      "identity": "EGS_2p4_i35_r15",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 15,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990137
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99008
+        }
+      ],
+      "final_LSS_probability": 0.989933,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "0f1332974ecc1520b856343aa47c02e7120701b0c76c949c6403261ae12ca071",
+      "trace_sha256": "e01f0c04f56a34daf7f78306739ddd318468614e90cf39a7b0a5ae33bb0c8180"
+    },
+    {
+      "identity": "EGS_2p4_i35_r16",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 16,
+      "full_empirical_certificate_lower": 0.9900030572444254,
+      "full_empirical_certificate_upper": 0.9900071717762571,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990133
+        }
+      ],
+      "final_LSS_probability": 0.9899,
+      "parametric_MC_probability_report": 0.9891891,
+      "realP_draws": 10000000,
+      "result_sha256": "f718641b391c89727eb62168ffb13b5842a17d2effa402ec18a1077294219603",
+      "trace_sha256": "7fcd8c4bc8256579bbc58e7eea6df3b68950dffd9bac167abaee9612bc4796e9"
+    },
+    {
+      "identity": "EGS_2p4_i35_r22",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 22,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990061
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990102
+        }
+      ],
+      "final_LSS_probability": 0.989967,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "1223384c1f9bd6cb110e807a1728a7edf531583a0574ad24982f2472d33fbfa6",
+      "trace_sha256": "b24771f8025971cb7901bbe91b4de383031c37638537af2f839e3c2be8c30f45"
+    },
+    {
+      "identity": "EGS_2p4_i35_r23",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 23,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990172
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990023
+        }
+      ],
+      "final_LSS_probability": 0.989791,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "f5112f7f7ce51e4774e56e12e0e23998bc879d36fbb438f68a1a0d3e6e47bb56",
+      "trace_sha256": "bde505974522e2860a90c1d78120e5a72e76ba4ecd5b97002e368f9407a4109a"
+    },
+    {
+      "identity": "EGS_2p4_i35_r25",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 25,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990148
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990096
+        }
+      ],
+      "final_LSS_probability": 0.989936,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "5cedd515576000b873c0e977bd9df7ac288de0f3c813b50ca69cb5d4b126d117",
+      "trace_sha256": "30b80a93ce53893762f60f9707c056863db4fa625c5cae745ede55c98620d650"
+    },
+    {
+      "identity": "EGS_2p4_i35_r30",
+      "case_index": 35,
+      "arm": "EGS_2p4",
+      "rep": 30,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990002
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990134
+        }
+      ],
+      "final_LSS_probability": 0.989992,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "106a5296859675bdd86a21402849feaee175e216c41b98c8edf21d0ab960b101",
+      "trace_sha256": "2a29bad21eb35cb48f62e04954dd2fb97297a99e7f0c22b62bdcbefab4f79b48"
+    },
+    {
+      "identity": "S10_MITM_i35_r03",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 3,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990025
+        }
+      ],
+      "final_LSS_probability": 0.989984,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "999757627a86b5f6eac3638ddaa800084d069fe7247a3b567bdd0d393322e07d",
+      "trace_sha256": "074100fa430b046f1a4b839f06d700580ec772db29a0c65fd8a0e11bf662072b"
+    },
+    {
+      "identity": "S10_MITM_i35_r06",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 6,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990029
+        }
+      ],
+      "final_LSS_probability": 0.989953,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "711e5d75caf336032ccfcb30e7325005d044b341b4df4269d64b6e105a94cd83",
+      "trace_sha256": "1fbdb827b3c3063f071b38f905c6ea0a5b3d85fb35e13902b2c6342117ce4302"
+    },
+    {
+      "identity": "S10_MITM_i35_r09",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 9,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990119
+        }
+      ],
+      "final_LSS_probability": 0.989978,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "928669e43f8b4fe0444eec75d321ff381248f8d1de9dbc531f2fbef993736bd6",
+      "trace_sha256": "36466449bda397631898cdb093b34ac34af8b7c8edd9233b110c65bb9484c107"
+    },
+    {
+      "identity": "S10_MITM_i35_r11",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 11,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990073
+        }
+      ],
+      "final_LSS_probability": 0.98998,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "69a713eb9be3b2d0b0ac5daf4b5f0a719d6512083a2a16882c33da8965d0acec",
+      "trace_sha256": "ff25b2b1e7d6fead525d29c0629d082bd665546a810d8e446a84ab12f60a09c2"
+    },
+    {
+      "identity": "S10_MITM_i35_r15",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 15,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990137
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.99008
+        }
+      ],
+      "final_LSS_probability": 0.989959,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "cc381aebdc1b8023c1c5ce703c5c871850895ad913613ed089c737c679afa923",
+      "trace_sha256": "3cd75ac33cd8ed110aae04c68d38a62b3913081232ca5dd997efbb9ec4be7091"
+    },
+    {
+      "identity": "S10_MITM_i35_r16",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 16,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990034
+        }
+      ],
+      "final_LSS_probability": 0.989904,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "873adb962a4d31a6c69a4fce719b05d1e51adf87b5dd369597dd903d9e20f911",
+      "trace_sha256": "d7b25a39aaa2fa4e04b099bd29c8c3723738ddefe03fb7a664356548e96c4371"
+    },
+    {
+      "identity": "S10_MITM_i35_r17",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 17,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990038
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990108
+        }
+      ],
+      "final_LSS_probability": 0.989862,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "58f97f44353b6132a280503d30469d59ee5640cffe82dccaf8d3360cbbb0f855",
+      "trace_sha256": "09dffa84b96385fd5f96b2cf82a6f306fd002d745cd0a85e46bba912166fae1b"
+    },
+    {
+      "identity": "S10_MITM_i35_r21",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 21,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990053
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990103
+        }
+      ],
+      "final_LSS_probability": 0.989992,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "6c597b11721d824f82f99bef407228b30d047844b791137a228d4c14dff80707",
+      "trace_sha256": "7a9d31bdf7e366bb85c9bae53cb93a352eefa382e514a35ba04f08a1d4b9b3b0"
+    },
+    {
+      "identity": "S10_MITM_i35_r24",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 24,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990022
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.9903
+        }
+      ],
+      "final_LSS_probability": 0.989989,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "015c0ffcdab6f09dad54f92ded98a645d2b84e6eaa0a2453e2ef9a3de29f35d2",
+      "trace_sha256": "8bc641278cad2a9aef787b4effbb83ea7f88010705259cc6a17ac7f8dfc68563"
+    },
+    {
+      "identity": "S10_MITM_i35_r26",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 26,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990069
+        }
+      ],
+      "final_LSS_probability": 0.989836,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "996f86f1b317b0a49d4025f8efb0cd6824ba63c2aaa7d881e6af7f8ca6dea6aa",
+      "trace_sha256": "01116fcf2fca97effeee51d5d28cc7dba8659b13c574dcf188e5d6a3f31e6b19"
+    },
+    {
+      "identity": "S10_MITM_i35_r27",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 27,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990106
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990101
+        }
+      ],
+      "final_LSS_probability": 0.989948,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "0a3ca44260dcd4b290117ecfb009d728c30df6cc300769ffadf53b10e71c42bd",
+      "trace_sha256": "525dc50f9a4058b59a30358cec086f09bff75c3963bf837e6b9a6b997c687643"
+    },
+    {
+      "identity": "S10_MITM_i35_r28",
+      "case_index": 35,
+      "arm": "S10_MITM",
+      "rep": 28,
+      "full_empirical_certificate_lower": 0.9900107023940469,
+      "full_empirical_certificate_upper": 0.9900761606482362,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990103
+        }
+      ],
+      "final_LSS_probability": 0.989923,
+      "parametric_MC_probability_report": 0.9892797,
+      "realP_draws": 10000000,
+      "result_sha256": "dfdac3b9d295f1d1b0812e66054e42ed67a7190951c91d23c80d529988676ef6",
+      "trace_sha256": "d4fc75452bbb2df7efad15698970c9f344c96267ab7352b60184ab718e1c2713"
+    },
+    {
+      "identity": "S10_MITM_i39_r01",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 1,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990041
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990032
+        }
+      ],
+      "final_LSS_probability": 0.989918,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "a1a709960dc2036a9f1989817368d18017259b8fe08c14679905e1a8b60969fd",
+      "trace_sha256": "58558f2b350f603fd5132d8540454b373489c5b2585a8c0ee49f264ae9597333"
+    },
+    {
+      "identity": "S10_MITM_i39_r04",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 4,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990058
+        }
+      ],
+      "final_LSS_probability": 0.989888,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "d9f29fb2b67bd3c7c3a3413a91e9a37d334356f420545fac1db3817afb566bc8",
+      "trace_sha256": "bbe5310c9e839da07ef25493c4c93d10cd7ec1100730a741004714677827afcd"
+    },
+    {
+      "identity": "S10_MITM_i39_r05",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 5,
+      "full_empirical_certificate_lower": 0.9900291762192788,
+      "full_empirical_certificate_upper": 0.9900667228177601,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.99004
+        }
+      ],
+      "final_LSS_probability": 0.989941,
+      "parametric_MC_probability_report": 0.9813928,
+      "realP_draws": 10000000,
+      "result_sha256": "e09b48a3d8864525c0eb87d04bcfbe921ab0f4ef9a69f0c869081df803e94b3f",
+      "trace_sha256": "6952bb683e197968c0969683b1a696905234d01aac3e70aa7f93a00aa709c652"
+    },
+    {
+      "identity": "S10_MITM_i39_r07",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 7,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990136
+        }
+      ],
+      "final_LSS_probability": 0.989945,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "d9fef45358f403660373e98218ff3025b376d1a456b2502db5dbbac98a0f0f1a",
+      "trace_sha256": "ee234dcb2116c82b77ff8decba5a46161836671e2237edfffad918229621b8b8"
+    },
+    {
+      "identity": "S10_MITM_i39_r09",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 9,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990102
+        }
+      ],
+      "final_LSS_probability": 0.989925,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "568983a391f264c4b89992af3a9d421f1d1323436869a21f5d320dd0e5a3c22a",
+      "trace_sha256": "73faa9768eb8b3b1abb16cf325cd36c102a9dbe519e9b4e0745f6b54f0f41600"
+    },
+    {
+      "identity": "S10_MITM_i39_r11",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 11,
+      "full_empirical_certificate_lower": 0.9900291762192788,
+      "full_empirical_certificate_upper": 0.9900667228177601,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990095
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990056
+        }
+      ],
+      "final_LSS_probability": 0.989997,
+      "parametric_MC_probability_report": 0.9813928,
+      "realP_draws": 10000000,
+      "result_sha256": "293fd7fc193228387acb8076266b96110bda6a40ddbd67e200a47f7df7e39354",
+      "trace_sha256": "a9b7728651140b004abc5aee18ff53ac51db84d44baeedf577a8bbbfc38cc70c"
+    },
+    {
+      "identity": "S10_MITM_i39_r16",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 16,
+      "full_empirical_certificate_lower": 0.9900161196281889,
+      "full_empirical_certificate_upper": 0.9900537140768187,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990039
+        }
+      ],
+      "final_LSS_probability": 0.989819,
+      "parametric_MC_probability_report": 0.9812514,
+      "realP_draws": 10000000,
+      "result_sha256": "734c64d710b9a1626d61b60f456240c81f34d42c0ff0047abfdbabc4b1bf9cf5",
+      "trace_sha256": "1da00036b451680a218c1a1a2e392a044ab3e0504570abd69afe9c4c47a3ae54"
+    },
+    {
+      "identity": "S10_MITM_i39_r20",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 20,
+      "full_empirical_certificate_lower": 0.9900291762192788,
+      "full_empirical_certificate_upper": 0.9900667228177601,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990196
+        }
+      ],
+      "final_LSS_probability": 0.989862,
+      "parametric_MC_probability_report": 0.9813928,
+      "realP_draws": 10000000,
+      "result_sha256": "084021a0c19d3eb47851bdafd15dc3cb99c6e0b25cd71070db28096f68c70074",
+      "trace_sha256": "6b2542ab6eaade14b07339b231444d1d6ac86609d6d124b72cbd1964d94878d2"
+    },
+    {
+      "identity": "S10_MITM_i39_r21",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 21,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.99008
+        }
+      ],
+      "final_LSS_probability": 0.989953,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "301edc1df4c625910bbb87f8943ab4852ced8cea66e54b99baab738067560560",
+      "trace_sha256": "4cfa25885b837c64a006037a8c43b1b8bf4f480d8e57253e17100f8b72063bfa"
+    },
+    {
+      "identity": "S10_MITM_i39_r22",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 22,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990021
+        }
+      ],
+      "final_LSS_probability": 0.98994,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "270071962a74b0e95ac54aa5f066204a6b78ca387b3f366089aa2c317dee3152",
+      "trace_sha256": "dd43d31b8d1d2214510eefdff1fb93137483891315d4bbadbb4f77a9eda19033"
+    },
+    {
+      "identity": "S10_MITM_i39_r24",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 24,
+      "full_empirical_certificate_lower": 0.9900291762192788,
+      "full_empirical_certificate_upper": 0.9900667228177601,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990162
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990031
+        }
+      ],
+      "final_LSS_probability": 0.989923,
+      "parametric_MC_probability_report": 0.9813928,
+      "realP_draws": 10000000,
+      "result_sha256": "a12a765f39762dd3bf348bcbfede8183771743da99d99eef306096188cdee555",
+      "trace_sha256": "ab6dc8a7301dc3af2a657fe92ea27cbe94cf6089ab5518dc76f820d4b5376405"
+    },
+    {
+      "identity": "S10_MITM_i39_r25",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 25,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990023
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990015
+        }
+      ],
+      "final_LSS_probability": 0.989809,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "c83322d77d3298f98f19d36c6123d338c4a40fdbcb6fcf95a5397a590ba07303",
+      "trace_sha256": "2c6cdab9e2da34228e4a26fd9337c141435180a63a9e643b38850d35344ab34f"
+    },
+    {
+      "identity": "S10_MITM_i39_r27",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 27,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990282
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990045
+        }
+      ],
+      "final_LSS_probability": 0.989962,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "ac4805959cdc261cd143a97659835d399586ec66696f316e00c178e513fb7503",
+      "trace_sha256": "78275ea448c17f49ef916cf1a1a3282e099a10f7e2420653ea74e730ea60168e"
+    },
+    {
+      "identity": "S10_MITM_i39_r28",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 28,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990096
+        },
+        {
+          "stage": "S10_pool_original_LSS_decision",
+          "probability": 0.990113
+        }
+      ],
+      "final_LSS_probability": 0.989897,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "74df8c811dfb9f61728f34191242e5fe07a6e0449785cd274a0f04f027415648",
+      "trace_sha256": "75c57cfeed56317d03b7d04d1bff8ad510bd569ca9d2e1741b67bf854d984d28"
+    },
+    {
+      "identity": "S10_MITM_i39_r29",
+      "case_index": 39,
+      "arm": "S10_MITM",
+      "rep": 29,
+      "full_empirical_certificate_lower": 0.990010398187955,
+      "full_empirical_certificate_upper": 0.9900480104647185,
+      "original_LSS_admissions_for_final_selection": [
+        {
+          "stage": "S10_result_to_LSS_initial",
+          "probability": 0.990137
+        }
+      ],
+      "final_LSS_probability": 0.989878,
+      "parametric_MC_probability_report": 0.9811833,
+      "realP_draws": 10000000,
+      "result_sha256": "42ed2372d9b77585f527d562993d1ae03575568212741d178c1ffb1aae4dbf09",
+      "trace_sha256": "e884efb60698e28d71c3ff17480f4645d054afce47dc33875a50ee33f4aee1de"
+    }
+  ]
+}

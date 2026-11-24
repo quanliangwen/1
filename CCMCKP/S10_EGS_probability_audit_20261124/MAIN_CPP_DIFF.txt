@@ -1,0 +1,68 @@
+--- uploaded_S10/main.cpp
++++ EGS/main.cpp
+@@ -13,6 +13,8 @@
+         "ccmckp_s10 --instance DIR --capacity T --seed N --out NEW_DIR [--rep N]\n"
+         "ccmckp_s10 --index 1..40 --rep 1..30 --benchmark-root DIR --out NEW_DIR\n"
+         "Options: --seconds 600 --local-phases none|pre|post|both\n"
++        "         --search-flow ellipsoid_oa|frontier_mitm --ellipsoid-gamma 2.4\n"
++        "         --ellipsoid-slice 5\n"
+         "         --search-only [--cases CASES.json] [--manifest BENCHMARK_MANIFEST.json]\n"
+         "Evaluation: --instance DIR --capacity T --seed N --evaluate ID,ID,...\n"
+         "            [--bins 4096] [--real] [--draws N] [--lss-repeats N]\n";
+@@ -65,7 +67,8 @@
+         std::map<std::string, std::string> args;
+         std::set<std::string> flags;
+         const std::set<std::string> keys{"instance", "capacity", "seed", "out", "index", "rep", "benchmark-root",
+-            "seconds", "local-phases", "cases", "manifest", "evaluate", "bins", "draws", "lss-repeats"};
++            "seconds", "local-phases", "cases", "manifest", "evaluate", "bins", "draws", "lss-repeats",
++            "search-flow", "ellipsoid-gamma", "ellipsoid-slice"};
+         for (int i = 1; i < argc; ++i) {
+             const std::string option = argv[i];
+             if (option == "--help") { usage(); return 0; }
+@@ -87,6 +90,13 @@
+         const auto local = arg("local-phases", "none");
+         if (local != "none" && local != "pre" && local != "post" && local != "both")
+             throw std::runtime_error("Invalid local phase option");
++        const std::string search_flow = arg("search-flow", "ellipsoid_oa");
++        if (search_flow != "ellipsoid_oa" && search_flow != "frontier_mitm")
++            throw std::runtime_error("Invalid search flow");
++        const double gamma = number(arg("ellipsoid-gamma", "2.4"));
++        const double slice = number(arg("ellipsoid-slice", "5"));
++        if (gamma < 0 || gamma > 100) throw std::runtime_error("ellipsoid-gamma must be 0..100");
++        if (slice < .1 || slice > 30) throw std::runtime_error("ellipsoid-slice must be .1..30 seconds");
+         const auto seconds = number(arg("seconds", "600"));
+         if (seconds < 30 || seconds > 600) throw std::runtime_error("seconds must be 30..600");
+ 
+@@ -152,13 +162,17 @@
+         if (!flags.count("--search-only")) lss.emplace(instance, capacity, seed);
+         const double search_started = now();
+         const double started = search_started - load_seconds;
+-        Search search(instance, {capacity, cap, seed, seconds, local, output / "S10_search.json"}, started);
++        Options search_options{capacity, cap, seed, seconds, local, output / "S10_search.json"};
++        search_options.search_flow = search_flow;
++        search_options.ellipsoid_gamma = gamma;
++        search_options.ellipsoid_slice = slice;
++        Search search(instance, search_options, started);
+         const auto raw = search.run();
+         const double elapsed = now() - started;
+         Json metadata = {{"schema", "S10_raw_constraint_portfolio_worker"}, {"elapsed", elapsed},
+             {"within_budget", elapsed <= seconds}, {"selected", raw.at("selected")},
+             {"seed", seed}, {"budget", seconds}, {"backend", "gurobi"}, {"local_phases", local},
+-            {"search_flow", "frontier_mitm"},
++            {"search_flow", search_flow}, {"ellipsoid_gamma", gamma}, {"ellipsoid_slice", slice},
+             {"phase_records", search.phase_records}, {"input_sha256", input_hashes}};
+         write_json(output / "S10_search.run.json", metadata);
+ 
+@@ -177,7 +191,11 @@
+                                  *lss, output, search_started + (now() - report_validation_start));
+             result["backend"] = "gurobi";
+             result["local_phases"] = local;
+-            result["arm"] = local == "none" ? "G_NONE" : "gurobi_" + local;
++            result["arm"] = search_flow == "frontier_mitm" ?
++                (local == "none" ? "G_NONE" : "gurobi_" + local) : "EGS_OA_" + local;
++            result["search_flow"] = search_flow;
++            result["ellipsoid_gamma"] = gamma;
++            result["ellipsoid_slice"] = slice;
+             if (index) result["case_index"] = index;
+             result["phase_records"] = search.phase_records;
+             result["raw_best_cost"] = raw.at("selected").at("cost");

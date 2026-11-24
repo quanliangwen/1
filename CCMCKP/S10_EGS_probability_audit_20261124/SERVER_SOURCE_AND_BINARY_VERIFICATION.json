@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "sources": {
+    "compiled_baseline_source": {
+      "evaluation.cpp": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "evaluation.hpp": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+      "report.cpp": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "report.hpp": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "model.cpp": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+      "model.hpp": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+      "rng.cpp": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+      "rng.hpp": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+      "normal.hpp": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+      "BENCHMARK_MANIFEST.json": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d"
+    },
+    "compiled_EGS_source": {
+      "evaluation.cpp": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "evaluation.hpp": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+      "report.cpp": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "report.hpp": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "model.cpp": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+      "model.hpp": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+      "rng.cpp": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+      "rng.hpp": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+      "normal.hpp": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+      "BENCHMARK_MANIFEST.json": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d"
+    },
+    "trial_candidate_source": {
+      "evaluation.cpp": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "evaluation.hpp": "2984b226bce88dfc9f656a93b03478f2cc0354186b0253add5371bb3b4198fd9",
+      "report.cpp": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "report.hpp": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "model.cpp": "eac2543909e8e23b5598e399fa9cd0f1b9889050fa1d9553a5f63fe6ae25b6b5",
+      "model.hpp": "fa6f696fded659cc85b29cb4c57b29c0e2e2b2155d5ec5674a3740b6531bf664",
+      "rng.cpp": "711aeeed07d3a8169b68c23058dd93164975d61a6b3698b6cc5844a818837b35",
+      "rng.hpp": "525862681c037e39a187dc4307c014bd0ecf9d415548f78307a1d45f60864836",
+      "normal.hpp": "c9c699dcbf0de8302b20e810b12420a3526401f8305a2f4f880cadeb016830b9",
+      "BENCHMARK_MANIFEST.json": "5461a20ccdb0b28d7dc6acffc0b6139a2f4c892ccc85e388bb53f8db5b98f89d"
+    }
+  },
+  "search_main_hashes": {
+    "baseline": {
+      "search.cpp": "4843f75ffa7d3fe1c394891b13f5ff69eb496b1dd440b65bd4fbeaf428c45f6a",
+      "main.cpp": "9a6a24b8376febee9b026b0d3e4a368e76661d4d5dfa2edc6c58a4434627b117"
+    },
+    "candidate": {
+      "search.cpp": "9a7af6de1da87258e80ca3b1f8a243e78c0be473ae388e54363f7238d015d75b",
+      "main.cpp": "d46a49b5262bedec6411cd5b2debaf926fa815be6518ff6739875d9f3d5109f2"
+    }
+  },
+  "binaries": {
+    "S10": "7b41bb322fff07600b79012ea24b28ef57c43104e8ad1ec39c40993bfa5ebb35",
+    "EGS": "00b5c08aa026e6e59df76d8ed7f5024657704ec0be3fb4b2bd3133b444b244c4"
+  },
+  "protocol_sha256": "5e6149537c897b751c47bfc3050b9f501ba928302745afb68f3183ce1665c4e4",
+  "all_270_source_input_pins_unchanged": true,
+  "read_only": true
+}
