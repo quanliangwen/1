@@ -1,0 +1,708 @@
+--- previous/CMakeLists.txt
++++ LSS_full_sample_v2/CMakeLists.txt
+@@ -16,6 +16,19 @@
+     target_compile_options(ccmckp_s10 PRIVATE -Wall -Wextra -ffp-contract=off)
+ else()
+     message(FATAL_ERROR "Use 64-bit GCC or Clang with unsigned __int128 support")
++endif()
++
++option(S10_BUILD_LSS_TESTS "Build full-sample/LSS-only regressions" OFF)
++if(S10_BUILD_LSS_TESTS)
++    enable_testing()
++    add_executable(lss_fix_test tests/lss_fix_test.cpp model.cpp rng.cpp evaluation.cpp report.cpp)
++    target_compile_features(lss_fix_test PRIVATE cxx_std_17)
++    target_compile_definitions(lss_fix_test PRIVATE S10_LSS_TESTING=1)
++    target_include_directories(lss_fix_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${S10_GMP_INCLUDE}")
++    target_link_libraries(lss_fix_test PRIVATE "${S10_GMPXX}" "${S10_GMP}")
++    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
++        target_compile_options(lss_fix_test PRIVATE -Wall -Wextra -ffp-contract=off)
++    endif()
+ endif()
+ 
+ find_path(S10_GUROBI_INCLUDE gurobi_c.h HINTS "${S10_GUROBI_ROOT}/include" REQUIRED)
+--- previous/evaluation.cpp
++++ LSS_full_sample_v2/evaluation.cpp
+@@ -265,7 +265,7 @@
+     if (!exact) {
+         Vector sums(draws);
+         for (int j : s)
+-            for (double& x : sums) x += instance.samples[j][numpy.below(L - 1)];
++            for (double& x : sums) x += instance.samples[j][numpy.below(L)];
+         return double(std::count_if(sums.begin(), sums.end(), [&](double x) { return x < capacity; })) / draws;
+     }
+ 
+--- previous/main.cpp
++++ LSS_full_sample_v2/main.cpp
+@@ -17,7 +17,7 @@
+         "         --ellipsoid-slice 5\n"
+         "         --search-only [--cases CASES.json] [--manifest BENCHMARK_MANIFEST.json]\n"
+         "Evaluation: --instance DIR --capacity T --seed N --evaluate ID,ID,...\n"
+-        "            [--bins 4096] [--real] [--draws N] [--lss-repeats N]\n";
++        "            [--bins 4096] [--draws N] [--lss-repeats N]\n";
+ }
+ 
+ unsigned long long natural(const std::string& text) {
+@@ -72,7 +72,7 @@
+         for (int i = 1; i < argc; ++i) {
+             const std::string option = argv[i];
+             if (option == "--help") { usage(); return 0; }
+-            if (option == "--search-only" || option == "--real") { flags.insert(option); continue; }
++            if (option == "--search-only") { flags.insert(option); continue; }
+             if (option.rfind("--", 0) != 0 || !keys.count(option.substr(2)) || i + 1 == argc)
+                 throw std::runtime_error("Unknown or incomplete option " + option);
+             if (!args.emplace(option.substr(2), argv[i + 1]).second)
+@@ -143,8 +143,6 @@
+             Json out = {{"grid", oracle.certify(s, static_cast<int>(bins)).json(s)},
+                         {"lss", samples}, {"lss_quick", lss.quick_checks()}, {"native_quick", probe.quick_checks()},
+                         {"pcg_int16_first_64", std::vector<std::uint16_t>(idx.begin(), preview_end)}};
+-            if (flags.count("--real")) out["real_probability"] = real_probability(
+-                instance, s, capacity, args.count("draws") ? draws : 10000000);
+             std::cout << out.dump() << '\n';
+             return 0;
+         }
+@@ -178,17 +176,8 @@
+ 
+         if (!metadata.at("within_budget").get<bool>()) throw std::runtime_error("S10 search exceeded its wall-clock budget");
+         if (lss) {
+-            const double report_validation_start = now();
+-            if (!manifest.empty()) {
+-                const auto registered = read_json(manifest).at(instance.name);
+-                for (int j = 0; j < instance.n(); ++j) {
+-                    const auto file = std::to_string(j) + "_dist.txt";
+-                    if (registered.at(file) != sha256(instance.path / file))
+-                        throw std::runtime_error("Frozen reporting input SHA256 mismatch: " + file);
+-                }
+-            }
+             auto result = report(instance, capacity, seed, static_cast<int>(rep), raw.at("candidate_shortlist"),
+-                                 *lss, output, search_started + (now() - report_validation_start));
++                                 *lss, output, search_started);
+             result["backend"] = "gurobi";
+             result["local_phases"] = local;
+             result["arm"] = search_flow == "frontier_mitm" ?
+@@ -202,7 +191,7 @@
+             result["S10_worker_search_seconds"] = elapsed;
+             result["S10_candidates"] = raw.at("candidate_shortlist").size();
+             result["S10_exhaustive"] = raw.at("exhaustive");
+-            result["wall_seconds_including_original_realP_reporting"] = now() - started;
++            result["wall_seconds_including_LSS"] = now() - started;
+             write_json(output / "RESULT.json", result);
+             std::cout << result.dump() << '\n';
+         } else std::cout << metadata.dump() << '\n';
+--- previous/README.md
++++ LSS_full_sample_v2/README.md
+@@ -1,105 +1,58 @@
+-# CCMCKP S10 C++ · EGS椭球引导搜索（统一验收）
++# S10 / EGS：全样本抽样与LSS统一验收修正版
+ 
+-本版本在用户上传的S10冻结源码基础上增加EGS椭球引导搜索。初始化、原始样本整数概率证书、LSS评价及报告保持原实现；只替换主候选生成搜索。默认使用 `ellipsoid_oa`、半径系数2.4、每次代理求解最多5秒、单线程、600秒搜索预算，前后局部搜索均关闭。原MITM搜索保留为显式对照选项。
++版本：2026-11-24，`S10_LSS_full_sample_v2`。一个C++程序提供原S10与椭球EGS两条主搜索，二者共用本次修正。
+ 
+-## 新算法与比较口径
++## 变更
+ 
+-每次从当前原始样本执行原 `init_frontier()`，禁止历史解或跨重复解输入。随后在当前搜索最好解的严格降本上界内，最小化 `mu'x + gamma*||diag(sqrt(v))*x||_2`。分组仍每组恰选一项，方差仍是原 `Instance` 的ddof=0定义。
++- LSS蒙特卡洛使用`numpy.below(L)`：500个样本抽取索引0—499；30个样本抽取0—29。
++- 搜索预筛中的同类PCG索引上界同步改为L；原始经验样本整数证书仍使用全部L样本。
++- 最终输出只以LSS概率`>=0.99`验收，仍沿用原LSS精确/蒙特卡洛分支、默认100万次MC及严格事件`sum<T`。
++- 保留原成本队列与概率队列每项两次复检的调用次数；不抽样到通过为止。每个方案以本次运行中最后一次LSS结果为唯一值，两队列和三个输出变体统一使用该值。
++- 修正概率队列复检写回错误，过滤所有最后LSS值低于0.99的方案。若成本队列无通过项，可使用本次概率队列已有的通过方案；若全部失败则写明原因并返回失败，不输出假成本或历史解。
++- 完全移除按`_dist.txt`生成样本的额外真实概率计算。程序不再读取该类文件；`--real`参数、JSON真实概率字段及CSV真实概率列已移除，`real_probability_reporting=false`。
++- 记录全部LSS调用和负观测，最终验收值可在`ORIGINAL_LSS_DECISION_TRACE.json`中追溯。
+ 
+-`ellipsoid.cpp` 使用Gurobi线性整数主模型、范数支撑平面及完整向量排除来生成候选。每次查询可以因时间片用尽而提前返回实际离散候选，其真实椭球风险单独计算；`proxy_optimal` 仅表示该次未访问代理子问题达到数值意义的最优，不是原CCMCKP全局最优。
+-
+-没有添加“椭球风险小于容量”的硬约束，也不以椭球评分拒绝原问题可行性。候选始终通过原 `native_check()`；只有原始样本整数证书下界满足0.99才进入原候选池。原接口返回未接受可能包含未判定情况，日志不将其提升为不可行证明。已处理完整向量的排除只是枚举去重，不推广成子集不可行割。
+-
+-原概率证书下的搜索最好解与最终LSS输出解分别记录。最终继续原短名单、LSS复评和三个输出变体；默认主结果仍是原成本优先变体。真实分布参数不用于搜索。
+-
+-半径2.4继承原S10初始化的工程系数，时间片5秒也是本版本预先固定的工程参数，均不是论文给出的普适最优设置或0.99置信保证。EGS不是一个更换最终约束的DRO模型。
+-
+-对照命令（使用相同算例、种子、预算，输出目录必须不同）：
+-
+-```sh
+-# 默认：椭球引导候选搜索
+-./build/ccmckp_s10 --index 11 --rep 1 --benchmark-root /path/to/benchmark --out egs_11_01
+-# 原S10 MITM主搜索
+-./build/ccmckp_s10 --index 11 --rep 1 --benchmark-root /path/to/benchmark --out baseline_11_01 --search-flow frontier_mitm
+-# 仅将新主搜索的波动项置零；共同初始化仍完全相同
+-./build/ccmckp_s10 --index 11 --rep 1 --benchmark-root /path/to/benchmark --out mean_11_01 --ellipsoid-gamma 0
+-```
+-
+-`--ellipsoid-gamma` 允许0..100，`--ellipsoid-slice` 允许0.1..30秒。默认试验采用2.4和5，不根据测试结果临时调参。旧默认流程可用 `--search-flow frontier_mitm` 显式恢复，未开启局部搜索时结果arm为 `G_NONE`；新流程为 `EGS_OA_none`，gamma独立记录。
+-
+-当前上传包的搜索计时仍为原S10定义：默认600秒搜索、内部预留45秒；搜索后的LSS复评和真实概率报告在搜索预算外。不能把完整进程称为严格600秒，也不能与另外修改过LSS时钟的版本混为同一冻结口径。
+-
+-文献、数学适配边界、校验范围见 `DESIGN_AND_REFERENCES.txt`、`SOURCE_DERIVATION.json` 和 `validation/`。本包不包含原始benchmark、许可证或历史解。
++原始经验样本证书保留为搜索内部判据；最终输出不叠加生成分布概率门槛。初始化仍由每次运行自行生成。MITM、椭球目标/OA、gamma和搜索预算政策保持原样；本次不作新的算法效果声明。
+ 
+ ## 编译
+ 
+-使用 64 位 GCC 或 Clang（需要 `unsigned __int128`）、CMake 3.20+ 和 GMP 开发库。编译必须提供 Gurobi C SDK 和对应运行库。运行到 MIP 阶段时需要有效的原生许可证。建议采用冻结登记的 Gurobi 13.0.1。Windows 运行时应将 Gurobi 的 `bin` 目录加入 `PATH`，Linux 应设置 Gurobi 运行库路径，并按服务器现有配置使用原生许可证。
++需要64位GCC或Clang、GMP/GMPXX及可用Gurobi C库/头文件。源码不附求解器或许可证。
+ 
+ ```sh
+-export GUROBI_HOME=/path/to/gurobi1301/linux64
+-export LD_LIBRARY_PATH="$GUROBI_HOME/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+-cmake --build build --config Release --target ccmckp_s10 -j
++cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DS10_GUROBI_ROOT=/path/to/gurobi
++cmake --build build --parallel 2
+ ```
+ 
+-GMP 位于非标准目录时，传入 `-DS10_GMP_ROOT=/path/to/gmp`。Windows 上可用 MSYS2 UCRT64 GCC，将 Gurobi SDK 根目录设为 `win64`，并将 CMake 生成器设为 `-G "MinGW Makefiles"`。
++也可分别设置`S10_GUROBI_INCLUDE`、`S10_GUROBI_LIBRARY`和`S10_GMP_ROOT`。本次实际服务器以Gurobi11.0.3编译并验证。
+ 
+-## 运行
+-
+-按登记运行第 21 个算例（`APP_3_5_30_`，`Tmax=21`）的第 1 次重复。输入校验使用随源码提供的算例清单，`--out` 指向新建的结果目录。
++## 两种搜索共用同一验收器
+ 
+ ```sh
+-./build/ccmckp_s10 --index 21 --rep 1 --benchmark-root /path/to/benchmark --out run_21_01
++# 原S10
++build/ccmckp_s10 --instance /data/LAB_50_10_500_ --capacity 63 --seed 960001 --rep 1 --seconds 600 --out new_run_S10 --search-flow frontier_mitm
++# 椭球EGS
++build/ccmckp_s10 --instance /data/LAB_50_10_500_ --capacity 63 --seed 960001 --rep 1 --seconds 600 --out new_run_EGS --search-flow ellipsoid_oa --ellipsoid-gamma 2.4
+ ```
+ 
+-也可直接指定原算例目录、容量和种子。以下命令只运行 S10 搜索并保存候选及证书。
++输出目录必须是新目录。默认流程为`ellipsoid_oa`；`--ellipsoid-gamma 0`可运行零风险项消融。未切换原600秒搜索、45秒余量的政策，LSS后处理仍在搜索时钟外。`--search-only`仅供内部搜索诊断，不产生通过最终LSS的正式输出。
++
++## 输出格式
++
++`RESULT.json`仅在有LSS通过解时生成。主输出`original_LSS_confidence>=0.99`，所有`original_output_variants`亦必须达到该阈值；同一选择在各变体中的概率一致。
++
++旧字段`recorded_real_probability`、变体`real_probability`不再存在。新版主CSV列为`Times,Cost,Confidence Level,Evaluation Times,Solution,Running Time`。`_record.csv`是历史入队记录，最终验收以RESULT和最终验收trace为准。
++
++## 针对性回归验证
+ 
+ ```sh
+-./build/ccmckp_s10 --instance /path/to/benchmark/LAB_3_5_30_ --capacity 14 --seed 960001 --out lab_14 --search-only
++cmake -S . -B build -DS10_GUROBI_ROOT=/path/to/gurobi -DS10_BUILD_LSS_TESTS=ON
++cmake --build build --parallel 2
++python tests/create_fixture.py build/fixtures/LAB_3_2_500_
++build/lss_fix_test build/fixtures/LAB_3_2_500_ build/unit_output
+ ```
+ 
+-Windows 上使用 `build\ccmckp_s10.exe`。原算例输入包括 `cost.txt`、`node_to_factor.pkl` 和各 `*_sample.txt`。程序直接读取冻结算例的整数列表 pickle。全流程仅在搜索结束后读取 `*_dist.txt` 并报告真实概率。
++测试覆盖最后一项可抽到、最后一个样本会影响LSS结果、后续失败覆盖先前通过、三变体使用同一最后LSS值、全部失败不输出、没有抽到通过为止。测试回调仅在独立测试目标启用，正式程序不包含该测试入口。
+ 
+-`--seconds` 支持 30 到 600 秒。`--local-phases pre|post|both` 可显式开启已有局部搜索阶段。主输出包括 `S10_search.json`、`S10_search.run.json`、`RESULT.json`、`ORIGINAL_LSS_DECISION_TRACE.json` 和 `result/Localsearch` 下的 CSV。`--search-only` 仅生成前两个 JSON。运行元数据的 `search_flow` 为实际选择的 `ellipsoid_oa` 或 `frontier_mitm`，兼容字段 `exhaustive` 和 `S10_exhaustive` 均为 `null`。
++服务器已额外完成原S10、EGS2.4、EGS0三条真实生产入口的微型集成测试，全部不提供`_dist.txt`，并验证JSON、CSV和最终trace。验证记录见发布目录。没有额外真实概率MC，没有重新运行270次大算例或全40例。
+ 
+-单独对照评估时，`--evaluate` 接收按分组顺序排列的因子编号，并输出网格整数证书、LSS 结果、快筛序列和 PCG64 索引预览。加 `--real` 可同时执行真实概率评估。
+-
+-```sh
+-./build/ccmckp_s10 --instance /path/to/benchmark/LAB_3_5_30_ --capacity 14 --seed 960001 --evaluate 12,1,5 --bins 4096 --real
+-```
+-
+-## 实现对应关系
+-
+-| 冻结 Python 实现 | C++ 实现 |
+-| --- | --- |
+-| `instance.py` | `model.cpp` 读取分组、样本和成本，保持分组顺序 |
+-| 原 `stable_solver.py`、`engine.py` | `search.cpp` 保留共同初始化、原MITM对照、局部搜索开关及短名单；新 `ellipsoid.cpp` 实现椭球代理外逼近 |
+-| `exact_oracle.py` | `evaluation.cpp` 实现十进制向上和向下量化、GMP 无进位整数多项式乘法及原始样本概率证书 |
+-| `gurobi_backend.py` | `mip.cpp` 通过原生 API 构建同一线性模型并逐次追加排除约束 |
+-| `native_support.py` 和 `engine.py` 的随机初始化 | `rng.cpp` 和 `evaluation.cpp` 复现 NumPy SeedSequence、PCG64、整数采样和快筛排列 |
+-| `func_cl_estimator.py` 和 `Factor.resample_multi` | `evaluation.cpp` 复现 CPython `random.choice`、NumPy `RandomState`、LSS 快筛、堆评估及蒙特卡洛重采样 |
+-| `s10_lss_bridge.py`、`func_localsearch.py` 的输出段 | `report.cpp` 按成本顺序评估候选、复评两类队列并输出原来的三个变体 |
+-| `real_P_test` 和 LAB/APP 分布函数 | `report.cpp`、`normal.hpp`、`rng.cpp` 复现固定种子 832273 的五类分布和 1000 万次真实概率统计 |
+-
+-Gurobi 使用单线程、登记的种子及零相对 MIP gap，并在每次求解后加入排除约束。许可证或原生求解调用失败时，程序记录错误并退出。
+-
+-原始样本证书和 LSS 重采样采用 `sum < T`，真实概率报告采用 `sum <= T`。LSS 重采样保留 `randint(0, L-1)` 的上界排除语义。整数证书包含所有原始样本，并用整数交叉相乘判定 0.99 阈值。浮点 FFT、矩阵点积和壁钟预算会影响大算例的候选排序与搜索进度，完整搜索轨迹的逐步一致性需要在相同 Gurobi 版本和环境下另行验证。
+-
+-## 小型验证
+-
+-```sh
+-cmake -S . -B build -DS10_BUILD_EGS_TESTS=ON
+-cmake --build build -j2
+-python3 tests/check.py --binary build/ccmckp_s10 --math-binary build/egs_math_test --workdir /path/to/new_tiny_check
+-```
+-
+-该检查创建合成小数据，完整枚举8个选择检验代理风险排序，并用Fraction枚举27000种样本组合核对证书上下界；不运行原始benchmark或额外原生MC。
+-
+-本次交付已在服务器原生Gurobi11.0.3/GCC环境完成数学检查与四条完整合成流水线，原版与显式MITM对照的语义结果一致，详见 `validation/VALIDATION_FINAL.json`。Windows/Gurobi13.0.1接口编译通过，但本机现有PIP限定许可不能用于原生C++运行，未声称Windows运行通过。若正式性能对照采用13.0.1，应在相同完整许可及版本下另行登记；本次不构成40例30次的性能验证。
+-
+-原合成夹具发现时间字段比较错误的首轮记录保存在 `validation/synthetic/VALIDATION.json`，最终语义审计只忽略 `found_seconds`、`certificate_seconds` 两类实际耗时，未改结果或重跑种子。详见 `validation/PREPARATION_NOTES.txt`。
+-
+-## 第三方代码
+-
+-`third_party/` 包含 PocketFFT、nlohmann/json 和 PicoSHA2 单头文件。NumPy 1.24.4 的随机数与间接分区代码，以及 SciPy 1.10.1 的 Cephes 逆正态系数，在相应模块中注明来源。许可证随源码提供。
+-
++旧试验及旧源码保持不变。新旧LSS抽样范围和最终验收行为不同，后续性能比较应使用本修正版在同批新运行中对照，不混用旧成绩。
+--- previous/report.cpp
++++ LSS_full_sample_v2/report.cpp
+@@ -1,289 +1,166 @@
+ #include "report.hpp"
+-#include "normal.hpp"
++#include <algorithm>
+ #include <cmath>
++#include <cctype>
+ #include <fstream>
++#include <functional>
+ #include <iomanip>
+-#include <limits>
+ #include <map>
++#include <set>
+ #include <sstream>
+ #include <tuple>
+ 
+ namespace s10 {
+ namespace {
+-using ccmckp::LegacyRandom;
+-
+-double log_phi(double x) {
+-    constexpr double sqrt2 = 1.41421356237309504880;
+-    if (x > 0) return std::log1p(-.5 * std::erfc(x / sqrt2));
+-    if (x > -37) return std::log(.5 * std::erfc(-x / sqrt2));
+-    if (std::isinf(x)) return x;
+-    // Mills ratio expansion in the far left tail.
+-    const double inv = 1 / (x * x);
+-    const double correction = inv * (-1 + inv * (3 + inv * (-15 + inv * (105 + inv * (-945 + inv * 10395)))));
+-    return -.5 * x * x - std::log(-x) - .91893853320467274178 + std::log1p(correction);
+-}
+-
+-double log_add(double a, double b) {
+-    if (a < b) std::swap(a, b);
+-    return a == -std::numeric_limits<double>::infinity() ? a : a + std::log1p(std::exp(b - a));
+-}
+-
+-class TruncatedNormal {
+-public:
+-    TruncatedNormal(double mean, double deviation, double ceiling)
+-        : mean(mean), deviation(deviation) {
+-        const double a = -mean / deviation, b = (ceiling - mean) / deviation;
+-        if (!(deviation > 0 && a < b)) throw std::runtime_error("Invalid truncated-normal parameters");
+-        right = a >= 0;
+-        if (b <= 0 || a > 0) {
+-            const double hi = log_phi(b <= 0 ? b : -a);
+-            const double lo = log_phi(b <= 0 ? a : -b);
+-            log_mass = hi + std::log(-std::expm1(lo - hi));
+-        } else {
+-            constexpr double sqrt2 = 1.41421356237309504880;
+-            log_mass = std::log1p(-.5 * std::erfc(-a / sqrt2) - .5 * std::erfc(b / sqrt2));
+-        }
+-        edge = log_phi(right ? -b : a);
+-    }
+-
+-    double draw(LegacyRandom& rng) const {
+-        const double u = rng.uniform();
+-        const double log_p = log_add(edge, (right ? std::log1p(-u) : std::log(u)) + log_mass);
+-        const double z = normal_inverse_log(log_p);
+-        return (right ? -z : z) * deviation + mean;
+-    }
+-private:
+-    double mean, deviation, log_mass, edge;
+-    bool right;
+-};
+-
+-struct Distribution {
+-    std::string name;
+-    double mean, variance;
+-    int component = 0;
+-};
+-
+-Distribution load_distribution(const fs::path& file) {
+-    std::ifstream input(file);
+-    if (!input) throw std::runtime_error("Cannot read " + file.string());
+-    std::vector<std::string> values;
+-    for (std::string line; std::getline(input, line);) {
+-        std::istringstream words(line);
+-        std::string label, value;
+-        if (words >> label >> value) values.push_back(value);
+-    }
+-    Distribution d{values.at(0), std::stod(values.at(1)), std::stod(values.at(2))};
+-    if (d.name == "bimodal") d.component = std::stoi(values.at(5));
+-    return d;
+-}
+-
+-Vector draw_factor(const Distribution& d, bool app, std::size_t n, LegacyRandom& rng) {
+-    Vector values;
+-    values.reserve(n);
+-    const double mu = d.mean, v = d.variance;
+-    const double ceiling = app ? 10. : std::numeric_limits<double>::infinity();
+-    const auto trunc = [&](std::size_t count, double location, double sd) {
+-        const TruncatedNormal distribution(location, sd, ceiling);
+-        for (std::size_t j = 0; j < count; ++j) values.push_back(distribution.draw(rng));
+-    };
+-    std::size_t tail_draws = n;
+-    if (d.name == "uniform") {
+-        for (std::size_t j = 0; j < n; ++j) values.push_back((app ? 10. : 2 * mu) * rng.uniform());
+-    } else if (d.name == "fatiguelife") {
+-        const double root = std::sqrt(mu * mu + 3 * v);
+-        const double scale = (4 * mu - root) / 3;
+-        const double shape = std::sqrt(2 * (root - mu) / (4 * mu - root));
+-        tail_draws = 0;
+-        for (std::size_t j = 0; j < (app ? 2 * n : n); ++j) {
+-            const double x = .5 * shape * rng.normal(), x2 = x * x;
+-            const double value = (1. + 2 * x2 + 2 * x * std::sqrt(1 + x2)) * scale;
+-            if (app && value > 10) continue;
+-            if (values.size() < n) values.push_back(value);
+-            ++tail_draws;
+-        }
+-        if (values.size() != n) throw std::runtime_error("APP fatigue-life retained fewer samples than requested");
+-    } else if (d.name == "bimodal") {
+-        const double sd = std::sqrt(v);
+-        const double p = d.component == 0 ? .6 : d.component == 1 ? .4 : .5;
+-        std::size_t first = 0;
+-        for (std::size_t j = 0; j < n; ++j) first += rng.uniform() < p;
+-        const double a = d.component == 0 ? mu + sd / 2 : d.component == 1 ? mu + 3 * sd / 2 : mu + sd;
+-        const double b = d.component == 0 ? mu - 3 * sd / 2 : d.component == 1 ? mu - sd / 2 : mu - sd;
+-        const double sigma = d.component <= 1 ? sd / 2 : sd / 4;
+-        trunc(first, a, sigma);
+-        trunc(n - first, b, sigma);
+-    } else if (d.name == "gamma") {
+-        const double alpha = mu * mu / v, beta = mu / (v * 1000.);
+-        if (!(alpha > 0 && beta > 0)) throw std::runtime_error("Invalid gamma parameters");
+-        for (std::size_t j = 0; j < n; ++j) values.push_back(((1 / beta) * rng.gamma(alpha)) / 1000.);
+-        return values;
+-    } else {
+-        trunc(n, mu, std::sqrt(v));
+-    }
+-    if (app) {
+-        const double first = .9, second = first + .09, third = second + .009, total = third + .001;
+-        for (std::size_t j = 0; j < tail_draws; ++j) {
+-            const double u = rng.uniform();
+-            if (j < n) values[j] += u < first / total ? 0 : u < second / total ? 10 : u < third / total ? 20 : 30;
+-        }
+-    }
+-    return values;
+-}
+-
+-struct Row {
+-    Selection selection;
+-    double cost, probability;
+-    std::size_t evaluation;
+-};
++struct Row { Selection selection; double cost, probability; std::size_t evaluation; };
+ bool by_cost_queue(const Row& a, const Row& b) {
+     if (a.cost != b.cost) return a.cost < b.cost;
+     return a.selection > b.selection;
+ }
+ bool by_probability_queue(const Row& a, const Row& b) {
+-    return std::tie(a.probability, a.cost, a.selection) > std::tie(b.probability, b.cost, b.selection);
++    return std::tie(a.probability,a.cost,a.selection)>std::tie(b.probability,b.cost,b.selection);
+ }
++bool accepted(double p) { return std::isfinite(p) && p >= .99 && p <= 1.; }
+ Json as_json(const Row& row) {
+-    return {{"selection", row.selection}, {"cost", row.cost}, {"probability", row.probability}};
++    return {{"selection",row.selection},{"cost",row.cost},{"probability",row.probability}};
+ }
+-std::string csv_selection(const Selection& s) {
+-    return "\"" + Json(s).dump() + "\"";
++std::string csv_selection(const Selection& s) { return "\""+Json(s).dump()+"\""; }
++
++Json report_impl(const Instance& instance, double capacity, std::uint32_t seed, int repetition,
++                 const Json& shortlist,
++                 const std::function<double(const Selection&)>& evaluate_probability,
++                 const fs::path& directory, double search_started) {
++    Json trace=Json::array();std::size_t evaluations=0;
++    std::map<Selection,Row> latest;
++    const auto evaluate=[&](const Selection& s,const char* stage) {
++        instance.validate(s);
++        Row row{s,instance.lss_cost(s),evaluate_probability(s),++evaluations};
++        latest.insert_or_assign(s,row);
++        trace.push_back({{"evaluation",evaluations},{"stage",stage},{"selection",s},
++                         {"cost",row.cost},{"probability",row.probability}});
++        return row;
++    };
++    const auto fail=[&](const char* reason) {
++        trace.push_back({{"stage","LSS_final_failure"},{"reason",reason}});
++        write_json(directory/"ORIGINAL_LSS_DECISION_TRACE.json",trace);
++        throw std::runtime_error(reason);
++    };
++    std::vector<Row> cost,mc,records;
++    const auto push=[&](const Row& row) {
++        const auto duplicate=[&](const Row& other){return other.selection==row.selection;};
++        if(std::none_of(mc.begin(),mc.end(),duplicate)) {
++            mc.push_back(row);
++            if(mc.size()>30) {
++                std::stable_sort(mc.begin(),mc.end(),[](const Row& a,const Row& b) {
++                    if(a.probability!=b.probability)return a.probability>b.probability;
++                    return a.cost<b.cost;
++                });mc.pop_back();
++            }
++        }
++        if(std::none_of(cost.begin(),cost.end(),duplicate)) {
++            cost.push_back(row);std::sort(cost.begin(),cost.end(),by_cost_queue);
++            if(cost.size()>30)cost.pop_back();
++        }
++    };
++    for(const auto& candidate:shortlist) {
++        const auto row=evaluate(candidate.at("selection").get<Selection>(),"S10_result_to_LSS_initial");
++        if(accepted(row.probability)){push(row);records.push_back(row);break;}
++    }
++    if(records.empty())fail("No S10-generated candidate passes original LSS decision");
++    for(const auto& candidate:shortlist) {
++        const auto row=evaluate(candidate.at("selection").get<Selection>(),"S10_pool_original_LSS_decision");
++        if(accepted(row.probability)){push(row);records.push_back(row);}
++    }
++    // Preserve both original recheck calls per queue entry, without resampling
++    // until a pass. Every call is logged, including negative observations.
++    for(auto& row:cost) {
++        evaluate(row.selection,"LSS_cost_recheck_warmup");
++        row=evaluate(row.selection,"LSS_cost_recheck_final");
++    }
++    std::sort(mc.begin(),mc.end(),by_probability_queue);
++    for(std::size_t j=0;j<mc.size();++j) {
++        evaluate(mc[j].selection,"LSS_probability_recheck_warmup");
++        mc[j]=evaluate(mc[j].selection,"LSS_probability_recheck_final");
++    }
++    // One authoritative last LSS result per solution, shared by all outputs.
++    std::set<Selection> audited;
++    const auto filter=[&](std::vector<Row>& rows) {
++        for(auto& row:rows) {
++            row=latest.at(row.selection);
++            if(audited.insert(row.selection).second)
++                trace.push_back({{"stage","LSS_final_acceptance"},{"selection",row.selection},
++                    {"probability",row.probability},{"accepted",accepted(row.probability)},
++                    {"source_evaluation",row.evaluation}});
++        }
++        rows.erase(std::remove_if(rows.begin(),rows.end(),[](const Row& row){return !accepted(row.probability);}),rows.end());
++    };
++    filter(cost);filter(mc);
++    if(cost.empty()&&!mc.empty())cost=mc; // Same-run already validated fallback.
++    if(cost.empty())fail("No candidate passes final LSS acceptance (P >= 0.99)");
++    std::sort(cost.begin(),cost.end(),by_cost_queue);
++    std::sort(mc.begin(),mc.end(),by_probability_queue);
++    Row second=cost.front();
++    for(const auto& row:cost) {
++        if(row.probability>=second.probability)second=row;
++        if(row.probability>=.995)break;
++    }
++    std::map<Selection,std::pair<double,Row>> ranking;
++    for(std::size_t i=0;i<cost.size();++i)ranking[cost[i].selection]={.7*(30-i),cost[i]};
++    for(std::size_t i=0;i<mc.size();++i) {
++        auto& [score,row]=ranking[mc[i].selection];score+=(1-.7)*(30-i);row=mc[i];
++    }
++    const auto rank=[](const auto& a) {
++        const auto& [score,row]=a.second;return std::make_tuple(score,row.cost,row.probability,row.selection);
++    };
++    const auto weighted=std::max_element(ranking.begin(),ranking.end(),[&](const auto& a,const auto& b){return rank(a)<rank(b);})->second.second;
++    const double elapsed=now()-search_started;
++    const auto output=directory/"result"/"Localsearch";fs::create_directories(output);
++    std::string name=instance.name;for(char& ch:name)ch=static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
++    std::ostringstream threshold;threshold<<std::setprecision(15)<<capacity;
++    const std::string stem="LocalSearch_"+name+threshold.str();
++    const auto csv=[&](const std::string& suffix,const char* header) {
++        std::ofstream file(output/(stem+suffix+".csv"),std::ios::binary);
++        if(!file)throw std::runtime_error("Cannot create LSS CSV");
++        file<<std::setprecision(17)<<header<<"\r\n";return file;
++    };
++    Json variants=Json::array();const Row outputs[]={cost.front(),second,weighted};
++    for(int i=0;i<3;++i) {
++        const auto& row=outputs[i];
++        if(!accepted(row.probability))throw std::logic_error("Final LSS invariant violated");
++        auto file=csv("_"+std::to_string(i),"Times,Cost,Confidence Level,Evaluation Times,Solution,Running Time");
++        file<<repetition-1<<','<<row.cost<<','<<row.probability<<','<<evaluations<<','<<csv_selection(row.selection)<<','<<elapsed<<"\r\n";
++        variants.push_back(as_json(row));
++    }
++    auto top=csv("_3","Cost,Confidence Level,Solution,Running Time");
++    auto record=csv("_record","Times,Cost,Confidence Level,Solution");
++    if(repetition==1) {
++        for(std::size_t i=0;i<std::min<std::size_t>(10,cost.size());++i) {
++            const auto& row=cost[i];top<<row.cost<<','<<row.probability<<','<<csv_selection(row.selection)<<','<<elapsed<<"\r\n";
++        }
++        for(const auto& row:records)record<<row.evaluation<<','<<row.cost<<','<<row.probability<<','<<csv_selection(row.selection)<<"\r\n";
++    }
++    write_json(directory/"ORIGINAL_LSS_DECISION_TRACE.json",trace);
++    const auto& main=variants[0];
++    return {{"schema","S10_LSS_full_sample_v2"},{"status","completed"},{"instance",instance.name},
++        {"capacity",capacity},{"search_seed",seed},{"rep",repetition},{"cost",main["cost"]},
++        {"selection",main["selection"]},{"original_LSS_confidence",main["probability"]},
++        {"acceptance_evaluator","LSS"},{"acceptance_threshold",.99},{"final_lss_enforced",true},
++        {"lss_sample_index_min",0},{"lss_sample_index_max",instance.sample_count-1},
++        {"real_probability_reporting",false},{"original_mainflow_search_seconds",elapsed},
++        {"original_output_variants",variants},{"evaluation_times",evaluations}};
+ }
+ } // namespace
+ 
+-double real_probability(const Instance& instance, const Selection& selection, double capacity, std::size_t draws) {
+-    instance.validate(selection);
+-    const bool app = instance.name.rfind("APP_", 0) == 0;
+-    if (!app && instance.name.rfind("LAB_", 0) != 0) throw std::runtime_error("Expected LAB_ or APP_ instance for real P");
+-    LegacyRandom rng(832273);
+-    Vector sums(draws);
+-    for (int item : selection) {
+-        const auto values = draw_factor(load_distribution(instance.path / (std::to_string(item) + "_dist.txt")), app, draws, rng);
+-        for (std::size_t i = 0; i < draws; ++i) sums[i] += values[i];
+-    }
+-    return double(std::count_if(sums.begin(), sums.end(), [&](double x) { return x <= capacity; })) / draws;
++Json report(const Instance& instance,double capacity,std::uint32_t seed,int repetition,
++            const Json& shortlist,LssEvaluator& evaluator,const fs::path& directory,double search_started) {
++    return report_impl(instance,capacity,seed,repetition,shortlist,
++        [&](const Selection& s){return evaluator.evaluate(s);},directory,search_started);
+ }
+-
+-Json report(const Instance& instance, double capacity, std::uint32_t seed, int repetition,
+-            const Json& shortlist, LssEvaluator& evaluator, const fs::path& directory,
+-            double search_started) {
+-    Json trace = Json::array();
+-    std::size_t evaluations = 0;
+-    const auto evaluate = [&](const Selection& s, const char* stage) {
+-        const double p = evaluator.evaluate(s);
+-        ++evaluations;
+-        if (stage) trace.push_back({{"stage", stage}, {"selection", s}, {"probability", p}});
+-        return Row{s, instance.lss_cost(s), p, evaluations};
+-    };
+-    std::vector<Row> cost, mc, records;
+-    const auto push = [&](const Row& row) {
+-        const auto duplicate = [&](const Row& other) { return other.selection == row.selection && other.cost == row.cost; };
+-        if (std::none_of(mc.begin(), mc.end(), duplicate)) {
+-            mc.push_back(row);
+-            if (mc.size() > 30) {
+-                std::stable_sort(mc.begin(), mc.end(), [](const Row& a, const Row& b) {
+-                    if (a.probability != b.probability) return a.probability > b.probability;
+-                    return a.cost < b.cost;
+-                });
+-                mc.pop_back();
+-            }
+-        }
+-        if (std::none_of(cost.begin(), cost.end(), duplicate)) {
+-            cost.push_back(row);
+-            std::sort(cost.begin(), cost.end(), by_cost_queue);
+-            if (cost.size() > 30) cost.pop_back();
+-        }
+-    };
+-    for (const auto& candidate : shortlist) {
+-        const auto row = evaluate(candidate.at("selection").get<Selection>(), "S10_result_to_LSS_initial");
+-        if (row.probability >= .99) { push(row); records.push_back(row); break; }
+-    }
+-    if (records.empty()) {
+-        write_json(directory / "ORIGINAL_LSS_DECISION_TRACE.json", trace);
+-        throw std::runtime_error("No S10-generated candidate passes original LSS decision");
+-    }
+-    for (const auto& candidate : shortlist) {
+-        const auto row = evaluate(candidate.at("selection").get<Selection>(), "S10_pool_original_LSS_decision");
+-        if (row.probability >= .99) { push(row); records.push_back(row); }
+-    }
+-    for (auto& row : cost) {
+-        evaluate(row.selection, nullptr);
+-        row.probability = evaluate(row.selection, nullptr).probability;
+-    }
+-    std::sort(mc.begin(), mc.end(), by_probability_queue);
+-    // The frozen Python update writes the recheck result into Mlist[i], where
+-    // i is the final index of the preceding cost loop. Preserve that behavior.
+-    for (std::size_t j = 0; j < mc.size(); ++j) {
+-        evaluate(mc[j].selection, nullptr);
+-        mc.at(cost.size() - 1).probability = evaluate(mc[j].selection, nullptr).probability;
+-    }
+-    std::sort(mc.begin(), mc.end(), by_probability_queue);
+-    Row second = cost.front();
+-    for (const auto& row : cost) {
+-        if (row.probability >= second.probability) second = row;
+-        if (row.probability >= .995) break;
+-    }
+-    std::map<Selection, std::pair<double, Row>> ranking;
+-    for (std::size_t i = 0; i < cost.size(); ++i) ranking[cost[i].selection] = {.7 * (30 - i), cost[i]};
+-    for (std::size_t i = 0; i < mc.size(); ++i) {
+-        auto& [score, row] = ranking[mc[i].selection];
+-        score += (1 - .7) * (30 - i);
+-        row = mc[i];
+-    }
+-    const auto rank = [](const auto& a) {
+-        const auto& [score, row] = a.second;
+-        return std::make_tuple(score, row.cost, row.probability, row.selection);
+-    };
+-    const auto weighted = std::max_element(ranking.begin(), ranking.end(),
+-        [&](const auto& a, const auto& b) { return rank(a) < rank(b); })->second.second;
+-    const double elapsed = now() - search_started;
+-    const auto output = directory / "result" / "Localsearch";
+-    fs::create_directories(output);
+-    std::string name = instance.name;
+-    for (char& ch : name) ch = static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
+-    std::ostringstream threshold;
+-    threshold << std::setprecision(15) << capacity;
+-    const std::string stem = "LocalSearch_" + name + threshold.str();
+-    const auto csv = [&](const std::string& suffix, const char* header) {
+-        std::ofstream file(output / (stem + suffix + ".csv"), std::ios::binary);
+-        if (!file) throw std::runtime_error("Cannot create LSS CSV");
+-        file << std::setprecision(17) << header << "\r\n";
+-        return file;
+-    };
+-    std::map<Selection, double> truth;
+-    const auto real = [&](const Selection& s) {
+-        auto [it, fresh] = truth.try_emplace(s);
+-        if (fresh) it->second = real_probability(instance, s, capacity);
+-        return it->second;
+-    };
+-    Json variants = Json::array();
+-    const Row outputs[] = {cost.front(), second, weighted};
+-    for (int i = 0; i < 3; ++i) {
+-        const auto& row = outputs[i];
+-        const double real_p = real(row.selection);
+-        auto file = csv("_" + std::to_string(i), "Times,Cost,Confidence Level,Evaluation Times,Solution,Real Confidence Level,Running Time");
+-        file << repetition - 1 << ',' << row.cost << ',' << row.probability << ',' << evaluations << ','
+-             << csv_selection(row.selection) << ',' << real_p << ',' << elapsed << "\r\n";
+-        auto variant = as_json(row);
+-        variant["real_probability"] = real_p;
+-        variants.push_back(variant);
+-    }
+-    auto top = csv("_3", "Cost,Confidence Level,Solution,Real Confidence Level,Running Time");
+-    auto record = csv("_record", "Times,Cost,Confidence Level,Solution");
+-    if (repetition == 1) {
+-        for (std::size_t i = 0; i < std::min<std::size_t>(10, cost.size()); ++i) {
+-            const auto& row = cost[i];
+-            top << row.cost << ',' << row.probability << ',' << csv_selection(row.selection) << ','
+-                << real(row.selection) << ',' << elapsed << "\r\n";
+-        }
+-        for (const auto& row : records)
+-            record << row.evaluation << ',' << row.cost << ',' << row.probability << ',' << csv_selection(row.selection) << "\r\n";
+-    }
+-    write_json(directory / "ORIGINAL_LSS_DECISION_TRACE.json", trace);
+-    const auto& main = variants[0];
+-    return {{"status", "completed"}, {"instance", instance.name}, {"capacity", capacity},
+-        {"search_seed", seed}, {"rep", repetition}, {"cost", main["cost"]}, {"selection", main["selection"]},
+-        {"original_LSS_confidence", main["probability"]}, {"recorded_real_probability", main["real_probability"]},
+-        {"original_mainflow_search_seconds", elapsed}, {"original_output_variants", variants},
+-        {"evaluation_times", evaluations}};
++#ifdef S10_LSS_TESTING
++Json test_report(const Instance& instance,double capacity,std::uint32_t seed,int repetition,
++                 const Json& shortlist,const std::function<double(const Selection&)>& evaluator,
++                 const fs::path& directory,double search_started) {
++    return report_impl(instance,capacity,seed,repetition,shortlist,evaluator,directory,search_started);
+ }
++#endif
+ } // namespace s10
+--- previous/report.hpp
++++ LSS_full_sample_v2/report.hpp
+@@ -1,10 +1,14 @@
+ #pragma once
+ #include "evaluation.hpp"
+-
++#ifdef S10_LSS_TESTING
++#include <functional>
++#endif
+ namespace s10 {
+-double real_probability(const Instance& instance, const Selection& selection, double capacity,
+-                        std::size_t draws = 10000000);
+ Json report(const Instance& instance, double capacity, std::uint32_t seed, int repetition,
+             const Json& shortlist, LssEvaluator& evaluator, const fs::path& directory,
+             double search_started);
++#ifdef S10_LSS_TESTING
++Json test_report(const Instance&, double, std::uint32_t, int, const Json&,
++                 const std::function<double(const Selection&)>&, const fs::path&, double);
++#endif
+ } // namespace s10
+--- previous/search.cpp
++++ LSS_full_sample_v2/search.cpp
+@@ -67,7 +67,7 @@
+       oracle(instance, this->options.capacity_text), model(instance, this->options.seed),
+       checks(native_checks(instance.sample_count, instance.m())) {
+     ccmckp::Pcg64 rng(this->options.seed);
+-    indices = rng.integers16(static_cast<std::uint16_t>(instance.sample_count - 1), std::size_t(instance.m()) * 60000);
++    indices = rng.integers16(static_cast<std::uint16_t>(instance.sample_count), std::size_t(instance.m()) * 60000);
+ }
+ 
+ Json Search::Candidate::json() const {
+@@ -580,7 +580,7 @@
+         {"runtime_before_save", now() - started},
+         {"config", {{"nominal_CL", .99}, {"raw_threshold", ".99"}, {"all_original_samples", true},
+             {"tail_hard_gate", false}, {"tail_changes_to_input", false}, {"tail_use", "removed_entirely"},
+-            {"external_MC_seed", 832273}, {"external_MC_draws", 10000000},
++            {"real_probability_reporting", false}, {"sampling_population", "all_L_samples"},
+             {"no_dist_metadata_in_optimizer", true}, {"no_cross_run_solutions", true},
+             {"search_budget", options.seconds}, {"validation_outside_search_clock", true},
+             {"ellipsoid_is_final_constraint", false}, {"ellipsoid_gamma", options.ellipsoid_gamma},

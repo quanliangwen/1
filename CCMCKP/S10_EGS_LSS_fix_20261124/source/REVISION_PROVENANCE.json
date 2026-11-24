@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "parent_source_commit": "4fadf036407a938aeab96412962f53199428ed47",
+  "change_date": "2026-11-24",
+  "final_acceptance": "last LSS probability >= 0.99",
+  "real_probability_calculation_removed": true,
+  "same_revision_for_S10_and_EGS": true,
+  "changed_existing_files": {
+    "CHECKSUMS_SHA256.json": {
+      "before": "9a9fab0ef04970e808bc6b684e90da50e8df77377af93c32c353a89f7c5aade3",
+      "after": "ad5667b545bbc2680e444bc6b7a82c2001736e4ee4890d5c60dfd7ce3b76104d"
+    },
+    "CMakeLists.txt": {
+      "before": "1b366b4d6456332ada41ee640979291f3d7d5b5870e1e09706a004a13252b0f7",
+      "after": "3d361c1224c0c789b91f78058f3f2cab2b727a09e23dcc47433c5c00b1ce4518"
+    },
+    "evaluation.cpp": {
+      "before": "07a81ee3a1df0cdae4f9488fa2f0bdbea16108fc1445507b2564d0febc1a950c",
+      "after": "0efbe4c0832e574b2c0aab87fd5890ee647cf333820dfac72a46dfb6fefef1ff"
+    },
+    "main.cpp": {
+      "before": "d46a49b5262bedec6411cd5b2debaf926fa815be6518ff6739875d9f3d5109f2",
+      "after": "94770f7d3ceba33081eb9f7a2ed55555a5d08e4f219246b42461343075e73039"
+    },
+    "README.md": {
+      "before": "782fcb9084be8f3212ab8035dead8d51bf1f49aa225d999f491ef2d1befed5ea",
+      "after": "0d310760aae39329fd32566135dcc9b3051db4d5aff1111c1522f9a96a7ef023"
+    },
+    "report.cpp": {
+      "before": "575e4b942390e15ffd6d56a1e381798758c0863bbefa173a486ef542dc62ab25",
+      "after": "b4a1bf47b8372e7246e0c4b16f303074ccfb102a35f22a7d626b5d90b38860e3"
+    },
+    "report.hpp": {
+      "before": "781a432462142157e7e88dfe5d00fb39c1ffe263850b534f61ffec6db59db889",
+      "after": "65b7318aadd2e697ed50b724d7b6fde4eac6158115304fb91e5553f3cafc9e93"
+    },
+    "search.cpp": {
+      "before": "9a7af6de1da87258e80ca3b1f8a243e78c0be473ae388e54363f7238d015d75b",
+      "after": "721e32361e11bddb934a7ac58d79d7d87fc8fa62b1fc26f6ceb0a9556cb0b9bd"
+    }
+  },
+  "compiled_binary_sha256": "ae4a5d663a5efdd8bf99f1d78c48c5606e75538cbb07ec513ccb09778854b574",
+  "tests": "validation/VALIDATION.json",
+  "old_benchmark_results_untouched": true,
+  "new_large_benchmark_started": false
+}
