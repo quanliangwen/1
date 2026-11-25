@@ -1,0 +1,115 @@
+{
+  "scope": "exploratory adaptive revisions, not confirmatory validation",
+  "family_size": 18,
+  "incomplete_old_DC_tests_reserved_at_1": true,
+  "tests": [
+    {
+      "trial": "CF",
+      "case": 19,
+      "raw_p": 1.0,
+      "cumulative_holm18": 1.0
+    },
+    {
+      "trial": "CF",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm18": 6.866455078125e-05
+    },
+    {
+      "trial": "CF",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 19,
+      "raw_p": null,
+      "cumulative_holm18": null
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 35,
+      "raw_p": null,
+      "cumulative_holm18": null
+    },
+    {
+      "trial": "paused_DC_reserved",
+      "case": 39,
+      "raw_p": null,
+      "cumulative_holm18": null
+    },
+    {
+      "trial": "DC2",
+      "case": 19,
+      "raw_p": 1.0,
+      "cumulative_holm18": 1.0
+    },
+    {
+      "trial": "DC2",
+      "case": 35,
+      "raw_p": 1.0,
+      "cumulative_holm18": 1.0
+    },
+    {
+      "trial": "DC2",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "CP",
+      "case": 19,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "CP",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm18": 6.866455078125e-05
+    },
+    {
+      "trial": "CP",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "MB",
+      "case": 19,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "MB",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm18": 6.866455078125e-05
+    },
+    {
+      "trial": "MB",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "CORE",
+      "case": 19,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    },
+    {
+      "trial": "CORE",
+      "case": 35,
+      "raw_p": 3.814697265625e-06,
+      "cumulative_holm18": 6.866455078125e-05
+    },
+    {
+      "trial": "CORE",
+      "case": 39,
+      "raw_p": 1e-05,
+      "cumulative_holm18": 0.00014000000000000001
+    }
+  ]
+}
