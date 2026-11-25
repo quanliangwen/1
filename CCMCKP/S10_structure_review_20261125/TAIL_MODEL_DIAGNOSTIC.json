@@ -1,0 +1,94 @@
+{
+  "scope": "static diagnostic of a literature surrogate on saved vectors, no optimization or LSS/MC probability evaluation; floating plug-in statistics are illustrative, not audited certificates or population-confidence guarantees",
+  "paper": "10.1137/23M1620867 Theorem3.1 equation3.2 and empirical estimator5.2",
+  "precision_decimal_digits": 100,
+  "cases": [
+    {
+      "case": 19,
+      "common_halfwidth": 9.369257271955417,
+      "delta_as_paper_example_not_calibrated": 0.01,
+      "rows": [
+        {
+          "arm": "S10_TOTAL600",
+          "selection_rep": 1,
+          "cost": 197.98645439880545,
+          "observed_saved_LSS": 0.990426,
+          "MATPD_plugin_min": 0.7845242429713922,
+          "MATPD_plugin_max": 0.9305484254110218,
+          "formal_RCP_formula_value_under_plugin_parameters": "1904928300466.537446267076098901340316886590093504815227997863146894486415827792452710645829948060144",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        },
+        {
+          "arm": "EGS_CORE_TOTAL600",
+          "selection_rep": 1,
+          "cost": 199.5471452164203,
+          "observed_saved_LSS": 0.990697,
+          "MATPD_plugin_min": 0.7845242429713922,
+          "MATPD_plugin_max": 0.9305484254110218,
+          "formal_RCP_formula_value_under_plugin_parameters": "1921787344316.214543462656059363407143465976181004801768289221320105584905000977417999101906093768780",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        }
+      ]
+    },
+    {
+      "case": 35,
+      "common_halfwidth": 19.9292128048125,
+      "delta_as_paper_example_not_calibrated": 0.01,
+      "rows": [
+        {
+          "arm": "S10_TOTAL600",
+          "selection_rep": 2,
+          "cost": 194.09620911316662,
+          "observed_saved_LSS": 0.990277,
+          "MATPD_plugin_min": 0.5181984363351646,
+          "MATPD_plugin_max": 0.9597789204078755,
+          "formal_RCP_formula_value_under_plugin_parameters": "39403805.22145135419020025451755374733218973170786371813740133519751399242160318637384854542207596076",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        },
+        {
+          "arm": "EGS_CORE_TOTAL600",
+          "selection_rep": 1,
+          "cost": 194.3903633717908,
+          "observed_saved_LSS": 0.990224,
+          "MATPD_plugin_min": 0.5181984363351646,
+          "MATPD_plugin_max": 0.9597789204078755,
+          "formal_RCP_formula_value_under_plugin_parameters": "39370987.63364191897407247448369143342918547093531117702748148378723510396143133604860757015226993310",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        }
+      ]
+    },
+    {
+      "case": 39,
+      "common_halfwidth": 20.001077184327016,
+      "delta_as_paper_example_not_calibrated": 0.01,
+      "rows": [
+        {
+          "arm": "S10_TOTAL600",
+          "selection_rep": 3,
+          "cost": 322.0997047676083,
+          "observed_saved_LSS": 0.990096,
+          "MATPD_plugin_min": 0.6203621277350021,
+          "MATPD_plugin_max": 0.964266264501588,
+          "formal_RCP_formula_value_under_plugin_parameters": "7448683795646.423324209630208632549588863921999576919440436158243956693949313189213433626454436787683",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        },
+        {
+          "arm": "EGS_CORE_TOTAL600",
+          "selection_rep": 1,
+          "cost": 322.63304961409597,
+          "observed_saved_LSS": 0.990258,
+          "MATPD_plugin_min": 0.6203621277350021,
+          "MATPD_plugin_max": 0.964266264501588,
+          "formal_RCP_formula_value_under_plugin_parameters": "7198462859076.460213214610733941905801185801652121482482353527588276800697360022344528530316295626457",
+          "min_1_formula_value": 1.0,
+          "meets_formula_point01": false
+        }
+      ]
+    }
+  ]
+}
