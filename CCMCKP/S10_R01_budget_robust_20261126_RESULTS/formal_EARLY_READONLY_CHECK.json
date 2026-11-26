@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "record_integrity_only": true,
+  "not_30_repeat_conclusion": true,
+  "failures_not_retried": true,
+  "results": [
+    {
+      "identity": "C_R01_BUDGET_RO_i19_r01",
+      "rc": 0,
+      "whole_seconds": 52.306750299059786,
+      "budget_records_verified": {
+        "proofs": 49,
+        "qualified": 48,
+        "rejected": 1,
+        "subproblems": 2529
+      },
+      "cost": 230.92934576662327,
+      "LSS": 0.999731
+    },
+    {
+      "identity": "C_R01_BUDGET_RO_i35_r01",
+      "rc": 1,
+      "whole_seconds": 2.7071251289453357,
+      "budget_records_verified": {
+        "proofs": 17,
+        "qualified": 16,
+        "rejected": 1,
+        "subproblems": 2115
+      },
+      "failure": "no nominal CDF accepted budget candidate; retained"
+    },
+    {
+      "identity": "C_R01_BUDGET_RO_i39_r01",
+      "rc": 0,
+      "whole_seconds": 82.05730044993106,
+      "budget_records_verified": {
+        "proofs": 17,
+        "qualified": 16,
+        "rejected": 1,
+        "subproblems": 3515
+      },
+      "cost": 332.32225704781035,
+      "LSS": 0.990523
+    }
+  ],
+  "controller_pid": 3378978,
+  "offline_session_verified": true
+}

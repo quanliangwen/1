@@ -1,0 +1,38 @@
+R01预算鲁棒优化：正预算模型的阈值分解与统一LSS验收（2026-11-26）
+
+本版是预算鲁棒优化RO，不冒称DRO。保持CCMCKP每组恰选一项、最小成本、原LSS最终验收不变。相对D02，本版改变候选生成模型和求解机制。预算集合与旧W∞球保护范围不同，不能将更低成本称为相同鲁棒保证下的改善。
+
+1. 模型
+每物品仅使用本run原始全部500样本的十进制有理数。mu_j=sample mean，u_j=max(samples)，d_j=u_j-mu_j>=0。声明上偏差预算集合a_j=mu_j+d_j z_j，0<=z_j<=1，sum z_j<=Gamma。该集合保证范围是工程定义，不是未知总体样本支撑、95%覆盖或LSS .99的等价重写。原始消耗低于均值无需作为上尾最坏点，但这也不提供集合包含真实随机向量的概率保证。重尾分布下均值和样本最大值可能导致保守性。
+
+目标min sum c_j x_j；一组一项x二元。预算鲁棒资源函数W(x,Gamma)=sum mu_j x_j+前floor(Gamma)个已选d之和+(Gamma-floor(Gamma))*下一已选d。要求W<=T-1e-8。严格数值余量公开，不clip最终LSS或放宽阈值。
+
+2. 精确阈值分解
+W(x,Gamma)=min_{theta>=0}[Gamma theta+sum_j(mu_j+max(d_j-theta,0))x_j]。
+对任意固定x，该分段线性函数在theta=0或某个已选d上达到最小值。因此全物品不同d与0组成的有限阈值集合，给出该预算RO模型的精确并集重写。固定theta后是普通确定性多选背包：sum_j w_j(theta)x_j<=T-1e-8-Gamma theta，仍min成本。
+未完整枚举全部theta或MIP达到时间限制时，不宣称全局最优。原始概率问题更不由该代理模型全局求解。
+
+3. 前瞻冻结预算与求解顺序
+G为组数。固定正预算比例和访问顺序：Gamma/G=[1/10,3/20,1/20,1/5,1/40,3/10,1/2,1]。无Gamma=0名义回退。它是事先指定的正预算候选族，不从正式结果或LSS通过率挑选Gamma。每一预算最多16个新候选，每个阈值子问题Gurobi单线程最多1秒、取最多2个解，预算间轮转。
+每个预算内按group-separable Lagrangian下界数值排序阈值；该数值仅决定访问顺序，不作浮点硬剪枝。未知或未访问阈值不作可行/不可行断言。为避免重复，只对本run已生成且通过精确预算约束的向量加no-good枚举行，不把这些枚举行称为不可行证明。
+准备所有精确均值/最大值、阈值行与排序的耗时全部计入600秒。MIP行系数向上舍入到IEEE double、右端向下舍入，求解器返回向量还必须精确Fraction/GMP重算W与固定theta表达，两者均通过公开余量才进入原概率流程。被数值检查拒绝的记录完整保留。
+
+4. 初始解与评价
+自身初始向量由每组选择原始样本最大消耗最小的项构造，平手按成本/ID，使用Gamma=G、theta=0核验；不合格时只记拒绝并继续预算子问题，不以无证书启发式解兜底。全部候选和模型起点来自本run原始数据，没有外部MIP start、历史解、V48模板、旧证书或跨重复输入。
+预算合格候选继续使用原名义经验乘积分布整数CDF内部gate；该gate不是新最终验收规则，也不声称预算Gamma本身保证.99。没有无证书fallback。最终仅由原LSS .99验收，原quick/MC/exact、完整0..499索引、strict sum<T、短名单和最后完整复核政策均保持字节相同。生成器不调用LSS、不追加真实概率诊断，也不按LSS结果修改预算。
+
+5. 实验注册
+三例：19 LAB_50_10_500_ T63；35 APP_30_10_500_ T58；39 APP_50_10_500_ T91。
+三臂：A_B01_ORIGINAL=block_mitm；B_D02_TRANSPORT=block_winf_transport；C_R01_BUDGET_RO=budget_robust。
+每例每臂30次，270总数，新鲜同seed配对1010001..1010030，不混旧成绩。最高60并发，5GiB可用余量、新worker1GiB预留、单6GiB/自身总90GiB、极低available2GiB保护；不扩容。原失败保留、不挑seed或补跑。
+完整600秒从pre-Popen到退出，含加载/自生成起点/全部模型与排序/搜索/所有内部证书/全部LSS/保存fsync/返回。共同430搜索、590 LSS截止，595独立硬保护。完整时间不得通过删掉初始化/保存或clip伪装。
+30个独立有效才官方avg/sample_std，否则null，另给有效率。best为观察最好成本，不是全局最优证明。主要对比R01-B01、R01-D02，另D02-B01，三例共9项同seed均值符号翻转+Holm9；有效率配对检验另Holm9。运行时间描述性比较，无未注册的时间显著性宣称。不自动扩40例。
+
+6. 独立审核
+独立Fraction读者不导入C++写者/求解器/采样器，重建每物品精确mu/max/d、正预算顺序、每个候选前Gamma项和及固定theta见证、原始样本/自身起点来源。重新核对所有短名单和最终输出的本run预算证书。两对照同SHA复用原D01/D02数学检查，独立重建D02运输剪枝与整数CDF证书。不新增真实概率抽样。
+
+7. 原始文献与适用边界
+Bertsimas, D. & Sim, M. (2004). The Price of Robustness. Operations Research52(1):35–53. DOI10.1287/opre.1030.0065。第3节命题1/定理1为预算保护函数及对偶线性重写，第6.1节为鲁棒背包。原文：https://www.mit.edu/~dbertsim/papers/melvyn/The-Price-Of-Robustness-OR52.pdf
+本题固定theta的一组一项背包分解由上述对偶直接适配，另用独立对手顶点枚举及真实tinyMILP验证。没有套用原文独立/对称/有界随机变量假设下的违约概率界，因为本题工程样本区间不保证这些总体假设。
+Büsing, C., Gersing, T. & Koster, A.M.C.A. (2025; online2024). Recycling valid inequalities for robust combinatorial optimization with budgeted uncertainty. Mathematical Programming210:97–146. DOI10.1007/s10107-024-02135-7。https://link.springer.com/article/10.1007/s10107-024-02135-7
+该文说明预算鲁棒紧凑整数重写的松弛也可能弱，启发本版优先利用背包结构的固定阈值子问题。本版没有实现该文的recycled inequalities，且其研究设置/性能结果不直接搬用于本题不确定资源约束。
