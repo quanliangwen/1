@@ -1,0 +1,6 @@
+终末审计算术后端说明（2026-11-26）
+正式270个求解进程已全部自然终末。原Python原生大整数审计读者在1048576格点的精确多项式乘法上耗时较长，已经核至240/270附近；为避免重复等待，登记AUDIT_ARITHMETIC_CHANGE.json后仅终止该审计子进程，保留原读者及进度日志FINAL_AUDIT_RUN.log。
+正式源码、二进制、协议、输入、run结果均未修改，求解器未重跑，没有额外概率采样。
+新独立读者仍由Python自己读取原始十进制样本、Fraction计算方差/半径和格点、构造整数多项式系数与截断规则；仅通过ctypes调用系统GMP做精确整数算术，不导入求解器或C++写者。GMP是算术库，不提供本题概率模型或选择逻辑。
+新算术后端的120项独立读者检查已通过，记录INDEPENDENT_READER_GMP_TEST.json。官方读者为audit_fast_remote.py，其LF规范字节SHA256 f80fe290afb42a3341a8c96058f1a05ceb9b1cd99435950fbde4b381cc76f182，服务器留存AUDIT_READER_GMP_USED.py及FINAL_AUDIT_GMP_RUN.log。
+新后端首次包装时Windows CRLF与LF字节摘要不同，启动前摘要保护拒绝执行；规范化LF后与已通过测试的摘要一致，才启动正式审计。该问题未触及算法测试身份或任何已完成结果。

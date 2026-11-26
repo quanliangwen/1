@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "terminal_checked": 42,
+  "output_sha_checked": 420,
+  "DRO_records": [
+    {
+      "case_index": 19,
+      "record": "C_D01_WINF_PRODUCT_i19_r01",
+      "selected_shift": "1205546143/125000000000",
+      "item0_exact_radius_verified": true,
+      "model_CDF_lower": 0.9901507861217396
+    },
+    {
+      "case_index": 35,
+      "record": "C_D01_WINF_PRODUCT_i35_r01",
+      "selected_shift": "4239609181/500000000000",
+      "item0_exact_radius_verified": true,
+      "model_CDF_lower": 0.9900157201631614
+    },
+    {
+      "case_index": 39,
+      "record": "C_D01_WINF_PRODUCT_i39_r01",
+      "selected_shift": "2893472041/200000000000",
+      "item0_exact_radius_verified": true,
+      "model_CDF_lower": 0.9901402340652872
+    }
+  ],
+  "controller_parent1_and_detached": true,
+  "no_probability_sampling": true,
+  "not_a_30_repeat_conclusion": true
+}

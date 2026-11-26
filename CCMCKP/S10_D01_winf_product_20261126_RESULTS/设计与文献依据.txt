@@ -1,0 +1,32 @@
+D01：B01加速框架上的正半径加权W∞分布鲁棒机会约束
+本版必须真实优化DRO可行域，不仅把经验概率换一个启发式分数。
+
+模型：令P_hat=所有物品各自原始500样本等权分布的独立乘积；这与原LSS使用的边际独立抽样机制一致，不把同一索引的500行误当观测联合样本。
+定义运输阶数W∞，地面距离d_r(y,z)=max_j |y_j-z_j|/r_j；半径取1，r_j=0时该维不允许移动。支持为非负连续空间，不局限于观测到的有限样本点。
+U={Q:存在P_hat与Q的耦合，使每个坐标|Y_j-Z_j|<=r_j几乎处处}。
+求 min c'x，组内恰选一项，且 inf_(Q in U) Q(sum_j x_j Y_j<T)>=.99。
+因为x_j为非负0/1，任意允许耦合下sum x_jY_j<=sum x_j(Z_j+r_j)。全坐标同时上移r的推前分布属于U并达到等号。因此最坏安全概率恰好等于P_hat(sum_selected(Z_j+r_j)<T)，不是保守CVaR近似，也不需构造额外联合MC样本。
+严格事件sum<T保持；等于T计不安全。此推导对非负0/1线性消耗和所声明的U成立，不能推广到任意非单调约束。
+
+半径规则预先冻结：v_j是原十进制样本的精确总体经验方差，N=样本数，r_j=ceil(10^12*sqrt(v_j/(10000*N)))/10^12，即1/100倍经验标准误量级向上取整。用GMP有理数及整数平方根构造，避免浮点半径偷偷缩小。
+这是明确且可复核的温和工程运输预算；不是95%统计覆盖校准，不保证未知真实分布一定在球里。虽然允许样本点外消耗，仍只允许有界局部运输，不能自动覆盖任意未见极端尾部。不会读真实分布参数或额外抽取概率数据。
+该集合与旧I06的伪联合中心、l1地面范数模型不同；不能声称同等鲁棒强度或复用旧迭代的性能结论。
+
+实现：原输入和原LSS对象不变。DRO内部建立精确平移的虚拟样本，所有评分、梯度、卷积树、条件包络、整数接受/拒绝证书使用该最坏分布。候选均需最坏概率整数下界>=.99后才能入本run池；没有名义可行但DRO无证书的fallback。若没有自身DRO可行起点，保留失败，不借历史解。
+初始构造保留原S10均值/方差前沿和mean+3sd构造范式，但正半径臂使用最坏平移后的均值/CDF，并从本run原始数据生成。成本目标、组约束不改。
+最终仍调用原report/evaluation/rng实现，阈值.99、索引0—499、原LSS quick/MC/exact/复核顺序/最后完整结果规则完全不变；不新设真实概率验收。
+
+共同候选覆盖机制：收集上界固定为本run模型可行初始化后的最好成本，不随更好解立即收紧。每块保存成本切片与概率裕量档位的候选，最多12个新检查，找到改善后仍完成该块有限保底收集再切anchor。2/3/4组块按轮转顺序扫描，配额仍24/16/12；最多12anchor、各75秒、原一次全组零半径大跳、4096排序格点、128整数包络、共用原430搜索预算。浮点仅排序，剪枝只准完整整数证明。
+为了区分此修复与DRO模型效果，正式三臂：C_B01原版、C_COVERAGE_NOMINAL共同覆盖机制零半径、D01_WINF_PRODUCT共同覆盖机制正半径。三个大算例19 LAB50 T63、35 APP30 T58、39 APP50 T91；每臂每例30，共270，新鲜配对seed990001—990030。禁止旧结果作为初始解，禁止试完挑seed/补跑。主要DRO贡献比较D01对C_COVERAGE_NOMINAL；另两对作上下文。九项配对成本符号翻转+Holm9，有效率另检。30全有效才官方avg/sample_std。
+
+完整600秒含加载、精确半径、最坏分布准备、初始化、全部搜索和证书、原LSS、保存fsync和退出。原430搜索共同截止，590LSS截止，595父级硬保护。最多60并行、5GiB可用余量、每worker1GiB派发预留、单6GiB/总90GiB/系统极低2GiB保护。不超过60，不扩资源，不自动跑40例。
+先通过小型数学穷举、非零半径改变可行域/最优选择的反例、运输角点见证、边界、原整数上下界和两新flow集成检查，再冻结正式270。不得在运行中修改算法/协议/原数据/结果。
+
+主要原始文献：
+1. Nan Jiang, Weijun Xie (2022), ALSO-X and ALSO-X+: Better Convex Approximations for Chance Constrained Programs. Operations Research70(6):3581–3600. DOI10.1287/opre.2021.2225。作者稿第5节命题8给出W∞ DRCC到逐点最坏约束的等价；本版用自己的单调耦合证明适配严格sum<T和全经验乘积中心。不实现ALSO-X，不套凸X的优越性定理。
+https://optimization-online.org/wp-content/uploads/2020/12/8148.pdf
+2. Nan Jiang, Weijun Xie (2025), The Terminator: An Integration of Inner and Outer Approximations for Solving Wasserstein Distributionally Robust Chance Constrained Programs via Variable Fixing. INFORMS Journal on Computing37(2):381–412. DOI10.1287/ijoc.2023.0299。作者稿第3节式(5)/(6)展示theta||a(x)||_*的点态鲁棒项。本版加权l∞地面范数的对偶为sum_j r_j|x_j|，故出现sum_selected r_j。不声称实现论文变量固定、BigM算法或其最优性结果。
+https://optimization-online.org/wp-content/uploads/2023/08/Variable_Fixing_Final_Online.pdf
+3. Boukhari与Hifi，ITOR31(2024)29–52，DOI10.1111/itor.13326，受限局部分支/逐层邻域的相关多选背包文献；B01树/批量矩阵积仍属本题工程适配，共同控制已把这些机制与DRO半径区分。
+
+所有源码、证明、负观测和紧凑证据留存。不能将启动、低std或未显著当改进成功；自然终末再判断avg、std和速度是否有收益。
