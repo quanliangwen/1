@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "identity": "C_D02_TRANSPORT_i19_r01",
+      "transport_exclusions_independently_checked": 1629,
+      "original_LSS_pass": true,
+      "whole_process_under600": true
+    },
+    {
+      "identity": "C_D02_TRANSPORT_i35_r01",
+      "transport_exclusions_independently_checked": 2992,
+      "original_LSS_pass": true,
+      "whole_process_under600": true
+    },
+    {
+      "identity": "C_D02_TRANSPORT_i39_r01",
+      "transport_exclusions_independently_checked": 1822,
+      "original_LSS_pass": true,
+      "whole_process_under600": true
+    }
+  ],
+  "controller_parent1_detached": true,
+  "no_solver_or_probability_sampling": true,
+  "not_a_30_repeat_mean_conclusion": true
+}

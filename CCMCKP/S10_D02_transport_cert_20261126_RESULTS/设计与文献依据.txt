@@ -1,0 +1,28 @@
+D02：D01 Wasserstein∞ DRO 的运输占优有效剪枝（2026-11-26）
+
+D01诊断：三例全部30有效，但对相同零半径框架avg为0优1平2劣。LAB50成本不变但完整均时257.284→277.896秒；APP30最低搜索候选成本不变，最终LSS低成本候选未过次数9→11，avg增加.019610284；APP50搜索最好候选322.099704768→322.259961500，回退较少、std较小但avg增加.132874367。APP50搜索370.436→430.373秒，而LSS80.218→78.235秒，增时主要在搜索。
+旧最低APP50向量在新DRO模型的1048576格点区间跨越.99，仍未知；不能先验断言它被DRO模型排除，更不能将更高成本全部当作必然鲁棒代价。D01的原生证书调用数每个r01约3264/5438/3498，其中大量是不可行向量。旧静态负证书集合中2351/3206、3436/5398、2509/3443可被其他负证书按下述关系覆盖；这是结构分析，不是在线剪枝率或速度预测。静态旧向量只用于分析，不能加载为任何新run的初始解、候选或证书。
+
+保持模型：D01的全经验边际乘积中心、逐坐标正半径r_j、加权地面l∞、运输阶∞、rho预算1全部不变。r_j=ceil(1e12*sqrt(v_pop/(10000N)))/1e12仍为工程预算，不是95%总体覆盖校准。正半径最坏分布仍是每项原始样本精确平移+r_j；不缩半径、不改概率阈值，也不加名义可行fallback。
+
+唯一求解机制：复用当前run已用整数CDF上界证明不可行的向量，生成严格有效的运输占优排除证明。令q_j(k)为该物品最坏平移后样本的第k个顺序统计量，定义
+  ell_g(x,y)=min_k[q_{x_g}(k)-q_{y_g}(k)].
+独立生成U_g在1..N上均匀，令X_g=q_{x_g}(U_g)、Y_g=q_{y_g}(U_g)。每组边际分布正确，两边分别仍是所声明的经验乘积，且sum_g X_g >= sum_g Y_g + sum_g ell_g 几乎处处。故sum ell_g>=0时，P(sum X_g<T)<=P(sum Y_g<T)。若y的原生整数上界严格小于.99，x也不可行，可省去其CDF评分/证书计算。
+此处只共用“同一组内的秩”，不同组的U_g独立；不是把全体样本同一索引当联合观测。组间正负位移允许相互抵消，因此比逐组都必须占优更一般。一组恰选一项使每个x_g/y_g有明确的对应物品。
+
+数值实现：GMP精确十进制有理数排序，逐物品对计算L_ij=floor(1e12*min_k(q_i-q_j))。有向下界sum L_ij/1e12<=sum ell_g；仅sum L>=0才剪。负数必须向负无穷取整，不能向零截断；单对超int64视未知、不剪，总和用int128。不存在浮点硬剪枝或epsilon放宽。
+所有witness来自当前run自己的原生整数不可行证书。缓存最多128个活跃witness；安全移除被新witness覆盖的旧条目，满容量时FIFO淘汰仅影响效率，不影响可行域。不复用可行证书，不为被剪向量伪造概率数值；native_check返回原有0哨兵，专门记录not_a_probability_estimate=true。每条排除记录含目标、原生witness、原生上界/分母、各改动物品对的向下取整下界及总和，能由独立读者重新证明。
+没有原生负证书时缓存为空，必须实际评价。初始解仍从本run原始数据按既有mean/variance前沿及低风险构造生成；禁止历史解/V48模板/其他重复输入。新增准备、排序、剪枝查询、保存均计入本次完整600秒。
+
+文献及边界：
+1. Jiang, N. & Xie, W. (2022). ALSO-X and ALSO-X+: Better Convex Approximations for Chance Constrained Programs. Operations Research70(6):3581–3600. DOI10.1287/opre.2021.2225，命题8的W∞点态最坏重写仍支撑D01/D02模型。https://optimization-online.org/wp-content/uploads/2020/12/8148.pdf
+2. Gerhold, S. & Gülüm, I.C. (2019). Peacocks nearby: Approximating sequences of measures. Stochastic Processes and their Applications129:2406–2436. DOI10.1016/j.spa.2018.07.007，第2节定义2.6及式2.1给出W∞耦合与CDF平移关系。本文用其耦合思路，并对本题有限经验秩、自生成独立组及有向加性下界给出上述独立证明；没有实现该论文的peacock/凸序算法。https://fam.tuwien.ac.at/~sgerhold/pub_files/papers/peacocks_nearby.pdf
+3. Ho-Nguyen, N., Kılınç-Karzan, F., Küçükyavuz, S. & Lee, D. (2022). Strong Formulations for Distributionally Robust Chance-Constrained Programs with Left-Hand Side Uncertainty Under Wasserstein Ambiguity. INFORMS Journal on Optimization，DOI10.1287/ijoo.2022.0083。以packing结构强化DRO模型、利用有效不等式加速是相关方法依据；本版不是其Big-M/mixing/quantile割实现，不套其特定模型性能。https://arxiv.org/abs/2007.06750
+4. Aslan, A., Ursavas, E. & Romeijnders, W. (2023). A precedence constrained knapsack problem with uncertain item weights for personalized learning systems. Omega115:102779，DOI10.1016/j.omega.2022.102779。其利用背包结构和有效可行性/cover割改善计算效率作为方法参照；其正态假设和优越性结果不适用于本题经验边际，未采用其正态机会约束重写。https://pure.rug.nl/ws/portalfiles/portal/248357268/1_s2.0_S0305048322001864_main.pdf
+新增剪枝为本题有完整证明和独立穷举验证的适配，不冒称论文原算法，也不声称全局最优或真实总体概率保证。
+
+测试注册：三个算例19 LAB_50_10_500_ T63、35 APP_30_10_500_ T58、39 APP_50_10_500_ T91。三臂A_B01_ORIGINAL、B_D01_WINF、C_D02_TRANSPORT，分别原B01、原D01正半径、新D02同DRO加有效剪枝。各例各臂30，共270；全新同seed配对1000001..1000030。C-B隔离剪枝作用，C-A检验对原B01的总效果，B-A为背景。不能混旧D01成绩或补跑择seed。
+原LSS .99、所有0..499索引、strict sum<T、原quick/MC/exact及最后完整结果验收顺序不变，无额外真实概率抽样。最终统计验收只原LSS。内部DRO证书仍用于候选生成。
+完整600从Popen前到退出，含加载/初始化/新矩阵和剪枝/全部求解/全部LSS/gzip/fsync/返回。430搜索、590 LSS截止、595独立硬保护；不clip、不排除初始化或保存。最多60、派发5GiB可用余量和每worker1GiB预留、单6GiB/总自身90GiB/极低available2GiB保护，不扩容。
+运行前冻结源/二进制/输入/协议，运行中不改。普通无解/P/数值/预算失败保留，不重跑。30全独立有效才官方avg/std，否则null；失败不填假成本。成本九项同seed均值符号翻转+Holm9，有效率另配对精确McNemar+Holm9。给best/avg/sample_std/两类最好解达到均时/完整均时与最大值。独立审核所有运输排除证明的真实witness来源、精确秩下界和整数和，并重算最终DRO输出证书，不做新概率抽样。
+先新173项数学及活跃机制集成检查，未变D01原632数学按同源SHA有限复用；成功检查不反复重跑。完整270自然终末后判断avg/波动/速度，不以启动或低std当改善，不自动扩40例。
