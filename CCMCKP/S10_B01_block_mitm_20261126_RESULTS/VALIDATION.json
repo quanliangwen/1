@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "new_checks": [
+    {
+      "name": "block_exhaustive_test",
+      "rc": 0,
+      "whole_seconds": 0.011035436997190118,
+      "tail": "{\"status\":\"PASS\",\"checks\":3943,\"no_new_MC\":true,\"exhaustive_atomic_distribution\":true}\n"
+    },
+    {
+      "name": "integration_block_mitm",
+      "rc": 0,
+      "whole_seconds": 1.3645485980669037,
+      "tail": "{\"status\":\"completed\",\"cost\":3.0,\"elapsed\":1.3616279530106112}\n",
+      "cost": 3.0,
+      "LSS": 0.998024,
+      "whole_clock": true
+    },
+    {
+      "name": "integration_frontier_mitm_zero",
+      "rc": 0,
+      "whole_seconds": 1.413358762045391,
+      "tail": "{\"status\":\"completed\",\"cost\":3.0,\"elapsed\":1.4101171660004184}\n",
+      "cost": 3.0,
+      "LSS": 0.998024,
+      "whole_clock": true
+    }
+  ],
+  "unchanged_bytes": [
+    "evaluation.cpp",
+    "evaluation.hpp",
+    "rng.cpp",
+    "rng.hpp",
+    "report.cpp",
+    "report.hpp",
+    "model.cpp",
+    "model.hpp",
+    "mip.cpp",
+    "mip.hpp",
+    "fft.hpp",
+    "partition.hpp"
+  ],
+  "no_new_true_probability": true,
+  "not_performance_conclusion": true,
+  "binary_sha256": "067a9238d0533675dacdc6fd4d253bfa0c81f400285601d7b5f3f4f70f4c0011"
+}

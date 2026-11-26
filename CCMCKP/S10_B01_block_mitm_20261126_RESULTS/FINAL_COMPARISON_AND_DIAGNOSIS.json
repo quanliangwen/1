@@ -1,0 +1,95 @@
+{
+  "summary": [
+    {
+      "case_index": 19,
+      "S10_avg": 197.98645439880545,
+      "B01_avg": 197.98645439880545,
+      "avg_diff": 0.0,
+      "S10_std": 0.0,
+      "B01_std": 0.0,
+      "S10_mean_whole": 292.85669190382663,
+      "B01_mean_whole": 238.85931222780684,
+      "observed_runtime_reduction_fraction": 0.1843815803729436,
+      "cost_holm9_p": 1.0
+    },
+    {
+      "case_index": 35,
+      "S10_avg": 194.22369990632467,
+      "B01_avg": 194.22369990632467,
+      "avg_diff": 0.0,
+      "S10_std": 0.14828369457699153,
+      "B01_std": 0.14828369457699153,
+      "S10_mean_whole": 239.2325487408593,
+      "B01_mean_whole": 192.68225235007702,
+      "observed_runtime_reduction_fraction": 0.1945817851115499,
+      "cost_holm9_p": 1.0
+    },
+    {
+      "case_index": 39,
+      "S10_avg": 322.286713050554,
+      "B01_avg": 322.2952645446538,
+      "avg_diff": 0.008551494099776846,
+      "S10_std": 0.16400913301824993,
+      "B01_std": 0.2614096524932343,
+      "S10_mean_whole": 512.7259051145636,
+      "B01_mean_whole": 392.42274790195125,
+      "observed_runtime_reduction_fraction": 0.23463444310607195,
+      "cost_holm9_p": 1.0
+    }
+  ],
+  "case39_pool_and_fallback_diagnosis": {
+    "A_S10_ORIGINAL": {
+      "final_cost_frequencies": {
+        "322.0997047676083": 9,
+        "322.2599615000661": 12,
+        "322.47888503778444": 5,
+        "322.54752135460757": 4
+      },
+      "above_raw_best_runs": 21,
+      "mean_increment_conditional_fallback": 0.2671546899225199,
+      "lowest_interval_pool_cost_sets": [
+        [
+          322.0997047676082,
+          322.2599615000661,
+          322.4788850377844,
+          322.54752135460757,
+          322.63304961409597
+        ]
+      ]
+    },
+    "B_S10_ZERO": {
+      "final_cost_frequencies": {
+        "322.0997047676083": 9,
+        "322.2599615000661": 12,
+        "322.47888503778444": 5,
+        "322.54752135460757": 4
+      },
+      "above_raw_best_runs": 21,
+      "mean_increment_conditional_fallback": 0.2671546899225199,
+      "lowest_interval_pool_cost_sets": [
+        [
+          322.0997047676082,
+          322.2599615000661,
+          322.4788850377844,
+          322.54752135460757,
+          322.63304961409597
+        ]
+      ]
+    },
+    "C_B01_ZERO": {
+      "final_cost_frequencies": {
+        "322.0997047676083": 19,
+        "322.63304961409597": 11
+      },
+      "above_raw_best_runs": 11,
+      "mean_increment_conditional_fallback": 0.5333448464877506,
+      "lowest_interval_pool_cost_sets": [
+        [
+          322.0997047676082,
+          322.63304961409597
+        ]
+      ]
+    }
+  },
+  "conclusion": "runtime improved descriptively; no avg improvement vs original S10; case39 observed sample std increased; do not expand40 or claim new DRO contribution"
+}
