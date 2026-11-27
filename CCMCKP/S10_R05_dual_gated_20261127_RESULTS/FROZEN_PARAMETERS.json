@@ -1,0 +1,31 @@
+{
+  "mother_es95_seconds": 65,
+  "mother_total_seconds": 90,
+  "mother_entropic_seconds": 25,
+  "entropic_t": [
+    0.6,
+    0.25
+  ],
+  "entropic_rounds": 8,
+  "entropic_eta": [
+    0.8,
+    4.605
+  ],
+  "es95_no_improve": 15,
+  "safe_native_lower": 0.99005,
+  "safe_fft_gate": 0.98985,
+  "fallback_ratio": 0.005,
+  "safe_count": 3,
+  "channelB_calls": 8,
+  "channelA_gate": 0.9885,
+  "channelA_batch": 8,
+  "channelA_no_improve": 10,
+  "proposal_seconds": 25,
+  "certification_seconds": 60,
+  "certification_calls": 35,
+  "max_seeds": 4,
+  "local_rounds": 2,
+  "local_MIP_seconds": 1,
+  "local_PoolSolutions": 10,
+  "uniform_for_all_cases": true
+}
