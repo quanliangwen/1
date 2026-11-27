@@ -1,0 +1,50 @@
+{
+  "beta": 0.95,
+  "tail_count": "min(L,max(3,ceil(L/20)))",
+  "dimensionless_tilts": [
+    2,
+    1,
+    0.5,
+    3
+  ],
+  "radii_changed_groups": [
+    5,
+    3
+  ],
+  "fallback_target": 4,
+  "epsilon_initial": 0.0015,
+  "epsilon_update": "max(previous,0.001,0.99-private_probability(new CDF accepted))",
+  "tau_median_first3_default": 2.0,
+  "tau_clip": [
+    15,
+    35
+  ],
+  "tau_multiplier": 10,
+  "eta_bounds": [
+    0.6,
+    4.605
+  ],
+  "tilt_clip": [
+    0.001,
+    50
+  ],
+  "FFT_bins": 8192,
+  "FFT_damping": 12,
+  "MIP_seconds": 2.0,
+  "MIP_pool": 15,
+  "fallback_pool": 20,
+  "MIP_pool_gap": 0.02,
+  "Gamma_eta_relative_tolerance": 0.01,
+  "strict_cost_tolerance": "1/1000000",
+  "stall_rounds": 2,
+  "fallback_max_rounds": 2,
+  "search_deadline": 480,
+  "LSS_deadline": 590,
+  "external_watchdog": 595,
+  "whole_limit": 600,
+  "isolated_native_hard_kill": true,
+  "no_old_solution_inputs": true,
+  "no_final_LSS_feedback_to_generator": true,
+  "fine_threshold_hard_count_cap": null,
+  "stage3a_directed_2opt_pair_cap": null
+}
