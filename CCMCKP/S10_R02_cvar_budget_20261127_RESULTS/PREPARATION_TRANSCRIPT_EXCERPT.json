@@ -1,0 +1,19 @@
+{
+  "record_type": "tool_transcript_excerpt_not_an_original_log",
+  "retained_after_launch_for_preparation_traceability": true,
+  "formal_trial_affected": false,
+  "initial_math_check": {"rc": -6, "failed_check": 698, "original_failure_record": "evidence/VALIDATION_FAILURE_0.json"},
+  "diagnostic_retry_before_freeze": {
+    "gamma": "3/2",
+    "theta": "1/10",
+    "solver_returned": [[1,2],[0,3],[1,3]],
+    "exact_feasible_expected": [[1,3]],
+    "solver_status": 2,
+    "retained_solutions": 3,
+    "failed_check": 698,
+    "note": "Default floating feasibility tolerance admitted near-boundary vectors; production already exact-filtered all returns before CDF. Debug log filename was reused by the later passing preparation retry; this explicitly labelled transcript excerpt retains the diagnostic observation."
+  },
+  "correction": "Test compares exact-rational-filtered pool with independent enumeration, then verifies no-good exclusion. No algorithm change was made to evade the failure.",
+  "final_pass": {"checks":711,"real_tiny_MIP":24,"extra_probability_sampling":false},
+  "source_frozen_after_correction": true
+}
