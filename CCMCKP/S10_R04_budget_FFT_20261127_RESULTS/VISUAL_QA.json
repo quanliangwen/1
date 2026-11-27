@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "sheets": [
+    "对比统计",
+    "运行明细"
+  ],
+  "views": 15,
+  "reviewed_previews": {
+    "comparison_cost_preview.png": "2d234ec5e173533274c17c57c782e31828deed063ed1a2f620cfa34b1cb2ab6d",
+    "comparison_time_preview.png": "4e485bb82c38da04fbe59fb70edf48432793b0d4243bb52aae0b59b18b300c34",
+    "cost_preview.png": "6b5a12cabfc545802fca35d3d0ee9705545a9632d49813f94f842f9220e3d075",
+    "discovery_preview.png": "a47dc93bb1bd8fb8d3fc6c27a1d2a64613f61ebb74d46b1b5a973f25de47c74b",
+    "fallback_preview.png": "555117f05da5f768471224a1406afd6e51027d525fe1a3808166b1fb4f712dd0",
+    "gate_preview.png": "53eea9b7bdda2f342eb2792ef5a78b550f30bdf048f73dd231d35ff99f44a8b9",
+    "mechanism_count_preview.png": "cd0d9229ffca928bdc1e04d5c6904e86283af64e134f58b724e1084d96e30679",
+    "mechanism_time_preview.png": "f410d710aeecc2c56b92a28fbd5136b9f35ee2e447d2109d49ef420b0f289302",
+    "model_headers_preview.png": "89e8d6400714ea2c708df7ae2e40e33cdd2c366f107c05932a102067cdca0463",
+    "notes_preview.png": "ad085c05573f53f484a2c60eadcfed0b226e553437a4d6b4e9d35ecd77ec0537",
+    "polish_headers_preview.png": "76285f6e56ffe7112231ff9f72f6f517367bfa7fc55a421567bfd90c1864f809",
+    "polish_values_preview.png": "7cc3f0f6b6f10780f82f0976e30be8d0b974a33c78a78b448c577408c01228ba",
+    "record_details_preview.png": "a5492323c685d2ee08863cd8d66a1aa471f7a5168e5901fa5439cb9662311c13",
+    "records_preview.png": "23403de6caef60167c8dc580509c37974943fced785232f505cc8b68df6ec723",
+    "time_preview.png": "f5ed6897e693c73372b8e89f539b367e30e9f28247483abf07eb648575e8a5bb"
+  },
+  "numeric_cache_checks": 16344,
+  "review": "全部15幅预览已逐幅人工视觉检查，表头、数值、脚注和明细可读，无截断溢出。参数精确值见JSON。"
+}
