@@ -1,0 +1,18 @@
+{"audit_progress": 0, "total": 3}
+{"diagnostic_rows": [{"identity": "D_R06_QUALITY_DUAL_i18_r08", "valid": true, "errors": []}, {"identity": "D_R06_QUALITY_DUAL_i18_r09", "valid": false, "errors": ["AssertionError:"]}, {"identity": "D_R06_QUALITY_DUAL_i18_r10", "valid": false, "errors": ["AssertionError:"]}], "source_and_input_errors": [], "no_probability_sampling": true}
+Traceback (most recent call last):
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/audit_reader.py", line 614, in <module>
+    if flow[o['arm']]=='quality_dual_gated':verify_r05_timing(read(root/'R06_TIMING.json'),o['process_wall_seconds'])
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/audit_reader.py", line 496, in verify_models
+    if raw['search_flow']=='quality_dual_gated':return verify_r05(raw,groups,costs,samples,capacity)
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/r06_reader.py", line 11, in verify_r06
+    assert m['fallback_ratio']==.006 and m['ES95_finished_seconds']<=181 and m['mother_finished_seconds']<=241
+AssertionError
+Traceback (most recent call last):
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/audit_reader.py", line 614, in <module>
+    if flow[o['arm']]=='quality_dual_gated':verify_r05_timing(read(root/'R06_TIMING.json'),o['process_wall_seconds'])
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/audit_reader.py", line 496, in verify_models
+    if raw['search_flow']=='quality_dual_gated':return verify_r05(raw,groups,costs,samples,capacity)
+  File "/home/junhao/quan/parallel_test_solver/CCMKCP/work/r06_quality_first_20261127/full40/r06_reader.py", line 11, in verify_r06
+    assert m['fallback_ratio']==.006 and m['ES95_finished_seconds']<=181 and m['mother_finished_seconds']<=241
+AssertionError

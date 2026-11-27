@@ -1,0 +1,41 @@
+{
+  "kind": "non_runtime_metadata_clarification_no_frozen_file_changed",
+  "protocol_sha256": "e0226193152b65dcc41f2c1fa0ef8ba8d831ac6f851ace3a744e193a1d724d32",
+  "legacy_fields": {
+    "sampling_index_range": [
+      0,
+      499
+    ],
+    "first_wave_is_part_of_registered360": true,
+    "other_contrasts": "all six arm pairs, newer letter minus earlier, per case",
+    "raw_reader_pilot_first5_counted_in_formal30": false
+  },
+  "authoritative_actual_rules": {
+    "sampling": "0..L-1; L30 uses0..29; L500 uses0..499; frozen independent reader verifies record against actual pinned sample count",
+    "first_wave": "the full40 phase first600 are reps1..5 and ARE included in the full3600, reps1..30; earlier smoke15 and formal360 are NOT reused",
+    "contrasts": "3 arm pairs x40 cases=120; separate Holm120 cost/time/validity families",
+    "budgets": "R06 search480, frozen B01/D02 search430; shared full process600; guards595; actual per-process clocks retained"
+  },
+  "already_ended_L30_examples": [
+    {
+      "identity": "A_B01_ORIGINAL_i05_r02",
+      "index_min": 0,
+      "index_max": 29,
+      "result_sha256": "fdd88253ca44a46e24cb253149c6fe252d89ed90069e285df5b03d6dd6a176f7"
+    },
+    {
+      "identity": "D_R06_QUALITY_DUAL_i04_r02",
+      "index_min": 0,
+      "index_max": 29,
+      "result_sha256": "cf4f0debb445bfdf5b5234ab1190e27ade4ddaa6ff575ecd8f47f0b9df3066e7"
+    },
+    {
+      "identity": "D_R06_QUALITY_DUAL_i05_r02",
+      "index_min": 0,
+      "index_max": 29,
+      "result_sha256": "0846d7dc095b3ff06e7a961060f513c15148b3f0c41cdf64c06973cdd23eace8"
+    }
+  ],
+  "no_source_binary_controller_reader_protocol_input_or_result_changed": true,
+  "no_solver_LSS_or_probability_sampling": true
+}

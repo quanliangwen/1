@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "reader_sha256": "890064a39af1451b81ac92f0ab30dc6d05bbe445e76b4671561d560894ff6804",
+  "existing_tiny_record_checks": [
+    {
+      "existing_fixture": "LAB_3_2_500_",
+      "samples_per_item": 500,
+      "independent_output_counts": 2
+    },
+    {
+      "existing_fixture": "LAB_2_2_500_",
+      "samples_per_item": 500,
+      "independent_output_counts": 1
+    },
+    {
+      "existing_fixture": "LAB_2_2_30_",
+      "samples_per_item": 30,
+      "independent_output_counts": 1
+    }
+  ],
+  "new_three_atom_denominator_count": [
+    2,
+    9
+  ],
+  "no_solver_or_LSS_rerun": true,
+  "no_probability_sampling": true
+}

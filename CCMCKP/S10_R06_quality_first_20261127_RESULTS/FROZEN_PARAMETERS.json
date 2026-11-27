@@ -1,0 +1,51 @@
+{
+  "tail_count": "min(L,max(3,ceil(L/20)))",
+  "ES95_wall_seconds": 180,
+  "fine_point_native_quota": 15,
+  "visit_all5_before_stall_stop": true,
+  "entropic_seconds": 60,
+  "dimensionless_c": [
+    2,
+    1,
+    0.5,
+    3
+  ],
+  "tilt_clip": [
+    0.001,
+    50
+  ],
+  "eta_interval": [
+    0.6,
+    4.605
+  ],
+  "entropic_rounds": 8,
+  "entropic_per_t_native_cap": 8,
+  "round0_native_cap": 15,
+  "round0_private_seconds_reserved": 15,
+  "private_total_seconds": 45,
+  "polish_native_seconds": 150,
+  "polish_native_calls": 100,
+  "local_min_rounds": 2,
+  "local_max_rounds": 3,
+  "local_A_radius": [
+    1,
+    5
+  ],
+  "local_A_seconds": 2,
+  "local_A_pool": 15,
+  "local_A_native_per_round": 10,
+  "fallback_radius": [
+    1,
+    3
+  ],
+  "fallback_band": 0.006,
+  "fallback_pool": 25,
+  "fallback_MIP_seconds": 2,
+  "fallback_native_cap": 15,
+  "fallback_target": 4,
+  "search_deadline": 480,
+  "whole_limit": 600,
+  "LSS_deadline": 590,
+  "watchdog": 595,
+  "whole_all_source_data_self_generated": true
+}
