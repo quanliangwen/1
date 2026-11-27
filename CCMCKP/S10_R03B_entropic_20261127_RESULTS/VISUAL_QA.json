@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "sheets": [
+    "对比统计",
+    "运行明细"
+  ],
+  "reviewed_previews": {
+    "comparison_preview.png": "f2da0ede42264eace1e57d546e961bc8222005cf5ff56d109167c1f3ecb17373",
+    "cost_preview.png": "6a03454473674278ab203fa0acb8e3337209c39f91020ced10e5e5c096c570fa",
+    "discovery_preview.png": "0681e9645d19211758840df5a641681ee13e35ded3cce7f51410807589e8b001",
+    "entropy_values_preview.png": "b69aa293039c9406c2f32e59b89eecb14ffdaa9351c7557035755f9f7e3676ca",
+    "fallback_preview.png": "2da983b0b0ff56c9bca3ad559903518571700450346e01191a5f7750e61efec4",
+    "funnel_headers_preview.png": "06317eacf32f50df19930f5623a005183f71f3f83612baac49477b1ebac0752b",
+    "mechanism_preview.png": "4db52b6d1c63bf9811bd21c0be3a35f75325367c1b9f724c1d65cb7e579ab6ab",
+    "notes_preview.png": "19d15beebf9dd125c82bea6b4f97dd1573480b4737b900ebc95686fef706ba08",
+    "record_details_preview.png": "7c1f36678545f2c4430ae37666441a5713dff9c349deecb6a120bdf3ef8f1cd9",
+    "records_preview.png": "46070ad60d2a22496cb508f20c266a0703777981fd5443e0f54700696871d602",
+    "risk_headers_preview.png": "dfec2eb3a94beed9035ba45256b2c369731e07808e065c1496587553ee6dcbf3",
+    "time_preview.png": "645056b7f9e213fbae737aa2210f70e6f2f43d52145f7b0a665caf10a1e8aab9"
+  },
+  "views": 12,
+  "adjustments": [
+    "缩短发现时间表头以去掉孤立右括号",
+    "参数在Excel显示为数值近似，精确有理数保留于JSON，消除长分数换行溢出"
+  ],
+  "numeric_cache_checks": 14118
+}

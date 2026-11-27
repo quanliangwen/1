@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "selection": [
+        0,
+        2,
+        4
+      ],
+      "cost": 3.0,
+      "proxy_feasible_at_registered_eta_floor": false,
+      "exact_tiny_CDF_numerator": 124750000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        0,
+        2,
+        5
+      ],
+      "cost": 4.0,
+      "proxy_feasible_at_registered_eta_floor": false,
+      "exact_tiny_CDF_numerator": 124750000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        0,
+        3,
+        4
+      ],
+      "cost": 4.0,
+      "proxy_feasible_at_registered_eta_floor": false,
+      "exact_tiny_CDF_numerator": 124750000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        0,
+        3,
+        5
+      ],
+      "cost": 5.0,
+      "proxy_feasible_at_registered_eta_floor": false,
+      "exact_tiny_CDF_numerator": 124750000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        1,
+        2,
+        4
+      ],
+      "cost": 4.0,
+      "proxy_feasible_at_registered_eta_floor": true,
+      "exact_tiny_CDF_numerator": 125000000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        1,
+        2,
+        5
+      ],
+      "cost": 5.0,
+      "proxy_feasible_at_registered_eta_floor": true,
+      "exact_tiny_CDF_numerator": 125000000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        1,
+        3,
+        4
+      ],
+      "cost": 5.0,
+      "proxy_feasible_at_registered_eta_floor": true,
+      "exact_tiny_CDF_numerator": 125000000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    },
+    {
+      "selection": [
+        1,
+        3,
+        5
+      ],
+      "cost": 6.0,
+      "proxy_feasible_at_registered_eta_floor": true,
+      "exact_tiny_CDF_numerator": 125000000,
+      "denominator": 125000000,
+      "empirical_CDF_ge99": true
+    }
+  ],
+  "minimum_proxy_and_CDF_cost": 4.0,
+  "minimum_CDF_only_cost": 3.0,
+  "independent_reader": {
+    "proofs": 1,
+    "qualified": 1,
+    "rejected": 0,
+    "subproblems": 84,
+    "exact_cost_cuts": 0,
+    "coefficient_items": 36,
+    "query_reference_checks": 54
+  },
+  "no_probability_sampling": true
+}
