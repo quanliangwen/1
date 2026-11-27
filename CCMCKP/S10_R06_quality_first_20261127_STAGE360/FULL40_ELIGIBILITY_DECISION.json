@@ -1,0 +1,71 @@
+{
+  "stage": "R06_completed_three_case360",
+  "L4_eligible": true,
+  "tests": {
+    "all_four_arms_30_valid_source_clock_clean": true,
+    "all_three_unrounded_avg_not_higher_D02": true,
+    "at_least_one_cost_Holm18_significantly_lower_D02": true,
+    "all_three_std_not_higher_reported_historical_ILS": true,
+    "all_three_complete_mean_time_not_higher_D02": true
+  },
+  "contrasts": [
+    {
+      "case_index": 19,
+      "candidate": "D_R06_QUALITY_DUAL",
+      "reference": "B_D02_TRANSPORT",
+      "complete30": true,
+      "avg_diff": 0.0,
+      "cost_p_raw": 1.0,
+      "cost_family_reserved_p": 1.0,
+      "validity_p_raw": 1.0,
+      "cost_p_holm18": 1.0,
+      "validity_p_holm18": 1.0,
+      "whole_time_diff": -241.5845515184764,
+      "time_p_raw": 1e-05,
+      "time_family_reserved_p": 1e-05,
+      "time_p_holm18": 0.00018
+    },
+    {
+      "case_index": 35,
+      "candidate": "D_R06_QUALITY_DUAL",
+      "reference": "B_D02_TRANSPORT",
+      "complete30": true,
+      "avg_diff": 0.0,
+      "cost_p_raw": 1.0,
+      "cost_family_reserved_p": 1.0,
+      "validity_p_raw": 1.0,
+      "cost_p_holm18": 1.0,
+      "validity_p_holm18": 1.0,
+      "whole_time_diff": -135.84884557433736,
+      "time_p_raw": 1e-05,
+      "time_family_reserved_p": 1e-05,
+      "time_p_holm18": 0.00018
+    },
+    {
+      "case_index": 39,
+      "candidate": "D_R06_QUALITY_DUAL",
+      "reference": "B_D02_TRANSPORT",
+      "complete30": true,
+      "avg_diff": -0.16190553849298794,
+      "cost_p_raw": 0.00141,
+      "cost_family_reserved_p": 0.00141,
+      "validity_p_raw": 1.0,
+      "cost_p_holm18": 0.01974,
+      "validity_p_holm18": 1.0,
+      "whole_time_diff": -270.4681978108167,
+      "time_p_raw": 1e-05,
+      "time_family_reserved_p": 1e-05,
+      "time_p_holm18": 0.00018
+    }
+  ],
+  "historical_ILS_std_thresholds": {
+    "19": 0.058465,
+    "35": 0.2322,
+    "39": 0.4096
+  },
+  "ILS_acceptance_provenance_verified": false,
+  "ILS_comparison_descriptive_not_paired": true,
+  "requires_fresh_capacity_and_new_full40_protocol": true,
+  "no_retries": true,
+  "failed_cost_not_imputed": true
+}
