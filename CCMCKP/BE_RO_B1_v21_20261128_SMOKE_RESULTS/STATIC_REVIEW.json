@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Static preservation only, not algorithm validation",
+  "changed": [
+    "CMakeLists.txt",
+    "be_ro_search.cpp"
+  ],
+  "added": [
+    "be_ro_radius_grid.hpp",
+    "tests/be_ro_radius_grid_test.cpp"
+  ],
+  "unchanged_source_files": 89,
+  "unchanged_blocks": {
+    "certification_and_archive_gate": "50f6d554bd07138d0e3cedbfb225b62b3d83783a1aaed5734168c58a14a41113",
+    "resource_step1": "881a272285d3e9f9fcc8d9860e59bee8c24acf5997cda701fe05b2e24aefde17",
+    "escalation_step5": "f9de2df0f25757a920515115926785c060a065cfcfa126845e2474e11d9c3325"
+  },
+  "linear_model_witness_native_main_unchanged": true,
+  "production_audit_main_identical_to_v2": true,
+  "reader_schema_change": "Only .5s coarse/zoom allowance and explicit geometry/argmin/metadata checks; Fraction and native/LSS kernels retained",
+  "old_v2_results_untouched": true
+}

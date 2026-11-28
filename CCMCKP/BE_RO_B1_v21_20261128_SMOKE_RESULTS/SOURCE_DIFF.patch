@@ -1,0 +1,186 @@
+--- a/source/CMakeLists.txt
++++ b/source/CMakeLists.txt
+@@ -16,6 +16,14 @@
+     target_compile_options(ccmckp_s10 PRIVATE -Wall -Wextra -ffp-contract=off)
+ else()
+     message(FATAL_ERROR "Use 64-bit GCC or Clang with unsigned __int128 support")
++endif()
++
++option(S10_BUILD_BE_GRID_TESTS "Build B1-v2.1 radius geometry regression" OFF)
++if(S10_BUILD_BE_GRID_TESTS)
++    add_executable(be_ro_radius_grid_test tests/be_ro_radius_grid_test.cpp)
++    target_compile_features(be_ro_radius_grid_test PRIVATE cxx_std_17)
++    target_include_directories(be_ro_radius_grid_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${S10_GMP_INCLUDE}")
++    target_link_libraries(be_ro_radius_grid_test PRIVATE "${S10_GMPXX}" "${S10_GMP}")
+ endif()
+ 
+ option(S10_BUILD_LSS_TESTS "Build full-sample/LSS-only regressions" OFF)
+--- a/source/be_ro_search.cpp
++++ b/source/be_ro_search.cpp
+@@ -1,5 +1,6 @@
+ #include "search.hpp"
+ #include "be_ro_linear.hpp"
++#include "be_ro_radius_grid.hpp"
+ #include "isolated_native.hpp"
+ #include <tuple>
+ 
+@@ -12,7 +13,8 @@
+  std::set<Selection>tried;
+  struct Entry{Selection s;mpq_class omega,lambda;std::string kind;Json proof;double score;Json origins;};
+  std::map<Selection,Entry>archive;
+- be_ro_log={{"model","BE_RO_Pure_B1_v2"},{"beta","19/20"},{"K",5},{"tail_count",w.tail_count},
++ be_ro_log={{"model","BE_RO_Pure_B1_v2"},{"revision","B1-v2.1"},{"non_monotone_radius_scan",true},
++  {"grid_resolution_is_complete",false},{"beta","19/20"},{"K",5},{"tail_count",w.tail_count},
+   {"samples_per_item",instance.sample_count},{"items",w.items},{"radius_is_probability_guarantee",false},
+   {"radius_localization_is_heuristic",true},{"CDF_solution_probability_monotonicity_claim",false},
+   {"finite_lambda_grid_is_exact_optimizer",false},{"omega_max_is_exact_claim",false},
+@@ -27,9 +29,9 @@
+   std::set<Selection>keys;for(const auto&q:pool)keys.insert(q.first);
+   return pool.at(cost_order(keys)[4]).cost;
+  };
+- auto query=[&](const BELinearRow&row,int count,const std::string&phase,bool exclude){
++ auto query=[&](const BELinearRow&row,int count,const std::string&phase,bool exclude,double seconds=1.){
+   check_budget();const double begin=now();if(begin>=deadline)throw BudgetExpired();
+-  Json log;auto found=solver.solve(row,1.,count,exclude?tried:std::set<Selection>{},kth()-1e-6,log);
++  Json log;auto found=solver.solve(row,seconds,count,exclude?tried:std::set<Selection>{},kth()-1e-6,log);
+   mipseconds+=now()-begin;if(row.feasible)++models;
+   log["start"]=begin-started;log["finish"]=now()-started;log["phase"]=phase;
+   log["returned"]=Json::array();log["archive_processing_complete"]=false;Groups good;
+@@ -51,11 +53,11 @@
+   for(const auto&s:good){auto&a=archive.at(s);if(a.score<0){check_budget();a.score=fft.probability(s);}}
+   be_ro_log["queries"][qi]["archive_processing_complete"]=true;return good;
+  };
+- auto radius_query=[&](const mpq_class&omega,int count,const std::string&phase,bool exclude){
++ auto radius_query=[&](const mpq_class&omega,int count,const std::string&phase,bool exclude,double seconds=1.){
+   std::set<Selection>keys;
+   for(const auto&lambda:math.grid(omega,10)){
+    check_budget();auto row=math.row(omega,lambda);
+-   auto found=query(row,count,phase,exclude);keys.insert(found.begin(),found.end());
++   auto found=query(row,count,phase,exclude,seconds);keys.insert(found.begin(),found.end());
+   }
+   return cost_order(keys);
+  };
+@@ -130,26 +132,25 @@
+   be_ro_log["omega_resource_lower"]=lo.get_str();be_ro_log["omega_resource_upper"]=hi.get_str();
+   be_ro_log["resource_search_unknown"]=true;be_ro_log["resource_positive_feasible_found"]=maximum>0;
+   be_ro_log["resource_note"]="Feasible grid radius only; failed probes do not prove BE infeasibility or exact maximum";
+-  lo=0;hi=maximum;Selection prevlo,prevhi;
+-  while(hi>lo&&maximum>0&&(hi-lo)/maximum>mpq_class(1,100)){
+-   mpq_class mid=(lo+hi)/2;mid.canonicalize();auto found=radius_query(mid,1,"private_calibration",false);
+-   if(found.empty()){
+-    hi=mid;be_ro_log["calibration"].push_back({{"omega",mid.get_str()},{"no_returned_candidate",true},
+-     {"update","heuristic_hi"},{"original_CDF_calls",0},{"infeasibility_claim",false}});continue;
++  BERadiusGrid grid(maximum);int rstar=8;double coarse_cost=INFINITY,grid_cost=INFINITY;mpq_class star=maximum;
++  auto scan=[&](const mpq_class&omega,const std::string&pass,int index){
++   const auto qbegin=be_ro_log["queries"].size();auto found=radius_query(omega,1,pass,false,.5);
++   Json log={{"pass",pass},{"point",index},{"omega",omega.get_str()},{"query_begin",qbegin},
++    {"query_end",be_ro_log["queries"].size()},{"original_CDF_calls",0},{"feasible_private_min_cost",nullptr}};
++   double local=INFINITY;
++   for(const auto&s:found)if(archive.at(s).score>=.99&&instance.cost_of(s)<local){
++    local=instance.cost_of(s);log["selection"]=s;log["private_probability"]=archive.at(s).score;log["feasible_private_min_cost"]=local;
+    }
+-   const auto&s=found.front();double p=archive.at(s).score;
+-   be_ro_log["calibration"].push_back({{"omega",mid.get_str()},{"selection",s},
+-    {"private_probability",p},{"original_CDF_calls",0}});
+-   if(p>=.99){hi=mid;prevhi=s;}else{lo=mid;prevlo=s;}
+-   if(!prevlo.empty()&&prevlo==prevhi)break;
+-  }
+-  const mpq_class star=hi;
+-  be_ro_log["omega_resource_used"]=maximum.get_str();be_ro_log["omega_star"]=star.get_str();
+-  auto clip=[&](mpq_class x){x.canonicalize();return std::min(maximum,std::max(mpq_class(0),x));};
+-  std::vector<mpq_class>points;
+-  for(mpq_class p:{clip(std::max(mpq_class(1,20),mpq_class(star*9/10))),
+-                   clip(std::max(mpq_class(1,20),mpq_class(star*24/25))),clip(star),clip(mpq_class(star*26/25))})
+-   if(std::find(points.begin(),points.end(),p)==points.end())points.push_back(p);
++   if(std::isfinite(local)&&(local<grid_cost||(local==grid_cost&&omega<star))){grid_cost=local;star=omega;}
++   be_ro_log["calibration"].push_back(log);return local;
++  };
++  for(int r=1;r<=8;++r){double c=scan(grid.coarse(r),"private_coarse",r);if(c<coarse_cost){coarse_cost=c;rstar=r;}}
++  auto interval=grid.interval(rstar);be_ro_log["coarse_r_star"]=rstar;
++  be_ro_log["zoom_interval"]={interval.first.get_str(),interval.second.get_str()};
++  for(int q=1;q<=8;++q)scan(grid.zoom(q,rstar),"private_zoom",q);
++  be_ro_log["omega_resource_used"]=maximum.get_str();be_ro_log["omega_star"]=star.get_str();be_ro_log["omega_best"]=star.get_str();
++  be_ro_log["private_grid_global_min_cost"]=std::isfinite(grid_cost)?Json(grid_cost):Json(nullptr);
++  auto points=grid.pool(star);
+   be_ro_log["critical_points"]=Json::array();
+   for(const auto&omega:points){be_ro_log["critical_points"].push_back(omega.get_str());radius_query(omega,10,"critical_pool",false);}
+   auto box=math.row(maximum,0,true);be_ro_log["box_array_feasible"]=box.feasible;
+@@ -168,6 +169,8 @@
+   {"cost",instance.cost_of(a.s)},{"omega",a.omega.get_str()},{"lambda",a.lambda.get_str()},
+   {"kind",a.kind},{"witness",a.proof},{"private_probability",a.score>=0?Json(a.score):Json(nullptr)},
+   {"private_probability_complete",a.score>=0},{"origins",a.origins}});}
++ double archive_min=INFINITY;for(const auto&q:archive)archive_min=std::min(archive_min,instance.cost_of(q.first));
++ be_ro_log["archive_min_cost"]=std::isfinite(archive_min)?Json(archive_min):Json(nullptr);
+  phase_records.push_back({{"phase","initialization"},{"own_raw_sample_initialization",true},{"best_before",nullptr},
+   {"best_after",best?Json(best->cost):Json(nullptr)},{"elapsed",now()-started},{"candidates_added",pool.size()}});
+  be_ro_log["epsilon_fft_final"]=epsilon;be_ro_log["timing"]["bero_resource_arrays"]=resource_seconds;
+--- /dev/null
++++ b/source/be_ro_radius_grid.hpp
+@@ -0,0 +1,37 @@
++#pragma once
++#include <gmpxx.h>
++#include <algorithm>
++#include <stdexcept>
++#include <utility>
++#include <vector>
++
++namespace s10 {
++// Fixed finite coverage, not an assumption of monotonic candidate probability
++// and not a guarantee of hitting every arbitrarily narrow feasible window.
++struct BERadiusGrid {
++ mpq_class maximum;
++ explicit BERadiusGrid(mpq_class upper):maximum(std::move(upper)){
++  maximum.canonicalize();if(maximum<0)throw std::logic_error("Negative grid radius");
++ }
++ mpq_class coarse(int r)const{
++  if(r<0||r>8)throw std::logic_error("Coarse index");
++  mpq_class x=maximum*r/8;x.canonicalize();return x;
++ }
++ std::pair<mpq_class,mpq_class> interval(int rstar)const{
++  if(rstar<1||rstar>8)throw std::logic_error("Invalid winning index");
++  return {coarse(std::max(0,rstar-2)),coarse(rstar)};
++ }
++ mpq_class zoom(int q,int rstar)const{
++  if(q<1||q>8)throw std::logic_error("Zoom index");
++  auto v=interval(rstar);mpq_class weight=mpq_class(q)/9;weight.canonicalize();
++  mpq_class x=v.first+weight*(v.second-v.first);x.canonicalize();return x;
++ }
++ std::vector<mpq_class> pool(mpq_class best)const{
++  auto clip=[&](mpq_class x){x.canonicalize();return std::min(maximum,std::max(mpq_class(0),x));};
++  std::vector<mpq_class>out;
++  for(auto p:{clip(std::max(mpq_class(1,20),mpq_class(best*24/25))),clip(best),clip(mpq_class(best*26/25))})
++   if(std::find(out.begin(),out.end(),p)==out.end())out.push_back(p);
++  return out;
++ }
++};
++}
+--- /dev/null
++++ b/source/tests/be_ro_radius_grid_test.cpp
+@@ -0,0 +1,27 @@
++#include "be_ro_radius_grid.hpp"
++#include "model.hpp"
++#include <iostream>
++using namespace s10;
++int main(){
++ try{
++  int checks=0;
++  for(const char*raw:{"0","1/1000","1/20","1","5099/1000","599/100","8"}){
++   BERadiusGrid g{mpq_class(raw)};
++   for(int r=1;r<=8;++r){
++    mpq_class expected=g.maximum*r/8;expected.canonicalize();
++    if(g.coarse(r)!=expected)throw std::logic_error("Coarse formula");++checks;
++    auto v=g.interval(r);
++    for(int q=1;q<=8;++q){
++     auto x=g.zoom(q,r);mpq_class expected=v.first+mpq_class(q)*(v.second-v.first)/9;expected.canonicalize();
++     if(x!=expected)throw std::logic_error("Zoom formula");
++     if(g.maximum>0&&!(v.first<x&&x<v.second))throw std::logic_error("Strict interior point");++checks;
++    }
++    for(const auto&x:g.pool(g.coarse(r))){if(x<0||x>g.maximum)throw std::logic_error("Pool clipping");++checks;}
++   }
++  }
++  BERadiusGrid eight{mpq_class(5099,1000)},twentyeight{mpq_class(599,100)};
++  if(!(eight.coarse(3)>mpq_class(19,10)&&eight.coarse(3)<2))throw std::logic_error("Case8 document grid window");
++  if(!(twentyeight.zoom(4,5)>mpq_class(28,10)&&twentyeight.zoom(4,5)<mpq_class(295,100)))throw std::logic_error("Case28 document grid window");
++  std::cout<<Json({{"status","PASS"},{"grid_checks",checks},{"arbitrary_window_hit_guarantee",false}}).dump()<<'\n';return 0;
++ }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}
++}

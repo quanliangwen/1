@@ -1,0 +1,36 @@
+{
+  "status": "FROZEN_SMOKE_READY",
+  "registered_runs": 35,
+  "max_workers": 60,
+  "protocol_sha256": "3d469c3323cb73696d473f876d83a42c2958b3a55ff51d00d2bcf360669c32b4",
+  "binary_sha256": "1c133bc0fc784e540215473c54452b4d75067a6a7d91dc43d4140f220e4586fc",
+  "available_GiB": 90.15371322631836,
+  "free_disk_GiB": 19.236896514892578,
+  "source_pins": 104,
+  "input_pins": 3412,
+  "quality_gate": {
+    "all35_independently_valid": true,
+    "global_errors_empty": true,
+    "TIME_LIMIT_zero_solution_queries": 0,
+    "best_cost_max": {
+      "8": 11.18515,
+      "18": 142.27125,
+      "28": 16.42365,
+      "35": 194.09625,
+      "36": 159.28105,
+      "38": 196.27715,
+      "39": 325.05
+    },
+    "avg_cost_max": {
+      "8": 11.18515,
+      "18": 142.32,
+      "28": 16.42365,
+      "35": 194.4,
+      "36": 159.35,
+      "38": 196.35
+    },
+    "threshold_basis": "Exact prospective thresholds from user B1-v2.1 design section5; not applied retroactively to v2",
+    "max_whole_seconds_per_run": 600,
+    "no_after_result_relaxation": true
+  }
+}
