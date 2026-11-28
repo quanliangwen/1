@@ -1,0 +1,36 @@
+{
+  "file_integrity_status": "PASS",
+  "scope": "Static text, inheritance and SHA verification ONLY; no compiler or algorithm/test execution",
+  "changed_existing_source_files": [
+    "CMakeLists.txt",
+    "be_ro_search.cpp"
+  ],
+  "added_source_files": [
+    "be_ro_linear.cpp",
+    "be_ro_linear.hpp",
+    "tests/be_ro_linear_test.cpp"
+  ],
+  "unchanged_B1_source_file_count": 86,
+  "unchanged_prior_inheritance_file_count": 79,
+  "unchanged_native_functions": {
+    "double Search::native_check(": "324d8f93a7a51430d1d1f59f948c5c6f7dddb769ff7c56333a7d2cb64865664a",
+    "Json Search::shortlist()": "86a5ce86b20887ada82982b11613197ae8c586665efd2c3004b1230cdedbfcf0",
+    "void Search::final_check()": "bb1054b9c7efdbc7a1135378b36dd31f7f313d12396d0b51756d7a4a4d56b4c8"
+  },
+  "B1_witness_byte_identical": true,
+  "original_main_LSS_full_clock_byte_identical": true,
+  "local_B2_frozen_source_files_verified": 91,
+  "B2_protocol_sha256": "441b94dacb03315d9aaa7f975247b5fb9b3893d5a2ac4848e9cda2b12090d84c",
+  "B2_actual_server_status_checked_this_task": false,
+  "B2_or_server_modified": false,
+  "compile_status": "NOT_RUN",
+  "tiny_integration_and_independent_reader_status": "NOT_RUN",
+  "benchmark_status": "NOT_RUN",
+  "performance_claim": null,
+  "design_issues_documented": [
+    "Finite lambda grid not globally exact",
+    "Resource radius not certified exact maximum",
+    "No guaranteed speed or failure elimination",
+    "Smoke qualitative gates need numerical pre-registration"
+  ]
+}

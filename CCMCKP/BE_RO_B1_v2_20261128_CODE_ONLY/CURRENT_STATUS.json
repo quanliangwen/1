@@ -1,0 +1,16 @@
+{
+  "stage": "CODE_PREPARED_UNTESTED_WAIT_FOR_B2",
+  "date": "2026-11-28",
+  "user_instruction": "Modify code per B1-v2 repair design; do not run now; wait for B2 to finish before new code runs",
+  "source_parent": "BE_RO_Pure_B1_v1",
+  "parent_protocol_sha256": "a564937a02c5e74ab94d160d3ae67e88f489164155b7b1fdc61641dd8a340dee",
+  "compiled": false,
+  "algorithm_executed": false,
+  "tiny_or_smoke_executed": false,
+  "server_deployed": false,
+  "controller_launched": false,
+  "B2_source_or_queue_modified": false,
+  "automatic_monitor_or_launcher_created": false,
+  "performance_improvement_established": false,
+  "next": "After actual B2 completion, validate build/tiny/readers and freeze smoke gates in a separate directory before any new benchmark campaign"
+}

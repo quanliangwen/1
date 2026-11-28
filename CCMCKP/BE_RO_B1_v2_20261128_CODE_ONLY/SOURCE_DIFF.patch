@@ -1,0 +1,483 @@
+--- a/source/CMakeLists.txt
++++ b/source/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ find_library(S10_GMP gmp HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+ find_library(S10_GMPXX gmpxx HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+ 
+-add_executable(ccmckp_s10 main.cpp model.cpp rng.cpp evaluation.cpp search.cpp mip.cpp report.cpp ellipsoid.cpp costfront.cpp riskmaster.cpp dominance.cpp pool_model.cpp calibrated_search.cpp entropic_search.cpp polish_search.cpp r05_search.cpp r05_budget.cpp r06_search.cpp r06_budget.cpp r07_search.cpp r07_budget.cpp r07_polish.cpp be_ro_solver.cpp be_ro_search.cpp)
++add_executable(ccmckp_s10 main.cpp model.cpp rng.cpp evaluation.cpp search.cpp mip.cpp report.cpp ellipsoid.cpp costfront.cpp riskmaster.cpp dominance.cpp pool_model.cpp calibrated_search.cpp entropic_search.cpp polish_search.cpp r05_search.cpp r05_budget.cpp r06_search.cpp r06_budget.cpp r07_search.cpp r07_budget.cpp r07_polish.cpp be_ro_linear.cpp be_ro_search.cpp)
+ target_compile_features(ccmckp_s10 PRIVATE cxx_std_17)
+ target_include_directories(ccmckp_s10 SYSTEM PRIVATE "${S10_GMP_INCLUDE}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
+ target_link_libraries(ccmckp_s10 PRIVATE "${S10_GMPXX}" "${S10_GMP}")
+@@ -139,3 +139,13 @@
+ target_include_directories(be_ro_math_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${S10_GMP_INCLUDE}" "${S10_GUROBI_INCLUDE}")
+ target_link_libraries(be_ro_math_test PRIVATE "${S10_GMPXX}" "${S10_GMP}" "${S10_GUROBI_LIBRARY}")
+ target_compile_options(be_ro_math_test PRIVATE -Wall -Wextra -ffp-contract=off)
++
++# Code-only B1-v2 preparation: this target has NOT been built or run yet.
++option(S10_BUILD_BE_LINEAR_TESTS "Build B1-v2 fixed-lambda tiny regressions" OFF)
++if(S10_BUILD_BE_LINEAR_TESTS)
++    add_executable(be_ro_linear_test tests/be_ro_linear_test.cpp model.cpp be_ro_linear.cpp)
++    target_compile_features(be_ro_linear_test PRIVATE cxx_std_17)
++    target_include_directories(be_ro_linear_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${S10_GMP_INCLUDE}" "${S10_GUROBI_INCLUDE}")
++    target_link_libraries(be_ro_linear_test PRIVATE "${S10_GUROBI_LIBRARY}" "${S10_GMPXX}" "${S10_GMP}")
++    target_compile_options(be_ro_linear_test PRIVATE -Wall -Wextra -ffp-contract=off)
++endif()
+--- a/source/be_ro_search.cpp
++++ b/source/be_ro_search.cpp
+@@ -1,72 +1,180 @@
+ #include "search.hpp"
+-#include "be_ro_solver.hpp"
++#include "be_ro_linear.hpp"
+ #include "isolated_native.hpp"
++#include <tuple>
++
+ namespace s10 {
+ Json Search::be_ro_run(){
+- BEROWitness w(instance,options.capacity_text);BEROSolver solver(instance,w,options.seed);
++ BEROWitness w(instance,options.capacity_text);BELinearMath math(instance,w);BELinearSolver solver(instance,options.seed);
+  PolishFFT fft(instance.samples,instance.groups,options.capacity,8192,12);
+- double epsilon=.0015,mipseconds=0,poolseconds=0,nativeseconds=0;
+- std::set<Selection> tried;
+- be_ro_log={{"model","BE_RO_Pure_B1"},{"beta","19/20"},{"K",5},{"tail_count",w.tail_count},{"samples_per_item",instance.sample_count},{"items",w.items},{"radius_is_probability_guarantee",false},{"radius_localization_is_heuristic",true},{"CDF_solution_probability_monotonicity_claim",false},{"external_MIPstarts",false},{"historical_solution_inputs",false},{"local_search_enabled",false},{"private_FFT_is_certificate",false},{"initialization","own BE-MISOCP model only; no external initial solution"},{"queries",Json::array()},{"candidates",Json::array()},{"native_calls",Json::array()},{"calibration",Json::array()},{"timing",{{"load_and_model",now()-started}}}};
+- auto query=[&](mpq_class omega,double seconds,int count,bool feasibility,bool fine){
++ const double fft_setup_seconds=fft.seconds;
++ double epsilon=.0015,mipseconds=0,resource_seconds=0,nativeseconds=0;
++ std::set<Selection>tried;
++ struct Entry{Selection s;mpq_class omega,lambda;std::string kind;Json proof;double score;Json origins;};
++ std::map<Selection,Entry>archive;
++ be_ro_log={{"model","BE_RO_Pure_B1_v2"},{"beta","19/20"},{"K",5},{"tail_count",w.tail_count},
++  {"samples_per_item",instance.sample_count},{"items",w.items},{"radius_is_probability_guarantee",false},
++  {"radius_localization_is_heuristic",true},{"CDF_solution_probability_monotonicity_claim",false},
++  {"finite_lambda_grid_is_exact_optimizer",false},{"omega_max_is_exact_claim",false},
++  {"external_MIPstarts",false},{"historical_solution_inputs",false},{"local_search_enabled",false},
++  {"private_FFT_is_certificate",false},{"initialization","own raw samples; fixed-lambda linear BE rows only"},
++  {"sigma_min",math.sigma_min.get_str()},{"sigma_max",math.sigma_max.get_str()},
++  {"queries",Json::array()},{"candidates",Json::array()},{"native_calls",Json::array()},
++  {"calibration",Json::array()},{"resource_probes",Json::array()},{"escape",Json::array()},
++  {"timing",{{"load_and_model",now()-started}}}};
++ auto kth=[&]()->double{
++  if(pool.size()<5)return INFINITY;
++  std::set<Selection>keys;for(const auto&q:pool)keys.insert(q.first);
++  return pool.at(cost_order(keys)[4]).cost;
++ };
++ auto query=[&](const BELinearRow&row,int count,const std::string&phase,bool exclude){
+   check_budget();const double begin=now();if(begin>=deadline)throw BudgetExpired();
+-  double cut=INFINITY;if(fine&&pool.size()>=5){std::set<Selection>keys;for(const auto&q:pool)keys.insert(q.first);auto order=cost_order(keys);cut=pool.at(order[4]).cost-1e-6;}
+-  Json log;auto all=solver.solve(omega,seconds,count,feasibility,fine?tried:std::set<Selection>{},cut,log);
+-  mipseconds+=now()-begin;if(fine)poolseconds+=now()-begin;++models;log["start"]=begin-started;log["finish"]=now()-started;log["phase"]=fine?"critical_pool":feasibility?"resource_radius":"private_calibration";log["returned"]=Json::array();Groups good;
+-  for(const auto&s:all){auto proof=w.evaluate(s,omega);log["returned"].push_back(proof);if(proof["robust_feasible"].get<bool>())good.push_back(s);}
+-  be_ro_log["queries"].push_back(log);return std::make_pair(good,log.value("proven_infeasible",false));
++  Json log;auto found=solver.solve(row,1.,count,exclude?tried:std::set<Selection>{},kth()-1e-6,log);
++  mipseconds+=now()-begin;if(row.feasible)++models;
++  log["start"]=begin-started;log["finish"]=now()-started;log["phase"]=phase;
++  log["returned"]=Json::array();log["archive_processing_complete"]=false;Groups good;
++  for(const auto&s:found){
++   auto proof=w.evaluate(s,row.omega);log["returned"].push_back(proof);
++   if(!proof["robust_feasible"].get<bool>())continue;
++   good.push_back(s);
++  }
++  const std::size_t qi=be_ro_log["queries"].size();be_ro_log["queries"].push_back(log);
++  for(const auto&s:good){
++   Json origin={{"query_index",qi},{"phase",phase},{"omega",row.omega.get_str()},
++    {"lambda",row.lambda.get_str()},{"kind",row.kind},{"row",row.proof(s)}};
++   auto it=archive.find(s);
++   if(it==archive.end()){
++    auto proof=w.evaluate(s,row.omega);
++    archive.emplace(s,Entry{s,row.omega,row.lambda,row.kind,proof,-1,Json::array({origin})});
++   }else it->second.origins.push_back(origin);
++  }
++  for(const auto&s:good){auto&a=archive.at(s);if(a.score<0){check_budget();a.score=fft.probability(s);}}
++  be_ro_log["queries"][qi]["archive_processing_complete"]=true;return good;
+  };
+- auto kth=[&]()->double{if(pool.size()<5)return INFINITY;std::set<Selection>keys;for(const auto&q:pool)keys.insert(q.first);return pool.at(cost_order(keys)[4]).cost;};
+- auto certify=[&](const Selection&s,const mpq_class&omega,const Json&proof,double score){
+-  if(tried.count(s)||pool.count(s))return;const double cutoff=kth()-1e-6;
+-  Json rec={{"selection",s},{"cost",instance.cost_of(s)},{"omega",omega.get_str()},{"witness",proof},{"private_probability",score},{"epsilon_before",epsilon},{"Kth_cost_before",std::isfinite(kth())?Json(kth()):Json(nullptr)},{"start",now()-started}};
+-  if(instance.cost_of(s)>=cutoff){rec["decision"]="dynamic_cost_cutoff";be_ro_log["candidates"].push_back(rec);return;}
+-  if(score<.99-epsilon){rec["decision"]="private_FFT_rejected";be_ro_log["candidates"].push_back(rec);return;}
+-  if(!proof["robust_feasible"].get<bool>())throw std::logic_error("Uncertified BE candidate");
++ auto radius_query=[&](const mpq_class&omega,int count,const std::string&phase,bool exclude){
++  std::set<Selection>keys;
++  for(const auto&lambda:math.grid(omega,10)){
++   check_budget();auto row=math.row(omega,lambda);
++   auto found=query(row,count,phase,exclude);keys.insert(found.begin(),found.end());
++  }
++  return cost_order(keys);
++ };
++ // No final LSS decision is read or used to calibrate the search.
++ auto certify=[&](const Entry&a,const std::string&mode,double gate){
++  const auto&s=a.s;if(a.score<0||tried.count(s)||pool.count(s))return;
++  double current_kth=kth();
++  Json rec={{"selection",s},{"cost",instance.cost_of(s)},{"omega",a.omega.get_str()},
++   {"lambda",a.lambda.get_str()},{"kind",a.kind},{"witness",a.proof},{"private_probability",a.score},
++   {"epsilon_before",epsilon},{"mode",mode},{"gate",std::isfinite(gate)?Json(gate):Json(nullptr)},
++   {"Kth_cost_before",std::isfinite(current_kth)?Json(current_kth):Json(nullptr)},{"start",now()-started}};
++  if(instance.cost_of(s)>=current_kth-1e-6){rec["decision"]="dynamic_cost_cutoff";be_ro_log["candidates"].push_back(rec);return;}
++  if(a.score<gate){rec["decision"]="private_FFT_rejected";be_ro_log["candidates"].push_back(rec);return;}
++  if(!a.proof["robust_feasible"].get<bool>())throw std::logic_error("Uncertified BE candidate");
+   check_budget();const double begin=now();if(begin>=deadline)throw BudgetExpired();tried.insert(s);
+   const double end=std::min(begin+90.,started+options.seconds-30.);
+   const int oldcalls=oracle.calls;const double oldseconds=oracle.seconds;
+   auto child=isolated_native(end,[&](){
+-   // Only this run's child: allow an already-started call to finish after 480s.
+    deadline=started+options.seconds-30.;phase_deadline=end;last_save=now()+1e9;
+    bool expired=false;double value=0;try{value=native_check(s,"BE_RO_Pure");}catch(const BudgetExpired&){expired=true;}
+-   Json z={{"expired",expired},{"value",value},{"calls_delta",oracle.calls-oldcalls},{"seconds_delta",oracle.seconds-oldseconds},{"state",pool.count(s)?"accepted":infeasible_proofs.count(s)?"infeasible":"unknown"}};
+-   if(pool.count(s))z["certificate"]=pool.at(s).certificate.json(s);else if(infeasible_proofs.count(s))z["certificate"]=infeasible_proofs.at(s).json(s);return z;
++   Json z={{"expired",expired},{"value",value},{"calls_delta",oracle.calls-oldcalls},{"seconds_delta",oracle.seconds-oldseconds},
++    {"state",pool.count(s)?"accepted":infeasible_proofs.count(s)?"infeasible":"unknown"}};
++   if(pool.count(s))z["certificate"]=pool.at(s).certificate.json(s);
++   else if(infeasible_proofs.count(s))z["certificate"]=infeasible_proofs.at(s).json(s);return z;
+   });
+-  Json call={{"selection",s},{"cost",instance.cost_of(s)},{"start",begin-started},{"finish",now()-started},{"hard_timeout",child.timeout},{"elapsed",child.elapsed},{"state","unknown"},{"omega",omega.get_str()},{"private_probability",score},{"epsilon_before",epsilon},{"slice_deadline",end-started}};
+-  if(!child.timeout){auto&z=child.payload;call["state"]=z["state"];call["expired"]=z["expired"];oracle.calls+=z["calls_delta"].get<int>();oracle.seconds+=z["seconds_delta"].get<double>();
+-   if(z.contains("certificate")){auto c=z["certificate"];call["certificate"]=c;Certificate cert{mpz_class(c["lower_numerator"].get<std::string>()),mpz_class(c["upper_numerator"].get<std::string>()),mpz_class(c["denominator"].get<std::string>()),c["bins"].get<int>(),c["certificate_seconds"].get<double>()};
+-    if(z["state"]=="accepted"){accept(s,"BE_RO_Pure",cert);epsilon=std::max(epsilon,std::max(.001,.99-score));}
++  Json call={{"selection",s},{"cost",instance.cost_of(s)},{"start",begin-started},{"finish",now()-started},
++   {"hard_timeout",child.timeout},{"elapsed",child.elapsed},{"state","unknown"},{"omega",a.omega.get_str()},
++   {"lambda",a.lambda.get_str()},{"private_probability",a.score},{"epsilon_before",epsilon},
++   {"mode",mode},{"gate",std::isfinite(gate)?Json(gate):Json(nullptr)},{"slice_deadline",end-started}};
++  if(!child.timeout){auto&z=child.payload;call["state"]=z["state"];call["expired"]=z["expired"];
++   oracle.calls+=z["calls_delta"].get<int>();oracle.seconds+=z["seconds_delta"].get<double>();
++   if(z.contains("certificate")){auto c=z["certificate"];call["certificate"]=c;
++    Certificate cert{mpz_class(c["lower_numerator"].get<std::string>()),mpz_class(c["upper_numerator"].get<std::string>()),
++     mpz_class(c["denominator"].get<std::string>()),c["bins"].get<int>(),c["certificate_seconds"].get<double>()};
++    if(z["state"]=="accepted"){accept(s,"BE_RO_Pure",cert);epsilon=std::max(epsilon,std::max(.001,.99-a.score));}
+     else if(z["state"]=="infeasible"){infeasible_proofs.insert_or_assign(s,cert);decisions[s]=cert.probability();}
+    }
+   }
+-  nativeseconds+=now()-begin;call["epsilon_after"]=epsilon;be_ro_log["native_calls"].push_back(call);rec["decision"]=call["state"];rec["finish"]=now()-started;be_ro_log["candidates"].push_back(rec);
++  nativeseconds+=now()-begin;call["epsilon_after"]=epsilon;be_ro_log["native_calls"].push_back(call);
++  rec["decision"]=call["state"];rec["finish"]=now()-started;be_ro_log["candidates"].push_back(rec);
++ };
++ auto certify_ordered=[&](bool escape){
++  std::vector<const Entry*>order;for(const auto&q:archive)if(q.second.score>=0&&!tried.count(q.first)&&!pool.count(q.first))order.push_back(&q.second);
++  if(escape&&pool.empty()){
++   std::sort(order.begin(),order.end(),[&](const Entry*a,const Entry*b){
++    return a->score==b->score?std::make_pair(instance.cost_of(a->s),a->s)<std::make_pair(instance.cost_of(b->s),b->s):a->score>b->score;});
++   int attempted=0;
++   for(const auto*a:order){if(!pool.empty()||attempted==10)break;check_budget();certify(*a,"escape_empty",-INFINITY);++attempted;}
++   if(pool.empty())return;
++  }
++  std::sort(order.begin(),order.end(),[&](const Entry*a,const Entry*b){
++   return std::make_tuple(instance.cost_of(a->s),-a->score,a->s)<std::make_tuple(instance.cost_of(b->s),-b->score,b->s);});
++  // An accepted CDF may widen epsilon. Revisit earlier cheap FFT rejections,
++  // but never repeat a vector whose original CDF was already attempted.
++  bool widened;
++  do{double oldepsilon=epsilon;
++   for(const auto*a:order){check_budget();if(instance.cost_of(a->s)>=kth()-1e-6)break;
++    certify(*a,escape?"escape_nonempty":"archive_cost_order",escape?.985:.99-epsilon);}
++   widened=!escape&&epsilon>oldepsilon;
++  }while(widened);
+  };
+  try{
+-  const mpq_class cap=w.cap(instance.groups);mpq_class lo=0,hi=cap;
+-  be_ro_log["omega_cap"]=cap.get_str();bool unknown=false;
+-  // Finite-time feasibility is three-valued. Unknown never moves a bound.
+-  for(int k=0;k<10&&hi>lo;++k){mpq_class mid=(lo+hi)/2;mid.canonicalize();auto q=query(mid,.5,1,true,false);
+-   if(!q.first.empty())lo=mid;else if(q.second)hi=mid;else{unknown=true;break;}}
+-  mpq_class maximum=lo;be_ro_log["omega_resource_lower"]=lo.get_str();be_ro_log["omega_resource_upper"]=hi.get_str();be_ro_log["resource_search_unknown"]=unknown;be_ro_log["omega_max_is_exact_claim"]=false;
++  const double rbegin=now();const mpq_class cap=w.cap(instance.groups);mpq_class lo=0,hi=cap;
++  be_ro_log["omega_cap"]=cap.get_str();be_ro_log["resource_grid_count"]=12;
++  for(int k=0;k<12&&hi>lo;++k){
++   check_budget();mpq_class mid=(lo+hi)/2;mid.canonicalize();bool yes=math.feasible_at(mid,12);
++   be_ro_log["resource_probes"].push_back({{"omega",mid.get_str()},{"grid_feasible",yes},
++    {"full_model_infeasibility_claim",false}});
++   if(yes)lo=mid;else hi=mid;
++  }
++  const mpq_class maximum=lo;resource_seconds=now()-rbegin;
++  be_ro_log["omega_resource_lower"]=lo.get_str();be_ro_log["omega_resource_upper"]=hi.get_str();
++  be_ro_log["resource_search_unknown"]=true;be_ro_log["resource_positive_feasible_found"]=maximum>0;
++  be_ro_log["resource_note"]="Feasible grid radius only; failed probes do not prove BE infeasibility or exact maximum";
+   lo=0;hi=maximum;Selection prevlo,prevhi;
+   while(hi>lo&&maximum>0&&(hi-lo)/maximum>mpq_class(1,100)){
+-   mpq_class mid=(lo+hi)/2;mid.canonicalize();auto found=query(mid,2.,1,false,false);
+-   if(found.first.empty())break;auto s=found.first.front();double p=fft.probability(s);
+-   be_ro_log["calibration"].push_back({{"omega",mid.get_str()},{"selection",s},{"private_probability",p},{"original_CDF_calls",0}});
+-   if(p>=.99){hi=mid;prevhi=s;}else{lo=mid;prevlo=s;}if(!prevlo.empty()&&prevlo==prevhi)break;
++   mpq_class mid=(lo+hi)/2;mid.canonicalize();auto found=radius_query(mid,1,"private_calibration",false);
++   if(found.empty()){
++    hi=mid;be_ro_log["calibration"].push_back({{"omega",mid.get_str()},{"no_returned_candidate",true},
++     {"update","heuristic_hi"},{"original_CDF_calls",0},{"infeasibility_claim",false}});continue;
++   }
++   const auto&s=found.front();double p=archive.at(s).score;
++   be_ro_log["calibration"].push_back({{"omega",mid.get_str()},{"selection",s},
++    {"private_probability",p},{"original_CDF_calls",0}});
++   if(p>=.99){hi=mid;prevhi=s;}else{lo=mid;prevlo=s;}
++   if(!prevlo.empty()&&prevlo==prevhi)break;
+   }
+-  const mpq_class star=hi;mpq_class delta=std::max(mpq_class(hi-lo),mpq_class(star/50));delta.canonicalize();
+-  be_ro_log["omega_resource_used"]=maximum.get_str();be_ro_log["omega_star"]=star.get_str();be_ro_log["delta"]=delta.get_str();
+-  std::vector<mpq_class>points{star,std::max(mpq_class(0),mpq_class(star-delta)),std::min(maximum,mpq_class(star+delta))};
+-  be_ro_log["critical_points"]=Json::array();for(auto x:points){x.canonicalize();be_ro_log["critical_points"].push_back(x.get_str());}
+-  for(int round=0;round<4;++round){if(round==3&&pool.size()>=5)break;mpq_class omega=round<3?points[round]:star;
+-   auto found=query(omega,3.,25,false,true);
+-   for(const auto&s:found.first){check_budget();auto proof=w.evaluate(s,omega);double p=fft.probability(s);certify(s,omega,proof,p);}
++  const mpq_class star=hi;
++  be_ro_log["omega_resource_used"]=maximum.get_str();be_ro_log["omega_star"]=star.get_str();
++  auto clip=[&](mpq_class x){x.canonicalize();return std::min(maximum,std::max(mpq_class(0),x));};
++  std::vector<mpq_class>points;
++  for(mpq_class p:{clip(std::max(mpq_class(1,20),mpq_class(star*9/10))),
++                   clip(std::max(mpq_class(1,20),mpq_class(star*24/25))),clip(star),clip(mpq_class(star*26/25))})
++   if(std::find(points.begin(),points.end(),p)==points.end())points.push_back(p);
++  be_ro_log["critical_points"]=Json::array();
++  for(const auto&omega:points){be_ro_log["critical_points"].push_back(omega.get_str());radius_query(omega,10,"critical_pool",false);}
++  auto box=math.row(maximum,0,true);be_ro_log["box_array_feasible"]=box.feasible;
++  if(box.feasible)query(box,10,"box_corner_pool",false);
++  certify_ordered(false);
++  mpq_class esc=star;
++  for(int k=0;k<3&&pool.size()<5;++k){
++   check_budget();esc=k==2?maximum:mpq_class(esc+(maximum-esc)/4);esc.canonicalize();
++   auto before=pool.size();radius_query(esc,10,"escape_pool",true);certify_ordered(true);
++   be_ro_log["escape"].push_back({{"round",k+1},{"omega",esc.get_str()},{"certified_before",before},{"certified_after",pool.size()}});
++   if(esc==maximum)break;
+   }
+  }catch(const BudgetExpired&){be_ro_log["partial"]="global_new_call_deadline";}
+- phase_records.push_back({{"phase","initialization"},{"own_raw_sample_initialization",true},{"best_before",nullptr},{"best_after",best?Json(best->cost):Json(nullptr)},{"elapsed",now()-started},{"candidates_added",pool.size()}});
+- be_ro_log["epsilon_fft_final"]=epsilon;be_ro_log["timing"]["bero_bisect_misocp"]=mipseconds-poolseconds;be_ro_log["timing"]["bero_pool_misocp"]=poolseconds;be_ro_log["timing"]["bero_native_cdf"]=nativeseconds;be_ro_log["private_fft_seconds"]=fft.seconds;be_ro_log["stop_seconds"]=now()-started;model_seconds=mipseconds;
++ be_ro_log["archive"]=Json::array();
++ for(const auto&q:archive){const auto&a=q.second;be_ro_log["archive"].push_back({{"selection",a.s},
++  {"cost",instance.cost_of(a.s)},{"omega",a.omega.get_str()},{"lambda",a.lambda.get_str()},
++  {"kind",a.kind},{"witness",a.proof},{"private_probability",a.score>=0?Json(a.score):Json(nullptr)},
++  {"private_probability_complete",a.score>=0},{"origins",a.origins}});}
++ phase_records.push_back({{"phase","initialization"},{"own_raw_sample_initialization",true},{"best_before",nullptr},
++  {"best_after",best?Json(best->cost):Json(nullptr)},{"elapsed",now()-started},{"candidates_added",pool.size()}});
++ be_ro_log["epsilon_fft_final"]=epsilon;be_ro_log["timing"]["bero_resource_arrays"]=resource_seconds;
++ be_ro_log["timing"]["bero_linear_mckp"]=mipseconds;be_ro_log["timing"]["bero_native_cdf"]=nativeseconds;
++ // FFT setup was already included in load_and_model; count scoring only here.
++ be_ro_log["timing"]["bero_private_fft"]=fft.seconds-fft_setup_seconds;
++ be_ro_log["private_fft_seconds"]=fft.seconds;be_ro_log["stop_seconds"]=now()-started;model_seconds=mipseconds;
+  return save("completed");
+ }
+ void Search::be_ro_save_fields(Json&data){
+--- /dev/null
++++ b/source/be_ro_linear.cpp
+@@ -0,0 +1,62 @@
++#include "be_ro_linear.hpp"
++#include "gurobi_budget.hpp"
++#include <gurobi_c.h>
++
++namespace s10 {
++struct BELinearSolver::Impl {
++ const Instance&d;int seed;
++ struct EDel{void operator()(GRBenv*p)const{GRBfreeenv(p);}};
++ struct MDel{void operator()(GRBmodel*p)const{GRBfreemodel(p);}};
++ std::unique_ptr<GRBenv,EDel>env;
++ static void check(int rc,GRBenv*e){if(rc)throw std::runtime_error("BE linear Gurobi "+std::to_string(rc)+":"+(e?GRBgeterrormsg(e):"env"));}
++ Groups solve(const BELinearRow&r,double seconds,int count,const std::set<Selection>&excluded,double cutoff,Json&log){
++  const double begin=now();check_budget();
++  log={{"model","BE_Linear_MCKP"},{"radius",r.omega.get_str()},{"lambda",r.lambda.get_str()},
++   {"kind",r.kind},{"PoolSearchMode",count>1?2:0},{"PoolSolutions",count},{"time_limit",seconds},
++   {"external_MIPstarts",false},{"no_good_count",excluded.size()},
++   {"cost_cutoff",std::isfinite(cutoff)?Json(cutoff):Json(nullptr)},
++   {"array_feasible",r.feasible},{"minimum_rounded_sum",r.minimum_rounded_sum.get_str()},
++   {"rounded_rhs",mpq_class(r.rounded_rhs).get_str()},{"returned_rows",Json::array()}};
++  if(!r.feasible){log["skipped"]="row_array_infeasible";return {};}
++  if(!env){GRBenv*p=nullptr;int rc=GRBemptyenv(&p);env.reset(p);check(rc,p);check(GRBsetintparam(p,"OutputFlag",0),p);check(GRBstartenv(p),p);}
++  const int n=d.n();Vector lb(n,0),ub(n,1),objective=d.costs;std::vector<char>type(n,GRB_BINARY);
++  GRBmodel*m=nullptr;int rc=GRBnewmodel(env.get(),&m,"BE_Linear_MCKP",n,objective.data(),lb.data(),ub.data(),type.data(),nullptr);
++  std::unique_ptr<GRBmodel,MDel>model(m);check(rc,env.get());auto*e=GRBgetenv(m);auto ck=[&](int z){check(z,e);};
++  ck(GRBsetcallbackfunc(m,budget_callback,nullptr));ck(GRBsetintparam(e,"Threads",1));ck(GRBsetintparam(e,"Seed",seed));
++  ck(GRBsetdblparam(e,"MIPGap",0));ck(GRBsetdblparam(e,"MIPGapAbs",0));
++  ck(GRBsetdblparam(e,"FeasibilityTol",1e-9));ck(GRBsetdblparam(e,"IntFeasTol",1e-9));
++  ck(GRBsetintparam(e,"PoolSearchMode",count>1?2:0));ck(GRBsetintparam(e,"PoolSolutions",count));
++  ck(GRBsetdblparam(e,"PoolGap",GRB_INFINITY));
++  auto add=[&](Selection ids,Vector v,char sense,double rhs){ck(GRBaddconstr(m,ids.size(),ids.data(),v.data(),sense,rhs,nullptr));};
++  for(const auto&g:d.groups)add(g,Vector(g.size(),1),GRB_EQUAL,1);
++  Selection ids(n);std::iota(ids.begin(),ids.end(),0);add(ids,r.rounded,GRB_LESS_EQUAL,r.rounded_rhs);
++  for(const auto&s:excluded)add(s,Vector(s.size(),1),GRB_LESS_EQUAL,d.m()-1);
++  if(std::isfinite(cutoff))add(ids,d.costs,GRB_LESS_EQUAL,cutoff);
++  Groups result;int status=0,solutions=0,rejected=0;double bound=0;bool has_bound=false;
++  double left=std::min(seconds-(now()-begin),budget_left());
++  if(left>.001){
++   ck(GRBsetdblparam(e,"TimeLimit",left));ck(GRBoptimize(m));
++   ck(GRBgetintattr(m,"Status",&status));ck(GRBgetintattr(m,"SolCount",&solutions));
++   has_bound=GRBgetdblattr(m,"ObjBound",&bound)==0&&std::isfinite(bound);
++   for(int k=0;k<solutions;++k){
++    ck(GRBsetintparam(e,"SolutionNumber",k));Vector x(n);ck(GRBgetdblattrarray(m,"Xn",0,n,x.data()));Selection s;
++    for(const auto&g:d.groups)s.push_back(*std::max_element(g.begin(),g.end(),[&](int a,int b){return x[a]<x[b];}));
++    d.validate(s);auto p=r.proof(s);p["selection"]=s;
++    bool clean=p["row_feasible"].get<bool>()&&!excluded.count(s)&&(!std::isfinite(cutoff)||d.cost_of(s)<=cutoff);
++    p["kept"]=clean;log["returned_rows"].push_back(p);
++    if(clean)result.push_back(s);else ++rejected;
++   }
++  }
++  std::sort(result.begin(),result.end(),[&](const Selection&a,const Selection&b){return std::make_pair(d.cost_of(a),a)<std::make_pair(d.cost_of(b),b);});
++  result.erase(std::unique(result.begin(),result.end()),result.end());
++  log["start_absolute"]=begin;log["whole_subproblem_seconds"]=now()-begin;
++  log["solver_status"]=status;log["solutions_retained"]=solutions;log["distinct_returned"]=result.size();
++  log["row_rejected"]=rejected;log["proven_row_infeasible"]=status==GRB_INFEASIBLE;
++  log["optimal_status"]=status==GRB_OPTIMAL;log["objective_bound"]=has_bound?Json(bound):Json(nullptr);
++  return result;
++ }
++};
++BELinearSolver::BELinearSolver(const Instance&d,int seed):impl(new Impl{d,seed,{}}){}
++BELinearSolver::~BELinearSolver()=default;
++Groups BELinearSolver::solve(const BELinearRow&r,double t,int k,const std::set<Selection>&e,double c,Json&l){return impl->solve(r,t,k,e,c,l);}
++}
+--- /dev/null
++++ b/source/be_ro_linear.hpp
+@@ -0,0 +1,111 @@
++#pragma once
++#include "be_ro_witness.hpp"
++#include <algorithm>
++#include <cmath>
++#include <memory>
++#include <numeric>
++#include <set>
++
++namespace s10 {
++// The continuous lambda identity is exact (as an infimum, including endpoints).
++// A FINITE grid is a conservative candidate generator, not an exact optimizer
++// of the union over all lambda. All accepted vectors also need the old KKT proof.
++struct BELinearRow {
++ mpq_class omega,lambda,rhs;
++ std::string kind;
++ std::vector<mpq_class> weights;
++ Vector rounded;
++ double rounded_rhs=0;
++ Selection minimum_selection;
++ mpq_class minimum_rounded_sum;
++ bool feasible=false;
++
++ Json proof(const Selection&s)const {
++  mpq_class exact=0,actual=0;
++  for(int j:s){exact+=weights.at(j);actual+=mpq_class(rounded.at(j));}
++  exact.canonicalize();actual.canonicalize();
++  return {{"kind",kind},{"omega",omega.get_str()},{"lambda",lambda.get_str()},
++   {"exact_lhs",exact.get_str()},{"exact_rhs",rhs.get_str()},
++   {"rounded_lhs",actual.get_str()},{"rounded_rhs",mpq_class(rounded_rhs).get_str()},
++   {"row_feasible",exact<=rhs&&actual<=mpq_class(rounded_rhs)}};
++ }
++};
++
++struct BELinearMath {
++ const Instance&d;const BEROWitness&w;
++ mpq_class sigma_min,sigma_max;
++ BELinearMath(const Instance&data,const BEROWitness&wit):d(data),w(wit){
++  mpq_class low=0,high=0;
++  for(const auto&g:d.groups){
++   mpq_class a=w.var.at(g.front()),b=a;
++   for(int j:g){a=std::min(a,w.var[j]);b=std::max(b,w.var[j]);}
++   low+=a;high+=b;
++  }
++  sigma_min=std::max(mpq_class(1,10000),BEROWitness::sqrt_interval(low).first);
++  sigma_max=std::max(mpq_class(sigma_min*6/5),BEROWitness::sqrt_interval(high).second);
++ }
++ static mpq_class huber(const mpq_class&variance,const mpq_class&dev,const mpq_class&lambda){
++  if(lambda<=0)throw std::logic_error("Positive lambda required");
++  if(variance==0||dev==0)return 0;
++  mpq_class z=std::min(dev,mpq_class(variance/(2*lambda)));
++  mpq_class h=z-lambda*z*z/variance;h.canonicalize();return h;
++ }
++ std::vector<mpq_class> grid(const mpq_class&omega,int count=10)const {
++  if(omega<=0)return {mpq_class(0)};
++  if(count<2)throw std::logic_error("Lambda grid too short");
++  mpq_class low=sigma_min/(4*omega),high=2*sigma_max/omega;
++  const double a=std::log(low.get_d()),b=std::log(high.get_d());
++  std::vector<mpq_class> out;
++  for(int k=0;k<count;++k){
++   double x=std::exp(a+(b-a)*k/(count-1));
++   if(!(x>0)||!std::isfinite(x))throw std::logic_error("Nonfinite lambda grid");
++   mpq_class q(x);q.canonicalize();if(out.empty()||q!=out.back())out.push_back(q);
++  }
++  return out;
++ }
++ BELinearRow row(mpq_class omega,mpq_class lambda,bool box=false)const {
++  omega.canonicalize();lambda.canonicalize();
++  if(omega<0||(!box&&omega>0&&lambda<=0))throw std::logic_error("Invalid BE row");
++  BELinearRow r;r.omega=omega;r.lambda=(box||omega==0)?mpq_class(0):lambda;
++  r.kind=box?"box_corner":omega==0?"zero_radius":"lambda_huber";
++  r.rhs=w.capacity-w.margin;
++  if(r.kind=="lambda_huber")r.rhs-=lambda*omega*omega;
++  r.rhs.canonicalize();
++  for(int j=0;j<d.n();++j){
++   mpq_class a=w.mu[j];
++   if(box)a+=w.dev[j];
++   else if(omega>0)a+=huber(w.var[j],w.dev[j],lambda);
++   a.canonicalize();r.weights.push_back(a);
++   // Normalize before outward conversion; exact rational row is also checked.
++   r.rounded.push_back(BudgetRO::outward(mpq_class(a/w.capacity),true));
++  }
++  r.rounded_rhs=BudgetRO::outward(mpq_class(r.rhs/w.capacity),false);
++  for(const auto&g:d.groups){
++   int j=*std::min_element(g.begin(),g.end(),[&](int a,int b){
++    return r.rounded[a]==r.rounded[b]?a<b:r.rounded[a]<r.rounded[b];});
++   r.minimum_selection.push_back(j);r.minimum_rounded_sum+=mpq_class(r.rounded[j]);
++  }
++  r.minimum_rounded_sum.canonicalize();
++  r.feasible=r.minimum_rounded_sum<=mpq_class(r.rounded_rhs);
++  return r;
++ }
++ bool feasible_at(const mpq_class&omega,int count=12)const {
++  auto box=row(omega,0,true);
++  if(box.feasible&&w.evaluate(box.minimum_selection,omega)["robust_feasible"].get<bool>())return true;
++  for(const auto&lambda:grid(omega,count)){
++   auto r=row(omega,lambda);
++   if(r.feasible&&w.evaluate(r.minimum_selection,omega)["robust_feasible"].get<bool>())return true;
++  }
++  return false;
++ }
++};
++
++class BELinearSolver {
++ struct Impl;std::unique_ptr<Impl>impl;
++public:
++ BELinearSolver(const Instance&,int seed);
++ ~BELinearSolver();
++ Groups solve(const BELinearRow&,double seconds,int count,
++              const std::set<Selection>&excluded,double cutoff,Json&log);
++};
++}
+--- /dev/null
++++ b/source/tests/be_ro_linear_test.cpp
+@@ -0,0 +1,48 @@
++// PREPARED ONLY: not compiled or executed in the 2026-11-28 code-only task.
++#include "be_ro_linear.hpp"
++#include <iostream>
++using namespace s10;
++int main(int argc,char**argv){
++ try{
++  if(argc!=3)return 2;
++  phase_deadline=now()+90;Instance d(argv[1]);BEROWitness w(d,argv[2]);BELinearMath math(d,w);BELinearSolver solver(d,1289901);
++  Groups combinations{{}};
++  for(const auto&g:d.groups){
++   if(combinations.size()*g.size()>4096)throw std::runtime_error("Tiny enumeration only");
++   Groups next;for(const auto&s:combinations)for(int j:g){auto a=s;a.push_back(j);next.push_back(a);}combinations=next;
++  }
++  // Known one-atom Huber identities, including zero variance/deviation.
++  if(BELinearMath::huber(4,1,1)!=mpq_class(3,4)||BELinearMath::huber(4,1,mpq_class(1,4))!=mpq_class(15,16))
++   throw std::logic_error("Huber identity");
++  if(BELinearMath::huber(0,0,1)!=0||BELinearMath::huber(1,0,1)!=0)throw std::logic_error("Zero variance/deviation");
++  Json tests=Json::array();
++  for(const char*t:{"0","1/2","1","2","8"}){
++   mpq_class omega(t);auto lambdas=math.grid(omega,10);
++   std::vector<BELinearRow>rows;for(const auto&lambda:lambdas)rows.push_back(math.row(omega,lambda));rows.push_back(math.row(omega,0,true));
++   for(const auto&r:rows){
++    double exhaustive=INFINITY;Json enumeration=Json::array();
++    for(const auto&s:combinations){
++     auto p=r.proof(s);auto kkt=w.evaluate(s,omega);
++     // Identity is an upper bound for every fixed positive lambda, even when
++     // the row is infeasible. Directed KKT width is at most one 208-bit unit.
++     mpq_class lhs(p["exact_lhs"].get<std::string>());
++     mpq_class support_upper=lhs+(r.kind=="lambda_huber"?mpq_class(r.lambda*omega*omega):mpq_class(0));
++     if(support_upper<mpq_class(kkt["worst_lower"].get<std::string>()))throw std::logic_error("Invalid dual bound");
++     if(p["row_feasible"].get<bool>()){
++      if(!kkt["robust_feasible"].get<bool>())throw std::logic_error("Row is not conservative");
++      exhaustive=std::min(exhaustive,d.cost_of(s));
++     }
++     enumeration.push_back({{"selection",s},{"row",p},{"witness",kkt}});
++    }
++    Json log;auto found=solver.solve(r,2.,10,{},INFINITY,log);double best=INFINITY;
++    for(const auto&s:found)best=std::min(best,d.cost_of(s));
++    if(std::isfinite(exhaustive)!=std::isfinite(best)||(std::isfinite(best)&&std::abs(exhaustive-best)>1e-10))
++     throw std::logic_error("Fixed-row MILP versus enumeration mismatch");
++    // Deliberately do not require a finite grid to reproduce the full BE optimum.
++    tests.push_back({{"kind",r.kind},{"omega",omega.get_str()},{"lambda",r.lambda.get_str()},
++     {"enumeration",enumeration},{"solver",log},{"best",std::isfinite(best)?Json(best):Json(nullptr)}});
++   }
++  }
++  std::cout<<Json({{"status","PASS"},{"tests",tests},{"finite_grid_exactness_claim",false}}).dump()<<'\n';return 0;
++ }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}
++}

@@ -1,0 +1,37 @@
+{
+  "stage": "PLANNED_NOT_EXECUTED",
+  "execute_now": false,
+  "wait_for_actual_B2_terminal_and_no_workers": true,
+  "automatic_launch_created": false,
+  "compile_completed": false,
+  "tiny_completed": false,
+  "independent_reader_validated": false,
+  "smoke": {
+    "case_indices": [8, 18, 28, 35, 36, 38, 39],
+    "fresh_repetitions_per_case": 5,
+    "runs": 35,
+    "source_document_targets": {
+      "all35_independently_valid": true,
+      "zero_TIME_LIMIT_zero_solution_queries": true,
+      "global_errors": [],
+      "case8_reported_cost_level": 11.1851,
+      "case28_reported_cost_level": 16.4236,
+      "case18_reported_cost_level": 142.2712,
+      "cases35_36_38_39": "All5 valid and stable low-cost certified outputs; numerical quality thresholds must be specified before testing"
+    },
+    "numeric_rounding_and_low_cost_gate_fully_specified": false,
+    "gate_relaxation_after_results_allowed": false
+  },
+  "full40": {
+    "conditional_on_smoke": true,
+    "case_count": 40,
+    "repetitions_per_case": 30,
+    "registered_runs": 1200,
+    "max_parallel": 60,
+    "whole_seconds_per_run": 600,
+    "original_LSS_threshold": 0.99,
+    "external_historical_solutions": false,
+    "failure_reruns": false,
+    "statistics": ["observedBest", "officialAvg_only_if_30_valid", "sampleStd_ddof1_only_if_30_valid", "conditional_first_Best_hit_mean_and_count", "full_wall_mean_and_max", "validity_and_failure_counts"]
+  }
+}
