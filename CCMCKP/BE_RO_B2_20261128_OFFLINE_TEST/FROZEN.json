@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_BE_RO_LB_B2_FULL40_READY",
+  "utc": "2026-11-28T06:05:37.099186+00:00",
+  "registered_runs": 1200,
+  "max_workers": 60,
+  "first40_technical_audit_then_remaining1160_automatic": true,
+  "binary_sha256": "89d3d3928891c897fc051dd5449bf5519ed94d560cbfa9f3e5bb1809e80f6a41",
+  "protocol_sha256": "441b94dacb03315d9aaa7f975247b5fb9b3893d5a2ac4848e9cda2b12090d84c",
+  "source_pins": 103,
+  "input_pins": 7280,
+  "available_GiB": 84.83777236938477,
+  "free_disk_GiB": 16.83480453491211,
+  "required_disk_GiB": 6.0,
+  "same_SHA_reused_B1_KKT_pretests": 100,
+  "new_LB_exhaustive_MILP_tests": 5,
+  "tiny_integrations": 5,
+  "reader_tamper_checks": 49,
+  "reader_full_record_replays": 5
+}

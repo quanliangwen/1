@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "tiny_integrations": [
+    {
+      "fixture": "LAB_3_2_500_",
+      "whole_seconds": 1.0085641141049564,
+      "rc": 0,
+      "cost": 3.0,
+      "stage1_best": 3.0,
+      "independent": {
+        "witnesses": 25,
+        "native_calls": 5,
+        "certified": 5,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0
+      }
+    },
+    {
+      "fixture": "LAB_2_2_500_",
+      "whole_seconds": 0.20861893601249903,
+      "rc": 0,
+      "cost": 4.0,
+      "stage1_best": 4.0,
+      "independent": {
+        "witnesses": 19,
+        "native_calls": 1,
+        "certified": 1,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0
+      }
+    },
+    {
+      "fixture": "LAB_2_2_30_",
+      "whole_seconds": 0.19780873996205628,
+      "rc": 0,
+      "cost": 4.0,
+      "stage1_best": 4.0,
+      "independent": {
+        "witnesses": 19,
+        "native_calls": 1,
+        "certified": 1,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0
+      }
+    },
+    {
+      "fixture": "LAB_6_2_500_",
+      "whole_seconds": 2.1894306449685246,
+      "rc": 0,
+      "cost": 7.0,
+      "stage1_best": 12.0,
+      "independent": {
+        "witnesses": 18,
+        "native_calls": 1,
+        "certified": 1,
+        "LB_queries": 2,
+        "LB_native_calls": 5,
+        "LB_certified": 5
+      }
+    },
+    {
+      "fixture": "LAB_2_2_NONE30_",
+      "whole_seconds": 0.07309768896084279,
+      "rc": 1,
+      "cost": null,
+      "stage1_best": null,
+      "independent": {
+        "witnesses": 0,
+        "native_calls": 0,
+        "certified": 0,
+        "LB_queries": 0,
+        "LB_native_calls": 0,
+        "LB_certified": 0
+      }
+    }
+  ],
+  "new_LB_exhaustive_MILP_tests": 5,
+  "each_test_enumerates_selections": 64,
+  "reader_tamper_checks": 49,
+  "native_sparse_integer_certificates": 13,
+  "positive_LB_improves_own_stage1_12_to7_verified": true,
+  "no_stage1_anchor_no_fallback_verified": true,
+  "B1_stage1_byte_identical": true,
+  "original_native_functions_identical": true,
+  "unchanged_inherited_files": 84,
+  "B1_100_KKT_tests_limited_same_SHA_reuse": true,
+  "no_extra_large_case_MC": true,
+  "binary_sha256": "89d3d3928891c897fc051dd5449bf5519ed94d560cbfa9f3e5bb1809e80f6a41"
+}
