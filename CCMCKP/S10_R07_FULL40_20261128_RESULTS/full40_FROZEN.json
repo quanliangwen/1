@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_USER_DIRECTED_R07_ONLY_FULL40_READY",
+  "utc": "2026-11-27T15:16:02.710472+00:00",
+  "total_runs": 1200,
+  "cases": 40,
+  "repetitions": 30,
+  "arms": [
+    "R07"
+  ],
+  "max_workers": 60,
+  "available_GiB": 100.76321792602539,
+  "free_disk_GiB": 26.372554779052734,
+  "required_disk_GiB": 18.337975189089775,
+  "predicted_output_GiB": 8.168987594544888,
+  "input_pins": 7280,
+  "source_pins": 101,
+  "binary_sha256": "c5807cec61f87de8cd97df4da90c6fae7aa89f718001e3f801c8ecf8f5411449",
+  "protocol_sha256": "6c496b52892969a7de108700e28b46b49164cab485d25e182b68cd5a6541099c",
+  "prior_gate_not_relabelled": true,
+  "first200_technical_audit_then_remaining1000_automatic": true
+}

@@ -1,0 +1,18 @@
+{
+  "user_request": "将这个R07这个版本对全部算例进行离线运行，并行数量为60",
+  "scope": "unchanged frozen R07 only, 40 cases x30 =1200, independent own-run starts, fresh registered seeds1071001..1071030, prior30 not reused",
+  "prior_smoke_gate_failed": true,
+  "prior_gate_is_not_changed_or_relabelled": true,
+  "explicit_new_authorization_overrides_performance_expansion_gate": true,
+  "B01_D02_not_rerun": true,
+  "max_concurrent_independent_runs": 60,
+  "separate_internal_certification_children_not_extra_registered_runs": true,
+  "algorithm_source_or_parameters_changed": false,
+  "final_acceptance": "unchanged original LSS >=.99, full sample indices0..L-1; no extra true probability gate",
+  "whole_worker_budget_seconds": 600,
+  "offline_no_Codex_SSH_dependency": true,
+  "do_not_create_recurring_monitoring_or_new_versions": true,
+  "registered_utc": "2026-11-27T15:16:02.419846+00:00",
+  "prior_smoke_decision_sha256": "5a9954b333710e2a1a5e03eb9697c61ccd0a73828a2dbf4365953110dd57ffb9",
+  "prior_smoke_audit_sha256": "2657890a0f4f005b2e0d3ced8175575e5cd4b49ec9418b4f33254bd3469ce326"
+}
