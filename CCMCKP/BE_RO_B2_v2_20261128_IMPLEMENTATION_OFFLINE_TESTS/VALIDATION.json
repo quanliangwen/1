@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "tiny_integrations": [
+    {
+      "fixture": "LAB_3_2_500_",
+      "whole_seconds": 1.5689074309775606,
+      "rc": 0,
+      "cost": 3.0,
+      "stage1_best": 3.0,
+      "independent": {
+        "archive": 8,
+        "native_calls": 5,
+        "certified": 5,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required",
+        "witnesses": 294,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0,
+        "exact_actual_native_admissions": 0
+      }
+    },
+    {
+      "fixture": "LAB_2_2_500_",
+      "whole_seconds": 0.30869749397970736,
+      "rc": 0,
+      "cost": 4.0,
+      "stage1_best": 4.0,
+      "independent": {
+        "archive": 2,
+        "native_calls": 1,
+        "certified": 1,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required",
+        "witnesses": 159,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0,
+        "exact_actual_native_admissions": 0
+      }
+    },
+    {
+      "fixture": "LAB_2_2_30_",
+      "whole_seconds": 0.2696760300314054,
+      "rc": 0,
+      "cost": 4.0,
+      "stage1_best": 4.0,
+      "independent": {
+        "archive": 3,
+        "native_calls": 1,
+        "certified": 1,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required",
+        "witnesses": 154,
+        "LB_queries": 1,
+        "LB_native_calls": 0,
+        "LB_certified": 0,
+        "exact_actual_native_admissions": 0
+      }
+    },
+    {
+      "fixture": "LAB_6_2_500_",
+      "whole_seconds": 2.1685041359160095,
+      "rc": 0,
+      "cost": 12.0,
+      "stage1_best": 12.0,
+      "independent": {
+        "archive": 1,
+        "native_calls": 1,
+        "certified": 1,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required",
+        "witnesses": 132,
+        "LB_queries": 2,
+        "LB_native_calls": 5,
+        "LB_certified": 5,
+        "exact_actual_native_admissions": 5
+      }
+    },
+    {
+      "fixture": "LAB_2_2_NONE30_",
+      "whole_seconds": 0.02746350597590208,
+      "rc": 1,
+      "cost": null,
+      "stage1_best": null,
+      "independent": {
+        "archive": 0,
+        "native_calls": 0,
+        "certified": 0,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required",
+        "witnesses": 0,
+        "LB_queries": 0,
+        "LB_native_calls": 0,
+        "LB_certified": 0
+      }
+    }
+  ],
+  "unit_tests": [
+    {
+      "report": {
+        "status": "PASS",
+        "full_selections_enumerated": 64,
+        "tests": [
+          {
+            "test": 0,
+            "enumerated_feasible": 62,
+            "best": 7.0,
+            "solver": {
+              "solver_status": 2,
+              "solutions_retained": 20,
+              "PoolSearchMode": 2,
+              "PoolSolutions": 20,
+              "PoolGap": 1e+100,
+              "external_MIPstarts": false,
+              "whole_subproblem_seconds": 0.04792812291998416
+            }
+          },
+          {
+            "test": 1,
+            "enumerated_feasible": 61,
+            "best": 7.0,
+            "solver": {
+              "solver_status": 2,
+              "solutions_retained": 20,
+              "PoolSearchMode": 2,
+              "PoolSolutions": 20,
+              "PoolGap": 1e+100,
+              "external_MIPstarts": false,
+              "whole_subproblem_seconds": 0.0022317729890346527
+            }
+          },
+          {
+            "test": 2,
+            "enumerated_feasible": 0,
+            "best": null,
+            "solver": {
+              "solver_status": 3,
+              "solutions_retained": 0,
+              "PoolSearchMode": 2,
+              "PoolSolutions": 20,
+              "PoolGap": 1e+100,
+              "external_MIPstarts": false,
+              "whole_subproblem_seconds": 0.0004359279992058873
+            }
+          },
+          {
+            "test": 3,
+            "enumerated_feasible": 31,
+            "best": 7.0,
+            "solver": {
+              "solver_status": 2,
+              "solutions_retained": 20,
+              "PoolSearchMode": 2,
+              "PoolSolutions": 20,
+              "PoolGap": 1e+100,
+              "external_MIPstarts": false,
+              "whole_subproblem_seconds": 0.0013996679335832596
+            }
+          },
+          {
+            "test": 4,
+            "enumerated_feasible": 0,
+            "best": null,
+            "solver": {
+              "solver_status": 3,
+              "solutions_retained": 0,
+              "PoolSearchMode": 2,
+              "PoolSolutions": 20,
+              "PoolGap": 1e+100,
+              "external_MIPstarts": false,
+              "whole_subproblem_seconds": 0.0006449969951063395
+            }
+          }
+        ],
+        "radius_is_changed_groups_not_binary_bit_distance": true
+      },
+      "binary_sha256": "5ef323a7dc3335c0ba738974e18b2d5ca1e32bb8c3f456b77e5342d900455a0f"
+    },
+    {
+      "report": {
+        "status": "PASS",
+        "cutoff_policy_cases": 24,
+        "exact_boundary_checks": 67,
+        "FFT_storage_moved_not_recomputed": true,
+        "scope_reset_no_cross_run_cache": true
+      },
+      "binary_sha256": "9fd9622afe4178845ba5168a228a4cce5ecc70cfa8c6308628ec36d8b8421193"
+    }
+  ],
+  "reader_tamper_checks": 65,
+  "native_integer_certificates": 13,
+  "positive_LB_improves_own_stage1_12_to7": true,
+  "no_anchor_no_fallback": true,
+  "Stage1_full_file_byte_identical": true,
+  "FFT_core_byte_identical_and_storage_move_tested": true,
+  "original_LSS_components_identical": true,
+  "inherited_B1_mathematics_limited_same_SHA_reuse": true,
+  "no_extra_large_case_MC": true,
+  "binary_sha256": "e037e6d86e873d71195e4f1e159897cb9f82fad3e01f23306e629982e11efe69"
+}

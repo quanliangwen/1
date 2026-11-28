@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "base": "frozen B1-v2.2",
+  "changed_integration_files": [
+    "CMakeLists.txt",
+    "main.cpp",
+    "search.cpp",
+    "search.hpp"
+  ],
+  "unchanged_source_count": 89,
+  "source_files_total_parent": 93,
+  "unchanged_native_functions": {
+    "double Search::native_check": "324d8f93a7a51430d1d1f59f948c5c6f7dddb769ff7c56333a7d2cb64865664a",
+    "Json Search::shortlist": "86a5ce86b20887ada82982b11613197ae8c586665efd2c3004b1230cdedbfcf0",
+    "void Search::final_check": "bb1054b9c7efdbc7a1135378b36dd31f7f313d12396d0b51756d7a4a4d56b4c8"
+  },
+  "full_Stage1_file_byte_identical": true,
+  "stage1_file_sha256": "b4c4727458821c61bba7f154538d58a4c009174c54a88bd3c5e8b00190bec91f",
+  "FFT_core_file_byte_identical": true,
+  "FFT_export": "new lifecycle-only forced-include adapter; move original private spectra; no recomputation,public cache writes or previous-run data",
+  "ninety_entire_files_unchanged_claim": false,
+  "specification_conflict_disclosed": "A new entry/deadline/save dispatch requires four integration files; original algorithm function bodies,Stage1 and native/LSS core files preserved; no false90-file whole-SHA claim",
+  "old_results_modified": false
+}

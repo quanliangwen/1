@@ -1,0 +1,32 @@
+{
+  "status": "ENGINEERING_COMPLETE_EXPERIMENTS_RUNNING",
+  "snapshot_utc": "20261128T112451Z",
+  "B1_v22_full_registered": 1200,
+  "trackA_state": {
+    "utc": "2026-11-28T11:09:36.457403+00:00",
+    "controller_pid": 3794717,
+    "phase": "pilot_independent_audit",
+    "completed": 40,
+    "pending": 1160,
+    "active": 0
+  },
+  "B1_binary_sha256": "cd471cac2459b10557678ec667a55f3643f0be4497b792f2c4466d0ea45bc7af",
+  "B1_full_protocol_sha256": "69d56bfa25ed4c9f24c6002f9851e53111e6d8648aa80f423e4b835f5c57b442",
+  "B2_binary_sha256": "e037e6d86e873d71195e4f1e159897cb9f82fad3e01f23306e629982e11efe69",
+  "B2_smoke_protocol_sha256": "4169b77de8909b92e91bd772e0bfc35e5b7ff577cd0d3a2eede08db1fac7f98f",
+  "B2_smoke_registered": 40,
+  "B2_smoke_started": false,
+  "B2_full_conditional": 1200,
+  "B2_full_started": false,
+  "workflow": {
+    "phase": "waiting_trackA_all1200_solver_exits",
+    "utc": "2026-11-28T11:22:32.522084+00:00",
+    "pid": 3799914,
+    "registered_B2_smoke": 40,
+    "registered_B2_full_conditional": 1200
+  },
+  "whole_seconds_limit": 600,
+  "max_concurrent_solver_processes_both_tracks": 60,
+  "old_results_unchanged": true,
+  "no_final_effectiveness_claim": true
+}

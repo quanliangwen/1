@@ -1,0 +1,111 @@
+--- a/source/CMakeLists.txt
++++ b/source/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ find_library(S10_GMP gmp HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+ find_library(S10_GMPXX gmpxx HINTS "${S10_GMP_ROOT}/lib" REQUIRED)
+ 
+-add_executable(ccmckp_s10 main.cpp model.cpp rng.cpp evaluation.cpp search.cpp mip.cpp report.cpp ellipsoid.cpp costfront.cpp riskmaster.cpp dominance.cpp pool_model.cpp calibrated_search.cpp entropic_search.cpp polish_search.cpp r05_search.cpp r05_budget.cpp r06_search.cpp r06_budget.cpp r07_search.cpp r07_budget.cpp r07_polish.cpp be_ro_linear.cpp be_ro_search.cpp)
++add_executable(ccmckp_s10 main.cpp model.cpp rng.cpp evaluation.cpp search.cpp mip.cpp report.cpp ellipsoid.cpp costfront.cpp riskmaster.cpp dominance.cpp pool_model.cpp calibrated_search.cpp entropic_search.cpp polish_search.cpp r05_search.cpp r05_budget.cpp r06_search.cpp r06_budget.cpp r07_search.cpp r07_budget.cpp r07_polish.cpp be_ro_linear.cpp be_ro_search.cpp be_ro_lb_search.cpp)
+ target_compile_features(ccmckp_s10 PRIVATE cxx_std_17)
+ target_include_directories(ccmckp_s10 SYSTEM PRIVATE "${S10_GMP_INCLUDE}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
+ target_link_libraries(ccmckp_s10 PRIVATE "${S10_GMPXX}" "${S10_GMP}")
+@@ -157,3 +157,15 @@
+     target_link_libraries(be_ro_linear_test PRIVATE "${S10_GUROBI_LIBRARY}" "${S10_GMPXX}" "${S10_GMP}")
+     target_compile_options(be_ro_linear_test PRIVATE -Wall -Wextra -ffp-contract=off)
+ endif()
++
++# B2-v2: lifecycle-only bridge exports this run's FFT by move. Stage1 source bytes unchanged.
++set_source_files_properties(be_ro_search.cpp PROPERTIES COMPILE_DEFINITIONS S10_CAPTURE_BE_STAGE1_FFT=1 COMPILE_OPTIONS "-include;${CMAKE_CURRENT_SOURCE_DIR}/b2_fft_bridge.hpp")
++add_executable(be_ro_lb_math_test tests/be_ro_lb_test.cpp model.cpp pool_model.cpp)
++target_compile_features(be_ro_lb_math_test PRIVATE cxx_std_17)
++target_include_directories(be_ro_lb_math_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${S10_GMP_INCLUDE}" "${S10_GUROBI_INCLUDE}")
++target_link_libraries(be_ro_lb_math_test PRIVATE "${S10_GUROBI_LIBRARY}" "${S10_GMPXX}" "${S10_GMP}")
++target_compile_options(be_ro_lb_math_test PRIVATE -Wall -Wextra -ffp-contract=off)
++add_executable(be_ro_lb_policy_test tests/be_ro_lb_policy_test.cpp model.cpp rng.cpp evaluation.cpp)
++target_compile_features(be_ro_lb_policy_test PRIVATE cxx_std_17)
++target_include_directories(be_ro_lb_policy_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party" "${S10_GMP_INCLUDE}")
++target_link_libraries(be_ro_lb_policy_test PRIVATE "${S10_GMPXX}" "${S10_GMP}")
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -100,7 +100,7 @@
+         if (local != "none" && local != "pre" && local != "post" && local != "both")
+             throw std::runtime_error("Invalid local phase option");
+         const std::string search_flow = arg("search-flow", "ellipsoid_dominance");
+-        if (search_flow != "be_ro_pure" && search_flow != "adaptive_dual_gated" && search_flow != "quality_dual_gated" && search_flow != "dual_budget_gated" && search_flow != "cvar_budget_polish" && search_flow != "entropy_cdf_calibrated" && search_flow != "cvar_budget_calibrated" && search_flow != "budget_robust" && search_flow != "block_winf_transport" && search_flow != "block_insurance" && search_flow != "block_winf_dro" && search_flow != "block_mitm" && search_flow != "frontier_mitm_zero" && search_flow != "ellipsoid_oa" && search_flow != "frontier_mitm" && search_flow != "ellipsoid_costfront" && (search_flow != "ellipsoid_dominance" && search_flow != "ellipsoid_costpriority" && search_flow != "ellipsoid_momentbound" && search_flow != "ellipsoid_corecuts"))
++        if (search_flow != "be_ro_lb" && search_flow != "be_ro_pure" && search_flow != "adaptive_dual_gated" && search_flow != "quality_dual_gated" && search_flow != "dual_budget_gated" && search_flow != "cvar_budget_polish" && search_flow != "entropy_cdf_calibrated" && search_flow != "cvar_budget_calibrated" && search_flow != "budget_robust" && search_flow != "block_winf_transport" && search_flow != "block_insurance" && search_flow != "block_winf_dro" && search_flow != "block_mitm" && search_flow != "frontier_mitm_zero" && search_flow != "ellipsoid_oa" && search_flow != "frontier_mitm" && search_flow != "ellipsoid_costfront" && (search_flow != "ellipsoid_dominance" && search_flow != "ellipsoid_costpriority" && search_flow != "ellipsoid_momentbound" && search_flow != "ellipsoid_corecuts"))
+             throw std::runtime_error("Invalid search flow");
+         const double gamma = number(arg("ellipsoid-gamma", "2.4"));
+         const double slice = number(arg("ellipsoid-slice", "5"));
+@@ -163,7 +163,7 @@
+ 
+         const double started=process_started;
+         setenv("CCMCKP_TOTAL_WALL_POLICY","launch_to_exit_600",1);
+-        phase_deadline=started+seconds-std::min((search_flow=="be_ro_pure"||search_flow=="quality_dual_gated"||search_flow=="adaptive_dual_gated")?120.:170.,seconds*.3);
++        phase_deadline=started+seconds-std::min((search_flow=="be_ro_lb"||search_flow=="be_ro_pure"||search_flow=="quality_dual_gated"||search_flow=="adaptive_dual_gated")?120.:170.,seconds*.3);
+         const double load_started = now();
+         Instance instance(path);
+         const double load_seconds = now() - load_started;
+@@ -202,6 +202,7 @@
+                 (local == "none" ? "G_NONE" : "gurobi_" + local) : "EGS_OA_" + local;
+             if(search_flow=="adaptive_dual_gated"||search_flow=="quality_dual_gated"||search_flow=="dual_budget_gated"||search_flow=="cvar_budget_polish"||search_flow=="entropy_cdf_calibrated"||search_flow=="cvar_budget_calibrated"||search_flow=="budget_robust"||search_flow=="block_mitm"||search_flow=="frontier_mitm_zero"||search_flow=="block_insurance"||search_flow=="block_winf_dro"||search_flow=="block_winf_transport")result["arm"]=search_flow;
+             if(search_flow=="be_ro_pure")result["arm"]="BE_RO_PURE";
++            if(search_flow=="be_ro_lb"){result["arm"]="BE_RO_LB_V2";result["algorithm_version"]="B2-v2";}
+             result["search_flow"] = search_flow;
+             result["ellipsoid_gamma"] = gamma;
+             result["ellipsoid_slice"] = slice;
+@@ -248,6 +249,16 @@
+                 write_json(output/"BE_RO_TIMING.json",{{"timing",timing},{"elapsed_before_timing_save",t},{"elapsed_includes_launch",true}});
+                 const int tf=::open((output/"BE_RO_TIMING.json").c_str(),O_RDONLY);::fsync(tf);::close(tf);
+             }
++            if(search_flow=="be_ro_lb") {
++                auto timing=raw.at("BE_RO_LB_model").at("timing");
++                timing["final_lss"]=result["LSS_finalization_seconds"];
++                timing["save_and_fsync"]=now()-save_started;
++                const double t=now()-started;double accounted=0;
++                for(const auto& z:timing.items())accounted+=z.value().get<double>();
++                timing["unaccounted_overhead"]=t-accounted;
++                write_json(output/"BE_RO_TIMING.json",{{"timing",timing},{"elapsed_before_timing_save",t},{"elapsed_includes_launch",true}});
++                const int tf=::open((output/"BE_RO_TIMING.json").c_str(),O_RDONLY);::fsync(tf);::close(tf);
++            }
+             const double full_elapsed=now()-started;
+             if(full_elapsed>=seconds-1) throw std::runtime_error("Full pipeline exceeded guarded total wall allowance");
+             write_json(output/"COMPLETION.json", {{"elapsed_before_completion_save",full_elapsed},
+--- a/source/search.cpp
++++ b/source/search.cpp
+@@ -71,7 +71,7 @@
+ 
+ Search::Search(const Instance& instance, Options options, double started)
+     : instance(instance), options(std::move(options)), started(started),
+-      deadline(started + this->options.seconds - std::min((this->options.search_flow=="be_ro_pure"||this->options.search_flow=="quality_dual_gated"||this->options.search_flow=="adaptive_dual_gated")?120.:170., this->options.seconds * .3)),
++      deadline(started + this->options.seconds - std::min((this->options.search_flow=="be_ro_lb"||this->options.search_flow=="be_ro_pure"||this->options.search_flow=="quality_dual_gated"||this->options.search_flow=="adaptive_dual_gated")?120.:170., this->options.seconds * .3)),
+       oracle(instance, this->options.capacity_text), model(instance, this->options.seed),
+       checks(native_checks(instance.sample_count, instance.m())) {
+     if(this->options.search_flow=="block_winf_dro"||this->options.search_flow=="block_winf_transport")dro=std::make_unique<WinfProduct>(instance,this->options.capacity_text);
+@@ -663,6 +663,7 @@
+     r06_save_fields(data);
+     r07_save_fields(data);
+     be_ro_save_fields(data);
++    be_ro_lb_save_fields(data);
+     write_json(options.output, data);
+     return data;
+ }
+@@ -1075,6 +1076,7 @@
+ }
+ 
+ Json Search::run_impl() {
++    if(options.search_flow=="be_ro_lb")return be_ro_lb_run();
+     if(options.search_flow=="be_ro_pure")return be_ro_run();
+     if(options.search_flow=="adaptive_dual_gated")return r07_run();
+     if(options.search_flow=="quality_dual_gated")return r06_run();
+--- a/source/search.hpp
++++ b/source/search.hpp
+@@ -112,6 +112,9 @@
+     void dominance_search();
+     Json run_impl();
+     Json be_ro_run();
++    Json be_ro_lb_run();
++    void be_ro_lb_save_fields(Json&);
++    Json be_ro_lb_log=Json::object();
+     void be_ro_save_fields(Json&);
+     Json be_ro_log=Json::object();
+     Json r07_run();

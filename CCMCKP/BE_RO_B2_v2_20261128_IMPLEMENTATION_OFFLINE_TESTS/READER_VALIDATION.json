@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "full_record_replays": 5,
+  "independent_valid": 4,
+  "global_errors": [],
+  "errors": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "AssertionError:process_failure:no_final_LSS_output"
+    ]
+  ],
+  "production_reader_sha256": "a848d836462c1bb94c29d6d2a6e166a097a64274a637ed923c92b51a319a816d",
+  "reuses_completed_tiny_runs": true,
+  "new_solver_or_MC_runs": 0
+}

@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN_B2_V2_SMOKE_READY",
+  "registered_runs": 40,
+  "max_workers": 60,
+  "protocol_sha256": "4169b77de8909b92e91bd772e0bfc35e5b7ff577cd0d3a2eede08db1fac7f98f",
+  "binary_sha256": "e037e6d86e873d71195e4f1e159897cb9f82fad3e01f23306e629982e11efe69",
+  "input_pins": 3412,
+  "source_pins": 117,
+  "free_disk_GiB": 18.44571304321289,
+  "quality_gate": {
+    "all40_independently_valid": true,
+    "global_errors_empty": true,
+    "TIME_LIMIT_zero_solution_queries": 0,
+    "max_whole_seconds_per_run": 600,
+    "best_cost_max": {
+      "8": 11.18515,
+      "17": 172.55215,
+      "18": 142.27125,
+      "28": 16.42365,
+      "35": 194.09625,
+      "36": 159.28105,
+      "38": 196.27715,
+      "39": 322.25
+    },
+    "avg_cost_max": {
+      "8": 11.18515,
+      "17": 172.55215,
+      "18": 142.32,
+      "28": 16.42365,
+      "35": 194.3,
+      "36": 159.42,
+      "38": 196.35,
+      "39": 322.5
+    },
+    "whole_mean_seconds_max": {
+      "17": 120,
+      "18": 120
+    },
+    "threshold_basis": "New user implementation document section5;#36 Avg159.42 applies only this new protocol; previous35-run failed gate unchanged",
+    "no_after_result_relaxation": true
+  },
+  "launch_after_trackA_solver_completion": true
+}

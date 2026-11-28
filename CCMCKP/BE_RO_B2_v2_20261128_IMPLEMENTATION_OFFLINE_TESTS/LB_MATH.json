@@ -1,0 +1,80 @@
+{
+  "report": {
+    "status": "PASS",
+    "full_selections_enumerated": 64,
+    "tests": [
+      {
+        "test": 0,
+        "enumerated_feasible": 62,
+        "best": 7.0,
+        "solver": {
+          "solver_status": 2,
+          "solutions_retained": 20,
+          "PoolSearchMode": 2,
+          "PoolSolutions": 20,
+          "PoolGap": 1e+100,
+          "external_MIPstarts": false,
+          "whole_subproblem_seconds": 0.04792812291998416
+        }
+      },
+      {
+        "test": 1,
+        "enumerated_feasible": 61,
+        "best": 7.0,
+        "solver": {
+          "solver_status": 2,
+          "solutions_retained": 20,
+          "PoolSearchMode": 2,
+          "PoolSolutions": 20,
+          "PoolGap": 1e+100,
+          "external_MIPstarts": false,
+          "whole_subproblem_seconds": 0.0022317729890346527
+        }
+      },
+      {
+        "test": 2,
+        "enumerated_feasible": 0,
+        "best": null,
+        "solver": {
+          "solver_status": 3,
+          "solutions_retained": 0,
+          "PoolSearchMode": 2,
+          "PoolSolutions": 20,
+          "PoolGap": 1e+100,
+          "external_MIPstarts": false,
+          "whole_subproblem_seconds": 0.0004359279992058873
+        }
+      },
+      {
+        "test": 3,
+        "enumerated_feasible": 31,
+        "best": 7.0,
+        "solver": {
+          "solver_status": 2,
+          "solutions_retained": 20,
+          "PoolSearchMode": 2,
+          "PoolSolutions": 20,
+          "PoolGap": 1e+100,
+          "external_MIPstarts": false,
+          "whole_subproblem_seconds": 0.0013996679335832596
+        }
+      },
+      {
+        "test": 4,
+        "enumerated_feasible": 0,
+        "best": null,
+        "solver": {
+          "solver_status": 3,
+          "solutions_retained": 0,
+          "PoolSearchMode": 2,
+          "PoolSolutions": 20,
+          "PoolGap": 1e+100,
+          "external_MIPstarts": false,
+          "whole_subproblem_seconds": 0.0006449969951063395
+        }
+      }
+    ],
+    "radius_is_changed_groups_not_binary_bit_distance": true
+  },
+  "binary_sha256": "5ef323a7dc3335c0ba738974e18b2d5ca1e32bb8c3f456b77e5342d900455a0f"
+}
