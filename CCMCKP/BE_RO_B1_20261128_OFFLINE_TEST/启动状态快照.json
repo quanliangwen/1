@@ -1,0 +1,80 @@
+{
+  "stage": "B1_FULL40_OFFLINE_STARTED",
+  "server_root": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/be_ro_b1_20261128/full40",
+  "controller_pid": 3627885,
+  "max_workers": 60,
+  "total_runs": 1200,
+  "cases": 40,
+  "repetitions": 30,
+  "whole_budget_seconds": 600,
+  "native_call_seconds": 90,
+  "source_frozen": true,
+  "protocol_sha256": "a564937a02c5e74ab94d160d3ae67e88f489164155b7b1fdc61641dd8a340dee",
+  "binary_sha256": "37afc5e86c33ee76aac85b8e89b857489f8755f604eebdb8707fe927cd8a8eb8",
+  "offline_parent1_session_pid_devnull": true,
+  "first40_technical_gate_then_remaining1160": true,
+  "snapshot": {
+    "utc": "2026-11-28T01:25:56.102321+00:00",
+    "controller_pid": 3627885,
+    "phase": "pilot_independent_audit",
+    "completed": 40,
+    "pending": 1160,
+    "active": 0
+  },
+  "snapshot_terminal": 40,
+  "snapshot_rc0": 35,
+  "ordinary_failures_retained": [
+    {
+      "identity": "BE_RO_PURE_i37_r01",
+      "rc": 1,
+      "reason": null,
+      "failure": {
+        "status": "failed",
+        "error": "No completed LSS-accepted candidate before the wall deadline"
+      }
+    },
+    {
+      "identity": "BE_RO_PURE_i39_r01",
+      "rc": 1,
+      "reason": null,
+      "failure": {
+        "status": "failed",
+        "error": "No completed LSS-accepted candidate before the wall deadline"
+      }
+    },
+    {
+      "identity": "BE_RO_PURE_i36_r01",
+      "rc": 1,
+      "reason": null,
+      "failure": {
+        "status": "failed",
+        "error": "No completed LSS-accepted candidate before the wall deadline"
+      }
+    },
+    {
+      "identity": "BE_RO_PURE_i38_r01",
+      "rc": 1,
+      "reason": null,
+      "failure": {
+        "status": "failed",
+        "error": "No completed LSS-accepted candidate before the wall deadline"
+      }
+    },
+    {
+      "identity": "BE_RO_PURE_i40_r01",
+      "rc": 1,
+      "reason": null,
+      "failure": {
+        "status": "failed",
+        "error": "No completed LSS-accepted candidate before the wall deadline"
+      }
+    }
+  ],
+  "no_failure_reruns": true,
+  "no_B2_started": true,
+  "no_history_solution_inputs": true,
+  "original_LSS_unchanged": true,
+  "time_to_Best_definition": "Primary time-to-Best: among runs whose final LSS cost exactly equals minimum final cost of the30 runs, average first CDF certification time of returned solution. Also preserve complete pre-Popen-to-wait-exit time.",
+  "results_not_yet_complete": true,
+  "no_recurrent_monitoring_created": true
+}

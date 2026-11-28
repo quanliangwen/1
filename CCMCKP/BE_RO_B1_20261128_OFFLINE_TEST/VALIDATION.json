@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "tiny_integrations": [
+    {
+      "fixture": "LAB_3_2_500_",
+      "math_exhaustive": true,
+      "whole_seconds": 0.9076696069678292,
+      "cost": 3.0,
+      "independent": {
+        "witnesses": 25,
+        "native_calls": 5,
+        "certified": 5
+      }
+    },
+    {
+      "fixture": "LAB_2_2_500_",
+      "math_exhaustive": true,
+      "whole_seconds": 0.15541750006377697,
+      "cost": 4.0,
+      "independent": {
+        "witnesses": 19,
+        "native_calls": 1,
+        "certified": 1
+      }
+    },
+    {
+      "fixture": "LAB_2_2_30_",
+      "math_exhaustive": true,
+      "whole_seconds": 0.1759020199533552,
+      "cost": 4.0,
+      "independent": {
+        "witnesses": 19,
+        "native_calls": 1,
+        "certified": 1
+      }
+    },
+    {
+      "fixture": "LAB_2_2_ZERO30_",
+      "math_exhaustive": true
+    }
+  ],
+  "exact_KKT_checks": 100,
+  "tamper_checks": 18,
+  "unchanged_native_functions": true,
+  "unchanged_inherited_files": 79,
+  "no_extra_large_case_MC": true,
+  "binary_sha256": "37afc5e86c33ee76aac85b8e89b857489f8755f604eebdb8707fe927cd8a8eb8"
+}
