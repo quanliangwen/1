@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "terminal": 1200,
+  "independent_valid": 1200,
+  "global_errors": [],
+  "all_terminal_outputs_already_SHA_verified_by_final_auditor": 13200,
+  "collection_additionally_verified_RESULT_files": 1200,
+  "source_and_binary_pins_checked": 105,
+  "audit_sha256": "a5bc775e7b29ec9c49bcafb71e79154656216e2ede5a8abd211c617785cfe209",
+  "protocol_sha256": "69d56bfa25ed4c9f24c6002f9851e53111e6d8648aa80f423e4b835f5c57b442",
+  "no_new_solver_or_probability_calls": true,
+  "raw_records_retained_at": "/home/junhao/quan/parallel_test_solver/CCMKCP/work/be_ro_b1_v22_full_20261128/full40/runs",
+  "files": {
+    "PROTOCOL.json": {
+      "sha256": "69d56bfa25ed4c9f24c6002f9851e53111e6d8648aa80f423e4b835f5c57b442",
+      "bytes": 842584
+    },
+    "FINAL_INDEPENDENT_AUDIT.json": {
+      "sha256": "a5bc775e7b29ec9c49bcafb71e79154656216e2ede5a8abd211c617785cfe209",
+      "bytes": 1704832
+    },
+    "COMPLETED.json": {
+      "sha256": "e13777096f9e7441bd884ef2d3858000a3030759f3b184ea37ad7165b154973f",
+      "bytes": 301
+    },
+    "STATE.json": {
+      "sha256": "3eb5ff365947b4d84e6c793f0161c1f384d2736e28da01c8685ebbc56036b533",
+      "bytes": 345
+    },
+    "FROZEN.json": {
+      "sha256": "5f7113acfbdaaf2caead45e1a225976e0cbc779b1ef10083221b80d33531ec3f",
+      "bytes": 929
+    },
+    "LAUNCH.json": {
+      "sha256": "6516c244fe27e9c73b1c2b717c1784c5b6014cb7962b95eb398aa812a7afd219",
+      "bytes": 226
+    },
+    "FINAL_AUDIT_PROCESS.json": {
+      "sha256": "d023c81f2feaf5f19acdaf72907b0085574a2ee4628cc490fa516958e82612a7",
+      "bytes": 58
+    },
+    "PILOT_CONTINUATION_DECISION.json": {
+      "sha256": "092282924afa873a180f36c01112b5bf5dbbd715fecbebbd1702932453a571a1",
+      "bytes": 203
+    },
+    "OUTCOMES_ALL.json": {
+      "sha256": "7916486094708f1344f2e6c8f7371e7b5e6fa977d0e6041532df76e58b4a9d73",
+      "bytes": 2889172
+    }
+  }
+}
