@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "tiny_integrations": [
+    {
+      "fixture": "LAB_3_2_500_",
+      "full_seconds": 1.0450456630205736,
+      "cost": 3.0,
+      "independent": {
+        "archive": 8,
+        "native_calls": 5,
+        "certified": 5,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required"
+      }
+    },
+    {
+      "fixture": "LAB_2_2_500_",
+      "full_seconds": 0.13919461995828897,
+      "cost": 4.0,
+      "independent": {
+        "archive": 2,
+        "native_calls": 1,
+        "certified": 1,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required"
+      }
+    },
+    {
+      "fixture": "LAB_2_2_30_",
+      "full_seconds": 0.12098277499899268,
+      "cost": 4.0,
+      "independent": {
+        "archive": 3,
+        "native_calls": 1,
+        "certified": 1,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required"
+      }
+    },
+    {
+      "fixture": "LAB_2_2_ZERO30_",
+      "full_seconds": 0.08895611600019038,
+      "cost": 2.0,
+      "independent": {
+        "archive": 4,
+        "native_calls": 4,
+        "certified": 4,
+        "scope": "BE rows/archive/clock/provenance; full native/LSS audit additionally required"
+      }
+    }
+  ],
+  "linear_rows_and_KKT_checks": 920,
+  "reader_tamper_checks": 36,
+  "native_integer_certificates_checked": 11,
+  "original_LSS_components_identical": true,
+  "no_extra_large_MC": true,
+  "binary_sha256": "1610d59c20f707c804ad15fe244dd8483bbf68a5df9e80b9e6d7cd467a68d8f8",
+  "finite_grid_exactness_claim": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_SMOKE_READY",
+  "registered_runs": 35,
+  "max_workers": 60,
+  "protocol_sha256": "30f5295e019f2d0a99c2196d3c8303fde15fc97f502f95b8d02c0da93eb4a00e",
+  "binary_sha256": "1610d59c20f707c804ad15fe244dd8483bbf68a5df9e80b9e6d7cd467a68d8f8",
+  "available_GiB": 105.17677688598633,
+  "free_disk_GiB": 21.616748809814453,
+  "source_pins": 102,
+  "input_pins": 3412,
+  "quality_gate": {
+    "all35_independently_valid": true,
+    "global_errors_empty": true,
+    "TIME_LIMIT_zero_solution_queries": 0,
+    "max_final_cost_per_run": {
+      "8": 11.18515,
+      "18": 142.27125,
+      "28": 16.42365,
+      "35": 194.09625,
+      "36": 159.28105,
+      "38": 196.27715,
+      "39": 322.27507372082596
+    },
+    "threshold_basis": "Design rounded targets with upper half-unit in fourth decimal for8/18/28/35/36/38; unspecified low-cost39 fixed before testing at prior R07 official Avg322.27507372082596; no historical solution vector inputs",
+    "max_whole_seconds_per_run": 600,
+    "no_after_result_relaxation": true
+  }
+}
