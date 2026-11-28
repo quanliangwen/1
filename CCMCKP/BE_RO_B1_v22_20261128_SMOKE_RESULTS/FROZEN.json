@@ -1,0 +1,36 @@
+{
+  "status": "FROZEN_SMOKE_READY",
+  "registered_runs": 35,
+  "max_workers": 60,
+  "protocol_sha256": "903e248b0bf978d6bc4a74431313e5c51a66a5e4b1df49e9bbbd606a2de264d5",
+  "binary_sha256": "cd471cac2459b10557678ec667a55f3643f0be4497b792f2c4466d0ea45bc7af",
+  "available_GiB": 91.06281280517578,
+  "free_disk_GiB": 18.898456573486328,
+  "source_pins": 104,
+  "input_pins": 3412,
+  "quality_gate": {
+    "all35_independently_valid": true,
+    "global_errors_empty": true,
+    "TIME_LIMIT_zero_solution_queries": 0,
+    "best_cost_max": {
+      "8": 11.18515,
+      "18": 142.27125,
+      "28": 16.42365,
+      "35": 194.4,
+      "36": 159.28105,
+      "38": 196.27715,
+      "39": 325.05
+    },
+    "avg_cost_max": {
+      "8": 11.18515,
+      "18": 142.32,
+      "28": 16.42365,
+      "35": 194.45,
+      "36": 159.35,
+      "38": 196.35
+    },
+    "threshold_basis": "User joint B1-v2.2/B2-v2 design section4.1; frozen prospectively; no changes to previous gates",
+    "max_whole_seconds_per_run": 600,
+    "no_after_result_relaxation": true
+  }
+}

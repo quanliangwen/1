@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "changed_existing_source": [
+    "be_ro_radius_grid.hpp",
+    "be_ro_search.cpp",
+    "tests/be_ro_radius_grid_test.cpp"
+  ],
+  "unchanged_source_count": 90,
+  "unchanged_blocks": {
+    "resource_step1": "881a272285d3e9f9fcc8d9860e59bee8c24acf5997cda701fe05b2e24aefde17",
+    "certification": "50f6d554bd07138d0e3cedbfb225b62b3d83783a1aaed5734168c58a14a41113",
+    "escalation": "f9de2df0f25757a920515115926785c060a065cfcfa126845e2474e11d9c3325"
+  },
+  "unchanged_linear_witness_native_LSS_main": true,
+  "production_audit_main_identical": true,
+  "scope": "Static preservation; mathematical equivalence of finite grid and global probability optimum not claimed"
+}

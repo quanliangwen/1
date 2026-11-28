@@ -1,0 +1,17 @@
+{
+  "stage": "B1_V22_SMOKE_QUALITY_FAILED_NO_FULL40_OR_B2V2",
+  "compiled": true,
+  "tiny_validation": "PASS",
+  "smoke_terminal": 35,
+  "smoke_independent_valid": 35,
+  "smoke_gate_pass": false,
+  "full40_started": false,
+  "B2_v2_started": false,
+  "failed_quality_cases": [
+    36
+  ],
+  "no_after_result_gate_changes": true,
+  "old_results_unchanged": true,
+  "binary_sha256": "cd471cac2459b10557678ec667a55f3643f0be4497b792f2c4466d0ea45bc7af",
+  "smoke_protocol_sha256": "903e248b0bf978d6bc4a74431313e5c51a66a5e4b1df49e9bbbd606a2de264d5"
+}

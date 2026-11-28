@@ -1,0 +1,126 @@
+--- a/source/be_ro_radius_grid.hpp
++++ b/source/be_ro_radius_grid.hpp
+@@ -6,8 +6,8 @@
+ #include <vector>
+ 
+ namespace s10 {
+-// Fixed finite coverage, not an assumption of monotonic candidate probability
+-// and not a guarantee of hitting every arbitrarily narrow feasible window.
++// Global coarse coverage plus a heuristic local bracket. Six bisections give
++// exact rational resolution, not a monotonicity or optimality guarantee.
+ struct BERadiusGrid {
+  mpq_class maximum;
+  explicit BERadiusGrid(mpq_class upper):maximum(std::move(upper)){
+@@ -19,17 +19,17 @@
+  }
+  std::pair<mpq_class,mpq_class> interval(int rstar)const{
+   if(rstar<1||rstar>8)throw std::logic_error("Invalid winning index");
+-  return {coarse(std::max(0,rstar-2)),coarse(rstar)};
++  return {coarse(rstar-1),coarse(rstar)};
+  }
+- mpq_class zoom(int q,int rstar)const{
+-  if(q<1||q>8)throw std::logic_error("Zoom index");
+-  auto v=interval(rstar);mpq_class weight=mpq_class(q)/9;weight.canonicalize();
+-  mpq_class x=v.first+weight*(v.second-v.first);x.canonicalize();return x;
++ static mpq_class midpoint(const mpq_class&lo,const mpq_class&hi){
++  if(lo>hi)throw std::logic_error("Reversed bracket");
++  mpq_class x=(lo+hi)/2;x.canonicalize();return x;
+  }
+  std::vector<mpq_class> pool(mpq_class best)const{
+   auto clip=[&](mpq_class x){x.canonicalize();return std::min(maximum,std::max(mpq_class(0),x));};
+   std::vector<mpq_class>out;
+-  for(auto p:{clip(std::max(mpq_class(1,20),mpq_class(best*24/25))),clip(best),clip(mpq_class(best*26/25))})
++  for(auto p:{clip(std::max(mpq_class(1,20),mpq_class(best*97/100))),
++              clip(std::max(mpq_class(1,20),mpq_class(best*99/100))),clip(best),clip(mpq_class(best*51/50))})
+    if(std::find(out.begin(),out.end(),p)==out.end())out.push_back(p);
+   return out;
+  }
+--- a/source/be_ro_search.cpp
++++ b/source/be_ro_search.cpp
+@@ -13,7 +13,8 @@
+  std::set<Selection>tried;
+  struct Entry{Selection s;mpq_class omega,lambda;std::string kind;Json proof;double score;Json origins;};
+  std::map<Selection,Entry>archive;
+- be_ro_log={{"model","BE_RO_Pure_B1_v2"},{"revision","B1-v2.1"},{"non_monotone_radius_scan",true},
++ be_ro_log={{"model","BE_RO_Pure_B1_v2"},{"revision","B1-v2.2"},{"global_coarse_retained",true},
++  {"top1_choice_only",true},{"local_bisection_monotonicity_guarantee",false},
+   {"grid_resolution_is_complete",false},{"beta","19/20"},{"K",5},{"tail_count",w.tail_count},
+   {"samples_per_item",instance.sample_count},{"items",w.items},{"radius_is_probability_guarantee",false},
+   {"radius_localization_is_heuristic",true},{"CDF_solution_probability_monotonicity_claim",false},
+@@ -132,24 +133,36 @@
+   be_ro_log["omega_resource_lower"]=lo.get_str();be_ro_log["omega_resource_upper"]=hi.get_str();
+   be_ro_log["resource_search_unknown"]=true;be_ro_log["resource_positive_feasible_found"]=maximum>0;
+   be_ro_log["resource_note"]="Feasible grid radius only; failed probes do not prove BE infeasibility or exact maximum";
+-  BERadiusGrid grid(maximum);int rstar=8;double coarse_cost=INFINITY,grid_cost=INFINITY;mpq_class star=maximum;
++  BERadiusGrid grid(maximum);int rstar=8;double coarse_cost=INFINITY,grid_cost=INFINITY;
+   auto scan=[&](const mpq_class&omega,const std::string&pass,int index){
+    const auto qbegin=be_ro_log["queries"].size();auto found=radius_query(omega,1,pass,false,.5);
+    Json log={{"pass",pass},{"point",index},{"omega",omega.get_str()},{"query_begin",qbegin},
+-    {"query_end",be_ro_log["queries"].size()},{"original_CDF_calls",0},{"feasible_private_min_cost",nullptr}};
+-   double local=INFINITY;
+-   for(const auto&s:found)if(archive.at(s).score>=.99&&instance.cost_of(s)<local){
+-    local=instance.cost_of(s);log["selection"]=s;log["private_probability"]=archive.at(s).score;log["feasible_private_min_cost"]=local;
++    {"query_end",be_ro_log["queries"].size()},{"original_CDF_calls",0},{"top1_cost",nullptr},
++    {"top1_private_feasible",false},{"no_returned_candidate",found.empty()}};
++   if(!found.empty()){
++    const auto&s=found.front();log["selection"]=s;log["private_probability"]=archive.at(s).score;
++    log["top1_cost"]=instance.cost_of(s);log["top1_private_feasible"]=archive.at(s).score>=.99;
++    if(archive.at(s).score>=.99)grid_cost=std::min(grid_cost,instance.cost_of(s));
+    }
+-   if(std::isfinite(local)&&(local<grid_cost||(local==grid_cost&&omega<star))){grid_cost=local;star=omega;}
+-   be_ro_log["calibration"].push_back(log);return local;
++   be_ro_log["calibration"].push_back(log);return log;
+   };
+-  for(int r=1;r<=8;++r){double c=scan(grid.coarse(r),"private_coarse",r);if(c<coarse_cost){coarse_cost=c;rstar=r;}}
++  for(int r=1;r<=8;++r){auto log=scan(grid.coarse(r),"private_coarse",r);
++   if(log["top1_private_feasible"].get<bool>()){double c=log["top1_cost"].get<double>();if(c<coarse_cost){coarse_cost=c;rstar=r;}}}
+   auto interval=grid.interval(rstar);be_ro_log["coarse_r_star"]=rstar;
+-  be_ro_log["zoom_interval"]={interval.first.get_str(),interval.second.get_str()};
+-  for(int q=1;q<=8;++q)scan(grid.zoom(q,rstar),"private_zoom",q);
++  mpq_class blo=interval.first,bhi=interval.second;
++  be_ro_log["tight_bracket_initial"]={blo.get_str(),bhi.get_str()};
++  for(int q=1;q<=6;++q){
++   auto before=Json::array({blo.get_str(),bhi.get_str()});auto mid=BERadiusGrid::midpoint(blo,bhi);
++   auto log=scan(mid,"private_bisection",q);
++   bool move_hi=log["no_returned_candidate"].get<bool>()||log["top1_private_feasible"].get<bool>();
++   if(move_hi)bhi=mid;else blo=mid;
++   auto&rec=be_ro_log["calibration"].back();rec["bracket_before"]=before;rec["update"]=move_hi?"hi":"lo";
++   rec["bracket_after"]={blo.get_str(),bhi.get_str()};
++  }
++  const mpq_class star=bhi;
++  be_ro_log["tight_bracket_final"]={blo.get_str(),bhi.get_str()};
+   be_ro_log["omega_resource_used"]=maximum.get_str();be_ro_log["omega_star"]=star.get_str();be_ro_log["omega_best"]=star.get_str();
+-  be_ro_log["private_grid_global_min_cost"]=std::isfinite(grid_cost)?Json(grid_cost):Json(nullptr);
++  be_ro_log["scan_top1_min_private_feasible_cost"]=std::isfinite(grid_cost)?Json(grid_cost):Json(nullptr);
+   auto points=grid.pool(star);
+   be_ro_log["critical_points"]=Json::array();
+   for(const auto&omega:points){be_ro_log["critical_points"].push_back(omega.get_str());radius_query(omega,10,"critical_pool",false);}
+--- a/source/tests/be_ro_radius_grid_test.cpp
++++ b/source/tests/be_ro_radius_grid_test.cpp
+@@ -11,17 +11,19 @@
+     mpq_class expected=g.maximum*r/8;expected.canonicalize();
+     if(g.coarse(r)!=expected)throw std::logic_error("Coarse formula");++checks;
+     auto v=g.interval(r);
+-    for(int q=1;q<=8;++q){
+-     auto x=g.zoom(q,r);mpq_class expected=v.first+mpq_class(q)*(v.second-v.first)/9;expected.canonicalize();
+-     if(x!=expected)throw std::logic_error("Zoom formula");
+-     if(g.maximum>0&&!(v.first<x&&x<v.second))throw std::logic_error("Strict interior point");++checks;
++    for(int pattern=0;pattern<64;++pattern){
++     mpq_class lo=v.first,hi=v.second;
++     for(int q=0;q<6;++q){
++      auto mid=BERadiusGrid::midpoint(lo,hi);mpq_class expected=(lo+hi)/2;expected.canonicalize();
++      if(mid!=expected||(g.maximum>0&&!(lo<mid&&mid<hi)))throw std::logic_error("Midpoint formula");
++      if(pattern&(1<<q))hi=mid;else lo=mid;++checks;
++     }
++     mpq_class width=hi-lo,expected=g.maximum/512;width.canonicalize();expected.canonicalize();
++     if(width!=expected)throw std::logic_error("Six rounds resolution");++checks;
+     }
+     for(const auto&x:g.pool(g.coarse(r))){if(x<0||x>g.maximum)throw std::logic_error("Pool clipping");++checks;}
+    }
+   }
+-  BERadiusGrid eight{mpq_class(5099,1000)},twentyeight{mpq_class(599,100)};
+-  if(!(eight.coarse(3)>mpq_class(19,10)&&eight.coarse(3)<2))throw std::logic_error("Case8 document grid window");
+-  if(!(twentyeight.zoom(4,5)>mpq_class(28,10)&&twentyeight.zoom(4,5)<mpq_class(295,100)))throw std::logic_error("Case28 document grid window");
+   std::cout<<Json({{"status","PASS"},{"grid_checks",checks},{"arbitrary_window_hit_guarantee",false}}).dump()<<'\n';return 0;
+  }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}
+ }
