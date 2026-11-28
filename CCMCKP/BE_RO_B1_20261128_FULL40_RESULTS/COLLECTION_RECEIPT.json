@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "utc": "2026-11-28T05:38:38.507317+00:00",
+  "terminal": 1200,
+  "independent_valid": 1028,
+  "global_errors": [],
+  "all_terminal_output_sha_checked": 11996,
+  "output_bytes": 281201533,
+  "original_audit_sha256": "0e4463086f67a2d3b88c25016083b5ee18e013909f6f4035f0927d25c9611ab0",
+  "protocol_sha256": "a564937a02c5e74ab94d160d3ae67e88f489164155b7b1fdc61641dd8a340dee",
+  "files": {
+    "PROTOCOL.json": {
+      "sha256": "a564937a02c5e74ab94d160d3ae67e88f489164155b7b1fdc61641dd8a340dee",
+      "bytes": 841366
+    },
+    "FINAL_INDEPENDENT_AUDIT.json": {
+      "sha256": "0e4463086f67a2d3b88c25016083b5ee18e013909f6f4035f0927d25c9611ab0",
+      "bytes": 1336642
+    },
+    "COMPLETED.json": {
+      "sha256": "e3f227eee81f4aa52e146b0810e2f17537015d304f144944538c55c5677caadd",
+      "bytes": 301
+    },
+    "STATE.json": {
+      "sha256": "6a67907532eb322f06b734f4ffe2c4d76ee0dcae56969c26410d7cc3832b3da8",
+      "bytes": 345
+    },
+    "FROZEN.json": {
+      "sha256": "a99907529ca22786c9815037e44ebc753e744b338ceb85e6cfd926e6b8ea53e4",
+      "bytes": 648
+    },
+    "LAUNCH.json": {
+      "sha256": "a1db74961c32d72d8844f24d50f861b8afb5092efa27a0536bc2477bfa8b243b",
+      "bytes": 226
+    },
+    "PILOT_CONTINUATION_DECISION.json": {
+      "sha256": "162432b55dbb2f8818f3d1aa13302ece36484a11aa998cf55bed673186f3eb8f",
+      "bytes": 203
+    },
+    "FINAL_AUDIT_PROCESS.json": {
+      "sha256": "579879c0103befa3db0167fc7857b9321541c5a33354f38d44d45c3f6dd797bf",
+      "bytes": 58
+    },
+    "DIAGNOSTICS.json": {
+      "sha256": "2cbb69f8d32e474f25612e57f763df847693bdeb63900a8a103344bf320d8767",
+      "bytes": 7612815
+    },
+    "OUTCOMES_ALL.json": {
+      "sha256": "7d77df663e3cbcaacf844a10d0db908d18f2f4d896caa960b0e279c388133217",
+      "bytes": 2662864
+    }
+  }
+}
